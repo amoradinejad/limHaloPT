@@ -3,9 +3,13 @@
 
 ## Description
 
-This package can be used to compute integrated bispectrum of CO(J->J-1) and CII emission lines in redshift sapce. This code will be built upon the code developed by Azadeh Moradinezhad Dizgah for two previous publications 1801.10178, 1810.02850. At the moment, this folde only includes this previous version. The goal is to add the redshift-space computation of line power spectrum and integrated bispectrum using halo model and Fishe Matrix analysis for the two statistics individually and jointly.
+Welcom to LIM_PS_HM, a numerical package for computing the power spectrum of line intensity fluctuations using an 1loop halo model and the full large-scale shot noise power spectrum, including deviations from Poisson approximations. A comparison of teh prediction of the model against simulated intensityy maps of CO and [CII] is performed in arxiv:2111.XXXXX. 
 
-TO BE EXTENDED ...
+The extended halo model of line intensity power spectrum implemented in LIM_PS_HM, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter disctribution, as well as effect of large bulk velocities (Infrared Resummation). The loop calculations are performed with direct numerical integration, using CUBA library. 
+
+The deviations from Poisson shot noise on large scales is computed within halo model (see e.g. Guinzberg et al arXiv:1706.08738).
+
+
 
 ### Visuals
 
@@ -21,13 +25,16 @@ To run the code, type:
 - ./run.exe  
 
 ## Authors and acknowledgment
+
 Azadeh Moradinezhad Dizgah
 
 If using this package in a publication, please cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
 
 ## License
+
 MIT Liscence
 
 ## Contributing 
+
 To contribute, create a fork on github, make changes and commits, and submit a pull request on github.
