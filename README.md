@@ -1,23 +1,4 @@
-
 # LIM_PS_HM
-
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/amoradinejad/lim_ps_hm.git
-git branch -M main
-git push -uf origin main
-```
-
-## LIM-PS-HM
 
 
 ## Description
@@ -26,25 +7,27 @@ This package can be used to compute integrated bispectrum of CO(J->J-1) and CII 
 
 TO BE EXTENDED ...
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Visuals
+
 
 ## Installation
 
+To install the package, you just need to type
+- make
 
 ## Usage
 
+To run the code, type:
+- ./run.exe  
 
 ## Authors and acknowledgment
+Azadeh Moradinezhad Dizgah
 
+If using this package in a publication, please cite the following paper: 
+Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
 
 ## License
+MIT Liscence
 
-
-## Contributing
-
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
-
+## Contributing 
+To contribute, create a fork on github, make changes and commits, and submit a pull request on github.
