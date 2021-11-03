@@ -3,7 +3,7 @@
 Author: Azadeh Moradinezhad Dizgah
 
 
-Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations, using an extended halo model. The model includes one-loop corrections in the halo-model, as well as the deviations from Poisson shot noise.
+Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations within halo-model framework, and at one-loop in perturebation theory.
 
 The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term.
 The deviations from Poisson shot noise on large scales is computed within halo model (see e.g. Guinzberg et al arXiv:1706.08738 for previous work in the context of halo/galaxy clustering).
