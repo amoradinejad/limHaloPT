@@ -1,9 +1,9 @@
-# LIM_PS_HM
+# limHaloPT
 
 
 ## Description
 
-Welcom to LIM_PS_HM, a numerical package for computing the power spectrum of line intensity fluctuations using an 1loop halo model and the full large-scale shot noise power spectrum, including deviations from Poisson approximations. A comparison of teh prediction of the model against simulated intensityy maps of CO and [CII] is performed in arxiv:2111.XXXXX. 
+Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations using an 1loop halo model and the full large-scale shot noise power spectrum, including deviations from Poisson approximations. A comparison of teh prediction of the model against simulated intensityy maps of CO and [CII] is performed in arxiv:2111.XXXXX. 
 
 The extended halo model of line intensity power spectrum implemented in LIM_PS_HM, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter disctribution, as well as effect of large bulk velocities (Infrared Resummation). The loop calculations are performed with direct numerical integration, using CUBA library. 
 
