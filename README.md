@@ -38,4 +38,5 @@ MIT Liscence
 
 ## Contributing 
 
-To contribute, create a fork on github, make changes and commits, and submit a pull request on github.
+To contribute, create a fork on github, make changes and commits, and submit a pull request on github. I will extend the readme file with more detailed description of various modules of the code. 
+
