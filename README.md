@@ -23,7 +23,8 @@ To install the package, you just need to type
 To run the code, type:
 - ./run.exe  
 
-## Authors and acknowledgment
+
+## Acknowledgment
 
 If using this package in a publication, please cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
