@@ -4,8 +4,8 @@ FLAGS =  -lgsl -lgslcblas -lcuba  -lclass -lm -o
 OFILESA = main.o cubature.o utilities.o primordial.o cosmology.o survey_specs.o 
 OFILESB = line_ingredients.o wnw_split.o IR_res.o ps_halo_1loop.o ps_line_pt.o ps_line_hm.o 
 
-run.exe: ${OFILESA} ${OFILESB}
-	mpicc ${OFILESA}${OFILESB} -fopenmp -Wall $(INCLUDES) $(LIBS)  $(FLAGS) run.exe       
+limHaloPT: ${OFILESA} ${OFILESB}
+	mpicc ${OFILESA}${OFILESB} -fopenmp -Wall $(INCLUDES) $(LIBS)  $(FLAGS) limHaloPT       
 main.o: main.c 
 	mpicc -g -c -fopenmp main.c -o main.o $(INCLUDES) 
 cubature.o: hcubature.c ../Include/cubature.h 
@@ -32,4 +32,4 @@ ps_line_hm.o: ps_line_hm.c ../Include/ps_line_hm.h
 	mpicc -g -c  -fopenmp ps_line_hm.c -o ps_line_hm.o $(INCLUDES)
 
 clean:
-	rm *.o *.exe
+	rm *.o limHaloPT
