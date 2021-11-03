@@ -59,6 +59,9 @@ int main(int argc,char *argv[])
 	double *k  = loginit_1Darray(nk, 1.e-3, 8.);
  	double *z = init_1Darray(nz,0.0,11.);
 	
+	/* 
+	* Compute the line clustering signal using halo model 
+	*/
  	int line_id = 0;
  	for(i=0;i<nlines;i++){
  		line_id = i;
@@ -69,12 +72,13 @@ int main(int argc,char *argv[])
 		}	
 	}
 	
+	/* 
+	* Compute the shot noise (beyond the Poisson limit), using halo model
+	*/
 	double Omegam   = (Cx_ref.cosmo_pars[3] + Cx_ref.cosmo_pars[4]);
 	double rhom_bar = Omegam * rhoc(&Cx_ref,0.); 
-
 	double lbias_arr[2];
 	double input[5];
-
 	double b1   = 0.;
 	double b2   = 0.;
 	double Tbar = 0.;
