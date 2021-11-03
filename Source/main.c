@@ -20,6 +20,9 @@ int main(int argc,char *argv[])
 	double M_min   = 1.e9;
 	long mode_mf   = ST;
 
+	/*
+	* Define which lines to compute, and how many points to have for z-interpolation
+	*/
 	int nlines     = 7;
         int lines[7]   = {CO10, CO21, CO32, CO43, CO54, CO65, CII};
         int JJ[7]      = {1,2,3,4,5,6,0};
@@ -27,38 +30,14 @@ int main(int argc,char *argv[])
 
 	double gb_pars[] = {gb.logAs,gb.ns,gb.h,gb.Omega_b,gb.Omega_cdm,gb.sigFOG0};
 
-	double min_pars[gb.Npars];
-	double max_pars[gb.Npars];
-
 	struct Cosmology Cx_ref;
-	struct Cosmology Cx_min[gb.Npars];
-      	struct Cosmology Cx_max[gb.Npars]; 
-
-	for(i=0;i<gb.Npars;i++){ 
-		min_pars[i] = (1.-inc)*gb_pars[i];
-		max_pars[i] = (1.+inc)*gb_pars[i];
-	}
-	
-
 	for(i=0;i<gb.Npars;i++){
 		Cx_ref.cosmo_pars[i] = gb_pars[i];
 	}
 
-	for(i=0;i<gb.Npars;i++){
-		for(j=0;j<gb.Npars;j++){
-			if(i==j){
-				Cx_min[i].cosmo_pars[j] = min_pars[i];
-				Cx_max[i].cosmo_pars[j] = max_pars[i];
-			}
-			else if (i!=j){	
-				Cx_min[i].cosmo_pars[j] = gb_pars[j];
-				Cx_max[i].cosmo_pars[j] = gb_pars[j];
-			}
-			//printf("i=%ld \t  j=%ld \t min = %12.6e \t max= %12.6e \n",i,j,Cx_min[i].cosmo_pars[j],Cx_max[i].cosmo_pars[j]);
-		}
-		//printf("\n \n");
-	}
-
+	/*
+	* Initialize the cosmology structure, which includes CLASS cosmology and Line structures
+	*/
 	clock_t tic_r = clock();
 	Cosmology_init(&Cx_ref, pk_kmax, pk_zmax, nlines, lines, ninterp, M_min, mode_mf);
 	printf("Reference Cosmology initialized\n");
@@ -69,13 +48,12 @@ int main(int argc,char *argv[])
 	/* 
 	 * Set the k and z arrays
 	 */
-
       	int nk = 200;
-      	double *k  = loginit_1Darray(nk, 1.e-3, 8.);
- 
- 	double clust_hm;
- 	int line_id =0;
-
+  	int nz = 50;
+	double *k  = loginit_1Darray(nk, 1.e-3, 8.);
+ 	double *z = init_1Darray(nz,0.0,11.);
+	
+ 	int line_id = 0;
  	for(i=0;i<nlines;i++){
  		line_id = i;
  		for(j=0;j<nz;j++){
@@ -85,7 +63,6 @@ int main(int argc,char *argv[])
 		}	
 	}
 	
-	double shot_p   = 0.;
 	double Omegam   = (Cx_ref.cosmo_pars[3] + Cx_ref.cosmo_pars[4]);
 	double rhom_bar = Omegam * rhoc(&Cx_ref,0.); 
 
@@ -98,9 +75,6 @@ int main(int argc,char *argv[])
 
 	FILE *fp1;
   	char filename1[FILENAME_MAX];
- 	int nz = 50;
- 	double *z = init_1Darray(nz,0.0,11.);
-
  	for(i=0;i<nlines;i++){
  		for(j=0;j<nz;j++){
  			sprintf(filename1,"%s/line/Tbar_J%d_z%d.txt", gb.output_dir, JJ[i],(int)z[j]);
