@@ -10,7 +10,7 @@ The deviations from Poisson shot noise on large scales is computed within halo m
 
 The loop calculations, as well as integrations over halo masses are performed using integration routines of CUBA library (see https://arxiv.org/abs/hep-ph/0404043). Therfore, you need to compile this library and place the lib file in an Include directory that is linked to limHaloPT.
 
-This package is released together with the following publication, arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims are publically avilable on http://cyril.astro.berkeley.edu/MithraLIMSims.  As discussed in the paper, this code can be straightforwardly extended to compute the power spectrum signal of other emission lines ((emitted from star-froming galaxies) beside CO and [CII].
+This package is released together with the following publication, arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims are publically avilable on http://cyril.astro.berkeley.edu/MithraLIMSims.  As discussed in the paper, this code can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII].
 
 
 ## Compilation and Usage
