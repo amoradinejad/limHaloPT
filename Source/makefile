@@ -1,7 +1,7 @@
 INCLUDES = -I/usr/include/  -I../Include/ -I/opt/local/include   -I ../Class/include  
 LIBS = -L/usr/lib/ -L/opt/local/lib -L ../Class/lib
 FLAGS =  -lgsl -lgslcblas -lcuba  -lclass -lm -o
-OFILESA = main.o cubature.o utilities.o primordial.o cosmology.o survey_specs.o 
+OFILESA = main.o cubature.o utilities.o cosmology.o survey_specs.o 
 OFILESB = line_ingredients.o wnw_split.o IR_res.o ps_halo_1loop.o ps_line_pt.o ps_line_hm.o 
 
 limHaloPT: ${OFILESA} ${OFILESB}
@@ -12,8 +12,6 @@ cubature.o: hcubature.c ../Include/cubature.h
 	mpicc -g -c -fopenmp hcubature.c -o cubature.o $(INCLUDES)
 utilities.o: utilities.c ../Include/utilities.h
 	mpicc -g -c -fopenmp utilities.c -o utilities.o $(INCLUDES)
-primordial.o: primordial.c ../Include/primordial.h
-	mpicc -g -c -fopenmp primordial.c -o primordial.o $(INCLUDES)
 cosmology.o: cosmology.c ../Include/cosmology.h
 	mpicc -g -c -fopenmp cosmology.c -o cosmology.o $(INCLUDES)
 survey_specs.o: survey_specs.c ../Include/survey_specs.h
