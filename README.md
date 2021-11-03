@@ -13,7 +13,7 @@ This package is released together with the following publication, arxiv:2111.XXX
 
 ## Dependencies
 
-The limHaloPT package calls various functions from CLASS Boltzman solver (https://github.com/lesgourg/class_public), including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of CUBA library (http://www.feynarts.de/cuba/). Furthermore, the code uses heavily unctions of GSL scientific library (https://www.gnu.org/software/gsl/doc/html/). Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+The limHaloPT package calls various functions from CLASS Boltzman solver (https://github.com/lesgourg/class_public), including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of CUBA library (http://www.feynarts.de/cuba/). Furthermore, the code heavily uses functions of GSL scientific library (https://www.gnu.org/software/gsl/doc/html/). Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
 
 
 ## Compilation and Usage
