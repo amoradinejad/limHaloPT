@@ -3,7 +3,7 @@
 Author: Azadeh Moradinezhad Dizgah
 
 
-Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations using a one-loop halo model and the large-scale shot noise power spectrum byond Poisson approximations. 
+Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations using a one-loop halo model, and the large-scale shot noise power spectrum byond Poisson approximations. 
 
 This package is released together with the following journal publication arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims are publically avilable on http://cyril.astro.berkeley.edu/MithraLIMSims. 
 
