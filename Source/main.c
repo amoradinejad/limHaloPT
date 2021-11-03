@@ -44,6 +44,12 @@ int main(int argc,char *argv[])
 	clock_t toc_r = clock();
 	printf("Elapsed: %f seconds for ref cosmology\n", (double)(toc_r - tic_r)/CLOCKS_PER_SEC);
 
+	
+	/*
+	* -----------------------------
+	* Depending on what quantities ou want to compute, you need to modify this part of the main() function.
+	* -----------------------------
+	*/
 
 	/* 
 	 * Set the k and z arrays
@@ -105,6 +111,12 @@ int main(int argc,char *argv[])
 	}	
 	free(k);
  	free(z);
+
+	/* 
+	* -----------------------------
+	* Modify up to here 
+	* -----------------------------
+	*/
 
 	cleanup(&Cx_ref);
 	
