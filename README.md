@@ -12,22 +12,21 @@ The loop calculations are performed with direct numerical integration, using CUB
 
 
 
-## Installation
+## Compilation and Usage
 
-To install the package, you just need to type
+To compile the package, type:
 - make
-
-
-## Usage
 
 To run the code, type:
 - ./run.exe  
+
 
 
 ## Acknowledgment
 
 If using this package in a publication, please cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
+
 
 ## License
 
