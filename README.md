@@ -10,20 +10,24 @@ The deviations from Poisson shot noise on large scales is computed within the ha
 
 This package is released together with the following publication, arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims are publically avilable on http://cyril.astro.berkeley.edu/MithraLIMSims.  As discussed in the paper, this code can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII].
 
-The loop calculations are performed with direct numerical integration, using routines of CUBA library. Furthermore, the code uses heavily unctions of GSL library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
 
-
-## Compilation and Usage
+## Compilation 
 
 To compile the package, type:
 - make
 
-To run the code, type:
-- ./limHaloPT  
-
-Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. 
+ 
+Note that limHaloPT calls various functions from CLASS Boltzman solver (https://github.com/lesgourg/class_public), including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of CUBA library (http://www.feynarts.de/cuba/). Furthermore, the code uses heavily unctions of GSL scientific library (https://www.gnu.org/software/gsl/doc/html/). Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
 
 If you modified the code, you need to first do "make clean" before doing "make".
+
+
+## Usage
+
+To run the code, type:
+- ./limHaloPT 
+
+Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. 
 
 
 ## Acknowledgment
