@@ -1,5 +1,5 @@
-INCLUDES = -I/usr/include/  -I../Include/ -I/opt/local/include   -I ../Class/include  
-LIBS = -L/usr/lib/ -L/opt/local/lib -L ../Class/lib
+INCLUDES =  -I../Include/ -I/opt/local/include  -I../Class/include  
+LIBS =  -L/opt/local/lib  -L../Class/lib
 FLAGS =  -lgsl -lgslcblas -lcuba  -lclass -lm -o
 OFILESA = main.o cubature.o utilities.o cosmology.o survey_specs.o 
 OFILESB = line_ingredients.o wnw_split.o IR_res.o ps_halo_1loop.o ps_line_pt.o ps_line_hm.o 
