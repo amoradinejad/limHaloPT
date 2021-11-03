@@ -19,7 +19,7 @@ To compile the package, type:
 - make
 
 To run the code, type:
-- ./run.exe  
+- ./limHaloPT  
 
 
 
