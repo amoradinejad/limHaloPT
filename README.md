@@ -1,7 +1,7 @@
 # limHaloPT
 
+Author: Azadeh Moradinezhad Dizgah
 
-## Description
 
 Welcom to limHaloPT, a numerical package for computing the power spectrum of line intensity fluctuations using a one-loop halo model and the large-scale shot noise power spectrum byond Poisson approximations. 
 
@@ -12,13 +12,11 @@ The loop calculations are performed with direct numerical integration, using CUB
 
 
 
-### Visuals
-
-
 ## Installation
 
 To install the package, you just need to type
 - make
+
 
 ## Usage
 
@@ -26,8 +24,6 @@ To run the code, type:
 - ./run.exe  
 
 ## Authors and acknowledgment
-
-Azadeh Moradinezhad Dizgah
 
 If using this package in a publication, please cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
