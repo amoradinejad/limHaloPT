@@ -38,7 +38,7 @@ Recently, there has been a shift in the cosmology community in publicly releasin
 
 # Dependencies
 
-The `limHaloPT' package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) and [Cubature](https://github.com/stevengj/cubature) libraries for C. Furthermore, the code uses several functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. 
+The `limHaloPT' package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) and [Cubature](https://github.com/stevengj/cubature) libraries for C. The code also uses several functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. 
 
 
 # Future Extensions 
