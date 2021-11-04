@@ -9,7 +9,7 @@ authors:
     orcid: 0000-0001-8841-9989
     affiliation: 1
 affiliations:
- - name: D\'epartement de Physique Th\'eorique, Universit\'e de Gen\`eve, 24 quai Ernest Ansermet, \\ 1211 Gen\`eva 4, Switzerland
+ - name: Departement of Theoretical Physics, Universityy of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
    index: 1
 date: November 2021
 bibliography: paper.bib
