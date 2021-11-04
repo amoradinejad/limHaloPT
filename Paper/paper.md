@@ -1,5 +1,5 @@
 ---
-title: 'limHaloPT: A C package for accurate modeling of line intensity power spectrum '
+title: 'limHaloPT: A numerical Package for Accurate Modeling of Line Intensity Power spectrum'
 tags:
   - C language
   - cosmology
@@ -9,7 +9,7 @@ authors:
     orcid: 0000-0001-8841-9989
     affiliation: 1
 affiliations:
- - name: Depaftment of Theoretical Physics, University of Geneva
+ - name: D\'epartement de Physique Th\'eorique, Universit\'e de Gen\`eve, 24 quai Ernest Ansermet, \\ 1211 Gen\`eva 4, Switzerland
    index: 1
 date: November 2021
 bibliography: paper.bib
