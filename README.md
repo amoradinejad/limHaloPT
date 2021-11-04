@@ -37,7 +37,7 @@ Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
 
 ## License
 
-MIT Liscence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+MIT Liscence
 
 
