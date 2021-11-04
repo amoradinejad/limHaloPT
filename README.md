@@ -37,7 +37,10 @@ Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-MIT Liscence
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Copyright 2021 Azadeh Moradinezhad Dizgah.
+
+limHaloPT is free software made available under the MIT License. For details see the LICENSE file.
 
 
