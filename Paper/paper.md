@@ -13,12 +13,6 @@ affiliations:
    index: 1
 date: November 2021
 bibliography: paper.bib
-
-
-# Optional fields if submitting to a AAS journal too, see this blog post:
-# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
-# aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
-# aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
 &nbsp;
@@ -28,7 +22,7 @@ bibliography: paper.bib
 
 # Summary
 
-`limHaloPT`, is a modular numerical package, written in C language, for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations (emitted from within star-forming galaxies) using halo-model framework. This is the first publically available code, which combines the one-loop prediction of the halo power spectrum and the halo-model framework to model the line power spectrum. Furthermore, the code includes routines to compute the stochastic contributions to line power spectrum, beyond Poisson approximation. Several utility functions, e.g., to for computing the theoretical halo mass functions, halo biases, one-loop halo power spectrum, are provided in the package, which can be used in the contexts other than LIM. This code is realsed together with an accompanying scientific publications [@MoradinezhadDizgah:2021], in which detailes of the implemented model, as well as comparison of model predictions against simulated intensityy maps are presented. The current version of the code, is limited to real-space. Future releases will provide additional modules, for example to include observational effects such as redshift-space distortions and Alcock-Paczynski effect. Furthermore, we plan to extend this code to higher-order statistics of LIM. 
+`limHaloPT`, is a modular numerical package, written in C, for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations (emitted from within star-forming galaxies) using halo-model framework. This is the first publically available code, which combines the one-loop prediction of the halo power spectrum and the halo-model framework to model the line power spectrum. Furthermore, the code includes routines to compute the stochastic contributions to line power spectrum, beyond Poisson approximation. Several utility functions, e.g., to for computing the theoretical halo mass functions, halo biases, one-loop halo power spectrum, are provided in the package, which can be used in the contexts other than LIM. This code is realsed together with an accompanying scientific publications [@MoradinezhadDizgah:2021], in which detailes of the implemented model, as well as comparison of model predictions against simulated intensityy maps are presented. The current version of the code, is limited to real-space. Future releases will provide additional modules, for example to include observational effects such as redshift-space distortions and Alcock-Paczynski effect. Furthermore, we plan to extend this code to higher-order statistics of LIM. 
 
 
 # Scientific context and statement of need
