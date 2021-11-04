@@ -12,7 +12,7 @@ authors:
 affiliations:
  - name: Departement of Theoretical Physics, University of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
    index: 1
-date: November 2021
+date: 5 November 2021
 bibliography: paper.bib
 
 # Optional fields if submitting to a AAS journal too, see this blog post:
