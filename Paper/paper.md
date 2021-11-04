@@ -5,14 +5,12 @@ tags:
   - cosmology
   - intensity mapping
 authors:
-  - name: Azadeh Moradinezhad Dizgah ^[corresponding author]
+  - name: Azadeh Moradinezhad Dizgah^[corresponding author]
     orcid: 0000-0001-8841-9989
     affiliation: 1
 affiliations:
  - name: Departement of Theoretical Physics, University of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
    index: 1
- - name:
- - name :  
 date: November 2021
 bibliography: paper.bib
 
@@ -23,6 +21,7 @@ bibliography: paper.bib
 # aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
+&nbsp;
 &nbsp;
 
 # Summary
