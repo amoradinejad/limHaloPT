@@ -23,9 +23,7 @@ bibliography: paper.bib
 # aas-journal: Astrophysical Journal <- The name of the AAS journal.
 ---
 
-<br/><br/>
-<br/><br/>
-<br/><br/>
+&nbsp;
 
 # Summary
 
