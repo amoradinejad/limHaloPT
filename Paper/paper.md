@@ -43,7 +43,7 @@ The `limHaloPT' package calls various functions from [CLASS](https://github.com/
 
 # Future Extensions 
 
-Extension of the code to include other emission lines originating from star-forming galaxies is straightforward. Future releases will provide additional modules, for example, to include observational effects such as redshift-space distortions and the Alcock-Paczynski effect. Furthermore, we plan to extend this code to higher-order statistics of line intensity fluctuations. 
+Extension of the code to include other emission lines originating from star-forming galaxies is straightforward. Future releases will provide additional modules, for example, to include observational effects such as redshift-space distortions and the Alcock-Paczynski effect. Furthermore, we plan to extend this code to include cross-correlations between different emission lines, as well as to include higher-order statistics of line intensity fluctuations. 
 
 
 # Acknowledgements
