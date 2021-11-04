@@ -1,9 +1,10 @@
 ---
-title: 'limHaloPT: A numerical Package for Accurate Modeling of Line Intensity Power spectrum'
+title: 'limHaloPT: A numerical Package for Accurate Modeling of Line Intensity Power spectrum: one-loop halo model and non-Possionian shot'
 tags:
   - C language
   - cosmology
   - intensity mapping
+  - one-loop halo model
 authors:
   - name: Azadeh Moradinezhad Dizgah ^[corresponding author]
     orcid: 0000-0001-8841-9989
@@ -13,8 +14,12 @@ affiliations:
    index: 1
 date: November 2021
 bibliography: paper.bib
----
 
+# Optional fields if submitting to a AAS journal too, see this blog post:
+# https://blog.joss.theoj.org/2018/12/a-new-collaboration-with-aas-publishing
+# aas-doi: 10.3847/xxxxx <- update this with the DOI from AAS once you know it.
+# aas-journal: Astrophysical Journal <- The name of the AAS journal.
+---
 
 
 # Summary
