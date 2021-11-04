@@ -5,7 +5,7 @@ tags:
   - cosmology
   - intensity mapping
 authors:
-  - name: Azadeh Moradinezhad Dizgah^[co-first author]
+  - name: Azadeh Moradinezhad Dizgah
     orcid: 0000-0001-8841-9989
     affiliation: 1
 affiliations:
