@@ -30,7 +30,6 @@ If you modified the code, you need to first do "make clean" before doing "make".
 You can use this package freely, provided that in your publication you cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX. 
 <br>
-&nbsp;
 
 
 ### License
