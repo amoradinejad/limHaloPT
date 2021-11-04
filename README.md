@@ -29,7 +29,7 @@ To run the code, type:
 Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. 
 
 
-## Acknowledgment
+## Attribution
 
 You can use this package freely, provided that in your publication you cite the following paper: 
 Moradinezhad & Nikakhtar & Keating & Castorina: arXiv:2111.XXX
