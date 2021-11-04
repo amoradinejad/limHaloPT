@@ -35,6 +35,12 @@ The extended halo model of line intensity power spectrum implemented in `limHalo
 
 Recently, there has been a shift in the cosmology community in publicly releasing the packages developed by various groups to facilitate the follow-up research by the wider community, without the need of each research group to replicate the numerical tools previously developed by other groups. Great examples of this approach are CLASS Boltzman code [@Blas2011] and nbodykit [@Blas2011] toolkit for analysis LSS data from Nbody simulations and from galaxy surveys. In LIM, limHaloPT is the first package that includes detailed modeling of the line power spectrum. The modular structure of the package facilitates future extensions of the code to other LIM statistics, such as bispectrum, as well embedding this code in a full likelihood analysis pipeline such as CosmoSIS [@Zuntz:2014csq].   
 
+
+# Dependencies
+
+The `limHaloPT' package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Furthermore, the code uses several functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. 
+
+
 # Acknowledgements
 
 The research of A.M.D. is supported by the SNSF project "The  Non-Gaussian  Universe and  Cosmological Symmetries", project number:200020-178787. A.M.D., further acknowledges partial funding from Tomalla Foundation for Research in Gravity. 
