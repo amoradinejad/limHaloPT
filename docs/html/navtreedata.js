@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "limHaloPT", "index.html", [
+    [ "Dependencies", "index.html#autotoc_md1", null ],
+    [ "Compilation and Usage", "index.html#autotoc_md2", null ],
+    [ "Attribution", "index.html#autotoc_md3", null ],
+    [ "License", "index.html#autotoc_md4", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ]
     ] ],
