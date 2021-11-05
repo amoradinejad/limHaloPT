@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../df/dcb/header_8h.html#a25a40b6614565f755233080a384c35f1',1,'header.h']]]
+  ['angular_5fdistance_0',['angular_distance',['../d6/d32/cosmology_8c.html#a11f9475db171d037089d936d8b2371df',1,'cosmology.c']]]
 ];

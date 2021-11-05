@@ -871,7 +871,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/docs/README.md \
+INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/Source/  \
+                         /Volumes/Data/Documents/Git/limHaloPT/docs/README.md \
                          /Volumes/Data/Documents/Git/limHaloPT/Include/header.h \
                          /Volumes/Data/Documents/Git/limHaloPT/Include/Global_Structs.h
 

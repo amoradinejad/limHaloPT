@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['class_5fcosmology_5fstruct_0',['Class_Cosmology_Struct',['../d2/dd8/struct_class___cosmology___struct.html',1,'']]],
-  ['cosmology_1',['Cosmology',['../d2/dbd/struct_cosmology.html',1,'']]]
+  ['angular_5fdistance_0',['angular_distance',['../d6/d32/cosmology_8c.html#a11f9475db171d037089d936d8b2371df',1,'cosmology.c']]]
 ];
