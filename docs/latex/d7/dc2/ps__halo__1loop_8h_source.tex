@@ -1,0 +1,33 @@
+\hypertarget{ps__halo__1loop_8h_source}{}\doxysubsection{ps\+\_\+halo\+\_\+1loop.\+h}
+\label{ps__halo__1loop_8h_source}\index{ps\_halo\_1loop.h@{ps\_halo\_1loop.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LINE\_PS\_PT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LINE\_PS\_PT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keywordtype}{double} \mbox{\hyperlink{ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4}{PS\_hh\_G}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} M, \textcolor{keywordtype}{long} mode, \textcolor{keywordtype}{long} IR\_switch, \textcolor{keywordtype}{long} SPLIT, \textcolor{keywordtype}{long} mode\_mf);}
+\DoxyCodeLine{5 \textcolor{keywordtype}{double} \mbox{\hyperlink{ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce}{PS\_hh\_PNG}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} M, \textcolor{keywordtype}{long} mode, \textcolor{keywordtype}{long} IR\_switch, \textcolor{keywordtype}{long} SPLIT, \textcolor{keywordtype}{long} mode\_mf);}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keywordtype}{void} \mbox{\hyperlink{ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a}{Compute\_G\_loops}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{long} IR\_switch, \textcolor{keywordtype}{long} hm\_switch, \textcolor{keywordtype}{long} SPLIT, \textcolor{keywordtype}{double} *result);}
+\DoxyCodeLine{8 \textcolor{keywordtype}{void} \mbox{\hyperlink{ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892}{Compute\_PNG\_loops}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{long} IR\_switch, \textcolor{keywordtype}{long} SPLIT, \textcolor{keywordtype}{double} *result);}
+\DoxyCodeLine{9 \textcolor{keyword}{static} \textcolor{keywordtype}{int} G\_loop\_integrands(\textcolor{keyword}{const} \textcolor{keywordtype}{int} *ndim,}
+\DoxyCodeLine{10                               \textcolor{keyword}{const} cubareal x[],}
+\DoxyCodeLine{11                               \textcolor{keyword}{const} \textcolor{keywordtype}{int} *ncomp,}
+\DoxyCodeLine{12                               cubareal ff[],}
+\DoxyCodeLine{13                               \textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{14 \textcolor{keyword}{static} \textcolor{keywordtype}{int} PNG\_loop\_integrands(\textcolor{keyword}{const} \textcolor{keywordtype}{int} *ndim,}
+\DoxyCodeLine{15                              \textcolor{keyword}{const} cubareal x[],}
+\DoxyCodeLine{16                              \textcolor{keyword}{const} \textcolor{keywordtype}{int} *ncomp,}
+\DoxyCodeLine{17                              cubareal ff[],}
+\DoxyCodeLine{18                              \textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keywordtype}{double} F2\_s(\textcolor{keywordtype}{double} k1,\textcolor{keywordtype}{double} k2,\textcolor{keywordtype}{double} mu);}
+\DoxyCodeLine{21 \textcolor{keywordtype}{double} S2\_s(\textcolor{keywordtype}{double} k1,\textcolor{keywordtype}{double} k2,\textcolor{keywordtype}{double} mu);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{double} F3\_s(\textcolor{keywordtype}{double} k,\textcolor{keywordtype}{double} q, \textcolor{keywordtype}{double} mu);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{double} S2(\textcolor{keywordtype}{double} mu);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{double} F2(\textcolor{keywordtype}{double} k1,\textcolor{keywordtype}{double} k2,\textcolor{keywordtype}{double} mu);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

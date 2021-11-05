@@ -1,0 +1,40 @@
+\hypertarget{ps__line__hm_8h_source}{}\doxysubsection{ps\+\_\+line\+\_\+hm.\+h}
+\label{ps__line__hm_8h_source}\index{ps\_line\_hm.h@{ps\_line\_hm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LINE\_PS\_HM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LINE\_PS\_HM\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{// double PS\_line\_HM\_RSD(struct Cosmology *Cx, double k, double mu, double z, size\_t line\_id, struct Cosmology *Cx\_ref);}}
+\DoxyCodeLine{5 \textcolor{keywordtype}{double} \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\_line\_HM}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} M\_min, \textcolor{keywordtype}{long} mode\_mf,  \textcolor{keywordtype}{long} line\_type, \textcolor{keywordtype}{int} line\_id);}
+\DoxyCodeLine{6 \textcolor{keywordtype}{double} \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\_shot\_HM}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} M\_min, \textcolor{keywordtype}{double} *input, \textcolor{keywordtype}{long} mode\_mf, \textcolor{keywordtype}{long} line\_type);}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{comment}{// void HM\_1h2h\_interp(double k, double z, size\_t line\_id, struct Cosmology *Cx, long mode\_hm, double *result);}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keywordtype}{void} \mbox{\hyperlink{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}{HM\_1h2h}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} M\_min,}
+\DoxyCodeLine{12             \textcolor{keywordtype}{long} mode\_mf,\textcolor{keywordtype}{long} line\_type, \textcolor{keywordtype}{long} mode\_hm, \textcolor{keywordtype}{double} *result);}
+\DoxyCodeLine{13 \textcolor{keyword}{static} \textcolor{keywordtype}{int} HM\_1h2h\_integ(\textcolor{keyword}{const} \textcolor{keywordtype}{int} *ndim,}
+\DoxyCodeLine{14                   \textcolor{keyword}{const} cubareal x[],}
+\DoxyCodeLine{15                   \textcolor{keyword}{const} \textcolor{keywordtype}{int} *ncomp,}
+\DoxyCodeLine{16                   cubareal ff[],}
+\DoxyCodeLine{17                   \textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{void} mhmc(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{long} mode\_mf, \textcolor{keywordtype}{double} *result);}
+\DoxyCodeLine{19 \textcolor{keyword}{static} \textcolor{keywordtype}{int} mhmc\_integ(\textcolor{keyword}{const} \textcolor{keywordtype}{int} *ndim,}
+\DoxyCodeLine{20                   \textcolor{keyword}{const} cubareal x[],}
+\DoxyCodeLine{21                   \textcolor{keyword}{const} \textcolor{keywordtype}{int} *ncomp,}
+\DoxyCodeLine{22                   cubareal ff[],}
+\DoxyCodeLine{23                   \textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{// double b22\_ls\_integrand(double x, void *par);}}
+\DoxyCodeLine{27 \textcolor{keywordtype}{double} b22\_ls(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{28 \textcolor{keyword}{static} \textcolor{keywordtype}{int} b22\_ls\_integrand(\textcolor{keyword}{const} \textcolor{keywordtype}{int} *ndim,}
+\DoxyCodeLine{29                              \textcolor{keyword}{const} cubareal x[],}
+\DoxyCodeLine{30                              \textcolor{keyword}{const} \textcolor{keywordtype}{int} *ncomp,}
+\DoxyCodeLine{31                              cubareal ff[],}
+\DoxyCodeLine{32                              \textcolor{keywordtype}{void} *p); }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

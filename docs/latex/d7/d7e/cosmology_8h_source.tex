@@ -1,0 +1,48 @@
+\hypertarget{cosmology_8h_source}{}\doxysubsection{cosmology.\+h}
+\label{cosmology_8h_source}\index{cosmology.h@{cosmology.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef COSMOLOGY\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define COSMOLOGY\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keywordtype}{int} \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\_init}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} pk\_kmax, \textcolor{keywordtype}{double} pk\_zmax, }
+\DoxyCodeLine{5             \textcolor{keywordtype}{int} nlines, \textcolor{keywordtype}{int} * line\_types, \textcolor{keywordtype}{size\_t} npoints\_interp, \textcolor{keywordtype}{double} M\_min, \textcolor{keywordtype}{long} mode\_mf);}
+\DoxyCodeLine{6 \textcolor{keywordtype}{int} \mbox{\hyperlink{cosmology_8c_a8ddfed4a843beb762df124badc47011e}{Cosmology\_free}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx);}
+\DoxyCodeLine{7 \textcolor{keywordtype}{int} \mbox{\hyperlink{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}{CL\_Cosmology\_initilize}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} pk\_kmax, \textcolor{keywordtype}{double} z\_pk);}
+\DoxyCodeLine{8 \textcolor{keywordtype}{int} \mbox{\hyperlink{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}{CL\_Cosmology\_free}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx);}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}{Pk\_dlnPk}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z , \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{11 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a3175f43a84557ec21866b47a10054797}{Mk\_dlnMk}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{12 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}{Pk\_dlnPk\_HV}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} z , \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ac236684e538f158f0651141f7034fe8d}{sigma0\_sq\_integrand}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{void} *p);}
+\DoxyCodeLine{15 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\_sq}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} kmax);}
+\DoxyCodeLine{16 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a72661633b8701d902d6887c4402ed394}{sig\_sq\_integrand}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{void} *par);}
+\DoxyCodeLine{17 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}{sig\_sq}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}{der\_lnsig\_sq}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}{growth\_D}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{21 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}{growth\_f}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{double} scale\_indep\_growth\_D(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{double} scale\_indep\_growth\_f(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}{Hubble}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} a);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a11f9475db171d037089d936d8b2371df}{angular\_distance}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{26 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}{comoving\_radial\_distance}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}{rhoc}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{29 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\_scale}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} h\_mass);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}{R\_vir}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} h\_mass);  }
+\DoxyCodeLine{32 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}{concentration\_cdm}}(\textcolor{keywordtype}{double} M, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{33 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}{nfw\_profile}}(\textcolor{keyword}{struct} \mbox{\hyperlink{struct_cosmology}{Cosmology}} *Cx, \textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} M, \textcolor{keywordtype}{double} z);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keywordtype}{double} window\_kth(\textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{36 \textcolor{keywordtype}{double} \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\_rth}}(\textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{37 \textcolor{keywordtype}{double} derR\_window\_rth(\textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{double} window\_g(\textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{39 \textcolor{keywordtype}{double} derR\_logwindow\_g(\textcolor{keywordtype}{double} k, \textcolor{keywordtype}{double} R);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
