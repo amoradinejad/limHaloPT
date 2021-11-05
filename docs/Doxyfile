@@ -51,14 +51,14 @@ PROJECT_BRIEF          = one-loop halo model of LIM
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = /Volumes/Data/Documents/Git/limHaloPT/docs/small.png
+PROJECT_LOGO           = small.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /Volumes/Data/Documents/Git/limHaloPT/docs
+OUTPUT_DIRECTORY       = docs
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -871,10 +871,10 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/Source  \
-                         /Volumes/Data/Documents/Git/limHaloPT/docs/README.md \
-                         /Volumes/Data/Documents/Git/limHaloPT/Include/header.h \
-                         /Volumes/Data/Documents/Git/limHaloPT/Include/Global_Structs.h
+INPUT                  = ../Source  \
+                         docs/README.md \
+                         ../Include/header.h \
+                         ../Include/Global_Structs.h
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1075,7 +1075,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = /Volumes/Data/Documents/Git/limHaloPT/docs/README.md
+USE_MDFILE_AS_MAINPAGE = README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -1963,7 +1963,7 @@ LATEX_EXTRA_STYLESHEET =
 # markers available.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_EXTRA_FILES      = /Volumes/Data/Documents/Git/limHaloPT/docs/small.png
+LATEX_EXTRA_FILES      = small.png
 
 # If the PDF_HYPERLINKS tag is set to YES, the LaTeX that is generated is
 # prepared for conversion to PDF (using ps2pdf or pdflatex). The PDF file will
@@ -2268,7 +2268,7 @@ SEARCH_INCLUDES        = YES
 # preprocessor.
 # This tag requires that the tag SEARCH_INCLUDES is set to YES.
 
-INCLUDE_PATH           = /Volumes/Data/Documents/Git/limHaloPT/Include
+INCLUDE_PATH           = ../Include
 
 # You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard
 # patterns (like *.h and *.hpp) to filter out the header-files in the
