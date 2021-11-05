@@ -1,0 +1,14 @@
+# Ignore Input and Output directories
+docs/Doxyfile/
+docs/DoxygenLayout.xml
+docs/small.png
+
+
+# Ignore Logs and compiled code
+*.o 
+*.limHaloPT
+
+
+#Ignore max files
+.DS_Store
+  
