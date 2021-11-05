@@ -1,0 +1,22 @@
+digraph "PS_hh_G"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PS_hh_G",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cleanup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0",tooltip="Free the memory allocated to cosmology structure and SFR interpolator."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="halo_bias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab",tooltip="computes the halo biases for three mass functions, press-schecter, Sheth-Tormen, and Tinker mass func..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="R_scale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f",tooltip="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="rhoc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7",tooltip="Compute the critical density in unit of M_sun/Mpc^3."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Hubble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a",tooltip="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..."];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sig_sq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754",tooltip="Compute variance of smoothed matter density fluctuations."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="make_1Darray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995",tooltip="Allocate memory to a 1d array of type double and length size."];
+}

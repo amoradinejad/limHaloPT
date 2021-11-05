@@ -1,0 +1,12 @@
+digraph "growth_f"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="growth_f",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the scale-dependant linear growth rate f(k,z) (i.e the velocity growth factor) by taking nume..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="PS_line_RSD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d43/ps__line__pt_8c.html#a2a5a8e5016f2d8728844564d93000751",tooltip="Compute the redshift-space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3 as a functi..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ps_line_multipoles\l_integrand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d43/ps__line__pt_8c.html#ae4ce1e29b505dae588eb2b8c8ae632e2",tooltip="Compute the multipole moments of redshift-space power spectrum of emission lines in unit of micro K^2..."];
+}

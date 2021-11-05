@@ -1,0 +1,18 @@
+digraph "kmax_Brent_solver"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="kmax_Brent_solver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="R_scale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f",tooltip="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rhoc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7",tooltip="Compute the critical density in unit of M_sun/Mpc^3."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Hubble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a",tooltip="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="T",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3",tooltip="Compute the total baryon+CDM transfer function."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Tt0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477",tooltip="Compute ????? AM:EDIT."];
+}
