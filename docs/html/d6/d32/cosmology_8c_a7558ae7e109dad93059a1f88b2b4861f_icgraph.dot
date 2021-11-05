@@ -1,0 +1,31 @@
+digraph "R_scale"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="R_scale",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="halo_bias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab",tooltip="computes the halo biases for three mass functions, press-schecter, Sheth-Tormen, and Tinker mass func..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="bias_lum_weighted_integ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a609c2a4b205e7f497d4b96657510fd5f",tooltip="Compute the luminosityy-weighted linear and quadratic line biases."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="bias_lum_weighted",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PS_hh_G",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4",tooltip="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PS_hh_PNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce",tooltip="Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions..."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="kmax_Brent_solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="mass_func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702",tooltip="Compute the halo mass function for Press-Schechter, Sheth-Tormen and Tinker models see Pillepich et a..."];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="mass_moment1_integ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#ab82b15c827d1213a94e3ff9ce4ddad32",tooltip="Compute the first luminosityy-weighted mass moment."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="mass_moment1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a4024cda73f4069d07113edd77ae35d4e",tooltip="in unit of M_sun/Mpc^3"];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="mass_moment2_integ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#af293c79ca858df80dcc0ef9f29448059",tooltip="Compute the second luminosityy-weighted mass moment."];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="mass_moment2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d10/line__ingredients_8c.html#a905f3fe9b824af5ce217f36af3c767e5",tooltip="in unit of M_sun/Mpc^3"];
+}

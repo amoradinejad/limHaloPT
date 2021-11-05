@@ -1,0 +1,16 @@
+digraph "cleanup"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="cleanup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Free the memory allocated to cosmology structure and SFR interpolator."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="pm_nowiggle_gfilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878",tooltip="Compute the no-wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="PS_hh_G",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4",tooltip="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="PS_hh_PNG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce",tooltip="Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="PS_line_HM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01",tooltip="Compute the clustering contribution to the line power spectrum using halo-model."];
+}
