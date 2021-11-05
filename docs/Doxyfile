@@ -51,7 +51,7 @@ PROJECT_BRIEF          = one-loop halo model of LIM
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = /Volumes/Data/docs/Git/limHaloPT/small.png
+PROJECT_LOGO           = /Volumes/Data/Documents/Git/limHaloPT/docs/small.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -871,10 +871,10 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /Users/azadeh/Desktop/limHaloPT-master/Source \
+INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/Source \
                          README.md \
-                         /Users/azadeh/Desktop/limHaloPT-master/Include/header.h \
-                         /Users/azadeh/Desktop/limHaloPT-master/Include/Global_Structs.h
+                         /Volumes/Data/Documents/Git/limHaloPT/Include/header.h \
+                         /Volumes/Data/Documents/Git/limHaloPT/Include/Global_Structs.h
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
