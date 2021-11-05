@@ -1,4 +1,14 @@
 
+/** @file Global_Structs.h
+ * 
+ */
+#ifndef GLOBALSTRUCTS_H_
+#define GLOBALSTRUCTS_H_
+
+
+/**
+ * Structure to store cosmology structure from CLASS code
+*/
 struct Class_Cosmology_Struct{
 
     struct precision                    pr;             /* for precision parameters */
@@ -15,6 +25,11 @@ struct Class_Cosmology_Struct{
 };
 
 
+/**
+ * Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological 
+ * paramteres. This includes, the Class_Cosmology_Struct (initialized in cosmology.c), and 
+ * Line Structure (initialized in line_ingredients.c). 
+*/
 struct Cosmology
 {
 
@@ -29,6 +44,10 @@ struct Cosmology
 
 
 
+/**
+ * Structure that holds the Line-related quantities, including the interpolators for first and second moments of the line luminosity 
+ * and the linear and quadratic luminosity-weighted line biases.
+*/
 struct Line
 {
       long                    LineType;
@@ -50,7 +69,9 @@ struct Line
 };
 
 
-
+/**
+ * A global structure including the values of cosmological parmaeters, 2d interpolator of SFR, and names of various files.
+*/
 struct globals 
 {
 	double H0;
@@ -67,29 +88,8 @@ struct globals
 	double Omega_g;
 	double Omega_nu;
 
-	double fnl;
-	double nu;
-
 	double b1;
 	double sigFOG0;
-
-	double ns_min;
-	double ns_max;
-
-	double h_min ;
-	double h_max;
-
-	double Omega_cdm_min;
-	double Omega_cdm_max;
-
-	double Omega_b_min ;
-	double Omega_b_max;
-	
-	double logAs_min;
-	double logAs_max;
-
-	double fnl_min;
-	double fnl_max;
 	
 	long Npars;
 	double z_i;
@@ -120,13 +120,12 @@ struct globals
 	char			SFR_filename[FILENAME_MAX];
 	char 			Planck_Fisher_filename[FILENAME_MAX];
 
-
 	gsl_interp_accel    *logM_accel_ptr;
   	gsl_interp_accel    *z_accel_ptr;
   	gsl_spline2d        *logSFR_spline2d_ptr;	
 };
 
-
+#endif
  
 
 

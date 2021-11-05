@@ -1,7 +1,7 @@
 
 /** @file utilities.c Documented basic utility functions used by other modules of the code. 
  * 
- * Azadeh Moradinezhad Dizgah, September 6th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  *  
  * In summary, the following functions can be called from other modules:

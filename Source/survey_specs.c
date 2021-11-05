@@ -1,7 +1,7 @@
 
 /** @file survey_specs.c Documented computation of some survey-related functions
  * 
- * Azadeh Moradinezhad Dizgah, September 6th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  * In summary, the following functions can be called from other modules:
  * -# shell_volume()            computes the comoving volume of a survey covering redshift up to z

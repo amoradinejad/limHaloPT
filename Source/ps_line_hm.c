@@ -1,7 +1,7 @@
 
 /** @file ps_line_hm.c Documented halo-model computation of line power spectrum, including clustering and stochastic contributions beyond Poisson limit 
  * 
- * Azadeh Moradinezhad Dizgah, September 6th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  * This module has two main functions: 
  *      - PS_line_HM() to compute clustering (1- and 2-halo terms). The 2-halo term, includes nonlinear corrections to halo power spectrum arising from nonlinearities of matter fluctuations and halo biases.

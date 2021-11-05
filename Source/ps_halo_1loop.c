@@ -3,7 +3,7 @@
 /** @file ps_halo_1loop.c Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum
  * See arXiv:2010.14523 for explicit expressions 
  * 
- * Azadeh Moradinezhad Dizgah, June 16th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  * This module computes the 1loop halo/galaxy power sprtcurm in real-space via direct numerical integration.
  * IR-resummation and EFT counter terms are included. In addition to loops due to gravitational loops, terms arising only in the presence of local PNG are 

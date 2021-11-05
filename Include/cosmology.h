@@ -15,13 +15,6 @@ double sigma0_sq_integrand(double x, void *p);
 double sigma0_sq(struct Cosmology *Cx, double z, double kmax);
 double sig_sq_integrand(double x, void *par);
 double sig_sq(struct Cosmology *Cx, double z, double R);
-int der_sig_sq_integrand(unsigned  nd,       // Number of dimensions in the domain space -- number of dim we're integrating over
-    const double  *x,           // The point at which the integrand is evaluated
-    void          *p,           // Pointer to a structure that holds the parameters
-    unsigned      fdim,           // Number of dimensions that the integrand return
-    double        *fvalue         // Array of values of the integrand of dimension fdim
-    );
-double der_sig_sq(struct Cosmology *Cx, double z, double R);
 double der_lnsig_sq(struct Cosmology *Cx, double z, double R);
 
 double growth_D(struct Cosmology *Cx, double z);
@@ -36,7 +29,7 @@ double rhoc(struct Cosmology *Cx, double z);
 double R_scale(struct Cosmology *Cx, double h_mass);
 
 double R_vir(struct Cosmology *Cx, double h_mass);  
-double c_cdm(double M, double z);
+double concentration_cdm(double M, double z);
 double nfw_profile(struct Cosmology *Cx, double k, double M, double z);
 
 double window_kth(double k, double R);

@@ -1,5 +1,5 @@
 
-/** @file wnw.c Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template  
+/** @file wnw_split.c Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template  
  * 
  * Azadeh Moradinezhad Dizgah, June 16th 2021
  *
@@ -10,8 +10,8 @@
  */
 
 
-#include "header.h"
 
+#include "header.h"
 
 /**
  * Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter

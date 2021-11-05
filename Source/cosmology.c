@@ -1,6 +1,6 @@
 /** @file cosmology.c  Documented cosmology module 
  * 
- * Azadeh Moradinezhad Dizgah, September 6th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *   
  * The first routine of this module initalizes the Cosmology structure, which is the main building block of this entire code. 
  * This structure includes two sub-structures: the CLASS cosmology structure and line structure. Once the CLASS cosmology is initialized,
@@ -607,15 +607,12 @@ double Mk_dlnMk(struct Cosmology *Cx, double k, double z, int mode)
 
 
 /** 
- * Compute variance of smoothed matter density fluctuations. 
- * The function sig_sq_integrand() defines the integrand and sig_sq() computes the k-integral
+ * The integrand function passed to qags integrator to compute the variance of the matter density
  *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @param R                 Input: smoothing scale in unit of Mpc
- * @return the variance
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
  */
-
 double sig_sq_integrand(double x, void *par)
   {
     double f=0;
@@ -638,6 +635,15 @@ double sig_sq_integrand(double x, void *par)
   } 
 
 
+/** 
+ * Compute variance of smoothed matter density fluctuations. 
+ * The function sig_sq_integrand() defines the integrand and sig_sq() computes the k-integral
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift to compute the spectrum
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the variance
+ */
 double sig_sq(struct Cosmology *Cx, double z, double R)
 {
   double result=0., error=0.;
@@ -666,67 +672,6 @@ double sig_sq(struct Cosmology *Cx, double z, double R)
 
 
 /** 
- * Compute derivative of the variance of smoothed matter density fluctuations w.r.t. smoothing scale
- * The function der_sig_sq_integrand() defines the integrand and der_sig_sq() computes the k-integral
- *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @param R                 Input: smoothing scale in unit of Mpc
- * @return the derivative of variance
- */
-int der_sig_sq_integrand(unsigned  nd,       // Number of dimensions in the domain space -- number of dim we're integrating over
-        const double  *x,           // The point at which the integrand is evaluated
-        void          *p,           // Pointer to a structure that holds the parameters
-        unsigned      fdim,           // Number of dimensions that the integrand return
-        double        *fvalue         // Array of values of the integrand of dimension fdim
-        )
-{
-  
-  struct integrand_parameters2 pij;
-  pij = *((struct integrand_parameters2 *)p); 
-
-  double k = exp(x[0]);
-
-  struct Cosmology *Cx = pij.p1;
-  double z             = pij.p4;
-  double R             = pij.p5;
-
-  double result = 2./(2.*pow(M_PI,2.))* pow(k,3.) * window_rth(k,R) * derR_window_rth(k,R) * Pk_dlnPk(Cx,k,z,LPOWER);
-
-  *fvalue = result;
-
-  return 0;
-
-}
-
-double der_sig_sq(struct Cosmology *Cx, double z, double R)
-{
-  struct integrand_parameters2 par;
-
-  unsigned fdim = 1;            // Dimensionality of the integrand function
-  unsigned dim = 1;           // Dimensionality of the domain of integration
-  double xmin[1], xmax[1];        // Integration limits: these are arrays of dimension dim
-  unsigned maxEval = 0;         // Maximum number of integrand evaluations (0 for none)
-  double AbsErr=0.0;            // Required absolute error (0.0 for none)
-  double RelErr=1.0e-3;         // Required relative error (1.0e-3)
-  double result=0.;           // Final result
-  double error=0.;            // Error estimate on the result
-  error_norm norm = ERROR_INDIVIDUAL;
-
-  xmin[0] = log(gb.PS_kmin);
-  xmax[0] = log(gb.PS_kmax);
-
-  par.p1 = Cx;
-  par.p4 = z;
-  par.p5 = R;
-    
-  hcubature(fdim, der_sig_sq_integrand, &par, dim, xmin, xmax, maxEval, AbsErr, RelErr, norm, &result, &error);
-      
-  return result;  
-}
-
-
-/** 
  * Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w.r.t. smoothing scale
  *   
  * @param Cx                Input: pointer to Cosmology structure
@@ -750,14 +695,12 @@ double der_lnsig_sq(struct Cosmology *Cx, double z, double R)
 
 
 /** 
- * Compute variance of unsmoothed matter density fluctuations. 
- * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
+ * The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density
  *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @return the unsmoothed variance
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
  */
-
 double sigma0_sq_integrand(double x, void *par)
 {
   
@@ -775,6 +718,15 @@ double sigma0_sq_integrand(double x, void *par)
 
 } 
 
+
+/** 
+ * Compute variance of unsmoothed matter density fluctuations. 
+ * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift to compute the spectrum
+ * @return the unsmoothed variance
+ */
 double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  ///kmax is in unit of 1/Mpc
 {
 
@@ -1048,7 +1000,7 @@ double R_vir(struct Cosmology *Cx, double M)
  * @return the cdm concentration
  */
 
-double c_cdm(double M, double z)
+double concentration_cdm(double M, double z)
 {
   /*Farnik, where did you take this expression from?*/
   // double alpha = -0.061094;
@@ -1086,7 +1038,7 @@ double nfw_profile(struct Cosmology *Cx, double k, double M, double z)
 {
   
   double rvir  = R_vir(Cx, M); /* the co-moving virial radius_from_mass */
-  double c     = c_cdm(M, z);
+  double c     = concentration_cdm(M, z);
   double rs    = rvir / c;
   double f_fac = 1./(log(1.+c) - c/(1.+c));
   double rho_s = M/(4.*M_PI*pow(rs,3.)) * f_fac;  ///rho_s is computed by enforcing int dr r^2 u(r) = 1

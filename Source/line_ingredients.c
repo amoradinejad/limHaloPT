@@ -3,7 +3,7 @@
  * 
  * This module includes functions that are needed for computing the line clustering and shot contributions.
  *  
- * Azadeh Moradinezhad Dizgah, September 6th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  * In summary, the following functions can be called from other modules:
  * -# Line_alloc_init()       allocate memory and initizlized the line structure which contains 4 interpolators for first and second mass moments and linear and quadratic line biases.

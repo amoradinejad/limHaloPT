@@ -1,7 +1,7 @@
 
 /** @file IR_res.c Documented IR_res module 
  * 
- * Azadeh Moradinezhad Dizgah, June 16th 2021
+ * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
  * This module is computes the leading and next-to-leading IR-resummed matter power spectrum
  * The wiggle-nowiggle seperation is performed in wnw_split.c module. 
