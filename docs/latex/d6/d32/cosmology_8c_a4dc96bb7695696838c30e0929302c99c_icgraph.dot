@@ -1,0 +1,10 @@
+digraph "R_vir"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="R_vir",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the comoving virial radius of halos in unit of 1/Mpc^3, which is defined as the radius at whi..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="nfw_profile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#ac55a19abfeca76040b0460e6712fb0ef",tooltip="Compute the NFW halo profile in Fourier space, given by Eq."];
+}

@@ -1,0 +1,704 @@
+\hypertarget{cosmology_8c}{}\doxysubsection{cosmology.\+c File Reference}
+\label{cosmology_8c}\index{cosmology.c@{cosmology.c}}
+
+
+Documented cosmology module.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for cosmology.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\+\_\+init}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double pk\+\_\+kmax, double pk\+\_\+zmax, int nlines, int $\ast$line\+\_\+types, size\+\_\+t npoints\+\_\+interp, double M\+\_\+min, long mode\+\_\+mf)
+\begin{DoxyCompactList}\small\item\em Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cosmology_8c_a8ddfed4a843beb762df124badc47011e}{Cosmology\+\_\+free}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated to cosmology structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}{CL\+\_\+\+Cosmology\+\_\+initilize}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double pk\+\_\+kmax, double pk\+\_\+zmax)
+\begin{DoxyCompactList}\small\item\em Allocate memory and initialize the CLASS cosmology structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}{CL\+\_\+\+Cosmology\+\_\+free}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated to CLASS cosmology structure. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}{Pk\+\_\+dln\+Pk}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int mode)
+\begin{DoxyCompactList}\small\item\em Compute the matter power spectra (in unit of (Mpc)$^\wedge$3) as a function of k (in unit of 1/\+Mpc) and z, Setting the switch \char`\"{}mode\char`\"{}, to LINEAR or NONLINEAR, we can compute the linear or nonlinear spectrum respectively. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}{Pk\+\_\+dln\+Pk\+\_\+\+HV}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int mode)
+\begin{DoxyCompactList}\small\item\em Read in the linear power spectrum, used to set the initial conditions of Hidden-\/\+Valley sims. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a3175f43a84557ec21866b47a10054797}{Mk\+\_\+dln\+Mk}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int mode)
+\begin{DoxyCompactList}\small\item\em Compute the transfer function for different species depending on the switch \char`\"{}mode\char`\"{}, which can be set to cdm, baryons or total matter transfer function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a72661633b8701d902d6887c4402ed394}{sig\+\_\+sq\+\_\+integrand}} (double x, void $\ast$par)
+\begin{DoxyCompactList}\small\item\em The integrand function passed to qags integrator to compute the variance of the matter density. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}{sig\+\_\+sq}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double R)
+\begin{DoxyCompactList}\small\item\em Compute variance of smoothed matter density fluctuations. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}{der\+\_\+lnsig\+\_\+sq}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double R)
+\begin{DoxyCompactList}\small\item\em Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w.\+r.\+t. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ac236684e538f158f0651141f7034fe8d}{sigma0\+\_\+sq\+\_\+integrand}} (double x, void $\ast$par)
+\begin{DoxyCompactList}\small\item\em The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\+\_\+sq}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double kmax)
+\begin{DoxyCompactList}\small\item\em Compute variance of unsmoothed matter density fluctuations. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}{growth\+\_\+D}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the growth factor D(k,z) which is scale-\/indep if mode\+\_\+nu = NUM, and scale-\/dep if mode\+\_\+nu = MASS The scale-\/dep growth is calculated by taking the ratio of the transfer function at redshift z and zero. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}{growth\+\_\+f}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the scale-\/dependant linear growth rate f(k,z) (i.\+e the velocity growth factor) by taking numerical derivative of the scale\+\_\+dep\+\_\+growth\+\_\+\+D() function f(k,a) = d ln D(k,a)/d ln a. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}{Hubble}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the the hubble rate (exactly the quantity defined by CLASS as index\+\_\+bg\+\_\+H in the background module). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a11f9475db171d037089d936d8b2371df}{angular\+\_\+distance}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the angular diameter distance (exactly the quantity defined by CLASS as ba.\+index\+\_\+bg\+\_\+ang\+\_\+distance in the background module). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}{comoving\+\_\+radial\+\_\+distance}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the comoving radial distance ~\newline
+ \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}{rhoc}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the critical density in unit of M\+\_\+sun/\+Mpc$^\wedge$3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\+\_\+scale}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double M)
+\begin{DoxyCompactList}\small\item\em Compute the Lagrangian radius of halos in unit of 1/\+Mpc$^\wedge$3 , fixing z=0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}{R\+\_\+vir}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double M)
+\begin{DoxyCompactList}\small\item\em Compute the comoving virial radius of halos in unit of 1/\+Mpc$^\wedge$3, which is defined as the radius at which the average density within this radius is Delta X rho\+\_\+c. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}{concentration\+\_\+cdm}} (double M, double z)
+\begin{DoxyCompactList}\small\item\em Compute the cold dark matter concentration-\/mass relation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}{nfw\+\_\+profile}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double M, double z)
+\begin{DoxyCompactList}\small\item\em Compute the NFW halo profile in Fourier space, given by Eq. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\+\_\+rth}} (double k, double R)
+\begin{DoxyCompactList}\small\item\em The following functions compute several window functions and their derivatives with respect to the smoothing scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}\label{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}} 
+double {\bfseries der\+R\+\_\+window\+\_\+rth} (double k, double R)
+\item 
+\mbox{\Hypertarget{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}\label{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}} 
+double {\bfseries window\+\_\+kth} (double k, double R)
+\item 
+\mbox{\Hypertarget{cosmology_8c_ae40d777e0dc4f51704521899d5292254}\label{cosmology_8c_ae40d777e0dc4f51704521899d5292254}} 
+double {\bfseries window\+\_\+g} (double k, double R)
+\item 
+\mbox{\Hypertarget{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}\label{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}} 
+double {\bfseries der\+R\+\_\+logwindow\+\_\+g} (double k, double R)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}\label{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}} 
+struct \mbox{\hyperlink{structglobals}{globals}} {\bfseries gb}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Documented cosmology module. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+
+The first routine of this module initalizes the \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure, which is the main building block of this entire code. This structure includes two sub-\/structures\+: the CLASS cosmology structure and line structure. Once the CLASS cosmology is initialized, various useful functions can be directly called from CLASS, example to compute matter power spectrum and transfer function, angular and comoving radii, growth factor and growth rate, variance of matter fluctuations and its derivative. Lastly, the module also includes various window functions and their derivatives.
+
+In summary, the following functions can be called from other modules\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\+\_\+init()}} allocates memory to and initializes cosmology structure
+\item \mbox{\hyperlink{cosmology_8c_a8ddfed4a843beb762df124badc47011e}{Cosmology\+\_\+free()}} frees the memory allocated to cosmology structure
+\item \mbox{\hyperlink{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}{CL\+\_\+\+Cosmology\+\_\+initilize()}} initializes the class cosmology structure
+\item \mbox{\hyperlink{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}{CL\+\_\+\+Cosmology\+\_\+free()}} frees the class cosmology structure
+\item PS() computes matter power spectrum calling class function
+\item Transfer() computes matter transfer function calling class function
+\item \mbox{\hyperlink{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}{growth\+\_\+\+D()}} computes the scale-\/dep growth factor
+\item \mbox{\hyperlink{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}{growth\+\_\+f()}} computes the scale-\/dep growth rate dln\+D(k,a)/dlna
+\item scale\+\_\+indep\+\_\+growth\+\_\+\+D() computes the scale-\/indep growth factor using directly CLASS functions
+\item scale\+\_\+indep\+\_\+growth\+\_\+f() computes the scale-\/indep growth rate dln\+D(k,a)/dlna using directly CLASS functions
+\item \mbox{\hyperlink{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}{Hubble()}} computes hubbble parameter using directly CLASS functions
+\item \mbox{\hyperlink{cosmology_8c_a11f9475db171d037089d936d8b2371df}{angular\+\_\+distance()}} computes angular diamtere distance using directly CLASS functions
+\item \mbox{\hyperlink{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}{comoving\+\_\+radial\+\_\+distance()}} computes radial distance using directly CLASS functions
+\item \mbox{\hyperlink{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}{sig\+\_\+sq()}} computes variance of smoothed matter fluctuations
+\item der\+\_\+sig\+\_\+sq() computes derivative of the variance of smoothed matter fluctuations w.\+r.\+t. smoothing scale
+\item \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\+\_\+sq()}} computes variance of unsmoothed matter fluctuations
+\item \mbox{\hyperlink{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}{rhoc()}} computes the critical density of the universe
+\item \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\+\_\+scale()}} computes the size of a spherical halo corresponding to a given mass at z=0
+\item R\+\_\+scale\+\_\+wrong() computes the size of a spherical halo corresponding to a given mass at a given redshift
+\item \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\+\_\+rth()}} computes top-\/hat filter in real space
+\item window\+\_\+g() computes Gaussian window
+\item window\+\_\+kth() computes top-\/hat filter in Fourier space
+\item der\+R\+\_\+window\+\_\+rth() computes derivative of top-\/hat filter in real space w.\+r.\+t. smoothing scale
+\item der\+R\+\_\+logwindow\+\_\+g() computes derivative of top-\/hat filter in Fourier space w.\+r.\+t. smoothing scale 
+\end{DoxyEnumerate}
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{cosmology_8c_a11f9475db171d037089d936d8b2371df}\label{cosmology_8c_a11f9475db171d037089d936d8b2371df}} 
+\index{cosmology.c@{cosmology.c}!angular\_distance@{angular\_distance}}
+\index{angular\_distance@{angular\_distance}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{angular\_distance()}{angular\_distance()}}
+{\footnotesize\ttfamily double angular\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the angular diameter distance (exactly the quantity defined by CLASS as ba.\+index\+\_\+bg\+\_\+ang\+\_\+distance in the background module). 
+
+luminosity distance d\+\_\+L = (1+z) d\+\_\+M angular diameter distance d\+\_\+A = d\+\_\+\+M/(1+z) where d\+\_\+M is the transverse comoving distance, which is equal to comoving distance for flat cosmology and has a dependance on curvature for non-\/flat cosmologies, as described in lines 849 -\/ 851
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+\_\+A 
+\end{DoxyReturn}
+junkHere is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}\label{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}} 
+\index{cosmology.c@{cosmology.c}!CL\_Cosmology\_free@{CL\_Cosmology\_free}}
+\index{CL\_Cosmology\_free@{CL\_Cosmology\_free}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{CL\_Cosmology\_free()}{CL\_Cosmology\_free()}}
+{\footnotesize\ttfamily int CL\+\_\+\+Cosmology\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated to CLASS cosmology structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}\label{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}} 
+\index{cosmology.c@{cosmology.c}!CL\_Cosmology\_initilize@{CL\_Cosmology\_initilize}}
+\index{CL\_Cosmology\_initilize@{CL\_Cosmology\_initilize}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{CL\_Cosmology\_initilize()}{CL\_Cosmology\_initilize()}}
+{\footnotesize\ttfamily int CL\+\_\+\+Cosmology\+\_\+initilize (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax }\end{DoxyParamCaption})}
+
+
+
+Allocate memory and initialize the CLASS cosmology structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em pk\+\_\+kmax} & Input\+: kmax for computation of matter power spectrum by CLASS \\
+\hline
+{\em pk\+\_\+zmax} & Input\+: zmax for computation of matter power spectrum by CLASS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error status 
+\end{DoxyReturn}
+h
+
+Omega\+\_\+b ~\newline
+
+
+Omega\+\_\+b ~\newline
+
+
+pivot scale in unit of 1/\+MpcHere is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}\label{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}} 
+\index{cosmology.c@{cosmology.c}!comoving\_radial\_distance@{comoving\_radial\_distance}}
+\index{comoving\_radial\_distance@{comoving\_radial\_distance}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{comoving\_radial\_distance()}{comoving\_radial\_distance()}}
+{\footnotesize\ttfamily double comoving\+\_\+radial\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the comoving radial distance ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the double value D\+\_\+c 
+\end{DoxyReturn}
+junk
+
+For a flat cosmology, comoving distance is equal to conformal distance. This pieace of code is how the comving distance for flat and nonflat cases are computed. Chnage the expression of D\+\_\+A below According to this if considering non-\/flat cosmology. ~\newline
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}\label{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}} 
+\index{cosmology.c@{cosmology.c}!concentration\_cdm@{concentration\_cdm}}
+\index{concentration\_cdm@{concentration\_cdm}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{concentration\_cdm()}{concentration\_cdm()}}
+{\footnotesize\ttfamily double concentration\+\_\+cdm (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the cold dark matter concentration-\/mass relation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Input\+: halo mass in unit of solar mass \\
+\hline
+{\em z} & Input\+: redshift of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cdm concentration 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{cosmology_8c_a8ddfed4a843beb762df124badc47011e}\label{cosmology_8c_a8ddfed4a843beb762df124badc47011e}} 
+\index{cosmology.c@{cosmology.c}!Cosmology\_free@{Cosmology\_free}}
+\index{Cosmology\_free@{Cosmology\_free}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Cosmology\_free()}{Cosmology\_free()}}
+{\footnotesize\ttfamily int Cosmology\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated to cosmology structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error status 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}\label{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}} 
+\index{cosmology.c@{cosmology.c}!Cosmology\_init@{Cosmology\_init}}
+\index{Cosmology\_init@{Cosmology\_init}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Cosmology\_init()}{Cosmology\_init()}}
+{\footnotesize\ttfamily int Cosmology\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax,  }\item[{int}]{nlines,  }\item[{int $\ast$}]{line\+\_\+types,  }\item[{size\+\_\+t}]{npoints\+\_\+interp,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
+
+
+
+Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em pk\+\_\+kmax} & Input\+: kmax for computation of matter power spectrum by CLASS \\
+\hline
+{\em pk\+\_\+zmax} & Input\+: zmax for computation of matter power spectrum by CLASS \\
+\hline
+{\em nlines} & Input\+: number of lines whose properties we want to compute \\
+\hline
+{\em line\+\_\+type} & Inpute\+: name of the line to compute. It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 \\
+\hline
+{\em npoints\+\_\+interp} & Input\+: number of points in redshift for interpolation of line properties \\
+\hline
+{\em M\+\_\+min} & Input\+: minimum halo mass for mass integrals \\
+\hline
+{\em mode\+\_\+mf} & Inpute\+: theoretical model of halo mass function to use. It can be set to sheth-\/\+Tormen (ST), Tinker (TR) or Press-\/\+Schecter (PSC) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an integer if succeeded 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}\label{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}} 
+\index{cosmology.c@{cosmology.c}!der\_lnsig\_sq@{der\_lnsig\_sq}}
+\index{der\_lnsig\_sq@{der\_lnsig\_sq}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{der\_lnsig\_sq()}{der\_lnsig\_sq()}}
+{\footnotesize\ttfamily double der\+\_\+lnsig\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+
+
+Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w.\+r.\+t. 
+
+smoothing scale
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the log-\/derivative of variance 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}\label{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}} 
+\index{cosmology.c@{cosmology.c}!growth\_D@{growth\_D}}
+\index{growth\_D@{growth\_D}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{growth\_D()}{growth\_D()}}
+{\footnotesize\ttfamily double growth\+\_\+D (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the growth factor D(k,z) which is scale-\/indep if mode\+\_\+nu = NUM, and scale-\/dep if mode\+\_\+nu = MASS The scale-\/dep growth is calculated by taking the ratio of the transfer function at redshift z and zero. 
+
+The scale-\/indep growth is computed by CLASS directly The switch \char`\"{}mode\char`\"{} can be set to CDM, BA, TOT to return the growth factor of cdm, baryon and total matter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the growth factor, can be k-\/dep (ex. with nonzero neutrino mass) 
+\end{DoxyReturn}
+junkHere is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}\label{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}} 
+\index{cosmology.c@{cosmology.c}!growth\_f@{growth\_f}}
+\index{growth\_f@{growth\_f}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{growth\_f()}{growth\_f()}}
+{\footnotesize\ttfamily double growth\+\_\+f (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the scale-\/dependant linear growth rate f(k,z) (i.\+e the velocity growth factor) by taking numerical derivative of the scale\+\_\+dep\+\_\+growth\+\_\+\+D() function f(k,a) = d ln D(k,a)/d ln a. 
+
+The switch \char`\"{}mode\char`\"{} can be set to CDM, BA, TOT to return the growth factor of the corresponding matter component.
+
+This is a useful function when constraining physics that induces scale-\/dependant growth such as massive neutrinos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the growth rate, can be k-\/dep (ex. with nonzero neutrino mass) 
+\end{DoxyReturn}
+junkHere is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}\label{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}} 
+\index{cosmology.c@{cosmology.c}!Hubble@{Hubble}}
+\index{Hubble@{Hubble}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Hubble()}{Hubble()}}
+{\footnotesize\ttfamily double Hubble (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the the hubble rate (exactly the quantity defined by CLASS as index\+\_\+bg\+\_\+H in the background module). 
+
+This function is to a good approximation equal to Hubble(a,\+Cx) = gb.\+h$\ast$sqrt(Eofa(a,\+Cx))
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the hubble parameter 
+\end{DoxyReturn}
+junkHere is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{cosmology_8c_a3175f43a84557ec21866b47a10054797}\label{cosmology_8c_a3175f43a84557ec21866b47a10054797}} 
+\index{cosmology.c@{cosmology.c}!Mk\_dlnMk@{Mk\_dlnMk}}
+\index{Mk\_dlnMk@{Mk\_dlnMk}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Mk\_dlnMk()}{Mk\_dlnMk()}}
+{\footnotesize\ttfamily double Mk\+\_\+dln\+Mk (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Compute the transfer function for different species depending on the switch \char`\"{}mode\char`\"{}, which can be set to cdm, baryons or total matter transfer function. 
+
+CLASS function spectra\+\_\+tk\+\_\+at\+\_\+k\+\_\+and\+\_\+z() routine evaluates the matter transfer functions at a given value of k and z by interpolating in a table of all $ T_i(k,z)$\textquotesingle{}s computed at this z by spectra\+\_\+tk\+\_\+at\+\_\+z() (when kmin \texorpdfstring{$<$}{<}= k \texorpdfstring{$<$}{<}= kmax). Returns an error when k$<$kmin or k $>$ kmax.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em mode} & Input\+: switch to decide for which species we want to get the transfer function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the transfer function 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}\label{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}} 
+\index{cosmology.c@{cosmology.c}!nfw\_profile@{nfw\_profile}}
+\index{nfw\_profile@{nfw\_profile}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{nfw\_profile()}{nfw\_profile()}}
+{\footnotesize\ttfamily double nfw\+\_\+profile (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{M,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the NFW halo profile in Fourier space, given by Eq. 
+
+3.\+7 of 2004.\+09515 The profile is normalized to unity at k-\/\texorpdfstring{$>$}{>}0, (see fig 3 of 1003.\+4740)
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em M} & Input\+: halo mass in unit of solar mass \\
+\hline
+{\em z} & Input\+: redshift of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the nfw profile 
+\end{DoxyReturn}
+rho\+\_\+s is computed by enforcing int dr r$^\wedge$2 u(r) = 1Here is the call graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}\label{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}} 
+\index{cosmology.c@{cosmology.c}!Pk\_dlnPk@{Pk\_dlnPk}}
+\index{Pk\_dlnPk@{Pk\_dlnPk}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Pk\_dlnPk()}{Pk\_dlnPk()}}
+{\footnotesize\ttfamily double Pk\+\_\+dln\+Pk (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Compute the matter power spectra (in unit of (Mpc)$^\wedge$3) as a function of k (in unit of 1/\+Mpc) and z, Setting the switch \char`\"{}mode\char`\"{}, to LINEAR or NONLINEAR, we can compute the linear or nonlinear spectrum respectively. 
+
+The CLASS spectra\+\_\+pk\+\_\+at\+\_\+k\+\_\+and\+\_\+z() and spectra\+\_\+pk\+\_\+nl\+\_\+at\+\_\+k\+\_\+and\+\_\+z, evaluate the matter power spectrum at a given value of k and z by interpolating in a table of all P(k)\textquotesingle{}s computed at this z by spectra\+\_\+pk\+\_\+at\+\_\+z() (when kmin \texorpdfstring{$<$}{<}= k \texorpdfstring{$<$}{<}= kmax), or eventually by using directly the primordial spectrum (when 0 \texorpdfstring{$<$}{<}= k \texorpdfstring{$<$}{<} kmin)\+: the latter case is an approximation, valid when kmin \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} comoving Hubble scale today. Returns zero when k=0. Returns an error when k$<$0 or k $>$ kmax.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em modes} & Input\+: switch to decide whether to compute linear or nonlinear spectrum It can be set to sheth-\/\+Tormen (ST), Tinker (TR) or Press-\/\+Schecter (PSC)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the double value of matter power spectrum 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}\label{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}} 
+\index{cosmology.c@{cosmology.c}!Pk\_dlnPk\_HV@{Pk\_dlnPk\_HV}}
+\index{Pk\_dlnPk\_HV@{Pk\_dlnPk\_HV}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{Pk\_dlnPk\_HV()}{Pk\_dlnPk\_HV()}}
+{\footnotesize\ttfamily double Pk\+\_\+dln\+Pk\+\_\+\+HV (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Read in the linear power spectrum, used to set the initial conditions of Hidden-\/\+Valley sims. 
+
+Input k is in unit of 1/\+Mpc. First convert it to h/\+Mpc, and also convert the final matter power spectrum in unit of (Mpc/h)$^\wedge$3
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em mode} & Input\+: switch to decide whether to evaluate the interpolator of the power spectrum or free the interpolator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the HV linear matter power spectrum 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}\label{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}} 
+\index{cosmology.c@{cosmology.c}!R\_scale@{R\_scale}}
+\index{R\_scale@{R\_scale}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{R\_scale()}{R\_scale()}}
+{\footnotesize\ttfamily double R\+\_\+scale (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M }\end{DoxyParamCaption})}
+
+
+
+Compute the Lagrangian radius of halos in unit of 1/\+Mpc$^\wedge$3 , fixing z=0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em h\+\_\+mass} & Input\+: halo mass in unit of solar mass \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+\_\+s 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}\label{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}} 
+\index{cosmology.c@{cosmology.c}!R\_vir@{R\_vir}}
+\index{R\_vir@{R\_vir}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{R\_vir()}{R\_vir()}}
+{\footnotesize\ttfamily double R\+\_\+vir (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M }\end{DoxyParamCaption})}
+
+
+
+Compute the comoving virial radius of halos in unit of 1/\+Mpc$^\wedge$3, which is defined as the radius at which the average density within this radius is Delta X rho\+\_\+c. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em M} & Input\+: halo mass in unit of solar mass \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+R\+\_\+vir 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}\label{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}} 
+\index{cosmology.c@{cosmology.c}!rhoc@{rhoc}}
+\index{rhoc@{rhoc}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{rhoc()}{rhoc()}}
+{\footnotesize\ttfamily double rhoc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the critical density in unit of M\+\_\+sun/\+Mpc$^\wedge$3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the double value of rho\+\_\+c 
+\end{DoxyReturn}
+E (a) = H(a)$^\wedge$2/\+H0$^\wedge$2
+
+G is in unit of m$^\wedge$3 kg$^\wedge$-\/1 s$^\wedge$-\/2, conversion factor from m to Mpc
+
+To convert to solar massHere is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}\label{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}} 
+\index{cosmology.c@{cosmology.c}!sig\_sq@{sig\_sq}}
+\index{sig\_sq@{sig\_sq}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{sig\_sq()}{sig\_sq()}}
+{\footnotesize\ttfamily double sig\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+
+
+Compute variance of smoothed matter density fluctuations. 
+
+The function \mbox{\hyperlink{cosmology_8c_a72661633b8701d902d6887c4402ed394}{sig\+\_\+sq\+\_\+integrand()}} defines the integrand and \mbox{\hyperlink{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}{sig\+\_\+sq()}} computes the k-\/integral
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the variance 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{cosmology_8c_a72661633b8701d902d6887c4402ed394}\label{cosmology_8c_a72661633b8701d902d6887c4402ed394}} 
+\index{cosmology.c@{cosmology.c}!sig\_sq\_integrand@{sig\_sq\_integrand}}
+\index{sig\_sq\_integrand@{sig\_sq\_integrand}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{sig\_sq\_integrand()}{sig\_sq\_integrand()}}
+{\footnotesize\ttfamily double sig\+\_\+sq\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to qags integrator to compute the variance of the matter density. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input\+: integration variable \\
+\hline
+{\em par} & Input\+: integration parmaeters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the integrand 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}\label{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}} 
+\index{cosmology.c@{cosmology.c}!sigma0\_sq@{sigma0\_sq}}
+\index{sigma0\_sq@{sigma0\_sq}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{sigma0\_sq()}{sigma0\_sq()}}
+{\footnotesize\ttfamily double sigma0\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{kmax }\end{DoxyParamCaption})}
+
+
+
+Compute variance of unsmoothed matter density fluctuations. 
+
+The function sigma0\+\_\+integrand() defines the integrand and \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\+\_\+sq()}} computes the k-\/integral
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the unsmoothed variance kmax is in unit of 1/\+Mpc 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{cosmology_8c_ac236684e538f158f0651141f7034fe8d}\label{cosmology_8c_ac236684e538f158f0651141f7034fe8d}} 
+\index{cosmology.c@{cosmology.c}!sigma0\_sq\_integrand@{sigma0\_sq\_integrand}}
+\index{sigma0\_sq\_integrand@{sigma0\_sq\_integrand}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{sigma0\_sq\_integrand()}{sigma0\_sq\_integrand()}}
+{\footnotesize\ttfamily double sigma0\+\_\+sq\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input\+: integration variable \\
+\hline
+{\em par} & Input\+: integration parmaeters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the integrand 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}\label{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}} 
+\index{cosmology.c@{cosmology.c}!window\_rth@{window\_rth}}
+\index{window\_rth@{window\_rth}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{window\_rth()}{window\_rth()}}
+{\footnotesize\ttfamily double window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+
+
+The following functions compute several window functions and their derivatives with respect to the smoothing scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the window functions or their derivatives 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 26

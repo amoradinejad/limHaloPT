@@ -871,7 +871,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/Source/  \
+INPUT                  = /Volumes/Data/Documents/Git/limHaloPT/Source  \
+                         /Volumes/Data/Documents/Git/limHaloPT/Include \
                          /Volumes/Data/Documents/Git/limHaloPT/docs/README.md \
                          /Volumes/Data/Documents/Git/limHaloPT/Include/header.h \
                          /Volumes/Data/Documents/Git/limHaloPT/Include/Global_Structs.h
@@ -1960,7 +1961,7 @@ LATEX_EXTRA_STYLESHEET =
 # markers available.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_EXTRA_FILES      = /Users/azadeh/Desktop/limHaloPT-master/small.png
+LATEX_EXTRA_FILES      = /Volumes/Data/Documents/Git/limHaloPT/docs/small.png
 
 # If the PDF_HYPERLINKS tag is set to YES, the LaTeX that is generated is
 # prepared for conversion to PDF (using ps2pdf or pdflatex). The PDF file will
@@ -2265,7 +2266,7 @@ SEARCH_INCLUDES        = YES
 # preprocessor.
 # This tag requires that the tag SEARCH_INCLUDES is set to YES.
 
-INCLUDE_PATH           = /Users/azadeh/Desktop/limHaloPT-master/Include
+INCLUDE_PATH           = /Volumes/Data/Documents/Git/limHaloPT/Include
 
 # You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard
 # patterns (like *.h and *.hpp) to filter out the header-files in the
