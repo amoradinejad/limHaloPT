@@ -4,8 +4,7 @@ var indexSectionsWithContent =
   1: "cgil",
   2: "cghilmpsuw",
   3: "abcdefghiklmnprstw",
-  4: "p",
-  5: "l"
+  4: "p"
 };
 
 var indexSectionNames =
@@ -14,8 +13,7 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "defines",
-  5: "pages"
+  4: "defines"
 };
 
 var indexSectionLabels =
@@ -24,7 +22,6 @@ var indexSectionLabels =
   1: "Data Structures",
   2: "Files",
   3: "Functions",
-  4: "Macros",
-  5: "Pages"
+  4: "Macros"
 };
 

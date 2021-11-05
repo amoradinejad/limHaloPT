@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>limHaloPT: limHaloPT</title>
+<title>limHaloPT: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,38 +83,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">limHaloPT </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">limHaloPT Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_README"></a> Author: Azadeh Moradinezhad Dizgah</p>
-<p >Welcom to limHaloPT, a numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release.</p>
-<p >The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term. The deviations from Poisson shot noise on large scales are also computed within the halo model.</p>
-<p >This package is released together with the following publication, arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims are publically avilable on <a href="http://cyril.astro.berkeley.edu/MithraLIMSims">http://cyril.astro.berkeley.edu/MithraLIMSims</a>. As discussed in the paper, this code can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. <br  />
-</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Dependencies</h1>
-<p >The limHaloPT package calls various functions from CLASS Boltzman solver (<a href="https://github.com/lesgourg/class_public">https://github.com/lesgourg/class_public</a>), including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of CUBA library (<a href="http://www.feynarts.de/cuba/">http://www.feynarts.de/cuba/</a>). Furthermore, the code heavily uses functions of GSL scientific library (<a href="https://www.gnu.org/software/gsl/doc/html/">https://www.gnu.org/software/gsl/doc/html/</a>). Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. <br  />
-</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Compilation and Usage</h1>
-<ul>
-<li>To compile, type: make <br  />
-</li>
-<li>To run, type: ./limHaloPT</li>
-</ul>
-<p >If you modified the code, you need to first do "make clean" before doing "make". Depending on what quantities you want to calculate, you can modify the main() function in <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. <br  />
-</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Attribution</h1>
-<p >You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad &amp; Nikakhtar &amp; Keating &amp; Castorina: arXiv:2111.XXX. <br  />
-</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-License</h1>
-<p ><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/></a></p>
-<p >Copyright 2021 Azadeh Moradinezhad Dizgah.<br  />
- limHaloPT is free software made available under the MIT License. For details see the <a href="https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE">LICENSE</a> file. </p>
-</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
