@@ -1,0 +1,16 @@
+digraph "nfw_profile"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="nfw_profile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Compute the NFW halo profile in Fourier space, given by Eq."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="concentration_cdm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#ac366d051f37119268a3308ebd5e1b87f",tooltip="Compute the cold dark matter concentration-mass relation."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="R_vir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a4dc96bb7695696838c30e0929302c99c",tooltip="Compute the comoving virial radius of halos in unit of 1/Mpc^3, which is defined as the radius at whi..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="rhoc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7",tooltip="Compute the critical density in unit of M_sun/Mpc^3."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Hubble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a",tooltip="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..."];
+}
