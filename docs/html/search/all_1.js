@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bias_5flum_5fweighted_0',['bias_lum_weighted',['../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79',1,'line_ingredients.c']]],
-  ['bias_5flum_5fweighted_5finteg_1',['bias_lum_weighted_integ',['../d7/d10/line__ingredients_8c.html#a609c2a4b205e7f497d4b96657510fd5f',1,'line_ingredients.c']]]
+  ['angular_5fdistance_0',['angular_distance',['../d6/d32/cosmology_8c.html#a11f9475db171d037089d936d8b2371df',1,'cosmology.c']]],
+  ['as_1',['As',['../d8/d11/structglobals.html#a578db3dfe88b7e22963a391194695a5c',1,'globals']]]
 ];

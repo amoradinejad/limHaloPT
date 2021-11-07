@@ -1,0 +1,12 @@
+<map id="pm_nowiggle_bspline" name="pm_nowiggle_bspline">
+<area shape="rect" id="node1" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="5,157,156,184"/>
+<area shape="rect" id="node2" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="235,81,305,108"/>
+<area shape="rect" id="node8" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="204,132,336,159"/>
+<area shape="rect" id="node9" href="$d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="231,183,309,209"/>
+<area shape="rect" id="node10" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="215,233,325,260"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="394,56,513,83"/>
+<area shape="rect" id="node7" href="$d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="384,107,523,133"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="571,5,715,32"/>
+<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="604,56,681,83"/>
+<area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="603,107,682,133"/>
+</map>

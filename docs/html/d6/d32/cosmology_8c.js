@@ -8,6 +8,8 @@ var cosmology_8c =
     [ "Cosmology_free", "d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e", null ],
     [ "Cosmology_init", "d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac", null ],
     [ "der_lnsig_sq", "d6/d32/cosmology_8c.html#a03f9aaf2088b59136e47b27fd3310f27", null ],
+    [ "derR_logwindow_g", "d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51", null ],
+    [ "derR_window_rth", "d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f", null ],
     [ "growth_D", "d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80", null ],
     [ "growth_f", "d6/d32/cosmology_8c.html#a458c06fcf96ab69a9257fc4b6a2c404e", null ],
     [ "Hubble", "d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a", null ],
@@ -22,5 +24,8 @@ var cosmology_8c =
     [ "sig_sq_integrand", "d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394", null ],
     [ "sigma0_sq", "d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626", null ],
     [ "sigma0_sq_integrand", "d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d", null ],
-    [ "window_rth", "d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328", null ]
+    [ "window_g", "d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254", null ],
+    [ "window_kth", "d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6", null ],
+    [ "window_rth", "d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328", null ],
+    [ "gb", "d6/d32/cosmology_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
 ];

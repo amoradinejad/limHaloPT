@@ -1,0 +1,6 @@
+<map id="kmax_Brent" name="kmax_Brent">
+<area shape="rect" id="node1" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,5,99,32"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="147,5,233,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d" title="The integrand function passed to qags integrator to compute the variance of the unsmoothed matter den..." alt="" coords="281,5,431,32"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="479,5,557,32"/>
+</map>

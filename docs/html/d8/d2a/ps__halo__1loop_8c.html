@@ -17,6 +17,11 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,6 +31,21 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="../../small.png"/></td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -37,17 +57,6 @@
 var searchBox = new SearchBox("searchBox", "../../search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="../../menudata.js"></script>
-<script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -94,6 +103,49 @@ $(document).ready(function(){initNavTree('d8/d2a/ps__halo__1loop_8c.html','../..
 Include dependency graph for ps_halo_1loop.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d05/ps__halo__1loop_8c__incl.png" border="0" usemap="#aps__halo__1loop_8c" alt=""/></div>
+<map name="aps__halo__1loop_8c" id="aps__halo__1loop_8c">
+<area shape="rect" title="Documented real&#45;space, direct integration computation of 1loop contributions of the halo/galaxy power..." alt="" coords="2247,5,2366,32"/>
+<area shape="rect" href="../../df/dcb/header_8h.html" title=" " alt="" coords="2270,80,2343,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" title=" " alt="" coords="88,155,157,181"/>
+<area shape="rect" title=" " alt="" coords="181,155,245,181"/>
+<area shape="rect" title=" " alt="" coords="269,155,331,181"/>
+<area shape="rect" title=" " alt="" coords="355,155,418,181"/>
+<area shape="rect" title=" " alt="" coords="443,155,501,181"/>
+<area shape="rect" title=" " alt="" coords="526,155,591,181"/>
+<area shape="rect" title=" " alt="" coords="616,155,675,181"/>
+<area shape="rect" title=" " alt="" coords="699,155,754,181"/>
+<area shape="rect" title=" " alt="" coords="779,155,888,181"/>
+<area shape="rect" title=" " alt="" coords="913,155,1026,181"/>
+<area shape="rect" title=" " alt="" coords="1050,155,1177,181"/>
+<area shape="rect" title=" " alt="" coords="1201,155,1329,181"/>
+<area shape="rect" title=" " alt="" coords="1354,155,1489,181"/>
+<area shape="rect" title=" " alt="" coords="1513,155,1661,181"/>
+<area shape="rect" title=" " alt="" coords="1685,155,1825,181"/>
+<area shape="rect" title=" " alt="" coords="1849,155,1964,181"/>
+<area shape="rect" title=" " alt="" coords="1988,155,2097,181"/>
+<area shape="rect" title=" " alt="" coords="2122,155,2225,181"/>
+<area shape="rect" title=" " alt="" coords="2249,155,2365,181"/>
+<area shape="rect" title=" " alt="" coords="2389,155,2547,181"/>
+<area shape="rect" title=" " alt="" coords="2572,155,2689,181"/>
+<area shape="rect" title=" " alt="" coords="2714,155,2822,181"/>
+<area shape="rect" title=" " alt="" coords="2846,155,2978,181"/>
+<area shape="rect" title=" " alt="" coords="3002,155,3067,181"/>
+<area shape="rect" title=" " alt="" coords="3092,155,3249,181"/>
+<area shape="rect" title=" " alt="" coords="3274,155,3337,181"/>
+<area shape="rect" href="../../d6/da5/_global___structs_8h.html" title=" " alt="" coords="3361,155,3481,181"/>
+<area shape="rect" title=" " alt="" coords="3505,155,3601,181"/>
+<area shape="rect" title=" " alt="" coords="3626,155,3699,181"/>
+<area shape="rect" title=" " alt="" coords="3724,155,3839,181"/>
+<area shape="rect" title=" " alt="" coords="3863,155,3955,181"/>
+<area shape="rect" title=" " alt="" coords="3979,155,4106,181"/>
+<area shape="rect" title=" " alt="" coords="4131,155,4221,181"/>
+<area shape="rect" title=" " alt="" coords="4245,155,4317,181"/>
+<area shape="rect" title=" " alt="" coords="4341,155,4461,181"/>
+<area shape="rect" title=" " alt="" coords="4485,155,4579,181"/>
+<area shape="rect" title=" " alt="" coords="4603,155,4704,181"/>
+<area shape="rect" title=" " alt="" coords="4728,155,4813,181"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -105,31 +157,29 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad87e930ddfa85973919af4ca6b3d99ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions of local shape.  <a href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce">More...</a><br /></td></tr>
 <tr class="separator:ad87e930ddfa85973919af4ca6b3d99ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06812b0e40a5e228647283536b82fa5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a">Compute_G_loops</a> (struct <a class="el" href="../../d2/dbd/struct_cosmology.html">Cosmology</a> *Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double *result)</td></tr>
-<tr class="memdesc:a06812b0e40a5e228647283536b82fa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function G_loop_integrands() defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_G_loops()</a> computes the integrals.  <a href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a">More...</a><br /></td></tr>
+<tr class="memdesc:a06812b0e40a5e228647283536b82fa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b">G_loop_integrands()</a> defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_G_loops()</a> computes the integrals.  <a href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a">More...</a><br /></td></tr>
 <tr class="separator:a06812b0e40a5e228647283536b82fa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d475dd2ab5b0120a8c78ba15080494b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b">G_loop_integrands</a> (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)</td></tr>
+<tr class="separator:a9d475dd2ab5b0120a8c78ba15080494b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05a2d154a1db42273c26d91b1145b892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892">Compute_PNG_loops</a> (struct <a class="el" href="../../d2/dbd/struct_cosmology.html">Cosmology</a> *Cx, double k, double z, long IR_switch, long SPLIT, double *result)</td></tr>
-<tr class="memdesc:a05a2d154a1db42273c26d91b1145b892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function PNG_loop_integrands() defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_PNG_loops()</a> computes the integrals.  <a href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892">More...</a><br /></td></tr>
+<tr class="memdesc:a05a2d154a1db42273c26d91b1145b892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083">PNG_loop_integrands()</a> defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_PNG_loops()</a> computes the integrals.  <a href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892">More...</a><br /></td></tr>
 <tr class="separator:a05a2d154a1db42273c26d91b1145b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb089b4dc4bcc6d07f9c88f87ba75eb1"><td class="memItemLeft" align="right" valign="top"><a id="afb089b4dc4bcc6d07f9c88f87ba75eb1" name="afb089b4dc4bcc6d07f9c88f87ba75eb1"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>F2_s</b> (double k1, double k2, double mu)</td></tr>
+<tr class="memitem:a715a83bcf567a070a9c018925faad083"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083">PNG_loop_integrands</a> (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)</td></tr>
+<tr class="separator:a715a83bcf567a070a9c018925faad083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb089b4dc4bcc6d07f9c88f87ba75eb1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1">F2_s</a> (double k1, double k2, double mu)</td></tr>
 <tr class="separator:afb089b4dc4bcc6d07f9c88f87ba75eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad334e40e3de75b00cfa12ed6da717c26"><td class="memItemLeft" align="right" valign="top"><a id="ad334e40e3de75b00cfa12ed6da717c26" name="ad334e40e3de75b00cfa12ed6da717c26"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>S2_s</b> (double k1, double k2, double mu)</td></tr>
+<tr class="memitem:ad334e40e3de75b00cfa12ed6da717c26"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26">S2_s</a> (double k1, double k2, double mu)</td></tr>
 <tr class="separator:ad334e40e3de75b00cfa12ed6da717c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0757b47fa87b32dbd14c3430f7d8185"><td class="memItemLeft" align="right" valign="top"><a id="ab0757b47fa87b32dbd14c3430f7d8185" name="ab0757b47fa87b32dbd14c3430f7d8185"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>F3_s</b> (double k, double q, double mu)</td></tr>
+<tr class="memitem:ab0757b47fa87b32dbd14c3430f7d8185"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185">F3_s</a> (double k, double q, double mu)</td></tr>
 <tr class="separator:ab0757b47fa87b32dbd14c3430f7d8185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d93693fa856776edc02f835b1d7ddf8"><td class="memItemLeft" align="right" valign="top"><a id="a9d93693fa856776edc02f835b1d7ddf8" name="a9d93693fa856776edc02f835b1d7ddf8"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>S2</b> (double mu)</td></tr>
+<tr class="memitem:a9d93693fa856776edc02f835b1d7ddf8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d93693fa856776edc02f835b1d7ddf8">S2</a> (double mu)</td></tr>
 <tr class="separator:a9d93693fa856776edc02f835b1d7ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af95342f8b89705476a09b2473195a749"><td class="memItemLeft" align="right" valign="top"><a id="af95342f8b89705476a09b2473195a749" name="af95342f8b89705476a09b2473195a749"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>F2</b> (double k1, double k2, double mu)</td></tr>
+<tr class="memitem:af95342f8b89705476a09b2473195a749"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749">F2</a> (double k1, double k2, double mu)</td></tr>
 <tr class="separator:af95342f8b89705476a09b2473195a749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a61c6674f2b410e126a682325ce5360c0"><td class="memItemLeft" align="right" valign="top"><a id="a61c6674f2b410e126a682325ce5360c0" name="a61c6674f2b410e126a682325ce5360c0"></a>
-struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gb</b></td></tr>
+<tr class="memitem:a61c6674f2b410e126a682325ce5360c0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a61c6674f2b410e126a682325ce5360c0">gb</a></td></tr>
 <tr class="separator:a61c6674f2b410e126a682325ce5360c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -141,11 +191,11 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
 <li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions...">PS_hh_PNG()</a></li>
 <li>Compute_Gloops()</li>
 <li>Compute_PNGloops()</li>
-<li>F2_s()</li>
-<li>F3_s()</li>
-<li>S2_s()</li>
-<li>F2()</li>
-<li>S2() </li>
+<li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1">F2_s()</a></li>
+<li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185">F3_s()</a></li>
+<li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26">S2_s()</a></li>
+<li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749">F2()</a></li>
+<li><a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d93693fa856776edc02f835b1d7ddf8">S2()</a> </li>
 </ol>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a06812b0e40a5e228647283536b82fa5a" name="a06812b0e40a5e228647283536b82fa5a"></a>
@@ -204,7 +254,7 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
       </table>
 </div><div class="memdoc">
 
-<p>Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function G_loop_integrands() defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_G_loops()</a> computes the integrals. </p>
+<p>Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b">G_loop_integrands()</a> defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_G_loops()</a> computes the integrals. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Cx</td><td>Input: pointer to cosmology structure </td></tr>
@@ -219,6 +269,55 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_cgraph" id="ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_cgraph">
+<area shape="rect" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="5,259,139,285"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="187,208,321,235"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="369,335,456,361"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1217,183,1286,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1585,132,1663,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="393,132,432,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="387,183,439,209"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185" title=" " alt="" coords="387,233,439,260"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="387,284,439,311"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1375,31,1494,57"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1365,183,1504,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1552,5,1696,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1585,56,1663,83"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="504,291,592,317"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="839,316,939,343"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="640,291,791,317"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="987,277,1137,304"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="999,328,1125,355"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="992,404,1132,431"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1185,284,1317,311"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1212,335,1291,361"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1380,385,1489,412"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1195,487,1307,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1199,537,1303,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1579,512,1669,539"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1373,487,1497,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="1744,487,1783,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="1744,537,1783,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="1831,487,1872,513"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_icgraph" id="ad8/d2a/ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a_icgraph">
+<area shape="rect" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="395,68,528,95"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="251,43,347,69"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,5,193,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,68,203,95"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,131,201,157"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,131,56,157"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -272,7 +371,7 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
       </table>
 </div><div class="memdoc">
 
-<p>Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function PNG_loop_integrands() defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_PNG_loops()</a> computes the integrals. </p>
+<p>Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083">PNG_loop_integrands()</a> defines the integrand and <a class="el" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ...">Compute_PNG_loops()</a> computes the integrals. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Cx</td><td>Input: pointer to cosmology structure </td></tr>
@@ -285,6 +384,408 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_cgraph" id="ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_cgraph">
+<area shape="rect" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="5,183,157,209"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title=" " alt="" coords="205,183,359,209"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1254,183,1323,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1622,132,1701,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="431,132,469,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="424,183,476,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a3175f43a84557ec21866b47a10054797" title="Compute the transfer function for different species depending on the switch &quot;mode&quot;,..." alt="" coords="409,233,491,260"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="407,284,493,311"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="424,335,476,361"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1413,31,1531,57"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1403,183,1541,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1589,5,1733,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1623,56,1700,83"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="541,259,629,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="876,297,976,324"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="677,259,828,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1024,272,1175,299"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1037,323,1162,349"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1029,411,1169,437"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1223,284,1355,311"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1249,335,1328,361"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1417,385,1527,412"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1233,487,1345,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1237,537,1341,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1616,512,1707,539"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1410,487,1534,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="1781,487,1820,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="1781,537,1820,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="1868,487,1909,513"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_icgraph" id="ad8/d2a/ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892_icgraph">
+<area shape="rect" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="152,5,304,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="5,5,104,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af95342f8b89705476a09b2473195a749" name="af95342f8b89705476a09b2473195a749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95342f8b89705476a09b2473195a749">&#9670;&nbsp;</a></span>F2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double F2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_af95342f8b89705476a09b2473195a749_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_af95342f8b89705476a09b2473195a749_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_af95342f8b89705476a09b2473195a749_icgraph" id="ad8/d2a/ps__halo__1loop_8c_af95342f8b89705476a09b2473195a749_icgraph">
+<area shape="rect" title=" " alt="" coords="833,127,872,153"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="641,89,776,116"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title=" " alt="" coords="632,152,785,179"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="451,83,584,109"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="279,32,375,59"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,83,193,109"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,133,203,160"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,7,201,33"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,7,56,33"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="251,184,403,211"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb089b4dc4bcc6d07f9c88f87ba75eb1" name="afb089b4dc4bcc6d07f9c88f87ba75eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb089b4dc4bcc6d07f9c88f87ba75eb1">&#9670;&nbsp;</a></span>F2_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double F2_s </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_afb089b4dc4bcc6d07f9c88f87ba75eb1_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_afb089b4dc4bcc6d07f9c88f87ba75eb1_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_afb089b4dc4bcc6d07f9c88f87ba75eb1_icgraph" id="ad8/d2a/ps__halo__1loop_8c_afb089b4dc4bcc6d07f9c88f87ba75eb1_icgraph">
+<area shape="rect" title=" " alt="" coords="833,127,885,153"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="641,89,776,116"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title=" " alt="" coords="632,152,785,179"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="451,83,584,109"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="279,32,375,59"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,83,193,109"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,133,203,160"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,7,201,33"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,7,56,33"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="251,184,403,211"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab0757b47fa87b32dbd14c3430f7d8185" name="ab0757b47fa87b32dbd14c3430f7d8185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0757b47fa87b32dbd14c3430f7d8185">&#9670;&nbsp;</a></span>F3_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double F3_s </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_ab0757b47fa87b32dbd14c3430f7d8185_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_ab0757b47fa87b32dbd14c3430f7d8185_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_ab0757b47fa87b32dbd14c3430f7d8185_icgraph" id="ad8/d2a/ps__halo__1loop_8c_ab0757b47fa87b32dbd14c3430f7d8185_icgraph">
+<area shape="rect" title=" " alt="" coords="759,68,811,95"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="576,68,711,95"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="395,68,528,95"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="251,43,347,69"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,5,193,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,68,203,95"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,131,201,157"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,131,56,157"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d475dd2ab5b0120a8c78ba15080494b" name="a9d475dd2ab5b0120a8c78ba15080494b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d475dd2ab5b0120a8c78ba15080494b">&#9670;&nbsp;</a></span>G_loop_integrands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int G_loop_integrands </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>ndim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cubareal&#160;</td>
+          <td class="paramname"><em>x</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>ncomp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cubareal&#160;</td>
+          <td class="paramname"><em>ff</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Model used in 1907.06666, the integrals are given in the appendix, Eq. A1, note that my S2_s = sigma^2(q,k-1) and F2_s = F2(q,k-q) in their notation. Factor of 2. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.*M_PI,3.), which I do in my pk_lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3).</p>
+<p >The integrands below correspond to the follwing bias combinaions:</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_cgraph" id="ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,183,140,209"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1035,183,1105,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1403,132,1482,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="212,132,251,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="205,183,257,209"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185" title=" " alt="" coords="205,233,257,260"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="188,284,275,311"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="205,335,257,361"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1194,31,1313,57"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1184,183,1323,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1371,5,1515,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1404,56,1481,83"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="323,259,411,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="657,297,757,324"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="459,259,609,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="805,272,956,299"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="818,323,943,349"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="811,411,951,437"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1004,284,1136,311"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1031,335,1109,361"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1199,385,1308,412"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1014,487,1126,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1018,537,1122,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1397,512,1488,539"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1191,487,1315,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="1563,487,1601,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="1563,537,1601,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="1649,487,1691,513"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_icgraph" id="ad8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_icgraph">
+<area shape="rect" title=" " alt="" coords="576,68,711,95"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="395,68,528,95"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="251,43,347,69"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,5,193,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,68,203,95"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,131,201,157"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,131,56,157"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a715a83bcf567a070a9c018925faad083" name="a715a83bcf567a070a9c018925faad083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715a83bcf567a070a9c018925faad083">&#9670;&nbsp;</a></span>PNG_loop_integrands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int PNG_loop_integrands </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>ndim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cubareal&#160;</td>
+          <td class="paramname"><em>x</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>ncomp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cubareal&#160;</td>
+          <td class="paramname"><em>ff</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Factor of 2. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.*M_PI,3.), which I do in my pk_lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3).</p>
+<p >The integrands below correspond to the follwing bias combinaions:</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_cgraph" id="ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_cgraph">
+<area shape="rect" title=" " alt="" coords="5,183,159,209"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1054,183,1123,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1422,132,1501,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="231,132,269,159"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="224,183,276,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a3175f43a84557ec21866b47a10054797" title="Compute the transfer function for different species depending on the switch &quot;mode&quot;,..." alt="" coords="209,233,291,260"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="207,284,293,311"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="224,335,276,361"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1213,31,1331,57"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1203,183,1341,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1389,5,1533,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1423,56,1500,83"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="341,259,429,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="676,297,776,324"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="477,259,628,285"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="824,272,975,299"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="837,323,962,349"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="829,411,969,437"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1023,284,1155,311"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1049,335,1128,361"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1217,385,1327,412"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1033,487,1145,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1037,537,1141,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1416,512,1507,539"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1210,487,1334,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="1581,487,1620,513"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="1581,537,1620,564"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="1668,487,1709,513"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_icgraph" id="ad8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_icgraph">
+<area shape="rect" title=" " alt="" coords="352,5,505,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="152,5,304,32"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -369,6 +870,46 @@ struct <a class="el" href="../../d8/d11/structglobals.html">globals</a>&#160;</t
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4_cgraph" id="ad8/d2a/ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4_cgraph">
+<area shape="rect" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="5,613,85,640"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1491,664,1561,691"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1859,461,1938,488"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="277,613,411,640"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="643,765,729,792"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1655,385,1764,412"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="142,823,221,849"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="133,385,229,412"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1650,867,1769,893"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1640,664,1779,691"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1827,841,1971,868"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1860,892,1937,919"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="459,613,593,640"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="667,461,705,488"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="660,512,712,539"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185" title=" " alt="" coords="660,563,712,589"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="660,613,712,640"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="779,487,867,513"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1113,487,1213,513"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="915,487,1065,513"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1261,512,1412,539"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1274,461,1399,488"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1267,411,1407,437"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1460,563,1592,589"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1487,461,1565,488"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1470,411,1582,437"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1474,81,1578,108"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1853,31,1944,57"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1647,56,1771,83"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="2019,5,2057,32"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="2019,56,2057,83"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="2105,5,2147,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0." alt="" coords="309,880,379,907"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="314,823,374,849"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="502,892,550,919"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="654,917,718,944"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="464,823,588,849"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="641,867,731,893"/>
+</map>
 </div>
 
 </div>
@@ -454,7 +995,134 @@ Here is the call graph for this function:</div>
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce_cgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce_cgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce_cgraph" id="ad8/d2a/ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce_cgraph">
+<area shape="rect" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="5,651,104,677"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1585,448,1654,475"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1953,651,2031,677"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="352,448,485,475"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="736,347,823,373"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1748,119,1857,145"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="152,651,304,677"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a3175f43a84557ec21866b47a10054797" title="Compute the transfer function for different species depending on the switch &quot;mode&quot;,..." alt="" coords="738,803,821,829"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="189,904,267,931"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="180,271,276,297"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1743,397,1862,424"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="1733,499,1872,525"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="1920,372,2064,399"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="1953,423,2031,449"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="543,473,677,500"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="760,600,799,627"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="753,651,805,677"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185" title=" " alt="" coords="753,397,805,424"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26" title=" " alt="" coords="753,549,805,576"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58" title="Compute the suppression factor IR_sigma2." alt="" coords="872,245,960,272"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1207,296,1307,323"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1008,245,1159,272"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1355,296,1505,323"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1367,347,1493,373"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1360,245,1500,272"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="1553,347,1685,373"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ab5f722c3eac55647fbe735f8a1ec7a80" title="Compute the growth factor D(k,z) which is scale&#45;indep if mode_nu = NUM, and scale&#45;dep if mode_nu = MA..." alt="" coords="1580,296,1659,323"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="1563,144,1675,171"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1567,245,1671,272"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1947,271,2037,297"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1741,296,1865,323"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="2112,245,2151,272"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="2112,296,2151,323"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="2199,245,2240,272"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title=" " alt="" coords="533,651,687,677"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0." alt="" coords="383,904,454,931"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="389,955,449,981"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="586,904,634,931"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="747,904,811,931"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="548,955,672,981"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="735,1005,824,1032"/>
+</map>
 </div>
+
+</div>
+</div>
+<a id="a9d93693fa856776edc02f835b1d7ddf8" name="a9d93693fa856776edc02f835b1d7ddf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d93693fa856776edc02f835b1d7ddf8">&#9670;&nbsp;</a></span>S2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double S2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad334e40e3de75b00cfa12ed6da717c26" name="ad334e40e3de75b00cfa12ed6da717c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad334e40e3de75b00cfa12ed6da717c26">&#9670;&nbsp;</a></span>S2_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double S2_s </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>k2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d2a/ps__halo__1loop_8c_ad334e40e3de75b00cfa12ed6da717c26_icgraph.png" border="0" usemap="#ad8/d2a/ps__halo__1loop_8c_ad334e40e3de75b00cfa12ed6da717c26_icgraph" alt=""/></div>
+<map name="ad8/d2a/ps__halo__1loop_8c_ad334e40e3de75b00cfa12ed6da717c26_icgraph" id="ad8/d2a/ps__halo__1loop_8c_ad334e40e3de75b00cfa12ed6da717c26_icgraph">
+<area shape="rect" title=" " alt="" coords="833,127,885,153"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title=" " alt="" coords="641,89,776,116"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title=" " alt="" coords="632,152,785,179"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="451,83,584,109"/>
+<area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="279,32,375,59"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,83,193,109"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,133,203,160"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,7,201,33"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,7,56,33"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="251,184,403,211"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a61c6674f2b410e126a682325ce5360c0" name="a61c6674f2b410e126a682325ce5360c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c6674f2b410e126a682325ce5360c0">&#9670;&nbsp;</a></span>gb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d8/d11/structglobals.html">globals</a> gb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

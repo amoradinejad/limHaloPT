@@ -1,0 +1,7 @@
+<map id="nfw_profile" name="nfw_profile">
+<area shape="rect" id="node1" title="Compute the NFW halo profile in Fourier space, given by Eq." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#ac366d051f37119268a3308ebd5e1b87f" title="Compute the cold dark matter concentration&#45;mass relation." alt="" coords="140,5,275,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a4dc96bb7695696838c30e0929302c99c" title="Compute the comoving virial radius of halos in unit of 1/Mpc^3, which is defined as the radius at whi..." alt="" coords="181,56,234,83"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="323,56,371,83"/>
+<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="419,56,483,83"/>
+</map>

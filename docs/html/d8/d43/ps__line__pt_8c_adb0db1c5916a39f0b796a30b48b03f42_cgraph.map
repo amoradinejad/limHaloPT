@@ -1,0 +1,11 @@
+<map id="PS_line" name="PS_line">
+<area shape="rect" id="node1" title="Compute the real&#45;space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3." alt="" coords="5,56,73,83"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a3a13aa566fb639abeb29eae43e5fcfa8" title="Compute the linear and quadratic line biases, accounting ffor the normalization w...." alt="" coords="260,5,335,32"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="121,56,200,83"/>
+<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="122,107,199,133"/>
+<area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="418,5,523,32"/>
+<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="248,56,347,83"/>
+<area shape="rect" id="node8" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title=" " alt="" coords="253,107,342,133"/>
+<area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="439,56,503,83"/>
+<area shape="rect" id="node9" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="395,107,547,133"/>
+</map>

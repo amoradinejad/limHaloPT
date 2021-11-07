@@ -1,4 +1,4 @@
-\hypertarget{cosmology_8c}{}\doxysubsection{cosmology.\+c File Reference}
+\hypertarget{cosmology_8c}{}\doxysection{cosmology.\+c File Reference}
 \label{cosmology_8c}\index{cosmology.c@{cosmology.c}}
 
 
@@ -7,8 +7,14 @@ Documented cosmology module.
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
 Include dependency graph for cosmology.\+c\+:
-% FIG 0
-\doxysubsubsection*{Functions}
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/da3/cosmology_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\+\_\+init}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double pk\+\_\+kmax, double pk\+\_\+zmax, int nlines, int $\ast$line\+\_\+types, size\+\_\+t npoints\+\_\+interp, double M\+\_\+min, long mode\+\_\+mf)
@@ -58,27 +64,22 @@ double \mbox{\hyperlink{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}{nfw\+\_\
 \begin{DoxyCompactList}\small\item\em Compute the NFW halo profile in Fourier space, given by Eq. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\+\_\+rth}} (double k, double R)
 \begin{DoxyCompactList}\small\item\em The following functions compute several window functions and their derivatives with respect to the smoothing scale. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}\label{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}} 
-double {\bfseries der\+R\+\_\+window\+\_\+rth} (double k, double R)
+double \mbox{\hyperlink{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}{der\+R\+\_\+window\+\_\+rth}} (double k, double R)
 \item 
-\mbox{\Hypertarget{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}\label{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}} 
-double {\bfseries window\+\_\+kth} (double k, double R)
+double \mbox{\hyperlink{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}{window\+\_\+kth}} (double k, double R)
 \item 
-\mbox{\Hypertarget{cosmology_8c_ae40d777e0dc4f51704521899d5292254}\label{cosmology_8c_ae40d777e0dc4f51704521899d5292254}} 
-double {\bfseries window\+\_\+g} (double k, double R)
+double \mbox{\hyperlink{cosmology_8c_ae40d777e0dc4f51704521899d5292254}{window\+\_\+g}} (double k, double R)
 \item 
-\mbox{\Hypertarget{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}\label{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}} 
-double {\bfseries der\+R\+\_\+logwindow\+\_\+g} (double k, double R)
+double \mbox{\hyperlink{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}{der\+R\+\_\+logwindow\+\_\+g}} (double k, double R)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}\label{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}} 
-struct \mbox{\hyperlink{structglobals}{globals}} {\bfseries gb}
+struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsubsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Documented cosmology module. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
@@ -109,17 +110,17 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\+\_\+scale()}} computes the size of a spherical halo corresponding to a given mass at z=0
 \item R\+\_\+scale\+\_\+wrong() computes the size of a spherical halo corresponding to a given mass at a given redshift
 \item \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\+\_\+rth()}} computes top-\/hat filter in real space
-\item window\+\_\+g() computes Gaussian window
-\item window\+\_\+kth() computes top-\/hat filter in Fourier space
-\item der\+R\+\_\+window\+\_\+rth() computes derivative of top-\/hat filter in real space w.\+r.\+t. smoothing scale
-\item der\+R\+\_\+logwindow\+\_\+g() computes derivative of top-\/hat filter in Fourier space w.\+r.\+t. smoothing scale 
+\item \mbox{\hyperlink{cosmology_8c_ae40d777e0dc4f51704521899d5292254}{window\+\_\+g()}} computes Gaussian window
+\item \mbox{\hyperlink{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}{window\+\_\+kth()}} computes top-\/hat filter in Fourier space
+\item \mbox{\hyperlink{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}{der\+R\+\_\+window\+\_\+rth()}} computes derivative of top-\/hat filter in real space w.\+r.\+t. smoothing scale
+\item \mbox{\hyperlink{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}{der\+R\+\_\+logwindow\+\_\+g()}} computes derivative of top-\/hat filter in Fourier space w.\+r.\+t. smoothing scale 
 \end{DoxyEnumerate}
 
-\doxysubsubsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{cosmology_8c_a11f9475db171d037089d936d8b2371df}\label{cosmology_8c_a11f9475db171d037089d936d8b2371df}} 
 \index{cosmology.c@{cosmology.c}!angular\_distance@{angular\_distance}}
 \index{angular\_distance@{angular\_distance}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{angular\_distance()}{angular\_distance()}}
+\doxysubsubsection{\texorpdfstring{angular\_distance()}{angular\_distance()}}
 {\footnotesize\ttfamily double angular\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -139,11 +140,17 @@ luminosity distance d\+\_\+L = (1+z) d\+\_\+M angular diameter distance d\+\_\+A
 D\+\_\+A 
 \end{DoxyReturn}
 junkHere is the caller graph for this function\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a11f9475db171d037089d936d8b2371df_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}\label{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}} 
 \index{cosmology.c@{cosmology.c}!CL\_Cosmology\_free@{CL\_Cosmology\_free}}
 \index{CL\_Cosmology\_free@{CL\_Cosmology\_free}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{CL\_Cosmology\_free()}{CL\_Cosmology\_free()}}
+\doxysubsubsection{\texorpdfstring{CL\_Cosmology\_free()}{CL\_Cosmology\_free()}}
 {\footnotesize\ttfamily int CL\+\_\+\+Cosmology\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
 
 
@@ -159,11 +166,17 @@ Free the memory allocated to CLASS cosmology structure.
 the error status 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
-% FIG 2
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}\label{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}} 
 \index{cosmology.c@{cosmology.c}!CL\_Cosmology\_initilize@{CL\_Cosmology\_initilize}}
 \index{CL\_Cosmology\_initilize@{CL\_Cosmology\_initilize}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{CL\_Cosmology\_initilize()}{CL\_Cosmology\_initilize()}}
+\doxysubsubsection{\texorpdfstring{CL\_Cosmology\_initilize()}{CL\_Cosmology\_initilize()}}
 {\footnotesize\ttfamily int CL\+\_\+\+Cosmology\+\_\+initilize (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax }\end{DoxyParamCaption})}
 
 
@@ -191,11 +204,17 @@ Omega\+\_\+b ~\newline
 
 
 pivot scale in unit of 1/\+MpcHere is the caller graph for this function\+:
-% FIG 3
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a6cb2155e541823871af839a39ccec1e7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}\label{cosmology_8c_aedbe3c00696981389e1c130cbfa862eb}} 
 \index{cosmology.c@{cosmology.c}!comoving\_radial\_distance@{comoving\_radial\_distance}}
 \index{comoving\_radial\_distance@{comoving\_radial\_distance}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{comoving\_radial\_distance()}{comoving\_radial\_distance()}}
+\doxysubsubsection{\texorpdfstring{comoving\_radial\_distance()}{comoving\_radial\_distance()}}
 {\footnotesize\ttfamily double comoving\+\_\+radial\+\_\+distance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -217,11 +236,17 @@ junk
 
 For a flat cosmology, comoving distance is equal to conformal distance. This pieace of code is how the comving distance for flat and nonflat cases are computed. Chnage the expression of D\+\_\+A below According to this if considering non-\/flat cosmology. ~\newline
 Here is the caller graph for this function\+:
-% FIG 4
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_aedbe3c00696981389e1c130cbfa862eb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}\label{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}} 
 \index{cosmology.c@{cosmology.c}!concentration\_cdm@{concentration\_cdm}}
 \index{concentration\_cdm@{concentration\_cdm}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{concentration\_cdm()}{concentration\_cdm()}}
+\doxysubsubsection{\texorpdfstring{concentration\_cdm()}{concentration\_cdm()}}
 {\footnotesize\ttfamily double concentration\+\_\+cdm (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -239,11 +264,17 @@ Compute the cold dark matter concentration-\/mass relation.
 the cdm concentration 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
-% FIG 5
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d6/d32/cosmology_8c_ac366d051f37119268a3308ebd5e1b87f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a8ddfed4a843beb762df124badc47011e}\label{cosmology_8c_a8ddfed4a843beb762df124badc47011e}} 
 \index{cosmology.c@{cosmology.c}!Cosmology\_free@{Cosmology\_free}}
 \index{Cosmology\_free@{Cosmology\_free}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Cosmology\_free()}{Cosmology\_free()}}
+\doxysubsubsection{\texorpdfstring{Cosmology\_free()}{Cosmology\_free()}}
 {\footnotesize\ttfamily int Cosmology\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
 
 
@@ -259,11 +290,25 @@ Free the memory allocated to cosmology structure.
 the error status 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 6
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{d6/d32/cosmology_8c_a8ddfed4a843beb762df124badc47011e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a8ddfed4a843beb762df124badc47011e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}\label{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}} 
 \index{cosmology.c@{cosmology.c}!Cosmology\_init@{Cosmology\_init}}
 \index{Cosmology\_init@{Cosmology\_init}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Cosmology\_init()}{Cosmology\_init()}}
+\doxysubsubsection{\texorpdfstring{Cosmology\_init()}{Cosmology\_init()}}
 {\footnotesize\ttfamily int Cosmology\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax,  }\item[{int}]{nlines,  }\item[{int $\ast$}]{line\+\_\+types,  }\item[{size\+\_\+t}]{npoints\+\_\+interp,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
@@ -293,11 +338,25 @@ Allocate memory and initialize the cosmology structure, which includes the CLASS
 an integer if succeeded 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 7
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d6/d32/cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}\label{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}} 
 \index{cosmology.c@{cosmology.c}!der\_lnsig\_sq@{der\_lnsig\_sq}}
 \index{der\_lnsig\_sq@{der\_lnsig\_sq}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{der\_lnsig\_sq()}{der\_lnsig\_sq()}}
+\doxysubsubsection{\texorpdfstring{der\_lnsig\_sq()}{der\_lnsig\_sq()}}
 {\footnotesize\ttfamily double der\+\_\+lnsig\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
 
@@ -319,11 +378,29 @@ smoothing scale
 the log-\/derivative of variance 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 8
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}\label{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}} 
+\index{cosmology.c@{cosmology.c}!derR\_logwindow\_g@{derR\_logwindow\_g}}
+\index{derR\_logwindow\_g@{derR\_logwindow\_g}!cosmology.c@{cosmology.c}}
+\doxysubsubsection{\texorpdfstring{derR\_logwindow\_g()}{derR\_logwindow\_g()}}
+{\footnotesize\ttfamily double der\+R\+\_\+logwindow\+\_\+g (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}\label{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}} 
+\index{cosmology.c@{cosmology.c}!derR\_window\_rth@{derR\_window\_rth}}
+\index{derR\_window\_rth@{derR\_window\_rth}!cosmology.c@{cosmology.c}}
+\doxysubsubsection{\texorpdfstring{derR\_window\_rth()}{derR\_window\_rth()}}
+{\footnotesize\ttfamily double der\+R\+\_\+window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}\label{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}} 
 \index{cosmology.c@{cosmology.c}!growth\_D@{growth\_D}}
 \index{growth\_D@{growth\_D}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{growth\_D()}{growth\_D()}}
+\doxysubsubsection{\texorpdfstring{growth\_D()}{growth\_D()}}
 {\footnotesize\ttfamily double growth\+\_\+D (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -345,11 +422,17 @@ The scale-\/indep growth is computed by CLASS directly The switch \char`\"{}mode
 the growth factor, can be k-\/dep (ex. with nonzero neutrino mass) 
 \end{DoxyReturn}
 junkHere is the caller graph for this function\+:
-% FIG 9
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}\label{cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e}} 
 \index{cosmology.c@{cosmology.c}!growth\_f@{growth\_f}}
 \index{growth\_f@{growth\_f}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{growth\_f()}{growth\_f()}}
+\doxysubsubsection{\texorpdfstring{growth\_f()}{growth\_f()}}
 {\footnotesize\ttfamily double growth\+\_\+f (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -373,11 +456,17 @@ This is a useful function when constraining physics that induces scale-\/dependa
 the growth rate, can be k-\/dep (ex. with nonzero neutrino mass) 
 \end{DoxyReturn}
 junkHere is the caller graph for this function\+:
-% FIG 10
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a458c06fcf96ab69a9257fc4b6a2c404e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}\label{cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a}} 
 \index{cosmology.c@{cosmology.c}!Hubble@{Hubble}}
 \index{Hubble@{Hubble}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Hubble()}{Hubble()}}
+\doxysubsubsection{\texorpdfstring{Hubble()}{Hubble()}}
 {\footnotesize\ttfamily double Hubble (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -397,11 +486,17 @@ This function is to a good approximation equal to Hubble(a,\+Cx) = gb.\+h$\ast$s
 the hubble parameter 
 \end{DoxyReturn}
 junkHere is the caller graph for this function\+:
-% FIG 11
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a888cc1795beb4c48fe8eb3d196e9c54a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a3175f43a84557ec21866b47a10054797}\label{cosmology_8c_a3175f43a84557ec21866b47a10054797}} 
 \index{cosmology.c@{cosmology.c}!Mk\_dlnMk@{Mk\_dlnMk}}
 \index{Mk\_dlnMk@{Mk\_dlnMk}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Mk\_dlnMk()}{Mk\_dlnMk()}}
+\doxysubsubsection{\texorpdfstring{Mk\_dlnMk()}{Mk\_dlnMk()}}
 {\footnotesize\ttfamily double Mk\+\_\+dln\+Mk (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
 
 
@@ -425,11 +520,17 @@ CLASS function spectra\+\_\+tk\+\_\+at\+\_\+k\+\_\+and\+\_\+z() routine evaluate
 the transfer function 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
-% FIG 12
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a3175f43a84557ec21866b47a10054797_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}\label{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}} 
 \index{cosmology.c@{cosmology.c}!nfw\_profile@{nfw\_profile}}
 \index{nfw\_profile@{nfw\_profile}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{nfw\_profile()}{nfw\_profile()}}
+\doxysubsubsection{\texorpdfstring{nfw\_profile()}{nfw\_profile()}}
 {\footnotesize\ttfamily double nfw\+\_\+profile (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{M,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -453,11 +554,17 @@ Compute the NFW halo profile in Fourier space, given by Eq.
 the nfw profile 
 \end{DoxyReturn}
 rho\+\_\+s is computed by enforcing int dr r$^\wedge$2 u(r) = 1Here is the call graph for this function\+:
-% FIG 13
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}\label{cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f}} 
 \index{cosmology.c@{cosmology.c}!Pk\_dlnPk@{Pk\_dlnPk}}
 \index{Pk\_dlnPk@{Pk\_dlnPk}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Pk\_dlnPk()}{Pk\_dlnPk()}}
+\doxysubsubsection{\texorpdfstring{Pk\_dlnPk()}{Pk\_dlnPk()}}
 {\footnotesize\ttfamily double Pk\+\_\+dln\+Pk (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
 
 
@@ -481,11 +588,17 @@ The CLASS spectra\+\_\+pk\+\_\+at\+\_\+k\+\_\+and\+\_\+z() and spectra\+\_\+pk\+
 the double value of matter power spectrum 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
-% FIG 14
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_ab9dc1330d6e47eeeb8bf0dfffe2cd23f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}\label{cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088}} 
 \index{cosmology.c@{cosmology.c}!Pk\_dlnPk\_HV@{Pk\_dlnPk\_HV}}
 \index{Pk\_dlnPk\_HV@{Pk\_dlnPk\_HV}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{Pk\_dlnPk\_HV()}{Pk\_dlnPk\_HV()}}
+\doxysubsubsection{\texorpdfstring{Pk\_dlnPk\_HV()}{Pk\_dlnPk\_HV()}}
 {\footnotesize\ttfamily double Pk\+\_\+dln\+Pk\+\_\+\+HV (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{int}]{mode }\end{DoxyParamCaption})}
 
 
@@ -509,11 +622,17 @@ Input k is in unit of 1/\+Mpc. First convert it to h/\+Mpc, and also convert the
 the HV linear matter power spectrum 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 15
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{d6/d32/cosmology_8c_a2284eaf0b1e8fffa17cb5035c6b95088_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}\label{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}} 
 \index{cosmology.c@{cosmology.c}!R\_scale@{R\_scale}}
 \index{R\_scale@{R\_scale}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{R\_scale()}{R\_scale()}}
+\doxysubsubsection{\texorpdfstring{R\_scale()}{R\_scale()}}
 {\footnotesize\ttfamily double R\+\_\+scale (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M }\end{DoxyParamCaption})}
 
 
@@ -531,13 +650,25 @@ Compute the Lagrangian radius of halos in unit of 1/\+Mpc$^\wedge$3 , fixing z=0
 R\+\_\+s 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 16
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{d6/d32/cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 17
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}\label{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}} 
 \index{cosmology.c@{cosmology.c}!R\_vir@{R\_vir}}
 \index{R\_vir@{R\_vir}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{R\_vir()}{R\_vir()}}
+\doxysubsubsection{\texorpdfstring{R\_vir()}{R\_vir()}}
 {\footnotesize\ttfamily double R\+\_\+vir (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M }\end{DoxyParamCaption})}
 
 
@@ -555,13 +686,25 @@ Compute the comoving virial radius of halos in unit of 1/\+Mpc$^\wedge$3, which 
 R\+\_\+vir 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 18
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d6/d32/cosmology_8c_a4dc96bb7695696838c30e0929302c99c_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 19
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{d6/d32/cosmology_8c_a4dc96bb7695696838c30e0929302c99c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}\label{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}} 
 \index{cosmology.c@{cosmology.c}!rhoc@{rhoc}}
 \index{rhoc@{rhoc}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{rhoc()}{rhoc()}}
+\doxysubsubsection{\texorpdfstring{rhoc()}{rhoc()}}
 {\footnotesize\ttfamily double rhoc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -583,13 +726,25 @@ E (a) = H(a)$^\wedge$2/\+H0$^\wedge$2
 G is in unit of m$^\wedge$3 kg$^\wedge$-\/1 s$^\wedge$-\/2, conversion factor from m to Mpc
 
 To convert to solar massHere is the call graph for this function\+:
-% FIG 20
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d6/d32/cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 21
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}\label{cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754}} 
 \index{cosmology.c@{cosmology.c}!sig\_sq@{sig\_sq}}
 \index{sig\_sq@{sig\_sq}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{sig\_sq()}{sig\_sq()}}
+\doxysubsubsection{\texorpdfstring{sig\_sq()}{sig\_sq()}}
 {\footnotesize\ttfamily double sig\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
 
@@ -610,12 +765,26 @@ The function \mbox{\hyperlink{cosmology_8c_a72661633b8701d902d6887c4402ed394}{si
 \begin{DoxyReturn}{Returns}
 the variance 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 22
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a3bfa0655596343cf7a7114f55ff8d754_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a72661633b8701d902d6887c4402ed394}\label{cosmology_8c_a72661633b8701d902d6887c4402ed394}} 
 \index{cosmology.c@{cosmology.c}!sig\_sq\_integrand@{sig\_sq\_integrand}}
 \index{sig\_sq\_integrand@{sig\_sq\_integrand}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{sig\_sq\_integrand()}{sig\_sq\_integrand()}}
+\doxysubsubsection{\texorpdfstring{sig\_sq\_integrand()}{sig\_sq\_integrand()}}
 {\footnotesize\ttfamily double sig\+\_\+sq\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
 
 
@@ -633,11 +802,25 @@ The integrand function passed to qags integrator to compute the variance of the 
 value of the integrand 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 23
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d6/d32/cosmology_8c_a72661633b8701d902d6887c4402ed394_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a72661633b8701d902d6887c4402ed394_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}\label{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}} 
 \index{cosmology.c@{cosmology.c}!sigma0\_sq@{sigma0\_sq}}
 \index{sigma0\_sq@{sigma0\_sq}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{sigma0\_sq()}{sigma0\_sq()}}
+\doxysubsubsection{\texorpdfstring{sigma0\_sq()}{sigma0\_sq()}}
 {\footnotesize\ttfamily double sigma0\+\_\+sq (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{kmax }\end{DoxyParamCaption})}
 
 
@@ -656,12 +839,26 @@ The function sigma0\+\_\+integrand() defines the integrand and \mbox{\hyperlink{
 \begin{DoxyReturn}{Returns}
 the unsmoothed variance kmax is in unit of 1/\+Mpc 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
-% FIG 24
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{cosmology_8c_ac236684e538f158f0651141f7034fe8d}\label{cosmology_8c_ac236684e538f158f0651141f7034fe8d}} 
 \index{cosmology.c@{cosmology.c}!sigma0\_sq\_integrand@{sigma0\_sq\_integrand}}
 \index{sigma0\_sq\_integrand@{sigma0\_sq\_integrand}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{sigma0\_sq\_integrand()}{sigma0\_sq\_integrand()}}
+\doxysubsubsection{\texorpdfstring{sigma0\_sq\_integrand()}{sigma0\_sq\_integrand()}}
 {\footnotesize\ttfamily double sigma0\+\_\+sq\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
 
 
@@ -679,11 +876,37 @@ The integrand function passed to qags integrator to compute the variance of the 
 value of the integrand 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 25
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{d6/d32/cosmology_8c_ac236684e538f158f0651141f7034fe8d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_ac236684e538f158f0651141f7034fe8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{cosmology_8c_ae40d777e0dc4f51704521899d5292254}\label{cosmology_8c_ae40d777e0dc4f51704521899d5292254}} 
+\index{cosmology.c@{cosmology.c}!window\_g@{window\_g}}
+\index{window\_g@{window\_g}!cosmology.c@{cosmology.c}}
+\doxysubsubsection{\texorpdfstring{window\_g()}{window\_g()}}
+{\footnotesize\ttfamily double window\+\_\+g (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}\label{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}} 
+\index{cosmology.c@{cosmology.c}!window\_kth@{window\_kth}}
+\index{window\_kth@{window\_kth}!cosmology.c@{cosmology.c}}
+\doxysubsubsection{\texorpdfstring{window\_kth()}{window\_kth()}}
+{\footnotesize\ttfamily double window\+\_\+kth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}\label{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}} 
 \index{cosmology.c@{cosmology.c}!window\_rth@{window\_rth}}
 \index{window\_rth@{window\_rth}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{window\_rth()}{window\_rth()}}
+\doxysubsubsection{\texorpdfstring{window\_rth()}{window\_rth()}}
 {\footnotesize\ttfamily double window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
 
@@ -701,4 +924,19 @@ The following functions compute several window functions and their derivatives w
 the window functions or their derivatives 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
-% FIG 26
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_ad9b46b8d4596d248565d721af85fa328_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}\label{cosmology_8c_a61c6674f2b410e126a682325ce5360c0}} 
+\index{cosmology.c@{cosmology.c}!gb@{gb}}
+\index{gb@{gb}!cosmology.c@{cosmology.c}}
+\doxysubsubsection{\texorpdfstring{gb}{gb}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
+

@@ -1,0 +1,4 @@
+<map id="line_bias" name="line_bias">
+<area shape="rect" id="node1" title="Compute the linear and quadratic line biases, accounting ffor the normalization w...." alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="128,5,233,32"/>
+</map>

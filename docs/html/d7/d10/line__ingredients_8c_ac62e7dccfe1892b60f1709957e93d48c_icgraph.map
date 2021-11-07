@@ -1,0 +1,8 @@
+<map id="p_sig_shot_integrand" name="p_sig_shot_integrand">
+<area shape="rect" id="node1" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="387,56,536,83"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="252,56,339,83"/>
+<area shape="rect" id="node3" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="106,5,202,32"/>
+<area shape="rect" id="node5" href="$d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="118,56,190,83"/>
+<area shape="rect" id="node6" href="$d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="104,107,204,133"/>
+<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
+</map>

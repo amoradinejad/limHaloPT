@@ -158,9 +158,9 @@ SFR_behroozi_free() frees the memory allocated to logSFR interpolator
 .IP "15." 4
 \fBbias_lum_weighted()\fP computes the luminosity-weighetd line bias
 .IP "16." 4
-p_sig_shot() computes the coefficient accounting for the scatter in L(M) in shot noise
+\fBp_sig_shot()\fP computes the coefficient accounting for the scatter in L(M) in shot noise
 .IP "17." 4
-p_sig_Tbar() computes the coefficient accounting for the scatter in L(M) in mean brightness temprature
+\fBp_sig_Tbar()\fP computes the coefficient accounting for the scatter in L(M) in mean brightness temprature
 .IP "18." 4
 \fBmean_intens()\fP compues the mean intensity of the line
 .IP "19." 4
@@ -548,10 +548,12 @@ the multiplicity function
 .RE
 .PP
 In Barkana & Loeb Rev a = 0\&.75
+.SS "double p_sig_shot (double scatter)"
+
 .SS "double p_sig_shot_integrand (double x, void * par)"
 
 .PP
-Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. scatter in the L(M) relation p_sig_shot replaces the f_duty in the shot-noise used in some LIM paper (ex\&. Lidz et al 2011)\&. \fBp_sig_shot_integrand()\fP is the integrand, and p_sig_shot() computes the scatter factor for the shot noise\&.
+Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. scatter in the L(M) relation p_sig_shot replaces the f_duty in the shot-noise used in some LIM paper (ex\&. Lidz et al 2011)\&. \fBp_sig_shot_integrand()\fP is the integrand, and \fBp_sig_shot()\fP computes the scatter factor for the shot noise\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -566,10 +568,12 @@ the scatter coeff of the shot noise
 .RE
 .PP
 
+.SS "double p_sig_Tbar (double scatter)"
+
 .SS "double p_sig_Tbar_integrand (double x, void * par)"
 
 .PP
-Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. scatter in the L(M) relation p_sig_Tbar replace the f_duty in the average brightness temprature used in some LIM paper (ex\&. Lidz et al 2011)\&. \fBp_sig_Tbar_integrand()\fP is the integrand, and p_sig_Tbar() computes the scatter factor for the mean brightness temprature\&.
+Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. scatter in the L(M) relation p_sig_Tbar replace the f_duty in the average brightness temprature used in some LIM paper (ex\&. Lidz et al 2011)\&. \fBp_sig_Tbar_integrand()\fP is the integrand, and \fBp_sig_Tbar()\fP computes the scatter factor for the mean brightness temprature\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -617,6 +621,10 @@ the line mean temprature assuming Rayleigh-Jeans limit
 Boltzmann constant in unit of erg K^-1
 .PP
 factor of 10^6 is the conversion factor from K to microK
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for limHaloPT from the source code\&.

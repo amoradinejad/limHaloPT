@@ -19,8 +19,11 @@ var line__ingredients_8c =
     [ "mass_moment2_integ", "d7/d10/line__ingredients_8c.html#af293c79ca858df80dcc0ef9f29448059", null ],
     [ "mean_intens", "d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf", null ],
     [ "mult_func", "d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be", null ],
+    [ "p_sig_shot", "d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4", null ],
     [ "p_sig_shot_integrand", "d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c", null ],
+    [ "p_sig_Tbar", "d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c", null ],
     [ "p_sig_Tbar_integrand", "d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307", null ],
     [ "SFR_Behroozi_free", "d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d", null ],
-    [ "Tbar_line", "d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08", null ]
+    [ "Tbar_line", "d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08", null ],
+    [ "gb", "d7/d10/line__ingredients_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
 ];

@@ -1,0 +1,4 @@
+<map id="log10init_1Darray" name="log10init_1Darray">
+<area shape="rect" id="node1" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on log10 scale" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="180,5,289,32"/>
+</map>

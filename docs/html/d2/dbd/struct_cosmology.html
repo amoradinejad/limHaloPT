@@ -17,6 +17,11 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,6 +31,21 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="../../small.png"/></td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -37,17 +57,6 @@
 var searchBox = new SearchBox("searchBox", "../../search",'Search','.html');
 /* @license-end */
 </script>
-<script type="text/javascript" src="../../menudata.js"></script>
-<script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() {
-  initMenu('../../',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -94,30 +103,101 @@ $(document).ready(function(){initNavTree('d2/dbd/struct_cosmology.html','../../'
 Collaboration diagram for Cosmology:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/df4/struct_cosmology__coll__graph.png" border="0" usemap="#a_cosmology_coll__map" alt="Collaboration graph"/></div>
+<map name="a_cosmology_coll__map" id="a_cosmology_coll__map">
+<area shape="rect" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ..." alt="" coords="113,95,203,121"/>
+<area shape="rect" href="../../d2/dd8/struct_class___cosmology___struct.html" title="Structure to store cosmology structure from CLASS code." alt="" coords="5,5,177,32"/>
+<area shape="rect" href="../../d2/d9d/struct_line.html" title="Structure that holds the Line&#45;related quantities, including the interpolators for first and second mo..." alt="" coords="201,5,248,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:af8e7e270adf2573ca16f2037d580cb5b"><td class="memItemLeft" align="right" valign="top"><a id="af8e7e270adf2573ca16f2037d580cb5b" name="af8e7e270adf2573ca16f2037d580cb5b"></a>
-struct <a class="el" href="../../d2/dd8/struct_class___cosmology___struct.html">Class_Cosmology_Struct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ccs</b></td></tr>
+<tr class="memitem:af8e7e270adf2573ca16f2037d580cb5b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d2/dd8/struct_class___cosmology___struct.html">Class_Cosmology_Struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbd/struct_cosmology.html#af8e7e270adf2573ca16f2037d580cb5b">ccs</a></td></tr>
 <tr class="separator:af8e7e270adf2573ca16f2037d580cb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f59f743170aa24dbaeebd4058ac226a"><td class="memItemLeft" align="right" valign="top"><a id="a0f59f743170aa24dbaeebd4058ac226a" name="a0f59f743170aa24dbaeebd4058ac226a"></a>
-struct <a class="el" href="../../d2/d9d/struct_line.html">Line</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>Lines</b></td></tr>
+<tr class="memitem:a0f59f743170aa24dbaeebd4058ac226a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="../../d2/d9d/struct_line.html">Line</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbd/struct_cosmology.html#a0f59f743170aa24dbaeebd4058ac226a">Lines</a></td></tr>
 <tr class="separator:a0f59f743170aa24dbaeebd4058ac226a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8456f0eaa57c17e323994a2d0b1f159"><td class="memItemLeft" align="right" valign="top"><a id="ad8456f0eaa57c17e323994a2d0b1f159" name="ad8456f0eaa57c17e323994a2d0b1f159"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>NLines</b></td></tr>
+<tr class="memitem:ad8456f0eaa57c17e323994a2d0b1f159"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbd/struct_cosmology.html#ad8456f0eaa57c17e323994a2d0b1f159">NLines</a></td></tr>
 <tr class="separator:ad8456f0eaa57c17e323994a2d0b1f159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1e29102584fa127dceed1413913a13"><td class="memItemLeft" align="right" valign="top"><a id="a0e1e29102584fa127dceed1413913a13" name="a0e1e29102584fa127dceed1413913a13"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>mode_nu</b></td></tr>
+<tr class="memitem:a0e1e29102584fa127dceed1413913a13"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbd/struct_cosmology.html#a0e1e29102584fa127dceed1413913a13">mode_nu</a></td></tr>
 <tr class="separator:a0e1e29102584fa127dceed1413913a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad00c7b692054c2201a342aca51eedabc"><td class="memItemLeft" align="right" valign="top"><a id="ad00c7b692054c2201a342aca51eedabc" name="ad00c7b692054c2201a342aca51eedabc"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>cosmo_pars</b> [6]</td></tr>
+<tr class="memitem:ad00c7b692054c2201a342aca51eedabc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbd/struct_cosmology.html#ad00c7b692054c2201a342aca51eedabc">cosmo_pars</a> [6]</td></tr>
 <tr class="separator:ad00c7b692054c2201a342aca51eedabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological paramteres. </p>
 <p >This includes, the <a class="el" href="../../d2/dd8/struct_class___cosmology___struct.html" title="Structure to store cosmology structure from CLASS code.">Class_Cosmology_Struct</a> (initialized in <a class="el" href="../../d6/d32/cosmology_8c.html" title="Documented cosmology module.">cosmology.c</a>), and <a class="el" href="../../d2/d9d/struct_line.html" title="Structure that holds the Line-related quantities, including the interpolators for first and second mo...">Line</a> Structure (initialized in <a class="el" href="../../d7/d10/line__ingredients_8c.html" title="Documented line_ingredients module.">line_ingredients.c</a>). </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="af8e7e270adf2573ca16f2037d580cb5b" name="af8e7e270adf2573ca16f2037d580cb5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e7e270adf2573ca16f2037d580cb5b">&#9670;&nbsp;</a></span>ccs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d2/dd8/struct_class___cosmology___struct.html">Class_Cosmology_Struct</a> ccs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad00c7b692054c2201a342aca51eedabc" name="ad00c7b692054c2201a342aca51eedabc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00c7b692054c2201a342aca51eedabc">&#9670;&nbsp;</a></span>cosmo_pars</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cosmo_pars[6]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f59f743170aa24dbaeebd4058ac226a" name="a0f59f743170aa24dbaeebd4058ac226a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f59f743170aa24dbaeebd4058ac226a">&#9670;&nbsp;</a></span>Lines</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="../../d2/d9d/struct_line.html">Line</a>** Lines</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e1e29102584fa127dceed1413913a13" name="a0e1e29102584fa127dceed1413913a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1e29102584fa127dceed1413913a13">&#9670;&nbsp;</a></span>mode_nu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mode_nu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8456f0eaa57c17e323994a2d0b1f159" name="ad8456f0eaa57c17e323994a2d0b1f159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8456f0eaa57c17e323994a2d0b1f159">&#9670;&nbsp;</a></span>NLines</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NLines</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -178,13 +178,13 @@ R_scale_wrong() computes the size of a spherical halo corresponding to a given m
 .IP "20." 4
 \fBwindow_rth()\fP computes top-hat filter in real space
 .IP "21." 4
-window_g() computes Gaussian window
+\fBwindow_g()\fP computes Gaussian window
 .IP "22." 4
-window_kth() computes top-hat filter in Fourier space
+\fBwindow_kth()\fP computes top-hat filter in Fourier space
 .IP "23." 4
-derR_window_rth() computes derivative of top-hat filter in real space w\&.r\&.t\&. smoothing scale
+\fBderR_window_rth()\fP computes derivative of top-hat filter in real space w\&.r\&.t\&. smoothing scale
 .IP "24." 4
-derR_logwindow_g() computes derivative of top-hat filter in Fourier space w\&.r\&.t\&. smoothing scale 
+\fBderR_logwindow_g()\fP computes derivative of top-hat filter in Fourier space w\&.r\&.t\&. smoothing scale 
 .PP
 
 .SH "Function Documentation"
@@ -358,6 +358,10 @@ Compute the logarithmic derivative of the variance of smoothed matter density fl
 the log-derivative of variance 
 .RE
 .PP
+
+.SS "double derR_logwindow_g (double k, double R)"
+
+.SS "double derR_window_rth (double k, double R)"
 
 .SS "double growth_D (struct \fBCosmology\fP * Cx, double z)"
 
@@ -639,6 +643,10 @@ value of the integrand
 .RE
 .PP
 
+.SS "double window_g (double k, double R)"
+
+.SS "double window_kth (double k, double R)"
+
 .SS "double window_rth (double k, double R)"
 
 .PP
@@ -656,6 +664,10 @@ The following functions compute several window functions and their derivatives w
 the window functions or their derivatives 
 .RE
 .PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
 
 .SH "Author"
 .PP 

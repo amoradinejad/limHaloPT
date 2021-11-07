@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['init_5f1darray_0',['init_1Darray',['../d7/db6/utilities_8c.html#aacaa803e04084752f13eb25e236f46aa',1,'utilities.c']]],
-  ['initialize_1',['initialize',['../d0/d29/main_8c.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;main.c'],['../df/dcb/header_8h.html#a25a40b6614565f755233080a384c35f1',1,'initialize():&#160;main.c']]],
-  ['integrand_5fparameters_2',['integrand_parameters',['../d5/dd6/structintegrand__parameters.html',1,'']]],
-  ['integrand_5fparameters2_3',['integrand_parameters2',['../d0/d4a/structintegrand__parameters2.html',1,'']]],
-  ['ir_5fres_2ec_4',['IR_res.c',['../dc/d8e/_i_r__res_8c.html',1,'']]],
-  ['ir_5fsigma2_5',['IR_Sigma2',['../dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58',1,'IR_res.c']]],
-  ['ir_5fsigma2_5fintegrand_6',['IR_Sigma2_integrand',['../dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee',1,'IR_res.c']]]
+  ['h_0',['h',['../d8/d11/structglobals.html#a8ee9be1b5aa75abae556de3088cba6d9',1,'globals']]],
+  ['h0_1',['H0',['../d8/d11/structglobals.html#a829cbfb68d64295f7122d0fd0dc58448',1,'globals']]],
+  ['h_5fm_2',['h_m',['../d8/d11/structglobals.html#af80ecdcea2c2cabe450472535dbb310e',1,'globals']]],
+  ['halo_3',['HALO',['../df/dcb/header_8h.html#a506e3be0281e3c100aef41dd51e107af',1,'header.h']]],
+  ['halo_5fbias_4',['halo_bias',['../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab',1,'line_ingredients.c']]],
+  ['header_2eh_5',['header.h',['../df/dcb/header_8h.html',1,'']]],
+  ['hm_5f1h2h_6',['HM_1h2h',['../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509',1,'ps_line_hm.c']]],
+  ['hm_5f1h2h_5finteg_7',['HM_1h2h_integ',['../d1/dd5/ps__line__hm_8c.html#ad72b2846b2e235de535da531f2ee30da',1,'ps_line_hm.c']]],
+  ['hs_8',['HS',['../df/dcb/header_8h.html#a75ada8dfcff5e2984c05762948c72792',1,'header.h']]],
+  ['hubble_9',['Hubble',['../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a',1,'cosmology.c']]]
 ];

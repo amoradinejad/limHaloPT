@@ -1,142 +1,337 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\contentsline {section}{\numberline {1}Summary}{1}{section.1}
-\contentsline {subsubsection}{\numberline {1.0.1}Dependencies}{1}{subsubsection.1.0.1}
-\contentsline {subsubsection}{\numberline {1.0.2}Compilation and Usage}{1}{subsubsection.1.0.2}
-\contentsline {subsubsection}{\numberline {1.0.3}Attribution}{1}{subsubsection.1.0.3}
-\contentsline {subsubsection}{\numberline {1.0.4}License}{2}{subsubsection.1.0.4}
-\contentsline {section}{\numberline {2}Data Structure Index}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Data Structures}{2}{subsection.2.1}
-\contentsline {section}{\numberline {3}File Index}{2}{section.3}
-\contentsline {subsection}{\numberline {3.1}File List}{2}{subsection.3.1}
-\contentsline {section}{\numberline {4}Data Structure Documentation}{3}{section.4}
-\contentsline {subsection}{\numberline {4.1}Class\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Cosmology\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct Struct Reference}{3}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Detailed Description}{3}{subsubsection.4.1.1}
-\contentsline {subsection}{\numberline {4.2}Cosmology Struct Reference}{4}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Detailed Description}{4}{subsubsection.4.2.1}
-\contentsline {subsection}{\numberline {4.3}globals Struct Reference}{4}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Detailed Description}{5}{subsubsection.4.3.1}
-\contentsline {subsection}{\numberline {4.4}integrand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}parameters Struct Reference}{5}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Detailed Description}{5}{subsubsection.4.4.1}
-\contentsline {subsection}{\numberline {4.5}integrand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}parameters2 Struct Reference}{6}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Detailed Description}{6}{subsubsection.4.5.1}
-\contentsline {subsection}{\numberline {4.6}Line Struct Reference}{6}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}Detailed Description}{7}{subsubsection.4.6.1}
-\contentsline {section}{\numberline {5}File Documentation}{7}{section.5}
-\contentsline {subsection}{\numberline {5.1}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Structs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{7}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Structs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{8}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}header.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{9}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Function Documentation}{11}{subsubsection.5.3.1}
-\contentsline {paragraph}{\numberline {5.3.1.1}initialize()}{11}{paragraph.5.3.1.1}
-\contentsline {subsection}{\numberline {5.4}header.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{12}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}cosmology.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{14}{subsection.5.5}
-\contentsline {subsubsection}{\numberline {5.5.1}Detailed Description}{15}{subsubsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.2}Function Documentation}{16}{subsubsection.5.5.2}
-\contentsline {paragraph}{\numberline {5.5.2.1}angular\_distance()}{16}{paragraph.5.5.2.1}
-\contentsline {paragraph}{\numberline {5.5.2.2}CL\_Cosmology\_free()}{17}{paragraph.5.5.2.2}
-\contentsline {paragraph}{\numberline {5.5.2.3}CL\_Cosmology\_initilize()}{17}{paragraph.5.5.2.3}
-\contentsline {paragraph}{\numberline {5.5.2.4}comoving\_radial\_distance()}{18}{paragraph.5.5.2.4}
-\contentsline {paragraph}{\numberline {5.5.2.5}concentration\_cdm()}{19}{paragraph.5.5.2.5}
-\contentsline {paragraph}{\numberline {5.5.2.6}Cosmology\_free()}{19}{paragraph.5.5.2.6}
-\contentsline {paragraph}{\numberline {5.5.2.7}Cosmology\_init()}{20}{paragraph.5.5.2.7}
-\contentsline {paragraph}{\numberline {5.5.2.8}der\_lnsig\_sq()}{22}{paragraph.5.5.2.8}
-\contentsline {paragraph}{\numberline {5.5.2.9}growth\_D()}{23}{paragraph.5.5.2.9}
-\contentsline {paragraph}{\numberline {5.5.2.10}growth\_f()}{24}{paragraph.5.5.2.10}
-\contentsline {paragraph}{\numberline {5.5.2.11}Hubble()}{24}{paragraph.5.5.2.11}
-\contentsline {paragraph}{\numberline {5.5.2.12}Mk\_dlnMk()}{25}{paragraph.5.5.2.12}
-\contentsline {paragraph}{\numberline {5.5.2.13}nfw\_profile()}{26}{paragraph.5.5.2.13}
-\contentsline {paragraph}{\numberline {5.5.2.14}Pk\_dlnPk()}{27}{paragraph.5.5.2.14}
-\contentsline {paragraph}{\numberline {5.5.2.15}Pk\_dlnPk\_HV()}{28}{paragraph.5.5.2.15}
-\contentsline {paragraph}{\numberline {5.5.2.16}R\_scale()}{29}{paragraph.5.5.2.16}
-\contentsline {paragraph}{\numberline {5.5.2.17}R\_vir()}{30}{paragraph.5.5.2.17}
-\contentsline {paragraph}{\numberline {5.5.2.18}rhoc()}{31}{paragraph.5.5.2.18}
-\contentsline {paragraph}{\numberline {5.5.2.19}sig\_sq()}{31}{paragraph.5.5.2.19}
-\contentsline {paragraph}{\numberline {5.5.2.20}sig\_sq\_integrand()}{32}{paragraph.5.5.2.20}
-\contentsline {paragraph}{\numberline {5.5.2.21}sigma0\_sq()}{32}{paragraph.5.5.2.21}
-\contentsline {paragraph}{\numberline {5.5.2.22}sigma0\_sq\_integrand()}{33}{paragraph.5.5.2.22}
-\contentsline {paragraph}{\numberline {5.5.2.23}window\_rth()}{34}{paragraph.5.5.2.23}
-\contentsline {subsection}{\numberline {5.6}IR\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}res.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{34}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Detailed Description}{35}{subsubsection.5.6.1}
-\contentsline {subsubsection}{\numberline {5.6.2}Function Documentation}{35}{subsubsection.5.6.2}
-\contentsline {paragraph}{\numberline {5.6.2.1}IR\_Sigma2()}{35}{paragraph.5.6.2.1}
-\contentsline {paragraph}{\numberline {5.6.2.2}IR\_Sigma2\_integrand()}{36}{paragraph.5.6.2.2}
-\contentsline {paragraph}{\numberline {5.6.2.3}pm\_IR\_LO()}{37}{paragraph.5.6.2.3}
-\contentsline {paragraph}{\numberline {5.6.2.4}pm\_IR\_NLO()}{37}{paragraph.5.6.2.4}
-\contentsline {paragraph}{\numberline {5.6.2.5}pm\_nowiggle()}{38}{paragraph.5.6.2.5}
-\contentsline {paragraph}{\numberline {5.6.2.6}pm\_nowiggle\_bspline()}{40}{paragraph.5.6.2.6}
-\contentsline {paragraph}{\numberline {5.6.2.7}pm\_nowiggle\_dst()}{41}{paragraph.5.6.2.7}
-\contentsline {paragraph}{\numberline {5.6.2.8}pm\_nowiggle\_gfilter()}{42}{paragraph.5.6.2.8}
-\contentsline {subsection}{\numberline {5.7}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ingredients.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{43}{subsection.5.7}
-\contentsline {subsubsection}{\numberline {5.7.1}Detailed Description}{44}{subsubsection.5.7.1}
-\contentsline {subsubsection}{\numberline {5.7.2}Function Documentation}{45}{subsubsection.5.7.2}
-\contentsline {paragraph}{\numberline {5.7.2.1}bias\_lum\_weighted()}{45}{paragraph.5.7.2.1}
-\contentsline {paragraph}{\numberline {5.7.2.2}bias\_lum\_weighted\_integ()}{46}{paragraph.5.7.2.2}
-\contentsline {paragraph}{\numberline {5.7.2.3}halo\_bias()}{47}{paragraph.5.7.2.3}
-\contentsline {paragraph}{\numberline {5.7.2.4}Line\_alloc\_init()}{49}{paragraph.5.7.2.4}
-\contentsline {paragraph}{\numberline {5.7.2.5}line\_bias()}{50}{paragraph.5.7.2.5}
-\contentsline {paragraph}{\numberline {5.7.2.6}Line\_evaluate()}{51}{paragraph.5.7.2.6}
-\contentsline {paragraph}{\numberline {5.7.2.7}Line\_free()}{53}{paragraph.5.7.2.7}
-\contentsline {paragraph}{\numberline {5.7.2.8}logSFR\_alloc\_init()}{53}{paragraph.5.7.2.8}
-\contentsline {paragraph}{\numberline {5.7.2.9}logSFR\_Behroozi()}{54}{paragraph.5.7.2.9}
-\contentsline {paragraph}{\numberline {5.7.2.10}logSFR\_Behroozi\_read()}{54}{paragraph.5.7.2.10}
-\contentsline {paragraph}{\numberline {5.7.2.11}luminosity()}{55}{paragraph.5.7.2.11}
-\contentsline {paragraph}{\numberline {5.7.2.12}mass\_func()}{56}{paragraph.5.7.2.12}
-\contentsline {paragraph}{\numberline {5.7.2.13}mass\_func\_sims()}{57}{paragraph.5.7.2.13}
-\contentsline {paragraph}{\numberline {5.7.2.14}mass\_moment1()}{57}{paragraph.5.7.2.14}
-\contentsline {paragraph}{\numberline {5.7.2.15}mass\_moment1\_integ()}{58}{paragraph.5.7.2.15}
-\contentsline {paragraph}{\numberline {5.7.2.16}mass\_moment2()}{59}{paragraph.5.7.2.16}
-\contentsline {paragraph}{\numberline {5.7.2.17}mass\_moment2\_integ()}{59}{paragraph.5.7.2.17}
-\contentsline {paragraph}{\numberline {5.7.2.18}mean\_intens()}{60}{paragraph.5.7.2.18}
-\contentsline {paragraph}{\numberline {5.7.2.19}mult\_func()}{61}{paragraph.5.7.2.19}
-\contentsline {paragraph}{\numberline {5.7.2.20}p\_sig\_shot\_integrand()}{61}{paragraph.5.7.2.20}
-\contentsline {paragraph}{\numberline {5.7.2.21}p\_sig\_Tbar\_integrand()}{62}{paragraph.5.7.2.21}
-\contentsline {paragraph}{\numberline {5.7.2.22}SFR\_Behroozi\_free()}{62}{paragraph.5.7.2.22}
-\contentsline {paragraph}{\numberline {5.7.2.23}Tbar\_line()}{63}{paragraph.5.7.2.23}
-\contentsline {subsection}{\numberline {5.8}main.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{63}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}halo\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}1loop.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{63}{subsection.5.9}
-\contentsline {subsubsection}{\numberline {5.9.1}Detailed Description}{64}{subsubsection.5.9.1}
-\contentsline {subsubsection}{\numberline {5.9.2}Function Documentation}{65}{subsubsection.5.9.2}
-\contentsline {paragraph}{\numberline {5.9.2.1}Compute\_G\_loops()}{65}{paragraph.5.9.2.1}
-\contentsline {paragraph}{\numberline {5.9.2.2}Compute\_PNG\_loops()}{67}{paragraph.5.9.2.2}
-\contentsline {paragraph}{\numberline {5.9.2.3}PS\_hh\_G()}{68}{paragraph.5.9.2.3}
-\contentsline {paragraph}{\numberline {5.9.2.4}PS\_hh\_PNG()}{70}{paragraph.5.9.2.4}
-\contentsline {subsection}{\numberline {5.10}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hm.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{72}{subsection.5.10}
-\contentsline {subsubsection}{\numberline {5.10.1}Detailed Description}{73}{subsubsection.5.10.1}
-\contentsline {subsubsection}{\numberline {5.10.2}Function Documentation}{73}{subsubsection.5.10.2}
-\contentsline {paragraph}{\numberline {5.10.2.1}PS\_line\_HM()}{74}{paragraph.5.10.2.1}
-\contentsline {paragraph}{\numberline {5.10.2.2}PS\_shot\_HM()}{76}{paragraph.5.10.2.2}
-\contentsline {subsection}{\numberline {5.11}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}pt.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{78}{subsection.5.11}
-\contentsline {subsubsection}{\numberline {5.11.1}Detailed Description}{78}{subsubsection.5.11.1}
-\contentsline {subsubsection}{\numberline {5.11.2}Function Documentation}{78}{subsubsection.5.11.2}
-\contentsline {paragraph}{\numberline {5.11.2.1}PS\_line()}{78}{paragraph.5.11.2.1}
-\contentsline {paragraph}{\numberline {5.11.2.2}ps\_line\_multipoles\_integrand()}{79}{paragraph.5.11.2.2}
-\contentsline {paragraph}{\numberline {5.11.2.3}PS\_line\_RSD()}{80}{paragraph.5.11.2.3}
-\contentsline {paragraph}{\numberline {5.11.2.4}PS\_shot()}{81}{paragraph.5.11.2.4}
-\contentsline {subsection}{\numberline {5.12}survey\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}specs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{82}{subsection.5.12}
-\contentsline {subsubsection}{\numberline {5.12.1}Detailed Description}{83}{subsubsection.5.12.1}
-\contentsline {subsubsection}{\numberline {5.12.2}Function Documentation}{83}{subsubsection.5.12.2}
-\contentsline {paragraph}{\numberline {5.12.2.1}kmax\_Brent()}{83}{paragraph.5.12.2.1}
-\contentsline {paragraph}{\numberline {5.12.2.2}kmax\_Brent\_solver()}{83}{paragraph.5.12.2.2}
-\contentsline {paragraph}{\numberline {5.12.2.3}kmin\_val()}{84}{paragraph.5.12.2.3}
-\contentsline {paragraph}{\numberline {5.12.2.4}shell\_volume()}{84}{paragraph.5.12.2.4}
-\contentsline {subsection}{\numberline {5.13}utilities.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{85}{subsection.5.13}
-\contentsline {subsubsection}{\numberline {5.13.1}Detailed Description}{86}{subsubsection.5.13.1}
-\contentsline {subsubsection}{\numberline {5.13.2}Function Documentation}{86}{subsubsection.5.13.2}
-\contentsline {paragraph}{\numberline {5.13.2.1}count\_cols\_in\_file()}{86}{paragraph.5.13.2.1}
-\contentsline {paragraph}{\numberline {5.13.2.2}count\_lines\_in\_file()}{86}{paragraph.5.13.2.2}
-\contentsline {paragraph}{\numberline {5.13.2.3}free\_2Darray()}{87}{paragraph.5.13.2.3}
-\contentsline {paragraph}{\numberline {5.13.2.4}init\_1Darray()}{87}{paragraph.5.13.2.4}
-\contentsline {paragraph}{\numberline {5.13.2.5}log10init\_1Darray()}{88}{paragraph.5.13.2.5}
-\contentsline {paragraph}{\numberline {5.13.2.6}loginit\_1Darray()}{88}{paragraph.5.13.2.6}
-\contentsline {paragraph}{\numberline {5.13.2.7}make\_1D\_int\_array()}{89}{paragraph.5.13.2.7}
-\contentsline {paragraph}{\numberline {5.13.2.8}make\_1Darray()}{89}{paragraph.5.13.2.8}
-\contentsline {paragraph}{\numberline {5.13.2.9}make\_2Darray()}{89}{paragraph.5.13.2.9}
-\contentsline {subsection}{\numberline {5.14}wnw\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}split.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{90}{subsection.5.14}
-\contentsline {subsubsection}{\numberline {5.14.1}Detailed Description}{91}{subsubsection.5.14.1}
-\contentsline {subsubsection}{\numberline {5.14.2}Function Documentation}{91}{subsubsection.5.14.2}
-\contentsline {paragraph}{\numberline {5.14.2.1}EH\_PS\_nw()}{91}{paragraph.5.14.2.1}
-\contentsline {paragraph}{\numberline {5.14.2.2}EH\_PS\_w()}{92}{paragraph.5.14.2.2}
-\contentsline {paragraph}{\numberline {5.14.2.3}pk\_Gfilter\_nw()}{93}{paragraph.5.14.2.3}
-\contentsline {paragraph}{\numberline {5.14.2.4}pk\_nw\_integrand()}{93}{paragraph.5.14.2.4}
-\contentsline {paragraph}{\numberline {5.14.2.5}T()}{94}{paragraph.5.14.2.5}
-\contentsline {paragraph}{\numberline {5.14.2.6}T0()}{94}{paragraph.5.14.2.6}
-\contentsline {paragraph}{\numberline {5.14.2.7}Tt0()}{95}{paragraph.5.14.2.7}
+\contentsline {chapter}{\numberline {1}Summary}{1}{chapter.1}
+\contentsline {subsection}{\numberline {1.0.1}Dependencies}{1}{subsection.1.0.1}
+\contentsline {subsection}{\numberline {1.0.2}Compilation and Usage}{1}{subsection.1.0.2}
+\contentsline {subsection}{\numberline {1.0.3}Attribution}{2}{subsection.1.0.3}
+\contentsline {subsection}{\numberline {1.0.4}License}{2}{subsection.1.0.4}
+\contentsline {chapter}{\numberline {2}Data Structure Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Data Structures}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Class\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Cosmology\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Struct Struct Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}ba}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}errmsg}{8}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}le}{8}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}nl}{8}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}op}{8}{subsubsection.4.1.2.5}
+\contentsline {subsubsection}{\numberline {4.1.2.6}pm}{8}{subsubsection.4.1.2.6}
+\contentsline {subsubsection}{\numberline {4.1.2.7}pr}{8}{subsubsection.4.1.2.7}
+\contentsline {subsubsection}{\numberline {4.1.2.8}pt}{8}{subsubsection.4.1.2.8}
+\contentsline {subsubsection}{\numberline {4.1.2.9}sp}{8}{subsubsection.4.1.2.9}
+\contentsline {subsubsection}{\numberline {4.1.2.10}th}{9}{subsubsection.4.1.2.10}
+\contentsline {subsubsection}{\numberline {4.1.2.11}tr}{9}{subsubsection.4.1.2.11}
+\contentsline {section}{\numberline {4.2}Cosmology Struct Reference}{9}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{9}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{10}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}ccs}{10}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}cosmo\_pars}{10}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Lines}{10}{subsubsection.4.2.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2.4}mode\_nu}{10}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}NLines}{10}{subsubsection.4.2.2.5}
+\contentsline {section}{\numberline {4.3}globals Struct Reference}{10}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Field Documentation}{11}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}As}{12}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}b1}{12}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}c}{12}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}data\_dir}{12}{subsubsection.4.3.2.4}
+\contentsline {subsubsection}{\numberline {4.3.2.5}data\_priors}{12}{subsubsection.4.3.2.5}
+\contentsline {subsubsection}{\numberline {4.3.2.6}h}{12}{subsubsection.4.3.2.6}
+\contentsline {subsubsection}{\numberline {4.3.2.7}H0}{12}{subsubsection.4.3.2.7}
+\contentsline {subsubsection}{\numberline {4.3.2.8}h\_m}{12}{subsubsection.4.3.2.8}
+\contentsline {subsubsection}{\numberline {4.3.2.9}kf}{13}{subsubsection.4.3.2.9}
+\contentsline {subsubsection}{\numberline {4.3.2.10}kp}{13}{subsubsection.4.3.2.10}
+\contentsline {subsubsection}{\numberline {4.3.2.11}logAs}{13}{subsubsection.4.3.2.11}
+\contentsline {subsubsection}{\numberline {4.3.2.12}logM\_accel\_ptr}{13}{subsubsection.4.3.2.12}
+\contentsline {subsubsection}{\numberline {4.3.2.13}logSFR\_spline2d\_ptr}{13}{subsubsection.4.3.2.13}
+\contentsline {subsubsection}{\numberline {4.3.2.14}M\_max}{13}{subsubsection.4.3.2.14}
+\contentsline {subsubsection}{\numberline {4.3.2.15}M\_min}{13}{subsubsection.4.3.2.15}
+\contentsline {subsubsection}{\numberline {4.3.2.16}mass}{13}{subsubsection.4.3.2.16}
+\contentsline {subsubsection}{\numberline {4.3.2.17}ng}{14}{subsubsection.4.3.2.17}
+\contentsline {subsubsection}{\numberline {4.3.2.18}Npars}{14}{subsubsection.4.3.2.18}
+\contentsline {subsubsection}{\numberline {4.3.2.19}ns}{14}{subsubsection.4.3.2.19}
+\contentsline {subsubsection}{\numberline {4.3.2.20}Omega\_b}{14}{subsubsection.4.3.2.20}
+\contentsline {subsubsection}{\numberline {4.3.2.21}Omega\_cdm}{14}{subsubsection.4.3.2.21}
+\contentsline {subsubsection}{\numberline {4.3.2.22}Omega\_g}{14}{subsubsection.4.3.2.22}
+\contentsline {subsubsection}{\numberline {4.3.2.23}Omega\_lambda}{14}{subsubsection.4.3.2.23}
+\contentsline {subsubsection}{\numberline {4.3.2.24}Omega\_nu}{14}{subsubsection.4.3.2.24}
+\contentsline {subsubsection}{\numberline {4.3.2.25}Omega\_r}{15}{subsubsection.4.3.2.25}
+\contentsline {subsubsection}{\numberline {4.3.2.26}output\_dir}{15}{subsubsection.4.3.2.26}
+\contentsline {subsubsection}{\numberline {4.3.2.27}Planck\_Fisher\_filename}{15}{subsubsection.4.3.2.27}
+\contentsline {subsubsection}{\numberline {4.3.2.28}project\_home}{15}{subsubsection.4.3.2.28}
+\contentsline {subsubsection}{\numberline {4.3.2.29}PS\_kmax}{15}{subsubsection.4.3.2.29}
+\contentsline {subsubsection}{\numberline {4.3.2.30}PS\_kmin}{15}{subsubsection.4.3.2.30}
+\contentsline {subsubsection}{\numberline {4.3.2.31}rho}{15}{subsubsection.4.3.2.31}
+\contentsline {subsubsection}{\numberline {4.3.2.32}SFR\_filename}{15}{subsubsection.4.3.2.32}
+\contentsline {subsubsection}{\numberline {4.3.2.33}sigFOG0}{16}{subsubsection.4.3.2.33}
+\contentsline {subsubsection}{\numberline {4.3.2.34}volume}{16}{subsubsection.4.3.2.34}
+\contentsline {subsubsection}{\numberline {4.3.2.35}z\_accel\_ptr}{16}{subsubsection.4.3.2.35}
+\contentsline {subsubsection}{\numberline {4.3.2.36}z\_i}{16}{subsubsection.4.3.2.36}
+\contentsline {subsubsection}{\numberline {4.3.2.37}z\_max}{16}{subsubsection.4.3.2.37}
+\contentsline {section}{\numberline {4.4}integrand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}parameters Struct Reference}{16}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{17}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Field Documentation}{17}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}p1}{17}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}p10}{17}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}p11}{17}{subsubsection.4.4.2.3}
+\contentsline {subsubsection}{\numberline {4.4.2.4}p12}{17}{subsubsection.4.4.2.4}
+\contentsline {subsubsection}{\numberline {4.4.2.5}p13}{17}{subsubsection.4.4.2.5}
+\contentsline {subsubsection}{\numberline {4.4.2.6}p2}{17}{subsubsection.4.4.2.6}
+\contentsline {subsubsection}{\numberline {4.4.2.7}p3}{18}{subsubsection.4.4.2.7}
+\contentsline {subsubsection}{\numberline {4.4.2.8}p4}{18}{subsubsection.4.4.2.8}
+\contentsline {subsubsection}{\numberline {4.4.2.9}p5}{18}{subsubsection.4.4.2.9}
+\contentsline {subsubsection}{\numberline {4.4.2.10}p6}{18}{subsubsection.4.4.2.10}
+\contentsline {subsubsection}{\numberline {4.4.2.11}p7}{18}{subsubsection.4.4.2.11}
+\contentsline {subsubsection}{\numberline {4.4.2.12}p8}{18}{subsubsection.4.4.2.12}
+\contentsline {subsubsection}{\numberline {4.4.2.13}p9}{18}{subsubsection.4.4.2.13}
+\contentsline {section}{\numberline {4.5}integrand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}parameters2 Struct Reference}{19}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{20}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Field Documentation}{20}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}p1}{20}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}p10}{20}{subsubsection.4.5.2.2}
+\contentsline {subsubsection}{\numberline {4.5.2.3}p11}{20}{subsubsection.4.5.2.3}
+\contentsline {subsubsection}{\numberline {4.5.2.4}p12}{20}{subsubsection.4.5.2.4}
+\contentsline {subsubsection}{\numberline {4.5.2.5}p13}{20}{subsubsection.4.5.2.5}
+\contentsline {subsubsection}{\numberline {4.5.2.6}p14}{20}{subsubsection.4.5.2.6}
+\contentsline {subsubsection}{\numberline {4.5.2.7}p15}{21}{subsubsection.4.5.2.7}
+\contentsline {subsubsection}{\numberline {4.5.2.8}p16}{21}{subsubsection.4.5.2.8}
+\contentsline {subsubsection}{\numberline {4.5.2.9}p17}{21}{subsubsection.4.5.2.9}
+\contentsline {subsubsection}{\numberline {4.5.2.10}p18}{21}{subsubsection.4.5.2.10}
+\contentsline {subsubsection}{\numberline {4.5.2.11}p19}{21}{subsubsection.4.5.2.11}
+\contentsline {subsubsection}{\numberline {4.5.2.12}p2}{21}{subsubsection.4.5.2.12}
+\contentsline {subsubsection}{\numberline {4.5.2.13}p20}{21}{subsubsection.4.5.2.13}
+\contentsline {subsubsection}{\numberline {4.5.2.14}p22}{21}{subsubsection.4.5.2.14}
+\contentsline {subsubsection}{\numberline {4.5.2.15}p3}{22}{subsubsection.4.5.2.15}
+\contentsline {subsubsection}{\numberline {4.5.2.16}p4}{22}{subsubsection.4.5.2.16}
+\contentsline {subsubsection}{\numberline {4.5.2.17}p5}{22}{subsubsection.4.5.2.17}
+\contentsline {subsubsection}{\numberline {4.5.2.18}p6}{22}{subsubsection.4.5.2.18}
+\contentsline {subsubsection}{\numberline {4.5.2.19}p7}{22}{subsubsection.4.5.2.19}
+\contentsline {subsubsection}{\numberline {4.5.2.20}p8}{22}{subsubsection.4.5.2.20}
+\contentsline {subsubsection}{\numberline {4.5.2.21}p9}{22}{subsubsection.4.5.2.21}
+\contentsline {section}{\numberline {4.6}Line Struct Reference}{22}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{23}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Field Documentation}{23}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}b1\_LW\_accel\_ptr}{23}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}b1\_LW\_spline\_ptr}{23}{subsubsection.4.6.2.2}
+\contentsline {subsubsection}{\numberline {4.6.2.3}b2\_LW\_accel\_ptr}{23}{subsubsection.4.6.2.3}
+\contentsline {subsubsection}{\numberline {4.6.2.4}b2\_LW\_spline\_ptr}{23}{subsubsection.4.6.2.4}
+\contentsline {subsubsection}{\numberline {4.6.2.5}initialized}{24}{subsubsection.4.6.2.5}
+\contentsline {subsubsection}{\numberline {4.6.2.6}line\_freq}{24}{subsubsection.4.6.2.6}
+\contentsline {subsubsection}{\numberline {4.6.2.7}LineType}{24}{subsubsection.4.6.2.7}
+\contentsline {subsubsection}{\numberline {4.6.2.8}mom1\_accel\_ptr}{24}{subsubsection.4.6.2.8}
+\contentsline {subsubsection}{\numberline {4.6.2.9}mom1\_spline\_ptr}{24}{subsubsection.4.6.2.9}
+\contentsline {subsubsection}{\numberline {4.6.2.10}mom2\_accel\_ptr}{24}{subsubsection.4.6.2.10}
+\contentsline {subsubsection}{\numberline {4.6.2.11}mom2\_spline\_ptr}{24}{subsubsection.4.6.2.11}
+\contentsline {subsubsection}{\numberline {4.6.2.12}npointsInterp}{24}{subsubsection.4.6.2.12}
+\contentsline {chapter}{\numberline {5}File Documentation}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}README.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}md File Reference}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Structs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Structs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{26}{section.5.3}
+\contentsline {section}{\numberline {5.4}header.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{27}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Macro Definition Documentation}{29}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}\_GNU\_SOURCE}{29}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}BSPLINE}{30}{subsubsection.5.4.1.2}
+\contentsline {subsubsection}{\numberline {5.4.1.3}CII}{30}{subsubsection.5.4.1.3}
+\contentsline {subsubsection}{\numberline {5.4.1.4}CLEANUP}{30}{subsubsection.5.4.1.4}
+\contentsline {subsubsection}{\numberline {5.4.1.5}CO10}{30}{subsubsection.5.4.1.5}
+\contentsline {subsubsection}{\numberline {5.4.1.6}CO21}{30}{subsubsection.5.4.1.6}
+\contentsline {subsubsection}{\numberline {5.4.1.7}CO32}{30}{subsubsection.5.4.1.7}
+\contentsline {subsubsection}{\numberline {5.4.1.8}CO43}{30}{subsubsection.5.4.1.8}
+\contentsline {subsubsection}{\numberline {5.4.1.9}CO54}{30}{subsubsection.5.4.1.9}
+\contentsline {subsubsection}{\numberline {5.4.1.10}CO65}{31}{subsubsection.5.4.1.10}
+\contentsline {subsubsection}{\numberline {5.4.1.11}DER}{31}{subsubsection.5.4.1.11}
+\contentsline {subsubsection}{\numberline {5.4.1.12}DERGROWTH}{31}{subsubsection.5.4.1.12}
+\contentsline {subsubsection}{\numberline {5.4.1.13}derNGLOOP}{31}{subsubsection.5.4.1.13}
+\contentsline {subsubsection}{\numberline {5.4.1.14}DO\_NOT\_EVALUATE}{31}{subsubsection.5.4.1.14}
+\contentsline {subsubsection}{\numberline {5.4.1.15}DST}{31}{subsubsection.5.4.1.15}
+\contentsline {subsubsection}{\numberline {5.4.1.16}EQUILATERAL}{31}{subsubsection.5.4.1.16}
+\contentsline {subsubsection}{\numberline {5.4.1.17}GAMMA}{31}{subsubsection.5.4.1.17}
+\contentsline {subsubsection}{\numberline {5.4.1.18}GAUSSIAN}{32}{subsubsection.5.4.1.18}
+\contentsline {subsubsection}{\numberline {5.4.1.19}GFILTER}{32}{subsubsection.5.4.1.19}
+\contentsline {subsubsection}{\numberline {5.4.1.20}GROWTH}{32}{subsubsection.5.4.1.20}
+\contentsline {subsubsection}{\numberline {5.4.1.21}HALO}{32}{subsubsection.5.4.1.21}
+\contentsline {subsubsection}{\numberline {5.4.1.22}HS}{32}{subsubsection.5.4.1.22}
+\contentsline {subsubsection}{\numberline {5.4.1.23}INIT}{32}{subsubsection.5.4.1.23}
+\contentsline {subsubsection}{\numberline {5.4.1.24}LINE}{32}{subsubsection.5.4.1.24}
+\contentsline {subsubsection}{\numberline {5.4.1.25}LINEAR}{32}{subsubsection.5.4.1.25}
+\contentsline {subsubsection}{\numberline {5.4.1.26}LINEMATTER}{33}{subsubsection.5.4.1.26}
+\contentsline {subsubsection}{\numberline {5.4.1.27}LOCAL}{33}{subsubsection.5.4.1.27}
+\contentsline {subsubsection}{\numberline {5.4.1.28}LOOP}{33}{subsubsection.5.4.1.28}
+\contentsline {subsubsection}{\numberline {5.4.1.29}LPOWER}{33}{subsubsection.5.4.1.29}
+\contentsline {subsubsection}{\numberline {5.4.1.30}MATTER}{33}{subsubsection.5.4.1.30}
+\contentsline {subsubsection}{\numberline {5.4.1.31}MAXL}{33}{subsubsection.5.4.1.31}
+\contentsline {subsubsection}{\numberline {5.4.1.32}NGLOOP}{33}{subsubsection.5.4.1.32}
+\contentsline {subsubsection}{\numberline {5.4.1.33}NLPOWER}{33}{subsubsection.5.4.1.33}
+\contentsline {subsubsection}{\numberline {5.4.1.34}NOIR}{34}{subsubsection.5.4.1.34}
+\contentsline {subsubsection}{\numberline {5.4.1.35}NONGAUSSIAN}{34}{subsubsection.5.4.1.35}
+\contentsline {subsubsection}{\numberline {5.4.1.36}NONLINEAR}{34}{subsubsection.5.4.1.36}
+\contentsline {subsubsection}{\numberline {5.4.1.37}ORTHOGONAL}{34}{subsubsection.5.4.1.37}
+\contentsline {subsubsection}{\numberline {5.4.1.38}PS\_KMAX}{34}{subsubsection.5.4.1.38}
+\contentsline {subsubsection}{\numberline {5.4.1.39}PS\_KMIN}{34}{subsubsection.5.4.1.39}
+\contentsline {subsubsection}{\numberline {5.4.1.40}PSC}{34}{subsubsection.5.4.1.40}
+\contentsline {subsubsection}{\numberline {5.4.1.41}QSF}{35}{subsubsection.5.4.1.41}
+\contentsline {subsubsection}{\numberline {5.4.1.42}QUADRATIC}{35}{subsubsection.5.4.1.42}
+\contentsline {subsubsection}{\numberline {5.4.1.43}ST}{35}{subsubsection.5.4.1.43}
+\contentsline {subsubsection}{\numberline {5.4.1.44}TIDE}{35}{subsubsection.5.4.1.44}
+\contentsline {subsubsection}{\numberline {5.4.1.45}TR}{35}{subsubsection.5.4.1.45}
+\contentsline {subsubsection}{\numberline {5.4.1.46}TRANS}{35}{subsubsection.5.4.1.46}
+\contentsline {subsubsection}{\numberline {5.4.1.47}TREE}{35}{subsubsection.5.4.1.47}
+\contentsline {subsubsection}{\numberline {5.4.1.48}WIR}{35}{subsubsection.5.4.1.48}
+\contentsline {subsection}{\numberline {5.4.2}Function Documentation}{36}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}cleanup()}{36}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}initialize()}{36}{subsubsection.5.4.2.2}
+\contentsline {section}{\numberline {5.5}header.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{37}{section.5.5}
+\contentsline {section}{\numberline {5.6}cosmology.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{39}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{40}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Function Documentation}{41}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}angular\_distance()}{41}{subsubsection.5.6.2.1}
+\contentsline {subsubsection}{\numberline {5.6.2.2}CL\_Cosmology\_free()}{42}{subsubsection.5.6.2.2}
+\contentsline {subsubsection}{\numberline {5.6.2.3}CL\_Cosmology\_initilize()}{43}{subsubsection.5.6.2.3}
+\contentsline {subsubsection}{\numberline {5.6.2.4}comoving\_radial\_distance()}{44}{subsubsection.5.6.2.4}
+\contentsline {subsubsection}{\numberline {5.6.2.5}concentration\_cdm()}{45}{subsubsection.5.6.2.5}
+\contentsline {subsubsection}{\numberline {5.6.2.6}Cosmology\_free()}{46}{subsubsection.5.6.2.6}
+\contentsline {subsubsection}{\numberline {5.6.2.7}Cosmology\_init()}{47}{subsubsection.5.6.2.7}
+\contentsline {subsubsection}{\numberline {5.6.2.8}der\_lnsig\_sq()}{51}{subsubsection.5.6.2.8}
+\contentsline {subsubsection}{\numberline {5.6.2.9}derR\_logwindow\_g()}{52}{subsubsection.5.6.2.9}
+\contentsline {subsubsection}{\numberline {5.6.2.10}derR\_window\_rth()}{52}{subsubsection.5.6.2.10}
+\contentsline {subsubsection}{\numberline {5.6.2.11}growth\_D()}{52}{subsubsection.5.6.2.11}
+\contentsline {subsubsection}{\numberline {5.6.2.12}growth\_f()}{53}{subsubsection.5.6.2.12}
+\contentsline {subsubsection}{\numberline {5.6.2.13}Hubble()}{54}{subsubsection.5.6.2.13}
+\contentsline {subsubsection}{\numberline {5.6.2.14}Mk\_dlnMk()}{55}{subsubsection.5.6.2.14}
+\contentsline {subsubsection}{\numberline {5.6.2.15}nfw\_profile()}{56}{subsubsection.5.6.2.15}
+\contentsline {subsubsection}{\numberline {5.6.2.16}Pk\_dlnPk()}{57}{subsubsection.5.6.2.16}
+\contentsline {subsubsection}{\numberline {5.6.2.17}Pk\_dlnPk\_HV()}{59}{subsubsection.5.6.2.17}
+\contentsline {subsubsection}{\numberline {5.6.2.18}R\_scale()}{61}{subsubsection.5.6.2.18}
+\contentsline {subsubsection}{\numberline {5.6.2.19}R\_vir()}{62}{subsubsection.5.6.2.19}
+\contentsline {subsubsection}{\numberline {5.6.2.20}rhoc()}{63}{subsubsection.5.6.2.20}
+\contentsline {subsubsection}{\numberline {5.6.2.21}sig\_sq()}{64}{subsubsection.5.6.2.21}
+\contentsline {subsubsection}{\numberline {5.6.2.22}sig\_sq\_integrand()}{65}{subsubsection.5.6.2.22}
+\contentsline {subsubsection}{\numberline {5.6.2.23}sigma0\_sq()}{66}{subsubsection.5.6.2.23}
+\contentsline {subsubsection}{\numberline {5.6.2.24}sigma0\_sq\_integrand()}{67}{subsubsection.5.6.2.24}
+\contentsline {subsubsection}{\numberline {5.6.2.25}window\_g()}{68}{subsubsection.5.6.2.25}
+\contentsline {subsubsection}{\numberline {5.6.2.26}window\_kth()}{68}{subsubsection.5.6.2.26}
+\contentsline {subsubsection}{\numberline {5.6.2.27}window\_rth()}{69}{subsubsection.5.6.2.27}
+\contentsline {subsection}{\numberline {5.6.3}Variable Documentation}{69}{subsection.5.6.3}
+\contentsline {subsubsection}{\numberline {5.6.3.1}gb}{69}{subsubsection.5.6.3.1}
+\contentsline {section}{\numberline {5.7}IR\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}res.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{70}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{70}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{71}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}IR\_Sigma2()}{71}{subsubsection.5.7.2.1}
+\contentsline {subsubsection}{\numberline {5.7.2.2}IR\_Sigma2\_integrand()}{72}{subsubsection.5.7.2.2}
+\contentsline {subsubsection}{\numberline {5.7.2.3}pm\_IR\_LO()}{73}{subsubsection.5.7.2.3}
+\contentsline {subsubsection}{\numberline {5.7.2.4}pm\_IR\_NLO()}{75}{subsubsection.5.7.2.4}
+\contentsline {subsubsection}{\numberline {5.7.2.5}pm\_nowiggle()}{77}{subsubsection.5.7.2.5}
+\contentsline {subsubsection}{\numberline {5.7.2.6}pm\_nowiggle\_bspline()}{79}{subsubsection.5.7.2.6}
+\contentsline {subsubsection}{\numberline {5.7.2.7}pm\_nowiggle\_dst()}{81}{subsubsection.5.7.2.7}
+\contentsline {subsubsection}{\numberline {5.7.2.8}pm\_nowiggle\_gfilter()}{82}{subsubsection.5.7.2.8}
+\contentsline {section}{\numberline {5.8}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ingredients.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{84}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{85}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Function Documentation}{86}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}bias\_lum\_weighted()}{86}{subsubsection.5.8.2.1}
+\contentsline {subsubsection}{\numberline {5.8.2.2}bias\_lum\_weighted\_integ()}{87}{subsubsection.5.8.2.2}
+\contentsline {subsubsection}{\numberline {5.8.2.3}halo\_bias()}{88}{subsubsection.5.8.2.3}
+\contentsline {subsubsection}{\numberline {5.8.2.4}Line\_alloc\_init()}{90}{subsubsection.5.8.2.4}
+\contentsline {subsubsection}{\numberline {5.8.2.5}line\_bias()}{92}{subsubsection.5.8.2.5}
+\contentsline {subsubsection}{\numberline {5.8.2.6}Line\_evaluate()}{94}{subsubsection.5.8.2.6}
+\contentsline {subsubsection}{\numberline {5.8.2.7}Line\_free()}{96}{subsubsection.5.8.2.7}
+\contentsline {subsubsection}{\numberline {5.8.2.8}logSFR\_alloc\_init()}{97}{subsubsection.5.8.2.8}
+\contentsline {subsubsection}{\numberline {5.8.2.9}logSFR\_Behroozi()}{98}{subsubsection.5.8.2.9}
+\contentsline {subsubsection}{\numberline {5.8.2.10}logSFR\_Behroozi\_read()}{99}{subsubsection.5.8.2.10}
+\contentsline {subsubsection}{\numberline {5.8.2.11}luminosity()}{100}{subsubsection.5.8.2.11}
+\contentsline {subsubsection}{\numberline {5.8.2.12}mass\_func()}{102}{subsubsection.5.8.2.12}
+\contentsline {subsubsection}{\numberline {5.8.2.13}mass\_func\_sims()}{103}{subsubsection.5.8.2.13}
+\contentsline {subsubsection}{\numberline {5.8.2.14}mass\_moment1()}{104}{subsubsection.5.8.2.14}
+\contentsline {subsubsection}{\numberline {5.8.2.15}mass\_moment1\_integ()}{105}{subsubsection.5.8.2.15}
+\contentsline {subsubsection}{\numberline {5.8.2.16}mass\_moment2()}{107}{subsubsection.5.8.2.16}
+\contentsline {subsubsection}{\numberline {5.8.2.17}mass\_moment2\_integ()}{108}{subsubsection.5.8.2.17}
+\contentsline {subsubsection}{\numberline {5.8.2.18}mean\_intens()}{110}{subsubsection.5.8.2.18}
+\contentsline {subsubsection}{\numberline {5.8.2.19}mult\_func()}{111}{subsubsection.5.8.2.19}
+\contentsline {subsubsection}{\numberline {5.8.2.20}p\_sig\_shot()}{112}{subsubsection.5.8.2.20}
+\contentsline {subsubsection}{\numberline {5.8.2.21}p\_sig\_shot\_integrand()}{113}{subsubsection.5.8.2.21}
+\contentsline {subsubsection}{\numberline {5.8.2.22}p\_sig\_Tbar()}{114}{subsubsection.5.8.2.22}
+\contentsline {subsubsection}{\numberline {5.8.2.23}p\_sig\_Tbar\_integrand()}{115}{subsubsection.5.8.2.23}
+\contentsline {subsubsection}{\numberline {5.8.2.24}SFR\_Behroozi\_free()}{115}{subsubsection.5.8.2.24}
+\contentsline {subsubsection}{\numberline {5.8.2.25}Tbar\_line()}{116}{subsubsection.5.8.2.25}
+\contentsline {subsection}{\numberline {5.8.3}Variable Documentation}{117}{subsection.5.8.3}
+\contentsline {subsubsection}{\numberline {5.8.3.1}gb}{117}{subsubsection.5.8.3.1}
+\contentsline {section}{\numberline {5.9}main.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{117}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{118}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Function Documentation}{118}{subsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.2.1}cleanup()}{118}{subsubsection.5.9.2.1}
+\contentsline {subsubsection}{\numberline {5.9.2.2}initialize()}{119}{subsubsection.5.9.2.2}
+\contentsline {subsubsection}{\numberline {5.9.2.3}main()}{120}{subsubsection.5.9.2.3}
+\contentsline {subsection}{\numberline {5.9.3}Variable Documentation}{120}{subsection.5.9.3}
+\contentsline {subsubsection}{\numberline {5.9.3.1}gb}{121}{subsubsection.5.9.3.1}
+\contentsline {section}{\numberline {5.10}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}halo\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}1loop.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{121}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{122}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.2}Function Documentation}{122}{subsection.5.10.2}
+\contentsline {subsubsection}{\numberline {5.10.2.1}Compute\_G\_loops()}{122}{subsubsection.5.10.2.1}
+\contentsline {subsubsection}{\numberline {5.10.2.2}Compute\_PNG\_loops()}{125}{subsubsection.5.10.2.2}
+\contentsline {subsubsection}{\numberline {5.10.2.3}F2()}{127}{subsubsection.5.10.2.3}
+\contentsline {subsubsection}{\numberline {5.10.2.4}F2\_s()}{128}{subsubsection.5.10.2.4}
+\contentsline {subsubsection}{\numberline {5.10.2.5}F3\_s()}{128}{subsubsection.5.10.2.5}
+\contentsline {subsubsection}{\numberline {5.10.2.6}G\_loop\_integrands()}{128}{subsubsection.5.10.2.6}
+\contentsline {subsubsection}{\numberline {5.10.2.7}PNG\_loop\_integrands()}{129}{subsubsection.5.10.2.7}
+\contentsline {subsubsection}{\numberline {5.10.2.8}PS\_hh\_G()}{130}{subsubsection.5.10.2.8}
+\contentsline {subsubsection}{\numberline {5.10.2.9}PS\_hh\_PNG()}{133}{subsubsection.5.10.2.9}
+\contentsline {subsubsection}{\numberline {5.10.2.10}S2()}{135}{subsubsection.5.10.2.10}
+\contentsline {subsubsection}{\numberline {5.10.2.11}S2\_s()}{136}{subsubsection.5.10.2.11}
+\contentsline {subsection}{\numberline {5.10.3}Variable Documentation}{136}{subsection.5.10.3}
+\contentsline {subsubsection}{\numberline {5.10.3.1}gb}{136}{subsubsection.5.10.3.1}
+\contentsline {section}{\numberline {5.11}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hm.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{136}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{137}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{137}{subsection.5.11.2}
+\contentsline {subsubsection}{\numberline {5.11.2.1}b22\_ls()}{138}{subsubsection.5.11.2.1}
+\contentsline {subsubsection}{\numberline {5.11.2.2}b22\_ls\_integrand()}{138}{subsubsection.5.11.2.2}
+\contentsline {subsubsection}{\numberline {5.11.2.3}HM\_1h2h()}{139}{subsubsection.5.11.2.3}
+\contentsline {subsubsection}{\numberline {5.11.2.4}HM\_1h2h\_integ()}{140}{subsubsection.5.11.2.4}
+\contentsline {subsubsection}{\numberline {5.11.2.5}mhmc()}{144}{subsubsection.5.11.2.5}
+\contentsline {subsubsection}{\numberline {5.11.2.6}mhmc\_integ()}{145}{subsubsection.5.11.2.6}
+\contentsline {subsubsection}{\numberline {5.11.2.7}PS\_line\_HM()}{148}{subsubsection.5.11.2.7}
+\contentsline {subsubsection}{\numberline {5.11.2.8}PS\_shot\_HM()}{150}{subsubsection.5.11.2.8}
+\contentsline {subsection}{\numberline {5.11.3}Variable Documentation}{153}{subsection.5.11.3}
+\contentsline {subsubsection}{\numberline {5.11.3.1}gb}{153}{subsubsection.5.11.3.1}
+\contentsline {section}{\numberline {5.12}ps\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}line\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}pt.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{153}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{154}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.2}Function Documentation}{154}{subsection.5.12.2}
+\contentsline {subsubsection}{\numberline {5.12.2.1}PS\_line()}{154}{subsubsection.5.12.2.1}
+\contentsline {subsubsection}{\numberline {5.12.2.2}ps\_line\_multipoles()}{155}{subsubsection.5.12.2.2}
+\contentsline {subsubsection}{\numberline {5.12.2.3}ps\_line\_multipoles\_integrand()}{156}{subsubsection.5.12.2.3}
+\contentsline {subsubsection}{\numberline {5.12.2.4}PS\_line\_RSD()}{158}{subsubsection.5.12.2.4}
+\contentsline {subsubsection}{\numberline {5.12.2.5}PS\_shot()}{159}{subsubsection.5.12.2.5}
+\contentsline {subsection}{\numberline {5.12.3}Variable Documentation}{160}{subsection.5.12.3}
+\contentsline {subsubsection}{\numberline {5.12.3.1}gb}{161}{subsubsection.5.12.3.1}
+\contentsline {section}{\numberline {5.13}survey\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}specs.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{161}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{161}{subsection.5.13.1}
+\contentsline {subsection}{\numberline {5.13.2}Function Documentation}{161}{subsection.5.13.2}
+\contentsline {subsubsection}{\numberline {5.13.2.1}kmax\_Brent()}{162}{subsubsection.5.13.2.1}
+\contentsline {subsubsection}{\numberline {5.13.2.2}kmax\_Brent\_solver()}{163}{subsubsection.5.13.2.2}
+\contentsline {subsubsection}{\numberline {5.13.2.3}kmin\_val()}{163}{subsubsection.5.13.2.3}
+\contentsline {subsubsection}{\numberline {5.13.2.4}shell\_volume()}{164}{subsubsection.5.13.2.4}
+\contentsline {subsection}{\numberline {5.13.3}Variable Documentation}{165}{subsection.5.13.3}
+\contentsline {subsubsection}{\numberline {5.13.3.1}gb}{165}{subsubsection.5.13.3.1}
+\contentsline {section}{\numberline {5.14}utilities.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{165}{section.5.14}
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{166}{subsection.5.14.1}
+\contentsline {subsection}{\numberline {5.14.2}Function Documentation}{166}{subsection.5.14.2}
+\contentsline {subsubsection}{\numberline {5.14.2.1}count\_cols\_in\_file()}{166}{subsubsection.5.14.2.1}
+\contentsline {subsubsection}{\numberline {5.14.2.2}count\_lines\_in\_file()}{167}{subsubsection.5.14.2.2}
+\contentsline {subsubsection}{\numberline {5.14.2.3}free\_2Darray()}{167}{subsubsection.5.14.2.3}
+\contentsline {subsubsection}{\numberline {5.14.2.4}init\_1Darray()}{168}{subsubsection.5.14.2.4}
+\contentsline {subsubsection}{\numberline {5.14.2.5}log10init\_1Darray()}{169}{subsubsection.5.14.2.5}
+\contentsline {subsubsection}{\numberline {5.14.2.6}loginit\_1Darray()}{170}{subsubsection.5.14.2.6}
+\contentsline {subsubsection}{\numberline {5.14.2.7}make\_1D\_int\_array()}{171}{subsubsection.5.14.2.7}
+\contentsline {subsubsection}{\numberline {5.14.2.8}make\_1Darray()}{172}{subsubsection.5.14.2.8}
+\contentsline {subsubsection}{\numberline {5.14.2.9}make\_2Darray()}{172}{subsubsection.5.14.2.9}
+\contentsline {section}{\numberline {5.15}wnw\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}split.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{173}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{174}{subsection.5.15.1}
+\contentsline {subsection}{\numberline {5.15.2}Function Documentation}{174}{subsection.5.15.2}
+\contentsline {subsubsection}{\numberline {5.15.2.1}EH\_PS\_nw()}{174}{subsubsection.5.15.2.1}
+\contentsline {subsubsection}{\numberline {5.15.2.2}EH\_PS\_w()}{175}{subsubsection.5.15.2.2}
+\contentsline {subsubsection}{\numberline {5.15.2.3}pk\_Gfilter\_nw()}{176}{subsubsection.5.15.2.3}
+\contentsline {subsubsection}{\numberline {5.15.2.4}pk\_nw\_integrand()}{178}{subsubsection.5.15.2.4}
+\contentsline {subsubsection}{\numberline {5.15.2.5}T()}{179}{subsubsection.5.15.2.5}
+\contentsline {subsubsection}{\numberline {5.15.2.6}T0()}{179}{subsubsection.5.15.2.6}
+\contentsline {subsubsection}{\numberline {5.15.2.7}Tt0()}{180}{subsubsection.5.15.2.7}

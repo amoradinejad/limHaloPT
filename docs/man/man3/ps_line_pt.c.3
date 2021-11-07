@@ -54,7 +54,7 @@ In summary, the following functions can be called from other modules:
 .IP "2." 4
 \fBPS_line_RSD()\fP computes the tree-level line power spectrum in redshift-space, as a function of wavenumber and angle w\&.r\&.t LOS
 .IP "3." 4
-ps_line_multipoles() computes the redshift-space multipoles of the line power spectrum
+\fBps_line_multipoles()\fP computes the redshift-space multipoles of the line power spectrum
 .IP "4." 4
 \fBPS_shot()\fP computes the poisson shot noise 
 .PP
@@ -84,6 +84,8 @@ tree-level P_clust(k)
  
 .RE
 .PP
+
+.SS "double ps_line_multipoles (struct \fBCosmology\fP * Cx, struct \fBCosmology\fP * Cx_ref, double k, double z, size_t line_id, int ell)"
 
 .SS "int ps_line_multipoles_integrand (unsigned ndim, const double * x, void * p, unsigned fdim, double * fvalue)"
 
@@ -165,6 +167,10 @@ P_poisson
 Boltzmann constant in unit of erg K^-1
 .PP
 in unit of erg/s
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for limHaloPT from the source code\&.

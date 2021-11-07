@@ -1,0 +1,10 @@
+<map id="mean_intens" name="mean_intens">
+<area shape="rect" id="node1" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="643,51,741,77"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="517,51,595,77"/>
+<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="226,21,277,48"/>
+<area shape="rect" id="node4" href="$d8/d43/ps__line__pt_8c.html#adb0db1c5916a39f0b796a30b48b03f42" title="Compute the real&#45;space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3." alt="" coords="383,25,451,52"/>
+<area shape="rect" id="node5" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="369,76,465,103"/>
+<area shape="rect" id="node6" href="$d8/d43/ps__line__pt_8c.html#a2a5a8e5016f2d8728844564d93000751" title="Compute the redshift&#45;space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3 as a functi..." alt="" coords="365,127,469,153"/>
+<area shape="rect" id="node7" href="$d8/d43/ps__line__pt_8c.html#ae4ce1e29b505dae588eb2b8c8ae632e2" title="Compute the multipole moments of redshift&#45;space power spectrum of emission lines in unit of micro K^2..." alt="" coords="185,119,317,161"/>
+<area shape="rect" id="node8" href="$d8/d43/ps__line__pt_8c.html#a62cf452e70a5c44e79485391ad59cf63" title=" " alt="" coords="5,127,137,153"/>
+</map>

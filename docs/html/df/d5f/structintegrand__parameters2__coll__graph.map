@@ -1,0 +1,6 @@
+<map id="integrand_parameters2" name="integrand_parameters2">
+<area shape="rect" id="node1" title="Another structure passed to the integrators to hold the parameters fixed in the integration." alt="" coords="78,213,238,240"/>
+<area shape="rect" id="node2" href="$d2/dbd/struct_cosmology.html" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ..." alt="" coords="113,95,203,121"/>
+<area shape="rect" id="node3" href="$d2/dd8/struct_class___cosmology___struct.html" title="Structure to store cosmology structure from CLASS code." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node4" href="$d2/d9d/struct_line.html" title="Structure that holds the Line&#45;related quantities, including the interpolators for first and second mo..." alt="" coords="201,5,248,32"/>
+</map>

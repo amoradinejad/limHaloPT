@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['cl_5fcosmology_5ffree_0',['CL_Cosmology_free',['../d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493',1,'cosmology.c']]],
-  ['cl_5fcosmology_5finitilize_1',['CL_Cosmology_initilize',['../d6/d32/cosmology_8c.html#a6cb2155e541823871af839a39ccec1e7',1,'cosmology.c']]],
-  ['class_5fcosmology_5fstruct_2',['Class_Cosmology_Struct',['../d2/dd8/struct_class___cosmology___struct.html',1,'']]],
-  ['cleanup_3',['cleanup',['../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0',1,'main.c']]],
-  ['comoving_5fradial_5fdistance_4',['comoving_radial_distance',['../d6/d32/cosmology_8c.html#aedbe3c00696981389e1c130cbfa862eb',1,'cosmology.c']]],
-  ['compute_5fg_5floops_5',['Compute_G_loops',['../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a',1,'ps_halo_1loop.c']]],
-  ['compute_5fpng_5floops_6',['Compute_PNG_loops',['../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892',1,'ps_halo_1loop.c']]],
-  ['concentration_5fcdm_7',['concentration_cdm',['../d6/d32/cosmology_8c.html#ac366d051f37119268a3308ebd5e1b87f',1,'cosmology.c']]],
-  ['cosmology_8',['Cosmology',['../d2/dbd/struct_cosmology.html',1,'']]],
-  ['cosmology_2ec_9',['cosmology.c',['../d6/d32/cosmology_8c.html',1,'']]],
-  ['cosmology_5ffree_10',['Cosmology_free',['../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e',1,'cosmology.c']]],
-  ['cosmology_5finit_11',['Cosmology_init',['../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac',1,'cosmology.c']]],
-  ['count_5fcols_5fin_5ffile_12',['count_cols_in_file',['../d7/db6/utilities_8c.html#a109c999502807d61f966ed9ec4d4746b',1,'utilities.c']]],
-  ['count_5flines_5fin_5ffile_13',['count_lines_in_file',['../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db',1,'utilities.c']]]
+  ['b1_0',['b1',['../d8/d11/structglobals.html#a84e4813f421c80250583ae23e3f4f100',1,'globals']]],
+  ['b1_5flw_5faccel_5fptr_1',['b1_LW_accel_ptr',['../d2/d9d/struct_line.html#aa2f7d89582262545df111c44c1af1e5e',1,'Line']]],
+  ['b1_5flw_5fspline_5fptr_2',['b1_LW_spline_ptr',['../d2/d9d/struct_line.html#a44f30751fd31a8e0aad7c43cb4888195',1,'Line']]],
+  ['b22_5fls_3',['b22_ls',['../d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee',1,'ps_line_hm.c']]],
+  ['b22_5fls_5fintegrand_4',['b22_ls_integrand',['../d1/dd5/ps__line__hm_8c.html#a4e1bbff7f992103c9b1fa8f5abc1f408',1,'ps_line_hm.c']]],
+  ['b2_5flw_5faccel_5fptr_5',['b2_LW_accel_ptr',['../d2/d9d/struct_line.html#ac29bb17922e47d34f72c4f1c5b6098f4',1,'Line']]],
+  ['b2_5flw_5fspline_5fptr_6',['b2_LW_spline_ptr',['../d2/d9d/struct_line.html#ab5b6d7ccfe895ebf565dab2c766ed15e',1,'Line']]],
+  ['ba_7',['ba',['../d2/dd8/struct_class___cosmology___struct.html#a06d87a8120386f93eb4c530f85e42b01',1,'Class_Cosmology_Struct']]],
+  ['bias_5flum_5fweighted_8',['bias_lum_weighted',['../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79',1,'line_ingredients.c']]],
+  ['bias_5flum_5fweighted_5finteg_9',['bias_lum_weighted_integ',['../d7/d10/line__ingredients_8c.html#a609c2a4b205e7f497d4b96657510fd5f',1,'line_ingredients.c']]],
+  ['bspline_10',['BSPLINE',['../df/dcb/header_8h.html#a2b25214984cd9cb93e2b2b2eef79a011',1,'header.h']]]
 ];

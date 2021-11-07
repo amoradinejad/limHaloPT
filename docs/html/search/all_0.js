@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['angular_5fdistance_0',['angular_distance',['../d6/d32/cosmology_8c.html#a11f9475db171d037089d936d8b2371df',1,'cosmology.c']]]
+  ['_5fgnu_5fsource_0',['_GNU_SOURCE',['../df/dcb/header_8h.html#a369266c24eacffb87046522897a570d5',1,'header.h']]]
 ];
