@@ -10,6 +10,8 @@ The extended halo model of line intensity power spectrum implemented in limHaloP
 This package is released together with the following publication, arxiv:2111.XXXXX, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims will be publically avilable on [MithraLIMSims](http://cyril.astro.berkeley.edu/MithraLIMSims). The code to analyse the simulated maps is an extension of the toolskit used in analysin Hidden-Valley simulations, and is publically avialble on [LIM Analysis](https://github.com/farnikn/MithraLIMSims). As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. 
 
 The source code of this package is publically avaialbel on GitHub at [limHaloPT](https://github.com/amoradinejad/limHaloPT).
+<br>
+&nbsp;
 
 
 ### Dependencies
