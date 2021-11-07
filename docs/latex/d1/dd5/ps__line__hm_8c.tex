@@ -1,4 +1,4 @@
-\hypertarget{ps__line__hm_8c}{}\doxysection{ps\+\_\+line\+\_\+hm.\+c File Reference}
+\hypertarget{ps__line__hm_8c}{}\doxysubsection{ps\+\_\+line\+\_\+hm.\+c File Reference}
 \label{ps__line__hm_8c}\index{ps\_line\_hm.c@{ps\_line\_hm.c}}
 
 
@@ -14,7 +14,7 @@ Include dependency graph for ps\+\_\+line\+\_\+hm.\+c\+:
 \includegraphics[width=350pt]{df/d3e/ps__line__hm_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, long mode\+\_\+mf, long line\+\_\+type, int line\+\_\+id)
@@ -33,14 +33,14 @@ static int \mbox{\hyperlink{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}{b
 \begin{DoxyCompactList}\small\item\em Compute the large-\/scale limit of P\+\_\+b2b2 loop. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}{b22\+\_\+ls}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
 \end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{ps__line__hm_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 Documented halo-\/model computation of line power spectrum, including clustering and stochastic contributions beyond Poisson limit. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
@@ -62,11 +62,11 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}{b22\+\_\+ls()}} computes the large-\/scale limit of P\+\_\+b2b2 loop which behaves like a constant and so contributes to the shot noise. 
 \end{DoxyEnumerate}
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}\label{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!b22\_ls@{b22\_ls}}
 \index{b22\_ls@{b22\_ls}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{b22\_ls()}{b22\_ls()}}
+\doxyparagraph{\texorpdfstring{b22\_ls()}{b22\_ls()}}
 {\footnotesize\ttfamily double b22\+\_\+ls (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -88,7 +88,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}\label{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!b22\_ls\_integrand@{b22\_ls\_integrand}}
 \index{b22\_ls\_integrand@{b22\_ls\_integrand}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{b22\_ls\_integrand()}{b22\_ls\_integrand()}}
+\doxyparagraph{\texorpdfstring{b22\_ls\_integrand()}{b22\_ls\_integrand()}}
 {\footnotesize\ttfamily static int b22\+\_\+ls\+\_\+integrand (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -124,7 +124,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}\label{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!HM\_1h2h@{HM\_1h2h}}
 \index{HM\_1h2h@{HM\_1h2h}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{HM\_1h2h()}{HM\_1h2h()}}
+\doxyparagraph{\texorpdfstring{HM\_1h2h()}{HM\_1h2h()}}
 {\footnotesize\ttfamily void HM\+\_\+1h2h (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{line\+\_\+type,  }\item[{long}]{mode\+\_\+hm,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
 
@@ -150,7 +150,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}\label{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!HM\_1h2h\_integ@{HM\_1h2h\_integ}}
 \index{HM\_1h2h\_integ@{HM\_1h2h\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{HM\_1h2h\_integ()}{HM\_1h2h\_integ()}}
+\doxyparagraph{\texorpdfstring{HM\_1h2h\_integ()}{HM\_1h2h\_integ()}}
 {\footnotesize\ttfamily static int HM\+\_\+1h2h\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -216,7 +216,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}\label{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!mhmc@{mhmc}}
 \index{mhmc@{mhmc}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{mhmc()}{mhmc()}}
+\doxyparagraph{\texorpdfstring{mhmc()}{mhmc()}}
 {\footnotesize\ttfamily void mhmc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+mf,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -238,7 +238,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}\label{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!mhmc\_integ@{mhmc\_integ}}
 \index{mhmc\_integ@{mhmc\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{mhmc\_integ()}{mhmc\_integ()}}
+\doxyparagraph{\texorpdfstring{mhmc\_integ()}{mhmc\_integ()}}
 {\footnotesize\ttfamily static int mhmc\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
@@ -286,7 +286,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}\label{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!PS\_line\_HM@{PS\_line\_HM}}
 \index{PS\_line\_HM@{PS\_line\_HM}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{PS\_line\_HM()}{PS\_line\_HM()}}
+\doxyparagraph{\texorpdfstring{PS\_line\_HM()}{PS\_line\_HM()}}
 {\footnotesize\ttfamily double PS\+\_\+line\+\_\+\+HM (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{line\+\_\+type,  }\item[{int}]{line\+\_\+id }\end{DoxyParamCaption})}
 
 
@@ -343,7 +343,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}\label{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!PS\_shot\_HM@{PS\_shot\_HM}}
 \index{PS\_shot\_HM@{PS\_shot\_HM}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{PS\_shot\_HM()}{PS\_shot\_HM()}}
+\doxyparagraph{\texorpdfstring{PS\_shot\_HM()}{PS\_shot\_HM()}}
 {\footnotesize\ttfamily double PS\+\_\+shot\+\_\+\+HM (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{double $\ast$}]{input,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{line\+\_\+type }\end{DoxyParamCaption})}
 
 
@@ -405,10 +405,10 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\doxysubsection{Variable Documentation}
+\doxysubsubsection{Variable Documentation}
 \mbox{\Hypertarget{ps__line__hm_8c_a61c6674f2b410e126a682325ce5360c0}\label{ps__line__hm_8c_a61c6674f2b410e126a682325ce5360c0}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!gb@{gb}}
 \index{gb@{gb}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxysubsubsection{\texorpdfstring{gb}{gb}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
 

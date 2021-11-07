@@ -1,4 +1,4 @@
-\hypertarget{survey__specs_8c}{}\doxysection{survey\+\_\+specs.\+c File Reference}
+\hypertarget{survey__specs_8c}{}\doxysubsection{survey\+\_\+specs.\+c File Reference}
 \label{survey__specs_8c}\index{survey\_specs.c@{survey\_specs.c}}
 
 
@@ -14,7 +14,7 @@ Include dependency graph for survey\+\_\+specs.\+c\+:
 \includegraphics[width=350pt]{d9/d56/survey__specs_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}{shell\+\_\+volume}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double fsky)
@@ -25,14 +25,14 @@ double \mbox{\hyperlink{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}{kmax
 \begin{DoxyCompactList}\small\item\em Compute the maximum k-\/value used in Fisher forecast at each redshift bin. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}{kmax\+\_\+\+Brent\+\_\+solver}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
 \end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 Documented computation of some survey-\/related functions. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
@@ -44,11 +44,11 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}{kmax\+\_\+\+Brent\+\_\+solver()}} computes the kmax value such that kmax(z=0) = 0.\+15 h/\+Mpc 
 \end{DoxyEnumerate}
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}\label{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}} 
 \index{survey\_specs.c@{survey\_specs.c}!kmax\_Brent@{kmax\_Brent}}
 \index{kmax\_Brent@{kmax\_Brent}!survey\_specs.c@{survey\_specs.c}}
-\doxysubsubsection{\texorpdfstring{kmax\_Brent()}{kmax\_Brent()}}
+\doxyparagraph{\texorpdfstring{kmax\_Brent()}{kmax\_Brent()}}
 {\footnotesize\ttfamily double kmax\+\_\+\+Brent (\begin{DoxyParamCaption}\item[{double}]{kmax,  }\item[{void $\ast$}]{params }\end{DoxyParamCaption})}
 
 
@@ -86,7 +86,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}\label{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}} 
 \index{survey\_specs.c@{survey\_specs.c}!kmax\_Brent\_solver@{kmax\_Brent\_solver}}
 \index{kmax\_Brent\_solver@{kmax\_Brent\_solver}!survey\_specs.c@{survey\_specs.c}}
-\doxysubsubsection{\texorpdfstring{kmax\_Brent\_solver()}{kmax\_Brent\_solver()}}
+\doxyparagraph{\texorpdfstring{kmax\_Brent\_solver()}{kmax\_Brent\_solver()}}
 {\footnotesize\ttfamily double kmax\+\_\+\+Brent\+\_\+solver (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 in short paper we used, 3.\+631872e-\/01 ; ~\newline
@@ -101,7 +101,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}\label{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}} 
 \index{survey\_specs.c@{survey\_specs.c}!kmin\_val@{kmin\_val}}
 \index{kmin\_val@{kmin\_val}!survey\_specs.c@{survey\_specs.c}}
-\doxysubsubsection{\texorpdfstring{kmin\_val()}{kmin\_val()}}
+\doxyparagraph{\texorpdfstring{kmin\_val()}{kmin\_val()}}
 {\footnotesize\ttfamily double kmin\+\_\+val (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{zmin,  }\item[{double}]{zmax,  }\item[{double}]{fsky }\end{DoxyParamCaption})}
 
 
@@ -133,7 +133,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}\label{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}} 
 \index{survey\_specs.c@{survey\_specs.c}!shell\_volume@{shell\_volume}}
 \index{shell\_volume@{shell\_volume}!survey\_specs.c@{survey\_specs.c}}
-\doxysubsubsection{\texorpdfstring{shell\_volume()}{shell\_volume()}}
+\doxyparagraph{\texorpdfstring{shell\_volume()}{shell\_volume()}}
 {\footnotesize\ttfamily double shell\+\_\+volume (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{fsky }\end{DoxyParamCaption})}
 
 
@@ -170,10 +170,10 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\doxysubsection{Variable Documentation}
+\doxysubsubsection{Variable Documentation}
 \mbox{\Hypertarget{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}\label{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}} 
 \index{survey\_specs.c@{survey\_specs.c}!gb@{gb}}
 \index{gb@{gb}!survey\_specs.c@{survey\_specs.c}}
-\doxysubsubsection{\texorpdfstring{gb}{gb}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
 

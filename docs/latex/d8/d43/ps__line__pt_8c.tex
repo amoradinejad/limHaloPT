@@ -1,4 +1,4 @@
-\hypertarget{ps__line__pt_8c}{}\doxysection{ps\+\_\+line\+\_\+pt.\+c File Reference}
+\hypertarget{ps__line__pt_8c}{}\doxysubsection{ps\+\_\+line\+\_\+pt.\+c File Reference}
 \label{ps__line__pt_8c}\index{ps\_line\_pt.c@{ps\_line\_pt.c}}
 
 
@@ -14,7 +14,7 @@ Include dependency graph for ps\+\_\+line\+\_\+pt.\+c\+:
 \includegraphics[width=350pt]{da/dd6/ps__line__pt_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}{PS\+\_\+line}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, size\+\_\+t line\+\_\+id)
@@ -27,14 +27,14 @@ double \mbox{\hyperlink{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}{ps\+\
 \item 
 double \mbox{\hyperlink{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}{PS\+\_\+shot}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, size\+\_\+t line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the Poisson shot noise in unit of micro K$^\wedge$2 Mpc$^\wedge$3. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{ps__line__pt_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 Documented computation of Poisson shot noise and tree-\/level line power spectrum in real and redshift-\/space. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
@@ -49,11 +49,11 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}{PS\+\_\+shot()}} computes the poisson shot noise 
 \end{DoxyEnumerate}
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}\label{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_line@{PS\_line}}
 \index{PS\_line@{PS\_line}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{PS\_line()}{PS\_line()}}
+\doxyparagraph{\texorpdfstring{PS\_line()}{PS\_line()}}
 {\footnotesize\ttfamily double PS\+\_\+line (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
 
 
@@ -86,7 +86,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}\label{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!ps\_line\_multipoles@{ps\_line\_multipoles}}
 \index{ps\_line\_multipoles@{ps\_line\_multipoles}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{ps\_line\_multipoles()}{ps\_line\_multipoles()}}
+\doxyparagraph{\texorpdfstring{ps\_line\_multipoles()}{ps\_line\_multipoles()}}
 {\footnotesize\ttfamily double ps\+\_\+line\+\_\+multipoles (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx\+\_\+ref,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id,  }\item[{int}]{ell }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -100,7 +100,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}\label{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}}
 \index{ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{ps\_line\_multipoles\_integrand()}{ps\_line\_multipoles\_integrand()}}
+\doxyparagraph{\texorpdfstring{ps\_line\_multipoles\_integrand()}{ps\_line\_multipoles\_integrand()}}
 {\footnotesize\ttfamily int ps\+\_\+line\+\_\+multipoles\+\_\+integrand (\begin{DoxyParamCaption}\item[{unsigned}]{ndim,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
@@ -145,7 +145,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}\label{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_line\_RSD@{PS\_line\_RSD}}
 \index{PS\_line\_RSD@{PS\_line\_RSD}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{PS\_line\_RSD()}{PS\_line\_RSD()}}
+\doxyparagraph{\texorpdfstring{PS\_line\_RSD()}{PS\_line\_RSD()}}
 {\footnotesize\ttfamily double PS\+\_\+line\+\_\+\+RSD (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx\+\_\+ref,  }\item[{double}]{k,  }\item[{double}]{mu,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
 
 
@@ -192,7 +192,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}\label{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_shot@{PS\_shot}}
 \index{PS\_shot@{PS\_shot}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{PS\_shot()}{PS\_shot()}}
+\doxyparagraph{\texorpdfstring{PS\_shot()}{PS\_shot()}}
 {\footnotesize\ttfamily double PS\+\_\+shot (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
 
 
@@ -232,10 +232,10 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\doxysubsection{Variable Documentation}
+\doxysubsubsection{Variable Documentation}
 \mbox{\Hypertarget{ps__line__pt_8c_a61c6674f2b410e126a682325ce5360c0}\label{ps__line__pt_8c_a61c6674f2b410e126a682325ce5360c0}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!gb@{gb}}
 \index{gb@{gb}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxysubsubsection{\texorpdfstring{gb}{gb}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
 

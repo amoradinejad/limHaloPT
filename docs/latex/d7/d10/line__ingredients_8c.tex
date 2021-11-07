@@ -1,4 +1,4 @@
-\hypertarget{line__ingredients_8c}{}\doxysection{line\+\_\+ingredients.\+c File Reference}
+\hypertarget{line__ingredients_8c}{}\doxysubsection{line\+\_\+ingredients.\+c File Reference}
 \label{line__ingredients_8c}\index{line\_ingredients.c@{line\_ingredients.c}}
 
 
@@ -14,7 +14,7 @@ Include dependency graph for line\+\_\+ingredients.\+c\+:
 \includegraphics[width=350pt]{dc/d32/line__ingredients_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_line}{Line}} $\ast$ \mbox{\hyperlink{line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe}{Line\+\_\+alloc\+\_\+init}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, long line\+\_\+type, size\+\_\+t npoints\+\_\+interp, double M\+\_\+min, long mode\+\_\+mf)
@@ -67,14 +67,14 @@ double \mbox{\hyperlink{line__ingredients_8c_a01a848b612006614576adc49385076cf}{
 \begin{DoxyCompactList}\small\item\em Compute the line mean intensity in unit of erg Mpc$^\wedge$-\/2 Sr$^\wedge$-\/1. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a8badf96f7e0696daa78b2f6aeeda8a08}{Tbar\+\_\+line}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, size\+\_\+t line\+\_\+id, double z)
 \begin{DoxyCompactList}\small\item\em Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz et al 2011. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{line__ingredients_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 Documented line\+\_\+ingredients module. 
 
 This module includes functions that are needed for computing the line clustering and shot contributions.
@@ -104,11 +104,11 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{line__ingredients_8c_a8badf96f7e0696daa78b2f6aeeda8a08}{Tbar\+\_\+line()}} compues the mean brightness temprature of the line 
 \end{DoxyEnumerate}
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{line__ingredients_8c_aa050a054d3724145e3b46788bf279c79}\label{line__ingredients_8c_aa050a054d3724145e3b46788bf279c79}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!bias\_lum\_weighted@{bias\_lum\_weighted}}
 \index{bias\_lum\_weighted@{bias\_lum\_weighted}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{bias\_lum\_weighted()}{bias\_lum\_weighted()}}
+\doxyparagraph{\texorpdfstring{bias\_lum\_weighted()}{bias\_lum\_weighted()}}
 {\footnotesize\ttfamily void bias\+\_\+lum\+\_\+weighted (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{mode\+\_\+lum,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
 In units of solar mass;
@@ -132,7 +132,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}\label{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}}
 \index{bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{bias\_lum\_weighted\_integ()}{bias\_lum\_weighted\_integ()}}
+\doxyparagraph{\texorpdfstring{bias\_lum\_weighted\_integ()}{bias\_lum\_weighted\_integ()}}
 {\footnotesize\ttfamily int bias\+\_\+lum\+\_\+weighted\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
@@ -177,7 +177,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab}\label{line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!halo\_bias@{halo\_bias}}
 \index{halo\_bias@{halo\_bias}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{halo\_bias()}{halo\_bias()}}
+\doxyparagraph{\texorpdfstring{halo\_bias()}{halo\_bias()}}
 {\footnotesize\ttfamily void halo\+\_\+bias (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+mf,  }\item[{double $\ast$}]{bias\+\_\+arr }\end{DoxyParamCaption})}
 
 
@@ -222,7 +222,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe}\label{line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!Line\_alloc\_init@{Line\_alloc\_init}}
 \index{Line\_alloc\_init@{Line\_alloc\_init}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{Line\_alloc\_init()}{Line\_alloc\_init()}}
+\doxyparagraph{\texorpdfstring{Line\_alloc\_init()}{Line\_alloc\_init()}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{struct_line}{Line}} $\ast$ Line\+\_\+alloc\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{long}]{line\+\_\+type,  }\item[{size\+\_\+t}]{npoints\+\_\+interp,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
@@ -267,7 +267,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}\label{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!line\_bias@{line\_bias}}
 \index{line\_bias@{line\_bias}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{line\_bias()}{line\_bias()}}
+\doxyparagraph{\texorpdfstring{line\_bias()}{line\_bias()}}
 {\footnotesize\ttfamily void line\+\_\+bias (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_line}{Line}} $\ast$}]{Lx,  }\item[{double}]{z,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
 
@@ -307,7 +307,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a0b51100183117f08ce0cfa9428fa72e4}\label{line__ingredients_8c_a0b51100183117f08ce0cfa9428fa72e4}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!Line\_evaluate@{Line\_evaluate}}
 \index{Line\_evaluate@{Line\_evaluate}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{Line\_evaluate()}{Line\_evaluate()}}
+\doxyparagraph{\texorpdfstring{Line\_evaluate()}{Line\_evaluate()}}
 {\footnotesize\ttfamily int Line\+\_\+evaluate (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_line}{Line}} $\ast$}]{Lx,  }\item[{double $\ast$}]{zz,  }\item[{double $\ast$}]{res }\end{DoxyParamCaption})}
 
 
@@ -343,7 +343,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a255599f7e846dd569f4ce4c946157dec}\label{line__ingredients_8c_a255599f7e846dd569f4ce4c946157dec}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!Line\_free@{Line\_free}}
 \index{Line\_free@{Line\_free}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{Line\_free()}{Line\_free()}}
+\doxyparagraph{\texorpdfstring{Line\_free()}{Line\_free()}}
 {\footnotesize\ttfamily int Line\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_line}{Line}} $\ast$}]{Lx }\end{DoxyParamCaption})}
 
 
@@ -369,7 +369,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_aebdf0211b161d65ccf44536629df2b02}\label{line__ingredients_8c_aebdf0211b161d65ccf44536629df2b02}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!logSFR\_alloc\_init@{logSFR\_alloc\_init}}
 \index{logSFR\_alloc\_init@{logSFR\_alloc\_init}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{logSFR\_alloc\_init()}{logSFR\_alloc\_init()}}
+\doxyparagraph{\texorpdfstring{logSFR\_alloc\_init()}{logSFR\_alloc\_init()}}
 {\footnotesize\ttfamily int log\+SFR\+\_\+alloc\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -398,7 +398,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a728fd0a19bc34645b8f8218464d178ef}\label{line__ingredients_8c_a728fd0a19bc34645b8f8218464d178ef}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!logSFR\_Behroozi@{logSFR\_Behroozi}}
 \index{logSFR\_Behroozi@{logSFR\_Behroozi}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{logSFR\_Behroozi()}{logSFR\_Behroozi()}}
+\doxyparagraph{\texorpdfstring{logSFR\_Behroozi()}{logSFR\_Behroozi()}}
 {\footnotesize\ttfamily double log\+SFR\+\_\+\+Behroozi (\begin{DoxyParamCaption}\item[{double}]{logM,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -427,7 +427,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a5cbbc00460ea99c79cf2f2f7efd0af5a}\label{line__ingredients_8c_a5cbbc00460ea99c79cf2f2f7efd0af5a}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!logSFR\_Behroozi\_read@{logSFR\_Behroozi\_read}}
 \index{logSFR\_Behroozi\_read@{logSFR\_Behroozi\_read}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{logSFR\_Behroozi\_read()}{logSFR\_Behroozi\_read()}}
+\doxyparagraph{\texorpdfstring{logSFR\_Behroozi\_read()}{logSFR\_Behroozi\_read()}}
 {\footnotesize\ttfamily void log\+SFR\+\_\+\+Behroozi\+\_\+read (\begin{DoxyParamCaption}\item[{double $\ast$}]{z\+\_\+arr,  }\item[{double $\ast$}]{log\+M\+\_\+arr,  }\item[{double $\ast$}]{log10\+SFR }\end{DoxyParamCaption})}
 
 
@@ -466,7 +466,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a1d5765167555f21d8ae5eba187eb2aa8}\label{line__ingredients_8c_a1d5765167555f21d8ae5eba187eb2aa8}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!luminosity@{luminosity}}
 \index{luminosity@{luminosity}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{luminosity()}{luminosity()}}
+\doxyparagraph{\texorpdfstring{luminosity()}{luminosity()}}
 {\footnotesize\ttfamily double luminosity (\begin{DoxyParamCaption}\item[{double}]{M,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+lum }\end{DoxyParamCaption})}
 
 
@@ -511,7 +511,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702}\label{line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_func@{mass\_func}}
 \index{mass\_func@{mass\_func}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_func()}{mass\_func()}}
+\doxyparagraph{\texorpdfstring{mass\_func()}{mass\_func()}}
 {\footnotesize\ttfamily double mass\+\_\+func (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
@@ -551,7 +551,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a60bf4840dc0204947ec426719979065e}\label{line__ingredients_8c_a60bf4840dc0204947ec426719979065e}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_func\_sims@{mass\_func\_sims}}
 \index{mass\_func\_sims@{mass\_func\_sims}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_func\_sims()}{mass\_func\_sims()}}
+\doxyparagraph{\texorpdfstring{mass\_func\_sims()}{mass\_func\_sims()}}
 {\footnotesize\ttfamily double mass\+\_\+func\+\_\+sims (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
@@ -584,7 +584,7 @@ Here is the call graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e}\label{line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment1@{mass\_moment1}}
 \index{mass\_moment1@{mass\_moment1}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_moment1()}{mass\_moment1()}}
+\doxyparagraph{\texorpdfstring{mass\_moment1()}{mass\_moment1()}}
 {\footnotesize\ttfamily double mass\+\_\+moment1 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{mode\+\_\+lum }\end{DoxyParamCaption})}
 
 
@@ -612,7 +612,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}\label{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment1\_integ@{mass\_moment1\_integ}}
 \index{mass\_moment1\_integ@{mass\_moment1\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_moment1\_integ()}{mass\_moment1\_integ()}}
+\doxyparagraph{\texorpdfstring{mass\_moment1\_integ()}{mass\_moment1\_integ()}}
 {\footnotesize\ttfamily int mass\+\_\+moment1\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
@@ -657,7 +657,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5}\label{line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment2@{mass\_moment2}}
 \index{mass\_moment2@{mass\_moment2}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_moment2()}{mass\_moment2()}}
+\doxyparagraph{\texorpdfstring{mass\_moment2()}{mass\_moment2()}}
 {\footnotesize\ttfamily double mass\+\_\+moment2 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{mode\+\_\+lum }\end{DoxyParamCaption})}
 
 
@@ -685,7 +685,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}\label{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment2\_integ@{mass\_moment2\_integ}}
 \index{mass\_moment2\_integ@{mass\_moment2\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mass\_moment2\_integ()}{mass\_moment2\_integ()}}
+\doxyparagraph{\texorpdfstring{mass\_moment2\_integ()}{mass\_moment2\_integ()}}
 {\footnotesize\ttfamily int mass\+\_\+moment2\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
@@ -730,7 +730,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a01a848b612006614576adc49385076cf}\label{line__ingredients_8c_a01a848b612006614576adc49385076cf}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mean\_intens@{mean\_intens}}
 \index{mean\_intens@{mean\_intens}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mean\_intens()}{mean\_intens()}}
+\doxyparagraph{\texorpdfstring{mean\_intens()}{mean\_intens()}}
 {\footnotesize\ttfamily double mean\+\_\+intens (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{size\+\_\+t}]{line\+\_\+id,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -771,7 +771,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_ae44a16b587a91c0ea92dea263d20a5be}\label{line__ingredients_8c_ae44a16b587a91c0ea92dea263d20a5be}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!mult\_func@{mult\_func}}
 \index{mult\_func@{mult\_func}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{mult\_func()}{mult\_func()}}
+\doxyparagraph{\texorpdfstring{mult\_func()}{mult\_func()}}
 {\footnotesize\ttfamily double mult\+\_\+func (\begin{DoxyParamCaption}\item[{double}]{sigma,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
@@ -800,7 +800,7 @@ In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}\label{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!p\_sig\_shot@{p\_sig\_shot}}
 \index{p\_sig\_shot@{p\_sig\_shot}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{p\_sig\_shot()}{p\_sig\_shot()}}
+\doxyparagraph{\texorpdfstring{p\_sig\_shot()}{p\_sig\_shot()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+shot (\begin{DoxyParamCaption}\item[{double}]{scatter }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -822,7 +822,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}\label{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!p\_sig\_shot\_integrand@{p\_sig\_shot\_integrand}}
 \index{p\_sig\_shot\_integrand@{p\_sig\_shot\_integrand}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{p\_sig\_shot\_integrand()}{p\_sig\_shot\_integrand()}}
+\doxyparagraph{\texorpdfstring{p\_sig\_shot\_integrand()}{p\_sig\_shot\_integrand()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+shot\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
 
 
@@ -851,7 +851,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c}\label{line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!p\_sig\_Tbar@{p\_sig\_Tbar}}
 \index{p\_sig\_Tbar@{p\_sig\_Tbar}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{p\_sig\_Tbar()}{p\_sig\_Tbar()}}
+\doxyparagraph{\texorpdfstring{p\_sig\_Tbar()}{p\_sig\_Tbar()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+\+Tbar (\begin{DoxyParamCaption}\item[{double}]{scatter }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -873,7 +873,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}\label{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!p\_sig\_Tbar\_integrand@{p\_sig\_Tbar\_integrand}}
 \index{p\_sig\_Tbar\_integrand@{p\_sig\_Tbar\_integrand}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{p\_sig\_Tbar\_integrand()}{p\_sig\_Tbar\_integrand()}}
+\doxyparagraph{\texorpdfstring{p\_sig\_Tbar\_integrand()}{p\_sig\_Tbar\_integrand()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+\+Tbar\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
 
 
@@ -902,7 +902,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a6d006053a4f4af3c50b5c9a0b6365a8d}\label{line__ingredients_8c_a6d006053a4f4af3c50b5c9a0b6365a8d}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!SFR\_Behroozi\_free@{SFR\_Behroozi\_free}}
 \index{SFR\_Behroozi\_free@{SFR\_Behroozi\_free}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{SFR\_Behroozi\_free()}{SFR\_Behroozi\_free()}}
+\doxyparagraph{\texorpdfstring{SFR\_Behroozi\_free()}{SFR\_Behroozi\_free()}}
 {\footnotesize\ttfamily int SFR\+\_\+\+Behroozi\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -923,7 +923,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{line__ingredients_8c_a8badf96f7e0696daa78b2f6aeeda8a08}\label{line__ingredients_8c_a8badf96f7e0696daa78b2f6aeeda8a08}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!Tbar\_line@{Tbar\_line}}
 \index{Tbar\_line@{Tbar\_line}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{Tbar\_line()}{Tbar\_line()}}
+\doxyparagraph{\texorpdfstring{Tbar\_line()}{Tbar\_line()}}
 {\footnotesize\ttfamily double Tbar\+\_\+line (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{size\+\_\+t}]{line\+\_\+id,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
 
@@ -962,10 +962,10 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\doxysubsection{Variable Documentation}
+\doxysubsubsection{Variable Documentation}
 \mbox{\Hypertarget{line__ingredients_8c_a61c6674f2b410e126a682325ce5360c0}\label{line__ingredients_8c_a61c6674f2b410e126a682325ce5360c0}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!gb@{gb}}
 \index{gb@{gb}!line\_ingredients.c@{line\_ingredients.c}}
-\doxysubsubsection{\texorpdfstring{gb}{gb}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
 

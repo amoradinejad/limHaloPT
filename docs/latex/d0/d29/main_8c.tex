@@ -1,4 +1,4 @@
-\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\doxysubsection{main.\+c File Reference}
 \label{main_8c}\index{main.c@{main.c}}
 
 
@@ -14,7 +14,7 @@ Include dependency graph for main.\+c\+:
 \includegraphics[width=350pt]{d4/d10/main_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
@@ -23,25 +23,25 @@ void \mbox{\hyperlink{main_8c_a25a40b6614565f755233080a384c35f1}{initialize}} ()
 \begin{DoxyCompactList}\small\item\em Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated to cosmology structure and SFR interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{main_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 Documented main module, including functions to initilize and cleanup the cosmology structure and examples of calls to functions in other modules to compute the line clustering and shot power spectrum. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
 
 In order to call any function from the package, the function calls should be placed in the marked section of \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function. 
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{main_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}\label{main_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}} 
 \index{main.c@{main.c}!cleanup@{cleanup}}
 \index{cleanup@{cleanup}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+\doxyparagraph{\texorpdfstring{cleanup()}{cleanup()}}
 {\footnotesize\ttfamily void cleanup (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
 
 
@@ -70,7 +70,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{main_8c_a25a40b6614565f755233080a384c35f1}\label{main_8c_a25a40b6614565f755233080a384c35f1}} 
 \index{main.c@{main.c}!initialize@{initialize}}
 \index{initialize@{initialize}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
 {\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -112,7 +112,7 @@ Here is the caller graph for this function\+:
 \mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.c@{main.c}!main@{main}}
 \index{main@{main}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{main()}{main()}}
+\doxyparagraph{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
@@ -125,10 +125,10 @@ Here is the call graph for this function\+:
 \end{figure}
 
 
-\doxysubsection{Variable Documentation}
+\doxysubsubsection{Variable Documentation}
 \mbox{\Hypertarget{main_8c_a61c6674f2b410e126a682325ce5360c0}\label{main_8c_a61c6674f2b410e126a682325ce5360c0}} 
 \index{main.c@{main.c}!gb@{gb}}
 \index{gb@{gb}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{gb}{gb}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
 
