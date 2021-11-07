@@ -36,7 +36,7 @@ You can use this package freely, provided that in your publication you cite the 
 
 
 ### License
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  <br>
 Copyright 2021 Azadeh Moradinezhad Dizgah.<br>
 limHaloPT is free software made available under the MIT License. For details see the [LICENSE](https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE) file.
 <br>
