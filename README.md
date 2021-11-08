@@ -1,7 +1,7 @@
 # limHaloPT
 
 Author: Azadeh Moradinezhad Dizgah
-
+with contribution from Farnik Nikakhtar 
 
 Welcom to limHaloPT, a numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release. 
 
