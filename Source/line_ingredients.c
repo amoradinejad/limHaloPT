@@ -40,11 +40,11 @@ struct globals gb;
  * 
  * @param Cx                Input: Cosmology structure
  * @param line_type         Inpute: name of the line to compute.
- *                              It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
+ *                          It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
  * @param npoints_interp    Input: number of interpolation points 
  * @param M_min             Input: minimum halo mass for mass integrals
  * @param mode_mf           Inpute: theoretical model of halo mass function to use. 
- *                              It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
+ *                          It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
  * @return the total clustering line power spectrum, including the 1- and 2-halo term         
  */
 
