@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Compute variance of smoothed matter density fluctuations." alt="" coords="5,31,65,57"/>
 <area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="113,31,237,57"/>
 <area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="291,5,369,32"/>
-<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="285,56,375,83"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="285,56,375,83"/>
 </map>

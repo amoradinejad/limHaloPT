@@ -1,4 +1,4 @@
-.TH "cosmology.c" 3 "Sun Nov 7 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "cosmology.c" 3 "Mon Nov 8 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -106,19 +106,23 @@ cosmology.c \- Documented cosmology module\&.
 .ti -1c
 .RI "double \fBwindow_rth\fP (double k, double R)"
 .br
-.RI "The following functions compute several window functions and their derivatives with respect to the smoothing scale\&. "
+.RI "Fourier transform of top-hat window in real space\&. "
 .ti -1c
 .RI "double \fBderR_window_rth\fP (double k, double R)"
 .br
+.RI "Derivative w\&.r\&.t\&. "
 .ti -1c
 .RI "double \fBwindow_kth\fP (double k, double R)"
 .br
+.RI "Top-hat window in Fourier space\&. "
 .ti -1c
 .RI "double \fBwindow_g\fP (double k, double R)"
 .br
+.RI "Gaussian window\&. "
 .ti -1c
 .RI "double \fBderR_logwindow_g\fP (double k, double R)"
 .br
+.RI "Derivative w\&.r\&.t smoothing scale of Gaussian window\&. "
 .in -1c
 .SS "Variables"
 
@@ -361,7 +365,39 @@ the log-derivative of variance
 
 .SS "double derR_logwindow_g (double k, double R)"
 
+.PP
+Derivative w\&.r\&.t smoothing scale of Gaussian window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the derivative of the window function 
+.RE
+.PP
+
 .SS "double derR_window_rth (double k, double R)"
+
+.PP
+Derivative w\&.r\&.t\&. smoothing scale of the Fourier transform of top-hat window in real space
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the derivative of the window function 
+.RE
+.PP
 
 .SS "double growth_D (struct \fBCosmology\fP * Cx, double z)"
 
@@ -645,12 +681,8 @@ value of the integrand
 
 .SS "double window_g (double k, double R)"
 
-.SS "double window_kth (double k, double R)"
-
-.SS "double window_rth (double k, double R)"
-
 .PP
-The following functions compute several window functions and their derivatives with respect to the smoothing scale\&. 
+Gaussian window\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -661,7 +693,43 @@ The following functions compute several window functions and their derivatives w
 .PP
 \fBReturns\fP
 .RS 4
-the window functions or their derivatives 
+the window function 
+.RE
+.PP
+
+.SS "double window_kth (double k, double R)"
+
+.PP
+Top-hat window in Fourier space\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window function 
+.RE
+.PP
+
+.SS "double window_rth (double k, double R)"
+
+.PP
+Fourier transform of top-hat window in real space\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window function 
 .RE
 .PP
 

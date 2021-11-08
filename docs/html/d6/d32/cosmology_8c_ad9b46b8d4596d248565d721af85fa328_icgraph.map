@@ -1,5 +1,5 @@
 <map id="window_rth" name="window_rth">
-<area shape="rect" id="node1" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="1249,120,1339,147"/>
+<area shape="rect" id="node1" title="Fourier transform of top&#45;hat window in real space." alt="" coords="1249,120,1339,147"/>
 <area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="1077,120,1201,147"/>
 <area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="969,120,1029,147"/>
 <area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a03f9aaf2088b59136e47b27fd3310f27" title="Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w...." alt="" coords="824,69,921,96"/>

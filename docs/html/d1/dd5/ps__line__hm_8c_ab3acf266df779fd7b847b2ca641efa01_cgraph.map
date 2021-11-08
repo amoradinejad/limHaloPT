@@ -40,7 +40,7 @@
 <area shape="rect" id="node34" href="$d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="749,865,809,892"/>
 <area shape="rect" id="node32" href="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="929,967,977,993"/>
 <area shape="rect" id="node35" href="$d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="891,865,1015,892"/>
-<area shape="rect" id="node36" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="1093,865,1183,892"/>
+<area shape="rect" id="node36" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="1093,865,1183,892"/>
 <area shape="rect" id="node38" href="$d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="716,1068,843,1095"/>
 <area shape="rect" id="node40" href="$d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="739,1017,819,1044"/>
 <area shape="rect" id="node42" href="$d7/d10/line__ingredients_8c.html#ab82b15c827d1213a94e3ff9ce4ddad32" title="Compute the first luminosityy&#45;weighted mass moment." alt="" coords="315,916,468,943"/>

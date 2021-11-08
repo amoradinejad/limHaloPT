@@ -62,15 +62,15 @@ double \mbox{\hyperlink{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}{concentr
 double \mbox{\hyperlink{cosmology_8c_ac55a19abfeca76040b0460e6712fb0ef}{nfw\+\_\+profile}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double M, double z)
 \begin{DoxyCompactList}\small\item\em Compute the NFW halo profile in Fourier space, given by Eq. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}{window\+\_\+rth}} (double k, double R)
-\begin{DoxyCompactList}\small\item\em The following functions compute several window functions and their derivatives with respect to the smoothing scale. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fourier transform of top-\/hat window in real space. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}{der\+R\+\_\+window\+\_\+rth}} (double k, double R)
-\item 
+\begin{DoxyCompactList}\small\item\em Derivative w.\+r.\+t. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}{window\+\_\+kth}} (double k, double R)
-\item 
+\begin{DoxyCompactList}\small\item\em Top-\/hat window in Fourier space. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_ae40d777e0dc4f51704521899d5292254}{window\+\_\+g}} (double k, double R)
-\item 
+\begin{DoxyCompactList}\small\item\em Gaussian window. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_aedb791089f8567803b1cd0dc21297b51}{der\+R\+\_\+logwindow\+\_\+g}} (double k, double R)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Derivative w.\+r.\+t smoothing scale of Gaussian window. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -329,7 +329,8 @@ Allocate memory and initialize the cosmology structure, which includes the CLASS
 \begin{DoxyReturn}{Returns}
 an integer if succeeded 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -367,7 +368,8 @@ smoothing scale
 \begin{DoxyReturn}{Returns}
 the log-\/derivative of variance 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -380,12 +382,42 @@ Here is the call graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{derR\_logwindow\_g()}{derR\_logwindow\_g()}}
 {\footnotesize\ttfamily double der\+R\+\_\+logwindow\+\_\+g (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
+
+
+Derivative w.\+r.\+t smoothing scale of Gaussian window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the derivative of the window function 
+\end{DoxyReturn}
 \mbox{\Hypertarget{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}\label{cosmology_8c_a5afed9a2f6957d7c60701367655fd45f}} 
 \index{cosmology.c@{cosmology.c}!derR\_window\_rth@{derR\_window\_rth}}
 \index{derR\_window\_rth@{derR\_window\_rth}!cosmology.c@{cosmology.c}}
 \doxyparagraph{\texorpdfstring{derR\_window\_rth()}{derR\_window\_rth()}}
 {\footnotesize\ttfamily double der\+R\+\_\+window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
+
+
+Derivative w.\+r.\+t. 
+
+smoothing scale of the Fourier transform of top-\/hat window in real space
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the derivative of the window function 
+\end{DoxyReturn}
 \mbox{\Hypertarget{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}\label{cosmology_8c_ab5f722c3eac55647fbe735f8a1ec7a80}} 
 \index{cosmology.c@{cosmology.c}!growth\_D@{growth\_D}}
 \index{growth\_D@{growth\_D}!cosmology.c@{cosmology.c}}
@@ -741,7 +773,8 @@ The function \mbox{\hyperlink{cosmology_8c_a72661633b8701d902d6887c4402ed394}{si
 \begin{DoxyReturn}{Returns}
 the variance 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -775,7 +808,8 @@ The integrand function passed to qags integrator to compute the variance of the 
 \begin{DoxyReturn}{Returns}
 value of the integrand 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -865,21 +899,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{window\_g()}{window\_g()}}
 {\footnotesize\ttfamily double window\+\_\+g (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}\label{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}} 
-\index{cosmology.c@{cosmology.c}!window\_kth@{window\_kth}}
-\index{window\_kth@{window\_kth}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{window\_kth()}{window\_kth()}}
-{\footnotesize\ttfamily double window\+\_\+kth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}\label{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}} 
-\index{cosmology.c@{cosmology.c}!window\_rth@{window\_rth}}
-\index{window\_rth@{window\_rth}!cosmology.c@{cosmology.c}}
-\doxyparagraph{\texorpdfstring{window\_rth()}{window\_rth()}}
-{\footnotesize\ttfamily double window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
 
 
-
-The following functions compute several window functions and their derivatives with respect to the smoothing scale. 
+Gaussian window. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -889,9 +911,50 @@ The following functions compute several window functions and their derivatives w
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the window functions or their derivatives 
+the window function 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+\mbox{\Hypertarget{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}\label{cosmology_8c_afe6c6f803c739fbf11f31abd57f89dd6}} 
+\index{cosmology.c@{cosmology.c}!window\_kth@{window\_kth}}
+\index{window\_kth@{window\_kth}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{window\_kth()}{window\_kth()}}
+{\footnotesize\ttfamily double window\+\_\+kth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+
+
+Top-\/hat window in Fourier space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the window function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}\label{cosmology_8c_ad9b46b8d4596d248565d721af85fa328}} 
+\index{cosmology.c@{cosmology.c}!window\_rth@{window\_rth}}
+\index{window\_rth@{window\_rth}!cosmology.c@{cosmology.c}}
+\doxyparagraph{\texorpdfstring{window\_rth()}{window\_rth()}}
+{\footnotesize\ttfamily double window\+\_\+rth (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{R }\end{DoxyParamCaption})}
+
+
+
+Fourier transform of top-\/hat window in real space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em R} & Input\+: smoothing scale in unit of Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the window function 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -6,5 +6,5 @@
 <area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="435,5,499,32"/>
 <area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="251,56,375,83"/>
 <area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="428,56,507,83"/>
-<area shape="rect" id="node8" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="423,107,512,133"/>
+<area shape="rect" id="node8" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="423,107,512,133"/>
 </map>

@@ -218,15 +218,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac55a19abfeca76040b0460e6712fb0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the NFW halo profile in Fourier space, given by Eq.  <a href="../../d6/d32/cosmology_8c.html#ac55a19abfeca76040b0460e6712fb0ef">More...</a><br /></td></tr>
 <tr class="separator:ac55a19abfeca76040b0460e6712fb0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b46b8d4596d248565d721af85fa328"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328">window_rth</a> (double k, double R)</td></tr>
-<tr class="memdesc:ad9b46b8d4596d248565d721af85fa328"><td class="mdescLeft">&#160;</td><td class="mdescRight">The following functions compute several window functions and their derivatives with respect to the smoothing scale.  <a href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328">More...</a><br /></td></tr>
+<tr class="memdesc:ad9b46b8d4596d248565d721af85fa328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fourier transform of top-hat window in real space.  <a href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328">More...</a><br /></td></tr>
 <tr class="separator:ad9b46b8d4596d248565d721af85fa328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5afed9a2f6957d7c60701367655fd45f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f">derR_window_rth</a> (double k, double R)</td></tr>
+<tr class="memdesc:a5afed9a2f6957d7c60701367655fd45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative w.r.t.  <a href="../../d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f">More...</a><br /></td></tr>
 <tr class="separator:a5afed9a2f6957d7c60701367655fd45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe6c6f803c739fbf11f31abd57f89dd6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6">window_kth</a> (double k, double R)</td></tr>
+<tr class="memdesc:afe6c6f803c739fbf11f31abd57f89dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top-hat window in Fourier space.  <a href="../../d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6">More...</a><br /></td></tr>
 <tr class="separator:afe6c6f803c739fbf11f31abd57f89dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40d777e0dc4f51704521899d5292254"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254">window_g</a> (double k, double R)</td></tr>
+<tr class="memdesc:ae40d777e0dc4f51704521899d5292254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gaussian window.  <a href="../../d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254">More...</a><br /></td></tr>
 <tr class="separator:ae40d777e0dc4f51704521899d5292254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedb791089f8567803b1cd0dc21297b51"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51">derR_logwindow_g</a> (double k, double R)</td></tr>
+<tr class="memdesc:aedb791089f8567803b1cd0dc21297b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative w.r.t smoothing scale of Gaussian window.  <a href="../../d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51">More...</a><br /></td></tr>
 <tr class="separator:aedb791089f8567803b1cd0dc21297b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -259,11 +263,11 @@ Variables</h2></td></tr>
 <li><a class="el" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3.">rhoc()</a> computes the critical density of the universe</li>
 <li><a class="el" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of 1/Mpc^3 , fixing z=0.">R_scale()</a> computes the size of a spherical halo corresponding to a given mass at z=0</li>
 <li>R_scale_wrong() computes the size of a spherical halo corresponding to a given mass at a given redshift</li>
-<li><a class="el" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm...">window_rth()</a> computes top-hat filter in real space</li>
-<li><a class="el" href="../../d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254">window_g()</a> computes Gaussian window</li>
-<li><a class="el" href="../../d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6">window_kth()</a> computes top-hat filter in Fourier space</li>
-<li><a class="el" href="../../d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f">derR_window_rth()</a> computes derivative of top-hat filter in real space w.r.t. smoothing scale</li>
-<li><a class="el" href="../../d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51">derR_logwindow_g()</a> computes derivative of top-hat filter in Fourier space w.r.t. smoothing scale </li>
+<li><a class="el" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top-hat window in real space.">window_rth()</a> computes top-hat filter in real space</li>
+<li><a class="el" href="../../d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254" title="Gaussian window.">window_g()</a> computes Gaussian window</li>
+<li><a class="el" href="../../d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6" title="Top-hat window in Fourier space.">window_kth()</a> computes top-hat filter in Fourier space</li>
+<li><a class="el" href="../../d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f" title="Derivative w.r.t.">derR_window_rth()</a> computes derivative of top-hat filter in real space w.r.t. smoothing scale</li>
+<li><a class="el" href="../../d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51" title="Derivative w.r.t smoothing scale of Gaussian window.">derR_logwindow_g()</a> computes derivative of top-hat filter in Fourier space w.r.t. smoothing scale </li>
 </ol>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a11f9475db171d037089d936d8b2371df" name="a11f9475db171d037089d936d8b2371df"></a>
@@ -697,7 +701,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="1295,120,1359,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="1111,208,1235,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="1288,233,1367,260"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="1283,183,1372,209"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="1283,183,1372,209"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="936,5,1063,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="959,56,1039,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ab82b15c827d1213a94e3ff9ce4ddad32" title="Compute the first luminosityy&#45;weighted mass moment." alt="" coords="568,56,721,83"/>
@@ -768,7 +772,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="151,31,211,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="259,31,383,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="436,5,515,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="431,56,520,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="431,56,520,83"/>
 </map>
 </div>
 
@@ -800,6 +804,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Derivative w.r.t smoothing scale of Gaussian window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Input: wavenumber in unit of 1/Mpc </td></tr>
+    <tr><td class="paramname">R</td><td>Input: smoothing scale in unit of Mpc </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the derivative of the window function </dd></dl>
+
 </div>
 </div>
 <a id="a5afed9a2f6957d7c60701367655fd45f" name="a5afed9a2f6957d7c60701367655fd45f"></a>
@@ -827,6 +841,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Derivative w.r.t. </p>
+<p >smoothing scale of the Fourier transform of top-hat window in real space</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Input: wavenumber in unit of 1/Mpc </td></tr>
+    <tr><td class="paramname">R</td><td>Input: smoothing scale in unit of Mpc </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the derivative of the window function </dd></dl>
 
 </div>
 </div>
@@ -1598,7 +1623,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Compute variance of smoothed matter density fluctuations." alt="" coords="5,31,65,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="113,31,237,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="291,5,369,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="285,56,375,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="285,56,375,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1674,7 +1699,7 @@ Here is the call graph for this function:</div>
 <map name="ad6/d32/cosmology_8c_a72661633b8701d902d6887c4402ed394_cgraph" id="ad6/d32/cosmology_8c_a72661633b8701d902d6887c4402ed394_cgraph">
 <area shape="rect" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="5,31,129,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="183,5,261,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="177,56,267,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="177,56,267,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1858,6 +1883,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Gaussian window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Input: wavenumber in unit of 1/Mpc </td></tr>
+    <tr><td class="paramname">R</td><td>Input: smoothing scale in unit of Mpc </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the window function </dd></dl>
+
 </div>
 </div>
 <a id="afe6c6f803c739fbf11f31abd57f89dd6" name="afe6c6f803c739fbf11f31abd57f89dd6"></a>
@@ -1885,6 +1920,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Top-hat window in Fourier space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Input: wavenumber in unit of 1/Mpc </td></tr>
+    <tr><td class="paramname">R</td><td>Input: smoothing scale in unit of Mpc </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the window function </dd></dl>
 
 </div>
 </div>
@@ -1914,7 +1959,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>The following functions compute several window functions and their derivatives with respect to the smoothing scale. </p>
+<p>Fourier transform of top-hat window in real space. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">k</td><td>Input: wavenumber in unit of 1/Mpc </td></tr>
@@ -1922,13 +1967,13 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the window functions or their derivatives </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the window function </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d32/cosmology_8c_ad9b46b8d4596d248565d721af85fa328_icgraph.png" border="0" usemap="#ad6/d32/cosmology_8c_ad9b46b8d4596d248565d721af85fa328_icgraph" alt=""/></div>
 <map name="ad6/d32/cosmology_8c_ad9b46b8d4596d248565d721af85fa328_icgraph" id="ad6/d32/cosmology_8c_ad9b46b8d4596d248565d721af85fa328_icgraph">
-<area shape="rect" title="The following functions compute several window functions and their derivatives with respect to the sm..." alt="" coords="1249,120,1339,147"/>
+<area shape="rect" title="Fourier transform of top&#45;hat window in real space." alt="" coords="1249,120,1339,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the matter density." alt="" coords="1077,120,1201,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="969,120,1029,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a03f9aaf2088b59136e47b27fd3310f27" title="Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w...." alt="" coords="824,69,921,96"/>
