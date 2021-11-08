@@ -1055,26 +1055,31 @@ double nfw_profile(struct Cosmology *Cx, double k, double M, double z)
 }
 
 /** 
- * The following functions compute several window functions and their derivatives with respect to the smoothing scale 
+ * Fourier transform of top-hat window in real space
  * 
  * @param k                 Input: wavenumber in unit of 1/Mpc
  * @param R                 Input: smoothing scale in unit of Mpc
- * @return the window functions or their derivatives
+ * @return the window function
  */
 
-/************************** Top-hat in real space *******************/
+double window_rth(double k, double R)
+{
+  double f = 0.0; 
 
-  double window_rth(double k, double R)
-  {
-    double f = 0.0; 
+  f = 3.0 * gsl_sf_bessel_j1(k * R)/(k * R);
+  // f =  3.0 * (sin(k*R)/pow((k*R),3) - cos(k*R)/pow(k*R,2));
 
-    f = 3.0 * gsl_sf_bessel_j1(k * R)/(k * R);
-    // f =  3.0 * (sin(k*R)/pow((k*R),3) - cos(k*R)/pow(k*R,2));
-
-    return f;
-  }
+  return f;
+}
 
 
+/** 
+ * Derivative w.r.t. smoothing scale of the Fourier transform of top-hat window in real space
+ * 
+ * @param k                 Input: wavenumber in unit of 1/Mpc
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the derivative of the window function
+ */
 double derR_window_rth(double k, double R)
 {
   double f = 0.0; 
@@ -1085,8 +1090,13 @@ double derR_window_rth(double k, double R)
   return f;
 }
 
-/************************** Top-hat in Fourier space *******************/
-
+/** 
+ * Top-hat window in Fourier space
+ * 
+ * @param k                 Input: wavenumber in unit of 1/Mpc
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the window function
+ */
 double window_kth(double k, double R)
 {
   double f = 0.0;
@@ -1100,8 +1110,13 @@ double window_kth(double k, double R)
 }
 
 
-/************************** Gaussian ********************************/
-
+/** 
+ * Gaussian window
+ * 
+ * @param k                 Input: wavenumber in unit of 1/Mpc
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the window function
+ */
 double window_g(double k, double R)
 {
   double f =0.0;
@@ -1112,6 +1127,13 @@ double window_g(double k, double R)
 }
 
 
+/** 
+ * Derivative w.r.t smoothing scale of Gaussian window
+ * 
+ * @param k                 Input: wavenumber in unit of 1/Mpc
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the derivative of the window function
+ */
 double derR_logwindow_g(double k, double R)
 {
   double f =0.0;
