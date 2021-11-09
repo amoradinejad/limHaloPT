@@ -32,7 +32,7 @@ If you modified the code, you need to first do "make clean" before doing "make".
 
 
 ### Attribution
-You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this [paper](https://arxiv.org/abs/1104.2933) as required by CLASS developers. 
+You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers. 
 <br>
 &nbsp;
 
