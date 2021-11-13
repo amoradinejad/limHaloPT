@@ -1,0 +1,860 @@
+\begin{theindex}
+
+  \item {\_GNU\_SOURCE}
+    \subitem {header.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {angular\_distance}
+    \subitem {cosmology.c}, \hyperpage{32}
+  \item {As}
+    \subitem {globals}, \hyperpage{8}
+
+  \indexspace
+
+  \item {b1}
+    \subitem {globals}, \hyperpage{8}
+  \item {b1\_LW\_accel\_ptr}
+    \subitem {Line}, \hyperpage{16}
+  \item {b1\_LW\_spline\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {b22\_ls}
+    \subitem {ps\_line\_hm.c}, \hyperpage{127}
+  \item {b22\_ls\_integrand}
+    \subitem {ps\_line\_hm.c}, \hyperpage{128}
+  \item {b2\_LW\_accel\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {b2\_LW\_spline\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {ba}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {bias\_lum\_weighted}
+    \subitem {line\_ingredients.c}, \hyperpage{78}
+  \item {bias\_lum\_weighted\_integ}
+    \subitem {line\_ingredients.c}, \hyperpage{79}
+  \item {BSPLINE}
+    \subitem {header.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {c}
+    \subitem {globals}, \hyperpage{8}
+  \item {ccs}
+    \subitem {Cosmology}, \hyperpage{6}
+  \item {CII}
+    \subitem {header.h}, \hyperpage{22}
+  \item {CL\_Cosmology\_free}
+    \subitem {cosmology.c}, \hyperpage{33}
+  \item {CL\_Cosmology\_initilize}
+    \subitem {cosmology.c}, \hyperpage{34}
+  \item {Class\_Cosmology\_Struct}, \hyperpage{4}
+    \subitem {ba}, \hyperpage{5}
+    \subitem {errmsg}, \hyperpage{5}
+    \subitem {le}, \hyperpage{5}
+    \subitem {nl}, \hyperpage{5}
+    \subitem {op}, \hyperpage{5}
+    \subitem {pm}, \hyperpage{5}
+    \subitem {pr}, \hyperpage{5}
+    \subitem {pt}, \hyperpage{5}
+    \subitem {sp}, \hyperpage{5}
+    \subitem {th}, \hyperpage{5}
+    \subitem {tr}, \hyperpage{5}
+  \item {CLEANUP}
+    \subitem {header.h}, \hyperpage{22}
+  \item {cleanup}
+    \subitem {header.h}, \hyperpage{26}
+    \subitem {main.c}, \hyperpage{108}
+  \item {CO10}
+    \subitem {header.h}, \hyperpage{22}
+  \item {CO21}
+    \subitem {header.h}, \hyperpage{22}
+  \item {CO32}
+    \subitem {header.h}, \hyperpage{22}
+  \item {CO43}
+    \subitem {header.h}, \hyperpage{23}
+  \item {CO54}
+    \subitem {header.h}, \hyperpage{23}
+  \item {CO65}
+    \subitem {header.h}, \hyperpage{23}
+  \item {comoving\_radial\_distance}
+    \subitem {cosmology.c}, \hyperpage{35}
+  \item {Compute\_G\_loops}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{113}
+  \item {Compute\_PNG\_loops}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{115}
+  \item {concentration\_cdm}
+    \subitem {cosmology.c}, \hyperpage{36}
+  \item {cosmo\_pars}
+    \subitem {Cosmology}, \hyperpage{6}
+  \item {Cosmology}, \hyperpage{6}
+    \subitem {ccs}, \hyperpage{6}
+    \subitem {cosmo\_pars}, \hyperpage{6}
+    \subitem {Lines}, \hyperpage{6}
+    \subitem {mode\_nu}, \hyperpage{7}
+    \subitem {NLines}, \hyperpage{7}
+  \item {cosmology.c}, \hyperpage{30}
+    \subitem {angular\_distance}, \hyperpage{32}
+    \subitem {CL\_Cosmology\_free}, \hyperpage{33}
+    \subitem {CL\_Cosmology\_initilize}, \hyperpage{34}
+    \subitem {comoving\_radial\_distance}, \hyperpage{35}
+    \subitem {concentration\_cdm}, \hyperpage{36}
+    \subitem {Cosmology\_free}, \hyperpage{36}
+    \subitem {Cosmology\_init}, \hyperpage{37}
+    \subitem {der\_lnsig\_sq}, \hyperpage{40}
+    \subitem {derR\_logwindow\_g}, \hyperpage{41}
+    \subitem {derR\_window\_rth}, \hyperpage{42}
+    \subitem {gb}, \hyperpage{61}
+    \subitem {growth\_D}, \hyperpage{42}
+    \subitem {growth\_f}, \hyperpage{43}
+    \subitem {Hubble}, \hyperpage{44}
+    \subitem {Mk\_dlnMk}, \hyperpage{45}
+    \subitem {nfw\_profile}, \hyperpage{46}
+    \subitem {Pk\_dlnPk}, \hyperpage{47}
+    \subitem {Pk\_dlnPk\_HV}, \hyperpage{49}
+    \subitem {R\_scale}, \hyperpage{51}
+    \subitem {R\_vir}, \hyperpage{52}
+    \subitem {rhoc}, \hyperpage{53}
+    \subitem {sig\_sq}, \hyperpage{54}
+    \subitem {sig\_sq\_integrand}, \hyperpage{56}
+    \subitem {sigma0\_sq}, \hyperpage{56}
+    \subitem {sigma0\_sq\_integrand}, \hyperpage{57}
+    \subitem {window\_g}, \hyperpage{58}
+    \subitem {window\_kth}, \hyperpage{59}
+    \subitem {window\_rth}, \hyperpage{59}
+  \item {Cosmology\_free}
+    \subitem {cosmology.c}, \hyperpage{36}
+  \item {Cosmology\_init}
+    \subitem {cosmology.c}, \hyperpage{37}
+  \item {count\_cols\_in\_file}
+    \subitem {utilities.c}, \hyperpage{157}
+  \item {count\_lines\_in\_file}
+    \subitem {utilities.c}, \hyperpage{157}
+
+  \indexspace
+
+  \item {data\_dir}
+    \subitem {globals}, \hyperpage{8}
+  \item {data\_priors}
+    \subitem {globals}, \hyperpage{8}
+  \item {DER}
+    \subitem {header.h}, \hyperpage{23}
+  \item {der\_lnsig\_sq}
+    \subitem {cosmology.c}, \hyperpage{40}
+  \item {DERGROWTH}
+    \subitem {header.h}, \hyperpage{23}
+  \item {derNGLOOP}
+    \subitem {header.h}, \hyperpage{23}
+  \item {derR\_logwindow\_g}
+    \subitem {cosmology.c}, \hyperpage{41}
+  \item {derR\_window\_rth}
+    \subitem {cosmology.c}, \hyperpage{42}
+  \item {DO\_NOT\_EVALUATE}
+    \subitem {header.h}, \hyperpage{23}
+  \item {DST}
+    \subitem {header.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {EH\_PS\_nw}
+    \subitem {wnw\_split.c}, \hyperpage{163}
+  \item {EH\_PS\_w}
+    \subitem {wnw\_split.c}, \hyperpage{165}
+  \item {EQUILATERAL}
+    \subitem {header.h}, \hyperpage{23}
+  \item {errmsg}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+
+  \indexspace
+
+  \item {F2}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{117}
+  \item {F2\_s}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{118}
+  \item {F3\_s}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{118}
+  \item {free\_2Darray}
+    \subitem {utilities.c}, \hyperpage{157}
+
+  \indexspace
+
+  \item {G\_loop\_integrands}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{118}
+  \item {GAMMA}
+    \subitem {header.h}, \hyperpage{23}
+  \item {GAUSSIAN}
+    \subitem {header.h}, \hyperpage{23}
+  \item {gb}
+    \subitem {cosmology.c}, \hyperpage{61}
+    \subitem {line\_ingredients.c}, \hyperpage{108}
+    \subitem {main.c}, \hyperpage{111}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{126}
+    \subitem {ps\_line\_hm.c}, \hyperpage{143}
+    \subitem {ps\_line\_pt.c}, \hyperpage{150}
+    \subitem {survey\_specs.c}, \hyperpage{155}
+  \item {GFILTER}
+    \subitem {header.h}, \hyperpage{24}
+  \item {Global\_Structs.h}, \hyperpage{18}
+  \item {globals}, \hyperpage{7}
+    \subitem {As}, \hyperpage{8}
+    \subitem {b1}, \hyperpage{8}
+    \subitem {c}, \hyperpage{8}
+    \subitem {data\_dir}, \hyperpage{8}
+    \subitem {data\_priors}, \hyperpage{8}
+    \subitem {h}, \hyperpage{8}
+    \subitem {H0}, \hyperpage{8}
+    \subitem {h\_m}, \hyperpage{8}
+    \subitem {kf}, \hyperpage{8}
+    \subitem {kp}, \hyperpage{8}
+    \subitem {logAs}, \hyperpage{9}
+    \subitem {logM\_accel\_ptr}, \hyperpage{9}
+    \subitem {logSFR\_spline2d\_ptr}, \hyperpage{9}
+    \subitem {M\_max}, \hyperpage{9}
+    \subitem {M\_min}, \hyperpage{9}
+    \subitem {mass}, \hyperpage{9}
+    \subitem {ng}, \hyperpage{9}
+    \subitem {Npars}, \hyperpage{9}
+    \subitem {ns}, \hyperpage{9}
+    \subitem {Omega\_b}, \hyperpage{9}
+    \subitem {Omega\_cdm}, \hyperpage{9}
+    \subitem {Omega\_g}, \hyperpage{10}
+    \subitem {Omega\_lambda}, \hyperpage{10}
+    \subitem {Omega\_nu}, \hyperpage{10}
+    \subitem {Omega\_r}, \hyperpage{10}
+    \subitem {output\_dir}, \hyperpage{10}
+    \subitem {Planck\_Fisher\_filename}, \hyperpage{10}
+    \subitem {project\_home}, \hyperpage{10}
+    \subitem {PS\_kmax}, \hyperpage{10}
+    \subitem {PS\_kmin}, \hyperpage{10}
+    \subitem {rho}, \hyperpage{10}
+    \subitem {SFR\_filename}, \hyperpage{10}
+    \subitem {sigFOG0}, \hyperpage{11}
+    \subitem {volume}, \hyperpage{11}
+    \subitem {z\_accel\_ptr}, \hyperpage{11}
+    \subitem {z\_i}, \hyperpage{11}
+    \subitem {z\_max}, \hyperpage{11}
+  \item {GROWTH}
+    \subitem {header.h}, \hyperpage{24}
+  \item {growth\_D}
+    \subitem {cosmology.c}, \hyperpage{42}
+  \item {growth\_f}
+    \subitem {cosmology.c}, \hyperpage{43}
+
+  \indexspace
+
+  \item {h}
+    \subitem {globals}, \hyperpage{8}
+  \item {H0}
+    \subitem {globals}, \hyperpage{8}
+  \item {h\_m}
+    \subitem {globals}, \hyperpage{8}
+  \item {HALO}
+    \subitem {header.h}, \hyperpage{24}
+  \item {halo\_bias}
+    \subitem {line\_ingredients.c}, \hyperpage{80}
+  \item {header.h}, \hyperpage{20}, \hyperpage{28}
+    \subitem {\_GNU\_SOURCE}, \hyperpage{22}
+    \subitem {BSPLINE}, \hyperpage{22}
+    \subitem {CII}, \hyperpage{22}
+    \subitem {CLEANUP}, \hyperpage{22}
+    \subitem {cleanup}, \hyperpage{26}
+    \subitem {CO10}, \hyperpage{22}
+    \subitem {CO21}, \hyperpage{22}
+    \subitem {CO32}, \hyperpage{22}
+    \subitem {CO43}, \hyperpage{23}
+    \subitem {CO54}, \hyperpage{23}
+    \subitem {CO65}, \hyperpage{23}
+    \subitem {DER}, \hyperpage{23}
+    \subitem {DERGROWTH}, \hyperpage{23}
+    \subitem {derNGLOOP}, \hyperpage{23}
+    \subitem {DO\_NOT\_EVALUATE}, \hyperpage{23}
+    \subitem {DST}, \hyperpage{23}
+    \subitem {EQUILATERAL}, \hyperpage{23}
+    \subitem {GAMMA}, \hyperpage{23}
+    \subitem {GAUSSIAN}, \hyperpage{23}
+    \subitem {GFILTER}, \hyperpage{24}
+    \subitem {GROWTH}, \hyperpage{24}
+    \subitem {HALO}, \hyperpage{24}
+    \subitem {HS}, \hyperpage{24}
+    \subitem {INIT}, \hyperpage{24}
+    \subitem {initialize}, \hyperpage{26}
+    \subitem {LINE}, \hyperpage{24}
+    \subitem {LINEAR}, \hyperpage{24}
+    \subitem {LINEMATTER}, \hyperpage{24}
+    \subitem {LOCAL}, \hyperpage{24}
+    \subitem {LOOP}, \hyperpage{24}
+    \subitem {LPOWER}, \hyperpage{24}
+    \subitem {MATTER}, \hyperpage{25}
+    \subitem {MAXL}, \hyperpage{25}
+    \subitem {NGLOOP}, \hyperpage{25}
+    \subitem {NLPOWER}, \hyperpage{25}
+    \subitem {NOIR}, \hyperpage{25}
+    \subitem {NONGAUSSIAN}, \hyperpage{25}
+    \subitem {NONLINEAR}, \hyperpage{25}
+    \subitem {ORTHOGONAL}, \hyperpage{25}
+    \subitem {PS\_KMAX}, \hyperpage{25}
+    \subitem {PS\_KMIN}, \hyperpage{25}
+    \subitem {PSC}, \hyperpage{25}
+    \subitem {QSF}, \hyperpage{26}
+    \subitem {QUADRATIC}, \hyperpage{26}
+    \subitem {ST}, \hyperpage{26}
+    \subitem {TIDE}, \hyperpage{26}
+    \subitem {TR}, \hyperpage{26}
+    \subitem {TRANS}, \hyperpage{26}
+    \subitem {TREE}, \hyperpage{26}
+    \subitem {WIR}, \hyperpage{26}
+  \item {HM\_1h2h}
+    \subitem {ps\_line\_hm.c}, \hyperpage{129}
+  \item {HM\_1h2h\_integ}
+    \subitem {ps\_line\_hm.c}, \hyperpage{129}
+  \item {HS}
+    \subitem {header.h}, \hyperpage{24}
+  \item {Hubble}
+    \subitem {cosmology.c}, \hyperpage{44}
+
+  \indexspace
+
+  \item {INIT}
+    \subitem {header.h}, \hyperpage{24}
+  \item {init\_1Darray}
+    \subitem {utilities.c}, \hyperpage{158}
+  \item {initialize}
+    \subitem {header.h}, \hyperpage{26}
+    \subitem {main.c}, \hyperpage{109}
+  \item {initialized}
+    \subitem {Line}, \hyperpage{17}
+  \item {integrand\_parameters}, \hyperpage{11}
+    \subitem {p1}, \hyperpage{12}
+    \subitem {p10}, \hyperpage{12}
+    \subitem {p11}, \hyperpage{12}
+    \subitem {p12}, \hyperpage{12}
+    \subitem {p13}, \hyperpage{12}
+    \subitem {p2}, \hyperpage{12}
+    \subitem {p3}, \hyperpage{12}
+    \subitem {p4}, \hyperpage{12}
+    \subitem {p5}, \hyperpage{12}
+    \subitem {p6}, \hyperpage{12}
+    \subitem {p7}, \hyperpage{12}
+    \subitem {p8}, \hyperpage{13}
+    \subitem {p9}, \hyperpage{13}
+  \item {integrand\_parameters2}, \hyperpage{13}
+    \subitem {p1}, \hyperpage{14}
+    \subitem {p10}, \hyperpage{14}
+    \subitem {p11}, \hyperpage{14}
+    \subitem {p12}, \hyperpage{14}
+    \subitem {p13}, \hyperpage{14}
+    \subitem {p14}, \hyperpage{14}
+    \subitem {p15}, \hyperpage{14}
+    \subitem {p16}, \hyperpage{15}
+    \subitem {p17}, \hyperpage{15}
+    \subitem {p18}, \hyperpage{15}
+    \subitem {p19}, \hyperpage{15}
+    \subitem {p2}, \hyperpage{15}
+    \subitem {p20}, \hyperpage{15}
+    \subitem {p22}, \hyperpage{15}
+    \subitem {p3}, \hyperpage{15}
+    \subitem {p4}, \hyperpage{15}
+    \subitem {p5}, \hyperpage{15}
+    \subitem {p6}, \hyperpage{15}
+    \subitem {p7}, \hyperpage{16}
+    \subitem {p8}, \hyperpage{16}
+    \subitem {p9}, \hyperpage{16}
+  \item {IR\_res.c}, \hyperpage{61}
+    \subitem {IR\_Sigma2}, \hyperpage{62}
+    \subitem {IR\_Sigma2\_integrand}, \hyperpage{64}
+    \subitem {pm\_IR\_LO}, \hyperpage{65}
+    \subitem {pm\_IR\_NLO}, \hyperpage{67}
+    \subitem {pm\_nowiggle}, \hyperpage{68}
+    \subitem {pm\_nowiggle\_bspline}, \hyperpage{71}
+    \subitem {pm\_nowiggle\_dst}, \hyperpage{72}
+    \subitem {pm\_nowiggle\_gfilter}, \hyperpage{74}
+  \item {IR\_Sigma2}
+    \subitem {IR\_res.c}, \hyperpage{62}
+  \item {IR\_Sigma2\_integrand}
+    \subitem {IR\_res.c}, \hyperpage{64}
+
+  \indexspace
+
+  \item {kf}
+    \subitem {globals}, \hyperpage{8}
+  \item {kmax\_Brent}
+    \subitem {survey\_specs.c}, \hyperpage{151}
+  \item {kmax\_Brent\_solver}
+    \subitem {survey\_specs.c}, \hyperpage{152}
+  \item {kmin\_val}
+    \subitem {survey\_specs.c}, \hyperpage{153}
+  \item {kp}
+    \subitem {globals}, \hyperpage{8}
+
+  \indexspace
+
+  \item {le}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {LINE}
+    \subitem {header.h}, \hyperpage{24}
+  \item {Line}, \hyperpage{16}
+    \subitem {b1\_LW\_accel\_ptr}, \hyperpage{16}
+    \subitem {b1\_LW\_spline\_ptr}, \hyperpage{17}
+    \subitem {b2\_LW\_accel\_ptr}, \hyperpage{17}
+    \subitem {b2\_LW\_spline\_ptr}, \hyperpage{17}
+    \subitem {initialized}, \hyperpage{17}
+    \subitem {line\_freq}, \hyperpage{17}
+    \subitem {LineType}, \hyperpage{17}
+    \subitem {mom1\_accel\_ptr}, \hyperpage{17}
+    \subitem {mom1\_spline\_ptr}, \hyperpage{17}
+    \subitem {mom2\_accel\_ptr}, \hyperpage{17}
+    \subitem {mom2\_spline\_ptr}, \hyperpage{17}
+    \subitem {npointsInterp}, \hyperpage{17}
+  \item {Line\_alloc\_init}
+    \subitem {line\_ingredients.c}, \hyperpage{82}
+  \item {line\_bias}
+    \subitem {line\_ingredients.c}, \hyperpage{84}
+  \item {Line\_evaluate}
+    \subitem {line\_ingredients.c}, \hyperpage{85}
+  \item {Line\_free}
+    \subitem {line\_ingredients.c}, \hyperpage{89}
+  \item {line\_freq}
+    \subitem {Line}, \hyperpage{17}
+  \item {line\_ingredients.c}, \hyperpage{76}
+    \subitem {bias\_lum\_weighted}, \hyperpage{78}
+    \subitem {bias\_lum\_weighted\_integ}, \hyperpage{79}
+    \subitem {gb}, \hyperpage{108}
+    \subitem {halo\_bias}, \hyperpage{80}
+    \subitem {Line\_alloc\_init}, \hyperpage{82}
+    \subitem {line\_bias}, \hyperpage{84}
+    \subitem {Line\_evaluate}, \hyperpage{85}
+    \subitem {Line\_free}, \hyperpage{89}
+    \subitem {logSFR\_alloc\_init}, \hyperpage{90}
+    \subitem {logSFR\_Behroozi}, \hyperpage{91}
+    \subitem {logSFR\_Behroozi\_read}, \hyperpage{91}
+    \subitem {luminosity}, \hyperpage{93}
+    \subitem {mass\_func}, \hyperpage{94}
+    \subitem {mass\_func\_sims}, \hyperpage{95}
+    \subitem {mass\_moment1}, \hyperpage{96}
+    \subitem {mass\_moment1\_integ}, \hyperpage{97}
+    \subitem {mass\_moment2}, \hyperpage{99}
+    \subitem {mass\_moment2\_integ}, \hyperpage{100}
+    \subitem {mean\_intens}, \hyperpage{101}
+    \subitem {mult\_func}, \hyperpage{102}
+    \subitem {p\_sig\_shot}, \hyperpage{103}
+    \subitem {p\_sig\_shot\_integrand}, \hyperpage{104}
+    \subitem {p\_sig\_Tbar}, \hyperpage{105}
+    \subitem {p\_sig\_Tbar\_integrand}, \hyperpage{105}
+    \subitem {SFR\_Behroozi\_free}, \hyperpage{106}
+    \subitem {Tbar\_line}, \hyperpage{106}
+  \item {LINEAR}
+    \subitem {header.h}, \hyperpage{24}
+  \item {LINEMATTER}
+    \subitem {header.h}, \hyperpage{24}
+  \item {Lines}
+    \subitem {Cosmology}, \hyperpage{6}
+  \item {LineType}
+    \subitem {Line}, \hyperpage{17}
+  \item {LOCAL}
+    \subitem {header.h}, \hyperpage{24}
+  \item {log10init\_1Darray}
+    \subitem {utilities.c}, \hyperpage{159}
+  \item {logAs}
+    \subitem {globals}, \hyperpage{9}
+  \item {loginit\_1Darray}
+    \subitem {utilities.c}, \hyperpage{160}
+  \item {logM\_accel\_ptr}
+    \subitem {globals}, \hyperpage{9}
+  \item {logSFR\_alloc\_init}
+    \subitem {line\_ingredients.c}, \hyperpage{90}
+  \item {logSFR\_Behroozi}
+    \subitem {line\_ingredients.c}, \hyperpage{91}
+  \item {logSFR\_Behroozi\_read}
+    \subitem {line\_ingredients.c}, \hyperpage{91}
+  \item {logSFR\_spline2d\_ptr}
+    \subitem {globals}, \hyperpage{9}
+  \item {LOOP}
+    \subitem {header.h}, \hyperpage{24}
+  \item {LPOWER}
+    \subitem {header.h}, \hyperpage{24}
+  \item {luminosity}
+    \subitem {line\_ingredients.c}, \hyperpage{93}
+
+  \indexspace
+
+  \item {M\_max}
+    \subitem {globals}, \hyperpage{9}
+  \item {M\_min}
+    \subitem {globals}, \hyperpage{9}
+  \item {main}
+    \subitem {main.c}, \hyperpage{110}
+  \item {main.c}, \hyperpage{108}
+    \subitem {cleanup}, \hyperpage{108}
+    \subitem {gb}, \hyperpage{111}
+    \subitem {initialize}, \hyperpage{109}
+    \subitem {main}, \hyperpage{110}
+  \item {make\_1D\_int\_array}
+    \subitem {utilities.c}, \hyperpage{161}
+  \item {make\_1Darray}
+    \subitem {utilities.c}, \hyperpage{161}
+  \item {make\_2Darray}
+    \subitem {utilities.c}, \hyperpage{162}
+  \item {mass}
+    \subitem {globals}, \hyperpage{9}
+  \item {mass\_func}
+    \subitem {line\_ingredients.c}, \hyperpage{94}
+  \item {mass\_func\_sims}
+    \subitem {line\_ingredients.c}, \hyperpage{95}
+  \item {mass\_moment1}
+    \subitem {line\_ingredients.c}, \hyperpage{96}
+  \item {mass\_moment1\_integ}
+    \subitem {line\_ingredients.c}, \hyperpage{97}
+  \item {mass\_moment2}
+    \subitem {line\_ingredients.c}, \hyperpage{99}
+  \item {mass\_moment2\_integ}
+    \subitem {line\_ingredients.c}, \hyperpage{100}
+  \item {MATTER}
+    \subitem {header.h}, \hyperpage{25}
+  \item {MAXL}
+    \subitem {header.h}, \hyperpage{25}
+  \item {mean\_intens}
+    \subitem {line\_ingredients.c}, \hyperpage{101}
+  \item {mhmc}
+    \subitem {ps\_line\_hm.c}, \hyperpage{134}
+  \item {mhmc\_integ}
+    \subitem {ps\_line\_hm.c}, \hyperpage{135}
+  \item {Mk\_dlnMk}
+    \subitem {cosmology.c}, \hyperpage{45}
+  \item {mode\_nu}
+    \subitem {Cosmology}, \hyperpage{7}
+  \item {mom1\_accel\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {mom1\_spline\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {mom2\_accel\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {mom2\_spline\_ptr}
+    \subitem {Line}, \hyperpage{17}
+  \item {mult\_func}
+    \subitem {line\_ingredients.c}, \hyperpage{102}
+
+  \indexspace
+
+  \item {nfw\_profile}
+    \subitem {cosmology.c}, \hyperpage{46}
+  \item {ng}
+    \subitem {globals}, \hyperpage{9}
+  \item {NGLOOP}
+    \subitem {header.h}, \hyperpage{25}
+  \item {nl}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {NLines}
+    \subitem {Cosmology}, \hyperpage{7}
+  \item {NLPOWER}
+    \subitem {header.h}, \hyperpage{25}
+  \item {NOIR}
+    \subitem {header.h}, \hyperpage{25}
+  \item {NONGAUSSIAN}
+    \subitem {header.h}, \hyperpage{25}
+  \item {NONLINEAR}
+    \subitem {header.h}, \hyperpage{25}
+  \item {Npars}
+    \subitem {globals}, \hyperpage{9}
+  \item {npointsInterp}
+    \subitem {Line}, \hyperpage{17}
+  \item {ns}
+    \subitem {globals}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Omega\_b}
+    \subitem {globals}, \hyperpage{9}
+  \item {Omega\_cdm}
+    \subitem {globals}, \hyperpage{9}
+  \item {Omega\_g}
+    \subitem {globals}, \hyperpage{10}
+  \item {Omega\_lambda}
+    \subitem {globals}, \hyperpage{10}
+  \item {Omega\_nu}
+    \subitem {globals}, \hyperpage{10}
+  \item {Omega\_r}
+    \subitem {globals}, \hyperpage{10}
+  \item {op}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {ORTHOGONAL}
+    \subitem {header.h}, \hyperpage{25}
+  \item {output\_dir}
+    \subitem {globals}, \hyperpage{10}
+
+  \indexspace
+
+  \item {p1}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p10}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p11}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p12}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p13}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p14}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p15}
+    \subitem {integrand\_parameters2}, \hyperpage{14}
+  \item {p16}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p17}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p18}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p19}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p2}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p20}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p22}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p3}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p4}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p5}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p6}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{15}
+  \item {p7}
+    \subitem {integrand\_parameters}, \hyperpage{12}
+    \subitem {integrand\_parameters2}, \hyperpage{16}
+  \item {p8}
+    \subitem {integrand\_parameters}, \hyperpage{13}
+    \subitem {integrand\_parameters2}, \hyperpage{16}
+  \item {p9}
+    \subitem {integrand\_parameters}, \hyperpage{13}
+    \subitem {integrand\_parameters2}, \hyperpage{16}
+  \item {p\_sig\_shot}
+    \subitem {line\_ingredients.c}, \hyperpage{103}
+  \item {p\_sig\_shot\_integrand}
+    \subitem {line\_ingredients.c}, \hyperpage{104}
+  \item {p\_sig\_Tbar}
+    \subitem {line\_ingredients.c}, \hyperpage{105}
+  \item {p\_sig\_Tbar\_integrand}
+    \subitem {line\_ingredients.c}, \hyperpage{105}
+  \item {Pk\_dlnPk}
+    \subitem {cosmology.c}, \hyperpage{47}
+  \item {Pk\_dlnPk\_HV}
+    \subitem {cosmology.c}, \hyperpage{49}
+  \item {pk\_Gfilter\_nw}
+    \subitem {wnw\_split.c}, \hyperpage{166}
+  \item {pk\_nw\_integrand}
+    \subitem {wnw\_split.c}, \hyperpage{167}
+  \item {Planck\_Fisher\_filename}
+    \subitem {globals}, \hyperpage{10}
+  \item {pm}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {pm\_IR\_LO}
+    \subitem {IR\_res.c}, \hyperpage{65}
+  \item {pm\_IR\_NLO}
+    \subitem {IR\_res.c}, \hyperpage{67}
+  \item {pm\_nowiggle}
+    \subitem {IR\_res.c}, \hyperpage{68}
+  \item {pm\_nowiggle\_bspline}
+    \subitem {IR\_res.c}, \hyperpage{71}
+  \item {pm\_nowiggle\_dst}
+    \subitem {IR\_res.c}, \hyperpage{72}
+  \item {pm\_nowiggle\_gfilter}
+    \subitem {IR\_res.c}, \hyperpage{74}
+  \item {PNG\_loop\_integrands}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{119}
+  \item {pr}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {project\_home}
+    \subitem {globals}, \hyperpage{10}
+  \item {ps\_halo\_1loop.c}, \hyperpage{111}
+    \subitem {Compute\_G\_loops}, \hyperpage{113}
+    \subitem {Compute\_PNG\_loops}, \hyperpage{115}
+    \subitem {F2}, \hyperpage{117}
+    \subitem {F2\_s}, \hyperpage{118}
+    \subitem {F3\_s}, \hyperpage{118}
+    \subitem {G\_loop\_integrands}, \hyperpage{118}
+    \subitem {gb}, \hyperpage{126}
+    \subitem {PNG\_loop\_integrands}, \hyperpage{119}
+    \subitem {PS\_hh\_G}, \hyperpage{120}
+    \subitem {PS\_hh\_PNG}, \hyperpage{123}
+    \subitem {S2}, \hyperpage{125}
+    \subitem {S2\_s}, \hyperpage{125}
+  \item {PS\_hh\_G}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{120}
+  \item {PS\_hh\_PNG}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{123}
+  \item {PS\_KMAX}
+    \subitem {header.h}, \hyperpage{25}
+  \item {PS\_kmax}
+    \subitem {globals}, \hyperpage{10}
+  \item {PS\_KMIN}
+    \subitem {header.h}, \hyperpage{25}
+  \item {PS\_kmin}
+    \subitem {globals}, \hyperpage{10}
+  \item {PS\_line}
+    \subitem {ps\_line\_pt.c}, \hyperpage{144}
+  \item {PS\_line\_HM}
+    \subitem {ps\_line\_hm.c}, \hyperpage{138}
+  \item {ps\_line\_hm.c}, \hyperpage{126}
+    \subitem {b22\_ls}, \hyperpage{127}
+    \subitem {b22\_ls\_integrand}, \hyperpage{128}
+    \subitem {gb}, \hyperpage{143}
+    \subitem {HM\_1h2h}, \hyperpage{129}
+    \subitem {HM\_1h2h\_integ}, \hyperpage{129}
+    \subitem {mhmc}, \hyperpage{134}
+    \subitem {mhmc\_integ}, \hyperpage{135}
+    \subitem {PS\_line\_HM}, \hyperpage{138}
+    \subitem {PS\_shot\_HM}, \hyperpage{140}
+  \item {ps\_line\_multipoles}
+    \subitem {ps\_line\_pt.c}, \hyperpage{145}
+  \item {ps\_line\_multipoles\_integrand}
+    \subitem {ps\_line\_pt.c}, \hyperpage{146}
+  \item {ps\_line\_pt.c}, \hyperpage{143}
+    \subitem {gb}, \hyperpage{150}
+    \subitem {PS\_line}, \hyperpage{144}
+    \subitem {ps\_line\_multipoles}, \hyperpage{145}
+    \subitem {ps\_line\_multipoles\_integrand}, \hyperpage{146}
+    \subitem {PS\_line\_RSD}, \hyperpage{147}
+    \subitem {PS\_shot}, \hyperpage{149}
+  \item {PS\_line\_RSD}
+    \subitem {ps\_line\_pt.c}, \hyperpage{147}
+  \item {PS\_shot}
+    \subitem {ps\_line\_pt.c}, \hyperpage{149}
+  \item {PS\_shot\_HM}
+    \subitem {ps\_line\_hm.c}, \hyperpage{140}
+  \item {PSC}
+    \subitem {header.h}, \hyperpage{25}
+  \item {pt}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+
+  \indexspace
+
+  \item {QSF}
+    \subitem {header.h}, \hyperpage{26}
+  \item {QUADRATIC}
+    \subitem {header.h}, \hyperpage{26}
+
+  \indexspace
+
+  \item {R\_scale}
+    \subitem {cosmology.c}, \hyperpage{51}
+  \item {R\_vir}
+    \subitem {cosmology.c}, \hyperpage{52}
+  \item {README.md}, \hyperpage{18}
+  \item {rho}
+    \subitem {globals}, \hyperpage{10}
+  \item {rhoc}
+    \subitem {cosmology.c}, \hyperpage{53}
+
+  \indexspace
+
+  \item {S2}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{125}
+  \item {S2\_s}
+    \subitem {ps\_halo\_1loop.c}, \hyperpage{125}
+  \item {SFR\_Behroozi\_free}
+    \subitem {line\_ingredients.c}, \hyperpage{106}
+  \item {SFR\_filename}
+    \subitem {globals}, \hyperpage{10}
+  \item {shell\_volume}
+    \subitem {survey\_specs.c}, \hyperpage{153}
+  \item {sig\_sq}
+    \subitem {cosmology.c}, \hyperpage{54}
+  \item {sig\_sq\_integrand}
+    \subitem {cosmology.c}, \hyperpage{56}
+  \item {sigFOG0}
+    \subitem {globals}, \hyperpage{11}
+  \item {sigma0\_sq}
+    \subitem {cosmology.c}, \hyperpage{56}
+  \item {sigma0\_sq\_integrand}
+    \subitem {cosmology.c}, \hyperpage{57}
+  \item {sp}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {ST}
+    \subitem {header.h}, \hyperpage{26}
+  \item {survey\_specs.c}, \hyperpage{150}
+    \subitem {gb}, \hyperpage{155}
+    \subitem {kmax\_Brent}, \hyperpage{151}
+    \subitem {kmax\_Brent\_solver}, \hyperpage{152}
+    \subitem {kmin\_val}, \hyperpage{153}
+    \subitem {shell\_volume}, \hyperpage{153}
+
+  \indexspace
+
+  \item {T}
+    \subitem {wnw\_split.c}, \hyperpage{168}
+  \item {T0}
+    \subitem {wnw\_split.c}, \hyperpage{169}
+  \item {Tbar\_line}
+    \subitem {line\_ingredients.c}, \hyperpage{106}
+  \item {th}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {TIDE}
+    \subitem {header.h}, \hyperpage{26}
+  \item {TR}
+    \subitem {header.h}, \hyperpage{26}
+  \item {tr}
+    \subitem {Class\_Cosmology\_Struct}, \hyperpage{5}
+  \item {TRANS}
+    \subitem {header.h}, \hyperpage{26}
+  \item {TREE}
+    \subitem {header.h}, \hyperpage{26}
+  \item {Tt0}
+    \subitem {wnw\_split.c}, \hyperpage{170}
+
+  \indexspace
+
+  \item {utilities.c}, \hyperpage{156}
+    \subitem {count\_cols\_in\_file}, \hyperpage{157}
+    \subitem {count\_lines\_in\_file}, \hyperpage{157}
+    \subitem {free\_2Darray}, \hyperpage{157}
+    \subitem {init\_1Darray}, \hyperpage{158}
+    \subitem {log10init\_1Darray}, \hyperpage{159}
+    \subitem {loginit\_1Darray}, \hyperpage{160}
+    \subitem {make\_1D\_int\_array}, \hyperpage{161}
+    \subitem {make\_1Darray}, \hyperpage{161}
+    \subitem {make\_2Darray}, \hyperpage{162}
+
+  \indexspace
+
+  \item {volume}
+    \subitem {globals}, \hyperpage{11}
+
+  \indexspace
+
+  \item {window\_g}
+    \subitem {cosmology.c}, \hyperpage{58}
+  \item {window\_kth}
+    \subitem {cosmology.c}, \hyperpage{59}
+  \item {window\_rth}
+    \subitem {cosmology.c}, \hyperpage{59}
+  \item {WIR}
+    \subitem {header.h}, \hyperpage{26}
+  \item {wnw\_split.c}, \hyperpage{162}
+    \subitem {EH\_PS\_nw}, \hyperpage{163}
+    \subitem {EH\_PS\_w}, \hyperpage{165}
+    \subitem {pk\_Gfilter\_nw}, \hyperpage{166}
+    \subitem {pk\_nw\_integrand}, \hyperpage{167}
+    \subitem {T}, \hyperpage{168}
+    \subitem {T0}, \hyperpage{169}
+    \subitem {Tt0}, \hyperpage{170}
+
+  \indexspace
+
+  \item {z\_accel\_ptr}
+    \subitem {globals}, \hyperpage{11}
+  \item {z\_i}
+    \subitem {globals}, \hyperpage{11}
+  \item {z\_max}
+    \subitem {globals}, \hyperpage{11}
+
+\end{theindex}

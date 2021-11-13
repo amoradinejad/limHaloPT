@@ -1,10 +1,8 @@
-.TH "wnw_split.c" 3 "Tue Nov 9 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "wnw_split.c" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-wnw_split.c \- Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template 
-.br
-  
+wnw_split.c \- Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template arXiv:astro-ph/9709112\&.  
 
 .SH SYNOPSIS
 .br
@@ -34,7 +32,7 @@ wnw_split.c \- Documented wiggle-nowiggle split based on 3d Gaussian filter in l
 .ti -1c
 .RI "double \fBT0\fP (struct \fBCosmology\fP *Cx, double k)"
 .br
-.RI "Compute ????? AM:EDIT\&. "
+.RI "Compute the no-baryon transfer function given in Eq\&. "
 .ti -1c
 .RI "double \fBT\fP (struct \fBCosmology\fP *Cx, double k)"
 .br
@@ -42,13 +40,11 @@ wnw_split.c \- Documented wiggle-nowiggle split based on 3d Gaussian filter in l
 .ti -1c
 .RI "double \fBTt0\fP (struct \fBCosmology\fP *Cx, double k, double x1, double x2)"
 .br
-.RI "Compute ????? AM:EDIT\&. "
+.RI "Compute the function defined in Eq\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
-Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template 
-.br
- 
+Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template arXiv:astro-ph/9709112\&. 
 
 Azadeh Moradinezhad Dizgah, June 16th 2021
 .PP
@@ -152,6 +148,8 @@ Compute the total baryon+CDM transfer function\&.
 .PP
 \fBParameters\fP
 .RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
 \fIk\fP Input: wavenumber in unit of 1/Mpc 
 .RE
 .PP
@@ -163,26 +161,34 @@ value of baryon+cdm transfer function
 H0 value devided by the speed of light
 .PP
 approximate sound speed given in Eq\&. (26) of EH
+.PP
+Eq\&. 21 of EH ref\&.
+.PP
+Eq\&. 17 of EH ref 
+.br
+
 .SS "double T0 (struct \fBCosmology\fP * Cx, double k)"
 
 .PP
-Compute ????? AM:EDIT\&. 
+Compute the no-baryon transfer function given in Eq\&. 29 of EH ref
 .PP
 \fBParameters\fP
 .RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
 \fIk\fP Input: wavenumber in unit of 1/Mpc 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-value of ??? 
+value of nor-baryon transfer fit 
 .RE
 .PP
 approximate sound speed given in Eq\&. (26) of EH
 .SS "double Tt0 (struct \fBCosmology\fP * Cx, double k, double x1, double x2)"
 
 .PP
-Compute ????? AM:EDIT\&. 
+Compute the function defined in Eq\&. 19 of EH ref, which will be used to compute the fit for CDM transfer function in Eq\&. 17\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -197,7 +203,7 @@ Compute ????? AM:EDIT\&.
 .PP
 \fBReturns\fP
 .RS 4
-value of ???? x1 = alphac, x2 = betac 
+value of the function x1 = alphac, x2 = betac in Eq\&. 19\&. 
 .RE
 .PP
 

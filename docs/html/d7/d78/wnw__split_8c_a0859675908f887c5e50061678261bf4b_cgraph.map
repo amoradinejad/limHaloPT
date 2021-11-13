@@ -1,6 +1,6 @@
 <map id="EH_PS_nw" name="EH_PS_nw">
 <area shape="rect" id="node1" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="5,31,96,57"/>
 <area shape="rect" id="node2" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="144,5,183,32"/>
-<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute ????? AM:EDIT." alt="" coords="144,56,183,83"/>
-<area shape="rect" id="node3" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute ????? AM:EDIT." alt="" coords="231,5,272,32"/>
+<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute the no&#45;baryon transfer function given in Eq." alt="" coords="144,56,183,83"/>
+<area shape="rect" id="node3" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="231,5,272,32"/>
 </map>

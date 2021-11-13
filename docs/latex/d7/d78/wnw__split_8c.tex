@@ -2,13 +2,11 @@
 \label{wnw__split_8c}\index{wnw\_split.c@{wnw\_split.c}}
 
 
-Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ~\newline
-  
+Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ar\+Xiv\+:astro-\/ph/9709112.  
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for wnw\+\_\+split.\+c\+:
-\nopagebreak
+Include dependency graph for wnw\+\_\+split.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,16 +25,15 @@ double \mbox{\hyperlink{wnw__split_8c_a0cb6b540dc962bfd28da54fa6819f4df}{EH\+\_\
 double \mbox{\hyperlink{wnw__split_8c_a0859675908f887c5e50061678261bf4b}{EH\+\_\+\+PS\+\_\+nw}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double k0, double pk0)
 \begin{DoxyCompactList}\small\item\em Compute the Eisentein-\/\+Hu approximate nowiggle component of linear matter power spectrum. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{wnw__split_8c_ab920120944723a06efde25145e11a333}{T0}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k)
-\begin{DoxyCompactList}\small\item\em Compute ????? AM\+:EDIT. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute the no-\/baryon transfer function given in Eq. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3}{T}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k)
 \begin{DoxyCompactList}\small\item\em Compute the total baryon+\+CDM transfer function. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{wnw__split_8c_a3afdf7244c6d4a89df91aa101ee1a477}{Tt0}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double x1, double x2)
-\begin{DoxyCompactList}\small\item\em Compute ????? AM\+:EDIT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the function defined in Eq. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ~\newline
- 
+Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ar\+Xiv\+:astro-\/ph/9709112. 
 
 Azadeh Moradinezhad Dizgah, June 16th 2021
 
@@ -80,8 +77,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=280pt]{d7/d78/wnw__split_8c_a0859675908f887c5e50061678261bf4b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -152,8 +148,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{d7/d78/wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -189,8 +184,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{d7/d78/wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -209,6 +203,8 @@ Compute the total baryon+\+CDM transfer function.
 
 
 \begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
 {\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
 \hline
 \end{DoxyParams}
@@ -217,7 +213,12 @@ value of baryon+cdm transfer function
 \end{DoxyReturn}
 H0 value devided by the speed of light
 
-approximate sound speed given in Eq. (26) of EHHere is the call graph for this function\+:
+approximate sound speed given in Eq. (26) of EH
+
+Eq. 21 of EH ref.
+
+Eq. 17 of EH ref ~\newline
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -225,8 +226,7 @@ approximate sound speed given in Eq. (26) of EHHere is the call graph for this f
 \includegraphics[width=176pt]{d7/d78/wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -241,15 +241,19 @@ Here is the caller graph for this function\+:
 
 
 
-Compute ????? AM\+:EDIT. 
+Compute the no-\/baryon transfer function given in Eq. 
+
+29 of EH ref
 
 
 \begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
 {\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-value of ??? 
+value of nor-\/baryon transfer fit 
 \end{DoxyReturn}
 approximate sound speed given in Eq. (26) of EHHere is the caller graph for this function\+:
 \nopagebreak
@@ -267,7 +271,9 @@ approximate sound speed given in Eq. (26) of EHHere is the caller graph for this
 
 
 
-Compute ????? AM\+:EDIT. 
+Compute the function defined in Eq. 
+
+19 of EH ref, which will be used to compute the fit for CDM transfer function in Eq. 17.
 
 
 \begin{DoxyParams}{Parameters}
@@ -281,7 +287,7 @@ Compute ????? AM\+:EDIT.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-value of ???? x1 = alphac, x2 = betac 
+value of the function x1 = alphac, x2 = betac in Eq. 19. 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
