@@ -1,5 +1,6 @@
 
-/** @file wnw_split.c Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template  
+/** @file wnw_split.c Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, 
+ * and using the Eisentein-Hu wiggle-no wiggle template arXiv:astro-ph/9709112 
  * 
  * Azadeh Moradinezhad Dizgah, June 16th 2021
  *
@@ -135,10 +136,11 @@ double EH_PS_nw( struct Cosmology *Cx, double k,double k0,double pk0)
 
 
 /**
- * Compute ????? AM:EDIT
+ * Compute the no-baryon transfer function given in Eq. 29 of EH ref
  *
+ * @param Cx          Input: pointer to Cosmology structure
  * @param k           Input: wavenumber in unit of 1/Mpc
- * @return            value of ???
+ * @return value of nor-baryon transfer fit
  */
 
 double T0( struct Cosmology *Cx, double k)
@@ -165,8 +167,9 @@ double T0( struct Cosmology *Cx, double k)
 /** 
  * Compute the total baryon+CDM transfer function
  *
+ * @param Cx          Input: pointer to Cosmology structure
  * @param k           Input: wavenumber in unit of 1/Mpc
- * @return            value of baryon+cdm transfer function
+ * @return value of baryon+cdm transfer function
  */
 
 double T(struct Cosmology *Cx, double k)
@@ -205,8 +208,8 @@ double T(struct Cosmology *Cx, double k)
     double betab  = 0.5 + ombh2/om0h2 + (3.-2.*ombh2/om0h2) * sqrt(pow(17.2*om0h2,2.)+1.); 
     double f      = 1./(1.+pow(k*s/5.4, 4.));
 
-    double Tb = (Tt0(Cx,k,1.,1.)/(1.+pow(k*s/5.2,2.)) + alphab/(1.+pow(betab/(k*s),3.)) * exp(-pow(k/k_silk,1.4)))* gsl_sf_bessel_j0(k*st);
-    double Tc = f*Tt0(Cx,k,1.,betac) + (1.-f) *Tt0(Cx,k,alphac,betac);                                           
+    double Tb = (Tt0(Cx,k,1.,1.)/(1.+pow(k*s/5.2,2.)) + alphab/(1.+pow(betab/(k*s),3.)) * exp(-pow(k/k_silk,1.4)))* gsl_sf_bessel_j0(k*st); ///Eq. 21 of EH ref.
+    double Tc = f*Tt0(Cx,k,1.,betac) + (1.-f) *Tt0(Cx,k,alphac,betac);       ///Eq. 17 of EH ref                                    
 
     double out = ombh2/om0h2 * Tb + omch2/om0h2 * Tc;
 
@@ -215,16 +218,16 @@ double T(struct Cosmology *Cx, double k)
 
 
 /**
- * Compute ????? AM:EDIT
+ * Compute the function defined in Eq. 19 of EH ref, which will be used to compute the fit for CDM transfer function in Eq. 17.
  *
  * @param Cx          Input: pointer to Cosmology structure
  * @param k           Input: wavenumber in unit of 1/Mpc. 
  * @param x1          Input: betac AM:WHAT WAS THIS VARIABLE???
  * @param x2          Input: betac AM:WHAT WAS THIS VARIABLE???
- * @return            value of  ????
+ * @return            value of the function
  */
 
-double Tt0(struct Cosmology *Cx, double k, double x1, double x2) ///x1 = alphac, x2 = betac
+double Tt0(struct Cosmology *Cx, double k, double x1, double x2) ///x1 = alphac, x2 = betac in Eq. 19.
 {
     double h     = Cx->cosmo_pars[2];
     double ombh2 = pow(h,2.) * Cx->cosmo_pars[3];
