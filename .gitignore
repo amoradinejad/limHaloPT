@@ -1,5 +1,5 @@
 # Ignore Input and Output directories
-#docs/Doxyfile/
+#docs/Doxyfile
 #docs/DoxygenLayout.xml
 #docs/small.png
 #docs/latex
