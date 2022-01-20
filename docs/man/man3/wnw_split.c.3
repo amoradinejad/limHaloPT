@@ -1,0 +1,212 @@
+.TH "wnw_split.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wnw_split.c \- Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template arXiv:astro-ph/9709112\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBpk_Gfilter_nw\fP (struct \fBCosmology\fP *Cx, double k, double k0)"
+.br
+.RI "Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the nowiggle component involves calculating an integral (Eq\&. "
+.ti -1c
+.RI "double \fBpk_nw_integrand\fP (double x, void *par)"
+.br
+.RI "Integrand to compute the nowiggle matter power spectrum\&. "
+.ti -1c
+.RI "double \fBEH_PS_w\fP (struct \fBCosmology\fP *Cx, double k, double k0, double pk0)"
+.br
+.RI "Compute the Eisentein-Hu approximate wiggle component of linear matter power spectrum\&. "
+.ti -1c
+.RI "double \fBEH_PS_nw\fP (struct \fBCosmology\fP *Cx, double k, double k0, double pk0)"
+.br
+.RI "Compute the Eisentein-Hu approximate nowiggle component of linear matter power spectrum\&. "
+.ti -1c
+.RI "double \fBT0\fP (struct \fBCosmology\fP *Cx, double k)"
+.br
+.RI "Compute the no-baryon transfer function given in Eq\&. "
+.ti -1c
+.RI "double \fBT\fP (struct \fBCosmology\fP *Cx, double k)"
+.br
+.RI "Compute the total baryon+CDM transfer function\&. "
+.ti -1c
+.RI "double \fBTt0\fP (struct \fBCosmology\fP *Cx, double k, double x1, double x2)"
+.br
+.RI "Compute the function defined in Eq\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu wiggle-no wiggle template arXiv:astro-ph/9709112\&. 
+
+Azadeh Moradinezhad Dizgah, June 16th 2021
+.PP
+The algorithm closely follows Ref\&. arXiv:1509\&.02120 by Vlah et al\&. (described in Appendix A)
+.PP
+The following function will be called from other modules:
+.IP "1." 4
+\fBpk_Gfilter_nw()\fP 
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "double EH_PS_nw (struct \fBCosmology\fP * Cx, double k, double k0, double pk0)"
+
+.PP
+Compute the Eisentein-Hu approximate nowiggle component of linear matter power spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIk0\fP Input: smallest value of k, i\&.e\&. the largest scale 
+.br
+\fIpk0\fP Input: value of the power spectrum at the largest scale 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+P_nw(k) in unit of (Mpc)^3 
+.RE
+.PP
+
+.SS "double EH_PS_w (struct \fBCosmology\fP * Cx, double k, double k0, double pk0)"
+
+.PP
+Compute the Eisentein-Hu approximate wiggle component of linear matter power spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIk0\fP Input: smallest value of k, i\&.e\&. the largest scale 
+.br
+\fIpk0\fP Input: value of the power spectrum at the largest scale 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+P_w(k) in unit of (Mpc)^3 
+.RE
+.PP
+
+.SS "double pk_Gfilter_nw (struct \fBCosmology\fP * Cx, double k, double k0)"
+
+.PP
+Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the nowiggle component involves calculating an integral (Eq\&. A3 of Vlah et al) Below, \fBpk_nw_integrand()\fPis the corresponding integrand and \fBpk_Gfilter_nw()\fP is the integrator
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIk0\fP Input: smallest value of k, i\&.e\&. the largest scale 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+broadband component in unit of (Mpc)^3 
+.RE
+.PP
+
+.SS "double pk_nw_integrand (double x, void * par)"
+
+.PP
+Integrand to compute the nowiggle matter power spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Input: integration variable, k-values 
+.br
+\fIpar\fP Input: integration parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+integrand to be used in \fBpk_Gfilter_nw()\fP function 
+.br
+ integration variable x = logq 
+.RE
+.PP
+
+.SS "double T (struct \fBCosmology\fP * Cx, double k)"
+
+.PP
+Compute the total baryon+CDM transfer function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of baryon+cdm transfer function 
+.RE
+.PP
+H0 value devided by the speed of light
+.PP
+approximate sound speed given in Eq\&. (26) of EH
+.PP
+Eq\&. 21 of EH ref\&.
+.PP
+Eq\&. 17 of EH ref 
+.br
+
+.SS "double T0 (struct \fBCosmology\fP * Cx, double k)"
+
+.PP
+Compute the no-baryon transfer function given in Eq\&. 29 of EH ref
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of nor-baryon transfer fit 
+.RE
+.PP
+approximate sound speed given in Eq\&. (26) of EH
+.SS "double Tt0 (struct \fBCosmology\fP * Cx, double k, double x1, double x2)"
+
+.PP
+Compute the function defined in Eq\&. 19 of EH ref, which will be used to compute the fit for CDM transfer function in Eq\&. 17\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc\&. 
+.br
+\fIx1\fP Input: betac AM:WHAT WAS THIS VARIABLE??? 
+.br
+\fIx2\fP Input: betac AM:WHAT WAS THIS VARIABLE??? 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of the function x1 = alphac, x2 = betac in Eq\&. 19\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

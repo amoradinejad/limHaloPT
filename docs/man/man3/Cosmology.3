@@ -1,0 +1,56 @@
+.TH "Cosmology" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Cosmology \- Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological paramteres\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Global_Structs\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "struct \fBClass_Cosmology_Struct\fP \fBccs\fP"
+.br
+.ti -1c
+.RI "struct \fBLine\fP ** \fBLines\fP"
+.br
+.ti -1c
+.RI "struct \fBPS_xtr\fP * \fBPS_xtrapol\fP"
+.br
+.ti -1c
+.RI "int \fBNLines\fP"
+.br
+.ti -1c
+.RI "long \fBmode_model\fP"
+.br
+.ti -1c
+.RI "double \fBcosmo_pars\fP [\fBNPARS\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological paramteres\&. 
+
+This includes, the \fBClass_Cosmology_Struct\fP (initialized in \fBcosmology\&.c\fP), and \fBLine\fP Structure (initialized in \fBline_ingredients\&.c\fP)\&. 
+.SH "Field Documentation"
+.PP 
+.SS "struct \fBClass_Cosmology_Struct\fP ccs"
+
+.SS "double cosmo_pars[\fBNPARS\fP]"
+
+.SS "struct \fBLine\fP** Lines"
+
+.SS "long mode_model"
+
+.SS "int NLines"
+
+.SS "struct \fBPS_xtr\fP* PS_xtrapol"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

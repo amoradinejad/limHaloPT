@@ -1,0 +1,266 @@
+.TH "ps_halo_1loop.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ps_halo_1loop.c \- Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBPS_hh_G\fP (struct \fBCosmology\fP *Cx, double k, double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)"
+.br
+.RI "Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions\&. "
+.ti -1c
+.RI "double \fBPS_hh_PNG\fP (struct \fBCosmology\fP *Cx, double k, double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)"
+.br
+.RI "Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions of local shape\&. "
+.ti -1c
+.RI "static int \fBG_loop_integrands\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
+.br
+.RI "The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms\&. "
+.ti -1c
+.RI "void \fBCompute_G_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double *result)"
+.br
+.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions\&. "
+.ti -1c
+.RI "static int \fBPNG_loop_integrands\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
+.br
+.RI "The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms\&. "
+.ti -1c
+.RI "void \fBCompute_PNG_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long SPLIT, double *result)"
+.br
+.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape\&. "
+.ti -1c
+.RI "double \fBF2_s\fP (double k1, double k2, double mu)"
+.br
+.ti -1c
+.RI "double \fBS2_s\fP (double k1, double k2, double mu)"
+.br
+.ti -1c
+.RI "double \fBF3_s\fP (double k, double q, double mu)"
+.br
+.ti -1c
+.RI "double \fBS2\fP (double mu)"
+.br
+.ti -1c
+.RI "double \fBF2\fP (double k1, double k2, double mu)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglobals\fP \fBgb\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+.PP
+This module computes the 1loop halo/galaxy power sprtcurm in real-space via direct numerical integration\&. IR-resummation and EFT counter terms are included\&. In addition to loops due to gravitational loops, terms arising only in the presence of local PNG are also included\&. The explicit expressions of all the loops are given in 2010\&.14523\&.
+.PP
+In summary, the following functions can be called from other modules:
+.IP "1." 4
+\fBPS_hh_G()\fP
+.IP "2." 4
+\fBPS_hh_PNG()\fP
+.IP "3." 4
+Compute_Gloops()
+.IP "4." 4
+Compute_PNGloops()
+.IP "5." 4
+\fBF2_s()\fP
+.IP "6." 4
+\fBF3_s()\fP
+.IP "7." 4
+\fBS2_s()\fP
+.IP "8." 4
+\fBF2()\fP
+.IP "9." 4
+\fBS2()\fP 
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void Compute_G_loops (struct \fBCosmology\fP * Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double * result)"
+
+.PP
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to cosmology structure 
+.br
+\fIk\fP Input: wavenumber 
+.br
+\fIz\fP Input: redshift of interest 
+.br
+\fIIR_switch\fP Input: switch to decide whether to perform IR resummation or no 
+.br
+\fIhm_switch\fP Input: switch to decide whether to compute the 1loop terms due to matter or bias 
+.br
+\fISPLIT\fP Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum 
+.br
+\fIresult\fP Output: an output array containing the results of the 1loop terms, has 2 elements for hm_switch=MATTER, and 6 elements for hm_switch=HALO 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "void Compute_PNG_loops (struct \fBCosmology\fP * Cx, double k, double z, long IR_switch, long SPLIT, double * result)"
+
+.PP
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to cosmology structure 
+.br
+\fIk\fP Input: wavenumber 
+.br
+\fIz\fP Input: redshift of interest 
+.br
+\fIIR_switch\fP Input: switch to decide whether to perform IR resummation or no 
+.br
+\fISPLIT\fP Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum 
+.br
+\fIresult\fP Output: an output array containing the results of the 1loop terms, has 8 elements for hm_switch=HALO 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "double F2 (double k1, double k2, double mu)"
+
+.SS "double F2_s (double k1, double k2, double mu)"
+
+.SS "double F3_s (double k, double q, double mu)"
+
+.SS "static int G_loop_integrands (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
+.RE
+.PP
+Model used in 1907\&.06666, the integrals are given in the appendix, Eq\&. A1, note that my S2_s = sigma^2(q,k-1) and F2_s = F2(q,k-q) in their notation\&. Factor of 2\&. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle\&. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2\&.*M_PI,3\&.), which I do in my pk_lin() function\&. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3)\&.
+.PP
+The integrands below correspond to the follwing bias combinaions:
+.SS "static int PNG_loop_integrands (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
+.RE
+.PP
+Factor of 2\&. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle\&. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2\&.*M_PI,3\&.), which I do in my pk_lin() function\&. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3)\&.
+.PP
+The integrands below correspond to the follwing bias combinaions:
+.SS "double PS_hh_G (struct \fBCosmology\fP * Cx, double k, double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)"
+
+.PP
+Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to cosmology structure 
+.br
+\fIk\fP Input: wavenumber 
+.br
+\fIz\fP Input: redshift of interest 
+.br
+\fIM\fP Input: halo mass, used in computing the halo bias 
+.br
+\fImode_pt\fP Input: switch to decide whether to compute tree-level halo power spectrum or the 1loop 
+.br
+\fIIR_switch\fP Input: switch to decide whether to perform IR resummation or no 
+.br
+\fISPLIT\fP Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum 
+.br
+\fImode_mf\fP Input: switch to set the theoretical model of the mass function used to compute the halo biases 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+G loop contributions of P_h 
+.RE
+.PP
+
+.SS "double PS_hh_PNG (struct \fBCosmology\fP * Cx, double k, double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)"
+
+.PP
+Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions of local shape\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to cosmology structure 
+.br
+\fIk\fP Input: wavenumber 
+.br
+\fIz\fP Input: redshift of interest 
+.br
+\fIM\fP Input: halo mass, used in computing the halo bias 
+.br
+\fImode_pt\fP Input: switch to decide whether to compute tree-level halo power spectrum or the 1loop 
+.br
+\fIIR_switch\fP Input: switch to decide whether to perform IR resummation or no 
+.br
+\fISPLIT\fP Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum 
+.br
+\fImode_mf\fP Input: switch to set the theoretical model of the mass function used to compute the halo biases 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+PNG loop contributions of P_h 
+.RE
+.PP
+
+.SS "double S2 (double mu)"
+
+.SS "double S2_s (double k1, double k2, double mu)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

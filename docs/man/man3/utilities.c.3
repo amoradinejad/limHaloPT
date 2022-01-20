@@ -1,0 +1,246 @@
+.TH "utilities.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utilities.c \- Documented basic utility functions used by other modules of the code\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double * \fBmake_1Darray\fP (long size)"
+.br
+.RI "Allocate memory to a 1d array of type double and length size\&. "
+.ti -1c
+.RI "int * \fBmake_1D_int_array\fP (long size)"
+.br
+.RI "Allocate memory to a 1d array of type integer and length size\&. "
+.ti -1c
+.RI "double ** \fBmake_2Darray\fP (long nrows, long ncols)"
+.br
+.RI "Allocate memory to a 2d array of type double\&. "
+.ti -1c
+.RI "void \fBfree_2Darray\fP (double **m)"
+.br
+.RI "Free the memory allocated to a 2d array\&. "
+.ti -1c
+.RI "double * \fBinit_1Darray\fP (long n, double xmin, double xmax)"
+.br
+.RI "initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on linear scale "
+.ti -1c
+.RI "double * \fBloginit_1Darray\fP (long n, double xmin, double xmax)"
+.br
+.RI "initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on natural-log scale "
+.ti -1c
+.RI "double * \fBlog10init_1Darray\fP (long n, double inc, double xmin)"
+.br
+.RI "initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on log10 scale "
+.ti -1c
+.RI "long \fBcount_lines_in_file\fP (char *fname)"
+.br
+.RI "Count the number of lines of a file\&. "
+.ti -1c
+.RI "long \fBcount_cols_in_file\fP (char *fname)"
+.br
+.RI "Count the number of columns of a file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Documented basic utility functions used by other modules of the code\&. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+.PP
+In summary, the following functions can be called from other modules:
+.IP "1." 4
+\fBmake_1Darray()\fP dynamically allocates memory to a 1d array
+.IP "2." 4
+\fBmake_2Darray()\fP dynamically allocates memory to a 2d array
+.IP "3." 4
+\fBfree_2Darray()\fP free the memory allocated to a 2d array 
+.br
+
+.IP "4." 4
+\fBinit_1Darray()\fP initialize a 1d array with linear spacing
+.IP "5." 4
+\fBloginit_1Darray()\fP initialize a 1d array with natural-log spacing
+.IP "6." 4
+\fBlog10init_1Darray()\fP initialize a 1d array with log10 spacing
+.IP "7." 4
+\fBcount_lines_in_file()\fP count the number of lines of a file
+.IP "8." 4
+\fBcount_cols_in_file()\fP count number of columns of a file
+.IP "9." 4
+return_arr() 
+.br
+ 
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "long count_cols_in_file (char * fname)"
+
+.PP
+Count the number of columns of a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfname\fP Input: filename 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+long integer value of ncols 
+.RE
+.PP
+
+.SS "long count_lines_in_file (char * fname)"
+
+.PP
+Count the number of lines of a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfname\fP Input: filename 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+long integer value of nlines 
+.RE
+.PP
+
+.SS "void free_2Darray (double ** m)"
+
+.PP
+Free the memory allocated to a 2d array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIm\fP Input: double pointer to the elements of 2d array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.SS "double * init_1Darray (long n, double xmin, double xmax)"
+
+.PP
+initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on linear scale 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Input: number of elements 
+.br
+\fIxmin\fP Input: start point 
+.br
+\fIxmax\fP Input: end point
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to a double type 1d array, with values initialized 
+.RE
+.PP
+
+.SS "double * log10init_1Darray (long n, double inc, double xmin)"
+
+.PP
+initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on log10 scale 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Input: number of elements 
+.br
+\fIinc\fP Input: increment 
+.br
+\fIxmin\fP Input: start point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to a double type 1d array, with values initialized 
+.RE
+.PP
+
+.SS "double * loginit_1Darray (long n, double xmin, double xmax)"
+
+.PP
+initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on natural-log scale 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Input: number of elements 
+.br
+\fIxmin\fP Input: start point 
+.br
+\fIxmax\fP Input: end point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to a double type 1d array, with values initialized 
+.RE
+.PP
+
+.SS "int * make_1D_int_array (long size)"
+
+.PP
+Allocate memory to a 1d array of type integer and length size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Input: length of the arrat 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to an integer type 1d array 
+.RE
+.PP
+
+.SS "double * make_1Darray (long size)"
+
+.PP
+Allocate memory to a 1d array of type double and length size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Input: length of the array 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to a 1d array 
+.RE
+.PP
+
+.SS "double ** make_2Darray (long nrows, long ncols)"
+
+.PP
+Allocate memory to a 2d array of type double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInrows\fP Input: number of rows of the output array 
+.br
+\fIncols\fP Input: number of columns of the output array 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a double pointer to a double type 2d array 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

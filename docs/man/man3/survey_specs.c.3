@@ -1,0 +1,133 @@
+.TH "survey_specs.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+survey_specs.c \- Documented computation of some survey-related functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'header\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "double \fBshell_volume\fP (struct \fBCosmology\fP *Cx, double z, double fsky)"
+.br
+.RI "Compute the comoving volume of a survey covering redshift up to z\&. "
+.ti -1c
+.RI "double \fBkmin_val\fP (struct \fBCosmology\fP *Cx, double zmin, double zmax, double fsky)"
+.br
+.RI "Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin [zmin,zmax]\&. "
+.ti -1c
+.RI "double \fBkmax_Brent\fP (double kmax, void *params)"
+.br
+.RI "The function to be passed to Brent solver to compute kmax\&. "
+.ti -1c
+.RI "double \fBkmax_Brent_solver\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the maximum k-value used in Fisher forecast at each redshift bin\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglobals\fP \fBgb\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Documented computation of some survey-related functions\&. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+.PP
+In summary, the following functions can be called from other modules:
+.IP "1." 4
+\fBshell_volume()\fP computes the comoving volume of a survey covering redshift up to z
+.IP "2." 4
+\fBkmin_val()\fP computes the fundumental k-mode of a given redshift shell
+.IP "3." 4
+\fBkmax_Brent_solver()\fP computes the kmax value such that kmax(z=0) = 0\&.15 h/Mpc 
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "double kmax_Brent (double kmax, void * params)"
+
+.PP
+The function to be passed to Brent solver to compute kmax\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkmax\fP Inpute: maximum wavenumber in unit of 1/Mpc 
+.br
+\fIparams\fP Input: parameters to be passed to the solver 
+.RE
+.PP
+
+.SS "double kmax_Brent_solver (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the maximum k-value used in Fisher forecast at each redshift bin\&. We follow Giannantonio et al\&. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin\&. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36\&. This can be achieved by solving Eq\&. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0\&.36\&. Instead of fixing sigma^2 to 0\&.36, I chose the variance such that kmax(z=0) = 0\&.15 h/Mpc\&. This corresponds to the variance of ~0\&.33 at z=0 \&. In the forecast, I additionally always impose kmax<0\&.3 h/Mpc cut\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift of interest 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+kmax 
+.RE
+.PP
+in short paper we used, 3\&.631872e-01 ; 
+.br
+
+.SS "double kmin_val (struct \fBCosmology\fP * Cx, double zmin, double zmax, double fsky)"
+
+.PP
+Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin [zmin,zmax]\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: \fBCosmology\fP structure 
+.br
+\fIzmin\fP Input: minimum redshift 
+.br
+\fIzmax\fP Input: maximum redshift 
+.br
+\fIfsky\fP Input: sky-coverage of teh survey 
+.RE
+.PP
+
+.SS "double shell_volume (struct \fBCosmology\fP * Cx, double z, double fsky)"
+
+.PP
+Compute the comoving volume of a survey covering redshift up to z\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift 
+.br
+\fIfsky\fP Input: sky-coverage of teh survey 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the comoving z-shell volume 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

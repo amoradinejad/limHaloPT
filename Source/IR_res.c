@@ -17,6 +17,7 @@
  */
 
 #include "header.h"
+extern struct globals gb;
 
 
 /**
@@ -55,7 +56,6 @@ double pm_IR_LO(struct Cosmology *Cx, double k, double z, long SPLIT)
  */
 double pm_IR_NLO(struct Cosmology *Cx, double k,  double z, long SPLIT)
 {
-    extern struct globals gb;
     static double sig2_NLO = - 1.;
     double k0 = 1.e-4;
 
@@ -122,7 +122,6 @@ double IR_Sigma2_integrand(double x, void *par)
  */
 double IR_Sigma2(struct Cosmology *Cx, double z, double k0, long SPLIT)
 {
-    extern struct globals gb;
     double result=0., error=0.;
 
     gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
