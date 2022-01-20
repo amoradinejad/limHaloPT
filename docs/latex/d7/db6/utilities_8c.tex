@@ -1,0 +1,284 @@
+\hypertarget{utilities_8c}{}\doxysubsection{utilities.\+c File Reference}
+\label{utilities_8c}\index{utilities.c@{utilities.c}}
+
+
+Documented basic utility functions used by other modules of the code.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for utilities.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d66/utilities_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{utilities_8c_abbef0cde3da2c741890e66bf8f307995}{make\+\_\+1\+Darray}} (long size)
+\begin{DoxyCompactList}\small\item\em Allocate memory to a 1d array of type double and length size. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{utilities_8c_ae8fc001408865b8dfdcbbba42391ad98}{make\+\_\+1\+D\+\_\+int\+\_\+array}} (long size)
+\begin{DoxyCompactList}\small\item\em Allocate memory to a 1d array of type integer and length size. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}{make\+\_\+2\+Darray}} (long nrows, long ncols)
+\begin{DoxyCompactList}\small\item\em Allocate memory to a 2d array of type double. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}{free\+\_\+2\+Darray}} (double $\ast$$\ast$m)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated to a 2d array. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{utilities_8c_aacaa803e04084752f13eb25e236f46aa}{init\+\_\+1\+Darray}} (long n, double xmin, double xmax)
+\begin{DoxyCompactList}\small\item\em initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on linear scale \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8}{loginit\+\_\+1\+Darray}} (long n, double xmin, double xmax)
+\begin{DoxyCompactList}\small\item\em initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on natural-\/log scale \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{utilities_8c_abe221b42f18db326ebf3161fdcaa7f34}{log10init\+\_\+1\+Darray}} (long n, double inc, double xmin)
+\begin{DoxyCompactList}\small\item\em initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on log10 scale \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{utilities_8c_a5dcab02654b4d74caf32c73188f698db}{count\+\_\+lines\+\_\+in\+\_\+file}} (char $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Count the number of lines of a file. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{utilities_8c_a109c999502807d61f966ed9ec4d4746b}{count\+\_\+cols\+\_\+in\+\_\+file}} (char $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Count the number of columns of a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Documented basic utility functions used by other modules of the code. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+
+In summary, the following functions can be called from other modules\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{utilities_8c_abbef0cde3da2c741890e66bf8f307995}{make\+\_\+1\+Darray()}} dynamically allocates memory to a 1d array
+\item \mbox{\hyperlink{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}{make\+\_\+2\+Darray()}} dynamically allocates memory to a 2d array
+\item \mbox{\hyperlink{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}{free\+\_\+2\+Darray()}} free the memory allocated to a 2d array ~\newline
+
+\item \mbox{\hyperlink{utilities_8c_aacaa803e04084752f13eb25e236f46aa}{init\+\_\+1\+Darray()}} initialize a 1d array with linear spacing
+\item \mbox{\hyperlink{utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8}{loginit\+\_\+1\+Darray()}} initialize a 1d array with natural-\/log spacing
+\item \mbox{\hyperlink{utilities_8c_abe221b42f18db326ebf3161fdcaa7f34}{log10init\+\_\+1\+Darray()}} initialize a 1d array with log10 spacing
+\item \mbox{\hyperlink{utilities_8c_a5dcab02654b4d74caf32c73188f698db}{count\+\_\+lines\+\_\+in\+\_\+file()}} count the number of lines of a file
+\item \mbox{\hyperlink{utilities_8c_a109c999502807d61f966ed9ec4d4746b}{count\+\_\+cols\+\_\+in\+\_\+file()}} count number of columns of a file
+\item return\+\_\+arr() ~\newline
+ 
+\end{DoxyEnumerate}
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{utilities_8c_a109c999502807d61f966ed9ec4d4746b}\label{utilities_8c_a109c999502807d61f966ed9ec4d4746b}} 
+\index{utilities.c@{utilities.c}!count\_cols\_in\_file@{count\_cols\_in\_file}}
+\index{count\_cols\_in\_file@{count\_cols\_in\_file}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{count\_cols\_in\_file()}{count\_cols\_in\_file()}}
+{\footnotesize\ttfamily long count\+\_\+cols\+\_\+in\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+
+
+Count the number of columns of a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & Input\+: filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long integer value of ncols 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utilities_8c_a5dcab02654b4d74caf32c73188f698db}\label{utilities_8c_a5dcab02654b4d74caf32c73188f698db}} 
+\index{utilities.c@{utilities.c}!count\_lines\_in\_file@{count\_lines\_in\_file}}
+\index{count\_lines\_in\_file@{count\_lines\_in\_file}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{count\_lines\_in\_file()}{count\_lines\_in\_file()}}
+{\footnotesize\ttfamily long count\+\_\+lines\+\_\+in\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+
+
+Count the number of lines of a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname} & Input\+: filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long integer value of nlines 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/db6/utilities_8c_a5dcab02654b4d74caf32c73188f698db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}\label{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}} 
+\index{utilities.c@{utilities.c}!free\_2Darray@{free\_2Darray}}
+\index{free\_2Darray@{free\_2Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{free\_2Darray()}{free\_2Darray()}}
+{\footnotesize\ttfamily void free\+\_\+2\+Darray (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated to a 2d array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Input\+: double pointer to the elements of 2d array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utilities_8c_aacaa803e04084752f13eb25e236f46aa}\label{utilities_8c_aacaa803e04084752f13eb25e236f46aa}} 
+\index{utilities.c@{utilities.c}!init\_1Darray@{init\_1Darray}}
+\index{init\_1Darray@{init\_1Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{init\_1Darray()}{init\_1Darray()}}
+{\footnotesize\ttfamily double $\ast$ init\+\_\+1\+Darray (\begin{DoxyParamCaption}\item[{long}]{n,  }\item[{double}]{xmin,  }\item[{double}]{xmax }\end{DoxyParamCaption})}
+
+
+
+initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on linear scale 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Input\+: number of elements \\
+\hline
+{\em xmin} & Input\+: start point \\
+\hline
+{\em xmax} & Input\+: end point\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a double type 1d array, with values initialized 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{d7/db6/utilities_8c_aacaa803e04084752f13eb25e236f46aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/db6/utilities_8c_aacaa803e04084752f13eb25e236f46aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utilities_8c_abe221b42f18db326ebf3161fdcaa7f34}\label{utilities_8c_abe221b42f18db326ebf3161fdcaa7f34}} 
+\index{utilities.c@{utilities.c}!log10init\_1Darray@{log10init\_1Darray}}
+\index{log10init\_1Darray@{log10init\_1Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{log10init\_1Darray()}{log10init\_1Darray()}}
+{\footnotesize\ttfamily double $\ast$ log10init\+\_\+1\+Darray (\begin{DoxyParamCaption}\item[{long}]{n,  }\item[{double}]{inc,  }\item[{double}]{xmin }\end{DoxyParamCaption})}
+
+
+
+initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on log10 scale 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Input\+: number of elements \\
+\hline
+{\em inc} & Input\+: increment \\
+\hline
+{\em xmin} & Input\+: start point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a double type 1d array, with values initialized 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{d7/db6/utilities_8c_abe221b42f18db326ebf3161fdcaa7f34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8}\label{utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8}} 
+\index{utilities.c@{utilities.c}!loginit\_1Darray@{loginit\_1Darray}}
+\index{loginit\_1Darray@{loginit\_1Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{loginit\_1Darray()}{loginit\_1Darray()}}
+{\footnotesize\ttfamily double $\ast$ loginit\+\_\+1\+Darray (\begin{DoxyParamCaption}\item[{long}]{n,  }\item[{double}]{xmin,  }\item[{double}]{xmax }\end{DoxyParamCaption})}
+
+
+
+initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and evenely-\/space on natural-\/log scale 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Input\+: number of elements \\
+\hline
+{\em xmin} & Input\+: start point \\
+\hline
+{\em xmax} & Input\+: end point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a double type 1d array, with values initialized 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{d7/db6/utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/db6/utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utilities_8c_ae8fc001408865b8dfdcbbba42391ad98}\label{utilities_8c_ae8fc001408865b8dfdcbbba42391ad98}} 
+\index{utilities.c@{utilities.c}!make\_1D\_int\_array@{make\_1D\_int\_array}}
+\index{make\_1D\_int\_array@{make\_1D\_int\_array}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{make\_1D\_int\_array()}{make\_1D\_int\_array()}}
+{\footnotesize\ttfamily int $\ast$ make\+\_\+1\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{size }\end{DoxyParamCaption})}
+
+
+
+Allocate memory to a 1d array of type integer and length size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Input\+: length of the arrat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an integer type 1d array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utilities_8c_abbef0cde3da2c741890e66bf8f307995}\label{utilities_8c_abbef0cde3da2c741890e66bf8f307995}} 
+\index{utilities.c@{utilities.c}!make\_1Darray@{make\_1Darray}}
+\index{make\_1Darray@{make\_1Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{make\_1Darray()}{make\_1Darray()}}
+{\footnotesize\ttfamily double $\ast$ make\+\_\+1\+Darray (\begin{DoxyParamCaption}\item[{long}]{size }\end{DoxyParamCaption})}
+
+
+
+Allocate memory to a 1d array of type double and length size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Input\+: length of the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a 1d array 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/db6/utilities_8c_abbef0cde3da2c741890e66bf8f307995_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}\label{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}} 
+\index{utilities.c@{utilities.c}!make\_2Darray@{make\_2Darray}}
+\index{make\_2Darray@{make\_2Darray}!utilities.c@{utilities.c}}
+\doxyparagraph{\texorpdfstring{make\_2Darray()}{make\_2Darray()}}
+{\footnotesize\ttfamily double $\ast$$\ast$ make\+\_\+2\+Darray (\begin{DoxyParamCaption}\item[{long}]{nrows,  }\item[{long}]{ncols }\end{DoxyParamCaption})}
+
+
+
+Allocate memory to a 2d array of type double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nrows} & Input\+: number of rows of the output array \\
+\hline
+{\em ncols} & Input\+: number of columns of the output array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a double pointer to a double type 2d array 
+\end{DoxyReturn}

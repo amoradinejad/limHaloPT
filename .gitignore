@@ -2,8 +2,8 @@
 #docs/Doxyfile/
 #docs/DoxygenLayout.xml
 #docs/small.png
-docs/latex
-docs/html
+#docs/latex
+#docs/html
 
 # Ignore Logs and compiled code
 *.o 

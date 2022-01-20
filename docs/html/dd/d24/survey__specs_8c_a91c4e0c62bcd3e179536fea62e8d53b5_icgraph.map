@@ -1,0 +1,4 @@
+<map id="shell_volume" name="shell_volume">
+<area shape="rect" id="node1" title="Compute the comoving volume of a survey covering redshift up to z." alt="" coords="128,5,227,32"/>
+<area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a324eb852d8e2bb534361c033279c957c" title="Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin ..." alt="" coords="5,5,80,32"/>
+</map>
