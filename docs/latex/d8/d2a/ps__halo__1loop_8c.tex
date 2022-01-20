@@ -6,7 +6,8 @@ Documented real-\/space, direct integration computation of 1loop contributions o
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for ps\+\_\+halo\+\_\+1loop.\+c\+:\nopagebreak
+Include dependency graph for ps\+\_\+halo\+\_\+1loop.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,14 +21,14 @@ double \mbox{\hyperlink{ps__halo__1loop_8c_a689859f9764b839323002fbb8be176e4}{PS
 \begin{DoxyCompactList}\small\item\em Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__halo__1loop_8c_ad87e930ddfa85973919af4ca6b3d99ce}{PS\+\_\+hh\+\_\+\+PNG}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M, long mode\+\_\+pt, long IR\+\_\+switch, long SPLIT, long mode\+\_\+mf)
 \begin{DoxyCompactList}\small\item\em Compute contributions up to 1loop to halo power spectrum arising from non-\/\+Gaussian initial conditions of local shape. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a}{Compute\+\_\+\+G\+\_\+loops}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, long IR\+\_\+switch, long hm\+\_\+switch, long SPLIT, double $\ast$result)
-\begin{DoxyCompactList}\small\item\em Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function \mbox{\hyperlink{ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b}{G\+\_\+loop\+\_\+integrands()}} defines the integrand and \mbox{\hyperlink{ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a}{Compute\+\_\+\+G\+\_\+loops()}} computes the integrals. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b}{G\+\_\+loop\+\_\+integrands}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
-\item 
-void \mbox{\hyperlink{ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892}{Compute\+\_\+\+PNG\+\_\+loops}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, long IR\+\_\+switch, long SPLIT, double $\ast$result)
-\begin{DoxyCompactList}\small\item\em Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-\/\+Gaussian initial conditions of local shape The function \mbox{\hyperlink{ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083}{PNG\+\_\+loop\+\_\+integrands()}} defines the integrand and \mbox{\hyperlink{ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892}{Compute\+\_\+\+PNG\+\_\+loops()}} computes the integrals. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a}{Compute\+\_\+\+G\+\_\+loops}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, long IR\+\_\+switch, long hm\+\_\+switch, long SPLIT, double $\ast$result)
+\begin{DoxyCompactList}\small\item\em Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083}{PNG\+\_\+loop\+\_\+integrands}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
-\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892}{Compute\+\_\+\+PNG\+\_\+loops}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, long IR\+\_\+switch, long SPLIT, double $\ast$result)
+\begin{DoxyCompactList}\small\item\em Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-\/\+Gaussian initial conditions of local shape. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__halo__1loop_8c_afb089b4dc4bcc6d07f9c88f87ba75eb1}{F2\+\_\+s}} (double k1, double k2, double mu)
 \item 
 double \mbox{\hyperlink{ps__halo__1loop_8c_ad334e40e3de75b00cfa12ed6da717c26}{S2\+\_\+s}} (double k1, double k2, double mu)
@@ -74,7 +75,7 @@ In summary, the following functions can be called from other modules\+:
 
 
 
-Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function \mbox{\hyperlink{ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b}{G\+\_\+loop\+\_\+integrands()}} defines the integrand and \mbox{\hyperlink{ps__halo__1loop_8c_a06812b0e40a5e228647283536b82fa5a}{Compute\+\_\+\+G\+\_\+loops()}} computes the integrals. 
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -121,7 +122,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-\/\+Gaussian initial conditions of local shape The function \mbox{\hyperlink{ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083}{PNG\+\_\+loop\+\_\+integrands()}} defines the integrand and \mbox{\hyperlink{ps__halo__1loop_8c_a05a2d154a1db42273c26d91b1145b892}{Compute\+\_\+\+PNG\+\_\+loops()}} computes the integrals. 
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-\/\+Gaussian initial conditions of local shape. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -162,7 +163,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{F2()}{F2()}}
 {\footnotesize\ttfamily double F2 (\begin{DoxyParamCaption}\item[{double}]{k1,  }\item[{double}]{k2,  }\item[{double}]{mu }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,7 +177,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{F2\_s()}{F2\_s()}}
 {\footnotesize\ttfamily double F2\+\_\+s (\begin{DoxyParamCaption}\item[{double}]{k1,  }\item[{double}]{k2,  }\item[{double}]{mu }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,7 +191,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{F3\_s()}{F3\_s()}}
 {\footnotesize\ttfamily double F3\+\_\+s (\begin{DoxyParamCaption}\item[{double}]{k,  }\item[{double}]{q,  }\item[{double}]{mu }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -201,6 +205,23 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{G\_loop\_integrands()}{G\_loop\_integrands()}}
 {\footnotesize\ttfamily static int G\+\_\+loop\+\_\+integrands (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ndim} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: An array of integration variables \\
+\hline
+{\em ncomp} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em ff} & Input\+: Array of values of the integrand of dimension fdim \\
+\hline
+{\em p} & Input\+: integration parmaeters return the error status \\
+\hline
+\end{DoxyParams}
 Model used in 1907.\+06666, the integrals are given in the appendix, Eq. A1, note that my S2\+\_\+s = sigma$^\wedge$2(q,k-\/1) and F2\+\_\+s = F2(q,k-\/q) in their notation. Factor of 2. $\ast$ (logqmax -\/ logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2$\ast$\+PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano\textquotesingle{}s measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.$\ast$\+M\+\_\+\+PI,3.), which I do in my pk\+\_\+lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3).
 
 The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:
@@ -211,7 +232,8 @@ The integrands below correspond to the follwing bias combinaions\+:Here is the c
 \includegraphics[width=350pt]{d8/d2a/ps__halo__1loop_8c_a9d475dd2ab5b0120a8c78ba15080494b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,6 +246,23 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{PNG\_loop\_integrands()}{PNG\_loop\_integrands()}}
 {\footnotesize\ttfamily static int PNG\+\_\+loop\+\_\+integrands (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ndim} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: An array of integration variables \\
+\hline
+{\em ncomp} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em ff} & Input\+: Array of values of the integrand of dimension fdim \\
+\hline
+{\em p} & Input\+: integration parmaeters return the error status \\
+\hline
+\end{DoxyParams}
 Factor of 2. $\ast$ (logqmax -\/ logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2$\ast$\+PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano\textquotesingle{}s measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.$\ast$\+M\+\_\+\+PI,3.), which I do in my pk\+\_\+lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3).
 
 The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:
@@ -234,7 +273,8 @@ The integrands below correspond to the follwing bias combinaions\+:Here is the c
 \includegraphics[width=350pt]{d8/d2a/ps__halo__1loop_8c_a715a83bcf567a070a9c018925faad083_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -333,7 +373,8 @@ Here is the call graph for this function\+:
 \doxyparagraph{\texorpdfstring{S2\_s()}{S2\_s()}}
 {\footnotesize\ttfamily double S2\+\_\+s (\begin{DoxyParamCaption}\item[{double}]{k1,  }\item[{double}]{k2,  }\item[{double}]{mu }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

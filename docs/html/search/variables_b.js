@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['ng_0',['ng',['../d8/d11/structglobals.html#adb9952b5a42d31a5a108e1e36dc4b051',1,'globals']]],
-  ['nl_1',['nl',['../d2/dd8/struct_class___cosmology___struct.html#a17f1c3e1d9b3488c28828ac7e392866d',1,'Class_Cosmology_Struct']]],
-  ['nlines_2',['NLines',['../d2/dbd/struct_cosmology.html#ad8456f0eaa57c17e323994a2d0b1f159',1,'Cosmology']]],
-  ['npars_3',['Npars',['../d8/d11/structglobals.html#abca16ad30bddc5b0b828579c1b60bee3',1,'globals']]],
-  ['npointsinterp_4',['npointsInterp',['../d2/d9d/struct_line.html#a5af76072d7991fda41ed345aa75ee7ee',1,'Line']]],
-  ['ns_5',['ns',['../d8/d11/structglobals.html#a476bed566643072ee0ed28f78d0db370',1,'globals']]]
+  ['m_5fmax_0',['M_max',['../d8/d11/structglobals.html#a2632bdf15b0621fce8a5847a169e6f07',1,'globals']]],
+  ['m_5fmin_1',['M_min',['../d8/d11/structglobals.html#a98eba0f5ed01d0fef31a761e74c3eb86',1,'globals']]],
+  ['mass_2',['mass',['../d8/d11/structglobals.html#a244bf42c46054cf1113be44d55f2156d',1,'globals']]],
+  ['mode_5fmodel_3',['mode_model',['../d2/dbd/struct_cosmology.html#a4b019ecf79b36a4e0ddc5e73f130f79a',1,'Cosmology']]],
+  ['mom1_5faccel_5fptr_4',['mom1_accel_ptr',['../d2/d9d/struct_line.html#ad2e644b5a90d727f8e08a9eb0d708f80',1,'Line']]],
+  ['mom1_5fspline_5fptr_5',['mom1_spline_ptr',['../d2/d9d/struct_line.html#ae8040cc245eea740519f6461096385df',1,'Line']]],
+  ['mom2_5faccel_5fptr_6',['mom2_accel_ptr',['../d2/d9d/struct_line.html#ac33bc84e6c67b56e4076354c2a35fb10',1,'Line']]],
+  ['mom2_5fspline_5fptr_7',['mom2_spline_ptr',['../d2/d9d/struct_line.html#aa116bd0834a03b6b4f35ca1e999adcbc',1,'Line']]]
 ];

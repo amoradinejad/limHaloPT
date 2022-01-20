@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['m_5fmax_0',['M_max',['../d8/d11/structglobals.html#a2632bdf15b0621fce8a5847a169e6f07',1,'globals']]],
-  ['m_5fmin_1',['M_min',['../d8/d11/structglobals.html#a98eba0f5ed01d0fef31a761e74c3eb86',1,'globals']]],
-  ['mass_2',['mass',['../d8/d11/structglobals.html#a244bf42c46054cf1113be44d55f2156d',1,'globals']]],
-  ['mode_5fnu_3',['mode_nu',['../d2/dbd/struct_cosmology.html#a0e1e29102584fa127dceed1413913a13',1,'Cosmology']]],
-  ['mom1_5faccel_5fptr_4',['mom1_accel_ptr',['../d2/d9d/struct_line.html#ad2e644b5a90d727f8e08a9eb0d708f80',1,'Line']]],
-  ['mom1_5fspline_5fptr_5',['mom1_spline_ptr',['../d2/d9d/struct_line.html#ae8040cc245eea740519f6461096385df',1,'Line']]],
-  ['mom2_5faccel_5fptr_6',['mom2_accel_ptr',['../d2/d9d/struct_line.html#ac33bc84e6c67b56e4076354c2a35fb10',1,'Line']]],
-  ['mom2_5fspline_5fptr_7',['mom2_spline_ptr',['../d2/d9d/struct_line.html#aa116bd0834a03b6b4f35ca1e999adcbc',1,'Line']]]
+  ['le_0',['le',['../d2/dd8/struct_class___cosmology___struct.html#abab111c24583df735191a9b645e924fd',1,'Class_Cosmology_Struct']]],
+  ['line_5ffreq_1',['line_freq',['../d2/d9d/struct_line.html#a2537e68f750a3936366084bc7d564575',1,'Line']]],
+  ['lines_2',['Lines',['../d2/dbd/struct_cosmology.html#a0f59f743170aa24dbaeebd4058ac226a',1,'Cosmology']]],
+  ['linetype_3',['LineType',['../d2/d9d/struct_line.html#a78c3e4b98961dce5a733adbc398238c9',1,'Line']]],
+  ['logas_4',['logAs',['../d8/d11/structglobals.html#a9a786316b70c521a5604de6dc2c7e00a',1,'globals']]],
+  ['logk_5faccel_5fptr_5',['logk_accel_ptr',['../d0/d0c/struct_p_s__xtr.html#a3073d1e4b77246dc5aa22fb1c73dc296',1,'PS_xtr']]],
+  ['logm_5faccel_5fptr_6',['logM_accel_ptr',['../d8/d11/structglobals.html#a3fb3c034ed42d7151ea3c969238697d0',1,'globals']]],
+  ['logpkz_5fspline2d_5fptr_7',['logpkz_spline2d_ptr',['../d0/d0c/struct_p_s__xtr.html#a84837c2fa85bfc8578d30e827392ad30',1,'PS_xtr']]],
+  ['logsfr_5fspline2d_5fptr_8',['logSFR_spline2d_ptr',['../d8/d11/structglobals.html#a5e7d44b815c83588da9ae2ab8c5d3fab',1,'globals']]]
 ];

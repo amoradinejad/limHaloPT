@@ -1,4 +1,4 @@
-.TH "ps_halo_1loop.c" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "ps_halo_1loop.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,19 +22,21 @@ ps_halo_1loop.c \- Documented real-space, direct integration computation of 1loo
 .br
 .RI "Compute contributions up to 1loop to halo power spectrum arising from non-Gaussian initial conditions of local shape\&. "
 .ti -1c
-.RI "void \fBCompute_G_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double *result)"
-.br
-.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function \fBG_loop_integrands()\fP defines the integrand and \fBCompute_G_loops()\fP computes the integrals\&. "
-.ti -1c
 .RI "static int \fBG_loop_integrands\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
 .br
+.RI "The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms\&. "
 .ti -1c
-.RI "void \fBCompute_PNG_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long SPLIT, double *result)"
+.RI "void \fBCompute_G_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double *result)"
 .br
-.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function \fBPNG_loop_integrands()\fP defines the integrand and \fBCompute_PNG_loops()\fP computes the integrals\&. "
+.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions\&. "
 .ti -1c
 .RI "static int \fBPNG_loop_integrands\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
 .br
+.RI "The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms\&. "
+.ti -1c
+.RI "void \fBCompute_PNG_loops\fP (struct \fBCosmology\fP *Cx, double k, double z, long IR_switch, long SPLIT, double *result)"
+.br
+.RI "Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape\&. "
 .ti -1c
 .RI "double \fBF2_s\fP (double k1, double k2, double mu)"
 .br
@@ -92,7 +94,7 @@ Compute_PNGloops()
 .SS "void Compute_G_loops (struct \fBCosmology\fP * Cx, double k, double z, long IR_switch, long hm_switch, long SPLIT, double * result)"
 
 .PP
-Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions The function \fBG_loop_integrands()\fP defines the integrand and \fBCompute_G_loops()\fP computes the integrals\&. 
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -122,7 +124,7 @@ void
 .SS "void Compute_PNG_loops (struct \fBCosmology\fP * Cx, double k, double z, long IR_switch, long SPLIT, double * result)"
 
 .PP
-Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape The function \fBPNG_loop_integrands()\fP defines the integrand and \fBCompute_PNG_loops()\fP computes the integrals\&. 
+Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -152,10 +154,44 @@ void
 .SS "double F3_s (double k, double q, double mu)"
 
 .SS "static int G_loop_integrands (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
+.RE
+.PP
 Model used in 1907\&.06666, the integrals are given in the appendix, Eq\&. A1, note that my S2_s = sigma^2(q,k-1) and F2_s = F2(q,k-q) in their notation\&. Factor of 2\&. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle\&. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2\&.*M_PI,3\&.), which I do in my pk_lin() function\&. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3)\&.
 .PP
 The integrands below correspond to the follwing bias combinaions:
 .SS "static int PNG_loop_integrands (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
+.RE
+.PP
 Factor of 2\&. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle\&. Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2\&.*M_PI,3\&.), which I do in my pk_lin() function\&. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3)\&.
 .PP
 The integrands below correspond to the follwing bias combinaions:

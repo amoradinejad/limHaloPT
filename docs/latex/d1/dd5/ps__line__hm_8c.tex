@@ -6,7 +6,8 @@ Documented halo-\/model computation of line power spectrum, including clustering
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for ps\+\_\+line\+\_\+hm.\+c\+:\nopagebreak
+Include dependency graph for ps\+\_\+line\+\_\+hm.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,17 +22,17 @@ double \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\
 double \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, double $\ast$input, long mode\+\_\+mf, long line\+\_\+type)
 \begin{DoxyCompactList}\small\item\em Compute the shot noise contributions, including corrections beyond poisson limit (see 1706.\+08738 for more details) If nfw=1, the dependance of the power spectrum on the halo profile is neglected. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}{mhmc\+\_\+integ}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
-\begin{DoxyCompactList}\small\item\em Compute the corrections to mass integration of HM matter power spectrum. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}{mhmc}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, long mode\+\_\+mf, double $\ast$result)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the corrections to mass integration of HM matter power spectrum. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}{HM\+\_\+1h2h\+\_\+integ}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
-\begin{DoxyCompactList}\small\item\em Compute the mass integrals to compute the 1-\/ and 1-\/halo line, line-\/matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine to compute 1-\/ and 2-\/halo integrals. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}{HM\+\_\+1h2h}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, long mode\+\_\+mf, long line\+\_\+type, long mode\+\_\+hm, double $\ast$result)
-\begin{DoxyCompactList}\small\item\em in unit of M\+\_\+sun/\+Mpc$^\wedge$3 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute the mass integrals needed for 1-\/ and 1-\/halo line, line-\/matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}{b22\+\_\+ls\+\_\+integrand}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
-\begin{DoxyCompactList}\small\item\em Compute the large-\/scale limit of P\+\_\+b2b2 loop. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine to compute large-\/scale limit of b22 (shot-\/noise contribution) \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}{b22\+\_\+ls}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the large-\/scale limit of P\+\_\+b2b2 loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,8 +55,8 @@ The other functions in these modules are utilities for computing the above two m
 
 In summary, the following functions can be called from other modules\+:
 \begin{DoxyEnumerate}
-\item \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}}
-\item \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM()}}
+\item \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}} computes the 1loop-\/\+HM line power spectrum
+\item \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM()}} computes the full line power spectrum, beyond poisson limit
 \item \mbox{\hyperlink{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}{mhmc()}} computes th corrections to mass integration of halo-\/model matter power spectrum
 \item \mbox{\hyperlink{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}{HM\+\_\+1h2h()}} performs the mass integraks for computing 1-\/ and 2-\/halo terms of line-\/line, line-\/matter and matter-\/matter power spectra.
 \item \mbox{\hyperlink{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}{b22\+\_\+ls()}} computes the large-\/scale limit of P\+\_\+b2b2 loop which behaves like a constant and so contributes to the shot noise. 
@@ -67,27 +68,6 @@ In summary, the following functions can be called from other modules\+:
 \index{b22\_ls@{b22\_ls}!ps\_line\_hm.c@{ps\_line\_hm.c}}
 \doxyparagraph{\texorpdfstring{b22\_ls()}{b22\_ls()}}
 {\footnotesize\ttfamily double b22\+\_\+ls (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=200pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}\label{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}} 
-\index{ps\_line\_hm.c@{ps\_line\_hm.c}!b22\_ls\_integrand@{b22\_ls\_integrand}}
-\index{b22\_ls\_integrand@{b22\_ls\_integrand}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxyparagraph{\texorpdfstring{b22\_ls\_integrand()}{b22\_ls\_integrand()}}
-{\footnotesize\ttfamily static int b22\+\_\+ls\+\_\+integrand (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -108,14 +88,54 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_cgraph}
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=329pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_icgraph}
+\includegraphics[width=199pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}\label{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}} 
+\index{ps\_line\_hm.c@{ps\_line\_hm.c}!b22\_ls\_integrand@{b22\_ls\_integrand}}
+\index{b22\_ls\_integrand@{b22\_ls\_integrand}!ps\_line\_hm.c@{ps\_line\_hm.c}}
+\doxyparagraph{\texorpdfstring{b22\_ls\_integrand()}{b22\_ls\_integrand()}}
+{\footnotesize\ttfamily static int b22\+\_\+ls\+\_\+integrand (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The integrand function passed passed to Cuhre integration routine to compute large-\/scale limit of b22 (shot-\/noise contribution) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ndim} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: An array of integration variables \\
+\hline
+{\em ncomp} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em ff} & Input\+: Array of values of the integrand of dimension fdim \\
+\hline
+{\em p} & Input\+: integration parmaeters return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}\label{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}} 
@@ -126,31 +146,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=325pt]{d1/dd5/ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}\label{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}} 
-\index{ps\_line\_hm.c@{ps\_line\_hm.c}!HM\_1h2h\_integ@{HM\_1h2h\_integ}}
-\index{HM\_1h2h\_integ@{HM\_1h2h\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxyparagraph{\texorpdfstring{HM\_1h2h\_integ()}{HM\_1h2h\_integ()}}
-{\footnotesize\ttfamily static int HM\+\_\+1h2h\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Compute the mass integrals to compute the 1-\/ and 1-\/halo line, line-\/matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected. 
+Compute the mass integrals needed for 1-\/ and 1-\/halo line, line-\/matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected. 
 
 Otherwise, NFW halo profile is assumed
 
@@ -184,22 +180,63 @@ Otherwise, NFW halo profile is assumed
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-void 
+void in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d1/dd5/ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}\label{ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da}} 
+\index{ps\_line\_hm.c@{ps\_line\_hm.c}!HM\_1h2h\_integ@{HM\_1h2h\_integ}}
+\index{HM\_1h2h\_integ@{HM\_1h2h\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
+\doxyparagraph{\texorpdfstring{HM\_1h2h\_integ()}{HM\_1h2h\_integ()}}
+{\footnotesize\ttfamily static int HM\+\_\+1h2h\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The integrand function passed passed to Cuhre integration routine to compute 1-\/ and 2-\/halo integrals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ndim} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: An array of integration variables \\
+\hline
+{\em ncomp} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em ff} & Input\+: Array of values of the integrand of dimension fdim \\
+\hline
+{\em p} & Input\+: integration parmaeters return the error status \\
+\hline
+\end{DoxyParams}
 we assume the profile of both matter and line are NFW
 
 integrand of line 1halo term
 
 integrand of 2halo term proportional to b1, the linear local-\/in-\/matter halo bias
 
-integrand of 1halo term of line-\/matter cross-\/spectrumHere is the call graph for this function\+:\nopagebreak
+integrand of 1halo term of line-\/matter cross-\/spectrumHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -212,33 +249,9 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{mhmc()}{mhmc()}}
 {\footnotesize\ttfamily void mhmc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{long}]{mode\+\_\+mf,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=309pt]{d1/dd5/ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}\label{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}} 
-\index{ps\_line\_hm.c@{ps\_line\_hm.c}!mhmc\_integ@{mhmc\_integ}}
-\index{mhmc\_integ@{mhmc\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
-\doxyparagraph{\texorpdfstring{mhmc\_integ()}{mhmc\_integ()}}
-{\footnotesize\ttfamily static int mhmc\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
 
 
 Compute the corrections to mass integration of HM matter power spectrum. 
-
-The function \mbox{\hyperlink{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}{mhmc\+\_\+integ()}} defines the integrand to be used by Cuhre integration routine of CUBA library. \mbox{\hyperlink{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}{mhmc()}} returns the corrections to 1-\/ and 2-\/halo terms performing the integration
-
-When computing the matter power spectrum using halo-\/model, the mass integrations for 1-\/ and 2-\/loop terms get contributions from halos of all masses. For numerical computation, we need to impose a lower and upper integration limit. While the result of the integration are not sensitive to the upper bound (due to the fact that the mass function drops rapidly at high M\+\_\+h) the choice of the lower bound affects the results. We can compute the leading order corrections to the integral that are accurate up to (k R\+\_\+s)$^\wedge$2. (see App. A of ar\+Xiv\+:1511.\+02231 for more details.)
 
 
 \begin{DoxyParams}{Parameters}
@@ -258,14 +271,57 @@ When computing the matter power spectrum using halo-\/model, the mass integratio
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d1/dd5/ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}\label{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}} 
+\index{ps\_line\_hm.c@{ps\_line\_hm.c}!mhmc\_integ@{mhmc\_integ}}
+\index{mhmc\_integ@{mhmc\_integ}!ps\_line\_hm.c@{ps\_line\_hm.c}}
+\doxyparagraph{\texorpdfstring{mhmc\_integ()}{mhmc\_integ()}}
+{\footnotesize\ttfamily static int mhmc\+\_\+integ (\begin{DoxyParamCaption}\item[{const int $\ast$}]{ndim,  }\item[{const cubareal}]{x\mbox{[}$\,$\mbox{]},  }\item[{const int $\ast$}]{ncomp,  }\item[{cubareal}]{ff\mbox{[}$\,$\mbox{]},  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration. 
+
+When computing the matter power spectrum using halo-\/model, the mass integrations for 1-\/ and 2-\/loop terms get contributions from halos of all masses. For numerical computation, we need to impose a lower and upper integration limit. While the result of the integration are not sensitive to the upper bound (due to the fact that the mass function drops rapidly at high M\+\_\+h) the choice of the lower bound affects the results. We can compute the leading order corrections to the integral that are accurate up to (k R\+\_\+s)$^\wedge$2. (see App. A of ar\+Xiv\+:1511.\+02231 for more details.)
+
+
+\begin{DoxyParams}{Parameters}
+{\em ndim} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: An array of integration variables \\
+\hline
+{\em ncomp} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em ff} & Input\+: Array of values of the integrand of dimension fdim \\
+\hline
+{\em p} & Input\+: integration parmaeters return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -313,7 +369,8 @@ CII
 
 to plot the power spectrum in units of micro K$^\wedge$2 Mpc$^\wedge$3
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:\nopagebreak
+in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -374,7 +431,8 @@ in unit of M\+\_\+sun/\+Mpc$^\wedge$3
 
 in unit of M\+\_\+sun/\+Mpc$^\wedge$3
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:\nopagebreak
+in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

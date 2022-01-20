@@ -9,6 +9,7 @@ var structglobals =
     [ "H0", "d8/d11/structglobals.html#a829cbfb68d64295f7122d0fd0dc58448", null ],
     [ "h_m", "d8/d11/structglobals.html#af80ecdcea2c2cabe450472535dbb310e", null ],
     [ "kf", "d8/d11/structglobals.html#a5bc1b7c87a6ec6c722403212dee00d73", null ],
+    [ "kmax_CLASS", "d8/d11/structglobals.html#afa4388248b42652e506b1cf1965bf03c", null ],
     [ "kp", "d8/d11/structglobals.html#ac6390bc2d074992cc6ca37d132a5262d", null ],
     [ "logAs", "d8/d11/structglobals.html#a9a786316b70c521a5604de6dc2c7e00a", null ],
     [ "logM_accel_ptr", "d8/d11/structglobals.html#a3fb3c034ed42d7151ea3c969238697d0", null ],

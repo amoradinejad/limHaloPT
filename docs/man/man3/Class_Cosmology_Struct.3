@@ -1,8 +1,8 @@
-.TH "Class_Cosmology_Struct" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "Class_Cosmology_Struct" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Class_Cosmology_Struct \- Structure to store cosmology structure from CLASS code\&.  
+Class_Cosmology_Struct \- Structure to store cosmology structure from CLASS-v3\&.1\&.  
 
 .SH SYNOPSIS
 .br
@@ -19,25 +19,28 @@ Class_Cosmology_Struct \- Structure to store cosmology structure from CLASS code
 .RI "struct background \fBba\fP"
 .br
 .ti -1c
-.RI "struct thermo \fBth\fP"
+.RI "struct thermodynamics \fBth\fP"
 .br
 .ti -1c
-.RI "struct perturbs \fBpt\fP"
+.RI "struct perturbations \fBpt\fP"
 .br
 .ti -1c
-.RI "struct transfers \fBtr\fP"
+.RI "struct transfer \fBtr\fP"
 .br
 .ti -1c
 .RI "struct primordial \fBpm\fP"
 .br
 .ti -1c
-.RI "struct spectra \fBsp\fP"
+.RI "struct harmonic \fBhr\fP"
 .br
 .ti -1c
-.RI "struct nonlinear \fBnl\fP"
+.RI "struct fourier \fBfo\fP"
 .br
 .ti -1c
 .RI "struct lensing \fBle\fP"
+.br
+.ti -1c
+.RI "struct distortions \fBsd\fP"
 .br
 .ti -1c
 .RI "struct output \fBop\fP"
@@ -48,16 +51,18 @@ Class_Cosmology_Struct \- Structure to store cosmology structure from CLASS code
 .in -1c
 .SH "Detailed Description"
 .PP 
-Structure to store cosmology structure from CLASS code\&. 
+Structure to store cosmology structure from CLASS-v3\&.1\&. 
 .SH "Field Documentation"
 .PP 
 .SS "struct background ba"
 
 .SS "ErrorMsg errmsg"
 
-.SS "struct lensing le"
+.SS "struct fourier fo"
 
-.SS "struct nonlinear nl"
+.SS "struct harmonic hr"
+
+.SS "struct lensing le"
 
 .SS "struct output op"
 
@@ -65,13 +70,13 @@ Structure to store cosmology structure from CLASS code\&.
 
 .SS "struct precision pr"
 
-.SS "struct perturbs pt"
+.SS "struct perturbations pt"
 
-.SS "struct spectra sp"
+.SS "struct distortions sd"
 
-.SS "struct thermo th"
+.SS "struct thermodynamics th"
 
-.SS "struct transfers tr"
+.SS "struct transfer tr"
 
 
 .SH "Author"

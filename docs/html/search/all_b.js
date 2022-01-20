@@ -17,12 +17,14 @@ var searchData=
   ['log10init_5f1darray_14',['log10init_1Darray',['../d7/db6/utilities_8c.html#abe221b42f18db326ebf3161fdcaa7f34',1,'utilities.c']]],
   ['logas_15',['logAs',['../d8/d11/structglobals.html#a9a786316b70c521a5604de6dc2c7e00a',1,'globals']]],
   ['loginit_5f1darray_16',['loginit_1Darray',['../d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8',1,'utilities.c']]],
-  ['logm_5faccel_5fptr_17',['logM_accel_ptr',['../d8/d11/structglobals.html#a3fb3c034ed42d7151ea3c969238697d0',1,'globals']]],
-  ['logsfr_5falloc_5finit_18',['logSFR_alloc_init',['../d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02',1,'line_ingredients.c']]],
-  ['logsfr_5fbehroozi_19',['logSFR_Behroozi',['../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef',1,'line_ingredients.c']]],
-  ['logsfr_5fbehroozi_5fread_20',['logSFR_Behroozi_read',['../d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a',1,'line_ingredients.c']]],
-  ['logsfr_5fspline2d_5fptr_21',['logSFR_spline2d_ptr',['../d8/d11/structglobals.html#a5e7d44b815c83588da9ae2ab8c5d3fab',1,'globals']]],
-  ['loop_22',['LOOP',['../df/dcb/header_8h.html#a8e8f11caf539de9555d07b4e7ef5b1da',1,'header.h']]],
-  ['lpower_23',['LPOWER',['../df/dcb/header_8h.html#a2704d1fa52e347b0e2e8ebbe4c0262ea',1,'header.h']]],
-  ['luminosity_24',['luminosity',['../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8',1,'line_ingredients.c']]]
+  ['logk_5faccel_5fptr_17',['logk_accel_ptr',['../d0/d0c/struct_p_s__xtr.html#a3073d1e4b77246dc5aa22fb1c73dc296',1,'PS_xtr']]],
+  ['logm_5faccel_5fptr_18',['logM_accel_ptr',['../d8/d11/structglobals.html#a3fb3c034ed42d7151ea3c969238697d0',1,'globals']]],
+  ['logpkz_5fspline2d_5fptr_19',['logpkz_spline2d_ptr',['../d0/d0c/struct_p_s__xtr.html#a84837c2fa85bfc8578d30e827392ad30',1,'PS_xtr']]],
+  ['logsfr_5falloc_5finit_20',['logSFR_alloc_init',['../d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02',1,'line_ingredients.c']]],
+  ['logsfr_5fbehroozi_21',['logSFR_Behroozi',['../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef',1,'line_ingredients.c']]],
+  ['logsfr_5fbehroozi_5fread_22',['logSFR_Behroozi_read',['../d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a',1,'line_ingredients.c']]],
+  ['logsfr_5fspline2d_5fptr_23',['logSFR_spline2d_ptr',['../d8/d11/structglobals.html#a5e7d44b815c83588da9ae2ab8c5d3fab',1,'globals']]],
+  ['loop_24',['LOOP',['../df/dcb/header_8h.html#a8e8f11caf539de9555d07b4e7ef5b1da',1,'header.h']]],
+  ['lpower_25',['LPOWER',['../df/dcb/header_8h.html#a2704d1fa52e347b0e2e8ebbe4c0262ea',1,'header.h']]],
+  ['luminosity_26',['luminosity',['../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8',1,'line_ingredients.c']]]
 ];

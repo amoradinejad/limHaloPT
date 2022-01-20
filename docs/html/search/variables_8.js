@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kf_0',['kf',['../d8/d11/structglobals.html#a5bc1b7c87a6ec6c722403212dee00d73',1,'globals']]],
-  ['kp_1',['kp',['../d8/d11/structglobals.html#ac6390bc2d074992cc6ca37d132a5262d',1,'globals']]]
+  ['initialized_0',['initialized',['../d2/d9d/struct_line.html#ad06983e7f6e71b233ea7ff3dee1952f2',1,'Line::initialized()'],['../d0/d0c/struct_p_s__xtr.html#ad06983e7f6e71b233ea7ff3dee1952f2',1,'PS_xtr::initialized()']]]
 ];

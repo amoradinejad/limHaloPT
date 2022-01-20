@@ -6,7 +6,8 @@ Documented computation of Poisson shot noise and tree-\/level line power spectru
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for ps\+\_\+line\+\_\+pt.\+c\+:\nopagebreak
+Include dependency graph for ps\+\_\+line\+\_\+pt.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,14 +17,16 @@ Include dependency graph for ps\+\_\+line\+\_\+pt.\+c\+:\nopagebreak
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}{PS\+\_\+line}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, size\+\_\+t line\+\_\+id)
+double \mbox{\hyperlink{ps__line__pt_8c_a5977cca9f8e0c388f2d9e6db7945b3dc}{PS\+\_\+tot\+\_\+interloper}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double mu, double z\+\_\+s, double z\+\_\+inter, size\+\_\+t line\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Compute the 3D power spectrum of interloper line power spectrum in unit of micro K$^\wedge$2 Mpc$^\wedge$3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ps__line__pt_8c_a3c16139f4646a5084475aa3515d336a6}{PS\+\_\+line\+\_\+real}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, size\+\_\+t line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the real-\/space 3D power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}{PS\+\_\+line\+\_\+\+RSD}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx\+\_\+ref, double k, double mu, double z, size\+\_\+t line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the redshift-\/space 3D power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3 as a function of wavenumber and angle w.\+r.\+t. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}{ps\+\_\+line\+\_\+multipoles\+\_\+integrand}} (unsigned ndim, const double $\ast$x, void $\ast$p, unsigned fdim, double $\ast$fvalue)
-\begin{DoxyCompactList}\small\item\em Compute the multipole moments of redshift-\/space power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3, integrating over the angle w.\+r.\+t LOS, weighted by. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed to hcubature integrator to compute the line power spectrum multipoles. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}{ps\+\_\+line\+\_\+multipoles}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx\+\_\+ref, double k, double z, size\+\_\+t line\+\_\+id, int ell)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the multipole moments of redshift-\/space power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3, integrating over the angle w.\+r.\+t LOS, weighted by. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}{PS\+\_\+shot}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, size\+\_\+t line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the Poisson shot noise in unit of micro K$^\wedge$2 Mpc$^\wedge$3. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
@@ -42,63 +45,19 @@ NOTE TODO\+: Add the 1loop redshift-\/space power spectrum of the line. This req
 
 In summary, the following functions can be called from other modules\+:
 \begin{DoxyEnumerate}
-\item \mbox{\hyperlink{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}{PS\+\_\+line()}} computes tree-\/level line power spectrum in real-\/space
+\item \mbox{\hyperlink{ps__line__pt_8c_a5977cca9f8e0c388f2d9e6db7945b3dc}{PS\+\_\+tot\+\_\+interloper()}} computes power spectrum of interlopers (tree-\/level with RSD)
+\item \mbox{\hyperlink{ps__line__pt_8c_a3c16139f4646a5084475aa3515d336a6}{PS\+\_\+line\+\_\+real()}} computes tree-\/level line power spectrum in real-\/space
 \item \mbox{\hyperlink{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}{PS\+\_\+line\+\_\+\+RSD()}} computes the tree-\/level line power spectrum in redshift-\/space, as a function of wavenumber and angle w.\+r.\+t LOS
 \item \mbox{\hyperlink{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}{ps\+\_\+line\+\_\+multipoles()}} computes the redshift-\/space multipoles of the line power spectrum
 \item \mbox{\hyperlink{ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd}{PS\+\_\+shot()}} computes the poisson shot noise 
 \end{DoxyEnumerate}
 
 \doxysubsubsection{Function Documentation}
-\mbox{\Hypertarget{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}\label{ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42}} 
-\index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_line@{PS\_line}}
-\index{PS\_line@{PS\_line}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxyparagraph{\texorpdfstring{PS\_line()}{PS\_line()}}
-{\footnotesize\ttfamily double PS\+\_\+line (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
-
-
-
-Compute the real-\/space 3D power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
-\hline
-{\em k} & Input\+: wavenumber in unit of 1/\+Mpc. \\
-\hline
-{\em z} & Input\+: redshift \\
-\hline
-{\em line\+\_\+id} & Inpute\+: id of the line to be considered. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-tree-\/level P\+\_\+clust(k) ~\newline
- 
-\end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_adb0db1c5916a39f0b796a30b48b03f42_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}\label{ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63}} 
 \index{ps\_line\_pt.c@{ps\_line\_pt.c}!ps\_line\_multipoles@{ps\_line\_multipoles}}
 \index{ps\_line\_multipoles@{ps\_line\_multipoles}!ps\_line\_pt.c@{ps\_line\_pt.c}}
 \doxyparagraph{\texorpdfstring{ps\_line\_multipoles()}{ps\_line\_multipoles()}}
 {\footnotesize\ttfamily double ps\+\_\+line\+\_\+multipoles (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx\+\_\+ref,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id,  }\item[{int}]{ell }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}\label{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}} 
-\index{ps\_line\_pt.c@{ps\_line\_pt.c}!ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}}
-\index{ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}!ps\_line\_pt.c@{ps\_line\_pt.c}}
-\doxyparagraph{\texorpdfstring{ps\_line\_multipoles\_integrand()}{ps\_line\_multipoles\_integrand()}}
-{\footnotesize\ttfamily int ps\+\_\+line\+\_\+multipoles\+\_\+integrand (\begin{DoxyParamCaption}\item[{unsigned}]{ndim,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
 
@@ -123,18 +82,84 @@ Compute the multipole moments of redshift-\/space power spectrum of emission lin
 P\+\_\+ell(k) ~\newline
  
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_a62cf452e70a5c44e79485391ad59cf63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}\label{ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2}} 
+\index{ps\_line\_pt.c@{ps\_line\_pt.c}!ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}}
+\index{ps\_line\_multipoles\_integrand@{ps\_line\_multipoles\_integrand}!ps\_line\_pt.c@{ps\_line\_pt.c}}
+\doxyparagraph{\texorpdfstring{ps\_line\_multipoles\_integrand()}{ps\_line\_multipoles\_integrand()}}
+{\footnotesize\ttfamily int ps\+\_\+line\+\_\+multipoles\+\_\+integrand (\begin{DoxyParamCaption}\item[{unsigned}]{ndim,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to hcubature integrator to compute the line power spectrum multipoles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: integration variable \\
+\hline
+{\em p} & Input\+: integration parmaeters \\
+\hline
+{\em fdim} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=314pt]{d8/d43/ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2_icgraph}
+\includegraphics[width=310pt]{d8/d43/ps__line__pt_8c_ae4ce1e29b505dae588eb2b8c8ae632e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__pt_8c_a3c16139f4646a5084475aa3515d336a6}\label{ps__line__pt_8c_a3c16139f4646a5084475aa3515d336a6}} 
+\index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_line\_real@{PS\_line\_real}}
+\index{PS\_line\_real@{PS\_line\_real}!ps\_line\_pt.c@{ps\_line\_pt.c}}
+\doxyparagraph{\texorpdfstring{PS\_line\_real()}{PS\_line\_real()}}
+{\footnotesize\ttfamily double PS\+\_\+line\+\_\+real (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Compute the real-\/space 3D power spectrum of emission lines in unit of micro K$^\wedge$2 Mpc$^\wedge$3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc. \\
+\hline
+{\em z} & Input\+: redshift \\
+\hline
+{\em line\+\_\+id} & Inpute\+: id of the line to be considered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tree-\/level P\+\_\+clust(k) ~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_a3c16139f4646a5084475aa3515d336a6_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}\label{ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751}} 
@@ -168,14 +193,16 @@ LOS
 tree-\/level P\+\_\+clust(k,mu) ~\newline
  
 \end{DoxyReturn}
-to plot the power spectrum in units of micro K$^\wedge$2 Mpc$^\wedge$3Here is the call graph for this function\+:\nopagebreak
+to plot the power spectrum in units of micro K$^\wedge$2 Mpc$^\wedge$3Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_a2a5a8e5016f2d8728844564d93000751_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -207,18 +234,55 @@ P\+\_\+poisson ~\newline
 \end{DoxyReturn}
 Boltzmann constant in unit of erg K$^\wedge$-\/1
 
-in unit of erg/sHere is the call graph for this function\+:\nopagebreak
+in unit of erg/sHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=208pt]{d8/d43/ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd_icgraph}
+\includegraphics[width=262pt]{d8/d43/ps__line__pt_8c_aef342e8a0e97c247ed892896732d0dcd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ps__line__pt_8c_a5977cca9f8e0c388f2d9e6db7945b3dc}\label{ps__line__pt_8c_a5977cca9f8e0c388f2d9e6db7945b3dc}} 
+\index{ps\_line\_pt.c@{ps\_line\_pt.c}!PS\_tot\_interloper@{PS\_tot\_interloper}}
+\index{PS\_tot\_interloper@{PS\_tot\_interloper}!ps\_line\_pt.c@{ps\_line\_pt.c}}
+\doxyparagraph{\texorpdfstring{PS\_tot\_interloper()}{PS\_tot\_interloper()}}
+{\footnotesize\ttfamily double PS\+\_\+tot\+\_\+interloper (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{mu,  }\item[{double}]{z\+\_\+s,  }\item[{double}]{z\+\_\+inter,  }\item[{size\+\_\+t}]{line\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Compute the 3D power spectrum of interloper line power spectrum in unit of micro K$^\wedge$2 Mpc$^\wedge$3. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc. \\
+\hline
+{\em z\+\_\+s} & Input\+: redshift of the signal line \\
+\hline
+{\em z\+\_\+inter} & Input\+: redshift of the interloper line \\
+\hline
+{\em line\+\_\+id} & Inpute\+: id of the line to be considered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tree-\/level P\+\_\+clust(k) ~\newline
+ 
+\end{DoxyReturn}
+to plot the power spectrum in units of micro K$^\wedge$2 Mpc$^\wedge$3Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d43/ps__line__pt_8c_a5977cca9f8e0c388f2d9e6db7945b3dc_cgraph}
 \end{center}
 \end{figure}
 

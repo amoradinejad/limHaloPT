@@ -5,5 +5,6 @@ var annotated_dup =
     [ "globals", "d8/d11/structglobals.html", "d8/d11/structglobals" ],
     [ "integrand_parameters", "d5/dd6/structintegrand__parameters.html", "d5/dd6/structintegrand__parameters" ],
     [ "integrand_parameters2", "d0/d4a/structintegrand__parameters2.html", "d0/d4a/structintegrand__parameters2" ],
-    [ "Line", "d2/d9d/struct_line.html", "d2/d9d/struct_line" ]
+    [ "Line", "d2/d9d/struct_line.html", "d2/d9d/struct_line" ],
+    [ "PS_xtr", "d0/d0c/struct_p_s__xtr.html", "d0/d0c/struct_p_s__xtr" ]
 ];

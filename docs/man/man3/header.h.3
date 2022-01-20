@@ -1,4 +1,4 @@
-.TH "header.h" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "header.h" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -56,9 +56,9 @@ header.h
 .br
 \fC#include <ctype\&.h>\fP
 .br
-\fC#include '\&.\&./Class/include/class\&.h'\fP
-.br
 \fC#include 'cuba\&.h'\fP
+.br
+\fC#include '\&.\&./Class/include/class\&.h'\fP
 .br
 \fC#include 'Global_Structs\&.h'\fP
 .br
@@ -111,7 +111,7 @@ header.h
 .RI "#define \fBST\fP   102L"
 .br
 .ti -1c
-.RI "#define \fBTR\fP   103L"
+.RI "#define \fBTK\fP   103L"
 .br
 .ti -1c
 .RI "#define \fBGROWTH\fP   104L"
@@ -171,10 +171,13 @@ header.h
 .RI "#define \fBNLPOWER\fP   128L"
 .br
 .ti -1c
-.RI "#define \fBTRANS\fP   129L"
+.RI "#define \fBCDM\fP   90L"
 .br
 .ti -1c
-.RI "#define \fBDER\fP   130L"
+.RI "#define \fBBA\fP   91L"
+.br
+.ti -1c
+.RI "#define \fBTOT\fP   92L"
 .br
 .ti -1c
 .RI "#define \fBCO10\fP   131L"
@@ -231,16 +234,22 @@ header.h
 .RI "#define \fBHALO\fP   148L"
 .br
 .ti -1c
-.RI "#define \fBPS_KMIN\fP   1\&.0e\-7"
+.RI "#define \fBPS_KMIN\fP   1\&.e\-5"
 .br
 .ti -1c
-.RI "#define \fBPS_KMAX\fP   1\&.0e4"
+.RI "#define \fBPS_KMAX\fP   100\&.1"
+.br
+.ti -1c
+.RI "#define \fBPS_ZMAX\fP   14\&."
 .br
 .ti -1c
 .RI "#define \fBCLEANUP\fP   1"
 .br
 .ti -1c
 .RI "#define \fBDO_NOT_EVALUATE\fP   \-1\&.0"
+.br
+.ti -1c
+.RI "#define \fBNPARS\fP   6"
 .br
 .ti -1c
 .RI "#define \fBMAXL\fP   2000"
@@ -261,7 +270,11 @@ header.h
 .PP 
 .SS "#define _GNU_SOURCE"
 
+.SS "#define BA   91L"
+
 .SS "#define BSPLINE   143L"
+
+.SS "#define CDM   90L"
 
 .SS "#define CII   137L"
 
@@ -278,8 +291,6 @@ header.h
 .SS "#define CO54   135L"
 
 .SS "#define CO65   136L"
-
-.SS "#define DER   130L"
 
 .SS "#define DERGROWTH   105L"
 
@@ -331,11 +342,15 @@ header.h
 
 .SS "#define NONLINEAR   106L"
 
+.SS "#define NPARS   6"
+
 .SS "#define ORTHOGONAL   119L"
 
-.SS "#define PS_KMAX   1\&.0e4"
+.SS "#define PS_KMAX   100\&.1"
 
-.SS "#define PS_KMIN   1\&.0e\-7"
+.SS "#define PS_KMIN   1\&.e\-5"
+
+.SS "#define PS_ZMAX   14\&."
 
 .SS "#define PSC   101L"
 
@@ -349,9 +364,9 @@ For solving ODER\&.
 
 .SS "#define TIDE   125L"
 
-.SS "#define TR   103L"
+.SS "#define TK   103L"
 
-.SS "#define TRANS   129L"
+.SS "#define TOT   92L"
 
 .SS "#define TREE   144L"
 

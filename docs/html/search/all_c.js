@@ -19,11 +19,10 @@ var searchData=
   ['mean_5fintens_16',['mean_intens',['../d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf',1,'line_ingredients.c']]],
   ['mhmc_17',['mhmc',['../d1/dd5/ps__line__hm_8c.html#a3a71ccb997cf820c19eb64cedbf69a10',1,'ps_line_hm.c']]],
   ['mhmc_5finteg_18',['mhmc_integ',['../d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3',1,'ps_line_hm.c']]],
-  ['mk_5fdlnmk_19',['Mk_dlnMk',['../d6/d32/cosmology_8c.html#a3175f43a84557ec21866b47a10054797',1,'cosmology.c']]],
-  ['mode_5fnu_20',['mode_nu',['../d2/dbd/struct_cosmology.html#a0e1e29102584fa127dceed1413913a13',1,'Cosmology']]],
-  ['mom1_5faccel_5fptr_21',['mom1_accel_ptr',['../d2/d9d/struct_line.html#ad2e644b5a90d727f8e08a9eb0d708f80',1,'Line']]],
-  ['mom1_5fspline_5fptr_22',['mom1_spline_ptr',['../d2/d9d/struct_line.html#ae8040cc245eea740519f6461096385df',1,'Line']]],
-  ['mom2_5faccel_5fptr_23',['mom2_accel_ptr',['../d2/d9d/struct_line.html#ac33bc84e6c67b56e4076354c2a35fb10',1,'Line']]],
-  ['mom2_5fspline_5fptr_24',['mom2_spline_ptr',['../d2/d9d/struct_line.html#aa116bd0834a03b6b4f35ca1e999adcbc',1,'Line']]],
-  ['mult_5ffunc_25',['mult_func',['../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be',1,'line_ingredients.c']]]
+  ['mode_5fmodel_19',['mode_model',['../d2/dbd/struct_cosmology.html#a4b019ecf79b36a4e0ddc5e73f130f79a',1,'Cosmology']]],
+  ['mom1_5faccel_5fptr_20',['mom1_accel_ptr',['../d2/d9d/struct_line.html#ad2e644b5a90d727f8e08a9eb0d708f80',1,'Line']]],
+  ['mom1_5fspline_5fptr_21',['mom1_spline_ptr',['../d2/d9d/struct_line.html#ae8040cc245eea740519f6461096385df',1,'Line']]],
+  ['mom2_5faccel_5fptr_22',['mom2_accel_ptr',['../d2/d9d/struct_line.html#ac33bc84e6c67b56e4076354c2a35fb10',1,'Line']]],
+  ['mom2_5fspline_5fptr_23',['mom2_spline_ptr',['../d2/d9d/struct_line.html#aa116bd0834a03b6b4f35ca1e999adcbc',1,'Line']]],
+  ['mult_5ffunc_24',['mult_func',['../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be',1,'line_ingredients.c']]]
 ];

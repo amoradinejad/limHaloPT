@@ -2,7 +2,7 @@
 \label{struct_class___cosmology___struct}\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
 
 
-Structure to store cosmology structure from CLASS code.  
+Structure to store cosmology structure from CLASS-\/v3.\+1.  
 
 
 
@@ -16,19 +16,21 @@ struct precision \mbox{\hyperlink{struct_class___cosmology___struct_a5508a36b02e
 \item 
 struct background \mbox{\hyperlink{struct_class___cosmology___struct_a06d87a8120386f93eb4c530f85e42b01}{ba}}
 \item 
-struct thermo \mbox{\hyperlink{struct_class___cosmology___struct_af79f6031bbc385d4ff9012dbc0da41ca}{th}}
+struct thermodynamics \mbox{\hyperlink{struct_class___cosmology___struct_a398991e346b1715063d190127ad7d490}{th}}
 \item 
-struct perturbs \mbox{\hyperlink{struct_class___cosmology___struct_a4fcfda9895c82d80da970d81fdccceda}{pt}}
+struct perturbations \mbox{\hyperlink{struct_class___cosmology___struct_a36eb944f0fdcbe69c0a59fa2a9f07f8d}{pt}}
 \item 
-struct transfers \mbox{\hyperlink{struct_class___cosmology___struct_ae2f45b989d09ee36f89350574c13fd99}{tr}}
+struct transfer \mbox{\hyperlink{struct_class___cosmology___struct_a83b6226c4b154b6486fa73ad220cccf8}{tr}}
 \item 
 struct primordial \mbox{\hyperlink{struct_class___cosmology___struct_aa10c840f6c876dd3a2688ba63092e5f0}{pm}}
 \item 
-struct spectra \mbox{\hyperlink{struct_class___cosmology___struct_a15feeabbeefc32347be5f9c5ae0729e9}{sp}}
+struct harmonic \mbox{\hyperlink{struct_class___cosmology___struct_a5f8b305fc0a1ee6012c079468d1438ca}{hr}}
 \item 
-struct nonlinear \mbox{\hyperlink{struct_class___cosmology___struct_a17f1c3e1d9b3488c28828ac7e392866d}{nl}}
+struct fourier \mbox{\hyperlink{struct_class___cosmology___struct_a63330c2fd760ba76162bfe17d3039c0b}{fo}}
 \item 
 struct lensing \mbox{\hyperlink{struct_class___cosmology___struct_abab111c24583df735191a9b645e924fd}{le}}
+\item 
+struct distortions \mbox{\hyperlink{struct_class___cosmology___struct_a73a564360ad0265e547ac89c75634a77}{sd}}
 \item 
 struct output \mbox{\hyperlink{struct_class___cosmology___struct_a1263e3f35461b20543f1e6d4aa85cca8}{op}}
 \item 
@@ -37,7 +39,7 @@ Error\+Msg \mbox{\hyperlink{struct_class___cosmology___struct_aa89c6c440c37c1a2e
 
 
 \doxysubsubsection{Detailed Description}
-Structure to store cosmology structure from CLASS code. 
+Structure to store cosmology structure from CLASS-\/v3.\+1. 
 
 \doxysubsubsection{Field Documentation}
 \mbox{\Hypertarget{struct_class___cosmology___struct_a06d87a8120386f93eb4c530f85e42b01}\label{struct_class___cosmology___struct_a06d87a8120386f93eb4c530f85e42b01}} 
@@ -52,17 +54,23 @@ Structure to store cosmology structure from CLASS code.
 \doxyparagraph{\texorpdfstring{errmsg}{errmsg}}
 {\footnotesize\ttfamily Error\+Msg errmsg}
 
+\mbox{\Hypertarget{struct_class___cosmology___struct_a63330c2fd760ba76162bfe17d3039c0b}\label{struct_class___cosmology___struct_a63330c2fd760ba76162bfe17d3039c0b}} 
+\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!fo@{fo}}
+\index{fo@{fo}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
+\doxyparagraph{\texorpdfstring{fo}{fo}}
+{\footnotesize\ttfamily struct fourier fo}
+
+\mbox{\Hypertarget{struct_class___cosmology___struct_a5f8b305fc0a1ee6012c079468d1438ca}\label{struct_class___cosmology___struct_a5f8b305fc0a1ee6012c079468d1438ca}} 
+\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!hr@{hr}}
+\index{hr@{hr}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
+\doxyparagraph{\texorpdfstring{hr}{hr}}
+{\footnotesize\ttfamily struct harmonic hr}
+
 \mbox{\Hypertarget{struct_class___cosmology___struct_abab111c24583df735191a9b645e924fd}\label{struct_class___cosmology___struct_abab111c24583df735191a9b645e924fd}} 
 \index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!le@{le}}
 \index{le@{le}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
 \doxyparagraph{\texorpdfstring{le}{le}}
 {\footnotesize\ttfamily struct lensing le}
-
-\mbox{\Hypertarget{struct_class___cosmology___struct_a17f1c3e1d9b3488c28828ac7e392866d}\label{struct_class___cosmology___struct_a17f1c3e1d9b3488c28828ac7e392866d}} 
-\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!nl@{nl}}
-\index{nl@{nl}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
-\doxyparagraph{\texorpdfstring{nl}{nl}}
-{\footnotesize\ttfamily struct nonlinear nl}
 
 \mbox{\Hypertarget{struct_class___cosmology___struct_a1263e3f35461b20543f1e6d4aa85cca8}\label{struct_class___cosmology___struct_a1263e3f35461b20543f1e6d4aa85cca8}} 
 \index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!op@{op}}
@@ -82,27 +90,27 @@ Structure to store cosmology structure from CLASS code.
 \doxyparagraph{\texorpdfstring{pr}{pr}}
 {\footnotesize\ttfamily struct precision pr}
 
-\mbox{\Hypertarget{struct_class___cosmology___struct_a4fcfda9895c82d80da970d81fdccceda}\label{struct_class___cosmology___struct_a4fcfda9895c82d80da970d81fdccceda}} 
+\mbox{\Hypertarget{struct_class___cosmology___struct_a36eb944f0fdcbe69c0a59fa2a9f07f8d}\label{struct_class___cosmology___struct_a36eb944f0fdcbe69c0a59fa2a9f07f8d}} 
 \index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!pt@{pt}}
 \index{pt@{pt}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
 \doxyparagraph{\texorpdfstring{pt}{pt}}
-{\footnotesize\ttfamily struct perturbs pt}
+{\footnotesize\ttfamily struct perturbations pt}
 
-\mbox{\Hypertarget{struct_class___cosmology___struct_a15feeabbeefc32347be5f9c5ae0729e9}\label{struct_class___cosmology___struct_a15feeabbeefc32347be5f9c5ae0729e9}} 
-\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!sp@{sp}}
-\index{sp@{sp}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
-\doxyparagraph{\texorpdfstring{sp}{sp}}
-{\footnotesize\ttfamily struct spectra sp}
+\mbox{\Hypertarget{struct_class___cosmology___struct_a73a564360ad0265e547ac89c75634a77}\label{struct_class___cosmology___struct_a73a564360ad0265e547ac89c75634a77}} 
+\index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!sd@{sd}}
+\index{sd@{sd}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
+\doxyparagraph{\texorpdfstring{sd}{sd}}
+{\footnotesize\ttfamily struct distortions sd}
 
-\mbox{\Hypertarget{struct_class___cosmology___struct_af79f6031bbc385d4ff9012dbc0da41ca}\label{struct_class___cosmology___struct_af79f6031bbc385d4ff9012dbc0da41ca}} 
+\mbox{\Hypertarget{struct_class___cosmology___struct_a398991e346b1715063d190127ad7d490}\label{struct_class___cosmology___struct_a398991e346b1715063d190127ad7d490}} 
 \index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!th@{th}}
 \index{th@{th}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
 \doxyparagraph{\texorpdfstring{th}{th}}
-{\footnotesize\ttfamily struct thermo th}
+{\footnotesize\ttfamily struct thermodynamics th}
 
-\mbox{\Hypertarget{struct_class___cosmology___struct_ae2f45b989d09ee36f89350574c13fd99}\label{struct_class___cosmology___struct_ae2f45b989d09ee36f89350574c13fd99}} 
+\mbox{\Hypertarget{struct_class___cosmology___struct_a83b6226c4b154b6486fa73ad220cccf8}\label{struct_class___cosmology___struct_a83b6226c4b154b6486fa73ad220cccf8}} 
 \index{Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}!tr@{tr}}
 \index{tr@{tr}!Class\_Cosmology\_Struct@{Class\_Cosmology\_Struct}}
 \doxyparagraph{\texorpdfstring{tr}{tr}}
-{\footnotesize\ttfamily struct transfers tr}
+{\footnotesize\ttfamily struct transfer tr}
 

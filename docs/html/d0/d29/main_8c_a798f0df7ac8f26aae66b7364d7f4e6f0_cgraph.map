@@ -1,8 +1,4 @@
 <map id="cleanup" name="cleanup">
-<area shape="rect" id="node1" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="5,81,75,108"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="133,56,251,83"/>
-<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="123,107,261,133"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="309,5,453,32"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="343,56,420,83"/>
-<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#ab9dc1330d6e47eeeb8bf0dfffe2cd23f" title="Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z,..." alt="" coords="342,107,421,133"/>
+<area shape="rect" id="node1" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="120,5,256,32"/>
 </map>

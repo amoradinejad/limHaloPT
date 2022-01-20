@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['omega_5fb_0',['Omega_b',['../d8/d11/structglobals.html#a71c325797bade66b03ab32092b66a9b3',1,'globals']]],
-  ['omega_5fcdm_1',['Omega_cdm',['../d8/d11/structglobals.html#a751f9b28e01d639472dea5837bc75aac',1,'globals']]],
-  ['omega_5fg_2',['Omega_g',['../d8/d11/structglobals.html#a92dc773edcb4c3229e1c6ed22d6a567e',1,'globals']]],
-  ['omega_5flambda_3',['Omega_lambda',['../d8/d11/structglobals.html#abc83895ff2bc11cd8580ae314f821107',1,'globals']]],
-  ['omega_5fnu_4',['Omega_nu',['../d8/d11/structglobals.html#a197f2de2be137749b428eb1b3f891d3e',1,'globals']]],
-  ['omega_5fr_5',['Omega_r',['../d8/d11/structglobals.html#a6cefa4a43bb1fa04ba176108ea5b83da',1,'globals']]],
-  ['op_6',['op',['../d2/dd8/struct_class___cosmology___struct.html#a1263e3f35461b20543f1e6d4aa85cca8',1,'Class_Cosmology_Struct']]],
-  ['output_5fdir_7',['output_dir',['../d8/d11/structglobals.html#a8774308bba8156b6e600c20a45a7e31d',1,'globals']]]
+  ['ng_0',['ng',['../d8/d11/structglobals.html#adb9952b5a42d31a5a108e1e36dc4b051',1,'globals']]],
+  ['nlines_1',['NLines',['../d2/dbd/struct_cosmology.html#ad8456f0eaa57c17e323994a2d0b1f159',1,'Cosmology']]],
+  ['npars_2',['Npars',['../d8/d11/structglobals.html#abca16ad30bddc5b0b828579c1b60bee3',1,'globals']]],
+  ['npointsinterp_3',['npointsInterp',['../d2/d9d/struct_line.html#a5af76072d7991fda41ed345aa75ee7ee',1,'Line']]],
+  ['ns_4',['ns',['../d8/d11/structglobals.html#a476bed566643072ee0ed28f78d0db370',1,'globals']]]
 ];

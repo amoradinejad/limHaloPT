@@ -6,7 +6,8 @@ Documented line\+\_\+ingredients module.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for line\+\_\+ingredients.\+c\+:\nopagebreak
+Include dependency graph for line\+\_\+ingredients.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,27 +40,27 @@ int \mbox{\hyperlink{line__ingredients_8c_a6d006053a4f4af3c50b5c9a0b6365a8d}{SFR
 double \mbox{\hyperlink{line__ingredients_8c_a728fd0a19bc34645b8f8218464d178ef}{log\+SFR\+\_\+\+Behroozi}} (double logM, double z)
 \begin{DoxyCompactList}\small\item\em Evaluate the SFR interpolator object for a given value of mass and redshift. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a1d5765167555f21d8ae5eba187eb2aa8}{luminosity}} (double M, double z, long mode\+\_\+lum)
-\begin{DoxyCompactList}\small\item\em Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits in Table 4 of ??? et al ar\+Xiv\+:1508.\+05102, while for CII we use Silva et al ar\+Xiv\+: \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits in Table 4 of Kamenetzky et al. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}{mass\+\_\+moment1\+\_\+integ}} (unsigned nd, const double $\ast$x, void $\ast$p, unsigned fdim, double $\ast$fvalue)
-\begin{DoxyCompactList}\small\item\em Compute the first luminosityy-\/weighted mass moment. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed to hcubature integrator to compute the first moment of line luminosity. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e}{mass\+\_\+moment1}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double M\+\_\+min, long mode\+\_\+mf, long mode\+\_\+lum)
-\begin{DoxyCompactList}\small\item\em in unit of M\+\_\+sun/\+Mpc$^\wedge$3 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute the first luminosity moment. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}{mass\+\_\+moment2\+\_\+integ}} (unsigned nd, const double $\ast$x, void $\ast$p, unsigned fdim, double $\ast$fvalue)
-\begin{DoxyCompactList}\small\item\em Compute the second luminosityy-\/weighted mass moment. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed to hcubature integrator to compute the second moment of line luminosity. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5}{mass\+\_\+moment2}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double M\+\_\+min, long mode\+\_\+mf, long mode\+\_\+lum)
-\begin{DoxyCompactList}\small\item\em in unit of M\+\_\+sun/\+Mpc$^\wedge$3 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute the second luminosity moment. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}{bias\+\_\+lum\+\_\+weighted\+\_\+integ}} (unsigned nd, const double $\ast$x, void $\ast$p, unsigned fdim, double $\ast$fvalue)
-\begin{DoxyCompactList}\small\item\em Compute the luminosityy-\/weighted linear and quadratic line biases. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed to hcubature integrator to compute the un-\/normalized luminosity-\/weighted line bias. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{line__ingredients_8c_aa050a054d3724145e3b46788bf279c79}{bias\+\_\+lum\+\_\+weighted}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double M\+\_\+min, long mode\+\_\+mf, long mode\+\_\+lum, double $\ast$result)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the luminosity-\/weighted linear and quadratic line biases. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}{p\+\_\+sig\+\_\+shot\+\_\+integrand}} (double x, void $\ast$par)
 \begin{DoxyCompactList}\small\item\em Model from Keating et al 2016 to account for the observed variation in halo activity, i.\+e. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}{p\+\_\+sig\+\_\+shot}} (double scatter)
 \item 
 double \mbox{\hyperlink{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}{p\+\_\+sig\+\_\+\+Tbar\+\_\+integrand}} (double x, void $\ast$par)
-\begin{DoxyCompactList}\small\item\em Model from Keating et al 2016 to account for the observed variation in halo activity, i.\+e. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c}{p\+\_\+sig\+\_\+\+Tbar}} (double scatter)
-\item 
+\begin{DoxyCompactList}\small\item\em Compute the scatter in Tbar due to scatter in luminosity-\/halo mass relation, assume log-\/normal scatter ala Keating Note that we set f\+\_\+duty =1 unlike other LIM paper (ex. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}{line\+\_\+bias}} (struct \mbox{\hyperlink{struct_line}{Line}} $\ast$Lx, double z, double $\ast$result)
 \begin{DoxyCompactList}\small\item\em Compute the linear and quadratic line biases, accounting ffor the normalization w.\+r.\+t. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a01a848b612006614576adc49385076cf}{mean\+\_\+intens}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, size\+\_\+t line\+\_\+id, double z)
@@ -110,31 +111,9 @@ In summary, the following functions can be called from other modules\+:
 \doxyparagraph{\texorpdfstring{bias\_lum\_weighted()}{bias\_lum\_weighted()}}
 {\footnotesize\ttfamily void bias\+\_\+lum\+\_\+weighted (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{mode\+\_\+lum,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
 
-In units of solar mass;
-
-In units of solar massHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}\label{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}} 
-\index{line\_ingredients.c@{line\_ingredients.c}!bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}}
-\index{bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxyparagraph{\texorpdfstring{bias\_lum\_weighted\_integ()}{bias\_lum\_weighted\_integ()}}
-{\footnotesize\ttfamily int bias\+\_\+lum\+\_\+weighted\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
 
 
-
-Compute the luminosityy-\/weighted linear and quadratic line biases. 
+Compute the luminosity-\/weighted linear and quadratic line biases. 
 
 The normalization of first mass moment is not included yet. The function \mbox{\hyperlink{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}{bias\+\_\+lum\+\_\+weighted\+\_\+integ()}} is the integrand and \mbox{\hyperlink{line__ingredients_8c_aa050a054d3724145e3b46788bf279c79}{bias\+\_\+lum\+\_\+weighted()}} computes the bias
 
@@ -155,14 +134,57 @@ The normalization of first mass moment is not included yet. The function \mbox{\
 un-\/normalized line bias ~\newline
  
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+In units of solar mass;
+
+In units of solar massHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{d7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}\label{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}} 
+\index{line\_ingredients.c@{line\_ingredients.c}!bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}}
+\index{bias\_lum\_weighted\_integ@{bias\_lum\_weighted\_integ}!line\_ingredients.c@{line\_ingredients.c}}
+\doxyparagraph{\texorpdfstring{bias\_lum\_weighted\_integ()}{bias\_lum\_weighted\_integ()}}
+{\footnotesize\ttfamily int bias\+\_\+lum\+\_\+weighted\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to hcubature integrator to compute the un-\/normalized luminosity-\/weighted line bias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: integration variable \\
+\hline
+{\em p} & Input\+: integration parmaeters \\
+\hline
+{\em fdim} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -198,14 +220,8 @@ void ~\newline
 \end{DoxyReturn}
 Note that for PSC and ST mass functions, same form of the biases can be assumed, with different coefficents. See astro-\/ph/0006319
 
-Assuming spherical collapseHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Assuming spherical collapseHere is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -241,18 +257,12 @@ This structure contains interpolators for computing the luminosity-\/weighted ma
 the total clustering line power spectrum, including the 1-\/ and 2-\/halo term ~\newline
  
 \end{DoxyReturn}
-CIIHere is the call graph for this function\+:\nopagebreak
+CIIHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}\label{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}} 
@@ -286,7 +296,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=251pt]{d7/d10/line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -321,7 +332,8 @@ This structure contains interpolators for computing the luminosity-\/weighted ma
 \begin{DoxyReturn}{Returns}
 the error status 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -346,13 +358,6 @@ Free the line structure.
 \begin{DoxyReturn}{Returns}
 the error status 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a255599f7e846dd569f4ce4c946157dec_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{line__ingredients_8c_aebdf0211b161d65ccf44536629df2b02}\label{line__ingredients_8c_aebdf0211b161d65ccf44536629df2b02}} 
 \index{line\_ingredients.c@{line\_ingredients.c}!logSFR\_alloc\_init@{logSFR\_alloc\_init}}
 \index{logSFR\_alloc\_init@{logSFR\_alloc\_init}!line\_ingredients.c@{line\_ingredients.c}}
@@ -366,8 +371,7 @@ Allocate memory and initialize the 2d interpolator for the star formation rate o
 \begin{DoxyReturn}{Returns}
 the error status 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -402,7 +406,8 @@ Evaluate the SFR interpolator object for a given value of mass and redshift.
 log10\+SFR ~\newline
  
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -432,8 +437,7 @@ Read in the file for the star formation rate byy Behroozi et al 2013.
 void ~\newline
  
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -455,7 +459,9 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits in Table 4 of ??? et al ar\+Xiv\+:1508.\+05102, while for CII we use Silva et al ar\+Xiv\+: 
+Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits in Table 4 of Kamenetzky et al. 
+
+ar\+Xiv\+:1508.\+05102, while for CII we use Silva et al ar\+Xiv\+:1410.\+4808
 
 
 \begin{DoxyParams}{Parameters}
@@ -483,7 +489,8 @@ in unit of L\+\_\+sunHere is the call graph for this function\+:\nopagebreak
 \includegraphics[width=272pt]{d7/d10/line__ingredients_8c_a1d5765167555f21d8ae5eba187eb2aa8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -514,14 +521,16 @@ Compute the halo mass function for Press-\/\+Schechter, Sheth-\/\+Tormen and Tin
 \begin{DoxyReturn}{Returns}
 the halo mass function in unit of halos per Mpc$^\wedge$3 per solar mass, compared at z=0 with Murray etal \href{https://arxiv.org/abs/1306.5140}{\texttt{ https\+://arxiv.\+org/abs/1306.\+5140}} 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702_cgraph}
+\includegraphics[width=240pt]{d7/d10/line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -568,35 +577,7 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
-
-In units of solar mass;
-
-In units of solar massHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}\label{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}} 
-\index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment1\_integ@{mass\_moment1\_integ}}
-\index{mass\_moment1\_integ@{mass\_moment1\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxyparagraph{\texorpdfstring{mass\_moment1\_integ()}{mass\_moment1\_integ()}}
-{\footnotesize\ttfamily int mass\+\_\+moment1\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
-
-
-
-Compute the first luminosityy-\/weighted mass moment. 
-
-The function \mbox{\hyperlink{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}{mass\+\_\+moment1\+\_\+integ()}} is the integrand and \mbox{\hyperlink{line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e}{mass\+\_\+moment1()}} compute the moment
+Compute the first luminosity moment. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -613,16 +594,59 @@ The function \mbox{\hyperlink{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4dd
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the first mass moment ~\newline
- 
+ in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+In units of solar mass;
+
+In units of solar massHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}\label{line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32}} 
+\index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment1\_integ@{mass\_moment1\_integ}}
+\index{mass\_moment1\_integ@{mass\_moment1\_integ}!line\_ingredients.c@{line\_ingredients.c}}
+\doxyparagraph{\texorpdfstring{mass\_moment1\_integ()}{mass\_moment1\_integ()}}
+{\footnotesize\ttfamily int mass\+\_\+moment1\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to hcubature integrator to compute the first moment of line luminosity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: integration variable \\
+\hline
+{\em p} & Input\+: integration parmaeters \\
+\hline
+{\em fdim} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -637,35 +661,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
-
-In units of solar mass;
-
-In units of solar massHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}\label{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}} 
-\index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment2\_integ@{mass\_moment2\_integ}}
-\index{mass\_moment2\_integ@{mass\_moment2\_integ}!line\_ingredients.c@{line\_ingredients.c}}
-\doxyparagraph{\texorpdfstring{mass\_moment2\_integ()}{mass\_moment2\_integ()}}
-{\footnotesize\ttfamily int mass\+\_\+moment2\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
-
-
-
-Compute the second luminosityy-\/weighted mass moment. 
-
-The function \mbox{\hyperlink{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}{mass\+\_\+moment2\+\_\+integ()}} is the integrand and \mbox{\hyperlink{line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5}{mass\+\_\+moment2()}} compute the moment
+Compute the second luminosity moment. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -681,17 +677,60 @@ The function \mbox{\hyperlink{line__ingredients_8c_af293c79ca858df80dcc0ef9f2944
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the second mass moment ~\newline
- 
+the second lum moment ~\newline
+ in unit of M\+\_\+sun/\+Mpc$^\wedge$3 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+In units of solar mass;
+
+In units of solar massHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}\label{line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059}} 
+\index{line\_ingredients.c@{line\_ingredients.c}!mass\_moment2\_integ@{mass\_moment2\_integ}}
+\index{mass\_moment2\_integ@{mass\_moment2\_integ}!line\_ingredients.c@{line\_ingredients.c}}
+\doxyparagraph{\texorpdfstring{mass\_moment2\_integ()}{mass\_moment2\_integ()}}
+{\footnotesize\ttfamily int mass\+\_\+moment2\+\_\+integ (\begin{DoxyParamCaption}\item[{unsigned}]{nd,  }\item[{const double $\ast$}]{x,  }\item[{void $\ast$}]{p,  }\item[{unsigned}]{fdim,  }\item[{double $\ast$}]{fvalue }\end{DoxyParamCaption})}
+
+
+
+The integrand function passed to hcubature integrator to compute the second moment of line luminosity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & Input\+: Dimensionality of the domain of integration \\
+\hline
+{\em x} & Input\+: integration variable \\
+\hline
+{\em p} & Input\+: integration parmaeters \\
+\hline
+{\em fdim} & Input\+: Dimensionality of the integrand function \\
+\hline
+{\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -723,14 +762,16 @@ the line mean intensity
 Note\+: nu\+\_\+J is the rest-\/frame emission frequency related to the observed frequency as nu\+\_\+obs = nu\+\_\+\+J/(1+z\+\_\+J) For a CO transition from J-\/\texorpdfstring{$>$}{>} J-\/1, the rest-\/frame frequency is nu\+\_\+J = J nu\+\_\+\+CO where nu\+\_\+\+Co = 115 GHz. ~\newline
 
 
-in unit of erg/sHere is the call graph for this function\+:\nopagebreak
+in unit of erg/sHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=269pt]{d7/d10/line__ingredients_8c_a01a848b612006614576adc49385076cf_cgraph}
+\includegraphics[width=265pt]{d7/d10/line__ingredients_8c_a01a848b612006614576adc49385076cf_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -758,7 +799,8 @@ Compute the multiplicity function needed to compute the halo mass function Three
 the multiplicity function ~\newline
  
 \end{DoxyReturn}
-In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:\nopagebreak
+In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -778,11 +820,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=293pt]{d7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{d7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph}
+\includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}\label{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}} 
@@ -806,7 +849,8 @@ scatter in the L(\+M) relation p\+\_\+sig\+\_\+shot replaces the f\+\_\+duty in 
 the scatter coeff of the shot noise ~\newline
  
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -819,14 +863,31 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{p\_sig\_Tbar()}{p\_sig\_Tbar()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+\+Tbar (\begin{DoxyParamCaption}\item[{double}]{scatter }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Compute the scatter in Tbar due to scatter in luminosity-\/halo mass relation, assume log-\/normal scatter ala Keating Note that we set f\+\_\+duty =1 unlike other LIM paper (ex. 
+
+Lidz et al 2011).
+
+
+\begin{DoxyParams}{Parameters}
+{\em scatter} & Input\+: variance of the log-\/scatter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the scatter coeff of Tbar ~\newline
+ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{d7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph}
+\includegraphics[width=291pt]{d7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -841,20 +902,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Model from Keating et al 2016 to account for the observed variation in halo activity, i.\+e. 
-
-scatter in the L(\+M) relation p\+\_\+sig\+\_\+\+Tbar replace the f\+\_\+duty in the average brightness temprature used in some LIM paper (ex. Lidz et al 2011). \mbox{\hyperlink{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}{p\+\_\+sig\+\_\+\+Tbar\+\_\+integrand()}} is the integrand, and \mbox{\hyperlink{line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c}{p\+\_\+sig\+\_\+\+Tbar()}} computes the scatter factor for the mean brightness temprature.
+The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em scatter} & Input\+: variance of the log-\/scatter \\
+{\em x} & Input\+: integration variable \\
+\hline
+{\em par} & Input\+: integration parmaeters \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the scatter coeff of Tbar ~\newline
- 
+value of the integrand 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -874,7 +935,8 @@ Free the memory allocated to the interpolators of star formation rate by Behrooz
 \begin{DoxyReturn}{Returns}
 the error status 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -905,14 +967,16 @@ the line mean temprature assuming Rayleigh-\/\+Jeans limit
 \end{DoxyReturn}
 Boltzmann constant in unit of erg K$^\wedge$-\/1
 
-factor of 10$^\wedge$6 is the conversion factor from K to microKHere is the call graph for this function\+:\nopagebreak
+factor of 10$^\wedge$6 is the conversion factor from K to microKHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a8badf96f7e0696daa78b2f6aeeda8a08_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

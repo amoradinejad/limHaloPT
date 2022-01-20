@@ -34,40 +34,40 @@
 \DoxyCodeLine{33 \textcolor{preprocessor}{\#include <gsl/gsl\_roots.h>}   \textcolor{comment}{// For finding the root of algebraic equation  }}
 \DoxyCodeLine{34 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_expint.h>}}
 \DoxyCodeLine{35 \textcolor{preprocessor}{\#include <ctype.h>}}
-\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}../Class/include/class.h"{}}}
-\DoxyCodeLine{37 \textcolor{preprocessor}{\#include "{}cuba.h"{}}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}cuba.h"{}}}
+\DoxyCodeLine{37 }
 \DoxyCodeLine{38 }
-\DoxyCodeLine{39 }
-\DoxyCodeLine{40 \textcolor{preprocessor}{\#define PSC         101L}}
-\DoxyCodeLine{41 \textcolor{preprocessor}{\#define ST              102L}}
-\DoxyCodeLine{42 \textcolor{preprocessor}{\#define TR              103L}}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{44 \textcolor{preprocessor}{\#define GROWTH      104L}}
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#define DERGROWTH       105L}}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47 \textcolor{preprocessor}{\#define NONLINEAR       106L}}
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#define LINEAR      107L}}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50 \textcolor{preprocessor}{\#define GAUSSIAN        114L}}
-\DoxyCodeLine{51 \textcolor{preprocessor}{\#define NONGAUSSIAN 115L}}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#define INIT        116L}}
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#define LOCAL       117L}}
-\DoxyCodeLine{55 \textcolor{preprocessor}{\#define EQUILATERAL 118L}}
-\DoxyCodeLine{56 \textcolor{preprocessor}{\#define ORTHOGONAL  119L}}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#define QSF         120L}}
-\DoxyCodeLine{58 \textcolor{preprocessor}{\#define HS          121L}}
-\DoxyCodeLine{59 \textcolor{preprocessor}{\#define NGLOOP      122L}}
-\DoxyCodeLine{60 \textcolor{preprocessor}{\#define derNGLOOP       123L}}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62 \textcolor{preprocessor}{\#define QUADRATIC       124L}}
-\DoxyCodeLine{63 \textcolor{preprocessor}{\#define TIDE        125L}}
-\DoxyCodeLine{64 \textcolor{preprocessor}{\#define GAMMA       126L}}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#define LPOWER      127L}}
-\DoxyCodeLine{67 \textcolor{preprocessor}{\#define NLPOWER     128L}}
-\DoxyCodeLine{68 \textcolor{preprocessor}{\#define TRANS       129L}}
-\DoxyCodeLine{69 \textcolor{preprocessor}{\#define DER         130L}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define PSC         101L}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define ST              102L}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define TK              103L}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define GROWTH      104L}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define DERGROWTH       105L}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define NONLINEAR       106L}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define LINEAR      107L}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define GAUSSIAN        114L}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define NONGAUSSIAN 115L}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define INIT        116L}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define LOCAL       117L}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define EQUILATERAL 118L}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define ORTHOGONAL  119L}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define QSF         120L}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define HS          121L}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define NGLOOP      122L}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define derNGLOOP       123L}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define QUADRATIC       124L}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define TIDE        125L}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define GAMMA       126L}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LPOWER      127L}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define NLPOWER     128L}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define CDM         90L}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define BA          91L}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define TOT         92L}}
 \DoxyCodeLine{70 }
 \DoxyCodeLine{71 \textcolor{preprocessor}{\#define CO10        131L}}
 \DoxyCodeLine{72 \textcolor{preprocessor}{\#define CO21        132L}}
@@ -94,88 +94,89 @@
 \DoxyCodeLine{93 \textcolor{preprocessor}{\#define HALO        148L}}
 \DoxyCodeLine{94 }
 \DoxyCodeLine{95 }
-\DoxyCodeLine{96 \textcolor{preprocessor}{\#define PS\_KMIN        1.0e-\/7}}
-\DoxyCodeLine{97 \textcolor{preprocessor}{\#define PS\_KMAX        1.0e4}}
-\DoxyCodeLine{98 }
-\DoxyCodeLine{99 \textcolor{preprocessor}{\#define CLEANUP        1 }}
-\DoxyCodeLine{100 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define PS\_KMIN     1.e-\/5}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define PS\_KMAX     100.1 }}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define PS\_ZMAX     14.}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define CLEANUP        1 }}
 \DoxyCodeLine{101 \textcolor{preprocessor}{\#define DO\_NOT\_EVALUATE -\/1.0}}
-\DoxyCodeLine{102 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define NPARS     6}}
 \DoxyCodeLine{103 \textcolor{preprocessor}{\#define MAXL 2000}}
 \DoxyCodeLine{104 }
-\DoxyCodeLine{108 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_global___structs_8h}{Global\_Structs.h}}"{}}}
-\DoxyCodeLine{109 \textcolor{preprocessor}{\#include "{}cosmology.h"{}}}
-\DoxyCodeLine{110 \textcolor{preprocessor}{\#include "{}utilities.h"{}}}
-\DoxyCodeLine{111 \textcolor{preprocessor}{\#include "{}survey\_specs.h"{}}}
-\DoxyCodeLine{112 \textcolor{preprocessor}{\#include "{}primordial.h"{}}}
-\DoxyCodeLine{113 \textcolor{preprocessor}{\#include "{}line\_ingredients.h"{}}   }
-\DoxyCodeLine{114 \textcolor{preprocessor}{\#include "{}wnw\_split.h"{}}}
-\DoxyCodeLine{115 \textcolor{preprocessor}{\#include "{}IR\_res.h"{}}}
-\DoxyCodeLine{116 \textcolor{preprocessor}{\#include "{}ps\_halo\_1loop.h"{}}}
-\DoxyCodeLine{117 \textcolor{preprocessor}{\#include "{}ps\_line\_pt.h"{}}}
-\DoxyCodeLine{118 \textcolor{preprocessor}{\#include "{}ps\_line\_hm.h"{}}}
-\DoxyCodeLine{119 \textcolor{preprocessor}{\#include "{}cubature.h"{}}}
-\DoxyCodeLine{120 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#include "{}../Class/include/class.h"{}}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_global___structs_8h}{Global\_Structs.h}}"{}}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#include "{}cosmology.h"{}}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#include "{}utilities.h"{}}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#include "{}survey\_specs.h"{}}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#include "{}primordial.h"{}}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#include "{}line\_ingredients.h"{}}   }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#include "{}wnw\_split.h"{}}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#include "{}IR\_res.h"{}}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#include "{}ps\_halo\_1loop.h"{}}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#include "{}ps\_line\_pt.h"{}}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#include "{}ps\_line\_hm.h"{}}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#include "{}cubature.h"{}}}
 \DoxyCodeLine{121 }
-\DoxyCodeLine{125 \textcolor{keywordtype}{void}  \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}}();}
-\DoxyCodeLine{126 \textcolor{keywordtype}{void}    \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}();}
-\DoxyCodeLine{127 }
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126 \textcolor{keywordtype}{void}  \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}}();}
+\DoxyCodeLine{127 \textcolor{keywordtype}{void}    \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}();}
 \DoxyCodeLine{128 }
-\DoxyCodeLine{132 \textcolor{keyword}{struct }\mbox{\hyperlink{structintegrand__parameters}{integrand\_parameters}}}
-\DoxyCodeLine{133 \{}
-\DoxyCodeLine{134     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_afe3ec2bbc515ef1c2c03dccf567831f4}{p1}};}
-\DoxyCodeLine{135     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_afb3d783e05c27da8ea3c53c9d2e17af1}{p2}};}
-\DoxyCodeLine{136     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a4b6291b8db3486489857e91d65f0db16}{p3}};}
-\DoxyCodeLine{137     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a530616d2af4778ddd86f09c1422be4b4}{p4}};}
-\DoxyCodeLine{138     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a0a1abbe5dadb9e9fc4cc819d1968d13a}{p5}};}
-\DoxyCodeLine{139     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a8c593840947abb9f8188fa960545fa59}{p6}};}
-\DoxyCodeLine{140     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a3725fd668c7af8aca05fd97732b71083}{p7}};}
-\DoxyCodeLine{141     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a62c28c7617f79d7540f1bf2768ce9035}{p8}};}
-\DoxyCodeLine{142     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_ac44dc3d39104cb8d37b26bffe78304e5}{p9}};}
-\DoxyCodeLine{143     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a983d31d0907b755a09f525ba43ef4d40}{p10}};}
-\DoxyCodeLine{144     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a163bc2d00ecf901da3473a7b4e410bd0}{p11}};}
-\DoxyCodeLine{145     \textcolor{keywordtype}{long}    \mbox{\hyperlink{structintegrand__parameters_a8b81f593dd839692e89ce17fa634eec3}{p12}};}
-\DoxyCodeLine{146     \textcolor{keywordtype}{long}    \mbox{\hyperlink{structintegrand__parameters_a6eb36480c2d63a79faeb9f4fe830cc59}{p13}};}
-\DoxyCodeLine{147 \};}
-\DoxyCodeLine{148 }
-\DoxyCodeLine{152 \textcolor{keyword}{struct }\mbox{\hyperlink{structintegrand__parameters2}{integrand\_parameters2}}}
-\DoxyCodeLine{153 \{}
-\DoxyCodeLine{154 }
-\DoxyCodeLine{155     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a1c52abea9f556aacc2fdb0593b7e1efd}{p1}};}
-\DoxyCodeLine{156     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a44835548f9f807eda2401174b2ff4674}{p2}};}
-\DoxyCodeLine{157     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a2dd7549928746b67df6b1621de778504}{p3}};}
-\DoxyCodeLine{158 }
-\DoxyCodeLine{159     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a530616d2af4778ddd86f09c1422be4b4}{p4}};}
-\DoxyCodeLine{160     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a0a1abbe5dadb9e9fc4cc819d1968d13a}{p5}};}
-\DoxyCodeLine{161     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a8c593840947abb9f8188fa960545fa59}{p6}}; }
-\DoxyCodeLine{162     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a3725fd668c7af8aca05fd97732b71083}{p7}};}
-\DoxyCodeLine{163     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a62c28c7617f79d7540f1bf2768ce9035}{p8}};}
-\DoxyCodeLine{164     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_ac44dc3d39104cb8d37b26bffe78304e5}{p9}};}
-\DoxyCodeLine{165     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a983d31d0907b755a09f525ba43ef4d40}{p10}};}
-\DoxyCodeLine{166     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a163bc2d00ecf901da3473a7b4e410bd0}{p11}};}
-\DoxyCodeLine{167     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_ac072af7d68588b287a99d0593eebc54f}{p12}};}
-\DoxyCodeLine{168 }
-\DoxyCodeLine{169     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a6eb36480c2d63a79faeb9f4fe830cc59}{p13}};}
-\DoxyCodeLine{170     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_ac77421d9d85c8d561513ff10d0aa65d9}{p14}};}
-\DoxyCodeLine{171     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a339e3c9b991900291fab8fe94350b733}{p15}};}
-\DoxyCodeLine{172     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_acf3defe60369b49bc3fb65e91299e7a4}{p16}};}
-\DoxyCodeLine{173     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a1327975b44e47ac711836de24a0ca339}{p17}};}
-\DoxyCodeLine{174     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_ad6a7451bf850c9f17c73a2fa3cc0dea5}{p18}};}
-\DoxyCodeLine{175 }
-\DoxyCodeLine{176     \textcolor{keywordtype}{int} \mbox{\hyperlink{structintegrand__parameters2_ad2d66517b604e75c87e6174b6a7eb8a8}{p19}};}
-\DoxyCodeLine{177 }
-\DoxyCodeLine{178     \textcolor{keywordtype}{double} *\mbox{\hyperlink{structintegrand__parameters2_a09380b1be80de71075936a7128b27873}{p20}};}
-\DoxyCodeLine{179     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structintegrand__parameters2_aa1503d9cfeaea954558d21f01573f2b0}{p22}};}
-\DoxyCodeLine{180 \};}
-\DoxyCodeLine{181     }
-\DoxyCodeLine{182 }
-\DoxyCodeLine{183 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{184 }
+\DoxyCodeLine{129 }
+\DoxyCodeLine{133 \textcolor{keyword}{struct }\mbox{\hyperlink{structintegrand__parameters}{integrand\_parameters}}}
+\DoxyCodeLine{134 \{}
+\DoxyCodeLine{135     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_afe3ec2bbc515ef1c2c03dccf567831f4}{p1}};}
+\DoxyCodeLine{136     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_afb3d783e05c27da8ea3c53c9d2e17af1}{p2}};}
+\DoxyCodeLine{137     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a4b6291b8db3486489857e91d65f0db16}{p3}};}
+\DoxyCodeLine{138     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a530616d2af4778ddd86f09c1422be4b4}{p4}};}
+\DoxyCodeLine{139     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a0a1abbe5dadb9e9fc4cc819d1968d13a}{p5}};}
+\DoxyCodeLine{140     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a8c593840947abb9f8188fa960545fa59}{p6}};}
+\DoxyCodeLine{141     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a3725fd668c7af8aca05fd97732b71083}{p7}};}
+\DoxyCodeLine{142     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a62c28c7617f79d7540f1bf2768ce9035}{p8}};}
+\DoxyCodeLine{143     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_ac44dc3d39104cb8d37b26bffe78304e5}{p9}};}
+\DoxyCodeLine{144     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a983d31d0907b755a09f525ba43ef4d40}{p10}};}
+\DoxyCodeLine{145     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters_a163bc2d00ecf901da3473a7b4e410bd0}{p11}};}
+\DoxyCodeLine{146     \textcolor{keywordtype}{long}    \mbox{\hyperlink{structintegrand__parameters_a8b81f593dd839692e89ce17fa634eec3}{p12}};}
+\DoxyCodeLine{147     \textcolor{keywordtype}{long}    \mbox{\hyperlink{structintegrand__parameters_a6eb36480c2d63a79faeb9f4fe830cc59}{p13}};}
+\DoxyCodeLine{148 \};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{153 \textcolor{keyword}{struct }\mbox{\hyperlink{structintegrand__parameters2}{integrand\_parameters2}}}
+\DoxyCodeLine{154 \{}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a1c52abea9f556aacc2fdb0593b7e1efd}{p1}};}
+\DoxyCodeLine{157     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a44835548f9f807eda2401174b2ff4674}{p2}};}
+\DoxyCodeLine{158     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}} *\mbox{\hyperlink{structintegrand__parameters2_a2dd7549928746b67df6b1621de778504}{p3}};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a530616d2af4778ddd86f09c1422be4b4}{p4}};}
+\DoxyCodeLine{161     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a0a1abbe5dadb9e9fc4cc819d1968d13a}{p5}};}
+\DoxyCodeLine{162     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a8c593840947abb9f8188fa960545fa59}{p6}}; }
+\DoxyCodeLine{163     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a3725fd668c7af8aca05fd97732b71083}{p7}};}
+\DoxyCodeLine{164     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a62c28c7617f79d7540f1bf2768ce9035}{p8}};}
+\DoxyCodeLine{165     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_ac44dc3d39104cb8d37b26bffe78304e5}{p9}};}
+\DoxyCodeLine{166     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a983d31d0907b755a09f525ba43ef4d40}{p10}};}
+\DoxyCodeLine{167     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_a163bc2d00ecf901da3473a7b4e410bd0}{p11}};}
+\DoxyCodeLine{168     \textcolor{keywordtype}{double} \mbox{\hyperlink{structintegrand__parameters2_ac072af7d68588b287a99d0593eebc54f}{p12}};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a6eb36480c2d63a79faeb9f4fe830cc59}{p13}};}
+\DoxyCodeLine{171     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_ac77421d9d85c8d561513ff10d0aa65d9}{p14}};}
+\DoxyCodeLine{172     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a339e3c9b991900291fab8fe94350b733}{p15}};}
+\DoxyCodeLine{173     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_acf3defe60369b49bc3fb65e91299e7a4}{p16}};}
+\DoxyCodeLine{174     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_a1327975b44e47ac711836de24a0ca339}{p17}};}
+\DoxyCodeLine{175     \textcolor{keywordtype}{long} \mbox{\hyperlink{structintegrand__parameters2_ad6a7451bf850c9f17c73a2fa3cc0dea5}{p18}};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177     \textcolor{keywordtype}{int} \mbox{\hyperlink{structintegrand__parameters2_ad2d66517b604e75c87e6174b6a7eb8a8}{p19}};}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179     \textcolor{keywordtype}{double} *\mbox{\hyperlink{structintegrand__parameters2_a09380b1be80de71075936a7128b27873}{p20}};}
+\DoxyCodeLine{180     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structintegrand__parameters2_aa1503d9cfeaea954558d21f01573f2b0}{p22}};}
+\DoxyCodeLine{181 \};}
+\DoxyCodeLine{182     }
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{185 }
 \DoxyCodeLine{186 }
 \DoxyCodeLine{187 }
 \DoxyCodeLine{188 }
 \DoxyCodeLine{189 }
 \DoxyCodeLine{190 }
+\DoxyCodeLine{191 }
 
 \end{DoxyCode}

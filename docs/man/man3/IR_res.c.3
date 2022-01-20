@@ -1,4 +1,4 @@
-.TH "IR_res.c" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "IR_res.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,7 +26,7 @@ IR_res.c \- Documented IR_res module\&.
 .br
 .RI "Integrand to compute the suppression factor IR_sigma2\&. "
 .ti -1c
-.RI "double \fBIR_Sigma2\fP (struct \fBCosmology\fP *Cx, double z, double kf0, long SPLIT)"
+.RI "double \fBIR_Sigma2\fP (struct \fBCosmology\fP *Cx, double z, double k0, long SPLIT)"
 .br
 .RI "Compute the suppression factor IR_sigma2\&. "
 .ti -1c
@@ -73,7 +73,7 @@ In summary, the following functions can be called from other modules:
 
 .SH "Function Documentation"
 .PP 
-.SS "double IR_Sigma2 (struct \fBCosmology\fP * Cx, double z, double kf0, long SPLIT)"
+.SS "double IR_Sigma2 (struct \fBCosmology\fP * Cx, double z, double k0, long SPLIT)"
 
 .PP
 Compute the suppression factor IR_sigma2\&. 
@@ -84,9 +84,9 @@ Compute the suppression factor IR_sigma2\&.
 .br
 \fIz\fP Input: redshift 
 .br
-\fIkf0\fP Input: first element of the k-array, used in normalization of EH no-wiggle spectrum 
+\fIk0\fP Input: first element of the k-array, used in normalization of EH no-wiggle spectrum 
 .br
-\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split
+\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split 
 .RE
 .PP
 \fBReturns\fP
@@ -106,7 +106,7 @@ Integrand to compute the suppression factor IR_sigma2\&.
 .RS 4
 \fIx\fP Input: integration variable, k-values 
 .br
-\fIpar\fP Input: integration parameters
+\fIpar\fP Input: integration parameters 
 .RE
 .PP
 \fBReturns\fP
@@ -130,7 +130,7 @@ Compute the leading-order IR-resummed matter power spectrum, ala Ivanovic et al\
 .br
 \fIz\fP Input: redshift 
 .br
-\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split
+\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split 
 .RE
 .PP
 \fBReturns\fP
@@ -154,7 +154,7 @@ Compute the next-to-leading-order IR-resummed matter power spectrum, ala Ivanovi
 .br
 \fIz\fP Input: redshift 
 .br
-\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split
+\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split 
 .RE
 .PP
 \fBReturns\fP
@@ -182,12 +182,12 @@ Compute the no-wiggle componenet of the matter power spectrum\&.
 .br
 \fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators 
 .br
-\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split
+\fISPLIT\fP Input: switch to set the method of wiggle-nowiggle split 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-double value of no-wiggle power spectrum 
+value of no-wiggle power spectrum 
 .br
  
 .RE
@@ -206,12 +206,12 @@ Compute the no-wiggle componenet of the matter power spectrum, reading in and in
 .br
 \fIz\fP Input: redshift 
 .br
-\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators
+\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-double value of no-wiggle power spectrum 
+value of no-wiggle power spectrum 
 .br
  
 .RE
@@ -230,12 +230,12 @@ Compute the no-wiggle componenet of the matter power spectrum, reading in and in
 .br
 \fIz\fP Input: redshift 
 .br
-\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators
+\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-double value of no-wiggle power spectrum 
+value of no-wiggle power spectrum 
 .br
  
 .RE
@@ -254,12 +254,12 @@ Compute the no-wiggle componenet of the matter power spectrum, using Gaussian fi
 .br
 \fIz\fP Input: redshift 
 .br
-\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators
+\fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-double value of no-wiggle power spectrum 
+value of no-wiggle power spectrum 
 .br
  
 .RE

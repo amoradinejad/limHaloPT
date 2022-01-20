@@ -1,4 +1,4 @@
 <map id="p_sig_Tbar" name="p_sig_Tbar">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,95,32"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="143,5,295,32"/>
+<area shape="rect" id="node1" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="140,5,287,32"/>
 </map>

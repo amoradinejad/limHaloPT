@@ -6,7 +6,8 @@ Documented IR\+\_\+res module.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for IR\+\_\+res.\+c\+:\nopagebreak
+Include dependency graph for IR\+\_\+res.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +23,7 @@ double \mbox{\hyperlink{_i_r__res_8c_a081df8016b0ce1b7160a3b49547e0348}{pm\+\_\+
 \begin{DoxyCompactList}\small\item\em Compute the next-\/to-\/leading-\/order IR-\/resummed matter power spectrum, ala Ivanovic et al. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_i_r__res_8c_a96ac18bc55ca39bce830a35aac4f1dee}{IR\+\_\+\+Sigma2\+\_\+integrand}} (double x, void $\ast$par)
 \begin{DoxyCompactList}\small\item\em Integrand to compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58}{IR\+\_\+\+Sigma2}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double kf0, long SPLIT)
+double \mbox{\hyperlink{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}{IR\+\_\+\+Sigma2}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double k0, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_i_r__res_8c_a6636c173929d53798037db6d86a74561}{pm\+\_\+nowiggle}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double kf0, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum. \end{DoxyCompactList}\item 
@@ -45,7 +46,7 @@ In summary, the following functions can be called from other modules\+:
 \begin{DoxyEnumerate}
 \item \mbox{\hyperlink{_i_r__res_8c_ac9b48827f9977633775bbff6971ec467}{pm\+\_\+\+IR\+\_\+\+LO()}}
 \item \mbox{\hyperlink{_i_r__res_8c_a081df8016b0ce1b7160a3b49547e0348}{pm\+\_\+\+IR\+\_\+\+NLO()}}
-\item \mbox{\hyperlink{_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58}{IR\+\_\+\+Sigma2()}}
+\item \mbox{\hyperlink{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}{IR\+\_\+\+Sigma2()}}
 \item \mbox{\hyperlink{_i_r__res_8c_a6636c173929d53798037db6d86a74561}{pm\+\_\+nowiggle()}}
 \item \mbox{\hyperlink{_i_r__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878}{pm\+\_\+nowiggle\+\_\+gfilter()}}
 \item \mbox{\hyperlink{_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}{pm\+\_\+nowiggle\+\_\+bspline()}}
@@ -53,11 +54,11 @@ In summary, the following functions can be called from other modules\+:
 \end{DoxyEnumerate}
 
 \doxysubsubsection{Function Documentation}
-\mbox{\Hypertarget{_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58}\label{_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58}} 
+\mbox{\Hypertarget{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}\label{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}} 
 \index{IR\_res.c@{IR\_res.c}!IR\_Sigma2@{IR\_Sigma2}}
 \index{IR\_Sigma2@{IR\_Sigma2}!IR\_res.c@{IR\_res.c}}
 \doxyparagraph{\texorpdfstring{IR\_Sigma2()}{IR\_Sigma2()}}
-{\footnotesize\ttfamily double IR\+\_\+\+Sigma2 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{kf0,  }\item[{long}]{SPLIT }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double IR\+\_\+\+Sigma2 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{k0,  }\item[{long}]{SPLIT }\end{DoxyParamCaption})}
 
 
 
@@ -69,9 +70,9 @@ Compute the suppression factor IR\+\_\+sigma2.
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em kf0} & Input\+: first element of the k-\/array, used in normalization of EH no-\/wiggle spectrum \\
+{\em k0} & Input\+: first element of the k-\/array, used in normalization of EH no-\/wiggle spectrum \\
 \hline
-{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split\\
+{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -83,14 +84,15 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58_cgraph}
+\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ad57601a52710911744c3ab9ee4192075_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ad769e8b3feb90c7d2cb4652771859b58_icgraph}
+\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ad57601a52710911744c3ab9ee4192075_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{_i_r__res_8c_a96ac18bc55ca39bce830a35aac4f1dee}\label{_i_r__res_8c_a96ac18bc55ca39bce830a35aac4f1dee}} 
@@ -107,7 +109,7 @@ Integrand to compute the suppression factor IR\+\_\+sigma2.
 \begin{DoxyParams}{Parameters}
 {\em x} & Input\+: integration variable, k-\/values \\
 \hline
-{\em par} & Input\+: integration parameters\\
+{\em par} & Input\+: integration parameters \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -122,7 +124,8 @@ BAO\+\_\+scale = 110. Mpc/h.Here is the call graph for this function\+:
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_a96ac18bc55ca39bce830a35aac4f1dee_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -147,7 +150,7 @@ Compute the leading-\/order IR-\/resummed matter power spectrum, ala Ivanovic et
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split\\
+{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -162,7 +165,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ac9b48827f9977633775bbff6971ec467_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -187,7 +191,7 @@ Compute the next-\/to-\/leading-\/order IR-\/resummed matter power spectrum, ala
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split\\
+{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -231,11 +235,11 @@ Compute the no-\/wiggle componenet of the matter power spectrum.
 \hline
 {\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators \\
 \hline
-{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split\\
+{\em SPLIT} & Input\+: switch to set the method of wiggle-\/nowiggle split \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-double value of no-\/wiggle power spectrum ~\newline
+value of no-\/wiggle power spectrum ~\newline
  
 \end{DoxyReturn}
 Here is the call graph for this function\+:
@@ -246,7 +250,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_a6636c173929d53798037db6d86a74561_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -271,21 +276,23 @@ Compute the no-\/wiggle componenet of the matter power spectrum, reading in and 
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators\\
+{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-double value of no-\/wiggle power spectrum ~\newline
+value of no-\/wiggle power spectrum ~\newline
  
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -310,21 +317,23 @@ Compute the no-\/wiggle componenet of the matter power spectrum, reading in and 
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators\\
+{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-double value of no-\/wiggle power spectrum ~\newline
+value of no-\/wiggle power spectrum ~\newline
  
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_addffe543a63e7b319b57d29f6c0b4957_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,11 +358,11 @@ Compute the no-\/wiggle componenet of the matter power spectrum, using Gaussian 
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators\\
+{\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-double value of no-\/wiggle power spectrum ~\newline
+value of no-\/wiggle power spectrum ~\newline
  
 \end{DoxyReturn}
 Here is the call graph for this function\+:
@@ -364,7 +373,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

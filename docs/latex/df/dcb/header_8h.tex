@@ -25,8 +25,8 @@
 {\ttfamily \#include $<$gsl/gsl\+\_\+roots.\+h$>$}\newline
 {\ttfamily \#include $<$gsl/gsl\+\_\+sf\+\_\+expint.\+h$>$}\newline
 {\ttfamily \#include $<$ctype.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}../\+Class/include/class.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cuba.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Class/include/class.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Global\+\_\+\+Structs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cosmology.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
@@ -39,7 +39,8 @@
 {\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+pt.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+hm.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cubature.\+h\char`\"{}}\newline
-Include dependency graph for header.\+h\+:\nopagebreak
+Include dependency graph for header.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,7 +70,7 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 \begin{DoxyCompactList}\small\item\em For solving ODER. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{header_8h_ab52cdc475a6866d1be7b5807fb623f50}{ST}}~102L
 \item 
-\#define \mbox{\hyperlink{header_8h_a4eeaa4bfb30c2bd68ba33198fb2f135e}{TR}}~103L
+\#define \mbox{\hyperlink{header_8h_ad72e589e37189fb1e49961335cf6d0de}{TK}}~103L
 \item 
 \#define \mbox{\hyperlink{header_8h_ae08a1f7f63e9261daa3e5c9794653714}{GROWTH}}~104L
 \item 
@@ -109,9 +110,11 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 \item 
 \#define \mbox{\hyperlink{header_8h_aebfb75963c6839c4104e78787375c442}{NLPOWER}}~128L
 \item 
-\#define \mbox{\hyperlink{header_8h_abf9c248762203aeb01092b253484d6e0}{TRANS}}~129L
+\#define \mbox{\hyperlink{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}{CDM}}~90L
 \item 
-\#define \mbox{\hyperlink{header_8h_a8284f5ecd148d7be994a24c5a8e5c3cc}{DER}}~130L
+\#define \mbox{\hyperlink{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}{BA}}~91L
+\item 
+\#define \mbox{\hyperlink{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}{TOT}}~92L
 \item 
 \#define \mbox{\hyperlink{header_8h_a45a98a7c684bcfbc146b6233427095f7}{CO10}}~131L
 \item 
@@ -149,13 +152,17 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 \item 
 \#define \mbox{\hyperlink{header_8h_a506e3be0281e3c100aef41dd51e107af}{HALO}}~148L
 \item 
-\#define \mbox{\hyperlink{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}{PS\+\_\+\+KMIN}}~1.\+0e-\/7
+\#define \mbox{\hyperlink{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}{PS\+\_\+\+KMIN}}~1.e-\/5
 \item 
-\#define \mbox{\hyperlink{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}{PS\+\_\+\+KMAX}}~1.\+0e4
+\#define \mbox{\hyperlink{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}{PS\+\_\+\+KMAX}}~100.\+1
+\item 
+\#define \mbox{\hyperlink{header_8h_a791f4d963d21043a3d7cef12c9587d4e}{PS\+\_\+\+ZMAX}}~14.
 \item 
 \#define \mbox{\hyperlink{header_8h_a922674bf1f621eb8d7cfc67d2fc870b3}{CLEANUP}}~1
 \item 
 \#define \mbox{\hyperlink{header_8h_a359c81ef959b9a9a5f58b473f4913bb0}{DO\+\_\+\+NOT\+\_\+\+EVALUATE}}~-\/1.\+0
+\item 
+\#define \mbox{\hyperlink{header_8h_a4a80e098a43386a893ebc656b14e636c}{NPARS}}~6
 \item 
 \#define \mbox{\hyperlink{header_8h_ac4041a19ac1fddefc2239437baecd8f5}{MAXL}}~2000
 \end{DoxyCompactItemize}
@@ -175,11 +182,23 @@ void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \doxyparagraph{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
 {\footnotesize\ttfamily \#define \+\_\+\+GNU\+\_\+\+SOURCE}
 
+\mbox{\Hypertarget{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}\label{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}} 
+\index{header.h@{header.h}!BA@{BA}}
+\index{BA@{BA}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{BA}{BA}}
+{\footnotesize\ttfamily \#define BA~91L}
+
 \mbox{\Hypertarget{header_8h_a2b25214984cd9cb93e2b2b2eef79a011}\label{header_8h_a2b25214984cd9cb93e2b2b2eef79a011}} 
 \index{header.h@{header.h}!BSPLINE@{BSPLINE}}
 \index{BSPLINE@{BSPLINE}!header.h@{header.h}}
 \doxyparagraph{\texorpdfstring{BSPLINE}{BSPLINE}}
 {\footnotesize\ttfamily \#define BSPLINE~143L}
+
+\mbox{\Hypertarget{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}\label{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}} 
+\index{header.h@{header.h}!CDM@{CDM}}
+\index{CDM@{CDM}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CDM}{CDM}}
+{\footnotesize\ttfamily \#define CDM~90L}
 
 \mbox{\Hypertarget{header_8h_a251e0b44ee10891c062205226a57a162}\label{header_8h_a251e0b44ee10891c062205226a57a162}} 
 \index{header.h@{header.h}!CII@{CII}}
@@ -228,12 +247,6 @@ void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \index{CO65@{CO65}!header.h@{header.h}}
 \doxyparagraph{\texorpdfstring{CO65}{CO65}}
 {\footnotesize\ttfamily \#define CO65~136L}
-
-\mbox{\Hypertarget{header_8h_a8284f5ecd148d7be994a24c5a8e5c3cc}\label{header_8h_a8284f5ecd148d7be994a24c5a8e5c3cc}} 
-\index{header.h@{header.h}!DER@{DER}}
-\index{DER@{DER}!header.h@{header.h}}
-\doxyparagraph{\texorpdfstring{DER}{DER}}
-{\footnotesize\ttfamily \#define DER~130L}
 
 \mbox{\Hypertarget{header_8h_a9d6e99df3b4737b89960ef588e218b74}\label{header_8h_a9d6e99df3b4737b89960ef588e218b74}} 
 \index{header.h@{header.h}!DERGROWTH@{DERGROWTH}}
@@ -385,6 +398,12 @@ void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \doxyparagraph{\texorpdfstring{NONLINEAR}{NONLINEAR}}
 {\footnotesize\ttfamily \#define NONLINEAR~106L}
 
+\mbox{\Hypertarget{header_8h_a4a80e098a43386a893ebc656b14e636c}\label{header_8h_a4a80e098a43386a893ebc656b14e636c}} 
+\index{header.h@{header.h}!NPARS@{NPARS}}
+\index{NPARS@{NPARS}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NPARS}{NPARS}}
+{\footnotesize\ttfamily \#define NPARS~6}
+
 \mbox{\Hypertarget{header_8h_ace3363397a7c244c60c3564bedd14920}\label{header_8h_ace3363397a7c244c60c3564bedd14920}} 
 \index{header.h@{header.h}!ORTHOGONAL@{ORTHOGONAL}}
 \index{ORTHOGONAL@{ORTHOGONAL}!header.h@{header.h}}
@@ -395,13 +414,19 @@ void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \index{header.h@{header.h}!PS\_KMAX@{PS\_KMAX}}
 \index{PS\_KMAX@{PS\_KMAX}!header.h@{header.h}}
 \doxyparagraph{\texorpdfstring{PS\_KMAX}{PS\_KMAX}}
-{\footnotesize\ttfamily \#define PS\+\_\+\+KMAX~1.\+0e4}
+{\footnotesize\ttfamily \#define PS\+\_\+\+KMAX~100.\+1}
 
 \mbox{\Hypertarget{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}\label{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}} 
 \index{header.h@{header.h}!PS\_KMIN@{PS\_KMIN}}
 \index{PS\_KMIN@{PS\_KMIN}!header.h@{header.h}}
 \doxyparagraph{\texorpdfstring{PS\_KMIN}{PS\_KMIN}}
-{\footnotesize\ttfamily \#define PS\+\_\+\+KMIN~1.\+0e-\/7}
+{\footnotesize\ttfamily \#define PS\+\_\+\+KMIN~1.e-\/5}
+
+\mbox{\Hypertarget{header_8h_a791f4d963d21043a3d7cef12c9587d4e}\label{header_8h_a791f4d963d21043a3d7cef12c9587d4e}} 
+\index{header.h@{header.h}!PS\_ZMAX@{PS\_ZMAX}}
+\index{PS\_ZMAX@{PS\_ZMAX}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{PS\_ZMAX}{PS\_ZMAX}}
+{\footnotesize\ttfamily \#define PS\+\_\+\+ZMAX~14.}
 
 \mbox{\Hypertarget{header_8h_a46eb462e05a3197e84ff95d874d67f34}\label{header_8h_a46eb462e05a3197e84ff95d874d67f34}} 
 \index{header.h@{header.h}!PSC@{PSC}}
@@ -437,17 +462,17 @@ For solving ODER.
 \doxyparagraph{\texorpdfstring{TIDE}{TIDE}}
 {\footnotesize\ttfamily \#define TIDE~125L}
 
-\mbox{\Hypertarget{header_8h_a4eeaa4bfb30c2bd68ba33198fb2f135e}\label{header_8h_a4eeaa4bfb30c2bd68ba33198fb2f135e}} 
-\index{header.h@{header.h}!TR@{TR}}
-\index{TR@{TR}!header.h@{header.h}}
-\doxyparagraph{\texorpdfstring{TR}{TR}}
-{\footnotesize\ttfamily \#define TR~103L}
+\mbox{\Hypertarget{header_8h_ad72e589e37189fb1e49961335cf6d0de}\label{header_8h_ad72e589e37189fb1e49961335cf6d0de}} 
+\index{header.h@{header.h}!TK@{TK}}
+\index{TK@{TK}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TK}{TK}}
+{\footnotesize\ttfamily \#define TK~103L}
 
-\mbox{\Hypertarget{header_8h_abf9c248762203aeb01092b253484d6e0}\label{header_8h_abf9c248762203aeb01092b253484d6e0}} 
-\index{header.h@{header.h}!TRANS@{TRANS}}
-\index{TRANS@{TRANS}!header.h@{header.h}}
-\doxyparagraph{\texorpdfstring{TRANS}{TRANS}}
-{\footnotesize\ttfamily \#define TRANS~129L}
+\mbox{\Hypertarget{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}\label{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}} 
+\index{header.h@{header.h}!TOT@{TOT}}
+\index{TOT@{TOT}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TOT}{TOT}}
+{\footnotesize\ttfamily \#define TOT~92L}
 
 \mbox{\Hypertarget{header_8h_abf5b8fbbeb8255336e401a15a80214a8}\label{header_8h_abf5b8fbbeb8255336e401a15a80214a8}} 
 \index{header.h@{header.h}!TREE@{TREE}}
@@ -498,8 +523,7 @@ In units of km/s
 
 omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
 
-3.\+0665Here is the call graph for this function\+:
-\nopagebreak
+3.\+0665Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

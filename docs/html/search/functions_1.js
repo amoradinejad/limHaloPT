@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['b22_5fls_0',['b22_ls',['../d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee',1,'ps_line_hm.c']]],
-  ['b22_5fls_5fintegrand_1',['b22_ls_integrand',['../d1/dd5/ps__line__hm_8c.html#a4e1bbff7f992103c9b1fa8f5abc1f408',1,'ps_line_hm.c']]],
-  ['bias_5flum_5fweighted_2',['bias_lum_weighted',['../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79',1,'line_ingredients.c']]],
-  ['bias_5flum_5fweighted_5finteg_3',['bias_lum_weighted_integ',['../d7/d10/line__ingredients_8c.html#a609c2a4b205e7f497d4b96657510fd5f',1,'line_ingredients.c']]]
+  ['cleanup_0',['cleanup',['../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0',1,'cleanup(struct Cosmology *Cx):&#160;main.c'],['../df/dcb/header_8h.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;header.h']]],
+  ['compute_5fg_5floops_1',['Compute_G_loops',['../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a',1,'ps_halo_1loop.c']]],
+  ['compute_5fpng_5floops_2',['Compute_PNG_loops',['../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892',1,'ps_halo_1loop.c']]],
+  ['count_5fcols_5fin_5ffile_3',['count_cols_in_file',['../d7/db6/utilities_8c.html#a109c999502807d61f966ed9ec4d4746b',1,'utilities.c']]],
+  ['count_5flines_5fin_5ffile_4',['count_lines_in_file',['../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db',1,'utilities.c']]]
 ];

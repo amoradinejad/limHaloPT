@@ -1,4 +1,4 @@
-.TH "ps_line_hm.c" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "ps_line_hm.c" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,25 +24,27 @@ ps_line_hm.c \- Documented halo-model computation of line power spectrum, includ
 .ti -1c
 .RI "static int \fBmhmc_integ\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
 .br
-.RI "Compute the corrections to mass integration of HM matter power spectrum\&. "
+.RI "The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration\&. "
 .ti -1c
 .RI "void \fBmhmc\fP (struct \fBCosmology\fP *Cx, double z, long mode_mf, double *result)"
 .br
+.RI "Compute the corrections to mass integration of HM matter power spectrum\&. "
 .ti -1c
 .RI "static int \fBHM_1h2h_integ\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
 .br
-.RI "Compute the mass integrals to compute the 1- and 1-halo line, line-matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. "
+.RI "The integrand function passed passed to Cuhre integration routine to compute 1- and 2-halo integrals\&. "
 .ti -1c
 .RI "void \fBHM_1h2h\fP (struct \fBCosmology\fP *Cx, double k, double z, double M_min, long mode_mf, long line_type, long mode_hm, double *result)"
 .br
-.RI "in unit of M_sun/Mpc^3 "
+.RI "Compute the mass integrals needed for 1- and 1-halo line, line-matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. "
 .ti -1c
 .RI "static int \fBb22_ls_integrand\fP (const int *ndim, const cubareal x[], const int *ncomp, cubareal ff[], void *p)"
 .br
-.RI "Compute the large-scale limit of P_b2b2 loop\&. "
+.RI "The integrand function passed passed to Cuhre integration routine to compute large-scale limit of b22 (shot-noise contribution) "
 .ti -1c
 .RI "double \fBb22_ls\fP (struct \fBCosmology\fP *Cx, double z)"
 .br
+.RI "Compute the large-scale limit of P_b2b2 loop\&. "
 .in -1c
 .SS "Variables"
 
@@ -68,9 +70,9 @@ The other functions in these modules are utilities for computing the above two m
 .PP
 In summary, the following functions can be called from other modules:
 .IP "1." 4
-\fBPS_line_HM()\fP
+\fBPS_line_HM()\fP computes the 1loop-HM line power spectrum
 .IP "2." 4
-\fBPS_shot_HM()\fP
+\fBPS_shot_HM()\fP computes the full line power spectrum, beyond poisson limit
 .IP "3." 4
 \fBmhmc()\fP computes th corrections to mass integration of halo-model matter power spectrum
 .IP "4." 4
@@ -82,8 +84,6 @@ In summary, the following functions can be called from other modules:
 .SH "Function Documentation"
 .PP 
 .SS "double b22_ls (struct \fBCosmology\fP * Cx, double z)"
-
-.SS "static int b22_ls_integrand (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
 
 .PP
 Compute the large-scale limit of P_b2b2 loop\&. 
@@ -101,14 +101,29 @@ b22_ls
 .RE
 .PP
 
+.SS "static int b22_ls_integrand (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute large-scale limit of b22 (shot-noise contribution) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
+.RE
+.PP
+
 .SS "void HM_1h2h (struct \fBCosmology\fP * Cx, double k, double z, double M_min, long mode_mf, long line_type, long mode_hm, double * result)"
 
 .PP
-in unit of M_sun/Mpc^3 
-.SS "static int HM_1h2h_integ (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
-
-.PP
-Compute the mass integrals to compute the 1- and 1-halo line, line-matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. Otherwise, NFW halo profile is assumed
+Compute the mass integrals needed for 1- and 1-halo line, line-matter and matter power spectrum If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. Otherwise, NFW halo profile is assumed
 .PP
 \fBParameters\fP
 .RS 4
@@ -145,7 +160,26 @@ MATTER for matter power spectrum
 .PP
 \fBReturns\fP
 .RS 4
-void 
+void in unit of M_sun/Mpc^3 
+.RE
+.PP
+
+.SS "static int HM_1h2h_integ (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine to compute 1- and 2-halo integrals\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
 .RE
 .PP
 we assume the profile of both matter and line are NFW
@@ -157,12 +191,8 @@ integrand of 2halo term proportional to b1, the linear local-in-matter halo bias
 integrand of 1halo term of line-matter cross-spectrum
 .SS "void mhmc (struct \fBCosmology\fP * Cx, double z, long mode_mf, double * result)"
 
-.SS "static int mhmc_integ (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
-
 .PP
-Compute the corrections to mass integration of HM matter power spectrum\&. The function \fBmhmc_integ()\fP defines the integrand to be used by Cuhre integration routine of CUBA library\&. \fBmhmc()\fP returns the corrections to 1- and 2-halo terms performing the integration
-.PP
-When computing the matter power spectrum using halo-model, the mass integrations for 1- and 2-loop terms get contributions from halos of all masses\&. For numerical computation, we need to impose a lower and upper integration limit\&. While the result of the integration are not sensitive to the upper bound (due to the fact that the mass function drops rapidly at high M_h) the choice of the lower bound affects the results\&. We can compute the leading order corrections to the integral that are accurate up to (k R_s)^2\&. (see App\&. A of arXiv:1511\&.02231 for more details\&.)
+Compute the corrections to mass integration of HM matter power spectrum\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -183,6 +213,25 @@ result[1]: correcrions to 2-halo term assuming linear halo bias
 \fBReturns\fP
 .RS 4
 void 
+.RE
+.PP
+
+.SS "static int mhmc_integ (const int * ndim, const cubareal x[], const int * ncomp, cubareal ff[], void * p)\fC [static]\fP"
+
+.PP
+The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration\&. When computing the matter power spectrum using halo-model, the mass integrations for 1- and 2-loop terms get contributions from halos of all masses\&. For numerical computation, we need to impose a lower and upper integration limit\&. While the result of the integration are not sensitive to the upper bound (due to the fact that the mass function drops rapidly at high M_h) the choice of the lower bound affects the results\&. We can compute the leading order corrections to the integral that are accurate up to (k R_s)^2\&. (see App\&. A of arXiv:1511\&.02231 for more details\&.)
+.PP
+\fBParameters\fP
+.RS 4
+\fIndim\fP Input: Dimensionality of the domain of integration 
+.br
+\fIx\fP Input: An array of integration variables 
+.br
+\fIncomp\fP Input: Dimensionality of the integrand function 
+.br
+\fIff\fP Input: Array of values of the integrand of dimension fdim 
+.br
+\fIp\fP Input: integration parmaeters return the error status 
 .RE
 .PP
 

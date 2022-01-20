@@ -7,129 +7,142 @@
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#define GLOBALSTRUCTS\_H\_}}
 \DoxyCodeLine{7 }
 \DoxyCodeLine{8 }
-\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_class___cosmology___struct}{Class\_Cosmology\_Struct}}\{}
+\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_class___cosmology___struct}{Class\_Cosmology\_Struct}}\{ }
 \DoxyCodeLine{13 }
 \DoxyCodeLine{14     \textcolor{keyword}{struct }precision                    \mbox{\hyperlink{struct_class___cosmology___struct_a5508a36b02eeccdde8890d3adba39c06}{pr}};             \textcolor{comment}{/* for precision parameters */}}
 \DoxyCodeLine{15     \textcolor{keyword}{struct }background                   \mbox{\hyperlink{struct_class___cosmology___struct_a06d87a8120386f93eb4c530f85e42b01}{ba}};             \textcolor{comment}{/* for cosmological background */}}
-\DoxyCodeLine{16     \textcolor{keyword}{struct }thermo                       \mbox{\hyperlink{struct_class___cosmology___struct_af79f6031bbc385d4ff9012dbc0da41ca}{th}};             \textcolor{comment}{/* for thermodynamics */}}
-\DoxyCodeLine{17     \textcolor{keyword}{struct }perturbs                     \mbox{\hyperlink{struct_class___cosmology___struct_a4fcfda9895c82d80da970d81fdccceda}{pt}};             \textcolor{comment}{/* for source functions */}}
-\DoxyCodeLine{18     \textcolor{keyword}{struct }transfers                    \mbox{\hyperlink{struct_class___cosmology___struct_ae2f45b989d09ee36f89350574c13fd99}{tr}};             \textcolor{comment}{/* for transfer functions */}}
+\DoxyCodeLine{16     \textcolor{keyword}{struct }thermodynamics               \mbox{\hyperlink{struct_class___cosmology___struct_a398991e346b1715063d190127ad7d490}{th}};             \textcolor{comment}{/* for thermodynamics */} }
+\DoxyCodeLine{17     \textcolor{keyword}{struct }perturbations                \mbox{\hyperlink{struct_class___cosmology___struct_a36eb944f0fdcbe69c0a59fa2a9f07f8d}{pt}};             \textcolor{comment}{/* for source functions */}}
+\DoxyCodeLine{18     \textcolor{keyword}{struct }transfer                     \mbox{\hyperlink{struct_class___cosmology___struct_a83b6226c4b154b6486fa73ad220cccf8}{tr}};             \textcolor{comment}{/* for transfer functions */}}
 \DoxyCodeLine{19     \textcolor{keyword}{struct }primordial                   \mbox{\hyperlink{struct_class___cosmology___struct_aa10c840f6c876dd3a2688ba63092e5f0}{pm}};             \textcolor{comment}{/* for primordial spectra */}}
-\DoxyCodeLine{20     \textcolor{keyword}{struct }spectra                      \mbox{\hyperlink{struct_class___cosmology___struct_a15feeabbeefc32347be5f9c5ae0729e9}{sp}};             \textcolor{comment}{/* for output spectra */}}
-\DoxyCodeLine{21     \textcolor{keyword}{struct }nonlinear                    \mbox{\hyperlink{struct_class___cosmology___struct_a17f1c3e1d9b3488c28828ac7e392866d}{nl}};             \textcolor{comment}{/* for non-\/linear spectra */}}
+\DoxyCodeLine{20     \textcolor{keyword}{struct }harmonic                     \mbox{\hyperlink{struct_class___cosmology___struct_a5f8b305fc0a1ee6012c079468d1438ca}{hr}};             \textcolor{comment}{/* for output spectra */}}
+\DoxyCodeLine{21     \textcolor{keyword}{struct }fourier                      \mbox{\hyperlink{struct_class___cosmology___struct_a63330c2fd760ba76162bfe17d3039c0b}{fo}};             \textcolor{comment}{/* for non-\/linear spectra */}}
 \DoxyCodeLine{22     \textcolor{keyword}{struct }lensing                      \mbox{\hyperlink{struct_class___cosmology___struct_abab111c24583df735191a9b645e924fd}{le}};             \textcolor{comment}{/* for lensed spectra */}}
-\DoxyCodeLine{23     \textcolor{keyword}{struct }output                       \mbox{\hyperlink{struct_class___cosmology___struct_a1263e3f35461b20543f1e6d4aa85cca8}{op}};             \textcolor{comment}{/* for output files */}}
-\DoxyCodeLine{24     ErrorMsg \mbox{\hyperlink{struct_class___cosmology___struct_aa89c6c440c37c1a2eca5771c4f2a922f}{errmsg}};                    \textcolor{comment}{/* for error messages */}}
-\DoxyCodeLine{25 \};}
-\DoxyCodeLine{26 }
+\DoxyCodeLine{23     \textcolor{keyword}{struct }distortions                  \mbox{\hyperlink{struct_class___cosmology___struct_a73a564360ad0265e547ac89c75634a77}{sd}};               \textcolor{comment}{/* for CMB distortions*/}}
+\DoxyCodeLine{24     \textcolor{keyword}{struct }output                       \mbox{\hyperlink{struct_class___cosmology___struct_a1263e3f35461b20543f1e6d4aa85cca8}{op}};             \textcolor{comment}{/* for output files */}}
+\DoxyCodeLine{25     ErrorMsg \mbox{\hyperlink{struct_class___cosmology___struct_aa89c6c440c37c1a2eca5771c4f2a922f}{errmsg}};                    \textcolor{comment}{/* for error messages */}}
+\DoxyCodeLine{26 \};}
 \DoxyCodeLine{27 }
-\DoxyCodeLine{33 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}}}
-\DoxyCodeLine{34 \{}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36      \textcolor{keyword}{struct }\mbox{\hyperlink{struct_class___cosmology___struct}{Class\_Cosmology\_Struct}}    \mbox{\hyperlink{struct_cosmology_af8e7e270adf2573ca16f2037d580cb5b}{ccs}};}
-\DoxyCodeLine{37      \textcolor{keyword}{struct }\mbox{\hyperlink{struct_line}{Line}}                      **\mbox{\hyperlink{struct_cosmology_a0f59f743170aa24dbaeebd4058ac226a}{Lines}};}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39      \textcolor{keywordtype}{int}                              \mbox{\hyperlink{struct_cosmology_ad8456f0eaa57c17e323994a2d0b1f159}{NLines}};}
-\DoxyCodeLine{40      \textcolor{keywordtype}{long}                             \mbox{\hyperlink{struct_cosmology_a0e1e29102584fa127dceed1413913a13}{mode\_nu}};}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42      \textcolor{keywordtype}{double} \mbox{\hyperlink{struct_cosmology_ad00c7b692054c2201a342aca51eedabc}{cosmo\_pars}}[6];}
-\DoxyCodeLine{43 \};}
-\DoxyCodeLine{44 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_cosmology}{Cosmology}}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_class___cosmology___struct}{Class\_Cosmology\_Struct}}    \mbox{\hyperlink{struct_cosmology_af8e7e270adf2573ca16f2037d580cb5b}{ccs}};}
+\DoxyCodeLine{38     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_line}{Line}}             **\mbox{\hyperlink{struct_cosmology_a0f59f743170aa24dbaeebd4058ac226a}{Lines}};}
+\DoxyCodeLine{39     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_s__xtr}{PS\_xtr}}         *\mbox{\hyperlink{struct_cosmology_a5dee8f06ef55f61fcf2ad920f4f80e65}{PS\_xtrapol}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{int}                     \mbox{\hyperlink{struct_cosmology_ad8456f0eaa57c17e323994a2d0b1f159}{NLines}};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{long}                    \mbox{\hyperlink{struct_cosmology_a4b019ecf79b36a4e0ddc5e73f130f79a}{mode\_model}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{double}                  \mbox{\hyperlink{struct_cosmology_afcdeb6e2220dcdfbfc948f81651a773f}{cosmo\_pars}}[\mbox{\hyperlink{header_8h_a4a80e098a43386a893ebc656b14e636c}{NPARS}}];}
 \DoxyCodeLine{45 }
-\DoxyCodeLine{46 }
-\DoxyCodeLine{51 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_line}{Line}}}
-\DoxyCodeLine{52 \{}
-\DoxyCodeLine{53       \textcolor{keywordtype}{long}                    \mbox{\hyperlink{struct_line_a78c3e4b98961dce5a733adbc398238c9}{LineType}};}
-\DoxyCodeLine{54       \textcolor{keywordtype}{int}                     \mbox{\hyperlink{struct_line_ad06983e7f6e71b233ea7ff3dee1952f2}{initialized}};}
-\DoxyCodeLine{55       \textcolor{keywordtype}{size\_t}                  \mbox{\hyperlink{struct_line_a5af76072d7991fda41ed345aa75ee7ee}{npointsInterp}}; }
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57       \textcolor{keywordtype}{double}                  \mbox{\hyperlink{struct_line_a2537e68f750a3936366084bc7d564575}{line\_freq}};                                         }
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ad2e644b5a90d727f8e08a9eb0d708f80}{mom1\_accel\_ptr}};}
-\DoxyCodeLine{60       gsl\_spline              *\mbox{\hyperlink{struct_line_ae8040cc245eea740519f6461096385df}{mom1\_spline\_ptr}};}
-\DoxyCodeLine{61       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ac33bc84e6c67b56e4076354c2a35fb10}{mom2\_accel\_ptr}};}
-\DoxyCodeLine{62       gsl\_spline              *\mbox{\hyperlink{struct_line_aa116bd0834a03b6b4f35ca1e999adcbc}{mom2\_spline\_ptr}};}
-\DoxyCodeLine{63       }
-\DoxyCodeLine{64       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_aa2f7d89582262545df111c44c1af1e5e}{b1\_LW\_accel\_ptr}};}
-\DoxyCodeLine{65       gsl\_spline              *\mbox{\hyperlink{struct_line_a44f30751fd31a8e0aad7c43cb4888195}{b1\_LW\_spline\_ptr}};}
-\DoxyCodeLine{66       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ac29bb17922e47d34f72c4f1c5b6098f4}{b2\_LW\_accel\_ptr}};}
-\DoxyCodeLine{67       gsl\_spline              *\mbox{\hyperlink{struct_line_ab5b6d7ccfe895ebf565dab2c766ed15e}{b2\_LW\_spline\_ptr}};}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69 \};}
-\DoxyCodeLine{70 }
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{54 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_line}{Line}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56       \textcolor{keywordtype}{long}                    \mbox{\hyperlink{struct_line_a78c3e4b98961dce5a733adbc398238c9}{LineType}};}
+\DoxyCodeLine{57       \textcolor{keywordtype}{int}                     \mbox{\hyperlink{struct_line_ad06983e7f6e71b233ea7ff3dee1952f2}{initialized}};}
+\DoxyCodeLine{58       \textcolor{keywordtype}{size\_t}                  \mbox{\hyperlink{struct_line_a5af76072d7991fda41ed345aa75ee7ee}{npointsInterp}}; }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60       \textcolor{keywordtype}{double}                  \mbox{\hyperlink{struct_line_a2537e68f750a3936366084bc7d564575}{line\_freq}};                                         }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ad2e644b5a90d727f8e08a9eb0d708f80}{mom1\_accel\_ptr}};}
+\DoxyCodeLine{63       gsl\_spline              *\mbox{\hyperlink{struct_line_ae8040cc245eea740519f6461096385df}{mom1\_spline\_ptr}};}
+\DoxyCodeLine{64       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ac33bc84e6c67b56e4076354c2a35fb10}{mom2\_accel\_ptr}};}
+\DoxyCodeLine{65       gsl\_spline              *\mbox{\hyperlink{struct_line_aa116bd0834a03b6b4f35ca1e999adcbc}{mom2\_spline\_ptr}};}
+\DoxyCodeLine{66       }
+\DoxyCodeLine{67       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_aa2f7d89582262545df111c44c1af1e5e}{b1\_LW\_accel\_ptr}};}
+\DoxyCodeLine{68       gsl\_spline              *\mbox{\hyperlink{struct_line_a44f30751fd31a8e0aad7c43cb4888195}{b1\_LW\_spline\_ptr}};}
+\DoxyCodeLine{69       gsl\_interp\_accel        *\mbox{\hyperlink{struct_line_ac29bb17922e47d34f72c4f1c5b6098f4}{b2\_LW\_accel\_ptr}};}
+\DoxyCodeLine{70       gsl\_spline              *\mbox{\hyperlink{struct_line_ab5b6d7ccfe895ebf565dab2c766ed15e}{b2\_LW\_spline\_ptr}};}
 \DoxyCodeLine{71 }
-\DoxyCodeLine{75 \textcolor{keyword}{struct }\mbox{\hyperlink{structglobals}{globals}} }
-\DoxyCodeLine{76 \{}
-\DoxyCodeLine{77     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a829cbfb68d64295f7122d0fd0dc58448}{H0}};}
-\DoxyCodeLine{78     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2c09e929a6ea340fc9653cca414b11d3}{c}};}
-\DoxyCodeLine{79     }
-\DoxyCodeLine{80     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a578db3dfe88b7e22963a391194695a5c}{As}};}
-\DoxyCodeLine{81     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a9a786316b70c521a5604de6dc2c7e00a}{logAs}};}
-\DoxyCodeLine{82     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a476bed566643072ee0ed28f78d0db370}{ns}};}
-\DoxyCodeLine{83     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a8ee9be1b5aa75abae556de3088cba6d9}{h}};}
-\DoxyCodeLine{84     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a751f9b28e01d639472dea5837bc75aac}{Omega\_cdm}};}
-\DoxyCodeLine{85     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a71c325797bade66b03ab32092b66a9b3}{Omega\_b}};}
-\DoxyCodeLine{86     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a6cefa4a43bb1fa04ba176108ea5b83da}{Omega\_r}};}
-\DoxyCodeLine{87     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_abc83895ff2bc11cd8580ae314f821107}{Omega\_lambda}};}
-\DoxyCodeLine{88     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a92dc773edcb4c3229e1c6ed22d6a567e}{Omega\_g}};}
-\DoxyCodeLine{89     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a197f2de2be137749b428eb1b3f891d3e}{Omega\_nu}};}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a84e4813f421c80250583ae23e3f4f100}{b1}};}
-\DoxyCodeLine{92     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_aaa1432a6366a16f9655bb06aab044faf}{sigFOG0}};}
-\DoxyCodeLine{93     }
-\DoxyCodeLine{94     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_abca16ad30bddc5b0b828579c1b60bee3}{Npars}};}
-\DoxyCodeLine{95     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ac3e8ec74a057e6c471ccc77041e29018}{z\_i}};}
-\DoxyCodeLine{96     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a3ed57096651b587c2bf716fa78048153}{rho}};}
-\DoxyCodeLine{97     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a244bf42c46054cf1113be44d55f2156d}{mass}};}
-\DoxyCodeLine{98     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ac6390bc2d074992cc6ca37d132a5262d}{kp}};}
-\DoxyCodeLine{99     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_adb9952b5a42d31a5a108e1e36dc4b051}{ng}};}
-\DoxyCodeLine{100     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a8eb3ef4958b442309868039dbab6f0bf}{volume}};}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_p_s__xtr}{PS\_xtr}}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int}                     \mbox{\hyperlink{struct_p_s__xtr_ad06983e7f6e71b233ea7ff3dee1952f2}{initialized}};}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78     gsl\_interp\_accel        *\mbox{\hyperlink{struct_p_s__xtr_a4af709deff27cf7611878521be752190}{z\_accel\_ptr}};}
+\DoxyCodeLine{79     gsl\_interp\_accel        *\mbox{\hyperlink{struct_p_s__xtr_a3073d1e4b77246dc5aa22fb1c73dc296}{logk\_accel\_ptr}};}
+\DoxyCodeLine{80     gsl\_spline2d            *\mbox{\hyperlink{struct_p_s__xtr_a84837c2fa85bfc8578d30e827392ad30}{logpkz\_spline2d\_ptr}};}
+\DoxyCodeLine{81 \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86 \textcolor{keyword}{struct }\mbox{\hyperlink{structglobals}{globals}} }
+\DoxyCodeLine{87 \{}
+\DoxyCodeLine{88     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a829cbfb68d64295f7122d0fd0dc58448}{H0}};}
+\DoxyCodeLine{89     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2c09e929a6ea340fc9653cca414b11d3}{c}};}
+\DoxyCodeLine{90     }
+\DoxyCodeLine{91     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a578db3dfe88b7e22963a391194695a5c}{As}};}
+\DoxyCodeLine{92     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a9a786316b70c521a5604de6dc2c7e00a}{logAs}};}
+\DoxyCodeLine{93     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a476bed566643072ee0ed28f78d0db370}{ns}};}
+\DoxyCodeLine{94     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a8ee9be1b5aa75abae556de3088cba6d9}{h}};}
+\DoxyCodeLine{95     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a751f9b28e01d639472dea5837bc75aac}{Omega\_cdm}};}
+\DoxyCodeLine{96     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a71c325797bade66b03ab32092b66a9b3}{Omega\_b}};}
+\DoxyCodeLine{97     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a6cefa4a43bb1fa04ba176108ea5b83da}{Omega\_r}};}
+\DoxyCodeLine{98     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_abc83895ff2bc11cd8580ae314f821107}{Omega\_lambda}};}
+\DoxyCodeLine{99     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a92dc773edcb4c3229e1c6ed22d6a567e}{Omega\_g}};}
+\DoxyCodeLine{100     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a197f2de2be137749b428eb1b3f891d3e}{Omega\_nu}};}
 \DoxyCodeLine{101 }
-\DoxyCodeLine{102     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a5bc1b7c87a6ec6c722403212dee00d73}{kf}};}
-\DoxyCodeLine{103     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_af80ecdcea2c2cabe450472535dbb310e}{h\_m}};}
-\DoxyCodeLine{104 }
-\DoxyCodeLine{105     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a98eba0f5ed01d0fef31a761e74c3eb86}{M\_min}};}
-\DoxyCodeLine{106     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2632bdf15b0621fce8a5847a169e6f07}{M\_max}};}
-\DoxyCodeLine{107     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_aae08b26c6d39a504657878d42ddafef8}{z\_max}};}
-\DoxyCodeLine{108 }
-\DoxyCodeLine{109     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}{project\_home}}[FILENAME\_MAX];}
-\DoxyCodeLine{110     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a8774308bba8156b6e600c20a45a7e31d}{output\_dir}}[FILENAME\_MAX];}
-\DoxyCodeLine{111     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a925704d35c2014b94afb097cd1a44973}{data\_dir}}[FILENAME\_MAX];}
-\DoxyCodeLine{112     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a2deb0a587ae3137929299a81d7c833cd}{data\_priors}}[FILENAME\_MAX];}
-\DoxyCodeLine{113 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a84e4813f421c80250583ae23e3f4f100}{b1}};}
+\DoxyCodeLine{103     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_aaa1432a6366a16f9655bb06aab044faf}{sigFOG0}};}
+\DoxyCodeLine{104     }
+\DoxyCodeLine{105     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ac3e8ec74a057e6c471ccc77041e29018}{z\_i}};}
+\DoxyCodeLine{106     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a3ed57096651b587c2bf716fa78048153}{rho}};}
+\DoxyCodeLine{107     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a244bf42c46054cf1113be44d55f2156d}{mass}};}
+\DoxyCodeLine{108     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ac6390bc2d074992cc6ca37d132a5262d}{kp}};}
+\DoxyCodeLine{109     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_adb9952b5a42d31a5a108e1e36dc4b051}{ng}};}
+\DoxyCodeLine{110     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a8eb3ef4958b442309868039dbab6f0bf}{volume}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a5bc1b7c87a6ec6c722403212dee00d73}{kf}};}
+\DoxyCodeLine{113     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_af80ecdcea2c2cabe450472535dbb310e}{h\_m}};}
 \DoxyCodeLine{114 }
-\DoxyCodeLine{115     \textcolor{comment}{// Min and max values}}
-\DoxyCodeLine{116     \textcolor{keywordtype}{double}              \mbox{\hyperlink{structglobals_a311d0aaeec59357eb38219f6aad22473}{PS\_kmin}};}
-\DoxyCodeLine{117     \textcolor{keywordtype}{double}              \mbox{\hyperlink{structglobals_a96f47b9da4387802e3b04d64c122bafc}{PS\_kmax}};}
+\DoxyCodeLine{115     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a98eba0f5ed01d0fef31a761e74c3eb86}{M\_min}};}
+\DoxyCodeLine{116     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2632bdf15b0621fce8a5847a169e6f07}{M\_max}};}
+\DoxyCodeLine{117     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_aae08b26c6d39a504657878d42ddafef8}{z\_max}};}
 \DoxyCodeLine{118 }
-\DoxyCodeLine{119     \textcolor{comment}{// File names}}
-\DoxyCodeLine{120     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_a34cc8c01b32f3a1be57b1be90f35977a}{SFR\_filename}}[FILENAME\_MAX];}
-\DoxyCodeLine{121     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_aef1bb9a8012225179948bbcaa4c01923}{Planck\_Fisher\_filename}}[FILENAME\_MAX];}
-\DoxyCodeLine{122 }
-\DoxyCodeLine{123     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a3fb3c034ed42d7151ea3c969238697d0}{logM\_accel\_ptr}};}
-\DoxyCodeLine{124     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a4af709deff27cf7611878521be752190}{z\_accel\_ptr}};}
-\DoxyCodeLine{125     gsl\_spline2d        *\mbox{\hyperlink{structglobals_a5e7d44b815c83588da9ae2ab8c5d3fab}{logSFR\_spline2d\_ptr}};    }
-\DoxyCodeLine{126 \};}
-\DoxyCodeLine{127 }
-\DoxyCodeLine{128 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{129  }
-\DoxyCodeLine{130 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_abca16ad30bddc5b0b828579c1b60bee3}{Npars}}; }
+\DoxyCodeLine{120     }
+\DoxyCodeLine{121     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}{project\_home}}[FILENAME\_MAX];}
+\DoxyCodeLine{122     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a8774308bba8156b6e600c20a45a7e31d}{output\_dir}}[FILENAME\_MAX];}
+\DoxyCodeLine{123     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a925704d35c2014b94afb097cd1a44973}{data\_dir}}[FILENAME\_MAX];}
+\DoxyCodeLine{124     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a2deb0a587ae3137929299a81d7c833cd}{data\_priors}}[FILENAME\_MAX];}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{comment}{// Min and max values}}
+\DoxyCodeLine{128     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a311d0aaeec59357eb38219f6aad22473}{PS\_kmin}};}
+\DoxyCodeLine{129     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a96f47b9da4387802e3b04d64c122bafc}{PS\_kmax}};}
+\DoxyCodeLine{130     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_afa4388248b42652e506b1cf1965bf03c}{kmax\_CLASS}};}
 \DoxyCodeLine{131 }
-\DoxyCodeLine{132 }
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134 }
+\DoxyCodeLine{132     \textcolor{comment}{// File names}}
+\DoxyCodeLine{133     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_a34cc8c01b32f3a1be57b1be90f35977a}{SFR\_filename}}[FILENAME\_MAX];}
+\DoxyCodeLine{134     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_aef1bb9a8012225179948bbcaa4c01923}{Planck\_Fisher\_filename}}[FILENAME\_MAX];}
 \DoxyCodeLine{135 }
-\DoxyCodeLine{136 }
-\DoxyCodeLine{137 }
-\DoxyCodeLine{138 }
-\DoxyCodeLine{139 }
+\DoxyCodeLine{136     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a3fb3c034ed42d7151ea3c969238697d0}{logM\_accel\_ptr}};}
+\DoxyCodeLine{137     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a4af709deff27cf7611878521be752190}{z\_accel\_ptr}};}
+\DoxyCodeLine{138     gsl\_spline2d        *\mbox{\hyperlink{structglobals_a5e7d44b815c83588da9ae2ab8c5d3fab}{logSFR\_spline2d\_ptr}};    }
+\DoxyCodeLine{139 \};}
 \DoxyCodeLine{140 }
-\DoxyCodeLine{141 }
-\DoxyCodeLine{142 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{142  }
 \DoxyCodeLine{143 }
 \DoxyCodeLine{144 }
 \DoxyCodeLine{145 }
 \DoxyCodeLine{146 }
 \DoxyCodeLine{147 }
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 }
 
 \end{DoxyCode}

@@ -1,5 +1,4 @@
 <map id="mean_intens" name="mean_intens">
-<area shape="rect" id="node1" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="5,31,104,57"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="173,5,237,32"/>
-<area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="152,56,257,83"/>
+<area shape="rect" id="node1" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="149,5,252,32"/>
 </map>

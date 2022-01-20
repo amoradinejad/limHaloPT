@@ -1,4 +1,4 @@
-.TH "Cosmology" 3 "Sat Nov 13 2021" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "Cosmology" 3 "Thu Jan 20 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,13 +19,16 @@ Cosmology \- Structure that holds varioud quantities that need to be evaluated f
 .RI "struct \fBLine\fP ** \fBLines\fP"
 .br
 .ti -1c
+.RI "struct \fBPS_xtr\fP * \fBPS_xtrapol\fP"
+.br
+.ti -1c
 .RI "int \fBNLines\fP"
 .br
 .ti -1c
-.RI "long \fBmode_nu\fP"
+.RI "long \fBmode_model\fP"
 .br
 .ti -1c
-.RI "double \fBcosmo_pars\fP [6]"
+.RI "double \fBcosmo_pars\fP [\fBNPARS\fP]"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -37,13 +40,15 @@ This includes, the \fBClass_Cosmology_Struct\fP (initialized in \fBcosmology\&.c
 .PP 
 .SS "struct \fBClass_Cosmology_Struct\fP ccs"
 
-.SS "double cosmo_pars[6]"
+.SS "double cosmo_pars[\fBNPARS\fP]"
 
 .SS "struct \fBLine\fP** Lines"
 
-.SS "long mode_nu"
+.SS "long mode_model"
 
 .SS "int NLines"
+
+.SS "struct \fBPS_xtr\fP* PS_xtrapol"
 
 
 .SH "Author"

@@ -1,6 +1,6 @@
 var _i_r__res_8c =
 [
-    [ "IR_Sigma2", "dc/d8e/_i_r__res_8c.html#ad769e8b3feb90c7d2cb4652771859b58", null ],
+    [ "IR_Sigma2", "dc/d8e/_i_r__res_8c.html#ad57601a52710911744c3ab9ee4192075", null ],
     [ "IR_Sigma2_integrand", "dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee", null ],
     [ "pm_IR_LO", "dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467", null ],
     [ "pm_IR_NLO", "dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348", null ],
