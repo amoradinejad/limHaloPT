@@ -1,7 +1,7 @@
 <map id="kmax_Brent_solver" name="kmax_Brent_solver">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,140,83"/>
-<area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="188,5,280,32"/>
-<area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="199,56,269,83"/>
+<area shape="rect" id="node1" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,56,140,83"/>
+<area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="The function to be passed to Brent solver to compute kmax." alt="" coords="188,5,280,32"/>
+<area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="199,56,269,83"/>
 <area shape="rect" id="node10" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="215,107,253,133"/>
 <area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="328,5,413,32"/>
 <area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d" title="The integrand function passed to qags integrator to compute the variance of the unsmoothed matter den..." alt="" coords="461,5,607,32"/>

@@ -310,7 +310,7 @@ static int mhmc_integ(const int *ndim,
  * @param z             Input: redshift
  * @param mode_mf       Inpute: theoretical model of halo mass function to use. 
  *                              It can  be set to Press-Schecter (PSC), sheth-Tormen (ST), Tinker (TR) 
- * @param results       Output: a 2d array of the integration results, 
+ * @param result        Output: a 2d array of the integration results, 
  *                              - results[0]: correction to 1-halo term, 
  *                              - result[1]: correcrions to 2-halo term assuming linear halo bias
  * @return void
@@ -437,7 +437,7 @@ static int HM_1h2h_integ(const int *ndim,
  *                              - LINE for line power spectrum, 
  *                              - LINEMATTER for line-matter cross spectrum 
  *                              - MATTER for matter power spectrum
- * @param results       Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:
+ * @param result        Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:
  *                              - 3 elements if mode_hm = LINE, 
  *                              - 1 element if mode_hm  = LINEMATTER
  *                              - 2 element if mode_hm  = MATTER

@@ -8,5 +8,5 @@ var utilities_8c =
     [ "loginit_1Darray", "d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8", null ],
     [ "make_1D_int_array", "d7/db6/utilities_8c.html#ae8fc001408865b8dfdcbbba42391ad98", null ],
     [ "make_1Darray", "d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995", null ],
-    [ "make_2Darray", "d7/db6/utilities_8c.html#a09e12e7f06f16689fe59c85fdb258afc", null ]
+    [ "make_2Darray", "d7/db6/utilities_8c.html#a5f141cdde30e04309b48acdd73b2ecdd", null ]
 ];

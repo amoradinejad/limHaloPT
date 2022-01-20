@@ -14,7 +14,7 @@ cosmology.c \- Documented cosmology module\&.
 
 .in +1c
 .ti -1c
-.RI "int \fBCosmology_init\fP (struct \fBCosmology\fP *Cx, double pk_kmax, double pk_zmax, int nlines, int *line_types, size_t npoints_interp, double M_min, long mode_mf)"
+.RI "int \fBCosmology_init\fP (struct \fBCosmology\fP *Cx, double pk_kmax, double pk_zmax, int nlines, int *line_type, size_t npoints_interp, double M_min, long mode_mf)"
 .br
 .RI "Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure\&. "
 .ti -1c
@@ -108,7 +108,7 @@ cosmology.c \- Documented cosmology module\&.
 .br
 .RI "Compute the critical density in unit of M_sun/Mpc^3\&. "
 .ti -1c
-.RI "double \fBR_scale\fP (struct \fBCosmology\fP *Cx, double M)"
+.RI "double \fBR_scale\fP (struct \fBCosmology\fP *Cx, double hmass)"
 .br
 .RI "Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0\&. "
 .ti -1c
@@ -339,7 +339,7 @@ the error status
 .RE
 .PP
 
-.SS "int Cosmology_init (struct \fBCosmology\fP * Cx, double pk_kmax, double pk_zmax, int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf)"
+.SS "int Cosmology_init (struct \fBCosmology\fP * Cx, double pk_kmax, double pk_zmax, int nlines, int * line_type, size_t npoints_interp, double M_min, long mode_mf)"
 
 .PP
 Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure\&. 
@@ -578,7 +578,7 @@ frees the interpolation elements for P_m spline
 .PP
 \fBParameters\fP
 .RS 4
-\fI\fBPS_xtr\fP\fP Input: pointer to the structure containing the interpolation pointers 
+\fIPS_xtrapol\fP Input: pointer to the structure containing the interpolation pointers 
 .RE
 .PP
 \fBReturns\fP
@@ -603,7 +603,7 @@ a structure containing the interpolation pointers
 .RE
 .PP
 
-.SS "double R_scale (struct \fBCosmology\fP * Cx, double M)"
+.SS "double R_scale (struct \fBCosmology\fP * Cx, double hmass)"
 
 .PP
 Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0\&. 
@@ -612,7 +612,7 @@ Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0\&.
 .RS 4
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
 .br
-\fIh_mass\fP Input: halo mass in unit of solar mass 
+\fIhmass\fP Input: halo mass in unit of solar mass 
 .RE
 .PP
 \fBReturns\fP
@@ -629,6 +629,8 @@ Compute the Lagrangian radius of halos in unit of Mpc at z\&.
 \fBParameters\fP
 .RS 4
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift 
 .br
 \fIh_mass\fP Input: halo mass in unit of solar mass 
 .RE
@@ -688,8 +690,6 @@ Compute the growth factor D(k,z) which is scale-indep valid when neutrinos are m
 .RS 4
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
 .br
-\fIk\fP Input: wavenumbber in unit of 1/Mpc 
-.br
 \fIz\fP Input: redshift to compute the spectrum 
 .RE
 .PP
@@ -707,8 +707,6 @@ Compute the scale-independent growth rate f(z) which is scale-indep valid when n
 \fBParameters\fP
 .RS 4
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
-.br
-\fIk\fP Input: wavenumbber in unit of 1/Mpc 
 .br
 \fIz\fP Input: redshift to compute the spectrum 
 .RE
@@ -729,6 +727,8 @@ Compute variance of smoothed matter density fluctuations\&. The function sigma0_
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
 .br
 \fIz\fP Input: redshift to compute the spectrum 
+.br
+\fIR\fP Input: smoothing scale 
 .RE
 .PP
 \fBReturns\fP
@@ -764,12 +764,14 @@ Compute variance of unsmoothed matter density fluctuations\&. The function sigma
 .RS 4
 \fICx\fP Input: pointer to \fBCosmology\fP structure 
 .br
+\fIkmax\fP Input: maximum wavenumber in unit of 1/Mpc 
+.br
 \fIz\fP Input: redshift to compute the spectrum 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-the unsmoothed variance kmax is in unit of 1/Mpc 
+the unsmoothed variance 
 .RE
 .PP
 

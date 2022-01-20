@@ -8,7 +8,7 @@
 <area shape="rect" id="node16" href="$d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3" title="The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corr..." alt="" coords="635,208,728,235"/>
 <area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,56,549,83"/>
 <area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,56,368,83"/>
-<area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 <area shape="rect" id="node7" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
 <area shape="rect" id="node9" href="$d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,157,522,184"/>
 <area shape="rect" id="node10" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="269,107,363,133"/>

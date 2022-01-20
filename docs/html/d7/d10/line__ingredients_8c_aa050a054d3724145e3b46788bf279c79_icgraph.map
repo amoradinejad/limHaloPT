@@ -1,6 +1,6 @@
 <map id="bias_lum_weighted" name="bias_lum_weighted">
 <area shape="rect" id="node1" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>

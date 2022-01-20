@@ -1,5 +1,5 @@
 <map id="p_sig_shot" name="p_sig_shot">
-<area shape="rect" id="node1" title=" " alt="" coords="324,56,409,83"/>
+<area shape="rect" id="node1" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="324,56,409,83"/>
 <area shape="rect" id="node2" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="179,5,273,32"/>
 <area shape="rect" id="node4" href="$d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="190,107,262,133"/>
 <area shape="rect" id="node6" href="$d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="176,56,276,83"/>

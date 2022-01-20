@@ -360,7 +360,6 @@ static int G_loop_integrands(const int *ndim,
  * @param Cx           Input: pointer to cosmology structure 
  * @param k            Input: wavenumber 
  * @param z            Input: redshift of interest
- * @param M            Input: halo mass, used in computing the halo bias
  * @param IR_switch    Input: switch to decide whether to perform IR resummation or no
  * @param hm_switch    Input: switch to decide whether to compute the 1loop terms due to matter or bias
  * @param SPLIT        Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum

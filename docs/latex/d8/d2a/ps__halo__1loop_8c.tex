@@ -6,8 +6,7 @@ Documented real-\/space, direct integration computation of 1loop contributions o
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for ps\+\_\+halo\+\_\+1loop.\+c\+:
-\nopagebreak
+Include dependency graph for ps\+\_\+halo\+\_\+1loop.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -85,8 +84,6 @@ Compute the loop contributions dure to nonlinear evolution of matter fluctuation
 \hline
 {\em z} & Input\+: redshift of interest \\
 \hline
-{\em M} & Input\+: halo mass, used in computing the halo bias \\
-\hline
 {\em IR\+\_\+switch} & Input\+: switch to decide whether to perform IR resummation or no \\
 \hline
 {\em hm\+\_\+switch} & Input\+: switch to decide whether to compute the 1loop terms due to matter or bias \\
@@ -99,8 +96,7 @@ Compute the loop contributions dure to nonlinear evolution of matter fluctuation
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -142,8 +138,7 @@ Compute the loop contributions dure to nonlinear evolution of matter fluctuation
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -221,8 +216,7 @@ The integrand function passed passed to Cuhre integration routine to compute Gau
 \end{DoxyParams}
 Model used in 1907.\+06666, the integrals are given in the appendix, Eq. A1, note that my S2\+\_\+s = sigma$^\wedge$2(q,k-\/1) and F2\+\_\+s = F2(q,k-\/q) in their notation. Factor of 2. $\ast$ (logqmax -\/ logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2$\ast$\+PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano\textquotesingle{}s measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.$\ast$\+M\+\_\+\+PI,3.), which I do in my pk\+\_\+lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3).
 
-The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:
-\nopagebreak
+The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -261,8 +255,7 @@ The integrand function passed passed to Cuhre integration routine to compute PNG
 \end{DoxyParams}
 Factor of 2. $\ast$ (logqmax -\/ logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2$\ast$\+PI is due to integration over azimuthal angle. Note that to compare the theoretical predictions against Emiliano\textquotesingle{}s measurement, since he is using a different notation for Fourier transform, I need to devide each 0 power spectrum by a factor of 1/pow(2.$\ast$\+M\+\_\+\+PI,3.), which I do in my pk\+\_\+lin() function. If using another notation for Fourier transform (the one that I usually use, which has a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2$\ast$\+M\+\_\+\+PI,3).
 
-The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:
-\nopagebreak
+The integrands below correspond to the follwing bias combinaions\+:Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -308,8 +301,7 @@ Compute the contributions up to 1loop to halo power spectrum for Gaussian initia
 \begin{DoxyReturn}{Returns}
 G loop contributions of P\+\_\+h 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -348,8 +340,7 @@ Compute contributions up to 1loop to halo power spectrum arising from non-\/\+Ga
 \begin{DoxyReturn}{Returns}
 PNG loop contributions of P\+\_\+h 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

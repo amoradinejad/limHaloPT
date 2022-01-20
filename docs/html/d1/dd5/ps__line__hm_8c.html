@@ -462,7 +462,7 @@ Here is the caller graph for this function:</div>
 <li>MATTER for matter power spectrum </li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">results</td><td>Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:<ul>
+    <tr><td class="paramname">result</td><td>Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:<ul>
 <li>3 elements if mode_hm = LINE,</li>
 <li>1 element if mode_hm = LINEMATTER</li>
 <li>2 element if mode_hm = MATTER esults[0]: correction to 1-halo term, result[1]: correcrions to 2-halo term assuming linear halo bias </li>
@@ -483,7 +483,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="306,183,387,209"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="293,233,400,260"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="303,132,390,159"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="475,81,545,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="475,81,545,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="480,31,540,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="657,120,703,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="801,120,863,147"/>
@@ -586,7 +586,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="179,183,261,209"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="167,233,273,260"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="177,132,263,159"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="348,81,419,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="348,81,419,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="353,31,413,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="530,120,577,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="674,120,737,147"/>
@@ -657,7 +657,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">Cx</td><td>Input: <a class="el" href="../../d2/dbd/struct_cosmology.html" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ...">Cosmology</a> structure </td></tr>
     <tr><td class="paramname">z</td><td>Input: redshift </td></tr>
     <tr><td class="paramname">mode_mf</td><td>Inpute: theoretical model of halo mass function to use. It can be set to Press-Schecter (PSC), sheth-Tormen (ST), Tinker (TR) </td></tr>
-    <tr><td class="paramname">results</td><td>Output: a 2d array of the integration results,<ul>
+    <tr><td class="paramname">result</td><td>Output: a 2d array of the integration results,<ul>
 <li>results[0]: correction to 1-halo term,</li>
 <li>result[1]: correcrions to 2-halo term assuming linear halo bias </li>
 </ul>
@@ -677,7 +677,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="268,81,345,108"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="253,183,360,209"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="263,132,350,159"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="412,81,483,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="412,81,483,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="417,31,477,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="715,132,778,159"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the smoothed matter densi..." alt="" coords="535,31,655,57"/>
@@ -773,7 +773,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="161,56,239,83"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="147,157,253,184"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="157,107,243,133"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="305,81,376,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="305,81,376,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="311,31,371,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="465,145,511,172"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="609,145,671,172"/>
@@ -889,7 +889,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="166,750,245,776"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="1053,1042,1115,1068"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a4024cda73f4069d07113edd77ae35d4e" title="Compute the first luminosity moment." alt="" coords="148,814,263,840"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="163,1194,248,1220"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="163,1194,248,1220"/>
 <area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="158,560,253,587"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="168,1003,243,1030"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1755,104,1872,131"/>
@@ -918,18 +918,18 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="544,788,621,815"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="542,890,623,916"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="539,839,626,866"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="731,839,801,866"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="731,839,801,866"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="736,788,796,815"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="896,890,943,916"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the smoothed matter densi..." alt="" coords="1205,788,1325,815"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="704,991,828,1018"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="727,940,805,967"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ab82b15c827d1213a94e3ff9ce4ddad32" title="The integrand function passed to hcubature integrator to compute the first moment of line luminosity." alt="" coords="311,839,461,866"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="313,1194,459,1220"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="313,1194,459,1220"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="338,1003,434,1030"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="343,1067,429,1094"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="531,1042,634,1068"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="509,1092,656,1119"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="509,1092,656,1119"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1034,14 +1034,14 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="1022,199,1085,226"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a4024cda73f4069d07113edd77ae35d4e" title="Compute the first luminosity moment." alt="" coords="153,250,268,277"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a3a71ccb997cf820c19eb64cedbf69a10" title="Compute the corrections to mass integration of HM matter power spectrum." alt="" coords="181,149,240,175"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="168,351,253,378"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="168,351,253,378"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="167,402,254,429"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ad72b2846b2e235de535da531f2ee30da" title="The integrand function passed passed to Cuhre integration routine to compute 1&#45; and 2&#45;halo integrals." alt="" coords="335,199,448,226"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="529,98,607,125"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="527,250,609,277"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="515,149,621,175"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="525,199,611,226"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="696,98,767,125"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="696,98,767,125"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="701,47,761,74"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="878,149,925,175"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the smoothed matter densi..." alt="" coords="841,47,961,74"/>
@@ -1052,8 +1052,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="692,149,771,175"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ab82b15c827d1213a94e3ff9ce4ddad32" title="The integrand function passed to hcubature integrator to compute the first moment of line luminosity." alt="" coords="316,250,467,277"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3" title="The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corr..." alt="" coords="345,149,438,175"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="319,351,464,378"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="318,402,465,429"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="319,351,464,378"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="318,402,465,429"/>
 </map>
 </div>
 <div class="dynheader">

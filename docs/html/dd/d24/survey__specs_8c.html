@@ -155,9 +155,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:a324eb852d8e2bb534361c033279c957c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin [zmin,zmax].  <a href="../../dd/d24/survey__specs_8c.html#a324eb852d8e2bb534361c033279c957c">More...</a><br /></td></tr>
 <tr class="separator:a324eb852d8e2bb534361c033279c957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb59c068328f2b2a2cad533600c0d78"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78">kmax_Brent</a> (double kmax, void *params)</td></tr>
-<tr class="memdesc:a1eb59c068328f2b2a2cad533600c0d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the maximum k-value used in Fisher forecast at each redshift bin.  <a href="../../dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78">More...</a><br /></td></tr>
+<tr class="memdesc:a1eb59c068328f2b2a2cad533600c0d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to be passed to Brent solver to compute kmax.  <a href="../../dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78">More...</a><br /></td></tr>
 <tr class="separator:a1eb59c068328f2b2a2cad533600c0d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f5b6af6991512fd864af10e6c2d54d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d">kmax_Brent_solver</a> (struct <a class="el" href="../../d2/dbd/struct_cosmology.html">Cosmology</a> *Cx, double z)</td></tr>
+<tr class="memdesc:ab0f5b6af6991512fd864af10e6c2d54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the maximum k-value used in Fisher forecast at each redshift bin.  <a href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d">More...</a><br /></td></tr>
 <tr class="separator:ab0f5b6af6991512fd864af10e6c2d54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -171,7 +172,7 @@ Variables</h2></td></tr>
 <p >In summary, the following functions can be called from other modules:</p><ol type="1">
 <li><a class="el" href="../../dd/d24/survey__specs_8c.html#a91c4e0c62bcd3e179536fea62e8d53b5" title="Compute the comoving volume of a survey covering redshift up to z.">shell_volume()</a> computes the comoving volume of a survey covering redshift up to z</li>
 <li><a class="el" href="../../dd/d24/survey__specs_8c.html#a324eb852d8e2bb534361c033279c957c" title="Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin ...">kmin_val()</a> computes the fundumental k-mode of a given redshift shell</li>
-<li><a class="el" href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d">kmax_Brent_solver()</a> computes the kmax value such that kmax(z=0) = 0.15 h/Mpc </li>
+<li><a class="el" href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title="Compute the maximum k-value used in Fisher forecast at each redshift bin.">kmax_Brent_solver()</a> computes the kmax value such that kmax(z=0) = 0.15 h/Mpc </li>
 </ol>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1eb59c068328f2b2a2cad533600c0d78" name="a1eb59c068328f2b2a2cad533600c0d78"></a>
@@ -200,22 +201,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Compute the maximum k-value used in Fisher forecast at each redshift bin. </p>
-<p >We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved by solving Eq. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0.36. Instead of fixing sigma^2 to 0.36, I chose the variance such that kmax(z=0) = 0.15 h/Mpc. This corresponds to the variance of ~0.33 at z=0 . In the forecast, I additionally always impose kmax&lt;0.3 h/Mpc cut.</p>
+<p>The function to be passed to Brent solver to compute kmax. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Cx</td><td>Input: <a class="el" href="../../d2/dbd/struct_cosmology.html" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ...">Cosmology</a> structure </td></tr>
-    <tr><td class="paramname">z</td><td>Input: redshift of interest </td></tr>
+    <tr><td class="paramname">kmax</td><td>Inpute: maximum wavenumber in unit of 1/Mpc </td></tr>
+    <tr><td class="paramname">params</td><td>Input: parameters to be passed to the solver </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>kmax </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_cgraph.png" border="0" usemap="#add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_cgraph" alt=""/></div>
 <map name="add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_cgraph" id="add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_cgraph">
-<area shape="rect" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,5,97,32"/>
+<area shape="rect" title="The function to be passed to Brent solver to compute kmax." alt="" coords="5,5,97,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="145,5,231,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d" title="The integrand function passed to qags integrator to compute the variance of the unsmoothed matter den..." alt="" coords="279,5,424,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="472,5,512,32"/>
@@ -227,8 +226,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_icgraph.png" border="0" usemap="#add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_icgraph" alt=""/></div>
 <map name="add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_icgraph" id="add/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_icgraph">
-<area shape="rect" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="188,5,280,32"/>
-<area shape="rect" href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" title="The function to be passed to Brent solver to compute kmax." alt="" coords="188,5,280,32"/>
+<area shape="rect" href="../../dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,5,140,32"/>
 </map>
 </div>
 
@@ -259,6 +258,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the maximum k-value used in Fisher forecast at each redshift bin. </p>
+<p >We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved by solving Eq. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0.36. Instead of fixing sigma^2 to 0.36, I chose the variance such that kmax(z=0) = 0.15 h/Mpc. This corresponds to the variance of ~0.33 at z=0 . In the forecast, I additionally always impose kmax&lt;0.3 h/Mpc cut.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Cx</td><td>Input: <a class="el" href="../../d2/dbd/struct_cosmology.html" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ...">Cosmology</a> structure </td></tr>
+    <tr><td class="paramname">z</td><td>Input: redshift of interest </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>kmax </dd></dl>
 <p >in short paper we used, 3.631872e-01 ; <br  />
 </p>
 <div class="dynheader">
@@ -266,9 +276,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d24/survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d_cgraph.png" border="0" usemap="#add/d24/survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d_cgraph" alt=""/></div>
 <map name="add/d24/survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d_cgraph" id="add/d24/survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,56,140,83"/>
-<area shape="rect" href="../../dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="188,5,280,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="199,56,269,83"/>
+<area shape="rect" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,56,140,83"/>
+<area shape="rect" href="../../dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="The function to be passed to Brent solver to compute kmax." alt="" coords="188,5,280,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="199,56,269,83"/>
 <area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="215,107,253,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="328,5,413,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d" title="The integrand function passed to qags integrator to compute the variance of the unsmoothed matter den..." alt="" coords="461,5,607,32"/>
@@ -325,12 +335,11 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">Cx</td><td>Input: <a class="el" href="../../d2/dbd/struct_cosmology.html" title="Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological ...">Cosmology</a> structure </td></tr>
     <tr><td class="paramname">zmin</td><td>Input: minimum redshift </td></tr>
-    <tr><td class="paramname">zmin</td><td>Input: maximum redshift </td></tr>
+    <tr><td class="paramname">zmax</td><td>Input: maximum redshift </td></tr>
     <tr><td class="paramname">fsky</td><td>Input: sky-coverage of teh survey </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>kmin </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

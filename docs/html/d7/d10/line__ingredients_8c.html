@@ -203,12 +203,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa050a054d3724145e3b46788bf279c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the luminosity-weighted linear and quadratic line biases.  <a href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79">More...</a><br /></td></tr>
 <tr class="separator:aa050a054d3724145e3b46788bf279c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62e7dccfe1892b60f1709957e93d48c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c">p_sig_shot_integrand</a> (double x, void *par)</td></tr>
-<tr class="memdesc:ac62e7dccfe1892b60f1709957e93d48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Model from Keating et al 2016 to account for the observed variation in halo activity, i.e.  <a href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c">More...</a><br /></td></tr>
+<tr class="memdesc:ac62e7dccfe1892b60f1709957e93d48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016.  <a href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c">More...</a><br /></td></tr>
 <tr class="separator:ac62e7dccfe1892b60f1709957e93d48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac555bd341b096dfecd3cd915747b5a4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4">p_sig_shot</a> (double scatter)</td></tr>
+<tr class="memdesc:aac555bd341b096dfecd3cd915747b5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the scatter in shot noise due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating Note that we set f_duty =1 unlike other LIM paper (ex.  <a href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4">More...</a><br /></td></tr>
 <tr class="separator:aac555bd341b096dfecd3cd915747b5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051e4cade75852a7abff94bce70a0307"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307">p_sig_Tbar_integrand</a> (double x, void *par)</td></tr>
-<tr class="memdesc:a051e4cade75852a7abff94bce70a0307"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016.  <a href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307">More...</a><br /></td></tr>
+<tr class="memdesc:a051e4cade75852a7abff94bce70a0307"><td class="mdescLeft">&#160;</td><td class="mdescRight">The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016.  <a href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307">More...</a><br /></td></tr>
 <tr class="separator:a051e4cade75852a7abff94bce70a0307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bfb013c5be4f1c6d1ea0b91146b5f1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c">p_sig_Tbar</a> (double scatter)</td></tr>
 <tr class="memdesc:a2bfb013c5be4f1c6d1ea0b91146b5f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the scatter in Tbar due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating Note that we set f_duty =1 unlike other LIM paper (ex.  <a href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c">More...</a><br /></td></tr>
@@ -248,7 +249,7 @@ Variables</h2></td></tr>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#a4024cda73f4069d07113edd77ae35d4e" title="Compute the first luminosity moment.">mass_moment1()</a> computes the first mass moment</li>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#a905f3fe9b824af5ce217f36af3c767e5" title="Compute the second luminosity moment.">mass_moment2()</a> computes the first mass moment</li>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity-weighted linear and quadratic line biases.">bias_lum_weighted()</a> computes the luminosity-weighetd line bias</li>
-<li><a class="el" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4">p_sig_shot()</a> computes the coefficient accounting for the scatter in L(M) in shot noise</li>
+<li><a class="el" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title="Compute the scatter in shot noise due to scatter in luminosity-halo mass relation,...">p_sig_shot()</a> computes the coefficient accounting for the scatter in L(M) in shot noise</li>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity-halo mass relation, assume log-normal scatte...">p_sig_Tbar()</a> computes the coefficient accounting for the scatter in L(M) in mean brightness temprature</li>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^-2 Sr^-1.">mean_intens()</a> compues the mean intensity of the line</li>
 <li><a class="el" href="../../d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e...">Tbar_line()</a> compues the mean brightness temprature of the line </li>
@@ -313,6 +314,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">M_min</td><td>Input: minimum halo mass </td></tr>
     <tr><td class="paramname">mode_mf</td><td>Input: model of halo mass function to consider, PSC, ST, TR </td></tr>
     <tr><td class="paramname">mode_lum</td><td>Inpute: which luminosity model, basically which line considered </td></tr>
+    <tr><td class="paramname">result</td><td>Input: an output array of linear and quadratic line biases </td></tr>
   </table>
   </dd>
 </dl>
@@ -331,7 +333,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="415,183,497,209"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="403,233,509,260"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="413,132,499,159"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="584,81,655,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="584,81,655,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="589,31,649,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="766,120,813,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="910,120,973,147"/>
@@ -350,7 +352,7 @@ Here is the caller graph for this function:</div>
 <map name="ad7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_icgraph" id="ad7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_icgraph">
 <area shape="rect" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -422,7 +424,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="234,183,315,209"/>
 <area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="221,233,328,260"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="231,132,318,159"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="403,81,473,108"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="403,81,473,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="408,31,468,57"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="585,120,631,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="729,120,791,147"/>
@@ -442,7 +444,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="The integrand function passed to hcubature integrator to compute the un&#45;normalized luminosity&#45;weighte..." alt="" coords="597,5,765,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -514,7 +516,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph" id="ad7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph">
 <area shape="rect" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="5,31,83,57"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="131,5,201,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="131,5,201,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="136,56,196,83"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="286,5,333,32"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="430,5,493,32"/>
@@ -537,7 +539,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="633,208,730,235"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,56,522,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="113,56,207,83"/>
@@ -622,7 +624,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="569,157,647,184"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a1d5765167555f21d8ae5eba187eb2aa8" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="567,56,649,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="565,107,651,133"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="736,157,807,184"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="736,157,807,184"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="741,208,801,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="918,120,965,147"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="1062,120,1125,147"/>
@@ -642,7 +644,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_icgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_icgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_icgraph" id="ad7/d10/line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe_icgraph">
 <area shape="rect" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -934,7 +936,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#af293c79ca858df80dcc0ef9f29448059" title="The integrand function passed to hcubature integrator to compute the second moment of line luminosity..." alt="" coords="606,56,757,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,56,368,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,157,522,184"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="269,157,363,184"/>
@@ -1084,7 +1086,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#af293c79ca858df80dcc0ef9f29448059" title="The integrand function passed to hcubature integrator to compute the second moment of line luminosity..." alt="" coords="606,56,757,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,5,549,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,56,368,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,157,522,184"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="269,157,363,184"/>
@@ -1152,7 +1154,7 @@ Here is the call graph for this function:</div>
 <map name="ad7/d10/line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702_cgraph" id="ad7/d10/line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702_cgraph">
 <area shape="rect" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="5,81,92,108"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="140,5,219,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="144,56,215,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="144,56,215,83"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="303,81,350,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="149,157,209,184"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="447,81,510,108"/>
@@ -1175,7 +1177,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3" title="The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corr..." alt="" coords="635,208,728,235"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,56,549,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,56,368,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,157,522,184"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="269,107,363,133"/>
@@ -1321,7 +1323,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="367,107,453,133"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="501,5,625,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="524,56,603,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="528,107,599,133"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="528,107,599,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="710,132,757,159"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="533,208,593,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="854,132,917,159"/>
@@ -1340,7 +1342,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="113,56,207,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="266,107,366,133"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
 </map>
 </div>
@@ -1412,7 +1414,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="204,107,291,133"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="339,5,463,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="361,56,440,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="365,107,436,133"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="365,107,436,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="547,132,594,159"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="371,208,431,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="691,132,754,159"/>
@@ -1432,7 +1434,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="113,56,207,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="266,107,366,133"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
 </map>
 </div>
@@ -1509,7 +1511,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="367,107,453,133"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="501,5,625,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="524,56,603,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="528,107,599,133"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="528,107,599,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="710,132,757,159"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="533,208,593,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="854,132,917,159"/>
@@ -1526,7 +1528,7 @@ Here is the caller graph for this function:</div>
 <map name="ad7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_icgraph" id="ad7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_icgraph">
 <area shape="rect" title="Compute the second luminosity moment." alt="" coords="416,5,531,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -1598,7 +1600,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="204,107,291,133"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="339,5,463,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ae44a16b587a91c0ea92dea263d20a5be" title="Compute the multiplicity function needed to compute the halo mass function Three models are implement..." alt="" coords="361,56,440,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="365,107,436,133"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="365,107,436,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="547,132,594,159"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="371,208,431,235"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="691,132,754,159"/>
@@ -1616,7 +1618,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="The integrand function passed to hcubature integrator to compute the second moment of line luminosity..." alt="" coords="579,5,729,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a905f3fe9b824af5ce217f36af3c767e5" title="Compute the second luminosity moment." alt="" coords="416,5,531,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -1748,7 +1750,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3" title="The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corr..." alt="" coords="635,208,728,235"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="416,56,549,83"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,56,368,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,107,56,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="443,157,522,184"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="269,107,363,133"/>
@@ -1776,13 +1778,23 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compute the scatter in shot noise due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating Note that we set f_duty =1 unlike other LIM paper (ex. </p>
+<p >Lidz et al 2011).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scatter</td><td>Input: variance of the log-scatter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the scatter coeff of shot </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_cgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_cgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_cgraph" id="ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,91,32"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="139,5,284,32"/>
+<area shape="rect" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="5,5,91,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="139,5,284,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1790,7 +1802,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph" id="ad7/d10/line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4_icgraph">
-<area shape="rect" title=" " alt="" coords="324,56,409,83"/>
+<area shape="rect" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="324,56,409,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="179,5,273,32"/>
 <area shape="rect" href="../../d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="190,107,262,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="176,56,276,83"/>
@@ -1827,23 +1839,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Model from Keating et al 2016 to account for the observed variation in halo activity, i.e. </p>
-<p >scatter in the L(M) relation p_sig_shot replaces the f_duty in the shot-noise used in some LIM paper (ex. Lidz et al 2011). <a class="el" href="../../d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,...">p_sig_shot_integrand()</a> is the integrand, and <a class="el" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4">p_sig_shot()</a> computes the scatter factor for the shot noise.</p>
+<p>The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scatter</td><td>Input: variance of the log-scatter </td></tr>
+    <tr><td class="paramname">x</td><td>Input: integration variable </td></tr>
+    <tr><td class="paramname">par</td><td>Input: integration parmaeters </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the scatter coeff of the shot noise <br  />
- </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>value of the integrand </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c_icgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c_icgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c_icgraph" id="ad7/d10/line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c_icgraph">
-<area shape="rect" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="457,56,603,83"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="324,56,409,83"/>
+<area shape="rect" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="457,56,603,83"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="324,56,409,83"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="179,5,273,32"/>
 <area shape="rect" href="../../d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="190,107,262,133"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="176,56,276,83"/>
@@ -1886,7 +1897,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph" id="ad7/d10/line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c_cgraph">
 <area shape="rect" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="5,5,92,32"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="140,5,287,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="140,5,287,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1935,7 +1946,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. </p>
+<p>The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Input: integration variable </td></tr>
@@ -1949,7 +1960,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d10/line__ingredients_8c_a051e4cade75852a7abff94bce70a0307_icgraph.png" border="0" usemap="#ad7/d10/line__ingredients_8c_a051e4cade75852a7abff94bce70a0307_icgraph" alt=""/></div>
 <map name="ad7/d10/line__ingredients_8c_a051e4cade75852a7abff94bce70a0307_icgraph" id="ad7/d10/line__ingredients_8c_a051e4cade75852a7abff94bce70a0307_icgraph">
-<area shape="rect" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="813,68,960,95"/>
+<area shape="rect" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="813,68,960,95"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="679,68,765,95"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="531,5,631,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="543,93,618,120"/>
@@ -2066,7 +2077,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="133,107,219,133"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="314,5,377,32"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="294,56,397,83"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="272,107,419,133"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="272,107,419,133"/>
 </map>
 </div>
 <div class="dynheader">

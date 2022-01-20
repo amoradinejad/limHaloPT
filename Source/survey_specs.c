@@ -38,9 +38,8 @@ double shell_volume( struct Cosmology *Cx,double z, double fsky) // The volume o
  * 
  * @param Cx            Input: Cosmology structure
  * @param zmin          Input: minimum redshift
- * @param zmin          Input: maximum redshift
+ * @param zmax          Input: maximum redshift
  * @param fsky          Input: sky-coverage of teh survey 
- * @return kmin
  */
 double kmin_val( struct Cosmology *Cx, double zmin, double zmax, double fsky)
 {
@@ -54,14 +53,10 @@ double kmin_val( struct Cosmology *Cx, double zmin, double zmax, double fsky)
 
 
 /**
- * Compute the maximum k-value used in Fisher forecast at each redshift bin. We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin.
- * The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved 
- * by solving Eq. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0.36. Instead of fixing sigma^2 to 0.36, I chose the variance 
- * such that kmax(z=0) = 0.15 h/Mpc. This corresponds to the variance of ~0.33 at z=0 . In the forecast, I additionally always impose kmax<0.3 h/Mpc cut. 
+ * The function to be passed to Brent solver to compute kmax
  * 
- * @param Cx            Input: Cosmology structure
- * @param z             Input: redshift of interest
- * @return kmax
+ * @param kmax        Inpute: maximum wavenumber in unit of 1/Mpc
+ * @param params      Input: parameters to be passed to the solver 
  */
 double kmax_Brent(double kmax, void *params)
 {
@@ -74,6 +69,16 @@ double kmax_Brent(double kmax, void *params)
     return f;   
 }
 
+/**
+ * Compute the maximum k-value used in Fisher forecast at each redshift bin. We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin.
+ * The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved 
+ * by solving Eq. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0.36. Instead of fixing sigma^2 to 0.36, I chose the variance 
+ * such that kmax(z=0) = 0.15 h/Mpc. This corresponds to the variance of ~0.33 at z=0 . In the forecast, I additionally always impose kmax<0.3 h/Mpc cut. 
+ * 
+ * @param Cx            Input: Cosmology structure
+ * @param z             Input: redshift of interest
+ * @return kmax
+ */
 double kmax_Brent_solver( struct Cosmology *Cx, double z)
 {
     int status;

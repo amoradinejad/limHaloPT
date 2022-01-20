@@ -6,7 +6,7 @@ var searchData=
   ['main_2ec_3',['main.c',['../d0/d29/main_8c.html',1,'']]],
   ['make_5f1d_5fint_5farray_4',['make_1D_int_array',['../d7/db6/utilities_8c.html#ae8fc001408865b8dfdcbbba42391ad98',1,'utilities.c']]],
   ['make_5f1darray_5',['make_1Darray',['../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995',1,'utilities.c']]],
-  ['make_5f2darray_6',['make_2Darray',['../d7/db6/utilities_8c.html#a09e12e7f06f16689fe59c85fdb258afc',1,'utilities.c']]],
+  ['make_5f2darray_6',['make_2Darray',['../d7/db6/utilities_8c.html#a5f141cdde30e04309b48acdd73b2ecdd',1,'utilities.c']]],
   ['mass_7',['mass',['../d8/d11/structglobals.html#a244bf42c46054cf1113be44d55f2156d',1,'globals']]],
   ['mass_5ffunc_8',['mass_func',['../d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702',1,'line_ingredients.c']]],
   ['mass_5ffunc_5fsims_9',['mass_func_sims',['../d7/d10/line__ingredients_8c.html#a60bf4840dc0204947ec426719979065e',1,'line_ingredients.c']]],

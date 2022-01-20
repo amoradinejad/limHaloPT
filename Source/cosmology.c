@@ -68,7 +68,7 @@ struct globals gb;
  * @return an integer if succeeded
  */
 int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax, 
-                  int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf)
+                  int nlines, int * line_type, size_t npoints_interp, double M_min, long mode_mf)
 {
 
   CL_Cosmology_initilize(Cx,pk_kmax,pk_zmax);
@@ -463,7 +463,7 @@ struct PS_xtr * PS_xtrapol_init(struct Cosmology *Cx)
 /** 
  * frees the interpolation elements for P_m spline 
  *
- * @param PS_xtr  Input: pointer to the structure containing the interpolation pointers
+ * @param PS_xtrapol       Input: pointer to the structure containing the interpolation pointers
  * @return an integer indicating sucess
  */
 int PS_xtrapol_free(struct PS_xtr * PS_xtrapol)
@@ -770,7 +770,6 @@ double growth_f(struct Cosmology *Cx, double k, double z)
  * The scale-indep growth is computed by CLASS directly
  * 
  * @param Cx                Input: pointer to Cosmology structure
- * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
  * @return the growth factor, can be k-dep (ex. with nonzero neutrino mass)
  */ 
@@ -801,7 +800,6 @@ double scale_indep_growth_D(struct Cosmology *Cx, double z)
  * Compute the scale-independent growth rate f(z) which is scale-indep valid when neutrinos are massless
  *   
  * @param Cx                Input: pointer to Cosmology structure
- * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
  * @return the growth factor
  */
@@ -966,6 +964,7 @@ double sig_sq_integrand(double x, void *par)
  *   
  * @param Cx                Input: pointer to Cosmology structure
  * @param z                 Input: redshift to compute the spectrum
+ * @param R                 Input: smoothing scale
  * @return the unsmoothed variance
  */
 double sig_sq(struct Cosmology *Cx, double z, double R)
@@ -1048,10 +1047,11 @@ double sigma0_sq_integrand(double x, void *par)
  * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
  *   
  * @param Cx                Input: pointer to Cosmology structure
+ * @param kmax              Input: maximum wavenumber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
  * @return the unsmoothed variance
  */
-double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  ///kmax is in unit of 1/Mpc
+double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  
 {
   extern struct globals gb;
 
@@ -1099,10 +1099,10 @@ double rhoc(struct Cosmology *Cx, double z)
  * Compute the Lagrangian radius of halos in unit of  Mpc , fixing z=0
  *   
  * @param Cx                Input: pointer to Cosmology structure
- * @param h_mass            Input: halo mass in unit of solar mass
+ * @param hmass             Input: halo mass in unit of solar mass
  * @return R_s
  */
-double R_scale(struct Cosmology *Cx, double M)  
+double R_scale(struct Cosmology *Cx, double hmass)  
 {
 
   double f       = 0 ;
@@ -1118,6 +1118,7 @@ double R_scale(struct Cosmology *Cx, double M)
  * Compute the Lagrangian radius of halos in unit of  Mpc at z
  *   
  * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift
  * @param h_mass            Input: halo mass in unit of solar mass
  * @return R_s
  */

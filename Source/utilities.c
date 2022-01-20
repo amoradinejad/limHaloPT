@@ -25,7 +25,6 @@
  * Allocate memory to a 1d array of type double and length size
  * 
  * @param size      Input: length of the array 
- * 
  * @return a pointer to a 1d array
  */
 double *make_1Darray(long size)
@@ -44,7 +43,6 @@ double *make_1Darray(long size)
  * Allocate memory to a 1d array of type integer and length size
  * 
  * @param size      Input: length of the arrat 
- * 
  * @return a pointer to an integer type 1d array
  */
 int *make_1D_int_array(long size)
@@ -65,16 +63,15 @@ int *make_1D_int_array(long size)
  * 
  * @param nrows      Input: number of rows of the output array
  * @param ncols      Input: number of columns of the output array
- * 
  * @return a double pointer to a double type 2d array
  */
- double **make_2Darray(long nrows, long ncolumns)
+ double **make_2Darray(long nrows, long ncols)
 {   
 	long size;
 	long i,j;
 	double **array;
 
-	size = nrows*ncolumns;
+	size = nrows*ncols;
 
 	array = (double **) malloc(nrows*sizeof(double *));
 	if(array==NULL) exit(2);
@@ -84,7 +81,7 @@ int *make_1D_int_array(long size)
 
 	for(i=1L;i<nrows;i++)
 	{
-		array[i] = array[0] + i * ncolumns;
+		array[i] = array[0] + i * ncols;
 	}
 
 
@@ -122,7 +119,7 @@ void free_2Darray(double ** m)
  * 
  * @param n     	Input: number of elements
  * @param xmin      Input: start point
- * @param xmiax     Input: end point
+ * @param xmax     Input: end point
  * 
  * @return a pointer to a double type 1d array, with values initialized
  */
@@ -151,8 +148,7 @@ double *init_1Darray(long n,double xmin,double xmax)
  * 
  * @param n     	Input: number of elements
  * @param xmin      Input: start point
- * @param xmiax     Input: end point
- * 
+ * @param xmax     Input: end point
  * @return a pointer to a double type 1d array, with values initialized
  */
 double *loginit_1Darray(long n,double xmin,double xmax)
@@ -181,10 +177,9 @@ double *loginit_1Darray(long n,double xmin,double xmax)
 /**
  * initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on log10 scale
  * 
- * @param n     	Input: number of elements
+ * @param n     	  Input: number of elements
+ * @param inc       Input: increment
  * @param xmin      Input: start point
- * @param xmiax     Input: end point
- * 
  * @return a pointer to a double type 1d array, with values initialized
  */
 double *log10init_1Darray(long n, double inc, double xmin)
@@ -216,7 +211,6 @@ double *log10init_1Darray(long n, double inc, double xmin)
  * Count the number of lines of a file
  * 
  * @param fname     	Input: filename
- * 
  * @return long integer value of nlines
  */
 long count_lines_in_file(char *fname)
@@ -258,7 +252,6 @@ long count_lines_in_file(char *fname)
  * Count the number of columns of a file
  * 
  * @param fname     	Input: filename
- * 
  * @return long integer value of ncols
  */
 long count_cols_in_file(char *fname)

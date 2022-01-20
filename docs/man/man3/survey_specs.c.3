@@ -24,10 +24,11 @@ survey_specs.c \- Documented computation of some survey-related functions\&.
 .ti -1c
 .RI "double \fBkmax_Brent\fP (double kmax, void *params)"
 .br
-.RI "Compute the maximum k-value used in Fisher forecast at each redshift bin\&. "
+.RI "The function to be passed to Brent solver to compute kmax\&. "
 .ti -1c
 .RI "double \fBkmax_Brent_solver\fP (struct \fBCosmology\fP *Cx, double z)"
 .br
+.RI "Compute the maximum k-value used in Fisher forecast at each redshift bin\&. "
 .in -1c
 .SS "Variables"
 
@@ -56,6 +57,19 @@ In summary, the following functions can be called from other modules:
 .SS "double kmax_Brent (double kmax, void * params)"
 
 .PP
+The function to be passed to Brent solver to compute kmax\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkmax\fP Inpute: maximum wavenumber in unit of 1/Mpc 
+.br
+\fIparams\fP Input: parameters to be passed to the solver 
+.RE
+.PP
+
+.SS "double kmax_Brent_solver (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
 Compute the maximum k-value used in Fisher forecast at each redshift bin\&. We follow Giannantonio et al\&. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin\&. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36\&. This can be achieved by solving Eq\&. 40 of Giannantonio: sigma^2(z) = int_kmin^kmax(z) dk k^2/(2pi^2) P_m(k,z) = 0\&.36\&. Instead of fixing sigma^2 to 0\&.36, I chose the variance such that kmax(z=0) = 0\&.15 h/Mpc\&. This corresponds to the variance of ~0\&.33 at z=0 \&. In the forecast, I additionally always impose kmax<0\&.3 h/Mpc cut\&.
 .PP
 \fBParameters\fP
@@ -70,8 +84,6 @@ Compute the maximum k-value used in Fisher forecast at each redshift bin\&. We f
 kmax 
 .RE
 .PP
-
-.SS "double kmax_Brent_solver (struct \fBCosmology\fP * Cx, double z)"
 in short paper we used, 3\&.631872e-01 ; 
 .br
 
@@ -86,14 +98,9 @@ Compute the size of fundumental mode corresponding to the comoving volume enclos
 .br
 \fIzmin\fP Input: minimum redshift 
 .br
-\fIzmin\fP Input: maximum redshift 
+\fIzmax\fP Input: maximum redshift 
 .br
 \fIfsky\fP Input: sky-coverage of teh survey 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-kmin 
 .RE
 .PP
 

@@ -6,8 +6,7 @@ Documented computation of some survey-\/related functions.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for survey\+\_\+specs.\+c\+:
-\nopagebreak
+Include dependency graph for survey\+\_\+specs.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,9 +21,9 @@ double \mbox{\hyperlink{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}{shel
 double \mbox{\hyperlink{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}{kmin\+\_\+val}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double zmin, double zmax, double fsky)
 \begin{DoxyCompactList}\small\item\em Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin \mbox{[}zmin,zmax\mbox{]}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}{kmax\+\_\+\+Brent}} (double kmax, void $\ast$params)
-\begin{DoxyCompactList}\small\item\em Compute the maximum k-\/value used in Fisher forecast at each redshift bin. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The function to be passed to Brent solver to compute kmax. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}{kmax\+\_\+\+Brent\+\_\+solver}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compute the maximum k-\/value used in Fisher forecast at each redshift bin. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,20 +52,15 @@ In summary, the following functions can be called from other modules\+:
 
 
 
-Compute the maximum k-\/value used in Fisher forecast at each redshift bin. 
-
-We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved by solving Eq. 40 of Giannantonio\+: sigma$^\wedge$2(z) = int\+\_\+kmin$^\wedge$kmax(z) dk k$^\wedge$2/(2pi$^\wedge$2) P\+\_\+m(k,z) = 0.\+36. Instead of fixing sigma$^\wedge$2 to 0.\+36, I chose the variance such that kmax(z=0) = 0.\+15 h/\+Mpc. This corresponds to the variance of $\sim$0.33 at z=0 . In the forecast, I additionally always impose kmax\texorpdfstring{$<$}{<}0.\+3 h/\+Mpc cut.
+The function to be passed to Brent solver to compute kmax. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+{\em kmax} & Inpute\+: maximum wavenumber in unit of 1/\+Mpc \\
 \hline
-{\em z} & Input\+: redshift of interest \\
+{\em params} & Input\+: parameters to be passed to the solver \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-kmax 
-\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -87,9 +81,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxyparagraph{\texorpdfstring{kmax\_Brent\_solver()}{kmax\_Brent\_solver()}}
 {\footnotesize\ttfamily double kmax\+\_\+\+Brent\+\_\+solver (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
 
+
+
+Compute the maximum k-\/value used in Fisher forecast at each redshift bin. 
+
+We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved by solving Eq. 40 of Giannantonio\+: sigma$^\wedge$2(z) = int\+\_\+kmin$^\wedge$kmax(z) dk k$^\wedge$2/(2pi$^\wedge$2) P\+\_\+m(k,z) = 0.\+36. Instead of fixing sigma$^\wedge$2 to 0.\+36, I chose the variance such that kmax(z=0) = 0.\+15 h/\+Mpc. This corresponds to the variance of $\sim$0.33 at z=0 . In the forecast, I additionally always impose kmax\texorpdfstring{$<$}{<}0.\+3 h/\+Mpc cut.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kmax 
+\end{DoxyReturn}
 in short paper we used, 3.\+631872e-\/01 ; ~\newline
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -112,16 +121,12 @@ Compute the size of fundumental mode corresponding to the comoving volume enclos
 \hline
 {\em zmin} & Input\+: minimum redshift \\
 \hline
-{\em zmin} & Input\+: maximum redshift \\
+{\em zmax} & Input\+: maximum redshift \\
 \hline
 {\em fsky} & Input\+: sky-\/coverage of teh survey \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-kmin 
-\end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

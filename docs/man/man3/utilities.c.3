@@ -22,7 +22,7 @@ utilities.c \- Documented basic utility functions used by other modules of the c
 .br
 .RI "Allocate memory to a 1d array of type integer and length size\&. "
 .ti -1c
-.RI "double ** \fBmake_2Darray\fP (long nrows, long ncolumns)"
+.RI "double ** \fBmake_2Darray\fP (long nrows, long ncols)"
 .br
 .RI "Allocate memory to a 2d array of type double\&. "
 .ti -1c
@@ -90,7 +90,7 @@ Count the number of columns of a file\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIfname\fP Input: filename
+\fIfname\fP Input: filename 
 .RE
 .PP
 \fBReturns\fP
@@ -106,7 +106,7 @@ Count the number of lines of a file\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIfname\fP Input: filename
+\fIfname\fP Input: filename 
 .RE
 .PP
 \fBReturns\fP
@@ -142,7 +142,7 @@ initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space
 .br
 \fIxmin\fP Input: start point 
 .br
-\fIxmiax\fP Input: end point
+\fIxmax\fP Input: end point
 .RE
 .PP
 \fBReturns\fP
@@ -160,9 +160,9 @@ initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space
 .RS 4
 \fIn\fP Input: number of elements 
 .br
-\fIxmin\fP Input: start point 
+\fIinc\fP Input: increment 
 .br
-\fIxmiax\fP Input: end point
+\fIxmin\fP Input: start point 
 .RE
 .PP
 \fBReturns\fP
@@ -182,7 +182,7 @@ initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space
 .br
 \fIxmin\fP Input: start point 
 .br
-\fIxmiax\fP Input: end point
+\fIxmax\fP Input: end point 
 .RE
 .PP
 \fBReturns\fP
@@ -198,7 +198,7 @@ Allocate memory to a 1d array of type integer and length size\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIsize\fP Input: length of the arrat
+\fIsize\fP Input: length of the arrat 
 .RE
 .PP
 \fBReturns\fP
@@ -214,7 +214,7 @@ Allocate memory to a 1d array of type double and length size\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIsize\fP Input: length of the array
+\fIsize\fP Input: length of the array 
 .RE
 .PP
 \fBReturns\fP
@@ -223,7 +223,7 @@ a pointer to a 1d array
 .RE
 .PP
 
-.SS "double ** make_2Darray (long nrows, long ncolumns)"
+.SS "double ** make_2Darray (long nrows, long ncols)"
 
 .PP
 Allocate memory to a 2d array of type double\&. 
@@ -232,7 +232,7 @@ Allocate memory to a 2d array of type double\&.
 .RS 4
 \fInrows\fP Input: number of rows of the output array 
 .br
-\fIncols\fP Input: number of columns of the output array
+\fIncols\fP Input: number of columns of the output array 
 .RE
 .PP
 \fBReturns\fP

@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="161,56,239,83"/>
 <area shape="rect" id="node11" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="147,157,253,184"/>
 <area shape="rect" id="node12" href="$d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="157,107,243,133"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="305,81,376,108"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="305,81,376,108"/>
 <area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="311,31,371,57"/>
 <area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="465,145,511,172"/>
 <area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="609,145,671,172"/>

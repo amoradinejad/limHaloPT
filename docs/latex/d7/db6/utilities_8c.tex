@@ -6,8 +6,7 @@ Documented basic utility functions used by other modules of the code.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for utilities.\+c\+:
-\nopagebreak
+Include dependency graph for utilities.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,7 +20,7 @@ double $\ast$ \mbox{\hyperlink{utilities_8c_abbef0cde3da2c741890e66bf8f307995}{m
 \begin{DoxyCompactList}\small\item\em Allocate memory to a 1d array of type double and length size. \end{DoxyCompactList}\item 
 int $\ast$ \mbox{\hyperlink{utilities_8c_ae8fc001408865b8dfdcbbba42391ad98}{make\+\_\+1\+D\+\_\+int\+\_\+array}} (long size)
 \begin{DoxyCompactList}\small\item\em Allocate memory to a 1d array of type integer and length size. \end{DoxyCompactList}\item 
-double $\ast$$\ast$ \mbox{\hyperlink{utilities_8c_a09e12e7f06f16689fe59c85fdb258afc}{make\+\_\+2\+Darray}} (long nrows, long ncolumns)
+double $\ast$$\ast$ \mbox{\hyperlink{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}{make\+\_\+2\+Darray}} (long nrows, long ncols)
 \begin{DoxyCompactList}\small\item\em Allocate memory to a 2d array of type double. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}{free\+\_\+2\+Darray}} (double $\ast$$\ast$m)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated to a 2d array. \end{DoxyCompactList}\item 
@@ -45,7 +44,7 @@ Azadeh Moradinezhad Dizgah, November 4th 2021
 In summary, the following functions can be called from other modules\+:
 \begin{DoxyEnumerate}
 \item \mbox{\hyperlink{utilities_8c_abbef0cde3da2c741890e66bf8f307995}{make\+\_\+1\+Darray()}} dynamically allocates memory to a 1d array
-\item \mbox{\hyperlink{utilities_8c_a09e12e7f06f16689fe59c85fdb258afc}{make\+\_\+2\+Darray()}} dynamically allocates memory to a 2d array
+\item \mbox{\hyperlink{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}{make\+\_\+2\+Darray()}} dynamically allocates memory to a 2d array
 \item \mbox{\hyperlink{utilities_8c_a6c510b2027f1c8d33d0afe4f5b75609a}{free\+\_\+2\+Darray()}} free the memory allocated to a 2d array ~\newline
 
 \item \mbox{\hyperlink{utilities_8c_aacaa803e04084752f13eb25e236f46aa}{init\+\_\+1\+Darray()}} initialize a 1d array with linear spacing
@@ -70,7 +69,7 @@ Count the number of columns of a file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em fname} & Input\+: filename\\
+{\em fname} & Input\+: filename \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -88,14 +87,13 @@ Count the number of lines of a file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em fname} & Input\+: filename\\
+{\em fname} & Input\+: filename \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 long integer value of nlines 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,7 +134,7 @@ initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and
 \hline
 {\em xmin} & Input\+: start point \\
 \hline
-{\em xmiax} & Input\+: end point\\
+{\em xmax} & Input\+: end point\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -149,8 +147,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=265pt]{d7/db6/utilities_8c_aacaa803e04084752f13eb25e236f46aa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -171,9 +168,9 @@ initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and
 \begin{DoxyParams}{Parameters}
 {\em n} & Input\+: number of elements \\
 \hline
-{\em xmin} & Input\+: start point \\
+{\em inc} & Input\+: increment \\
 \hline
-{\em xmiax} & Input\+: end point\\
+{\em xmin} & Input\+: start point \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -202,7 +199,7 @@ initialize a 1d array, with values in the range of \mbox{[}xmin,xmax\mbox{]} and
 \hline
 {\em xmin} & Input\+: start point \\
 \hline
-{\em xmiax} & Input\+: end point\\
+{\em xmax} & Input\+: end point \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -215,8 +212,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=278pt]{d7/db6/utilities_8c_aed3fb59a75f0f19ee1e7b860c0d5a8f8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,7 +231,7 @@ Allocate memory to a 1d array of type integer and length size.
 
 
 \begin{DoxyParams}{Parameters}
-{\em size} & Input\+: length of the arrat\\
+{\em size} & Input\+: length of the arrat \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -253,25 +249,24 @@ Allocate memory to a 1d array of type double and length size.
 
 
 \begin{DoxyParams}{Parameters}
-{\em size} & Input\+: length of the array\\
+{\em size} & Input\+: length of the array \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 a pointer to a 1d array 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/db6/utilities_8c_abbef0cde3da2c741890e66bf8f307995_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{utilities_8c_a09e12e7f06f16689fe59c85fdb258afc}\label{utilities_8c_a09e12e7f06f16689fe59c85fdb258afc}} 
+\mbox{\Hypertarget{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}\label{utilities_8c_a5f141cdde30e04309b48acdd73b2ecdd}} 
 \index{utilities.c@{utilities.c}!make\_2Darray@{make\_2Darray}}
 \index{make\_2Darray@{make\_2Darray}!utilities.c@{utilities.c}}
 \doxyparagraph{\texorpdfstring{make\_2Darray()}{make\_2Darray()}}
-{\footnotesize\ttfamily double $\ast$$\ast$ make\+\_\+2\+Darray (\begin{DoxyParamCaption}\item[{long}]{nrows,  }\item[{long}]{ncolumns }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double $\ast$$\ast$ make\+\_\+2\+Darray (\begin{DoxyParamCaption}\item[{long}]{nrows,  }\item[{long}]{ncols }\end{DoxyParamCaption})}
 
 
 
@@ -281,7 +276,7 @@ Allocate memory to a 2d array of type double.
 \begin{DoxyParams}{Parameters}
 {\em nrows} & Input\+: number of rows of the output array \\
 \hline
-{\em ncols} & Input\+: number of columns of the output array\\
+{\em ncols} & Input\+: number of columns of the output array \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

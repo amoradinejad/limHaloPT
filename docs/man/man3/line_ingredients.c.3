@@ -88,14 +88,15 @@ line_ingredients.c \- Documented line_ingredients module\&.
 .ti -1c
 .RI "double \fBp_sig_shot_integrand\fP (double x, void *par)"
 .br
-.RI "Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. "
+.RI "The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016\&. "
 .ti -1c
 .RI "double \fBp_sig_shot\fP (double scatter)"
 .br
+.RI "Compute the scatter in shot noise due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating Note that we set f_duty =1 unlike other LIM paper (ex\&. "
 .ti -1c
 .RI "double \fBp_sig_Tbar_integrand\fP (double x, void *par)"
 .br
-.RI "The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016\&. "
+.RI "The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016\&. "
 .ti -1c
 .RI "double \fBp_sig_Tbar\fP (double scatter)"
 .br
@@ -187,6 +188,8 @@ Compute the luminosity-weighted linear and quadratic line biases\&. The normaliz
 \fImode_mf\fP Input: model of halo mass function to consider, PSC, ST, TR 
 .br
 \fImode_lum\fP Inpute: which luminosity model, basically which line considered 
+.br
+\fIresult\fP Input: an output array of linear and quadratic line biases 
 .RE
 .PP
 \fBReturns\fP
@@ -599,10 +602,8 @@ the multiplicity function
 In Barkana & Loeb Rev a = 0\&.75
 .SS "double p_sig_shot (double scatter)"
 
-.SS "double p_sig_shot_integrand (double x, void * par)"
-
 .PP
-Model from Keating et al 2016 to account for the observed variation in halo activity, i\&.e\&. scatter in the L(M) relation p_sig_shot replaces the f_duty in the shot-noise used in some LIM paper (ex\&. Lidz et al 2011)\&. \fBp_sig_shot_integrand()\fP is the integrand, and \fBp_sig_shot()\fP computes the scatter factor for the shot noise\&.
+Compute the scatter in shot noise due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating Note that we set f_duty =1 unlike other LIM paper (ex\&. Lidz et al 2011)\&.
 .PP
 \fBParameters\fP
 .RS 4
@@ -611,9 +612,25 @@ Model from Keating et al 2016 to account for the observed variation in halo acti
 .PP
 \fBReturns\fP
 .RS 4
-the scatter coeff of the shot noise 
+the scatter coeff of shot 
+.RE
+.PP
+
+.SS "double p_sig_shot_integrand (double x, void * par)"
+
+.PP
+The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Input: integration variable 
 .br
- 
+\fIpar\fP Input: integration parmaeters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of the integrand 
 .RE
 .PP
 
@@ -638,7 +655,7 @@ the scatter coeff of Tbar
 .SS "double p_sig_Tbar_integrand (double x, void * par)"
 
 .PP
-The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016\&. 
+The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016\&. 
 .PP
 \fBParameters\fP
 .RS 4

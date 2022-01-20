@@ -888,6 +888,7 @@ int bias_lum_weighted_integ(unsigned  nd,               // Number of dimensions 
  * @param M_min      Input: minimum halo mass
  * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
  * @param mode_lum   Inpute: which luminosity model, basically which line considered
+ * @param result     Input: an output array of linear and quadratic line biases
  * @return un-normalized line bias   
  */
 void bias_lum_weighted(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum, double *result)  
@@ -921,15 +922,13 @@ void bias_lum_weighted(struct Cosmology *Cx, double z, double M_min, long mode_m
 }
 
 
-/**
- * Model from Keating et al 2016 to account for the observed variation in halo activity, i.e. scatter in the L(M) relation
- * p_sig_shot replaces the f_duty in the shot-noise used in some LIM paper (ex. Lidz et al 2011).
- * p_sig_shot_integrand() is the integrand, and p_sig_shot() computes the scatter factor for the shot noise.
- * 
- * @param scatter    Input: variance of the log-scatter
- * @return the scatter coeff of the shot noise  
+/** 
+ * The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016
+ *   
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
  */
-
 double p_sig_shot_integrand(double x, void *par)
   {
     double f=0;
@@ -947,6 +946,13 @@ double p_sig_shot_integrand(double x, void *par)
 
   } 
 
+/**
+ * Compute the scatter in shot noise due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating
+ * Note that we set f_duty =1 unlike other LIM paper (ex. Lidz et al 2011).
+ * 
+ * @param scatter    Input: variance of the log-scatter
+ * @return the scatter coeff of shot 
+ */
 double p_sig_shot(double scatter)
 {
   extern struct globals gb;
@@ -974,7 +980,7 @@ double p_sig_shot(double scatter)
 
 
 /** 
- * The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016
+ * The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016
  *   
  * @param x                 Input: integration variable
  * @param par               Input: integration parmaeters

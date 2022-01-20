@@ -1,7 +1,7 @@
 <map id="R_scale" name="R_scale">
 <area shape="rect" id="node1" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="996,196,1067,223"/>
 <area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="842,196,919,223"/>
-<area shape="rect" id="node16" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title=" " alt="" coords="813,247,948,273"/>
+<area shape="rect" id="node16" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="813,247,948,273"/>
 <area shape="rect" id="node17" href="$d7/d10/line__ingredients_8c.html#a2ca7a5add6fca8bd94165085f351f702" title="Compute the halo mass function for Press&#45;Schechter, Sheth&#45;Tormen and Tinker models see Pillepich et a..." alt="" coords="837,120,924,147"/>
 <area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#a609c2a4b205e7f497d4b96657510fd5f" title="The integrand function passed to hcubature integrator to compute the un&#45;normalized luminosity&#45;weighte..." alt="" coords="597,107,765,133"/>
 <area shape="rect" id="node8" href="$d1/dd5/ps__line__hm_8c.html#ad72b2846b2e235de535da531f2ee30da" title="The integrand function passed passed to Cuhre integration routine to compute 1&#45; and 2&#45;halo integrals." alt="" coords="625,157,738,184"/>

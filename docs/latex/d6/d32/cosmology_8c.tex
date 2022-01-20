@@ -6,8 +6,7 @@ Documented cosmology module.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for cosmology.\+c\+:
-\nopagebreak
+Include dependency graph for cosmology.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +16,7 @@ Include dependency graph for cosmology.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\+\_\+init}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double pk\+\_\+kmax, double pk\+\_\+zmax, int nlines, int $\ast$line\+\_\+types, size\+\_\+t npoints\+\_\+interp, double M\+\_\+min, long mode\+\_\+mf)
+int \mbox{\hyperlink{cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90}{Cosmology\+\_\+init}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double pk\+\_\+kmax, double pk\+\_\+zmax, int nlines, int $\ast$line\+\_\+type, size\+\_\+t npoints\+\_\+interp, double M\+\_\+min, long mode\+\_\+mf)
 \begin{DoxyCompactList}\small\item\em Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{cosmology_8c_a8ddfed4a843beb762df124badc47011e}{Cosmology\+\_\+free}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated to cosmology structure. \end{DoxyCompactList}\item 
@@ -64,7 +63,7 @@ double \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\+
 \begin{DoxyCompactList}\small\item\em Compute variance of unsmoothed matter density fluctuations. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}{rhoc}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
 \begin{DoxyCompactList}\small\item\em Compute the critical density in unit of M\+\_\+sun/\+Mpc$^\wedge$3. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\+\_\+scale}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double M)
+double \mbox{\hyperlink{cosmology_8c_a5b67556296ddd17d251738481a67877c}{R\+\_\+scale}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double hmass)
 \begin{DoxyCompactList}\small\item\em Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{cosmology_8c_a6e1d08b8f9ecf5108abd47c9b34902c4}{R\+\_\+scale\+\_\+wrong}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double h\+\_\+mass)
 \begin{DoxyCompactList}\small\item\em Compute the Lagrangian radius of halos in unit of Mpc at z. \end{DoxyCompactList}\item 
@@ -102,7 +101,7 @@ In summary, the following functions can be called from other modules\+:
 
 
 \begin{DoxyEnumerate}
-\item \mbox{\hyperlink{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}{Cosmology\+\_\+init()}} allocates memory to and initializes cosmology structure
+\item \mbox{\hyperlink{cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90}{Cosmology\+\_\+init()}} allocates memory to and initializes cosmology structure
 \item \mbox{\hyperlink{cosmology_8c_a8ddfed4a843beb762df124badc47011e}{Cosmology\+\_\+free()}} frees the memory allocated to cosmology structure
 \item \mbox{\hyperlink{cosmology_8c_a6cb2155e541823871af839a39ccec1e7}{CL\+\_\+\+Cosmology\+\_\+initilize()}} initializes the class cosmology structure
 \item \mbox{\hyperlink{cosmology_8c_a9648c21ce0e6371a11de7a0f0ffec493}{CL\+\_\+\+Cosmology\+\_\+free()}} frees the class cosmology structure
@@ -123,7 +122,7 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}{der\+\_\+lnsig\+\_\+sq()}} computes natural log derivative of the variance of smoothed matter fluctuations w.\+r.\+t. smoothing scale
 \item \mbox{\hyperlink{cosmology_8c_a7b59282552e5f4ebd707bedd6ba6c626}{sigma0\+\_\+sq()}} computes variance of unsmoothed matter fluctuations
 \item \mbox{\hyperlink{cosmology_8c_a01ee8bb070f25ca114ae5d0b52d200a7}{rhoc()}} computes the critical density of the universe
-\item \mbox{\hyperlink{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}{R\+\_\+scale()}} computes the size of a spherical halo corresponding to a given mass at z=0
+\item \mbox{\hyperlink{cosmology_8c_a5b67556296ddd17d251738481a67877c}{R\+\_\+scale()}} computes the size of a spherical halo corresponding to a given mass at z=0
 \item \mbox{\hyperlink{cosmology_8c_a6e1d08b8f9ecf5108abd47c9b34902c4}{R\+\_\+scale\+\_\+wrong()}} computes the size of a spherical halo corresponding to a given mass at a given redshift
 \item \mbox{\hyperlink{cosmology_8c_a4dc96bb7695696838c30e0929302c99c}{R\+\_\+vir()}} computes the virial radius
 \item \mbox{\hyperlink{cosmology_8c_ac366d051f37119268a3308ebd5e1b87f}{concentration\+\_\+cdm()}} computes the halo concentration
@@ -306,11 +305,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d6/d32/cosmology_8c_a8ddfed4a843beb762df124badc47011e_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}\label{cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac}} 
+\mbox{\Hypertarget{cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90}\label{cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90}} 
 \index{cosmology.c@{cosmology.c}!Cosmology\_init@{Cosmology\_init}}
 \index{Cosmology\_init@{Cosmology\_init}!cosmology.c@{cosmology.c}}
 \doxyparagraph{\texorpdfstring{Cosmology\_init()}{Cosmology\_init()}}
-{\footnotesize\ttfamily int Cosmology\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax,  }\item[{int}]{nlines,  }\item[{int $\ast$}]{line\+\_\+types,  }\item[{size\+\_\+t}]{npoints\+\_\+interp,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Cosmology\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{pk\+\_\+kmax,  }\item[{double}]{pk\+\_\+zmax,  }\item[{int}]{nlines,  }\item[{int $\ast$}]{line\+\_\+type,  }\item[{size\+\_\+t}]{npoints\+\_\+interp,  }\item[{double}]{M\+\_\+min,  }\item[{long}]{mode\+\_\+mf }\end{DoxyParamCaption})}
 
 
 
@@ -342,14 +341,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d6/d32/cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac_cgraph}
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{d6/d32/cosmology_8c_aa53f8d5dc0166fea635a87b2b2ad98ac_icgraph}
+\includegraphics[width=238pt]{d6/d32/cosmology_8c_a4b4377cdc8e3bc9374e420bf65b5ce90_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}\label{cosmology_8c_a03f9aaf2088b59136e47b27fd3310f27}} 
@@ -677,7 +676,7 @@ frees the interpolation elements for P\+\_\+m spline
 
 
 \begin{DoxyParams}{Parameters}
-{\em \mbox{\hyperlink{struct_p_s__xtr}{PS\+\_\+xtr}}} & Input\+: pointer to the structure containing the interpolation pointers \\
+{\em PS\+\_\+xtrapol} & Input\+: pointer to the structure containing the interpolation pointers \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -722,11 +721,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d6/d32/cosmology_8c_a9e22a5bbc8d0f80cafea3523b2432c82_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}\label{cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f}} 
+\mbox{\Hypertarget{cosmology_8c_a5b67556296ddd17d251738481a67877c}\label{cosmology_8c_a5b67556296ddd17d251738481a67877c}} 
 \index{cosmology.c@{cosmology.c}!R\_scale@{R\_scale}}
 \index{R\_scale@{R\_scale}!cosmology.c@{cosmology.c}}
 \doxyparagraph{\texorpdfstring{R\_scale()}{R\_scale()}}
-{\footnotesize\ttfamily double R\+\_\+scale (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{M }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double R\+\_\+scale (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{hmass }\end{DoxyParamCaption})}
 
 
 
@@ -736,7 +735,7 @@ Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0.
 \begin{DoxyParams}{Parameters}
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
 \hline
-{\em h\+\_\+mass} & Input\+: halo mass in unit of solar mass \\
+{\em hmass} & Input\+: halo mass in unit of solar mass \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -746,14 +745,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=287pt]{d6/d32/cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f_cgraph}
+\includegraphics[width=287pt]{d6/d32/cosmology_8c_a5b67556296ddd17d251738481a67877c_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d6/d32/cosmology_8c_a7558ae7e109dad93059a1f88b2b4861f_icgraph}
+\includegraphics[width=350pt]{d6/d32/cosmology_8c_a5b67556296ddd17d251738481a67877c_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{cosmology_8c_a6e1d08b8f9ecf5108abd47c9b34902c4}\label{cosmology_8c_a6e1d08b8f9ecf5108abd47c9b34902c4}} 
@@ -769,6 +768,8 @@ Compute the Lagrangian radius of halos in unit of Mpc at z.
 
 \begin{DoxyParams}{Parameters}
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift \\
 \hline
 {\em h\+\_\+mass} & Input\+: halo mass in unit of solar mass \\
 \hline
@@ -871,8 +872,6 @@ The scale-\/indep growth is computed by CLASS directly
 \begin{DoxyParams}{Parameters}
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
 \hline
-{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
-\hline
 {\em z} & Input\+: redshift to compute the spectrum \\
 \hline
 \end{DoxyParams}
@@ -892,8 +891,6 @@ Compute the scale-\/independent growth rate f(z) which is scale-\/indep valid wh
 
 \begin{DoxyParams}{Parameters}
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
-\hline
-{\em k} & Input\+: wavenumbber in unit of 1/\+Mpc \\
 \hline
 {\em z} & Input\+: redshift to compute the spectrum \\
 \hline
@@ -918,6 +915,8 @@ The function sigma0\+\_\+integrand() defines the integrand and \mbox{\hyperlink{
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
 \hline
 {\em z} & Input\+: redshift to compute the spectrum \\
+\hline
+{\em R} & Input\+: smoothing scale \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -987,11 +986,13 @@ The function sigma0\+\_\+integrand() defines the integrand and \mbox{\hyperlink{
 \begin{DoxyParams}{Parameters}
 {\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
 \hline
+{\em kmax} & Input\+: maximum wavenumber in unit of 1/\+Mpc \\
+\hline
 {\em z} & Input\+: redshift to compute the spectrum \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the unsmoothed variance kmax is in unit of 1/\+Mpc 
+the unsmoothed variance 
 \end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

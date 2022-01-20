@@ -46,7 +46,7 @@
 <area shape="rect" id="node44" href="$d7/d10/line__ingredients_8c.html#af293c79ca858df80dcc0ef9f29448059" title="The integrand function passed to hcubature integrator to compute the second moment of line luminosity..." alt="" coords="455,968,606,995"/>
 <area shape="rect" id="node43" href="$d7/d10/line__ingredients_8c.html#a4024cda73f4069d07113edd77ae35d4e" title="Compute the first luminosity moment." alt="" coords="267,917,381,944"/>
 <area shape="rect" id="node46" href="$d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="1719,5,1804,32"/>
-<area shape="rect" id="node47" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="1533,5,1625,32"/>
-<area shape="rect" id="node48" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title=" " alt="" coords="1323,5,1457,32"/>
-<area shape="rect" id="node50" href="$d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1145,1069,1257,1096"/>
+<area shape="rect" id="node47" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="The function to be passed to Brent solver to compute kmax." alt="" coords="1533,5,1625,32"/>
+<area shape="rect" id="node48" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="1323,5,1457,32"/>
+<area shape="rect" id="node50" href="$d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1145,1069,1257,1096"/>
 </map>

@@ -153,9 +153,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8fc001408865b8dfdcbbba42391ad98"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/utilities_8c.html#ae8fc001408865b8dfdcbbba42391ad98">make_1D_int_array</a> (long size)</td></tr>
 <tr class="memdesc:ae8fc001408865b8dfdcbbba42391ad98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory to a 1d array of type integer and length size.  <a href="../../d7/db6/utilities_8c.html#ae8fc001408865b8dfdcbbba42391ad98">More...</a><br /></td></tr>
 <tr class="separator:ae8fc001408865b8dfdcbbba42391ad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e12e7f06f16689fe59c85fdb258afc"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/utilities_8c.html#a09e12e7f06f16689fe59c85fdb258afc">make_2Darray</a> (long nrows, long ncolumns)</td></tr>
-<tr class="memdesc:a09e12e7f06f16689fe59c85fdb258afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory to a 2d array of type double.  <a href="../../d7/db6/utilities_8c.html#a09e12e7f06f16689fe59c85fdb258afc">More...</a><br /></td></tr>
-<tr class="separator:a09e12e7f06f16689fe59c85fdb258afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f141cdde30e04309b48acdd73b2ecdd"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/utilities_8c.html#a5f141cdde30e04309b48acdd73b2ecdd">make_2Darray</a> (long nrows, long ncols)</td></tr>
+<tr class="memdesc:a5f141cdde30e04309b48acdd73b2ecdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory to a 2d array of type double.  <a href="../../d7/db6/utilities_8c.html#a5f141cdde30e04309b48acdd73b2ecdd">More...</a><br /></td></tr>
+<tr class="separator:a5f141cdde30e04309b48acdd73b2ecdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c510b2027f1c8d33d0afe4f5b75609a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db6/utilities_8c.html#a6c510b2027f1c8d33d0afe4f5b75609a">free_2Darray</a> (double **m)</td></tr>
 <tr class="memdesc:a6c510b2027f1c8d33d0afe4f5b75609a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated to a 2d array.  <a href="../../d7/db6/utilities_8c.html#a6c510b2027f1c8d33d0afe4f5b75609a">More...</a><br /></td></tr>
 <tr class="separator:a6c510b2027f1c8d33d0afe4f5b75609a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +180,7 @@ Functions</h2></td></tr>
 <p >Azadeh Moradinezhad Dizgah, November 4th 2021</p>
 <p >In summary, the following functions can be called from other modules:</p><ol type="1">
 <li><a class="el" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size.">make_1Darray()</a> dynamically allocates memory to a 1d array</li>
-<li><a class="el" href="../../d7/db6/utilities_8c.html#a09e12e7f06f16689fe59c85fdb258afc" title="Allocate memory to a 2d array of type double.">make_2Darray()</a> dynamically allocates memory to a 2d array</li>
+<li><a class="el" href="../../d7/db6/utilities_8c.html#a5f141cdde30e04309b48acdd73b2ecdd" title="Allocate memory to a 2d array of type double.">make_2Darray()</a> dynamically allocates memory to a 2d array</li>
 <li><a class="el" href="../../d7/db6/utilities_8c.html#a6c510b2027f1c8d33d0afe4f5b75609a" title="Free the memory allocated to a 2d array.">free_2Darray()</a> free the memory allocated to a 2d array <br  />
 </li>
 <li><a class="el" href="../../d7/db6/utilities_8c.html#aacaa803e04084752f13eb25e236f46aa" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely-space on linear scale">init_1Darray()</a> initialize a 1d array with linear spacing</li>
@@ -211,7 +211,7 @@ Functions</h2></td></tr>
 <p>Count the number of columns of a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fname</td><td>Input: filename</td></tr>
+    <tr><td class="paramname">fname</td><td>Input: filename </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,7 +238,7 @@ Functions</h2></td></tr>
 <p>Count the number of lines of a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fname</td><td>Input: filename</td></tr>
+    <tr><td class="paramname">fname</td><td>Input: filename </td></tr>
   </table>
   </dd>
 </dl>
@@ -340,7 +340,7 @@ Here is the caller graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">n</td><td>Input: number of elements </td></tr>
     <tr><td class="paramname">xmin</td><td>Input: start point </td></tr>
-    <tr><td class="paramname">xmiax</td><td>Input: end point</td></tr>
+    <tr><td class="paramname">xmax</td><td>Input: end point</td></tr>
   </table>
   </dd>
 </dl>
@@ -363,7 +363,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="267,5,371,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,56,108"/>
 <area shape="rect" href="../../d6/d32/cosmology_8c.html#a9e22a5bbc8d0f80cafea3523b2432c82" title="Call CLASS and build a 2d interpolator for Plin(k,z), which will be used when building an extrapolato..." alt="" coords="264,56,375,83"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 </map>
 </div>
 
@@ -405,8 +405,8 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>Input: number of elements </td></tr>
+    <tr><td class="paramname">inc</td><td>Input: increment </td></tr>
     <tr><td class="paramname">xmin</td><td>Input: start point </td></tr>
-    <tr><td class="paramname">xmiax</td><td>Input: end point</td></tr>
   </table>
   </dd>
 </dl>
@@ -460,7 +460,7 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">n</td><td>Input: number of elements </td></tr>
     <tr><td class="paramname">xmin</td><td>Input: start point </td></tr>
-    <tr><td class="paramname">xmiax</td><td>Input: end point</td></tr>
+    <tr><td class="paramname">xmax</td><td>Input: end point </td></tr>
   </table>
   </dd>
 </dl>
@@ -497,7 +497,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="589,347,739,373"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee" title="Compute the large&#45;scale limit of P_b2b2 loop." alt="" coords="267,448,327,475"/>
 <area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="392,347,541,373"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1072,461,1184,488"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1072,461,1184,488"/>
 </map>
 </div>
 
@@ -522,7 +522,7 @@ Here is the caller graph for this function:</div>
 <p>Allocate memory to a 1d array of type integer and length size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>Input: length of the arrat</td></tr>
+    <tr><td class="paramname">size</td><td>Input: length of the arrat </td></tr>
   </table>
   </dd>
 </dl>
@@ -549,7 +549,7 @@ Here is the caller graph for this function:</div>
 <p>Allocate memory to a 1d array of type double and length size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>Input: length of the array</td></tr>
+    <tr><td class="paramname">size</td><td>Input: length of the array </td></tr>
   </table>
   </dd>
 </dl>
@@ -580,7 +580,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1437,651,1584,677"/>
 <area shape="rect" href="../../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1449,600,1572,627"/>
 <area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aa050a054d3724145e3b46788bf279c79" title="Compute the luminosity&#45;weighted linear and quadratic line biases." alt="" coords="1444,144,1577,171"/>
-<area shape="rect" href="../../d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1108,144,1220,171"/>
+<area shape="rect" href="../../d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="1108,144,1220,171"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,296,56,323"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509" title="Compute the mass integrals needed for 1&#45; and 1&#45;halo line, line&#45;matter and matter power spectrum If nf..." alt="" coords="1471,347,1550,373"/>
 <area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="1287,245,1387,272"/>
@@ -601,8 +601,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a09e12e7f06f16689fe59c85fdb258afc" name="a09e12e7f06f16689fe59c85fdb258afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e12e7f06f16689fe59c85fdb258afc">&#9670;&nbsp;</a></span>make_2Darray()</h2>
+<a id="a5f141cdde30e04309b48acdd73b2ecdd" name="a5f141cdde30e04309b48acdd73b2ecdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f141cdde30e04309b48acdd73b2ecdd">&#9670;&nbsp;</a></span>make_2Darray()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -617,7 +617,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ncolumns</em>&#160;</td>
+          <td class="paramname"><em>ncols</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -631,7 +631,7 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nrows</td><td>Input: number of rows of the output array </td></tr>
-    <tr><td class="paramname">ncols</td><td>Input: number of columns of the output array</td></tr>
+    <tr><td class="paramname">ncols</td><td>Input: number of columns of the output array </td></tr>
   </table>
   </dd>
 </dl>

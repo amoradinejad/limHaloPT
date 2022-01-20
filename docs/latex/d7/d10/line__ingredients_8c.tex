@@ -6,8 +6,7 @@ Documented line\+\_\+ingredients module.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for line\+\_\+ingredients.\+c\+:
-\nopagebreak
+Include dependency graph for line\+\_\+ingredients.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -54,11 +53,11 @@ int \mbox{\hyperlink{line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f}{bia
 void \mbox{\hyperlink{line__ingredients_8c_aa050a054d3724145e3b46788bf279c79}{bias\+\_\+lum\+\_\+weighted}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double M\+\_\+min, long mode\+\_\+mf, long mode\+\_\+lum, double $\ast$result)
 \begin{DoxyCompactList}\small\item\em Compute the luminosity-\/weighted linear and quadratic line biases. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}{p\+\_\+sig\+\_\+shot\+\_\+integrand}} (double x, void $\ast$par)
-\begin{DoxyCompactList}\small\item\em Model from Keating et al 2016 to account for the observed variation in halo activity, i.\+e. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}{p\+\_\+sig\+\_\+shot}} (double scatter)
-\item 
-double \mbox{\hyperlink{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}{p\+\_\+sig\+\_\+\+Tbar\+\_\+integrand}} (double x, void $\ast$par)
 \begin{DoxyCompactList}\small\item\em The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}{p\+\_\+sig\+\_\+shot}} (double scatter)
+\begin{DoxyCompactList}\small\item\em Compute the scatter in shot noise due to scatter in luminosity-\/halo mass relation, assume log-\/normal scatter ala Keating Note that we set f\+\_\+duty =1 unlike other LIM paper (ex. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{line__ingredients_8c_a051e4cade75852a7abff94bce70a0307}{p\+\_\+sig\+\_\+\+Tbar\+\_\+integrand}} (double x, void $\ast$par)
+\begin{DoxyCompactList}\small\item\em The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{line__ingredients_8c_a2bfb013c5be4f1c6d1ea0b91146b5f1c}{p\+\_\+sig\+\_\+\+Tbar}} (double scatter)
 \begin{DoxyCompactList}\small\item\em Compute the scatter in Tbar due to scatter in luminosity-\/halo mass relation, assume log-\/normal scatter ala Keating Note that we set f\+\_\+duty =1 unlike other LIM paper (ex. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}{line\+\_\+bias}} (struct \mbox{\hyperlink{struct_line}{Line}} $\ast$Lx, double z, double $\ast$result)
@@ -129,6 +128,8 @@ The normalization of first mass moment is not included yet. The function \mbox{\
 \hline
 {\em mode\+\_\+lum} & Inpute\+: which luminosity model, basically which line considered \\
 \hline
+{\em result} & Input\+: an output array of linear and quadratic line biases \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 un-\/normalized line bias ~\newline
@@ -136,16 +137,14 @@ un-\/normalized line bias ~\newline
 \end{DoxyReturn}
 In units of solar mass;
 
-In units of solar massHere is the call graph for this function\+:
-\nopagebreak
+In units of solar massHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_aa050a054d3724145e3b46788bf279c79_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,16 +174,14 @@ The integrand function passed to hcubature integrator to compute the un-\/normal
 {\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a609c2a4b205e7f497d4b96657510fd5f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,8 +224,7 @@ Assuming spherical collapseHere is the call graph for this function\+:\nopagebre
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a5e747f325f7196b6c042ddcfdfb17fab_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -264,8 +260,7 @@ This structure contains interpolators for computing the luminosity-\/weighted ma
 the total clustering line power spectrum, including the 1-\/ and 2-\/halo term ~\newline
  
 \end{DoxyReturn}
-CIIHere is the call graph for this function\+:
-\nopagebreak
+CIIHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -425,8 +420,7 @@ Evaluate the SFR interpolator object for a given value of mass and redshift.
 log10\+SFR ~\newline
  
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -508,8 +502,7 @@ in unit of L\+\_\+sunHere is the call graph for this function\+:\nopagebreak
 \includegraphics[width=270pt]{d7/d10/line__ingredients_8c_a1d5765167555f21d8ae5eba187eb2aa8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -540,16 +533,14 @@ Compute the halo mass function for Press-\/\+Schechter, Sheth-\/\+Tormen and Tin
 \begin{DoxyReturn}{Returns}
 the halo mass function in unit of halos per Mpc$^\wedge$3 per solar mass, compared at z=0 with Murray etal \href{https://arxiv.org/abs/1306.5140}{\texttt{ https\+://arxiv.\+org/abs/1306.\+5140}} 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a2ca7a5add6fca8bd94165085f351f702_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -617,16 +608,14 @@ the first mass moment ~\newline
 \end{DoxyReturn}
 In units of solar mass;
 
-In units of solar massHere is the call graph for this function\+:
-\nopagebreak
+In units of solar massHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a4024cda73f4069d07113edd77ae35d4e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -656,16 +645,14 @@ The integrand function passed to hcubature integrator to compute the first momen
 {\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_ab82b15c827d1213a94e3ff9ce4ddad32_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -701,16 +688,14 @@ the second lum moment ~\newline
 \end{DoxyReturn}
 In units of solar mass;
 
-In units of solar massHere is the call graph for this function\+:
-\nopagebreak
+In units of solar massHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_a905f3fe9b824af5ce217f36af3c767e5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -740,16 +725,14 @@ The integrand function passed to hcubature integrator to compute the second mome
 {\em fvalue} & Input\+: Array of values of the integrand of dimension fdim return the error status \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d7/d10/line__ingredients_8c_af293c79ca858df80dcc0ef9f29448059_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -781,8 +764,7 @@ the line mean intensity
 Note\+: nu\+\_\+J is the rest-\/frame emission frequency related to the observed frequency as nu\+\_\+obs = nu\+\_\+\+J/(1+z\+\_\+J) For a CO transition from J-\/\texorpdfstring{$>$}{>} J-\/1, the rest-\/frame frequency is nu\+\_\+J = J nu\+\_\+\+CO where nu\+\_\+\+Co = 115 GHz. ~\newline
 
 
-in unit of erg/sHere is the call graph for this function\+:
-\nopagebreak
+in unit of erg/sHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -817,8 +799,7 @@ Compute the multiplicity function needed to compute the halo mass function Three
 the multiplicity function ~\newline
  
 \end{DoxyReturn}
-In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:
-\nopagebreak
+In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -831,6 +812,20 @@ In Barkana \& Loeb Rev a = 0.\+75Here is the caller graph for this function\+:
 \doxyparagraph{\texorpdfstring{p\_sig\_shot()}{p\_sig\_shot()}}
 {\footnotesize\ttfamily double p\+\_\+sig\+\_\+shot (\begin{DoxyParamCaption}\item[{double}]{scatter }\end{DoxyParamCaption})}
 
+
+
+Compute the scatter in shot noise due to scatter in luminosity-\/halo mass relation, assume log-\/normal scatter ala Keating Note that we set f\+\_\+duty =1 unlike other LIM paper (ex. 
+
+Lidz et al 2011).
+
+
+\begin{DoxyParams}{Parameters}
+{\em scatter} & Input\+: variance of the log-\/scatter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the scatter coeff of shot 
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -853,18 +848,17 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Model from Keating et al 2016 to account for the observed variation in halo activity, i.\+e. 
-
-scatter in the L(\+M) relation p\+\_\+sig\+\_\+shot replaces the f\+\_\+duty in the shot-\/noise used in some LIM paper (ex. Lidz et al 2011). \mbox{\hyperlink{line__ingredients_8c_ac62e7dccfe1892b60f1709957e93d48c}{p\+\_\+sig\+\_\+shot\+\_\+integrand()}} is the integrand, and \mbox{\hyperlink{line__ingredients_8c_aac555bd341b096dfecd3cd915747b5a4}{p\+\_\+sig\+\_\+shot()}} computes the scatter factor for the shot noise.
+The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em scatter} & Input\+: variance of the log-\/scatter \\
+{\em x} & Input\+: integration variable \\
+\hline
+{\em par} & Input\+: integration parmaeters \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-the scatter coeff of the shot noise ~\newline
- 
+value of the integrand 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -916,7 +910,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016. 
+The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -979,8 +973,7 @@ the line mean temprature assuming Rayleigh-\/\+Jeans limit
 \end{DoxyReturn}
 Boltzmann constant in unit of erg K$^\wedge$-\/1
 
-factor of 10$^\wedge$6 is the conversion factor from K to microKHere is the call graph for this function\+:
-\nopagebreak
+factor of 10$^\wedge$6 is the conversion factor from K to microKHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

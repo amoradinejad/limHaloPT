@@ -1,6 +1,6 @@
 <map id="halo_bias" name="halo_bias">
 <area shape="rect" id="node1" title="computes the halo biases for three mass functions, press&#45;schecter, Sheth&#45;Tormen, and Tinker mass func..." alt="" coords="5,31,83,57"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a7558ae7e109dad93059a1f88b2b4861f" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="131,5,201,32"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a5b67556296ddd17d251738481a67877c" title="Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0." alt="" coords="131,5,201,32"/>
 <area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#a3bfa0655596343cf7a7114f55ff8d754" title="Compute variance of smoothed matter density fluctuations." alt="" coords="136,56,196,83"/>
 <area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a01ee8bb070f25ca114ae5d0b52d200a7" title="Compute the critical density in unit of M_sun/Mpc^3." alt="" coords="286,5,333,32"/>
 <area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="430,5,493,32"/>

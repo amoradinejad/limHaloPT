@@ -25,6 +25,7 @@ struct globals gb;
  * 
  * @param Cx            Input: Cosmology structure
  * @param k             Input: wavenumber in unit of 1/Mpc. 
+ * @param mu            Input: cos of the angle w.r.t. LOS
  * @param z_s           Input: redshift of the signal line
  * @param z_inter       Input: redshift of the interloper line
  * @param line_id       Inpute: id of the line to be considered. 
@@ -137,7 +138,7 @@ double PS_line_RSD(struct Cosmology *Cx, struct Cosmology *Cx_ref, double k, dou
 /**
  * The integrand function passed to hcubature integrator to compute the line power spectrum multipoles
 
- * @param nd         Input: Dimensionality of the domain of integration
+ * @param ndim       Input: Dimensionality of the domain of integration
  * @param x          Input: integration variable
  * @param p          Input: integration parmaeters
  * @param fdim       Input: Dimensionality of the integrand function

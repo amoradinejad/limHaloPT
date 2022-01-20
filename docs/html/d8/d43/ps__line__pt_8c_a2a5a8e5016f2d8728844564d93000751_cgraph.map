@@ -10,5 +10,5 @@
 <area shape="rect" id="node8" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="490,245,593,272"/>
 <area shape="rect" id="node10" href="$d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="324,259,420,285"/>
 <area shape="rect" id="node11" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="329,309,415,336"/>
-<area shape="rect" id="node12" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="468,309,615,336"/>
+<area shape="rect" id="node12" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="468,309,615,336"/>
 </map>

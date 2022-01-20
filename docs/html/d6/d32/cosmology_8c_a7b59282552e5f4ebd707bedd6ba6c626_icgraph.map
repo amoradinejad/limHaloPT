@@ -1,5 +1,5 @@
 <map id="sigma0_sq" name="sigma0_sq">
 <area shape="rect" id="node1" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="328,5,413,32"/>
-<area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="188,5,280,32"/>
-<area shape="rect" id="node3" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a1eb59c068328f2b2a2cad533600c0d78" title="The function to be passed to Brent solver to compute kmax." alt="" coords="188,5,280,32"/>
+<area shape="rect" id="node3" href="$dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d" title="Compute the maximum k&#45;value used in Fisher forecast at each redshift bin." alt="" coords="5,5,140,32"/>
 </map>
