@@ -1,13 +1,13 @@
 <map id="header.h" name="header.h">
-<area shape="rect" id="node1" title=" " alt="" coords="546,5,619,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="542,5,613,32"/>
 <area shape="rect" id="node2" href="$dc/d8e/_i_r__res_8c.html" title="Documented IR_res module." alt="" coords="5,80,77,107"/>
 <area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html" title="Documented cosmology module." alt="" coords="102,80,197,107"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html" title="Documented line_ingredients module." alt="" coords="221,80,347,107"/>
-<area shape="rect" id="node5" href="$d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam..." alt="" coords="371,80,432,107"/>
-<area shape="rect" id="node6" href="$d8/d2a/ps__halo__1loop_8c.html" title="Documented real&#45;space, direct integration computation of 1loop contributions of the halo/galaxy power..." alt="" coords="457,80,575,107"/>
-<area shape="rect" id="node7" href="$d1/dd5/ps__line__hm_8c.html" title="Documented halo&#45;model computation of line power spectrum, including clustering and stochastic contrib..." alt="" coords="599,80,699,107"/>
-<area shape="rect" id="node8" href="$d8/d43/ps__line__pt_8c.html" title="Documented computation of Poisson shot noise and tree&#45;level line power spectrum in real and redshift&#45;..." alt="" coords="724,80,817,107"/>
-<area shape="rect" id="node9" href="$dd/d24/survey__specs_8c.html" title="Documented computation of some survey&#45;related functions." alt="" coords="842,80,955,107"/>
-<area shape="rect" id="node10" href="$d7/db6/utilities_8c.html" title="Documented basic utility functions used by other modules of the code." alt="" coords="979,80,1053,107"/>
-<area shape="rect" id="node11" href="$d7/d78/wnw__split_8c.html" title="Documented wiggle&#45;nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein&#45;Hu ..." alt="" coords="1077,80,1168,107"/>
+<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html" title="Documented line_ingredients module." alt="" coords="221,80,344,107"/>
+<area shape="rect" id="node5" href="$d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam..." alt="" coords="368,80,429,107"/>
+<area shape="rect" id="node6" href="$d8/d2a/ps__halo__1loop_8c.html" title="Documented real&#45;space, direct integration computation of 1loop contributions of the halo/galaxy power..." alt="" coords="454,80,570,107"/>
+<area shape="rect" id="node7" href="$d1/dd5/ps__line__hm_8c.html" title="Documented halo&#45;model computation of line power spectrum, including clustering and stochastic contrib..." alt="" coords="595,80,693,107"/>
+<area shape="rect" id="node8" href="$d8/d43/ps__line__pt_8c.html" title="Documented computation of Poisson shot noise and tree&#45;level line power spectrum in real and redshift&#45;..." alt="" coords="718,80,810,107"/>
+<area shape="rect" id="node9" href="$dd/d24/survey__specs_8c.html" title="Documented computation of some survey&#45;related functions." alt="" coords="835,80,949,107"/>
+<area shape="rect" id="node10" href="$d7/db6/utilities_8c.html" title="Documented basic utility functions used by other modules of the code." alt="" coords="973,80,1048,107"/>
+<area shape="rect" id="node11" href="$d7/d78/wnw__split_8c.html" title="Documented wiggle&#45;nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein&#45;Hu ..." alt="" coords="1072,80,1163,107"/>
 </map>

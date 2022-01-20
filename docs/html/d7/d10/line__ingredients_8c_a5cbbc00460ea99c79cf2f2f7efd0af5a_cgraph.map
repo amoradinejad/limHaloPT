@@ -1,7 +1,7 @@
 <map id="logSFR_Behroozi_read" name="logSFR_Behroozi_read">
-<area shape="rect" id="node1" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="5,56,165,83"/>
-<area shape="rect" id="node2" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="213,5,345,32"/>
-<area shape="rect" id="node3" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="225,56,334,83"/>
-<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="260,107,299,133"/>
-<area shape="rect" id="node5" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="393,107,435,133"/>
+<area shape="rect" id="node1" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="5,56,161,83"/>
+<area shape="rect" id="node2" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="209,5,339,32"/>
+<area shape="rect" id="node3" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="221,56,327,83"/>
+<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="255,107,293,133"/>
+<area shape="rect" id="node5" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="387,107,428,133"/>
 </map>
