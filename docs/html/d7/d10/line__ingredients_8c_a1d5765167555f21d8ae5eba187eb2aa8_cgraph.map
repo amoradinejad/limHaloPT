@@ -1,4 +1,0 @@
-<map id="luminosity" name="luminosity">
-<area shape="rect" id="node1" title="Compute the line specific luminosity in unit of solar luminosity For CO ladder, I am using the fits i..." alt="" coords="5,5,87,32"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a728fd0a19bc34645b8f8218464d178ef" title="Evaluate the SFR interpolator object for a given value of mass and redshift." alt="" coords="135,5,259,32"/>
-</map>

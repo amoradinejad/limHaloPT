@@ -1,5 +1,0 @@
-<map id="growth_D" name="growth_D">
-<area shape="rect" id="node1" title="Compute the growth factor D(k,z) for a general case where it can be scale&#45;dependant The scale&#45;dep gro..." alt="" coords="5,5,84,32"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="132,5,172,32"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="220,5,299,32"/>
-</map>
