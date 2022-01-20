@@ -6,8 +6,8 @@ List of changes to limHaloPT to switch from class-2.7 to class-3.1.1
 4) In cosmology.c: 
       - Initialization of class modules are edited in function CL_Cosmology_initilize()
       - Freeing of class modules are edited in function CL_Cosmology_free()
-      - Calling signature of matter power spectrum is changed in function Pk_dlnPk()
-      - Calling signature of transfer functions is changed in function Mk_dlnMk()
+      - Calling signature of matter power spectrum is changed in function PS()
+      - Calling signature of transfer functions is changed in function transfer()
       - Calling signature of the function background_tau_of_z() of class is changed in several limhaloPT  functions: 
             + growth_D()
             + growth_f()
