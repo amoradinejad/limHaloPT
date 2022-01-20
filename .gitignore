@@ -1,8 +1,9 @@
 # Ignore Input and Output directories
-docs/Doxyfile/
+#docs/Doxyfile/
 #docs/DoxygenLayout.xml
 #docs/small.png
-
+docs/latex
+docs/html
 
 # Ignore Logs and compiled code
 *.o 
