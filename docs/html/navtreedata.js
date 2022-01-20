@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "limHaloPT", "index.html", [
-    [ "Summary", "index.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
