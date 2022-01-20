@@ -1,7 +1,0 @@
-<map id="kmax_Brent" name="kmax_Brent">
-<area shape="rect" id="node1" title="The function to be passed to Brent solver to compute kmax." alt="" coords="5,5,97,32"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a7b59282552e5f4ebd707bedd6ba6c626" title="Compute variance of unsmoothed matter density fluctuations." alt="" coords="145,5,231,32"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d" title="The integrand function passed to qags integrator to compute the variance of the unsmoothed matter den..." alt="" coords="279,5,424,32"/>
-<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="472,5,512,32"/>
-<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="560,5,639,32"/>
-</map>
