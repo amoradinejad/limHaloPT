@@ -1,0 +1,6 @@
+<map id="transfer" name="transfer">
+<area shape="rect" id="node1" title="call CLASS&#45;V3.1 to compute transfer function for different species depending on the switch &quot;mode&quot; mod..." alt="" coords="545,31,612,57"/>
+<area shape="rect" id="node2" href="$d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="348,5,497,32"/>
+<area shape="rect" id="node4" href="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="5,31,103,57"/>
+<area shape="rect" id="node3" href="$d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="151,5,300,32"/>
+</map>

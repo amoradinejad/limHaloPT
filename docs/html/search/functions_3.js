@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['f2_0',['F2',['../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749',1,'ps_halo_1loop.c']]],
-  ['f2_5fs_1',['F2_s',['../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1',1,'ps_halo_1loop.c']]],
-  ['f3_5fs_2',['F3_s',['../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185',1,'ps_halo_1loop.c']]],
-  ['free_5f2darray_3',['free_2Darray',['../d7/db6/utilities_8c.html#a6c510b2027f1c8d33d0afe4f5b75609a',1,'utilities.c']]]
+  ['der_5flnsig_5fsq_0',['der_lnsig_sq',['../d6/d32/cosmology_8c.html#a03f9aaf2088b59136e47b27fd3310f27',1,'cosmology.c']]],
+  ['derr_5flogwindow_5fg_1',['derR_logwindow_g',['../d6/d32/cosmology_8c.html#aedb791089f8567803b1cd0dc21297b51',1,'cosmology.c']]],
+  ['derr_5fwindow_5frth_2',['derR_window_rth',['../d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f',1,'cosmology.c']]]
 ];

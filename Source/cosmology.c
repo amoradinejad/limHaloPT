@@ -1,3 +1,4 @@
+
 /** @file cosmology.c  Documented cosmology module 
  * 
  * Azadeh Moradinezhad Dizgah, November 4th 2021
@@ -14,7 +15,11 @@
  * -# Cosmology_free()              frees the memory allocated to cosmology structure
  * -# CL_Cosmology_initilize()      initializes the class cosmology structure
  * -# CL_Cosmology_free()           frees the class cosmology structure
+ * -# PS_xtrapol_init()             initizalizes the interpolator for Pm(k,z)
+ * -# PS_xtrapol_free()             frees the interpolator for Pm(k,z)
  * -# PS()                          computes matter power spectrum calling class and extrapolating if k>kmax computed by class
+ * -# PS_class()                    calls class to calculate 
+ * -# Pk_dlnPk_HV()                 reads in the mesaured Pm on HV simulation and interpolates 
  * -# transfer()                    computes matter transfer function calling class function
  * -# growth_D()                    computes the scale-dep growth factor
  * -# growth_f()                    computes the scale-dep growth rate dlnD(k,a)/dlna
@@ -24,20 +29,27 @@
  * -# angular_distance()            computes angular diamtere distance  using directly CLASS functions
  * -# comoving_radial_distance()    computes radial distance  using directly CLASS functions
  * -# sig_sq()                      computes variance of smoothed matter fluctuations
- * -# der_sig_sq()                  computes derivative of the variance of smoothed matter fluctuations w.r.t. smoothing scale
+ * -# der_lnsig_sq()                computes natural log derivative of the variance of smoothed matter fluctuations w.r.t. smoothing scale
  * -# sigma0_sq()                   computes variance of unsmoothed matter fluctuations
  * -# rhoc()                        computes the critical density of the universe 
  * -# R_scale()                     computes the size of a spherical halo corresponding to a given mass at z=0
  * -# R_scale_wrong()               computes the size of a spherical halo corresponding to a given mass at a given redshift
+ * -# R_vir()                       computes the virial radius
+ * -# concentration_cdm()           computes the halo concentration
+ * -# nfw profile()                 computes the nfw profile
  * -# window_rth()                  computes top-hat filter in real space
  * -# window_g()                    computes Gaussian window
  * -# window_kth()                  computes top-hat filter in Fourier space
  * -# derR_window_rth()             computes derivative of top-hat filter in real space w.r.t. smoothing scale 
  * -# derR_logwindow_g()            computes derivative of top-hat filter in Fourier space w.r.t. smoothing scale
+ *
  */
+
+
 
 #include "header.h"
 struct globals gb;
+
 
 
 /**
@@ -109,10 +121,6 @@ int Cosmology_free(struct Cosmology *Cx)
 int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
 {
 
-  ////To interpolate P(k,z) at  various values of (k,z), enter 'z_max_pk', the maximum value of z at which
- ////such interpolations are needed. 
-
-
     struct  file_content       pfc;
     int     counter = 0;
     int     size_max = 40;
@@ -135,7 +143,7 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
 
 
     sprintf(pfc.name[counter],"h");
-    sprintf(pfc.value[counter],"%18.12e", Cx->cosmo_pars[2]);  ///h
+    sprintf(pfc.value[counter],"%18.12e", Cx->cosmo_pars[2]);  
     pfc.read[counter] = _TRUE_;
     counter++;
 
@@ -161,34 +169,34 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     // counter++;
 
 
-    /////Density of photons equivalant to T_CMB = 2.7255
+    ////Density of photons equivalant to T_CMB = 2.7255
     // sprintf(pfc.name[counter],"Omega_g");
     // sprintf(pfc.value[counter],"%12.6e ", gb.Omega_g);                   
     // pfc.read[counter] = _TRUE_;
     // counter++;
 
 
-    //DE equation of state
+    // DE equation of state
     sprintf(pfc.name[counter],"w"); 
-    sprintf(pfc.value[counter],"-1");      ///Omega_b        
+    sprintf(pfc.value[counter],"-1");        
     pfc.read[counter] = _TRUE_;
     counter++;
 
     // Density of Baryons:  'Omega_b' 
     sprintf(pfc.name[counter],"Omega_b"); 
-    sprintf(pfc.value[counter],"%18.12e", Cx->cosmo_pars[3]);      ///Omega_b        
+    sprintf(pfc.value[counter],"%18.12e", Cx->cosmo_pars[3]);        
     pfc.read[counter] = _TRUE_;
     counter++;
 
 
-    // Number of ultra-relativistic species / massless neutrino density:  'N_eff' 
+    // Number of ultra-relativistic species massless neutrino density:  'N_eff' 
     sprintf(pfc.name[counter],"N_eff");
     sprintf(pfc.value[counter],"3.046");               
     pfc.read[counter] = _TRUE_;
     counter++;
 
 
-   // Density of cdm (cold dark matter): 'Omega_cdm' 
+    // Density of cdm (cold dark matter): 'Omega_cdm' 
     sprintf(pfc.name[counter],"Omega_cdm");     
     sprintf(pfc.value[counter],"%18.12e",Cx->cosmo_pars[4]);              
     pfc.read[counter] = _TRUE_;
@@ -290,45 +298,45 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
   // Calling CLASS 3.1.1
   ///////////////////////////////////
 
- if (input_read_from_file(&pfc ,&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.tr,&Cx->ccs.pm,&Cx->ccs.hr,&Cx->ccs.fo,&Cx->ccs.le, &Cx->ccs.sd, &Cx->ccs.op, Cx->ccs.errmsg) == _FAILURE_) {
-        printf("\n\nError running input_init\n=>%s\n",Cx->ccs.errmsg); 
-        return _FAILURE_;
-  }
+    if (input_read_from_file(&pfc ,&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.tr,&Cx->ccs.pm,&Cx->ccs.hr,&Cx->ccs.fo,&Cx->ccs.le, &Cx->ccs.sd, &Cx->ccs.op, Cx->ccs.errmsg) == _FAILURE_) {
+          printf("\n\nError running input_init\n=>%s\n",Cx->ccs.errmsg); 
+          return _FAILURE_;
+    }
 
-  if (background_init(&Cx->ccs.pr,&Cx->ccs.ba) == _FAILURE_) {
-    printf("\n\nError running background_init \n=>%s\n",Cx->ccs.ba.error_message);
-    return _FAILURE_;
-  }
+    if (background_init(&Cx->ccs.pr,&Cx->ccs.ba) == _FAILURE_) {
+      printf("\n\nError running background_init \n=>%s\n",Cx->ccs.ba.error_message);
+      return _FAILURE_;
+    }
 
-  if (thermodynamics_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th) == _FAILURE_) {
-    printf("\n\nError in thermodynamics_init \n=>%s\n",Cx->ccs.th.error_message);
-    return _FAILURE_;
-  }
+    if (thermodynamics_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th) == _FAILURE_) {
+      printf("\n\nError in thermodynamics_init \n=>%s\n",Cx->ccs.th.error_message);
+      return _FAILURE_;
+    }
 
-  if (perturbations_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt) == _FAILURE_) {
-    printf("\n\nError in perturb_init \n=>%s\n",Cx->ccs.pt.error_message);
-    return _FAILURE_;
-  }
+    if (perturbations_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt) == _FAILURE_) {
+      printf("\n\nError in perturb_init \n=>%s\n",Cx->ccs.pt.error_message);
+      return _FAILURE_;
+    }
 
-  if (transfer_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.fo,&Cx->ccs.tr) == _FAILURE_) {
-    printf("\n\nError in transfer_init \n=>%s\n",Cx->ccs.tr.error_message);
-    return _FAILURE_;
-  }
+    if (transfer_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.fo,&Cx->ccs.tr) == _FAILURE_) {
+      printf("\n\nError in transfer_init \n=>%s\n",Cx->ccs.tr.error_message);
+      return _FAILURE_;
+    }
 
-  if (primordial_init(&Cx->ccs.pr,&Cx->ccs.pt,&Cx->ccs.pm) == _FAILURE_) {
-    printf("\n\nError in primordial_init \n=>%s\n",Cx->ccs.pm.error_message);
-    return _FAILURE_;
-  }
+    if (primordial_init(&Cx->ccs.pr,&Cx->ccs.pt,&Cx->ccs.pm) == _FAILURE_) {
+      printf("\n\nError in primordial_init \n=>%s\n",Cx->ccs.pm.error_message);
+      return _FAILURE_;
+    }
 
-  if (fourier_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo) == _FAILURE_) {
-    printf("\n\nError in nonlinear_init \n=>%s\n",Cx->ccs.fo.error_message);
-    return _FAILURE_;
-  }
- 
-  if (harmonic_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo,&Cx->ccs.tr,&Cx->ccs.hr) == _FAILURE_) {
-    printf("\n\nError in spectra_init \n=>%s\n",Cx->ccs.hr.error_message);
-    return _FAILURE_;
-  }
+    if (fourier_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo) == _FAILURE_) {
+      printf("\n\nError in nonlinear_init \n=>%s\n",Cx->ccs.fo.error_message);
+      return _FAILURE_;
+    }
+   
+    if (harmonic_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo,&Cx->ccs.tr,&Cx->ccs.hr) == _FAILURE_) {
+      printf("\n\nError in spectra_init \n=>%s\n",Cx->ccs.hr.error_message);
+      return _FAILURE_;
+    }
 
     //printf("Cosmology Successfully Initialized.\n");
 
@@ -1225,23 +1233,6 @@ double window_rth(double k, double R)
 
 
 /** 
- * Derivative w.r.t. smoothing scale of the Fourier transform of top-hat window in real space
- * 
- * @param k                 Input: wavenumber in unit of 1/Mpc
- * @param R                 Input: smoothing scale in unit of Mpc
- * @return the derivative of the window function
- */
-double derR_window_rth(double k, double R)
-{
-  double f = 0.0; 
-
-  f = 1./(k*pow(R, 2.)) *(1.5 * k * R * gsl_sf_bessel_j0(k * R) - 4.5 * gsl_sf_bessel_j1(k * R) - 1.5 * k * R *  gsl_sf_bessel_j2(k * R));
-  //f = 3.*((3.*cos(k*R))/(pow(k,2.)*pow(R,3.)) - (3.*sin(K*R))/(pow(k,3.)*pow(R,4.)) + sin(k*R)/(k*pow(R,2.)))
-  
-  return f;
-}
-
-/** 
  * Top-hat window in Fourier space
  * 
  * @param k                 Input: wavenumber in unit of 1/Mpc
@@ -1277,6 +1268,23 @@ double window_g(double k, double R)
   return f; 
 }
 
+
+/** 
+ * Derivative w.r.t. smoothing scale of the Fourier transform of top-hat window in real space
+ * 
+ * @param k                 Input: wavenumber in unit of 1/Mpc
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the derivative of the window function
+ */
+double derR_window_rth(double k, double R)
+{
+  double f = 0.0; 
+
+  f = 1./(k*pow(R, 2.)) *(1.5 * k * R * gsl_sf_bessel_j0(k * R) - 4.5 * gsl_sf_bessel_j1(k * R) - 1.5 * k * R *  gsl_sf_bessel_j2(k * R));
+  //f = 3.*((3.*cos(k*R))/(pow(k,2.)*pow(R,3.)) - (3.*sin(K*R))/(pow(k,3.)*pow(R,4.)) + sin(k*R)/(k*pow(R,2.)))
+  
+  return f;
+}
 
 /** 
  * Derivative w.r.t smoothing scale of Gaussian window

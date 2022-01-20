@@ -1,7 +1,9 @@
 <map id="pk_nw_integrand" name="pk_nw_integrand">
-<area shape="rect" id="node1" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="5,31,125,57"/>
-<area shape="rect" id="node2" href="$d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="173,31,264,57"/>
-<area shape="rect" id="node3" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="312,5,351,32"/>
-<area shape="rect" id="node5" href="$d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute the no&#45;baryon transfer function given in Eq." alt="" coords="312,56,351,83"/>
-<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="399,5,440,32"/>
+<area shape="rect" id="node1" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="5,81,125,108"/>
+<area shape="rect" id="node2" href="$d7/d78/wnw__split_8c.html#a0859675908f887c5e50061678261bf4b" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="173,56,264,83"/>
+<area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="199,107,239,133"/>
+<area shape="rect" id="node3" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="332,5,371,32"/>
+<area shape="rect" id="node5" href="$d7/d78/wnw__split_8c.html#ab920120944723a06efde25145e11a333" title="Compute the no&#45;baryon transfer function given in Eq." alt="" coords="332,56,371,83"/>
+<area shape="rect" id="node4" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="439,5,480,32"/>
+<area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="312,107,391,133"/>
 </map>

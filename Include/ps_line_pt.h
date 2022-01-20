@@ -13,5 +13,4 @@ int ps_line_multipoles_integrand(unsigned    ndim,           // Number of dimens
                         double       *fvalue          // Array of values of the integrand of dimension fdim
                         );
 
-
 #endif

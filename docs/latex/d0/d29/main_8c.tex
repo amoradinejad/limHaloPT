@@ -56,11 +56,10 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=268pt]{d0/d29/main_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_cgraph}
+\includegraphics[width=350pt]{d0/d29/main_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -93,16 +92,14 @@ In units of km/s
 
 omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
 
-3.\+0665Here is the call graph for this function\+:
-\nopagebreak
+3.\+0665Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d29/main_8c_a25a40b6614565f755233080a384c35f1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,6 +112,20 @@ Here is the caller graph for this function\+:
 \doxyparagraph{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
+Define which lines to compute, and how many points to have for z-\/interpolation
+
+Initialize the cosmology structure, which includes CLASS cosmology and \mbox{\hyperlink{struct_line}{Line}} structures
+
+\DoxyHorRuler{0}
+ \hypertarget{main.c_autotoc_md1}{}\doxyparagraph{Depending on what quantities ou want to compute, you need to modify this part of the main() function.}\label{main.c_autotoc_md1}
+Set the k and z arrays
+
+Compute the line clustering signal using halo model
+
+Compute the shot noise (beyond the Poisson limit), using halo model
+
+\DoxyHorRuler{0}
+ \hypertarget{main.c_autotoc_md3}{}\doxyparagraph{Modify up to here}\label{main.c_autotoc_md3}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

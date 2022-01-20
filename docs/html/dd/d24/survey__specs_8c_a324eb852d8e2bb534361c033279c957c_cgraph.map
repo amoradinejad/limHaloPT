@@ -1,4 +1,5 @@
 <map id="kmin_val" name="kmin_val">
 <area shape="rect" id="node1" title="Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin ..." alt="" coords="5,5,80,32"/>
 <area shape="rect" id="node2" href="$dd/d24/survey__specs_8c.html#a91c4e0c62bcd3e179536fea62e8d53b5" title="Compute the comoving volume of a survey covering redshift up to z." alt="" coords="128,5,227,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#aedbe3c00696981389e1c130cbfa862eb" title="Compute the comoving radial distance" alt="" coords="275,5,447,32"/>
 </map>

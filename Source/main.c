@@ -10,7 +10,6 @@
 
 
 #include "header.h"
-
 struct globals gb;
 
 
@@ -28,9 +27,9 @@ int main(int argc,char *argv[])
 	double M_min   = 1.e9;
 	long mode_mf   = ST;
 
-	/*
-	* Define which lines to compute, and how many points to have for z-interpolation
-	*/
+	/**
+	 * Define which lines to compute, and how many points to have for z-interpolation
+	 */
 	int nlines     = 7;
       int lines[7]   = {CO10, CO21, CO32, CO43, CO54, CO65, CII};
       int JJ[7]      = {1,2,3,4,5,6,0};
@@ -43,7 +42,7 @@ int main(int argc,char *argv[])
 		Cx_ref.cosmo_pars[i] = gb_pars[i];
 	}
 
-	/*
+	/**
 	 * Initialize the cosmology structure, which includes CLASS cosmology and Line structures
 	 */
 	clock_t tic_r = clock();
@@ -53,13 +52,13 @@ int main(int argc,char *argv[])
 	printf("Elapsed: %f seconds for ref cosmology\n", (double)(toc_r - tic_r)/CLOCKS_PER_SEC);
 
 	
-	/*
-	* -----------------------------
-	* Depending on what quantities ou want to compute, you need to modify this part of the main() function.
-	* -----------------------------
-	*/
+	/**
+	 * -----------------------------
+	 * Depending on what quantities ou want to compute, you need to modify this part of the main() function.
+	 * -----------------------------
+	 */
 
-	/* 
+	/** 
 	 * Set the k and z arrays
 	 */
       int nk = 200;
@@ -67,9 +66,9 @@ int main(int argc,char *argv[])
 	double *k  = loginit_1Darray(nk, 1.e-3, 8.);
  	double *z = init_1Darray(nz,0.0,11.);
 	
-	/* 
-	* Compute the line clustering signal using halo model 
-	*/
+	/** 
+	 * Compute the line clustering signal using halo model 
+	 */
  	int line_id = 0;
  	for(i=0;i<nlines;i++){
  		line_id = i;
@@ -80,9 +79,9 @@ int main(int argc,char *argv[])
 		}	
 	}
 	
-	/* 
-	* Compute the shot noise (beyond the Poisson limit), using halo model
-	*/
+	/**
+	 * Compute the shot noise (beyond the Poisson limit), using halo model
+	 */
 	double Omegam   = (Cx_ref.cosmo_pars[3] + Cx_ref.cosmo_pars[4]);
 	double rhom_bar = Omegam * rhoc(&Cx_ref,0.); 
 	double lbias_arr[2];
@@ -124,11 +123,11 @@ int main(int argc,char *argv[])
 	free(k);
  	free(z);
 
-	/* 
-	* -----------------------------
-	* Modify up to here 
-	* -----------------------------
-	*/
+	/** 
+	 * -----------------------------
+	 * Modify up to here 
+	 * -----------------------------
+	 */
 
 	cleanup(&Cx_ref);
 	

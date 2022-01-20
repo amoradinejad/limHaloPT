@@ -1,10 +1,10 @@
 
-
 /** @file header.h
  * 
  */
-#ifndef HEADER_H_
-#define HEADER_H_
+
+#ifndef HEADER_H
+#define HEADER_H
 
 #define _GNU_SOURCE
 
@@ -29,8 +29,8 @@
 #include <gsl/gsl_blas.h>
 #include <gsl/gsl_monte.h>
 #include <gsl/gsl_monte_vegas.h>
-#include <gsl/gsl_odeiv2.h>  /// For solving ODER
-#include <gsl/gsl_roots.h>	 // For finding the root of algebraic equation	
+#include <gsl/gsl_odeiv2.h>    
+#include <gsl/gsl_roots.h>	 
 #include <gsl/gsl_sf_expint.h>
 #include <ctype.h>
 #include "cuba.h"
@@ -102,22 +102,24 @@
 #define NPARS     6
 #define MAXL 2000
 
+
 /** 
  * List of limHaloPT header files
  */
+/// \cond DO_NOT_DOCUMENT
 #include "../Class/include/class.h"
+/// \endcond
+#include "cubature.h"
 #include "Global_Structs.h"
-#include "cosmology.h"
 #include "utilities.h"
+#include "cosmology.h"
 #include "survey_specs.h"
-#include "primordial.h"
 #include "line_ingredients.h"	
 #include "wnw_split.h"
 #include "IR_res.h"
 #include "ps_halo_1loop.h"
 #include "ps_line_pt.h"
 #include "ps_line_hm.h"
-#include "cubature.h"
 
 
 /** 
@@ -128,8 +130,8 @@ void 	cleanup();
 
 
 /**
-* A structure passed to the integrators to hold the parameters fixed in the integration
-*/
+ * A structure passed to the integrators to hold the parameters fixed in the integration
+ */
 struct integrand_parameters
 {
 	double p1;
@@ -148,8 +150,8 @@ struct integrand_parameters
 };
 
 /**
-* Another structure passed to the integrators to hold the parameters fixed in the integration
-*/
+ * Another structure passed to the integrators to hold the parameters fixed in the integration
+ */
 struct integrand_parameters2
 {
 

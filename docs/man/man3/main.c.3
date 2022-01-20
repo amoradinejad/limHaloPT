@@ -75,6 +75,22 @@ omega_b = Omega_b h^2;
 .PP
 3\&.0665
 .SS "int main (int argc, char * argv[])"
+Define which lines to compute, and how many points to have for z-interpolation
+.PP
+Initialize the cosmology structure, which includes CLASS cosmology and \fBLine\fP structures
+.PP
+.PP
+ 
+.SS "Depending on what quantities ou want to compute, you need to modify this part of the main() function\&."
+Set the k and z arrays
+.PP
+Compute the line clustering signal using halo model
+.PP
+Compute the shot noise (beyond the Poisson limit), using halo model
+.PP
+.PP
+ 
+.SS "Modify up to here"
 
 .SH "Variable Documentation"
 .PP 

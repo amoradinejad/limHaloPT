@@ -1,6 +1,7 @@
 <map id="PS_shot" name="PS_shot">
-<area shape="rect" id="node1" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="5,31,77,57"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="125,5,228,32"/>
-<area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="134,56,219,83"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="276,56,421,83"/>
+<area shape="rect" id="node1" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="5,56,77,83"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="145,5,208,32"/>
+<area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="125,56,228,83"/>
+<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="134,107,219,133"/>
+<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="276,107,421,133"/>
 </map>

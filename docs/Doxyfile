@@ -483,7 +483,7 @@ EXTRACT_ALL            = YES
 # be included in the documentation.
 # The default value is: NO.
 
-EXTRACT_PRIVATE        = NO
+EXTRACT_PRIVATE        = YES
 
 # If the EXTRACT_PRIV_VIRTUAL tag is set to YES, documented private virtual
 # methods of a class will be included in the documentation.
@@ -1225,8 +1225,8 @@ HTML_FILE_EXTENSION    = .html
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
 #AM: I modified the header.html file to remove the Project_Name from the header of the doxygen page. In order to save a header file, first I ran 
-doxygen -w html header.html footer.html customdoxygen.css 
-which creats the three files that doxygen uses to start the html page, and then costumized the header file.
+# doxygen -w html header.html footer.html customdoxygen.css 
+# which creats the three files that doxygen uses to start the html page, and then costumized the header file.
 
 HTML_HEADER            = ./header.html
 
@@ -2324,7 +2324,7 @@ EXTERNAL_PAGES         = YES
 # powerful graphs.
 # The default value is: YES.
 
-CLASS_DIAGRAMS         = NO
+# CLASS_DIAGRAMS         = NO
 
 # You can include diagrams made with dia in doxygen documentation. Doxygen will
 # then run dia to produce the diagram and insert it in the documentation. The

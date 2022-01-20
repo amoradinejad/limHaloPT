@@ -10,6 +10,151 @@ cosmology.c \- Documented cosmology module\&.
 \fC#include 'header\&.h'\fP
 .br
 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBCosmology_init\fP (struct \fBCosmology\fP *Cx, double pk_kmax, double pk_zmax, int nlines, int *line_types, size_t npoints_interp, double M_min, long mode_mf)"
+.br
+.RI "Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure\&. "
+.ti -1c
+.RI "int \fBCosmology_free\fP (struct \fBCosmology\fP *Cx)"
+.br
+.RI "Free the memory allocated to cosmology structure\&. "
+.ti -1c
+.RI "int \fBCL_Cosmology_initilize\fP (struct \fBCosmology\fP *Cx, double pk_kmax, double pk_zmax)"
+.br
+.RI "Allocate memory and initialize the CLASS cosmology structure\&. "
+.ti -1c
+.RI "int \fBCL_Cosmology_free\fP (struct \fBCosmology\fP *Cx)"
+.br
+.RI "Free the memory allocated to CLASS cosmology structure\&. "
+.ti -1c
+.RI "struct \fBPS_xtr\fP * \fBPS_xtrapol_init\fP (struct \fBCosmology\fP *Cx)"
+.br
+.RI "Call CLASS and build a 2d interpolator for Plin(k,z), which will be used when building an extrapolator for P(k,z) beyond a given kmax computed by CLASS\&. "
+.ti -1c
+.RI "int \fBPS_xtrapol_free\fP (struct \fBPS_xtr\fP *PS_xtrapol)"
+.br
+.RI "frees the interpolation elements for P_m spline "
+.ti -1c
+.RI "double \fBPS\fP (struct \fBCosmology\fP *Cx, double k, double z)"
+.br
+.RI "Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS, same expansion as that used in CORE cosmology librrary (see arXiv:1812\&.05995) If requested k-value was beyond what is calculated by CLASS, this function extrapolates\&. "
+.ti -1c
+.RI "double \fBPS_class\fP (struct \fBCosmology\fP *Cx, double k, double z, long mode)"
+.br
+.RI "Call CLASS-V3\&.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_FISHER code, we always include massive neutrinos\&. "
+.ti -1c
+.RI "double \fBPk_dlnPk_HV\fP (struct \fBCosmology\fP *Cx, double k, double z, int mode)"
+.br
+.RI "Read in the linear power spectrum, used to set the initial conditions of Hidden-Valley sims\&. "
+.ti -1c
+.RI "double \fBtransfer\fP (struct \fBCosmology\fP *Cx, double k, double z, int mode)"
+.br
+.RI "call CLASS-V3\&.1 to compute transfer function for different species depending on the switch 'mode' mode can be set to cdm, baryons or total matter transfer function\&. "
+.ti -1c
+.RI "double \fBgrowth_D\fP (struct \fBCosmology\fP *Cx, double k, double z)"
+.br
+.RI "Compute the growth factor D(k,z) for a general case where it can be scale-dependant The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero\&. "
+.ti -1c
+.RI "double \fBgrowth_f\fP (struct \fBCosmology\fP *Cx, double k, double z)"
+.br
+.RI "Compute the growth factor D(k,z) by taking the ratio of the transfer function at redshift z and zero\&. "
+.ti -1c
+.RI "double \fBscale_indep_growth_D\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the growth factor D(k,z) which is scale-indep valid when neutrinos are massless The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero\&. "
+.ti -1c
+.RI "double \fBscale_indep_growth_f\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the scale-independent growth rate f(z) which is scale-indep valid when neutrinos are massless\&. "
+.ti -1c
+.RI "double \fBHubble\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background module)\&. "
+.ti -1c
+.RI "double \fBangular_distance\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the angular diameter distance (exactly the quantity defined by CLASS as ba\&.index_bg_ang_distance in the background module)\&. "
+.ti -1c
+.RI "double \fBcomoving_radial_distance\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the comoving radial distance 
+.br
+ "
+.ti -1c
+.RI "double \fBsig_sq_integrand\fP (double x, void *par)"
+.br
+.RI "The integrand function passed to qags integrator to compute the variance of the smoothed matter density\&. "
+.ti -1c
+.RI "double \fBsig_sq\fP (struct \fBCosmology\fP *Cx, double z, double R)"
+.br
+.RI "Compute variance of smoothed matter density fluctuations\&. "
+.ti -1c
+.RI "double \fBder_lnsig_sq\fP (struct \fBCosmology\fP *Cx, double z, double R)"
+.br
+.RI "Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w\&.r\&.t\&. "
+.ti -1c
+.RI "double \fBsigma0_sq_integrand\fP (double x, void *par)"
+.br
+.RI "The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density\&. "
+.ti -1c
+.RI "double \fBsigma0_sq\fP (struct \fBCosmology\fP *Cx, double z, double kmax)"
+.br
+.RI "Compute variance of unsmoothed matter density fluctuations\&. "
+.ti -1c
+.RI "double \fBrhoc\fP (struct \fBCosmology\fP *Cx, double z)"
+.br
+.RI "Compute the critical density in unit of M_sun/Mpc^3\&. "
+.ti -1c
+.RI "double \fBR_scale\fP (struct \fBCosmology\fP *Cx, double M)"
+.br
+.RI "Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0\&. "
+.ti -1c
+.RI "double \fBR_scale_wrong\fP (struct \fBCosmology\fP *Cx, double z, double h_mass)"
+.br
+.RI "Compute the Lagrangian radius of halos in unit of Mpc at z\&. "
+.ti -1c
+.RI "double \fBR_vir\fP (struct \fBCosmology\fP *Cx, double M)"
+.br
+.RI "Compute the comoving virial radius of halos in unit of Mpc, which is defined as the radius at which the average density within this radius is Delta X rho_c\&. "
+.ti -1c
+.RI "double \fBconcentration_cdm\fP (double M, double z)"
+.br
+.RI "Compute the cold dark matter concentration-mass relation\&. "
+.ti -1c
+.RI "double \fBnfw_profile\fP (struct \fBCosmology\fP *Cx, double k, double M, double z)"
+.br
+.RI "Compute the NFW halo profile in Fourier space, given by Eq\&. "
+.ti -1c
+.RI "double \fBwindow_rth\fP (double k, double R)"
+.br
+.RI "Fourier transform of top-hat window in real space\&. "
+.ti -1c
+.RI "double \fBwindow_kth\fP (double k, double R)"
+.br
+.RI "Top-hat window in Fourier space\&. "
+.ti -1c
+.RI "double \fBwindow_g\fP (double k, double R)"
+.br
+.RI "Gaussian window\&. "
+.ti -1c
+.RI "double \fBderR_window_rth\fP (double k, double R)"
+.br
+.RI "Derivative w\&.r\&.t\&. "
+.ti -1c
+.RI "double \fBderR_logwindow_g\fP (double k, double R)"
+.br
+.RI "Derivative w\&.r\&.t smoothing scale of Gaussian window\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglobals\fP \fBgb\fP"
+.br
+.in -1c
 .SH "Detailed Description"
 .PP 
 Documented cosmology module\&. 
@@ -21,54 +166,710 @@ The first routine of this module initalizes the \fBCosmology\fP structure, which
 In summary, the following functions can be called from other modules:
 .PP
 .IP "1." 4
-Cosmology_init() allocates memory to and initializes cosmology structure
+\fBCosmology_init()\fP allocates memory to and initializes cosmology structure
 .IP "2." 4
-Cosmology_free() frees the memory allocated to cosmology structure
+\fBCosmology_free()\fP frees the memory allocated to cosmology structure
 .IP "3." 4
-CL_Cosmology_initilize() initializes the class cosmology structure
+\fBCL_Cosmology_initilize()\fP initializes the class cosmology structure
 .IP "4." 4
-CL_Cosmology_free() frees the class cosmology structure
+\fBCL_Cosmology_free()\fP frees the class cosmology structure
 .IP "5." 4
-PS() computes matter power spectrum calling class and extrapolating if k>kmax computed by class
+\fBPS_xtrapol_init()\fP initizalizes the interpolator for Pm(k,z)
 .IP "6." 4
-transfer() computes matter transfer function calling class function
+\fBPS_xtrapol_free()\fP frees the interpolator for Pm(k,z)
 .IP "7." 4
-growth_D() computes the scale-dep growth factor
+\fBPS()\fP computes matter power spectrum calling class and extrapolating if k>kmax computed by class
 .IP "8." 4
-growth_f() computes the scale-dep growth rate dlnD(k,a)/dlna
+\fBPS_class()\fP calls class to calculate
 .IP "9." 4
-scale_indep_growth_D() computes the scale-indep growth factor using directly CLASS functions
+\fBPk_dlnPk_HV()\fP reads in the mesaured Pm on HV simulation and interpolates
 .IP "10." 4
-scale_indep_growth_f() computes the scale-indep growth rate dlnD(k,a)/dlna using directly CLASS functions
+\fBtransfer()\fP computes matter transfer function calling class function
 .IP "11." 4
-Hubble() computes hubbble parameter using directly CLASS functions
+\fBgrowth_D()\fP computes the scale-dep growth factor
 .IP "12." 4
-angular_distance() computes angular diamtere distance using directly CLASS functions
+\fBgrowth_f()\fP computes the scale-dep growth rate dlnD(k,a)/dlna
 .IP "13." 4
-comoving_radial_distance() computes radial distance using directly CLASS functions
+\fBscale_indep_growth_D()\fP computes the scale-indep growth factor using directly CLASS functions
 .IP "14." 4
-sig_sq() computes variance of smoothed matter fluctuations
+\fBscale_indep_growth_f()\fP computes the scale-indep growth rate dlnD(k,a)/dlna using directly CLASS functions
 .IP "15." 4
-der_sig_sq() computes derivative of the variance of smoothed matter fluctuations w\&.r\&.t\&. smoothing scale
+\fBHubble()\fP computes hubbble parameter using directly CLASS functions
 .IP "16." 4
-sigma0_sq() computes variance of unsmoothed matter fluctuations
+\fBangular_distance()\fP computes angular diamtere distance using directly CLASS functions
 .IP "17." 4
-rhoc() computes the critical density of the universe
+\fBcomoving_radial_distance()\fP computes radial distance using directly CLASS functions
 .IP "18." 4
-R_scale() computes the size of a spherical halo corresponding to a given mass at z=0
+\fBsig_sq()\fP computes variance of smoothed matter fluctuations
 .IP "19." 4
-R_scale_wrong() computes the size of a spherical halo corresponding to a given mass at a given redshift
+\fBder_lnsig_sq()\fP computes natural log derivative of the variance of smoothed matter fluctuations w\&.r\&.t\&. smoothing scale
 .IP "20." 4
-window_rth() computes top-hat filter in real space
+\fBsigma0_sq()\fP computes variance of unsmoothed matter fluctuations
 .IP "21." 4
-window_g() computes Gaussian window
+\fBrhoc()\fP computes the critical density of the universe
 .IP "22." 4
-window_kth() computes top-hat filter in Fourier space
+\fBR_scale()\fP computes the size of a spherical halo corresponding to a given mass at z=0
 .IP "23." 4
-derR_window_rth() computes derivative of top-hat filter in real space w\&.r\&.t\&. smoothing scale
+\fBR_scale_wrong()\fP computes the size of a spherical halo corresponding to a given mass at a given redshift
 .IP "24." 4
-derR_logwindow_g() computes derivative of top-hat filter in Fourier space w\&.r\&.t\&. smoothing scale 
+\fBR_vir()\fP computes the virial radius
+.IP "25." 4
+\fBconcentration_cdm()\fP computes the halo concentration
+.IP "26." 4
+nfw profile() computes the nfw profile
+.IP "27." 4
+\fBwindow_rth()\fP computes top-hat filter in real space
+.IP "28." 4
+\fBwindow_g()\fP computes Gaussian window
+.IP "29." 4
+\fBwindow_kth()\fP computes top-hat filter in Fourier space
+.IP "30." 4
+\fBderR_window_rth()\fP computes derivative of top-hat filter in real space w\&.r\&.t\&. smoothing scale
+.IP "31." 4
+\fBderR_logwindow_g()\fP computes derivative of top-hat filter in Fourier space w\&.r\&.t\&. smoothing scale 
 .PP
+
+.SH "Function Documentation"
+.PP 
+.SS "double angular_distance (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the angular diameter distance (exactly the quantity defined by CLASS as ba\&.index_bg_ang_distance in the background module)\&. luminosity distance d_L = (1+z) d_M angular diameter distance d_A = d_M/(1+z) where d_M is the transverse comoving distance, which is equal to comoving distance for flat cosmology and has a dependance on curvature for non-flat cosmologies, as described in lines 849 - 851
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+D_A 
+.RE
+.PP
+junk
+.SS "int CL_Cosmology_free (struct \fBCosmology\fP * Cx)"
+
+.PP
+Free the memory allocated to CLASS cosmology structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the error status 
+.RE
+.PP
+
+.SS "int CL_Cosmology_initilize (struct \fBCosmology\fP * Cx, double pk_kmax, double pk_zmax)"
+
+.PP
+Allocate memory and initialize the CLASS cosmology structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIpk_kmax\fP Input: kmax for computation of matter power spectrum by CLASS 
+.br
+\fIpk_zmax\fP Input: zmax for computation of matter power spectrum by CLASS 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the error status 
+.RE
+.PP
+pivot scale in unit of 1/Mpc
+.SS "double comoving_radial_distance (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the comoving radial distance 
+.br
+ 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the double value D_c 
+.RE
+.PP
+junk
+.SS "double concentration_cdm (double M, double z)"
+
+.PP
+Compute the cold dark matter concentration-mass relation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIM\fP Input: halo mass in unit of solar mass 
+.br
+\fIz\fP Input: redshift of interest 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the cdm concentration 
+.RE
+.PP
+
+.SS "int Cosmology_free (struct \fBCosmology\fP * Cx)"
+
+.PP
+Free the memory allocated to cosmology structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the error status 
+.RE
+.PP
+
+.SS "int Cosmology_init (struct \fBCosmology\fP * Cx, double pk_kmax, double pk_zmax, int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf)"
+
+.PP
+Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIpk_kmax\fP Input: kmax for computation of matter power spectrum by CLASS 
+.br
+\fIpk_zmax\fP Input: zmax for computation of matter power spectrum by CLASS 
+.br
+\fInlines\fP Input: number of lines whose properties we want to compute 
+.br
+\fIline_type\fP Inpute: name of the line to compute\&. It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
+.br
+\fInpoints_interp\fP Input: number of points in redshift for interpolation of line properties 
+.br
+\fIM_min\fP Input: minimum halo mass for mass integrals 
+.br
+\fImode_mf\fP Inpute: theoretical model of halo mass function to use\&. It can be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an integer if succeeded 
+.RE
+.PP
+
+.SS "double der_lnsig_sq (struct \fBCosmology\fP * Cx, double z, double R)"
+
+.PP
+Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w\&.r\&.t\&. smoothing scale
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the log-derivative of variance 
+.RE
+.PP
+
+.SS "double derR_logwindow_g (double k, double R)"
+
+.PP
+Derivative w\&.r\&.t smoothing scale of Gaussian window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the derivative of the window function 
+.RE
+.PP
+
+.SS "double derR_window_rth (double k, double R)"
+
+.PP
+Derivative w\&.r\&.t\&. smoothing scale of the Fourier transform of top-hat window in real space
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the derivative of the window function 
+.RE
+.PP
+
+.SS "double growth_D (struct \fBCosmology\fP * Cx, double k, double z)"
+
+.PP
+Compute the growth factor D(k,z) for a general case where it can be scale-dependant The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero\&. cdm, baryon and total matter\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the growth factor, can be k-dep (ex\&. with nonzero neutrino mass) 
+.RE
+.PP
+
+.SS "double growth_f (struct \fBCosmology\fP * Cx, double k, double z)"
+
+.PP
+Compute the growth factor D(k,z) by taking the ratio of the transfer function at redshift z and zero\&. For a general case growth rate can be scale-dependant
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the growth factor 
+.RE
+.PP
+
+.SS "double Hubble (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background module)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the hubble parameter 
+.RE
+.PP
+junk
+.SS "double nfw_profile (struct \fBCosmology\fP * Cx, double k, double M, double z)"
+
+.PP
+Compute the NFW halo profile in Fourier space, given by Eq\&. 3\&.7 of 2004\&.09515 The profile is normalized to unity at k->0, (see fig 3 of 1003\&.4740)
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIM\fP Input: halo mass in unit of solar mass 
+.br
+\fIz\fP Input: redshift of interest 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the nfw profile 
+.RE
+.PP
+rho_s is computed by enforcing int dr r^2 u(r) = 1
+.SS "double Pk_dlnPk_HV (struct \fBCosmology\fP * Cx, double k, double z, int mode)"
+
+.PP
+Read in the linear power spectrum, used to set the initial conditions of Hidden-Valley sims\&. Input k is in unit of 1/Mpc\&. First convert it to h/Mpc, and also convert the final matter power spectrum in unit of (Mpc/h)^3
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.br
+\fImode\fP Input: switch to decide whether to evaluate the interpolator of the power spectrum or free the interpolator 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the HV linear matter power spectrum 
+.RE
+.PP
+
+.SS "double PS (struct \fBCosmology\fP * Cx, double k, double z)"
+
+.PP
+Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS, same expansion as that used in CORE cosmology librrary (see arXiv:1812\&.05995) If requested k-value was beyond what is calculated by CLASS, this function extrapolates\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the double value of matter power spectrum 
+.RE
+.PP
+
+.SS "double PS_class (struct \fBCosmology\fP * Cx, double k, double z, long mode)"
+
+.PP
+Call CLASS-V3\&.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_FISHER code, we always include massive neutrinos\&. In this case, to compute the galaxy power spectrum, we should use cdm+b pk\&. Therefore hete when calling PS_class, we always get cdm+b pk, i\&.e\&. set &Cx -> ccs\&.fo\&.index_pk_cb\&. If you wanted to set neutrinos to be massless, you should replace this index by &Cx -> ccs\&.fo\&.index_pk_m The older routine of CLASS-v2\&.7, spectra_pk_at_k_and_z(), is replaced by fourier_pk_at_k_and_z(),
+.PP
+Input k is in unit of 1/Mpc\&. First convert it to h/Mpc, and also convert the final matter power spectrum in unit of (Mpc/h)^3
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.br
+\fImode\fP Input: switch to decide whether to compute linear (LPOWER) or nonlinear (NLPOWER) spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the double value of matter power spectrum 
+.RE
+.PP
+
+.SS "int PS_xtrapol_free (struct \fBPS_xtr\fP * PS_xtrapol)"
+
+.PP
+frees the interpolation elements for P_m spline 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fBPS_xtr\fP\fP Input: pointer to the structure containing the interpolation pointers 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an integer indicating sucess 
+.RE
+.PP
+
+.SS "struct \fBPS_xtr\fP * PS_xtrapol_init (struct \fBCosmology\fP * Cx)"
+
+.PP
+Call CLASS and build a 2d interpolator for Plin(k,z), which will be used when building an extrapolator for P(k,z) beyond a given kmax computed by CLASS\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a structure containing the interpolation pointers 
+.RE
+.PP
+
+.SS "double R_scale (struct \fBCosmology\fP * Cx, double M)"
+
+.PP
+Compute the Lagrangian radius of halos in unit of Mpc , fixing z=0\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIh_mass\fP Input: halo mass in unit of solar mass 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+R_s 
+.RE
+.PP
+
+.SS "double R_scale_wrong (struct \fBCosmology\fP * Cx, double z, double h_mass)"
+
+.PP
+Compute the Lagrangian radius of halos in unit of Mpc at z\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIh_mass\fP Input: halo mass in unit of solar mass 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+R_s 
+.RE
+.PP
+
+.SS "double R_vir (struct \fBCosmology\fP * Cx, double M)"
+
+.PP
+Compute the comoving virial radius of halos in unit of Mpc, which is defined as the radius at which the average density within this radius is Delta X rho_c\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIM\fP Input: halo mass in unit of solar mass 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+R_vir 
+.RE
+.PP
+
+.SS "double rhoc (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the critical density in unit of M_sun/Mpc^3\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the double value of rho_c 
+.RE
+.PP
+E (a) = H(a)^2/H0^2
+.PP
+G is in unit of m^3 kg^-1 s^-2, conversion factor from m to Mpc
+.PP
+To convert to solar mass
+.SS "double scale_indep_growth_D (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the growth factor D(k,z) which is scale-indep valid when neutrinos are massless The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero\&. The scale-indep growth is computed by CLASS directly
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the growth factor, can be k-dep (ex\&. with nonzero neutrino mass) 
+.RE
+.PP
+junk
+.SS "double scale_indep_growth_f (struct \fBCosmology\fP * Cx, double z)"
+
+.PP
+Compute the scale-independent growth rate f(z) which is scale-indep valid when neutrinos are massless\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the growth factor 
+.RE
+.PP
+junk
+.SS "double sig_sq (struct \fBCosmology\fP * Cx, double z, double R)"
+
+.PP
+Compute variance of smoothed matter density fluctuations\&. The function sigma0_integrand() defines the integrand and \fBsigma0_sq()\fP computes the k-integral
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the unsmoothed variance 
+.RE
+.PP
+
+.SS "double sig_sq_integrand (double x, void * par)"
+
+.PP
+The integrand function passed to qags integrator to compute the variance of the smoothed matter density\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Input: integration variable 
+.br
+\fIpar\fP Input: integration parmaeters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of the integrand 
+.RE
+.PP
+
+.SS "double sigma0_sq (struct \fBCosmology\fP * Cx, double z, double kmax)"
+
+.PP
+Compute variance of unsmoothed matter density fluctuations\&. The function sigma0_integrand() defines the integrand and \fBsigma0_sq()\fP computes the k-integral
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the unsmoothed variance kmax is in unit of 1/Mpc 
+.RE
+.PP
+
+.SS "double sigma0_sq_integrand (double x, void * par)"
+
+.PP
+The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Input: integration variable 
+.br
+\fIpar\fP Input: integration parmaeters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value of the integrand 
+.RE
+.PP
+
+.SS "double transfer (struct \fBCosmology\fP * Cx, double k, double z, int mode)"
+
+.PP
+call CLASS-V3\&.1 to compute transfer function for different species depending on the switch 'mode' mode can be set to cdm, baryons or total matter transfer function\&. The older routine of CLASS-v2\&.7, spectra_tk_at_k_and_z(), is replaced by perturbations_sources_at_k_and_z(), which evaluates the matter transfer functions at a given value of k and z
+.PP
+\fBParameters\fP
+.RS 4
+\fICx\fP Input: pointer to \fBCosmology\fP structure 
+.br
+\fIk\fP Input: wavenumbber in unit of 1/Mpc 
+.br
+\fIz\fP Input: redshift to compute the spectrum 
+.br
+\fImode\fP Input: switch to decide which species to consider, can be set to cdm, baryons or total matter transfer function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the transfer function of a given species 
+.RE
+.PP
+
+.SS "double window_g (double k, double R)"
+
+.PP
+Gaussian window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window function 
+.RE
+.PP
+
+.SS "double window_kth (double k, double R)"
+
+.PP
+Top-hat window in Fourier space\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window function 
+.RE
+.PP
+
+.SS "double window_rth (double k, double R)"
+
+.PP
+Fourier transform of top-hat window in real space\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIk\fP Input: wavenumber in unit of 1/Mpc 
+.br
+\fIR\fP Input: smoothing scale in unit of Mpc 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window function 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb"
 
 .SH "Author"
 .PP 

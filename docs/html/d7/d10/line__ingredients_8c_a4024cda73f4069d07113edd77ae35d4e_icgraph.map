@@ -1,7 +1,8 @@
 <map id="mass_moment1" name="mass_moment1">
-<area shape="rect" id="node1" title="Compute the first luminosity moment." alt="" coords="256,56,371,83"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="104,5,208,32"/>
-<area shape="rect" id="node3" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="109,56,203,83"/>
-<area shape="rect" id="node5" href="$d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="106,107,206,133"/>
-<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node1" title="Compute the first luminosity moment." alt="" coords="416,56,531,83"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="264,5,368,32"/>
+<area shape="rect" id="node5" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="113,56,207,83"/>
+<area shape="rect" id="node6" href="$d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="266,107,366,133"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,5,216,32"/>
+<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,56,56,83"/>
 </map>

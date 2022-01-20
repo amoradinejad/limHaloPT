@@ -1,5 +1,7 @@
 <map id="init_1Darray" name="init_1Darray">
-<area shape="rect" id="node1" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on linear scale" alt="" coords="157,31,249,57"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="5,5,109,32"/>
-<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="32,56,83,83"/>
+<area shape="rect" id="node1" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on linear scale" alt="" coords="423,56,515,83"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aa4696edc9829e9a3c2c1012a3e9d9dbe" title="Allocate the memory and initialize the the line structure." alt="" coords="267,5,371,32"/>
+<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,56,108"/>
+<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#a9e22a5bbc8d0f80cafea3523b2432c82" title="Call CLASS and build a 2d interpolator for Plin(k,z), which will be used when building an extrapolato..." alt="" coords="264,56,375,83"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#aa53f8d5dc0166fea635a87b2b2ad98ac" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,56,216,83"/>
 </map>

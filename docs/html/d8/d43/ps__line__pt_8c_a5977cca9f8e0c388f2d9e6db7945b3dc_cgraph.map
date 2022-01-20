@@ -1,12 +1,17 @@
 <map id="PS_tot_interloper" name="PS_tot_interloper">
-<area shape="rect" id="node1" title="Compute the 3D power spectrum of interloper line power spectrum in unit of micro K^2 Mpc^3." alt="" coords="5,107,128,133"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a3a13aa566fb639abeb29eae43e5fcfa8" title="Compute the linear and quadratic line biases, accounting ffor the normalization w...." alt="" coords="177,107,250,133"/>
-<area shape="rect" id="node4" href="$d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="177,56,249,83"/>
-<area shape="rect" id="node7" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="176,157,251,184"/>
-<area shape="rect" id="node3" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="465,107,567,133"/>
-<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="304,5,389,32"/>
-<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="443,5,589,32"/>
-<area shape="rect" id="node8" href="$d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="299,157,395,184"/>
-<area shape="rect" id="node9" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="303,208,390,235"/>
-<area shape="rect" id="node10" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="443,208,589,235"/>
+<area shape="rect" id="node1" title="Compute the 3D power spectrum of interloper line power spectrum in unit of micro K^2 Mpc^3." alt="" coords="5,157,128,184"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#aedbe3c00696981389e1c130cbfa862eb" title="Compute the comoving radial distance" alt="" coords="176,5,348,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a7494512d5dd918d9f2446869e2745098" title="Compute the growth factor D(k,z) by taking the ratio of the transfer function at redshift z and zero." alt="" coords="226,56,298,83"/>
+<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="424,81,464,108"/>
+<area shape="rect" id="node6" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="582,157,645,184"/>
+<area shape="rect" id="node7" href="$d7/d10/line__ingredients_8c.html#a3a13aa566fb639abeb29eae43e5fcfa8" title="Compute the linear and quadratic line biases, accounting ffor the normalization w...." alt="" coords="225,259,299,285"/>
+<area shape="rect" id="node9" href="$d8/d43/ps__line__pt_8c.html#aef342e8a0e97c247ed892896732d0dcd" title="Compute the Poisson shot noise in unit of micro K^2 Mpc^3." alt="" coords="408,208,480,235"/>
+<area shape="rect" id="node12" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="225,309,299,336"/>
+<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="574,81,653,108"/>
+<area shape="rect" id="node8" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="562,259,665,285"/>
+<area shape="rect" id="node10" href="$d7/d10/line__ingredients_8c.html#aac555bd341b096dfecd3cd915747b5a4" title=" " alt="" coords="571,208,656,235"/>
+<area shape="rect" id="node11" href="$d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="Model from Keating et al 2016 to account for the observed variation in halo activity,..." alt="" coords="735,208,880,235"/>
+<area shape="rect" id="node13" href="$d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="396,309,492,336"/>
+<area shape="rect" id="node14" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="401,360,487,387"/>
+<area shape="rect" id="node15" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="540,360,687,387"/>
 </map>

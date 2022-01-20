@@ -8,7 +8,7 @@
 
 /**
  * Structure to store cosmology structure from CLASS-v3.1 
-*/
+ */
 struct Class_Cosmology_Struct{ 
 
     struct precision                    pr;             /* for precision parameters */
@@ -30,7 +30,7 @@ struct Class_Cosmology_Struct{
  * Structure that holds varioud quantities that need to be evaluated for a given choice of cosmological 
  * paramteres. This includes, the Class_Cosmology_Struct (initialized in cosmology.c), and 
  * Line Structure (initialized in line_ingredients.c). 
-*/
+ */
 struct Cosmology
 {
 
@@ -50,7 +50,7 @@ struct Cosmology
 /**
  * Structure that holds the Line-related quantities, including the interpolators for first and second moments of the line luminosity 
  * and the linear and quadratic luminosity-weighted line biases.
-*/
+ */
 struct Line
 {
       long                    LineType;
@@ -82,7 +82,7 @@ struct PS_xtr
 
 /**
  * A global structure including the values of cosmological parmaeters, 2d interpolator of SFR, and names of various files.
-*/
+ */
 struct globals 
 {
 	double H0;

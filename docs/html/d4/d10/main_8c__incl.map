@@ -1,6 +1,6 @@
 <map id="main.c" name="main.c">
-<area shape="rect" id="node1" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam..." alt="" coords="2261,5,2323,32"/>
-<area shape="rect" id="node2" href="$df/dcb/header_8h.html" title=" " alt="" coords="2257,80,2327,107"/>
+<area shape="rect" id="node1" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam..." alt="" coords="2128,5,2189,32"/>
+<area shape="rect" id="node2" href="$df/dcb/header_8h.html" title=" " alt="" coords="2123,80,2194,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,64,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="89,155,157,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="181,155,245,181"/>
@@ -27,17 +27,15 @@
 <area shape="rect" id="node26" title=" " alt="" coords="2825,155,2956,181"/>
 <area shape="rect" id="node27" title=" " alt="" coords="2981,155,3046,181"/>
 <area shape="rect" id="node28" title=" " alt="" coords="3071,155,3132,181"/>
-<area shape="rect" id="node29" title=" " alt="" coords="3157,155,3315,181"/>
-<area shape="rect" id="node30" href="$d6/da5/_global___structs_8h.html" title=" " alt="" coords="3339,155,3458,181"/>
-<area shape="rect" id="node31" title=" " alt="" coords="3482,155,3577,181"/>
-<area shape="rect" id="node32" title=" " alt="" coords="3601,155,3676,181"/>
-<area shape="rect" id="node33" title=" " alt="" coords="3700,155,3815,181"/>
-<area shape="rect" id="node34" title=" " alt="" coords="3839,155,3929,181"/>
-<area shape="rect" id="node35" title=" " alt="" coords="3953,155,4076,181"/>
-<area shape="rect" id="node36" title=" " alt="" coords="4100,155,4191,181"/>
-<area shape="rect" id="node37" title=" " alt="" coords="4215,155,4287,181"/>
-<area shape="rect" id="node38" title=" " alt="" coords="4311,155,4427,181"/>
-<area shape="rect" id="node39" title=" " alt="" coords="4451,155,4543,181"/>
-<area shape="rect" id="node40" title=" " alt="" coords="4568,155,4667,181"/>
-<area shape="rect" id="node41" title=" " alt="" coords="4691,155,4773,181"/>
+<area shape="rect" id="node29" title=" " alt="" coords="3156,155,3239,181"/>
+<area shape="rect" id="node30" href="$d6/da5/_global___structs_8h.html" title=" " alt="" coords="3263,155,3382,181"/>
+<area shape="rect" id="node31" title=" " alt="" coords="3407,155,3481,181"/>
+<area shape="rect" id="node32" title=" " alt="" coords="3506,155,3601,181"/>
+<area shape="rect" id="node33" title=" " alt="" coords="3625,155,3740,181"/>
+<area shape="rect" id="node34" title=" " alt="" coords="3764,155,3887,181"/>
+<area shape="rect" id="node35" title=" " alt="" coords="3911,155,4001,181"/>
+<area shape="rect" id="node36" title=" " alt="" coords="4025,155,4097,181"/>
+<area shape="rect" id="node37" title=" " alt="" coords="4122,155,4238,181"/>
+<area shape="rect" id="node38" title=" " alt="" coords="4262,155,4354,181"/>
+<area shape="rect" id="node39" title=" " alt="" coords="4379,155,4477,181"/>
 </map>

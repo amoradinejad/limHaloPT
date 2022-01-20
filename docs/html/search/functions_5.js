@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['halo_5fbias_0',['halo_bias',['../d7/d10/line__ingredients_8c.html#a5e747f325f7196b6c042ddcfdfb17fab',1,'line_ingredients.c']]],
-  ['hm_5f1h2h_1',['HM_1h2h',['../d1/dd5/ps__line__hm_8c.html#a298eb563414c8e40e35481cb64c2f509',1,'ps_line_hm.c']]],
-  ['hm_5f1h2h_5finteg_2',['HM_1h2h_integ',['../d1/dd5/ps__line__hm_8c.html#ad72b2846b2e235de535da531f2ee30da',1,'ps_line_hm.c']]]
+  ['f2_0',['F2',['../d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749',1,'ps_halo_1loop.c']]],
+  ['f2_5fs_1',['F2_s',['../d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1',1,'ps_halo_1loop.c']]],
+  ['f3_5fs_2',['F3_s',['../d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185',1,'ps_halo_1loop.c']]],
+  ['free_5f2darray_3',['free_2Darray',['../d7/db6/utilities_8c.html#a6c510b2027f1c8d33d0afe4f5b75609a',1,'utilities.c']]]
 ];

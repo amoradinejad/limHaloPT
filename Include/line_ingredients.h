@@ -1,3 +1,4 @@
+
 #ifndef LINE_INGREDIENT_H
 #define LINE_INGREDIENT_H
 
