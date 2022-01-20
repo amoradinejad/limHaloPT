@@ -1,0 +1,21 @@
+<map id="EH_PS_nw" name="EH_PS_nw">
+<area shape="rect" id="node1" title="Compute the Eisentein&#45;Hu approximate nowiggle component of linear matter power spectrum." alt="" coords="1900,68,1991,95"/>
+<area shape="rect" id="node2" href="$d7/d78/wnw__split_8c.html#a1d4fa9e8e5258809f84b0e2150641758" title="Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the..." alt="" coords="1581,68,1684,95"/>
+<area shape="rect" id="node19" href="$d7/d78/wnw__split_8c.html#ad6bd78b923d93da921f7f86f956d2d77" title="Integrand to compute the nowiggle matter power spectrum." alt="" coords="1732,93,1852,120"/>
+<area shape="rect" id="node3" href="$dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1396,68,1533,95"/>
+<area shape="rect" id="node4" href="$dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1249,68,1348,95"/>
+<area shape="rect" id="node5" href="$dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1055,68,1201,95"/>
+<area shape="rect" id="node7" href="$dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="787,195,872,221"/>
+<area shape="rect" id="node12" href="$dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="249,144,344,171"/>
+<area shape="rect" id="node6" href="$dc/d8e/_i_r__res_8c.html#ad57601a52710911744c3ab9ee4192075" title="Compute the suppression factor IR_sigma2." alt="" coords="920,68,1007,95"/>
+<area shape="rect" id="node8" href="$d1/dd5/ps__line__hm_8c.html#a4e1bbff7f992103c9b1fa8f5abc1f408" title="The integrand function passed passed to Cuhre integration routine to compute large&#45;scale limit of b22..." alt="" coords="604,448,724,475"/>
+<area shape="rect" id="node11" href="$d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="401,169,532,196"/>
+<area shape="rect" id="node13" href="$d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,93,192,120"/>
+<area shape="rect" id="node14" href="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,220,201,247"/>
+<area shape="rect" id="node15" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,359,200,385"/>
+<area shape="rect" id="node16" href="$d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="599,195,729,221"/>
+<area shape="rect" id="node17" href="$d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="589,296,739,323"/>
+<area shape="rect" id="node9" href="$d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee" title="Compute the large&#45;scale limit of P_b2b2 loop." alt="" coords="267,448,327,475"/>
+<area shape="rect" id="node10" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,409,56,436"/>
+<area shape="rect" id="node18" href="$d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="392,296,541,323"/>
+</map>

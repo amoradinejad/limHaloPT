@@ -1,0 +1,304 @@
+\hypertarget{wnw__split_8c}{}\doxysubsection{wnw\+\_\+split.\+c File Reference}
+\label{wnw__split_8c}\index{wnw\_split.c@{wnw\_split.c}}
+
+
+Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ar\+Xiv\+:astro-\/ph/9709112.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for wnw\+\_\+split.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d12/wnw__split_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}{pk\+\_\+\+Gfilter\+\_\+nw}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double k0)
+\begin{DoxyCompactList}\small\item\em Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the nowiggle component involves calculating an integral (Eq. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77}{pk\+\_\+nw\+\_\+integrand}} (double x, void $\ast$par)
+\begin{DoxyCompactList}\small\item\em Integrand to compute the nowiggle matter power spectrum. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_a0cb6b540dc962bfd28da54fa6819f4df}{EH\+\_\+\+PS\+\_\+w}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double k0, double pk0)
+\begin{DoxyCompactList}\small\item\em Compute the Eisentein-\/\+Hu approximate wiggle component of linear matter power spectrum. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_a0859675908f887c5e50061678261bf4b}{EH\+\_\+\+PS\+\_\+nw}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double k0, double pk0)
+\begin{DoxyCompactList}\small\item\em Compute the Eisentein-\/\+Hu approximate nowiggle component of linear matter power spectrum. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_ab920120944723a06efde25145e11a333}{T0}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k)
+\begin{DoxyCompactList}\small\item\em Compute the no-\/baryon transfer function given in Eq. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3}{T}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k)
+\begin{DoxyCompactList}\small\item\em Compute the total baryon+\+CDM transfer function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{wnw__split_8c_a3afdf7244c6d4a89df91aa101ee1a477}{Tt0}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Compute the function defined in Eq. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Documented wiggle-\/nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-\/\+Hu wiggle-\/no wiggle template ar\+Xiv\+:astro-\/ph/9709112. 
+
+Azadeh Moradinezhad Dizgah, June 16th 2021
+
+The algorithm closely follows Ref. ar\+Xiv\+:1509.\+02120 by Vlah et al. (described in Appendix A)
+
+The following function will be called from other modules\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}{pk\+\_\+\+Gfilter\+\_\+nw()}} 
+\end{DoxyEnumerate}
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{wnw__split_8c_a0859675908f887c5e50061678261bf4b}\label{wnw__split_8c_a0859675908f887c5e50061678261bf4b}} 
+\index{wnw\_split.c@{wnw\_split.c}!EH\_PS\_nw@{EH\_PS\_nw}}
+\index{EH\_PS\_nw@{EH\_PS\_nw}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{EH\_PS\_nw()}{EH\_PS\_nw()}}
+{\footnotesize\ttfamily double EH\+\_\+\+PS\+\_\+nw (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{k0,  }\item[{double}]{pk0 }\end{DoxyParamCaption})}
+
+
+
+Compute the Eisentein-\/\+Hu approximate nowiggle component of linear matter power spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em k0} & Input\+: smallest value of k, i.\+e. the largest scale \\
+\hline
+{\em pk0} & Input\+: value of the power spectrum at the largest scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+\_\+nw(k) in unit of (Mpc)$^\wedge$3 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{d7/d78/wnw__split_8c_a0859675908f887c5e50061678261bf4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_a0859675908f887c5e50061678261bf4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_a0cb6b540dc962bfd28da54fa6819f4df}\label{wnw__split_8c_a0cb6b540dc962bfd28da54fa6819f4df}} 
+\index{wnw\_split.c@{wnw\_split.c}!EH\_PS\_w@{EH\_PS\_w}}
+\index{EH\_PS\_w@{EH\_PS\_w}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{EH\_PS\_w()}{EH\_PS\_w()}}
+{\footnotesize\ttfamily double EH\+\_\+\+PS\+\_\+w (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{k0,  }\item[{double}]{pk0 }\end{DoxyParamCaption})}
+
+
+
+Compute the Eisentein-\/\+Hu approximate wiggle component of linear matter power spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em k0} & Input\+: smallest value of k, i.\+e. the largest scale \\
+\hline
+{\em pk0} & Input\+: value of the power spectrum at the largest scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+\_\+w(k) in unit of (Mpc)$^\wedge$3 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d7/d78/wnw__split_8c_a0cb6b540dc962bfd28da54fa6819f4df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}\label{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}} 
+\index{wnw\_split.c@{wnw\_split.c}!pk\_Gfilter\_nw@{pk\_Gfilter\_nw}}
+\index{pk\_Gfilter\_nw@{pk\_Gfilter\_nw}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{pk\_Gfilter\_nw()}{pk\_Gfilter\_nw()}}
+{\footnotesize\ttfamily double pk\+\_\+\+Gfilter\+\_\+nw (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{k0 }\end{DoxyParamCaption})}
+
+
+
+Compute the nowiggle component of linear matter power spectrum using 3d Gaussian filter Computing the nowiggle component involves calculating an integral (Eq. 
+
+A3 of Vlah et al) Below, \mbox{\hyperlink{wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77}{pk\+\_\+nw\+\_\+integrand()}}is the corresponding integrand and \mbox{\hyperlink{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}{pk\+\_\+\+Gfilter\+\_\+nw()}} is the integrator
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em k0} & Input\+: smallest value of k, i.\+e. the largest scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+broadband component in unit of (Mpc)$^\wedge$3 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77}\label{wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77}} 
+\index{wnw\_split.c@{wnw\_split.c}!pk\_nw\_integrand@{pk\_nw\_integrand}}
+\index{pk\_nw\_integrand@{pk\_nw\_integrand}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{pk\_nw\_integrand()}{pk\_nw\_integrand()}}
+{\footnotesize\ttfamily double pk\+\_\+nw\+\_\+integrand (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+
+
+Integrand to compute the nowiggle matter power spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input\+: integration variable, k-\/values \\
+\hline
+{\em par} & Input\+: integration parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integrand to be used in \mbox{\hyperlink{wnw__split_8c_a1d4fa9e8e5258809f84b0e2150641758}{pk\+\_\+\+Gfilter\+\_\+nw()}} function ~\newline
+ integration variable x = logq 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_ad6bd78b923d93da921f7f86f956d2d77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3}\label{wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3}} 
+\index{wnw\_split.c@{wnw\_split.c}!T@{T}}
+\index{T@{T}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{T()}{T()}}
+{\footnotesize\ttfamily double T (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k }\end{DoxyParamCaption})}
+
+
+
+Compute the total baryon+\+CDM transfer function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of baryon+cdm transfer function 
+\end{DoxyReturn}
+H0 value devided by the speed of light
+
+approximate sound speed given in Eq. (26) of EH
+
+Eq. 21 of EH ref.
+
+Eq. 17 of EH ref ~\newline
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{d7/d78/wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_ae73af41bcbfa0911ec17d4ac2d91baa3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_ab920120944723a06efde25145e11a333}\label{wnw__split_8c_ab920120944723a06efde25145e11a333}} 
+\index{wnw\_split.c@{wnw\_split.c}!T0@{T0}}
+\index{T0@{T0}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{T0()}{T0()}}
+{\footnotesize\ttfamily double T0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k }\end{DoxyParamCaption})}
+
+
+
+Compute the no-\/baryon transfer function given in Eq. 
+
+29 of EH ref
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of nor-\/baryon transfer fit 
+\end{DoxyReturn}
+approximate sound speed given in Eq. (26) of EHHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_ab920120944723a06efde25145e11a333_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{wnw__split_8c_a3afdf7244c6d4a89df91aa101ee1a477}\label{wnw__split_8c_a3afdf7244c6d4a89df91aa101ee1a477}} 
+\index{wnw\_split.c@{wnw\_split.c}!Tt0@{Tt0}}
+\index{Tt0@{Tt0}!wnw\_split.c@{wnw\_split.c}}
+\doxyparagraph{\texorpdfstring{Tt0()}{Tt0()}}
+{\footnotesize\ttfamily double Tt0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{x1,  }\item[{double}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Compute the function defined in Eq. 
+
+19 of EH ref, which will be used to compute the fit for CDM transfer function in Eq. 17.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: pointer to \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em k} & Input\+: wavenumber in unit of 1/\+Mpc. \\
+\hline
+{\em x1} & Input\+: betac AM\+:WHAT WAS THIS VARIABLE??? \\
+\hline
+{\em x2} & Input\+: betac AM\+:WHAT WAS THIS VARIABLE??? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value of the function x1 = alphac, x2 = betac in Eq. 19. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d78/wnw__split_8c_a3afdf7244c6d4a89df91aa101ee1a477_icgraph}
+\end{center}
+\end{figure}
