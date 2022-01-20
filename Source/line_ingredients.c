@@ -47,7 +47,6 @@ struct globals gb;
  *                          It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
  * @return the total clustering line power spectrum, including the 1- and 2-halo term         
  */
-
 struct Line * Line_alloc_init(struct Cosmology *Cx, long line_type, size_t npoints_interp, double M_min, long mode_mf) 
 {
 
@@ -144,7 +143,6 @@ struct Line * Line_alloc_init(struct Cosmology *Cx, long line_type, size_t npoin
  * @param Lx     Input: Pointer to line structure
  * @return the error status
  */
-
 int Line_free(struct Line * Lx)
 {
   gsl_interp_accel_free(Lx->mom1_accel_ptr);
@@ -205,7 +203,6 @@ int Line_evaluate(struct Line * Lx, double *zz, double *res)
  * @param mode_mf           Input: switch for setting the model of mass function, can be set to PSC, ST, TR
  * @return the multiplicity function  
  */
-
 double mult_func(double sigma, long mode_mf)
 {
 	double f 	   = 0;
@@ -222,7 +219,7 @@ double mult_func(double sigma, long mode_mf)
 		
 		f = A * sqrt(2.*a/M_PI) * nu* exp(-(a*pow(nu,2.)/2.)) * (1.+pow(pow(nu,-2.)/a,p));
 	}
-	else if(mode_mf == TR){
+	else if(mode_mf == TK){
 		//// Mass function of Tinker et al 2008 arxiv: 0803.2706 for Delta =200
 		double A = 0.186;   
 		double a = 1.47;
@@ -351,7 +348,6 @@ double mass_func_sims(struct Cosmology *Cx, double M, double z, long mode_mf) //
  * @param bias_arr      Output: the output array containning linear and quadratic local-in-matter halo biases, and quadratic and cubic tidal biases
  * @return void    
  */
-
 void halo_bias(struct Cosmology *Cx, double M, double z, long mode_mf, double *bias_arr)
 {
 	double delta_c = 1.686;
@@ -391,7 +387,7 @@ void halo_bias(struct Cosmology *Cx, double M, double z, long mode_mf, double *b
   		// b1 = 1.+1./(sqrt(a) * delta_c) * (sqrt(a)*(a*pow(nu,2.)) + sqrt(a) *b * pow(a*pow(nu,2.),1.-c)\
   		//   - pow(a*pow(nu,2.),c)/(pow(a*pow(nu,2.),c)+b*(1.-c)*(1.-c/2.))); 
 	}
-	else if(mode_mf == TR){
+	else if(mode_mf == TK){
 		//// Bias of Tinker et al 2008 arxiv: 0803.2706 for Delta =200
       a = 0.707;   
 		  b = 0.35;
@@ -433,7 +429,6 @@ void halo_bias(struct Cosmology *Cx, double M, double z, long mode_mf, double *b
  * @param log10SFR      Output: pointer to an array of SFR read from the file
  * @return void    
  */
-
 void logSFR_Behroozi_read(double *z_arr, double *logM_arr, double *log10SFR)
 {
   extern struct globals gb;
@@ -514,7 +509,6 @@ void logSFR_Behroozi_read(double *z_arr, double *logM_arr, double *log10SFR)
  * 
  * @return the error status
  */
-
 int logSFR_alloc_init()
 {
   extern struct globals gb;
@@ -556,7 +550,6 @@ int logSFR_alloc_init()
  * 
  * @return the error status
  */
-
 int SFR_Behroozi_free()
 {
   gsl_interp_accel_free(gb.logM_accel_ptr);
@@ -575,7 +568,6 @@ int SFR_Behroozi_free()
  * @param z             Input: redshift
  * @return log10SFR    
  */
-
 double logSFR_Behroozi(double logM, double z)
 {
   double m1, m2, result = 0, eval;
@@ -603,14 +595,13 @@ double logSFR_Behroozi(double logM, double z)
 
 /**
  * Compute the line specific luminosity in unit of solar luminosity 
- * For CO ladder, I am using the fits in Table 4 of ??? et al arXiv:1508.05102, while for CII we use Silva et al arXiv: 
+ * For CO ladder, I am using the fits in Table 4 of Kamenetzky et al. arXiv:1508.05102, while for CII we use Silva et al arXiv:1410.4808
  * 
  * @param M          Input: halo mass
  * @param z          Input: redshift
  * @param mode_lum   Inpute: which luminosity model, basically which line considered
  * @return line luminosity    
  */
-
 double luminosity(double M, double z, long mode_lum)
 {
   double f=0., L_CO = 0.;
@@ -621,6 +612,8 @@ double luminosity(double M, double z, long mode_lum)
   int J = 0;
   
   if(mode_lum == CII){
+
+    //Foure models of Silva et al. We use M1
 
     a_CII = 0.8475;  ////M1
     b_CII = 7.2203;
@@ -688,22 +681,20 @@ double luminosity(double M, double z, long mode_lum)
 
 
 /**
- * Compute the first luminosityy-weighted mass moment. 
- * The function mass_moment1_integ() is the integrand and mass_moment1() compute the moment
- * 
- * @param Cx         Input: pointer to cosmology structure
- * @param z          Input: redshift
- * @param M_min      Input: minimum halo mass
- * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
- * @param mode_lum   Inpute: which luminosity model, basically which line considered
- * @return the first mass moment    
- */
+ * The integrand function passed to hcubature integrator to compute the first moment of line luminosity
 
-int mass_moment1_integ(unsigned       nd,                   // Number of dimensions in the domain space -- number of dim we're integrating over
-                      const double  *x,                               // The point at which the integrand is evaluated
-                      void          *p,                               // Pointer to a structure that holds the parameters
-                      unsigned      fdim,                             // Number of dimensions that the integrand return
-                      double        *fvalue                           // Array of values of the integrand of dimension fdim
+ * @param nd         Input: Dimensionality of the domain of integration
+ * @param x          Input: integration variable
+ * @param p          Input: integration parmaeters
+ * @param fdim       Input: Dimensionality of the integrand function
+ * @param fvalue     Input: Array of values of the integrand of dimension fdim 
+ * return the error status
+ */
+int mass_moment1_integ(unsigned     nd,                   // Number of dimensions in the domain space -- number of dim we're integrating over
+                      const double  *x,                   // The point at which the integrand is evaluated
+                      void          *p,                   // Pointer to a structure that holds the parameters
+                      unsigned      fdim,                 // Number of dimensions that the integrand return
+                      double        *fvalue               // Array of values of the integrand of dimension fdim
                       )
 {
       double f      = 0;
@@ -718,12 +709,22 @@ int mass_moment1_integ(unsigned       nd,                   // Number of dimensi
       long mode_mf          = pij.p13;
       long mode_lum         = pij.p14;
 
-      result = M * mass_func(Cx, M, z, mode_mf) * luminosity(M, z, mode_lum);
+      result  = M * mass_func(Cx, M, z, mode_mf) * luminosity(M, z, mode_lum);
       *fvalue = result;
 
-      return 0;
+      return _SUCCESS_;
 }
 
+/**
+ * Compute the first luminosity moment. 
+ * 
+ * @param Cx         Input: pointer to cosmology structure
+ * @param z          Input: redshift
+ * @param M_min      Input: minimum halo mass
+ * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
+ * @param mode_lum   Inpute: which luminosity model, basically which line considered
+ * @return the first mass moment    
+ */
 double mass_moment1(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum)  /// in unit of M_sun/Mpc^3
 {
       struct integrand_parameters2 par;
@@ -751,26 +752,25 @@ double mass_moment1(struct Cosmology *Cx, double z, double M_min, long mode_mf, 
       
       hcubature(fdim, mass_moment1_integ, &par, dim, xmin, xmax, maxEval, AbsErr, RelErr, norm, &result, &error);
       
-      return result;    
+      return result;
 }
 
 
 /**
- * Compute the second luminosityy-weighted mass moment. 
- * The function mass_moment2_integ() is the integrand and mass_moment2() compute the moment
- * 
- * @param Cx         Input: pointer to cosmology structure
- * @param z          Input: redshift
- * @param M_min      Input: minimum halo mass
- * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
- * @param mode_lum   Inpute: which luminosity model, basically which line considered
- * @return the second mass moment    
+ * The integrand function passed to hcubature integrator to compute the second moment of line luminosity
+
+ * @param nd         Input: Dimensionality of the domain of integration
+ * @param x          Input: integration variable
+ * @param p          Input: integration parmaeters
+ * @param fdim       Input: Dimensionality of the integrand function
+ * @param fvalue     Input: Array of values of the integrand of dimension fdim 
+ * return the error status
  */
-int mass_moment2_integ(unsigned           nd,               // Number of dimensions in the domain space -- number of dim we're integrating over
-                      const double  *x,                               // The point at which the integrand is evaluated
-                      void          *p,                               // Pointer to a structure that holds the parameters
-                      unsigned      fdim,                             // Number of dimensions that the integrand return
-                      double        *fvalue                           // Array of values of the integrand of dimension fdim
+int mass_moment2_integ(unsigned     nd,                // Number of dimensions in the domain space -- number of dim we're integrating over
+                      const double  *x,                // The point at which the integrand is evaluated
+                      void          *p,                // Pointer to a structure that holds the parameters
+                      unsigned      fdim,              // Number of dimensions that the integrand return
+                      double        *fvalue            // Array of values of the integrand of dimension fdim
                       )
 {
   double f      = 0;
@@ -789,10 +789,20 @@ int mass_moment2_integ(unsigned           nd,               // Number of dimensi
 
   *fvalue = result;
 
-  return 0;
+  return _SUCCESS_;
 }
 
 
+/**
+ * Compute the second luminosity moment. 
+ * 
+ * @param Cx         Input: pointer to cosmology structure
+ * @param z          Input: redshift
+ * @param M_min      Input: minimum halo mass
+ * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
+ * @param mode_lum   Inpute: which luminosity model, basically which line considered
+ * @return the second lum moment    
+ */
 double mass_moment2(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum)  /// in unit of M_sun/Mpc^3
 {
       struct integrand_parameters2 par;
@@ -824,215 +834,21 @@ double mass_moment2(struct Cosmology *Cx, double z, double M_min, long mode_mf, 
       return result;    
 }
 
-///// Moments of mass function needed to calculate  the mean intensity and shot noise. 
-// static int mass_moment1_integ(const int *ndim,
-//            const cubareal x[],
-//            const int *ncomp,
-//            cubareal ff[],
-//            void *p)  
-// {
-//     double f      = 0;
-//     double result = 0;
-
-//     struct integrand_parameters2 pij;
-//    	pij = *((struct integrand_parameters2 *)p);	
-    
-//     struct Cosmology *Cx = pij.p1;
-//     double z             = pij.p4;
-//     double logMmin       = pij.p5;
-//     double logMmax       = pij.p6;
-//     long   mode_mf       = pij.p13;
-//     long   mode_lum      = pij.p14;
-
-//     double logM          = (x[0] * (logMmax - logMmin) + logMmin); 
-//     double cos           = (2. * x[1] - 1.); 
-//     double M             = exp(logM);
-
-//     double MF            = mass_func(Cx, M, z, mode_mf);
-//     double lum           = luminosity(M, z, mode_lum);
-
-//     ff[0] = 0.5 * 2. * (logMmax - logMmin) * M * MF * lum;;
-
-// 	 return 0;
-
-// }
-
-// double mass_moment1(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum)  /// in unit of M_sun/Mpc^3
-// {
-//    struct integrand_parameters2 par;
-
-//   double AbsErr = 0.0;        // Required absolute error (0.0 for none)
-//   double RelErr = 1.e-2; 
-
-//   par.p5  = log(M_min);  ///In units of solar mass;
-//   par.p6  = log(1.e16);   ///In units of solar mass
-
-//   par.p1  = Cx;
-//   par.p4  = z;
-//   par.p13 = mode_mf;
-//   par.p14 = mode_lum;
-  	
-//   int ndim = 2,  ncomp = 1, nvec = 1, verbose = 0, last = 4, mineval = 0, maxeval = 2.e8, key = 13;
-//   int nregions, neval, fail;
-//   double prob, result, error;
-      
-//   Cuhre(ndim,ncomp, mass_moment1_integ, &par, nvec,
-//             RelErr, AbsErr, verbose | last, mineval, maxeval, key,
-//             NULL, NULL, &nregions, &neval, &fail, &result, &error, &prob);
-  
-
-// 	return result;	
-// }
-
-// static int mass_moment2_integ(const int *ndim,
-//            const cubareal x[],
-//            const int *ncomp,
-//            cubareal ff[],
-//            void *p)  
-// {
-
-//   struct integrand_parameters2 pij;
-//   pij = *((struct integrand_parameters2 *)p); 
-  
-//   struct Cosmology *Cx = pij.p1;
-//   double z             = pij.p4;
-//   double logMmin       = pij.p5;
-//   double logMmax       = pij.p6;
-//   long   mode_mf       = pij.p13;
-//   long   mode_lum      = pij.p14;
-
-//   double logM          = (x[0] * (logMmax - logMmin) + logMmin); 
-//   double cos           = (2. * x[1] - 1.); 
-//   double M             = exp(logM);
-
-//   double MF            = mass_func(Cx, M, z, mode_mf);
-//   double lum           = luminosity(M, z, mode_lum);
-
-//   ff[0] = 0.5 * 2. * (logMmax - logMmin) * M * MF * pow(lum,2.);
-
-//   return 0;
-
-// }
-
-
-// double mass_moment2(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum)  /// in unit of M_sun/Mpc^3
-// {
-// 	struct integrand_parameters2 par;
-
-//   double AbsErr = 0.0;        // Required absolute error (0.0 for none)
-//   double RelErr = 1.e-2; 
-
-//   par.p5 = log(M_min);  ///In units of solar mass;
-//   par.p6 = log(1.e16);   ///In units of solar mass
-
-//   par.p1  = Cx;
-//   par.p4  = z;
-//   par.p13 = mode_mf;
-//   par.p14 = mode_lum;
-    
-//   int    ndim = 2,  ncomp = 1, nvec = 1, verbose = 0, last = 4, mineval = 0, maxeval = 2.e8, key = 13;
-//   int    nregions, neval, fail;
-//   double prob, result, error;
-      
-//   Cuhre(ndim,ncomp, mass_moment2_integ, &par, nvec,
-//             RelErr, AbsErr, verbose | last, mineval, maxeval, key,
-//             NULL, NULL, &nregions, &neval, &fail, &result, &error, &prob);
-  
-
-// 	return result;	
-// }
-
-
-// static int bias_lum_weighted_integ(const int *ndim,
-//            const cubareal x[],
-//            const int *ncomp,
-//            cubareal ff[],
-//            void *p)  
-// {
-   
-//     struct integrand_parameters2 pij;
-//     pij = *((struct integrand_parameters2 *)p);     
-
-//     struct Cosmology *Cx = pij.p1;
-//     double z             = pij.p4;
-//     double logMmin       = pij.p6;
-//     double logMmax       = pij.p7;
-//     long   mode_mf       = pij.p13;
-//     long   mode_lum      = pij.p14;
-
-//     double logM          = (x[0] * (logMmax - logMmin) + logMmin); 
-//     double cos           = (2. * x[1] - 1.); 
-//     double M             = exp(logM);
-
-//     double MF            = mass_func(Cx, M, z, mode_mf);
-//     double lum           = luminosity(M, z, mode_lum);
-
-//     double *bias_arr = make_1Darray(4);
-//     halo_bias(Cx, M, z, mode_mf, bias_arr);
-//     double b1 = bias_arr[0]; 
-//     double b2 = bias_arr[1]; 
-    
-//     ff[0] = 0.5 * 2. * (logMmax - logMmin) * M * MF * b1 * lum;
-//     ff[1] = 0.5 * 2. * (logMmax - logMmin) * M * MF * b2 * lum;
-    
-//     free(bias_arr);
-
-//     // if(ff[0]  != 0. && ff[1] != 0.)
-//     //   printf("%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e \n", z, M,MF,lum,b1,b2,ff[0],ff[1]);
-    
-//     return 0;
-
-// }
-
-// void bias_lum_weighted(struct Cosmology *Cx, double z, double M_min, 
-//                           long mode_mf, long mode_lum, double *result)  
-// {
-//   struct integrand_parameters2 par;
-
-//   double AbsErr = 0.0;        // Required absolute error (0.0 for none)
-//   double RelErr = 1.e-2; 
-
-//   par.p6 = log(M_min);  ///In units of solar mass;
-//   par.p7 = log(1.e16);   ///In units of solar mass
-
-//   par.p1  = Cx;
-//   par.p4  = z;
-//   par.p13 = mode_mf;
-//   par.p14 = mode_lum;
-    
-//   int    ndim = 2,  ncomp = 2, nvec = 1, verbose = 0, last = 4, mineval = 0, maxeval = 2.e8, key = 13;
-//   int    nregions, neval;
-//   int    fail[ncomp];
-//   double error[ncomp];
-//   double prob[ncomp];
-
-//   Cuhre(ndim,ncomp, bias_lum_weighted_integ, &par, nvec,
-//             RelErr, AbsErr, verbose | last, mineval, maxeval, key,
-//             NULL, NULL, &nregions, &neval, fail, result, error, prob); 
-
-//   // for(int i=0;i<ncomp;i++)
-//   //   printf("%d %12.6e %12.6e \n", i, result[i],error[i]);
-
-//   return;    
-// }
-
 
 /**
- * Compute the luminosityy-weighted linear and quadratic line biases. The normalization of first mass moment is not included yet. 
- * The function bias_lum_weighted_integ() is the integrand and bias_lum_weighted() computes the bias
- * 
- * @param Cx         Input: pointer to cosmology structure
- * @param z          Input: redshift
- * @param M_min      Input: minimum halo mass
- * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
- * @param mode_lum   Inpute: which luminosity model, basically which line considered
- * @return un-normalized line bias   
- */
+ * The integrand function passed to hcubature integrator to compute the un-normalized luminosity-weighted line bias
 
+ * @param nd         Input: Dimensionality of the domain of integration
+ * @param x          Input: integration variable
+ * @param p          Input: integration parmaeters
+ * @param fdim       Input: Dimensionality of the integrand function
+ * @param fvalue     Input: Array of values of the integrand of dimension fdim 
+ * return the error status
+ */
 int bias_lum_weighted_integ(unsigned  nd,               // Number of dimensions in the domain space -- number of dim we're integrating over
-                        const double  *x,                   // The point at which the integrand is evaluated
+                        const double  *x,               // The point at which the integrand is evaluated
                         void          *p,               // Pointer to a structure that holds the parameters
-                        unsigned      fdim,         // Number of dimensions that the integrand return
+                        unsigned      fdim,             // Number of dimensions that the integrand return
                         double        *fvalue           // Array of values of the integrand of dimension fdim
                         )
 {
@@ -1059,10 +875,21 @@ int bias_lum_weighted_integ(unsigned  nd,               // Number of dimensions 
       fvalue[0] = M * MF * b1 * lum;
       fvalue[1] = M * MF * b2 * lum;
 
-      return 0;
+      return _SUCCESS_;
 }
 
 
+/**
+ * Compute the luminosity-weighted linear and quadratic line biases. The normalization of first mass moment is not included yet. 
+ * The function bias_lum_weighted_integ() is the integrand and bias_lum_weighted() computes the bias
+ * 
+ * @param Cx         Input: pointer to cosmology structure
+ * @param z          Input: redshift
+ * @param M_min      Input: minimum halo mass
+ * @param mode_mf    Input: model of halo mass function to consider, PSC, ST, TR
+ * @param mode_lum   Inpute: which luminosity model, basically which line considered
+ * @return un-normalized line bias   
+ */
 void bias_lum_weighted(struct Cosmology *Cx, double z, double M_min, long mode_mf, long mode_lum, double *result)  
 {
 
@@ -1146,15 +973,13 @@ double p_sig_shot(double scatter)
 }
 
 
-/**
- * Model from Keating et al 2016 to account for the observed variation in halo activity, i.e. scatter in the L(M) relation
- * p_sig_Tbar replace the f_duty in the average brightness temprature used in some LIM paper (ex. Lidz et al 2011).
- * p_sig_Tbar_integrand() is the integrand, and p_sig_Tbar() computes the scatter factor for the mean brightness temprature.
- * 
- * @param scatter    Input: variance of the log-scatter
- * @return the scatter coeff of Tbar  
+/** 
+ * The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016
+ *   
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
  */
-
 double p_sig_Tbar_integrand(double x, void *par)
   {
     double f=0;
@@ -1172,6 +997,13 @@ double p_sig_Tbar_integrand(double x, void *par)
 
   } 
 
+/**
+ * Compute the scatter in Tbar due to scatter in luminosity-halo mass relation, assume log-normal scatter ala Keating
+ * Note that we set f_duty =1 unlike other LIM paper (ex. Lidz et al 2011).
+ * 
+ * @param scatter    Input: variance of the log-scatter
+ * @return the scatter coeff of Tbar  
+ */
 double p_sig_Tbar(double scatter)
 {
   extern struct globals gb;
@@ -1205,7 +1037,6 @@ double p_sig_Tbar(double scatter)
  * @param result    Input: a pointer to an array containing the results of b1_line and b2_line
  * @return void
  */
-
 void line_bias(struct Line *Lx, double z, double *result)
 {
 
@@ -1234,7 +1065,6 @@ void line_bias(struct Line *Lx, double z, double *result)
  * @param z         Input: Redshift
  * @return the line mean intensity
  */
-
 double mean_intens(struct Cosmology *Cx, size_t line_id, double z)  
 {
     ///Note: nu_J is the rest-frame emission frequency related to the observed frequency as nu_obs = nu_J/(1+z_J)
@@ -1266,7 +1096,6 @@ double mean_intens(struct Cosmology *Cx, size_t line_id, double z)
  * @param z         Input: Redshift
  * @return the line mean temprature assuming Rayleigh-Jeans limit
  */    
-
 double Tbar_line(struct Cosmology *Cx, size_t line_id, double z) 
 {   
   double f       = 0.;

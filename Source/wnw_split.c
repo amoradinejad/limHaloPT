@@ -45,7 +45,7 @@ double pk_Gfilter_nw(struct Cosmology *Cx, double k, double k0)
     gsl_integration_qags(&F,logqmin, logqmax,0.0,1.0e-3,1000000,w,&result,&error);
     gsl_integration_workspace_free (w);
    
-    double pk0     = Pk_dlnPk(Cx, k0, 0., LPOWER);
+    double pk0     = PS(Cx, k0, 0.); ;
     double ratio   = 1./(sqrt(2.*M_PI)* a) * result; 
     double out     =  EH_PS_nw(Cx, k, k0, pk0) * ratio;
 
@@ -62,7 +62,6 @@ double pk_Gfilter_nw(struct Cosmology *Cx, double k, double k0)
  * @param par          Input: integration parameters
  * @return integrand to be used in pk_Gfilter_nw() function         
  */
-
 double pk_nw_integrand(double x, void *par)  ///integration variable x = logq
 {  
     struct integrand_parameters2 pij;
@@ -70,15 +69,15 @@ double pk_nw_integrand(double x, void *par)  ///integration variable x = logq
 
     struct Cosmology *Cx = pij.p1;
     double k             = pij.p4;
-    double kf0           = pij.p5;
+    double k0            = pij.p5;
 
     double logq  = x;
     double q     = pow(10.,logq);
     double logk  = log10(k);
     double a     = 0.25; 
 
-    double pkf0  = Pk_dlnPk(Cx,kf0, 0., LPOWER);
-    double ratio = Pk_dlnPk(Cx,q, 0., LPOWER)/EH_PS_nw(Cx,q, kf0, pkf0);  
+    double pk0   = PS(Cx,k0, 0.);
+    double ratio = PS(Cx,q, 0.)/EH_PS_nw(Cx,q, k0, pk0);  
     double out   = ratio * exp(-1./(2.*pow(a,2.))*pow(logk-logq,2.));
 
     return out;
@@ -94,7 +93,6 @@ double pk_nw_integrand(double x, void *par)  ///integration variable x = logq
  * @param pk0           Input: value of the power spectrum at the largest scale
  * @return P_w(k) in unit of (Mpc)^3
  */
-
 double EH_PS_w( struct Cosmology *Cx, double k, double k0, double pk0)
 {
     double h    = Cx->cosmo_pars[2];
@@ -119,7 +117,6 @@ double EH_PS_w( struct Cosmology *Cx, double k, double k0, double pk0)
  * @param pk0         Input: value of the power spectrum at the largest scale
  * @return P_nw(k) in unit of (Mpc)^3
  */
-
 double EH_PS_nw( struct Cosmology *Cx, double k,double k0,double pk0) 
 {
     double h    = Cx->cosmo_pars[2];
@@ -142,7 +139,6 @@ double EH_PS_nw( struct Cosmology *Cx, double k,double k0,double pk0)
  * @param k           Input: wavenumber in unit of 1/Mpc
  * @return value of nor-baryon transfer fit
  */
-
 double T0( struct Cosmology *Cx, double k)
 {
     double h     = Cx->cosmo_pars[2];
@@ -171,7 +167,6 @@ double T0( struct Cosmology *Cx, double k)
  * @param k           Input: wavenumber in unit of 1/Mpc
  * @return value of baryon+cdm transfer function
  */
-
 double T(struct Cosmology *Cx, double k)
 {
     double h     = Cx->cosmo_pars[2];
@@ -226,7 +221,6 @@ double T(struct Cosmology *Cx, double k)
  * @param x2          Input: betac AM:WHAT WAS THIS VARIABLE???
  * @return            value of the function
  */
-
 double Tt0(struct Cosmology *Cx, double k, double x1, double x2) ///x1 = alphac, x2 = betac in Eq. 19.
 {
     double h     = Cx->cosmo_pars[2];

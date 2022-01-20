@@ -37,7 +37,6 @@ struct globals gb;
  * @param mode_mf      Input: switch to set the theoretical model of the mass function used to compute the halo biases
  * @return G loop contributions of P_h
  */
-
 double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)
 {
       
@@ -80,7 +79,7 @@ double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt
             double khat     = 1. * gb.h;
             
             if(IR_switch == NOIR){
-                pm_lin   = Pk_dlnPk(Cx, k, z, LPOWER);
+                pm_lin   = PS(Cx, k, z);
                 pm_22    = ps_mloops[0];
                 pm_13    = ps_mloops[1]; 
                 pm_1loop = pm_lin + pm_22 + pm_13;
@@ -88,7 +87,7 @@ double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt
                 ph_tot   = (pow(b1, 2.) * (pm_1loop + pm_ct) + ph_loops); 
             }
             else if(IR_switch == WIR){
-                pm_lin      = Pk_dlnPk(Cx,k, z, LPOWER);
+                pm_lin      = PS(Cx,k, z);
                 pm_22       = ps_mloops[0];
                 pm_13       = ps_mloops[1]; 
                 pm_lin_IR   = pm_IR_LO(Cx,k, z, SPLIT);
@@ -110,7 +109,7 @@ double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt
             free(ps_mloops);         
       }
       else if(mode_pt == TREE){
-            ph_tot  = pow(b1, 2.) * Pk_dlnPk(Cx, k, z, LPOWER);
+            ph_tot  = pow(b1, 2.) * PS(Cx, k, z);
       }
 
       free(bias_arr);
@@ -132,7 +131,6 @@ double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt
  * @param mode_mf      Input: switch to set the theoretical model of the mass function used to compute the halo biases
  * @return PNG loop contributions of P_h
  */
-
 double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode_pt, long IR_switch, long SPLIT, long mode_mf)
 {
 
@@ -153,7 +151,7 @@ double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode_p
       double bzd = 2.* ((1.-b1) + deltac * (b2 - 8./21.*(b1-1.))) + bz;
       double fnl = Cx->cosmo_pars[5L];
 
-      double tk_inv  = 1./Mk_dlnMk(Cx, k, z, TRANS);
+      double tk_inv  = 1./transfer(Cx, k, z, TOT);
 
       if(mode_pt == LOOP){
             double *ps_hloops, *ps_mloops;
@@ -183,7 +181,7 @@ double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode_p
 	          double pb1bz_fnl2 = 2. * b1 * bz * pm_IR_LO(Cx, k, z, SPLIT) * pow(tk_inv,2.) * ps_hloops[7];
 
             if(IR_switch == NOIR)
-                pm = Pk_dlnPk(Cx, k, z, LPOWER) + pm_13;
+                pm = PS(Cx, k, z) + pm_13;
             else if(IR_switch == WIR)
                 pm = pm_IR_NLO(Cx, k, z, SPLIT) - pm_22;  
                 
@@ -201,7 +199,7 @@ double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode_p
            
       }
       else if(mode_pt == TREE){
-            pm_lin = Pk_dlnPk(Cx, k, z, LPOWER);
+            pm_lin = PS(Cx, k, z);
             ph_tot = 2. * fnl * b1 * bz * tk_inv * pm_lin + pow(fnl * bz * tk_inv,2.) * pm_lin;
       }
       
@@ -213,91 +211,16 @@ double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode_p
 }
 
 
-
-
 /**
- * Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions
- * The function G_loop_integrands() defines the integrand and Compute_G_loops() computes the integrals 
+ * The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms
  * 
- * @param Cx           Input: pointer to cosmology structure 
- * @param k            Input: wavenumber 
- * @param z            Input: redshift of interest
- * @param M            Input: halo mass, used in computing the halo bias
- * @param IR_switch    Input: switch to decide whether to perform IR resummation or no
- * @param hm_switch    Input: switch to decide whether to compute the 1loop terms due to matter or bias
- * @param SPLIT        Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum
- * @param result       Output: an output array containing the results of the 1loop terms, 
- *                             has 2 elements for hm_switch=MATTER, and 6 elements for hm_switch=HALO
- * @return void
+ * @param ndim       Input: Dimensionality of the domain of integration
+ * @param x          Input: An array of integration variables
+ * @param ncomp      Input: Dimensionality of the integrand function
+ * @param ff         Input: Array of values of the integrand of dimension fdim
+ * @param p          Input: integration parmaeters
+ * return the error status
  */
-
-void Compute_G_loops(struct Cosmology *Cx, double k, double z, long IR_switch, long hm_switch,long SPLIT, double *result)
-{
-      struct integrand_parameters2 par;
-
-      int ncomp = 0;
-
-      if(hm_switch == HALO)
-        ncomp = 6;
-      else if(hm_switch == MATTER)
-        ncomp = 2;
-
-      double AbsErr = 0.0;                            // Required absolute error (0.0 for none)
-      double RelErr = 1.e-3;                          // Required relative error (1.0e-2)
-      int    fail[ncomp];
-      double error[ncomp];
-      double prob[ncomp];
-
-      double plin_IR_k   = pm_IR_LO(Cx, k, z, SPLIT);
-
-      par.p1  = Cx;
-      par.p4  = k;
-      par.p5  = z;
-      par.p6  = log(1.e-4);
-      par.p7  = log(100.);
-      par.p13 = IR_switch;
-      par.p14 = hm_switch;
-      par.p15 = SPLIT;
-      par.p8  = plin_IR_k;  /* Note: since cuhre integrator is parallelized, if evaluating all the 
-                             * IR resummed power spectra in the integrand, it will build the interpolators
-                             * For each thread and creats a mess. Here we evaluate the p(k) (which builds the interpolator)
-                             * The first time it is called, and then call the p(q) and p(kmq) and p(kpq) inside the integrand
-                             */
-
-      // int ndim = 2, nvec = 1, verbose = 0, last = 4, seed = 0, 
-      //     mineval = 0, maxeval = 2e6, key1 =50, key2 = 50, key3 = 1, maxpass = 200, 
-      //       border =0, maxchisq = 10, mindeviation=0.25,
-      //       ngiven = 0, ldxgiven = ndim, nextra = 0; 
-      // int nregions, neval;   
-
-      // Divonne(ndim, ncomp, G_loop_integrands, &par, nvec,
-      //           RelErr, AbsErr, verbose, seed,
-      //          mineval, maxeval,  key1, key2, key3, maxpass,
-      //         border, maxchisq, mindeviation,
-      //         ngiven, ldxgiven, NULL, nextra, NULL,
-      //        NULL, NULL, &nregions, &neval, fail, result, error, prob);
-
-      int key;
-      if(hm_switch == MATTER)
-          key = 7;
-      else if(hm_switch == HALO)
-          key = 13;
-
-      int ndim = 2,  nvec = 1, verbose = 0, last = 4, mineval = 0, maxeval = 1e8;
-      int nregions, neval;
-      
-      Cuhre(ndim,ncomp, G_loop_integrands, &par, nvec,
-              RelErr, AbsErr, verbose | last,
-               mineval, maxeval, key,
-               NULL, NULL, &nregions, &neval, fail, result, error, prob);
-      
-      // for(int i =0; i<ncomp; i++)
-      //     printf("Gloops integral : %d %12.6e %12.6e %12.6e %12.6e %d \n", i, k, result[i], error[i], prob[i], fail[i]);  
-
-
-      return;
-}
-
 static int G_loop_integrands(const int *ndim,
                              const cubareal x[],
                              const int *ncomp,
@@ -366,10 +289,10 @@ static int G_loop_integrands(const int *ndim,
        
       if(kmq <= exp(logqmax) && kmq>=exp(logqmin) && kpq <= exp(logqmax) && kpq>=exp(logqmin)){
         if(IR_switch == NOIR){
-            double plin_k   =  Pk_dlnPk(Cx, k, z, LPOWER);
-            double plin_q   =  Pk_dlnPk(Cx, q, z, LPOWER);
-            double plin_kmq =  Pk_dlnPk(Cx, kmq, z, LPOWER);
-            double plin_kpq =  Pk_dlnPk(Cx, kpq, z, LPOWER);
+            double plin_k   =  PS(Cx, k, z);
+            double plin_q   =  PS(Cx, q, z);
+            double plin_kmq =  PS(Cx, kmq, z);
+            double plin_kpq =  PS(Cx, kpq, z);
 
             if(hm_switch == HALO)
             {
@@ -432,8 +355,189 @@ static int G_loop_integrands(const int *ndim,
 
 
 /**
+ * Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, present for Gaussian initial conditions
+ * 
+ * @param Cx           Input: pointer to cosmology structure 
+ * @param k            Input: wavenumber 
+ * @param z            Input: redshift of interest
+ * @param M            Input: halo mass, used in computing the halo bias
+ * @param IR_switch    Input: switch to decide whether to perform IR resummation or no
+ * @param hm_switch    Input: switch to decide whether to compute the 1loop terms due to matter or bias
+ * @param SPLIT        Input: switch to set the method to perform the wiggle-nowiggle split of matter power spectrum
+ * @param result       Output: an output array containing the results of the 1loop terms, 
+ *                             has 2 elements for hm_switch=MATTER, and 6 elements for hm_switch=HALO
+ * @return void
+ */
+void Compute_G_loops(struct Cosmology *Cx, double k, double z, long IR_switch, long hm_switch,long SPLIT, double *result)
+{
+      struct integrand_parameters2 par;
+
+      int ncomp = 0;
+
+      if(hm_switch == HALO)
+        ncomp = 6;
+      else if(hm_switch == MATTER)
+        ncomp = 2;
+
+      double AbsErr = 0.0;                            // Required absolute error (0.0 for none)
+      double RelErr = 1.e-3;                          // Required relative error (1.0e-2)
+      int    fail[ncomp];
+      double error[ncomp];
+      double prob[ncomp];
+
+      double plin_IR_k   = pm_IR_LO(Cx, k, z, SPLIT);
+
+      par.p1  = Cx;
+      par.p4  = k;
+      par.p5  = z;
+      par.p6  = log(1.e-4);
+      par.p7  = log(100.);
+      par.p13 = IR_switch;
+      par.p14 = hm_switch;
+      par.p15 = SPLIT;
+      par.p8  = plin_IR_k;  /* Note: since cuhre integrator is parallelized, if evaluating all the 
+                             * IR resummed power spectra in the integrand, it will build the interpolators
+                             * For each thread and creats a mess. Here we evaluate the p(k) (which builds the interpolator)
+                             * The first time it is called, and then call the p(q) and p(kmq) and p(kpq) inside the integrand
+                             */
+
+      // int ndim = 2, nvec = 1, verbose = 0, last = 4, seed = 0, 
+      //     mineval = 0, maxeval = 2e6, key1 =50, key2 = 50, key3 = 1, maxpass = 200, 
+      //       border =0, maxchisq = 10, mindeviation=0.25,
+      //       ngiven = 0, ldxgiven = ndim, nextra = 0; 
+      // int nregions, neval;   
+
+      // Divonne(ndim, ncomp, G_loop_integrands, &par, nvec,
+      //           RelErr, AbsErr, verbose, seed,
+      //          mineval, maxeval,  key1, key2, key3, maxpass,
+      //         border, maxchisq, mindeviation,
+      //         ngiven, ldxgiven, NULL, nextra, NULL,
+      //        NULL, NULL, &nregions, &neval, fail, result, error, prob);
+
+      int key;
+      if(hm_switch == MATTER)
+          key = 7;
+      else if(hm_switch == HALO)
+          key = 13;
+
+      int ndim = 2,  nvec = 1, verbose = 0, last = 4, mineval = 0, maxeval = 1e8;
+      int nregions, neval;
+      
+      Cuhre(ndim,ncomp, G_loop_integrands, &par, nvec,
+              RelErr, AbsErr, verbose | last,
+               mineval, maxeval, key,
+               NULL, NULL, &nregions, &neval, fail, result, error, prob);
+      
+      // for(int i =0; i<ncomp; i++)
+      //     printf("Gloops integral : %d %12.6e %12.6e %12.6e %12.6e %d \n", i, k, result[i], error[i], prob[i], fail[i]);  
+
+
+      return;
+}
+
+
+
+/**
+ * The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms
+ * 
+ * @param ndim       Input: Dimensionality of the domain of integration
+ * @param x          Input: An array of integration variables
+ * @param ncomp      Input: Dimensionality of the integrand function
+ * @param ff         Input: Array of values of the integrand of dimension fdim
+ * @param p          Input: integration parmaeters
+ * return the error status
+ */
+static int PNG_loop_integrands(const int *ndim,
+                             const cubareal x[],
+                             const int *ncomp,
+                             cubareal ff[],
+                             void *p)    
+{
+
+      struct integrand_parameters2 pij;
+      pij = *((struct integrand_parameters2 *)p);      
+
+      struct Cosmology *Cx = pij.p1;
+      double k            = pij.p4;
+      double z            = pij.p5;
+      double logqmin      = pij.p6;
+      double logqmax      = pij.p7;
+      long IR_switch      = pij.p13;
+      long SPLIT          = pij.p14;
+      static int cleanup  = 0;
+       
+      double logq     = (x[0] * (logqmax - logqmin) + logqmin); 
+      double cos      = (2. * x[1] - 1.); 
+      double q        = exp(logq); 
+      double kmq      = pow(fabs(pow(q, 2.) + pow(k, 2.) - 2. * q * k * cos), 1./2.);
+      double A        = (q * k * cos - pow(q, 2.))/pow(kmq, 2.);
+      double tk_q_inv = 1./transfer(Cx, q, z, TOT);
+      double tk_kmq = transfer(Cx, kmq, z, TOT);
+      double tk_q   = transfer(Cx, q, z, TOT);
+      
+      /// Factor of 2. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle. 
+      /// Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to 
+      /// devide each 0 power spectrum by a factor of 1/pow(2.*M_PI,3.), which I do in my pk_lin() function. If using another notation for Fourier transform 
+      /// (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3).
+      
+      /// The integrands below correspond to the follwing bias combinaions: 
+      /*  ff[0] : b1 b_zeta
+          ff[1] : b1 b_zetadelta
+          ff[2] : b2 b_zeta
+          ff[3] : bG2 b_zeta  (I-term)
+          ff[4] : b2 b_zetadelta
+          ff[5] : bG2 b_zetadelta
+          ff[6] : b3nl b_zeta,  b3nl = 2*(bG2+2/5*btd) 
+        ff[7] : fnl^2 term from matter bispectrum
+      */
+
+    if(kmq>=exp(logqmin)){
+  
+      if(IR_switch == NOIR){
+          double plin_k   = PS(Cx, k, z);
+          double plin_q   = PS(Cx, q, z);
+          double plin_kmq = PS(Cx, kmq, z);
+
+          ff[0] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * F2_s(q, k, cos) * A * tk_q_inv; 
+          ff[1] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * F2_s(q, k, cos) * tk_q_inv;  
+          ff[2] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * (plin_kmq * A + plin_q) * tk_q_inv;  
+          ff[3] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * S2_s(q, k, cos) * A * tk_q_inv;  
+          ff[4] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * (plin_kmq - plin_q) * tk_q_inv;  
+          ff[5] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * S2_s(q, k, cos) * tk_q_inv;  
+          ff[6] = 4. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * S2_s(q, k, cos) * F2(q, k, -cos);
+              ff[7] = 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * F2_s(q,k,cos) * (plin_q * tk_kmq/tk_q + plin_kmq * tk_q/tk_kmq);  
+      }          
+      else if(IR_switch == WIR){
+          double plin_IR_k   = pm_IR_LO(Cx, k, z, SPLIT);
+          double plin_IR_q   = pm_IR_LO(Cx, q, z, SPLIT);
+          double plin_IR_kmq = pm_IR_LO(Cx, kmq, z, SPLIT);
+
+          ff[0] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * F2_s(q, k, cos) * A * tk_q_inv; 
+          ff[1] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * F2_s(q, k, cos) * tk_q_inv;  
+          ff[2] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * (plin_IR_kmq * A + plin_IR_q) * tk_q_inv;  
+          ff[3] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * S2_s(q, k, cos) * A * tk_q_inv;  
+          ff[4] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * (plin_IR_kmq - plin_IR_q) * tk_q_inv;  
+          ff[5] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * S2_s(q, k, cos) * tk_q_inv;  
+          ff[6] = 4. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * S2_s(q, k, cos) * F2(q, k, -cos);  
+              ff[7] = 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * F2_s(q,k,cos) * (plin_IR_q * tk_kmq/tk_q + plin_IR_kmq * tk_q/tk_kmq);
+             
+      }
+    }
+    else{
+      for(int i =0; i<8; i++)
+        ff[i] = 0.;
+    }  
+
+      // for(int i=0;i<8;i++)
+      //   printf("integ NG %d %12.6e %12.6e %12.6e %12.6e\n",i, k, q, kmq, ff[i] );
+   
+      return 0;
+}    
+
+
+
+/**
  * Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo bias, rising from non-Gaussian initial conditions of local shape
- * The function PNG_loop_integrands() defines the integrand and Compute_PNG_loops() computes the integrals 
  * 
  * @param Cx           Input: pointer to cosmology structure 
  * @param k            Input: wavenumber 
@@ -443,7 +547,6 @@ static int G_loop_integrands(const int *ndim,
  * @param result       Output: an output array containing the results of the 1loop terms, has 8 elements for hm_switch=HALO
  * @return void
  */
-
 void Compute_PNG_loops(struct Cosmology *Cx, double k, double z,  long IR_switch, long SPLIT, double *result)
 {
       struct integrand_parameters2 par;
@@ -489,92 +592,6 @@ void Compute_PNG_loops(struct Cosmology *Cx, double k, double z,  long IR_switch
       return;
 }
 
-static int PNG_loop_integrands(const int *ndim,
-                             const cubareal x[],
-                             const int *ncomp,
-                             cubareal ff[],
-                             void *p)    
-{
-
-      struct integrand_parameters2 pij;
-      pij = *((struct integrand_parameters2 *)p);      
-
-      struct Cosmology *Cx = pij.p1;
-      double k            = pij.p4;
-      double z            = pij.p5;
-      double logqmin      = pij.p6;
-      double logqmax      = pij.p7;
-      long IR_switch      = pij.p13;
-      long SPLIT          = pij.p14;
-      static int cleanup  = 0;
-       
-      double logq     = (x[0] * (logqmax - logqmin) + logqmin); 
-      double cos      = (2. * x[1] - 1.); 
-      double q        = exp(logq); 
-      double kmq      = pow(fabs(pow(q, 2.) + pow(k, 2.) - 2. * q * k * cos), 1./2.);
-      double A        = (q * k * cos - pow(q, 2.))/pow(kmq, 2.);
-      double tk_q_inv = 1./Mk_dlnMk(Cx, q, z, TRANS);
-      double tk_kmq = Mk_dlnMk(Cx, kmq, z, TRANS);
-      double tk_q   = Mk_dlnMk(Cx, q, z, TRANS);
-      
-      /// Factor of 2. * (logqmax - logqmin) is due to change of variable from 0 to logarithmic k, and a factor of 2*PI is due to integration over azimuthal angle. 
-      /// Note that to compare the theoretical predictions against Emiliano's measurement, since he is using a different notation for Fourier transform, I need to 
-      /// devide each 0 power spectrum by a factor of 1/pow(2.*M_PI,3.), which I do in my pk_lin() function. If using another notation for Fourier transform 
-      /// (the one that I usually use, which has a factor of 1/pow(2*M_PI,3) in the definition), you need to multiply these integrands by a factor of 1/pow(2*M_PI,3).
-      
-      /// The integrands below correspond to the follwing bias combinaions: 
-      /*  ff[0] : b1 b_zeta
-          ff[1] : b1 b_zetadelta
-          ff[2] : b2 b_zeta
-          ff[3] : bG2 b_zeta  (I-term)
-          ff[4] : b2 b_zetadelta
-          ff[5] : bG2 b_zetadelta
-          ff[6] : b3nl b_zeta,  b3nl = 2*(bG2+2/5*btd) 
-	  ff[7] : fnl^2 term from matter bispectrum
-      */
-
-    if(kmq>=exp(logqmin)){
-  
-      if(IR_switch == NOIR){
-          double plin_k   = Pk_dlnPk(Cx, k, z, LPOWER);
-          double plin_q   = Pk_dlnPk(Cx, q, z, LPOWER);
-          double plin_kmq = Pk_dlnPk(Cx, kmq, z, LPOWER);
-
-          ff[0] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * F2_s(q, k, cos) * A * tk_q_inv; 
-          ff[1] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * F2_s(q, k, cos) * tk_q_inv;  
-          ff[2] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * (plin_kmq * A + plin_q) * tk_q_inv;  
-          ff[3] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * S2_s(q, k, cos) * A * tk_q_inv;  
-          ff[4] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * (plin_kmq - plin_q) * tk_q_inv;  
-          ff[5] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * plin_kmq  * S2_s(q, k, cos) * tk_q_inv;  
-          ff[6] = 4. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_q * S2_s(q, k, cos) * F2(q, k, -cos);
-	        ff[7] = 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * F2_s(q,k,cos) * (plin_q * tk_kmq/tk_q + plin_kmq * tk_q/tk_kmq);  
-      }          
-      else if(IR_switch == WIR){
-          double plin_IR_k   = pm_IR_LO(Cx, k, z, SPLIT);
-          double plin_IR_q   = pm_IR_LO(Cx, q, z, SPLIT);
-          double plin_IR_kmq = pm_IR_LO(Cx, kmq, z, SPLIT);
-
-          ff[0] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * F2_s(q, k, cos) * A * tk_q_inv; 
-          ff[1] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * F2_s(q, k, cos) * tk_q_inv;  
-          ff[2] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * (plin_IR_kmq * A + plin_IR_q) * tk_q_inv;  
-          ff[3] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * S2_s(q, k, cos) * A * tk_q_inv;  
-          ff[4] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * (plin_IR_kmq - plin_IR_q) * tk_q_inv;  
-          ff[5] = 2. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * plin_IR_kmq  * S2_s(q, k, cos) * tk_q_inv;  
-          ff[6] = 4. * 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * plin_IR_q * S2_s(q, k, cos) * F2(q, k, -cos);  
-	        ff[7] = 2. * M_PI * 2. * (logqmax - logqmin) * pow(q, 3.) * F2_s(q,k,cos) * (plin_IR_q * tk_kmq/tk_q + plin_IR_kmq * tk_q/tk_kmq);
-	       
-      }
-    }
-    else{
-      for(int i =0; i<8; i++)
-        ff[i] = 0.;
-    }  
-
-      // for(int i=0;i<8;i++)
-      //   printf("integ NG %d %12.6e %12.6e %12.6e %12.6e\n",i, k, q, kmq, ff[i] );
-   
-      return 0;
-}    
 
 
 

@@ -16,14 +16,11 @@ struct globals gb;
 
 int main(int argc,char *argv[])
 {	
-	extern struct globals gb;
  	
  	initialize();
 
 	long fish_dim;
 	long int i,j,l, q, s,t;
-
-	fish_dim = gb.Npars;	
 
 	double pk_zmax = 14.;
 	double pk_kmax = 200.;
@@ -47,8 +44,8 @@ int main(int argc,char *argv[])
 	}
 
 	/*
-	* Initialize the cosmology structure, which includes CLASS cosmology and Line structures
-	*/
+	 * Initialize the cosmology structure, which includes CLASS cosmology and Line structures
+	 */
 	clock_t tic_r = clock();
 	Cosmology_init(&Cx_ref, pk_kmax, pk_zmax, nlines, lines, ninterp, M_min, mode_mf);
 	printf("Reference Cosmology initialized\n");
@@ -150,8 +147,6 @@ int main(int argc,char *argv[])
  */
 void initialize()
 {
-	extern struct globals gb;
-
 	getcwd(gb.project_home , sizeof(gb.project_home));  //This gives the path to the source directory
 	chdir("..");  ///Change the path to the parent directory
 	getcwd(gb.project_home , sizeof(gb.project_home));
@@ -181,9 +176,9 @@ void initialize()
 
 	gb.PS_kmin = 1.e-4;
 	gb.PS_kmax = 200.;
+	gb.kmax_CLASS = PS_KMAX * (1.-0.1);
+	gb.Npars = NPARS;
 
-	gb.Npars   = 6;
-	
 	return;
 }
 
@@ -195,8 +190,6 @@ void initialize()
  */
 void cleanup(struct Cosmology *Cx)
 {
-	extern struct globals gb;	
-
 	Cosmology_free(Cx);
 	SFR_Behroozi_free();
 

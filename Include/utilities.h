@@ -1,7 +1,7 @@
 	#include <stdlib.h>
 	#include <stdio.h>
 	#include <math.h>
-    #include <string.h>
+      #include <string.h>
 
 	int *make_1D_int_array(long size);
 	double 	*make_1Darray(long size);

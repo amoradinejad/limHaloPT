@@ -7,19 +7,20 @@
 
 
 /**
- * Structure to store cosmology structure from CLASS code
+ * Structure to store cosmology structure from CLASS-v3.1 
 */
-struct Class_Cosmology_Struct{
+struct Class_Cosmology_Struct{ 
 
     struct precision                    pr;             /* for precision parameters */
     struct background                   ba;             /* for cosmological background */
-    struct thermo                       th;             /* for thermodynamics */
-    struct perturbs                     pt;             /* for source functions */
-    struct transfers                    tr;             /* for transfer functions */
+    struct thermodynamics               th;             /* for thermodynamics */ 
+    struct perturbations                pt;             /* for source functions */
+    struct transfer                     tr;             /* for transfer functions */
     struct primordial                   pm;             /* for primordial spectra */
-    struct spectra                      sp;             /* for output spectra */
-    struct nonlinear                    nl;             /* for non-linear spectra */
+    struct harmonic                     hr;             /* for output spectra */
+    struct fourier                      fo;             /* for non-linear spectra */
     struct lensing                      le;             /* for lensed spectra */
+    struct distortions					sd;				/* for CMB distortions*/
     struct output                       op;             /* for output files */
     ErrorMsg errmsg;                    /* for error messages */
 };
@@ -33,13 +34,15 @@ struct Class_Cosmology_Struct{
 struct Cosmology
 {
 
-     struct Class_Cosmology_Struct    ccs;
-     struct Line                      **Lines;
+    struct Class_Cosmology_Struct    ccs;
+    struct Line             **Lines;
+    struct PS_xtr		    *PS_xtrapol;
 
-     int                              NLines;
-     long                             mode_nu;
+    int                     NLines;
+    long                    mode_model;
 
-     double cosmo_pars[6];
+    double 			        cosmo_pars[NPARS];
+
 };
 
 
@@ -68,6 +71,14 @@ struct Line
 
 };
 
+struct PS_xtr
+{
+    int                     initialized;
+	
+    gsl_interp_accel        *z_accel_ptr;
+    gsl_interp_accel        *logk_accel_ptr;
+    gsl_spline2d            *logpkz_spline2d_ptr;
+};
 
 /**
  * A global structure including the values of cosmological parmaeters, 2d interpolator of SFR, and names of various files.
@@ -91,7 +102,6 @@ struct globals
 	double b1;
 	double sigFOG0;
 	
-	long Npars;
 	double z_i;
 	double rho;
 	double mass;
@@ -106,6 +116,8 @@ struct globals
 	double M_max;
 	double z_max;
 
+	long Npars; 
+	
 	char project_home[FILENAME_MAX];
 	char output_dir[FILENAME_MAX];
 	char data_dir[FILENAME_MAX];
@@ -113,8 +125,9 @@ struct globals
 
 
 	// Min and max values
-	double 				PS_kmin;
-	double 				PS_kmax;
+	double  PS_kmin;
+	double  PS_kmax;
+	double  kmax_CLASS;
 
 	// File names
 	char			SFR_filename[FILENAME_MAX];

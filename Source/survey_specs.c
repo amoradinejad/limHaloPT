@@ -23,7 +23,6 @@ struct globals gb;
  * @param fsky          Input: sky-coverage of teh survey 
  * @return the comoving z-shell volume
  */
-
 double shell_volume( struct Cosmology *Cx,double z, double fsky) // The volume of the shell in (Mpc)^3
 {
     double f=0.; 
@@ -43,7 +42,6 @@ double shell_volume( struct Cosmology *Cx,double z, double fsky) // The volume o
  * @param fsky          Input: sky-coverage of teh survey 
  * @return kmin
  */
-
 double kmin_val( struct Cosmology *Cx, double zmin, double zmax, double fsky)
 {
     double f =0;
@@ -65,7 +63,6 @@ double kmin_val( struct Cosmology *Cx, double zmin, double zmax, double fsky)
  * @param z             Input: redshift of interest
  * @return kmax
  */
-
 double kmax_Brent(double kmax, void *params)
 {
     double f;

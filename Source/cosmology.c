@@ -14,8 +14,8 @@
  * -# Cosmology_free()              frees the memory allocated to cosmology structure
  * -# CL_Cosmology_initilize()      initializes the class cosmology structure
  * -# CL_Cosmology_free()           frees the class cosmology structure
- * -# PS()                          computes matter power spectrum calling class function
- * -# Transfer()                    computes matter transfer function calling class function
+ * -# PS()                          computes matter power spectrum calling class and extrapolating if k>kmax computed by class
+ * -# transfer()                    computes matter transfer function calling class function
  * -# growth_D()                    computes the scale-dep growth factor
  * -# growth_f()                    computes the scale-dep growth rate dlnD(k,a)/dlna
  * -# scale_indep_growth_D()        computes the scale-indep growth factor using directly CLASS functions
@@ -55,14 +55,12 @@ struct globals gb;
  *                              It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
  * @return an integer if succeeded
  */
-
 int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax, 
                   int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf)
 {
 
-  long mode_nu = Cx->mode_nu;
-
   CL_Cosmology_initilize(Cx,pk_kmax,pk_zmax);
+  Cx->PS_xtrapol = PS_xtrapol_init(Cx);
 
   if (nlines > 0){
     Cx->NLines = nlines;
@@ -85,7 +83,6 @@ int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax,
  * @param Cx    Input: pointer to Cosmology structure
  * @return the error status
  */
-
 int Cosmology_free(struct Cosmology *Cx)
 {
   for(int i=0; i<(Cx->NLines); i++){
@@ -95,7 +92,7 @@ int Cosmology_free(struct Cosmology *Cx)
   free(Cx->Lines);
 
   CL_Cosmology_free(Cx);
-  Pk_dlnPk(Cx, 0.1, 0., CLEANUP);
+  PS_xtrapol_free(Cx->PS_xtrapol);
 
   return _SUCCESS_;
 }
@@ -109,7 +106,6 @@ int Cosmology_free(struct Cosmology *Cx)
  * @param pk_zmax           Input: zmax for computation of matter power spectrum by CLASS
  * @return the error status
  */
-
 int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
 {
 
@@ -266,11 +262,6 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     pfc.read[counter] = _TRUE_;
     counter++;
 
-    sprintf(pfc.name[counter],"bessels_verbose");
-    sprintf(pfc.value[counter],"0");
-    pfc.read[counter] = _TRUE_;
-    counter++;
-
     sprintf(pfc.name[counter],"transfer_verbose");
     sprintf(pfc.value[counter],"0");
     pfc.read[counter] = _TRUE_;
@@ -281,12 +272,12 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     pfc.read[counter] = _TRUE_;
     counter++;
 
-    sprintf(pfc.name[counter],"spectra_verbose");
+    sprintf(pfc.name[counter],"harmonic_verbose");
     sprintf(pfc.value[counter],"0");
     pfc.read[counter] = _TRUE_;
     counter++;
 
-    sprintf(pfc.name[counter],"nonlinear_verbose");
+    sprintf(pfc.name[counter],"fourier_verbose");
     sprintf(pfc.value[counter],"0");
     pfc.read[counter] = _TRUE_;
     counter++;
@@ -296,10 +287,10 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     pfc.size = counter;
 
   ///////////////////////////////////
-    // Calling CLASS 2.5.0
-    ///////////////////////////////////
+  // Calling CLASS 3.1.1
+  ///////////////////////////////////
 
-  if (input_init(&pfc ,&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.tr,&Cx->ccs.pm,&Cx->ccs.sp,&Cx->ccs.nl,&Cx->ccs.le,&Cx->ccs.op, Cx->ccs.errmsg) == _FAILURE_) {
+ if (input_read_from_file(&pfc ,&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.tr,&Cx->ccs.pm,&Cx->ccs.hr,&Cx->ccs.fo,&Cx->ccs.le, &Cx->ccs.sd, &Cx->ccs.op, Cx->ccs.errmsg) == _FAILURE_) {
         printf("\n\nError running input_init\n=>%s\n",Cx->ccs.errmsg); 
         return _FAILURE_;
   }
@@ -314,12 +305,12 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     return _FAILURE_;
   }
 
-  if (perturb_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt) == _FAILURE_) {
+  if (perturbations_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt) == _FAILURE_) {
     printf("\n\nError in perturb_init \n=>%s\n",Cx->ccs.pt.error_message);
     return _FAILURE_;
   }
 
-  if (transfer_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.nl,&Cx->ccs.tr) == _FAILURE_) {
+  if (transfer_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.fo,&Cx->ccs.tr) == _FAILURE_) {
     printf("\n\nError in transfer_init \n=>%s\n",Cx->ccs.tr.error_message);
     return _FAILURE_;
   }
@@ -329,13 +320,13 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
     return _FAILURE_;
   }
 
-  if (nonlinear_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.nl) == _FAILURE_) {
-    printf("\n\nError in nonlinear_init \n=>%s\n",Cx->ccs.nl.error_message);
+  if (fourier_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.th,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo) == _FAILURE_) {
+    printf("\n\nError in nonlinear_init \n=>%s\n",Cx->ccs.fo.error_message);
     return _FAILURE_;
   }
  
-  if (spectra_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.nl,&Cx->ccs.tr,&Cx->ccs.sp) == _FAILURE_) {
-    printf("\n\nError in spectra_init \n=>%s\n",Cx->ccs.sp.error_message);
+  if (harmonic_init(&Cx->ccs.pr,&Cx->ccs.ba,&Cx->ccs.pt,&Cx->ccs.pm,&Cx->ccs.fo,&Cx->ccs.tr,&Cx->ccs.hr) == _FAILURE_) {
+    printf("\n\nError in spectra_init \n=>%s\n",Cx->ccs.hr.error_message);
     return _FAILURE_;
   }
 
@@ -359,13 +350,13 @@ int CL_Cosmology_initilize(struct Cosmology *Cx, double pk_kmax, double pk_zmax)
 int CL_Cosmology_free(struct Cosmology *Cx)
 {
   
-  if (spectra_free(&Cx->ccs.sp) == _FAILURE_) {
-    printf("\n\nError in spectra_free \n=>%s\n",Cx->ccs.sp.error_message);
+  if (harmonic_free(&Cx->ccs.hr) == _FAILURE_) {
+    printf("\n\nError in spectra_free \n=>%s\n",Cx->ccs.hr.error_message);
     return _FAILURE_;
   }
 
-  if (nonlinear_free(&Cx->ccs.nl) == _FAILURE_) {
-    printf("\n\nError in nonlinear_free \n=>%s\n",Cx->ccs.nl.error_message);
+  if (fourier_free(&Cx->ccs.fo) == _FAILURE_) {
+    printf("\n\nError in nonlinear_free \n=>%s\n",Cx->ccs.fo.error_message);
     return _FAILURE_;
   }
 
@@ -379,12 +370,7 @@ int CL_Cosmology_free(struct Cosmology *Cx)
     return _FAILURE_;
   }
 
-  //if (bessel_free(&Cx->ccs.bs) == _FAILURE_) {
-  //  printf("\n\nError in primordial_free \n=>%s\n",Cx->ccs.bs.error_message);
-   // return _FAILURE_;
- // }
-
-  if (perturb_free(&Cx->ccs.pt) == _FAILURE_) {
+  if (perturbations_free(&Cx->ccs.pt) == _FAILURE_) {
     printf("\n\nError in perturb_free \n=>%s\n",Cx->ccs.pt.error_message);
     return _FAILURE_;
   }
@@ -404,53 +390,171 @@ int CL_Cosmology_free(struct Cosmology *Cx)
 }
 
 
-/**
- * Compute the matter power spectra (in unit of (Mpc)^3) as a function of k (in unit of 1/Mpc) and z, 
- * Setting the switch "mode", to LINEAR or NONLINEAR, we can compute the linear or nonlinear spectrum respectively.
- * 
- * The CLASS spectra_pk_at_k_and_z() and spectra_pk_nl_at_k_and_z, evaluate the matter power spectrum 
- * at a given value of k and z by interpolating in a table of all P(k)'s computed at this z 
- * by spectra_pk_at_z() (when kmin <= k <= kmax), or eventually by using directly the primordial 
- * spectrum (when 0 <= k < kmin): the latter case is an approximation, valid when kmin << comoving Hubble scale today.
- * Returns zero when k=0. Returns an error when k<0 or k > kmax.
+/** 
+ * Call CLASS and build a 2d interpolator for Plin(k,z), which will be used when building
+ * an extrapolator for P(k,z) beyond a given kmax computed by CLASS.
+ *
+ * @param Cx    Input: pointer to Cosmology structure
+ * @return a structure containing the interpolation pointers
+ */
+struct PS_xtr * PS_xtrapol_init(struct Cosmology *Cx) 
+{
+    struct PS_xtr *PS_xtrapol;
+
+    // Allocation of the PS extrapolations object
+    PS_xtrapol  = (struct PS_xtr *)malloc(sizeof(struct PS_xtr));
+
+    // int nk             = 1800;
+    int nk             = 1400;
+    int nz             = 100; 
+    int nkz            = nz * nk;
+
+    // double *k_arr      = loginit_1Darray(nk, 2.*PS_KMIN, (1.-0.001)*PS_KMAX);
+    // double *k_arr      = loginit_1Darray(nk, 1.1*PS_KMIN, gb.kmax_CLASS);
+    double *k_arr      = loginit_1Darray(nk, 5.e-5, gb.kmax_CLASS);
+
+    double *z_arr      = init_1Darray(nz, 0., PS_ZMAX);
+    double *logk_arr   = make_1Darray(nk);
+    double *logpkz     = make_1Darray(nkz);
+    double *logpkz_arr = make_1Darray(nkz);
+
+    const gsl_interp2d_type *T       = gsl_interp2d_bicubic;
+    PS_xtrapol->z_accel_ptr          = gsl_interp_accel_alloc();
+    PS_xtrapol->logk_accel_ptr       = gsl_interp_accel_alloc();
+    PS_xtrapol->logpkz_spline2d_ptr  = gsl_spline2d_alloc(T, nz, nk);
+
+    int i, l, m, p;
+    for(p=0; p<nk; p++)
+    {
+        logk_arr[p]  = log(k_arr[p]);
+    }
+
+    i = 0.;
+    for(l=0;l<nz;l++){
+        for(m=0;m<nk;m++){
+          logpkz[i] = log(PS_class(Cx,k_arr[m],z_arr[l],LINEAR));
+          gsl_spline2d_set(PS_xtrapol->logpkz_spline2d_ptr, logpkz_arr, l, m, logpkz[i]);
+          i += 1;
+        }
+    }
+
+    gsl_spline2d_init(PS_xtrapol->logpkz_spline2d_ptr, z_arr, logk_arr, logpkz_arr, nz, nk);
+
+    PS_xtrapol->initialized = _TRUE_;
+
+    free(k_arr);
+    free(z_arr);
+    free(logk_arr);
+    free(logpkz);
+    free(logpkz_arr);
+
+    return PS_xtrapol;
+
+}
+
+/** 
+ * frees the interpolation elements for P_m spline 
+ *
+ * @param PS_xtr  Input: pointer to the structure containing the interpolation pointers
+ * @return an integer indicating sucess
+ */
+int PS_xtrapol_free(struct PS_xtr * PS_xtrapol)
+{
+    gsl_interp_accel_free(PS_xtrapol->z_accel_ptr);
+    gsl_interp_accel_free(PS_xtrapol->logk_accel_ptr);
+    gsl_spline2d_free(PS_xtrapol->logpkz_spline2d_ptr);
+    free(PS_xtrapol);
+
+    return _SUCCESS_;
+}
+
+
+/** 
+ * Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS, 
+ * same expansion as that used in CORE cosmology librrary (see arXiv:1812.05995)
+ * If requested k-value was beyond what is calculated by CLASS, this function extrapolates
  * 
  * @param Cx                Input: pointer to Cosmology structure
  * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
- * @param modes             Input: switch to decide whether to compute linear or nonlinear spectrum
- *                              It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
- * 
  * @return the double value of matter power spectrum
  */
-double Pk_dlnPk(struct Cosmology *Cx, double k, double z, int mode)
+double PS(struct Cosmology *Cx, double k, double z)
 {
 
-  double pk,pk_cb;
-  double result;
+    //Richardson extrapolation  // A_n+1(x) = (2^n A_n(2x) - A_n(x)) / (2^n - 1)
+    double pk    = 0.;
+    double log_k = log(k);
 
-  double *pk_ic    = (double*) calloc(Cx -> ccs.sp.ic_ic_size[Cx -> ccs.sp.index_md_scalars], sizeof(double));
-  double *pk_cb_ic = (double*) calloc(Cx -> ccs.sp.ic_ic_size[Cx -> ccs.sp.index_md_scalars], sizeof(double)); 
+    if(k <= gb.kmax_CLASS){
+        pk = PS_class(Cx, k, z, LINEAR);
+    }
+    else if(k > gb.kmax_CLASS)
+    {   
+
+        double inc      = 0.01;
+        double Deltalnk = 0.03;
+        double k0       = gb.kmax_CLASS - 2.*Deltalnk;
+        double log_k0   = log(k0);   
+        double log_kmax = log_k0* (1. + inc);
+        double log_kmin = log_k0* (1. - inc);
+
+        double log_pk0z      = gsl_spline2d_eval(Cx->PS_xtrapol->logpkz_spline2d_ptr, z, log_k0, Cx->PS_xtrapol->z_accel_ptr, Cx->PS_xtrapol->logk_accel_ptr);
+        double d1_lnpk0z     = gsl_spline2d_eval_deriv_y(Cx->PS_xtrapol->logpkz_spline2d_ptr, z, log_k0, Cx->PS_xtrapol->z_accel_ptr, Cx->PS_xtrapol->logk_accel_ptr);
+        double d2_lnpk0z     = gsl_spline2d_eval_deriv_yy(Cx->PS_xtrapol->logpkz_spline2d_ptr, z, log_k0, Cx->PS_xtrapol->z_accel_ptr, Cx->PS_xtrapol->logk_accel_ptr);
+
+        double logpk_xtrapol    = log_pk0z + d1_lnpk0z * (log_k - log_k0) + 0.5 * d2_lnpk0z * pow((log_k - log_k0),2.);
+        double pk_xtrapol       = exp(logpk_xtrapol);
+
+        pk = pk_xtrapol;
+    }
+        
+    return pk;
+}
+
+
+
+/**
+ * Call CLASS-V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z 
+ * In LIM_FISHER code, we always include massive neutrinos. In this case, to compute the galaxy power spectrum, we should use cdm+b pk.
+ * Therefore hete when calling PS_class, we always get cdm+b pk, i.e. set &Cx -> ccs.fo.index_pk_cb. 
+ * If you wanted to set neutrinos to be massless, you should replace this index by &Cx -> ccs.fo.index_pk_m
+ * The older routine of CLASS-v2.7, spectra_pk_at_k_and_z(), is replaced by fourier_pk_at_k_and_z(),
+
+ * Input k is in unit of 1/Mpc. First convert it to h/Mpc, and also convert the final matter power spectrum in unit of (Mpc/h)^3
+ * 
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param k                 Input: wavenumbber in unit of 1/Mpc
+ * @param z                 Input: redshift to compute the spectrum
+ * @param mode              Input: switch to decide whether to compute linear (LPOWER) or nonlinear (NLPOWER) spectrum
+ * @return the double value of matter power spectrum
+ */
+double PS_class(struct Cosmology *Cx, double k, double z, long mode) 
+{
+  
+  double result;
+  double pk_cb;
 
   if(k< PS_KMIN || k>  PS_KMAX){
-    printf("Error in PS: the requested value of k (%12.6e) exceeds the tabulation.\nReturning 0.0", k);
+    printf("Error in PS: the requested value of k (%12.6e) exceeds the tabulation up to (%12.6e).\nReturning 0.0", k,PS_KMAX);
     return 0.0;
   } 
   else if (k>= PS_KMIN && k<= PS_KMAX){ /* make sure that the requested k-value is within the range set for CLASS*/
-    if (mode == LPOWER){
-      spectra_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.sp, k, z, &pk, pk_ic, &pk_cb, pk_cb_ic); 
+    if (mode == LINEAR){
+      // harmonic_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.hr, k, z, &pk, pk_ic, &pk_cb, pk_cb_ic); 
+      fourier_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.fo, pk_linear, k, z, Cx -> ccs.fo.index_pk_cb, &pk_cb, NULL);
     }
-    else if (mode == NLPOWER){
-      spectra_pk_nl_at_k_and_z(&Cx->ccs.ba, &Cx->ccs.pm, &Cx->ccs.sp, k, z, &pk, &pk_cb); 
+    else if (mode == NONLINEAR){
+      fourier_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.fo, pk_nonlinear, k, z, Cx -> ccs.fo.index_pk_cb, &pk_cb, NULL);
+
     }
   }
-       
-  result = pk;
-
-  free(pk_ic);
-  free(pk_cb_ic);
+  
+  result = pk_cb;
 
   return result;
 } 
+
 
 
 /**
@@ -464,7 +568,6 @@ double Pk_dlnPk(struct Cosmology *Cx, double k, double z, int mode)
  * @param mode              Input: switch to decide whether to evaluate the interpolator of the power spectrum or free the interpolator
  * @return the HV linear matter power spectrum
  */
-
 double Pk_dlnPk_HV(struct Cosmology *Cx, double k, double z, int mode)
 {
 
@@ -547,7 +650,7 @@ double Pk_dlnPk_HV(struct Cosmology *Cx, double k, double z, int mode)
 
   double pkz, growth2;
   if(mode == LPOWER){
-    growth2 = pow(growth_D(Cx, z),2.);
+    growth2 = pow(growth_D(Cx, k, z),2.);
     pkz     = growth2 * pk/pow(gb.h,3.);  
   }  
   else if (mode == CLEANUP){
@@ -562,211 +665,110 @@ double Pk_dlnPk_HV(struct Cosmology *Cx, double k, double z, int mode)
 
 
 /**
- * Compute the transfer function for different species depending on the switch "mode", which 
- * can be set to cdm, baryons or total matter transfer function.
+ * call CLASS-V3.1 to compute transfer function for different species depending on the switch "mode"
+ * mode can be set to cdm, baryons or total matter transfer function.
+ *
+ * The older routine of CLASS-v2.7, spectra_tk_at_k_and_z(), is replaced by perturbations_sources_at_k_and_z(),
+ * which evaluates the matter transfer functions at a given value of k and z 
  * 
- * CLASS function spectra_tk_at_k_and_z() routine evaluates the matter transfer functions at a given
- * value of k and z by interpolating in a table of all \f$ T_i(k,z)\f$'s
- * computed at this z by spectra_tk_at_z() (when kmin <= k <= kmax).
- * Returns an error when k<kmin or k > kmax. 
- *   
  * @param Cx                Input: pointer to Cosmology structure
  * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
- * @param mode              Input: switch to decide for which species we want to get the transfer function
- * @return the transfer function
+ * @param mode              Input: switch to decide which species to consider, can be set to cdm, baryons or total matter transfer function.
+ * @return the transfer function of a given species
  */
-
-double Mk_dlnMk(struct Cosmology *Cx, double k, double z, int mode)
+double transfer(struct Cosmology *Cx, double k, double z, int mode)
 {
-  double *tk;
-  double t_cdm = 0.0;
-  // double t_m = 0.0;
 
-  class_alloc(tk,sizeof(double)* Cx -> ccs.sp.tr_size,Cx -> ccs.errmsg);
+  double f = 0.;
 
-
-  if (k>= PS_KMIN && k<= PS_KMAX){
-    if(mode == TRANS){
-        spectra_tk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.sp, k , z, tk);  ////This class function calculates the linear transfer function for an arbitrary wavenumber and redshift
-        t_cdm = -tk[Cx -> ccs.sp.index_tr_delta_cdm];  
-        // t_m = -tk[Cx -> ccs.sp.index_tr_delta_tot];   
-    }
-    else if(mode == DER){
-      t_cdm =0.;
-    }         
+  if(mode == CDM){
+    double t_cdm =0.;
+    perturbations_sources_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pt, Cx -> ccs.pt.index_md_scalars, Cx -> ccs.pt.index_ic_ad, Cx -> ccs.pt.index_tp_delta_cdm,k,z,&t_cdm);
+    f = - t_cdm;
+  }
+  else if(mode == BA){
+    double t_ba =0.;
+    perturbations_sources_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pt, Cx -> ccs.pt.index_md_scalars, Cx -> ccs.pt.index_ic_ad, Cx -> ccs.pt.index_tp_delta_b ,k,z,&t_ba);
+    f = - t_ba;
+  }
+  else if(mode == TOT){
+    double t_tot =0.;
+    perturbations_sources_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pt, Cx -> ccs.pt.index_md_scalars, Cx -> ccs.pt.index_ic_ad, Cx -> ccs.pt.index_tp_delta_tot,k,z,&t_tot);
+    f = - t_tot;
   }
 
-  free(tk);
-
-  return t_cdm; 
-  //return t_m; 
-
-
-}
-
-
-/** 
- * The integrand function passed to qags integrator to compute the variance of the matter density
- *   
- * @param x                 Input: integration variable
- * @param par               Input: integration parmaeters
- * @return value of the integrand 
- */
-double sig_sq_integrand(double x, void *par)
-  {
-    double f=0;
-    double result = 0;
-    
-    struct integrand_parameters2 pij;
-    pij = *((struct integrand_parameters2 *)par);
-
-
-    double k = exp(x);
-    struct Cosmology *Cx = pij.p1;
-    double z = pij.p4;
-    double R = pij.p5;
-
-    result = 1./(2.*pow(M_PI,2.))* pow(k,3) * pow(window_rth(k,R),2.)* Pk_dlnPk(Cx,k,z,LPOWER);
-
-
-    return result;
-
-  } 
-
-
-/** 
- * Compute variance of smoothed matter density fluctuations. 
- * The function sig_sq_integrand() defines the integrand and sig_sq() computes the k-integral
- *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @param R                 Input: smoothing scale in unit of Mpc
- * @return the variance
- */
-double sig_sq(struct Cosmology *Cx, double z, double R)
-{
-  double result=0., error=0.;
-  gsl_integration_workspace *w = gsl_integration_workspace_alloc(10000000);
-
-  struct integrand_parameters2 par; 
-
-  double kmin = log(gb.PS_kmin);
-  double kmax = log(gb.PS_kmax);
-
-  gsl_function F;
-  F.function = &sig_sq_integrand;
-  F.params = &par;
-
-  par.p1  = Cx;
-  par.p4  = z;
-  par.p5  = R;
-
-  gsl_integration_qags(&F,kmin,kmax,0.0,1.0e-3,10000000,w,&result,&error);
-  gsl_integration_workspace_free (w);
-    
-
-  return result;
-
-}
-
-
-/** 
- * Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w.r.t. smoothing scale
- *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @param R                 Input: smoothing scale in unit of Mpc
- * @return the log-derivative of variance
- */
-
-double der_lnsig_sq(struct Cosmology *Cx, double z, double R)
-{
-
-  double inc  = 0.01;
-  double Rmin = (1.-inc)*R;
-  double Rmax = (1.+inc)*R;
-
-  double f =  (log(sig_sq(Cx,z,Rmax)) - log(sig_sq(Cx,z,Rmin)))/(2.*inc*R);
-
   return f; 
-
 }
 
-
-/** 
- * The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density
- *   
- * @param x                 Input: integration variable
- * @param par               Input: integration parmaeters
- * @return value of the integrand 
- */
-double sigma0_sq_integrand(double x, void *par)
-{
-  
-  struct integrand_parameters2 pij;
-  pij = *((struct integrand_parameters2 *)par);
-
-  double k = exp(x);
-
-  struct Cosmology *Cx = pij.p1;
-  double z             = pij.p4;
-
-  double result = 1./(2.*pow(M_PI,2.))* pow(k,3.) * Pk_dlnPk(Cx,k,z,LPOWER);
-
-  return result;
-
-} 
-
-
-/** 
- * Compute variance of unsmoothed matter density fluctuations. 
- * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
- *   
- * @param Cx                Input: pointer to Cosmology structure
- * @param z                 Input: redshift to compute the spectrum
- * @return the unsmoothed variance
- */
-double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  ///kmax is in unit of 1/Mpc
-{
-
-	double result, error;
-	gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
-
-	struct integrand_parameters2 par; 
-
-	double kmin = log(0.0001*gb.h);
-
-	gsl_function F;
-	F.function = &sigma0_sq_integrand;
-	F.params   = &par;
-
-	par.p1 = Cx;
-	par.p4 = z;
-
-  gsl_integration_qags(&F,kmin,log(kmax),0.0,1.0e-4,1000000,w,&result,&error);
-  gsl_integration_workspace_free (w);
-     
-  return result;
-
-	
-}
 
 /**
- * Compute the growth factor D(k,z) which is scale-indep if mode_nu = NUM, and scale-dep if mode_nu = MASS
+ * Compute the growth factor D(k,z) for a general case where it can be scale-dependant
  * The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero.
- * The scale-indep growth is computed by CLASS directly
- * The switch "mode" can be set to CDM, BA, TOT to return the growth factor of 
  * cdm, baryon and total matter. 
- * 
+ *  
  * @param Cx                Input: pointer to Cosmology structure
  * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
  * @return the growth factor, can be k-dep (ex. with nonzero neutrino mass)
  */
+double growth_D(struct Cosmology *Cx, double k, double z)
+{
+  double growth_fac = 0.;
 
-double growth_D(struct Cosmology *Cx, double z)
+  // growth_fac = pow(PS(Cx, k, z, LINEAR)/PS_class(Cx, k, 0, LINEAR),1./2.); 
+  growth_fac = pow(PS(Cx, k, z)/PS(Cx, k, 0),1./2.); 
+
+
+  return growth_fac;
+}
+
+
+/**
+ * Compute the growth factor D(k,z) by taking the ratio of the transfer function at redshift z and zero.
+ * For a general case growth rate can be scale-dependant
+ *  
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param k                 Input: wavenumbber in unit of 1/Mpc
+ * @param z                 Input: redshift to compute the spectrum
+ * @return the growth factor
+ */
+double growth_f(struct Cosmology *Cx, double k, double z)
+{
+  double f = 0.;
+  double inc = 0.01;
+
+  /* 
+    * If considering massive neutrinos 
+  */
+  // double P_ref   = PS(Cx, k, z, LINEAR); 
+  // double P_right = PS(Cx, k, z*(1.+inc), LINEAR); 
+  // double P_left  = PS(Cx, k, z*(1.-inc), LINEAR); 
+  double P_ref   = PS(Cx, k, z); 
+  double P_right = PS(Cx, k, z*(1.+inc)); 
+  double P_left  = PS(Cx, k, z*(1.-inc)); 
+  
+  f = - 0.5 * (P_right - P_left)/(2.*inc*z) * (1.+z)/P_ref;
+  
+
+  return f;
+}
+
+
+
+/**
+ * Compute the growth factor D(k,z) which is scale-indep valid when neutrinos are massless
+ * The scale-dep growth is calculated by taking the ratio of the transfer function at redshift z and zero.
+ * The scale-indep growth is computed by CLASS directly
+ * 
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param k                 Input: wavenumbber in unit of 1/Mpc
+ * @param z                 Input: redshift to compute the spectrum
+ * @return the growth factor, can be k-dep (ex. with nonzero neutrino mass)
+ */ 
+double scale_indep_growth_D(struct Cosmology *Cx, double z)
 { 
+  extern struct globals gb;
 
   double tau;
   int last_index; ///junk
@@ -776,7 +778,7 @@ double growth_D(struct Cosmology *Cx, double z)
 
   class_call(background_tau_of_z(&Cx -> ccs.ba,z,&tau),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
-  class_call(background_at_tau(&Cx -> ccs.ba,tau,Cx -> ccs.ba.long_info,Cx -> ccs.ba.inter_normal,&last_index,pvecback),
+  class_call(background_at_tau(&Cx -> ccs.ba,tau,long_info,inter_normal,&last_index,pvecback),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
 
   double Dz = pvecback[Cx -> ccs.ba.index_bg_D];
@@ -787,23 +789,17 @@ double growth_D(struct Cosmology *Cx, double z)
 }
 
 
-
 /**
- * Compute the scale-dependant linear growth rate f(k,z) (i.e the velocity growth factor)
- * by taking numerical derivative of the scale_dep_growth_D() function f(k,a) = d ln D(k,a)/d ln a.
- * The switch "mode" can be set to CDM, BA, TOT to return the growth factor of the corresponding matter component.
- *
- * This is a useful function when constraining physics that induces scale-dependant growth 
- * such as massive neutrinos. 
- * 
+ * Compute the scale-independent growth rate f(z) which is scale-indep valid when neutrinos are massless
+ *   
  * @param Cx                Input: pointer to Cosmology structure
  * @param k                 Input: wavenumbber in unit of 1/Mpc
  * @param z                 Input: redshift to compute the spectrum
- * @return the growth rate, can be k-dep (ex. with nonzero neutrino mass)
+ * @return the growth factor
  */
-
-double growth_f(struct Cosmology *Cx, double z)
+double scale_indep_growth_f(struct Cosmology *Cx, double z)
 { 
+  extern struct globals gb;
 
   double tau;
   int last_index; ///junk
@@ -813,7 +809,7 @@ double growth_f(struct Cosmology *Cx, double z)
 
   class_call(background_tau_of_z(&Cx -> ccs.ba,z,&tau),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
-  class_call(background_at_tau(&Cx -> ccs.ba,tau,Cx -> ccs.ba.long_info,Cx -> ccs.ba.inter_normal,&last_index,pvecback),
+  class_call(background_at_tau(&Cx -> ccs.ba,tau,long_info,inter_normal,&last_index,pvecback),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
 
   double fz = pvecback[Cx -> ccs.ba.index_bg_f];
@@ -827,13 +823,11 @@ double growth_f(struct Cosmology *Cx, double z)
 
 /**
  * Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background module). 
- * This function is to a good approximation equal to Hubble(a,Cx) = gb.h*sqrt(Eofa(a,Cx)) 
  * 
  * @param Cx                Input: pointer to Cosmology structure
  * @param z                 Input: redshift to compute the spectrum
  * @return the hubble parameter
  */
-
 double Hubble(struct Cosmology *Cx, double z)
 {
 
@@ -845,7 +839,7 @@ double Hubble(struct Cosmology *Cx, double z)
   
   class_call(background_tau_of_z(&Cx -> ccs.ba,z,&tau),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
-  class_call(background_at_tau(&Cx -> ccs.ba,tau,Cx -> ccs.ba.long_info,Cx -> ccs.ba.inter_normal,&last_index,pvecback),
+  class_call(background_at_tau(&Cx -> ccs.ba,tau,long_info,inter_normal,&last_index,pvecback),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
  
   double H = gb.c*pvecback[Cx -> ccs.ba.index_bg_H];
@@ -869,7 +863,6 @@ double Hubble(struct Cosmology *Cx, double z)
  * @param z                 Input: redshift to compute the spectrum
  * @return  D_A
  */
-
 double angular_distance(struct Cosmology *Cx, double z)
 {
        
@@ -881,7 +874,7 @@ double angular_distance(struct Cosmology *Cx, double z)
 
   class_call(background_tau_of_z(&Cx -> ccs.ba,z,&tau),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
-  class_call(background_at_tau(&Cx -> ccs.ba,tau,Cx -> ccs.ba.long_info,Cx -> ccs.ba.inter_normal,&last_index,pvecback),
+  class_call(background_at_tau(&Cx -> ccs.ba,tau,long_info,inter_normal,&last_index,pvecback),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
 
   double D_A = pvecback[Cx -> ccs.ba.index_bg_ang_distance];
@@ -900,25 +893,26 @@ double angular_distance(struct Cosmology *Cx, double z)
  * @param z                 Input: redshift to compute the spectrum
  * @return the double value D_c
  */
-
 double comoving_radial_distance(struct Cosmology *Cx, double z)
 {
   double tau;
   int last_index; ///junk
   double * pvecback;
-
-  ///For a flat cosmology, comoving distance is equal to conformal distance. This pieace of code is how 
-  ///the comving distance for flat and nonflat cases are computed. Chnage the expression of D_A below
-  ///According to this if considering non-flat cosmology. 
-  // if (pba->sgnK == 0) comoving_radius = pvecback[pba->index_bg_conf_distance];
-  // else if (pba->sgnK == 1) comoving_radius = sin(sqrt(pba->K)*pvecback[pba->index_bg_conf_distance])/sqrt(pba->K);
-  // else if (pba->sgnK == -1) comoving_radius = sinh(sqrt(-pba->K)*pvecback[pba->index_bg_conf_distance])/sqrt(-pba->K);
+ 
+ /*
+  * For a flat cosmology, comoving distance is equal to conformal distance. This pieace of code is how 
+  * the comving distance for flat and nonflat cases are computed. Chnage the expression of D_A below
+  * According to this if considering non-flat cosmology. 
+  * if (pba->sgnK == 0) comoving_radius = pvecback[pba->index_bg_conf_distance];
+  * else if (pba->sgnK == 1) comoving_radius = sin(sqrt(pba->K)*pvecback[pba->index_bg_conf_distance])/sqrt(pba->K);
+  * else if (pba->sgnK == -1) comoving_radius = sinh(sqrt(-pba->K)*pvecback[pba->index_bg_conf_distance])/sqrt(-pba->K);
+  */
 
   pvecback = (double*) calloc(Cx -> ccs.ba.bg_size,sizeof(double));
 
   class_call(background_tau_of_z(&Cx -> ccs.ba,z,&tau),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
-  class_call(background_at_tau(&Cx -> ccs.ba,tau,Cx -> ccs.ba.long_info,Cx -> ccs.ba.inter_normal,&last_index,pvecback),
+  class_call(background_at_tau(&Cx -> ccs.ba,tau,long_info,inter_normal,&last_index,pvecback),
             Cx->ccs.ba.error_message,Cx->ccs.pt.error_message);
 
   double D_c = pvecback[Cx -> ccs.ba.index_bg_conf_distance];
@@ -929,6 +923,151 @@ double comoving_radial_distance(struct Cosmology *Cx, double z)
 
 }
 
+
+
+/** 
+ * The integrand function passed to qags integrator to compute the variance of the smoothed matter density
+ *   
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
+ */
+double sig_sq_integrand(double x, void *par)
+{
+  double f=0;
+  double result = 0;
+  
+  struct integrand_parameters2 pij;
+  pij = *((struct integrand_parameters2 *)par);
+
+  double k = exp(x);
+
+  ////For testing the impact of the extrapolation on HMF, assuming LCDM, I compute the variance using the matter power
+  ////spectrum calculated by CLASS up to kmax = 200, vs extrapolated power spectrum from kmax_class<k<200 
+  // result = 1./(2.*pow(M_PI,2.))* pow(k,3.) * pow(window_rth(k,pij.p5),2.)* PS_class(pij.p1,k,pij.p4,LINEAR);
+
+  result = 1./(2.*pow(M_PI,2.))* pow(k,3.) * pow(window_rth(k,pij.p5),2.)* PS(pij.p1,k,pij.p4);
+
+  return result;
+
+} 
+
+/** 
+ * Compute variance of smoothed matter density fluctuations. 
+ * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift to compute the spectrum
+ * @return the unsmoothed variance
+ */
+double sig_sq(struct Cosmology *Cx, double z, double R)
+{
+  extern struct globals gb;
+
+  double result=0., error=0.;
+  gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
+
+  struct integrand_parameters2 par; 
+
+  double kmin = log(gb.PS_kmin);
+  double kmax = log(gb.PS_kmax);
+
+  gsl_function F;
+  F.function = &sig_sq_integrand;
+  F.params = &par;
+
+  par.p1 = Cx;
+  par.p4 = z;
+  par.p5 = R;
+
+  gsl_integration_qags(&F,kmin,kmax,0.0,1.0e-4,1000000,w,&result,&error);
+  gsl_integration_workspace_free (w);
+     
+  return result;
+}
+
+
+/** 
+ * Compute the logarithmic derivative of the variance of smoothed matter density fluctuations w.r.t. smoothing scale
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift to compute the spectrum
+ * @param R                 Input: smoothing scale in unit of Mpc
+ * @return the log-derivative of variance
+ */
+double der_lnsig_sq(struct Cosmology *Cx, double z, double R)
+{
+
+  double inc  = 0.01;
+  double Rmin = (1.-inc)*R;
+  double Rmax = (1.+inc)*R;
+
+  double f =  (log(sig_sq(Cx,z,Rmax)) - log(sig_sq(Cx,z,Rmin)))/(2.*inc*R);
+
+  return f; 
+
+}
+
+
+/** 
+ * The integrand function passed to qags integrator to compute the variance of the unsmoothed matter density
+ *   
+ * @param x                 Input: integration variable
+ * @param par               Input: integration parmaeters
+ * @return value of the integrand 
+ */
+double sigma0_sq_integrand(double x, void *par)
+{
+  double f=0;
+  double result = 0;
+  
+  struct integrand_parameters2 pij;
+  pij = *((struct integrand_parameters2 *)par);
+
+
+  double k = exp(x);
+
+  // result = 1./(2.*pow(M_PI,2.))* pow(k,3.) * PS(pij.p1,k,pij.p4,LINEAR);
+  result = 1./(2.*pow(M_PI,2.))* pow(k,3.) * PS(pij.p1,k,pij.p4);
+
+  return result;
+
+} 
+
+
+/** 
+ * Compute variance of unsmoothed matter density fluctuations. 
+ * The function sigma0_integrand() defines the integrand and sigma0_sq() computes the k-integral
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param z                 Input: redshift to compute the spectrum
+ * @return the unsmoothed variance
+ */
+double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  ///kmax is in unit of 1/Mpc
+{
+  extern struct globals gb;
+
+  double result, error;
+  gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
+
+  struct integrand_parameters2 par; 
+
+  double kmin = log(0.0001*gb.h);
+
+  gsl_function F;
+  F.function = &sigma0_sq_integrand;
+  F.params = &par;
+
+  par.p1 = Cx;
+  par.p4 = z;
+
+  gsl_integration_qags(&F,kmin,log(kmax),0.0,1.0e-4,1000000,w,&result,&error);
+  gsl_integration_workspace_free (w);
+     
+  return result;  
+}
+
+
 /** 
  * Compute the critical density in unit of M_sun/Mpc^3 
  *   
@@ -936,7 +1075,6 @@ double comoving_radial_distance(struct Cosmology *Cx, double z)
  * @param z                 Input: redshift to compute the spectrum
  * @return the double value of rho_c
  */
-
 double rhoc(struct Cosmology *Cx, double z)
 {
 
@@ -950,13 +1088,12 @@ double rhoc(struct Cosmology *Cx, double z)
 
 
 /** 
- * Compute the Lagrangian radius of halos in unit of  1/Mpc^3 , fixing z=0
+ * Compute the Lagrangian radius of halos in unit of  Mpc , fixing z=0
  *   
  * @param Cx                Input: pointer to Cosmology structure
  * @param h_mass            Input: halo mass in unit of solar mass
  * @return R_s
  */
-
 double R_scale(struct Cosmology *Cx, double M)  
 {
 
@@ -969,16 +1106,32 @@ double R_scale(struct Cosmology *Cx, double M)
   return f;
 }
 
+/** 
+ * Compute the Lagrangian radius of halos in unit of  Mpc at z
+ *   
+ * @param Cx                Input: pointer to Cosmology structure
+ * @param h_mass            Input: halo mass in unit of solar mass
+ * @return R_s
+ */
+double R_scale_wrong(struct Cosmology *Cx, double z, double h_mass)  
+{
+  double f ;
+  extern struct globals gb;
+  double rho_m0 = (Cx->cosmo_pars[3]+Cx->cosmo_pars[4])*rhoc(Cx,z);
+
+  f = pow(3.*h_mass/(4.*M_PI*rho_m0),1./3.);
+
+  return f;
+}
 
 /** 
- * Compute the comoving virial radius of halos in unit of  1/Mpc^3, which is defined as the radius at which 
+ * Compute the comoving virial radius of halos in unit of  Mpc, which is defined as the radius at which 
  * the average density within this radius is Delta X rho_c 
  *   
  * @param Cx      Input: pointer to Cosmology structure
  * @param M       Input: halo mass in unit of solar mass
  * @return R_vir
  */
-
 double R_vir(struct Cosmology *Cx, double M)  
 {
 
@@ -999,7 +1152,6 @@ double R_vir(struct Cosmology *Cx, double M)
  * @param z      Input: redshift of interest
  * @return the cdm concentration
  */
-
 double concentration_cdm(double M, double z)
 {
   /*Farnik, where did you take this expression from?*/
@@ -1033,7 +1185,6 @@ double concentration_cdm(double M, double z)
  * @param z      Input: redshift of interest
  * @return the nfw profile
  */
-
 double nfw_profile(struct Cosmology *Cx, double k, double M, double z)  
 {
   

@@ -1,0 +1,16 @@
+List of changes to limHaloPT to switch from class-2.7 to class-3.1.1
+
+1) Replace the Class folder with include and library files of class-3.1.1
+2) In Global_structure.h:  added additional elements in Class_Cosmology_Struct 
+3) In header.h: three new definitions added (#define CDM 90L,  #define BA 91L,  #define TOT 92L)
+4) In cosmology.c: 
+      - Initialization of class modules are edited in function CL_Cosmology_initilize()
+      - Freeing of class modules are edited in function CL_Cosmology_free()
+      - Calling signature of matter power spectrum is changed in function Pk_dlnPk()
+      - Calling signature of transfer functions is changed in function Mk_dlnMk()
+      - Calling signature of the function background_tau_of_z() of class is changed in several limhaloPT  functions: 
+            + growth_D()
+            + growth_f()
+            + Hubble()
+            + angular_distance()
+            + comoving_radial_distance()

@@ -33,13 +33,12 @@
 #include <gsl/gsl_roots.h>	 // For finding the root of algebraic equation	
 #include <gsl/gsl_sf_expint.h>
 #include <ctype.h>
-#include "../Class/include/class.h"
 #include "cuba.h"
 
 
 #define PSC  		101L
 #define ST 		    	102L
-#define TR 		    	103L
+#define TK 		    	103L
 
 #define GROWTH		104L
 #define DERGROWTH		105L
@@ -65,8 +64,9 @@
 
 #define LPOWER		127L
 #define NLPOWER		128L
-#define TRANS		129L
-#define DER 		130L
+#define CDM 		90L
+#define BA 			91L
+#define TOT 		92L
 
 #define CO10  		131L
 #define CO21  		132L
@@ -93,18 +93,19 @@
 #define HALO 		148L
 
 
-#define PS_KMIN        1.0e-7
-#define PS_KMAX        1.0e4
+#define PS_KMIN   	1.e-5
+#define PS_KMAX   	100.1 
+#define PS_ZMAX   	14.
 
 #define CLEANUP        1 
-
 #define DO_NOT_EVALUATE -1.0
-
+#define NPARS     6
 #define MAXL 2000
 
 /** 
  * List of limHaloPT header files
  */
+#include "../Class/include/class.h"
 #include "Global_Structs.h"
 #include "cosmology.h"
 #include "utilities.h"

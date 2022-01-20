@@ -10,8 +10,8 @@
  * The other functions in these modules are utilities for computing the above two main functions. 
  *  
  * In summary, the following functions can be called from other modules:
- * -# PS_line_HM()
- * -# PS_shot_HM()
+ * -# PS_line_HM()  computes the 1loop-HM line power spectrum 
+ * -# PS_shot_HM()  computes the full line power spectrum, beyond poisson limit 
  * -# mhmc()        computes th corrections to mass integration of halo-model matter power spectrum
  * -# HM_1h2h()     performs the mass integraks for computing 1- and 2-halo terms of line-line, line-matter and matter-matter power spectra.
  * -# b22_ls()      computes the large-scale limit of P_b2b2 loop which behaves like a constant and so contributes to the shot noise. 
@@ -36,7 +36,6 @@ struct globals gb;
  * @param line_id       Inpute: id of the line to be considered. 
  * @return P_clust(k)        
  */
-
 double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long mode_mf,  long line_type, int line_id)
 {
       long cleanup = 0;
@@ -116,7 +115,7 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
       //If you wanted to plot the linear and 22 and 13 matter loops seperately, uncomment the following 3 lines
       double p22   = pow(Tbar,2.)* pow(b1_line, 2.) * ps_mloops[0];
       double p13   = pow(Tbar,2.)* pow(b1_line, 2.) * ps_mloops[1];
-      double plin  = pow(Tbar,2.)* pow(b1_line, 2.) * Pk_dlnPk(Cx, k, z, LPOWER) ;
+      double plin  = pow(Tbar,2.)* pow(b1_line, 2.) * PS(Cx, k, z) ;
       
       //Now compute the total line power specturm, including the 1- and 2-halo terms.
       double pk_1h = scatter_1h * pow(fac,2.) * result[0];
@@ -164,7 +163,6 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
  *                              It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
  * @return P_stoch(k)     
  */
-
 double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type)
 {
       double linematter[1], matter[2], line[3];
@@ -254,9 +252,7 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
 
 
 /**
- * Compute the corrections to mass integration of HM matter power spectrum. 
- * The function mhmc_integ() defines the integrand to be used by  Cuhre integration routine of CUBA library. 
- * mhmc() returns the corrections to 1- and 2-halo terms performing the integration
+ * The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration. 
  *   
  * When computing the matter power spectrum using halo-model, the mass integrations for 1- and 2-loop terms
  * get contributions from halos of all masses. For numerical computation, we need to impose a lower and upper integration 
@@ -264,22 +260,18 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
  * the choice of the lower bound affects the results. We can compute the leading order corrections to the integral that are
  * accurate up to (k R_s)^2.  (see App. A of arXiv:1511.02231 for more details.)
  * 
- * 
- * @param Cx            Input: Cosmology structure
- * @param z             Input: redshift
- * @param mode_mf       Inpute: theoretical model of halo mass function to use. 
- *                              It can  be set to Press-Schecter (PSC), sheth-Tormen (ST), Tinker (TR) 
- * @param results       Output: a 2d array of the integration results, 
- *                              - results[0]: correction to 1-halo term, 
- *                              - result[1]: correcrions to 2-halo term assuming linear halo bias
- * @return void
+ * @param ndim       Input: Dimensionality of the domain of integration
+ * @param x          Input: An array of integration variables
+ * @param ncomp      Input: Dimensionality of the integrand function
+ * @param ff         Input: Array of values of the integrand of dimension fdim
+ * @param p          Input: integration parmaeters
+ * return the error status
  */
-
 static int mhmc_integ(const int *ndim,
                        const cubareal x[],
                        const int *ncomp,
                        cubareal ff[],
-                       void *p)          // Array of values of the integrand of dimension fdim
+                       void *p)         
 {
     
       struct integrand_parameters2 pij;
@@ -309,6 +301,20 @@ static int mhmc_integ(const int *ndim,
 
 } 
 
+
+
+/**
+ * Compute the corrections to mass integration of HM matter power spectrum. 
+ *   
+ * @param Cx            Input: Cosmology structure
+ * @param z             Input: redshift
+ * @param mode_mf       Inpute: theoretical model of halo mass function to use. 
+ *                              It can  be set to Press-Schecter (PSC), sheth-Tormen (ST), Tinker (TR) 
+ * @param results       Output: a 2d array of the integration results, 
+ *                              - results[0]: correction to 1-halo term, 
+ *                              - result[1]: correcrions to 2-halo term assuming linear halo bias
+ * @return void
+ */
 void mhmc(struct Cosmology *Cx, double z, long mode_mf, double *result)
 {
       extern struct globals gb;
@@ -343,35 +349,22 @@ void mhmc(struct Cosmology *Cx, double z, long mode_mf, double *result)
       return;
 }
 
-/**
- * Compute the mass integrals to compute the 1- and 1-halo line, line-matter and matter power spectrum
- * If nfw=1, the dependance of the power spectrum on the halo profile is neglected. Otherwise, NFW halo profile is assumed
- * 
- * @param Cx            Input: Cosmology structure
- * @param k             Input: wavenumber in unit of 1/Mpc. 
- * @param z             Input: redshift
- * @param M_min         Input: minimum halo mass for mass integrals
- * @param mode_mf       Input: theoretical model of halo mass function to use. 
- *                              It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
- * @param line_type     Input: name of the line to compute.
- *                              It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
- * @param mode_hm       Input: a switch to decide whetehr to compute gthe mass integrations. It can be set to:
- *                              - LINE for line power spectrum, 
- *                              - LINEMATTER for line-matter cross spectrum 
- *                              - MATTER for matter power spectrum
- * @param results       Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:
- *                              - 3 elements if mode_hm = LINE, 
- *                              - 1 element if mode_hm = LINEMATTER
- *                              - 2 element if mode_hm = MATTER
- *                              esults[0]: correction to 1-halo term, result[1]: correcrions to 2-halo term assuming linear halo bias
- * @return void
- */
 
+/**
+ * The integrand function passed passed to Cuhre integration routine to compute 1- and 2-halo integrals
+ * 
+ * @param ndim       Input: Dimensionality of the domain of integration
+ * @param x          Input: An array of integration variables
+ * @param ncomp      Input: Dimensionality of the integrand function
+ * @param ff         Input: Array of values of the integrand of dimension fdim
+ * @param p          Input: integration parmaeters
+ * return the error status
+ */
 static int HM_1h2h_integ(const int *ndim,
                        const cubareal x[],
                        const int *ncomp,
                        cubareal ff[],
-                       void *p)          // Array of values of the integrand of dimension fdim
+                       void *p)         
 {
       double f      = 0;
       double result = 0;
@@ -427,6 +420,30 @@ static int HM_1h2h_integ(const int *ndim,
       return 0;
 }
 
+
+/**
+ * Compute the mass integrals needed for 1- and 1-halo line, line-matter and matter power spectrum
+ * If nfw=1, the dependance of the power spectrum on the halo profile is neglected. Otherwise, NFW halo profile is assumed
+ * 
+ * @param Cx            Input: Cosmology structure
+ * @param k             Input: wavenumber in unit of 1/Mpc. 
+ * @param z             Input: redshift
+ * @param M_min         Input: minimum halo mass for mass integrals
+ * @param mode_mf       Input: theoretical model of halo mass function to use. 
+ *                              It can  be set to sheth-Tormen (ST), Tinker (TR) or Press-Schecter (PSC)
+ * @param line_type     Input: name of the line to compute.
+ *                              It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
+ * @param mode_hm       Input: a switch to decide whetehr to compute gthe mass integrations. It can be set to:
+ *                              - LINE for line power spectrum, 
+ *                              - LINEMATTER for line-matter cross spectrum 
+ *                              - MATTER for matter power spectrum
+ * @param results       Output: anarray of the integration results. Number of elements varies depending on mode_hm switch:
+ *                              - 3 elements if mode_hm = LINE, 
+ *                              - 1 element if mode_hm  = LINEMATTER
+ *                              - 2 element if mode_hm  = MATTER
+ *                              esults[0]: correction to 1-halo term, result[1]: correcrions to 2-halo term assuming linear halo bias
+ * @return void
+ */
 void HM_1h2h(struct Cosmology *Cx, double k, double z, double M_min,
             long mode_mf, long line_type, long mode_hm, double *result)  /// in unit of M_sun/Mpc^3
 {
@@ -480,11 +497,14 @@ void HM_1h2h(struct Cosmology *Cx, double k, double z, double M_min,
 
 
 /**
- * Compute the large-scale limit of P_b2b2 loop
+ * The integrand function passed passed to Cuhre integration routine to compute large-scale limit of b22 (shot-noise contribution)
  * 
- * @param Cx            Input: Cosmology structure
- * @param z             Input: redshift
- * @return b22_ls
+ * @param ndim       Input: Dimensionality of the domain of integration
+ * @param x          Input: An array of integration variables
+ * @param ncomp      Input: Dimensionality of the integrand function
+ * @param ff         Input: Array of values of the integrand of dimension fdim
+ * @param p          Input: integration parmaeters
+ * return the error status
  */
 static int b22_ls_integrand(const int *ndim,
                              const cubareal x[],
@@ -515,6 +535,14 @@ static int b22_ls_integrand(const int *ndim,
       return 0;
 } 
 
+
+/**
+ * Compute the large-scale limit of P_b2b2 loop
+ * 
+ * @param Cx            Input: Cosmology structure
+ * @param z             Input: redshift
+ * @return b22_ls
+ */
 double b22_ls(struct Cosmology *Cx, double z)
 {
       struct integrand_parameters2 par; 

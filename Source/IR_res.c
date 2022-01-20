@@ -26,7 +26,6 @@
  * @param k            Input: wavenumber in unit of 1/Mpc. 
  * @param z            Input: redshift
  * @param SPLIT        Input: switch to set the method of wiggle-nowiggle split
- * 
  * @return value of leading IR-ressumed power spectrum           
  */
 double pm_IR_LO(struct Cosmology *Cx, double k, double z, long SPLIT)
@@ -37,7 +36,7 @@ double pm_IR_LO(struct Cosmology *Cx, double k, double z, long SPLIT)
           sig2_LO = IR_Sigma2(Cx,z, kf0, SPLIT);
     }
     double p_nowiggle = pm_nowiggle(Cx, k, z, kf0, 0, SPLIT);
-    double p_wiggle   = Pk_dlnPk(Cx, k, z, LPOWER) - p_nowiggle;
+    double p_wiggle   = PS(Cx, k, z) - p_nowiggle;
     double sup        = exp(-k * k * sig2_LO);
     double f          = p_nowiggle + sup * p_wiggle;
 
@@ -52,21 +51,20 @@ double pm_IR_LO(struct Cosmology *Cx, double k, double z, long SPLIT)
  * @param k            Input: wavenumber in unit of 1/Mpc. 
  * @param z            Input: redshift
  * @param SPLIT        Input: switch to set the method of wiggle-nowiggle split
- * 
  * @return value of NL IR-ressumed power spectrum           
  */
 double pm_IR_NLO(struct Cosmology *Cx, double k,  double z, long SPLIT)
 {
     extern struct globals gb;
     static double sig2_NLO = - 1.;
-    double kf0 = 1.e-4;
+    double k0 = 1.e-4;
 
     if(sig2_NLO == - 1.){
-      sig2_NLO = IR_Sigma2(Cx,z, kf0, SPLIT);
+      sig2_NLO = IR_Sigma2(Cx,z, k0, SPLIT);
     }
 
-    double p_nowiggle = pm_nowiggle(Cx, k, z, kf0, 0, SPLIT);
-    double p_wiggle   = Pk_dlnPk(Cx, k, z, LPOWER) - p_nowiggle;
+    double p_nowiggle = pm_nowiggle(Cx, k, z, k0, 0, SPLIT);
+    double p_wiggle   = PS(Cx, k, z) - p_nowiggle;
     double sup        = exp(-k * k * sig2_NLO);
 
     double *pm_loops  =  make_1Darray(2);
@@ -89,7 +87,6 @@ double pm_IR_NLO(struct Cosmology *Cx, double k,  double z, long SPLIT)
  * 
  * @param x            Input: integration variable, k-values
  * @param par          Input: integration parameters
- * 
  * @return integrand to be used in IR_sigma2() function         
  */
 double IR_Sigma2_integrand(double x, void *par)
@@ -102,12 +99,12 @@ double IR_Sigma2_integrand(double x, void *par)
     struct Cosmology *Cx = pij.p1;
     double bao_scale     = pij.p4;
     double z             = pij.p5;
-    double kf0           = pij.p6; 
+    double k0           = pij.p6; 
     long   SPLIT         = pij.p13;
 
     double k_osc = 1./bao_scale;  /// BAO_scale = 110. Mpc/h.
 
-    result = 1./(6.*M_PI*M_PI)*pm_nowiggle(Cx, x, z, kf0, 0, SPLIT)* (1. - gsl_sf_bessel_j0(x/k_osc) + 2. * gsl_sf_bessel_j2(x/k_osc));;
+    result = 1./(6.*M_PI*M_PI)*pm_nowiggle(Cx, x, z, k0, 0, SPLIT)* (1. - gsl_sf_bessel_j0(x/k_osc) + 2. * gsl_sf_bessel_j2(x/k_osc));;
 
     return result;
 
@@ -119,12 +116,11 @@ double IR_Sigma2_integrand(double x, void *par)
  * 
  * @param Cx           Input: pointer to cosmology structure 
  * @param z            Input: redshift
- * @param kf0          Input: first element of the k-array, used in normalization of EH no-wiggle spectrum
+ * @param k0          Input: first element of the k-array, used in normalization of EH no-wiggle spectrum
  * @param SPLIT        Input: switch to set the method of wiggle-nowiggle split
- * 
  * @return value of IR resummation suppression factor          
  */
-double IR_Sigma2(struct Cosmology *Cx, double z, double kf0, long SPLIT)
+double IR_Sigma2(struct Cosmology *Cx, double z, double k0, long SPLIT)
 {
     extern struct globals gb;
     double result=0., error=0.;
@@ -143,7 +139,7 @@ double IR_Sigma2(struct Cosmology *Cx, double z, double kf0, long SPLIT)
     par.p1  = Cx;
     par.p4  = 110.;
     par.p5  = z;
-    par.p6  = kf0;
+    par.p6  = k0;
     par.p13 = SPLIT;
 
     gsl_integration_qags(&F,kmin,kmax,0.0,1.0e-3,1000000,w,&result,&error);
@@ -163,8 +159,7 @@ double IR_Sigma2(struct Cosmology *Cx, double z, double kf0, long SPLIT)
  * @param kf0          Input: first element of the k-array, used in normalization of EH no-wiggle spectrum
  * @param cleanup      Input: switch to set whether to free the memory allocated to no-wiggle interpolators
  * @param SPLIT        Input: switch to set the method of wiggle-nowiggle split
- * 
- * @return double value of no-wiggle power spectrum         
+ * @return value of no-wiggle power spectrum         
  */
 double pm_nowiggle(struct Cosmology *Cx, double k, double z, double kf0, int cleanup, long SPLIT)
 {
@@ -189,8 +184,7 @@ double pm_nowiggle(struct Cosmology *Cx, double k, double z, double kf0, int cle
  * @param k            Input: wavenumber in unit of h/Mpc. 
  * @param z            Input: redshift
  * @param cleanup      Input: switch to set whether to free the memory allocated to no-wiggle interpolators
- * 
- * @return double value of no-wiggle power spectrum         
+ * @return value of no-wiggle power spectrum         
  */
 double pm_nowiggle_bspline(struct Cosmology *Cx, double k, double z, int cleanup)
 {
@@ -265,7 +259,7 @@ double pm_nowiggle_bspline(struct Cosmology *Cx, double k, double z, int cleanup
 
 
   
-  double growth2 = pow(growth_D(Cx, z),2.);  
+  double growth2 = pow(growth_D(Cx, k, z),2.);  
   double pknw_z = growth2 * pknw;
 
 
@@ -286,8 +280,7 @@ double pm_nowiggle_bspline(struct Cosmology *Cx, double k, double z, int cleanup
  * @param k            Input: wavenumber in unit of h/Mpc. 
  * @param z            Input: redshift
  * @param cleanup      Input: switch to set whether to free the memory allocated to no-wiggle interpolators
- * 
- * @return double value of no-wiggle power spectrum         
+ * @return value of no-wiggle power spectrum         
  */
 double pm_nowiggle_gfilter(struct Cosmology *Cx, double k, double z, int cleanup)
 {
@@ -343,7 +336,7 @@ double pm_nowiggle_gfilter(struct Cosmology *Cx, double k, double z, int cleanup
   }
   
 
-  double growth2 = pow(growth_D(Cx, z),2.);
+  double growth2 = pow(growth_D(Cx, k, z),2.);
   double pknw_z = growth2 * pknw;
 
 
@@ -364,8 +357,7 @@ double pm_nowiggle_gfilter(struct Cosmology *Cx, double k, double z, int cleanup
  * @param k            Input: wavenumber in unit of h/Mpc. 
  * @param z            Input: redshift
  * @param cleanup      Input: switch to set whether to free the memory allocated to no-wiggle interpolators
- * 
- * @return double value of no-wiggle power spectrum         
+ * @return value of no-wiggle power spectrum         
  */
 double pm_nowiggle_dst(struct Cosmology *Cx, double k, double z, int cleanup)
 {
@@ -441,7 +433,7 @@ double pm_nowiggle_dst(struct Cosmology *Cx, double k, double z, int cleanup)
   
 
 
-  double growth2 = pow(growth_D(Cx, z),2.);  
+  double growth2 = pow(growth_D(Cx, k, z),2.);  
   double pknw_z = growth2 * pknw;
 
   if (cleanup == 1){
