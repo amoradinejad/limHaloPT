@@ -1,6 +1,6 @@
 
-#ifndef COSMOLOGY_H
-#define COSMOLOGY_H
+#ifndef _COSMOLOGY_H_
+#define _COSMOLOGY_H_
 
 int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax, 
             int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf);

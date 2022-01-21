@@ -1,7 +1,0 @@
-<map id="sig_sq" name="sig_sq">
-<area shape="rect" id="node1" title="Compute variance of smoothed matter density fluctuations." alt="" coords="5,31,65,57"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394" title="The integrand function passed to qags integrator to compute the variance of the smoothed matter densi..." alt="" coords="113,31,233,57"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="305,5,345,32"/>
-<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328" title="Fourier transform of top&#45;hat window in real space." alt="" coords="281,56,369,83"/>
-<area shape="rect" id="node4" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="417,5,496,32"/>
-</map>

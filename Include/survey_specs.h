@@ -1,6 +1,6 @@
 
-#ifndef SURVEY_SPECS_H
-#define SURVEY_SPECS_H
+#ifndef _SURVEY_SPECS_H_
+#define _SURVEY_SPECS_H_
 
 double shell_volume( struct Cosmology *Cx,double z, double fsky);
 double kmin_val(struct Cosmology *Cx, double zmin, double zmax, double fsky);

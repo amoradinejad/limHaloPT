@@ -1,6 +1,6 @@
 
-#ifndef WNW_SPLIT_H
-#define WNW_SPLIT_H
+#ifndef _WNW_SPLIT_H_
+#define _WNW_SPLIT_H_
 
 double pk_nw_integrand(double x, void *par); 
 double pk_Gfilter_nw( struct Cosmology *Cx, double k, double kf0); 

@@ -1,6 +1,6 @@
 
-#ifndef LINE_PS_PT_H
-#define LINE_PS_PT_H
+#ifndef _LINE_PS_PT_H_
+#define _LINE_PS_PT_H_
 
 double PS_hh_G(struct Cosmology *Cx, double k, double z, double M, long mode, long IR_switch, long SPLIT, long mode_mf);
 double PS_hh_PNG(struct Cosmology *Cx, double k, double z, double M, long mode, long IR_switch, long SPLIT, long mode_mf);

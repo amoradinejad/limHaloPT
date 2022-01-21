@@ -1,6 +1,6 @@
 
-#ifndef LINE_INGREDIENT_H
-#define LINE_INGREDIENT_H
+#ifndef _LINE_INGREDIENT_H_
+#define _LINE_INGREDIENT_H_
 
 double mass_func_sims(struct Cosmology *Cx, double M, double z, long mode_mf);
 struct Line * Line_alloc_init(struct Cosmology *Cx, long line_type, size_t npoints_interp, double M_min, long mode_mf);

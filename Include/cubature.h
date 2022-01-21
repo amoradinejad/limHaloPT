@@ -26,8 +26,8 @@
  *
  */
 
-#ifndef CUBATURE_H
-#define CUBATURE_H
+#ifndef _CUBATURE_H_
+#define _CUBATURE_H_
 
 #include <stdlib.h> /* for size_t */
 

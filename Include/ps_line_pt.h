@@ -1,5 +1,5 @@
-#ifndef LINE_PS_H
-#define LINE_PS_H
+#ifndef _LINE_PS_H_
+#define _LINE_PS_H_
 
 double PS_line( struct Cosmology *Cx, double k, double z, size_t line_id);
 double PS_line_RSD(struct Cosmology *Cx, struct Cosmology *Cx_ref,double k, double mu, double z, size_t line_id);
