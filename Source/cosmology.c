@@ -81,7 +81,7 @@ int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax,
     Cx->Lines = (struct Line **)malloc(sizeof(struct Line *) * nlines);
 
     for(int i=0; i<nlines; i++){
-      Cx->Lines[i] = Line_alloc_init(Cx, line_types[i], npoints_interp, M_min, mode_mf);
+      Cx->Lines[i] = Line_alloc_init(Cx, line_type[i], npoints_interp, M_min, mode_mf);
     }
   }
 
@@ -1099,17 +1099,17 @@ double rhoc(struct Cosmology *Cx, double z)
  * Compute the Lagrangian radius of halos in unit of  Mpc , fixing z=0
  *   
  * @param Cx                Input: pointer to Cosmology structure
- * @param hmass             Input: halo mass in unit of solar mass
+ * @param h_mass             Input: halo mass in unit of solar mass
  * @return R_s
  */
-double R_scale(struct Cosmology *Cx, double hmass)  
+double R_scale(struct Cosmology *Cx, double h_mass)  
 {
 
   double f       = 0 ;
   double omega_m0 = (Cx->cosmo_pars[3L]+Cx->cosmo_pars[4L]); 
   double rho_m   = omega_m0 *rhoc(Cx, 0.);
 
-  f = pow(3.*M/(4.*M_PI*rho_m),1./3.);
+  f = pow(3.*h_mass/(4.*M_PI*rho_m),1./3.);
 
   return f;
 }

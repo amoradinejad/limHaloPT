@@ -87,7 +87,7 @@ int *make_1D_int_array(long size)
 
 	for(i=0L; i<nrows; i++) 
 	{
-		for(j=0L;j<ncolumns;j++)
+		for(j=0L;j<ncols;j++)
 		{
 			array[i][j] = 0.0;
 		}
