@@ -8,7 +8,7 @@ authors:
   - name: Azadeh Moradinezhad Dizgah
     orcid: 0000-0001-8841-9989
     affiliation: 1
-  - name: Farnik Nickakhtar
+  - name: Farnik Nikakhtar
     orcid: 0000-0002-3641-4366
     affiliation: 2
 affiliations:
