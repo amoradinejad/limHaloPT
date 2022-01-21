@@ -17,7 +17,7 @@
  */
 
 #include "header.h"
-extern struct globals gb;
+struct globals gb;
 
 
 /**
