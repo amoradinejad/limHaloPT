@@ -2,7 +2,7 @@ INCLUDES =  -I../Include/ -I/opt/local/include  -I../Class/include
 LIBS =  -L/opt/local/lib  -L../Class/lib
 FLAGS =  -lgsl -lgslcblas -lcuba  -lclass -lm -o
 OFILESA = main.o cubature.o utilities.o cosmology.o survey_specs.o 
-OFILESB = line_ingredients.o wnw_split.o IR_res.o ps_halo_1loop.o ps_line_pt.o ps_line_hm.o 
+OFILESB = line_ingredients.o wnw_split.o ir_res.o ps_halo_1loop.o ps_line_pt.o ps_line_hm.o 
 
 limHaloPT: ${OFILESA} ${OFILESB}
 	mpicc ${OFILESA}${OFILESB} -fopenmp -Wall $(INCLUDES) $(LIBS)  $(FLAGS) limHaloPT       
@@ -20,8 +20,8 @@ line_ingredients.o: line_ingredients.o ../Include/line_ingredients.h
 	mpicc -g -c  -fopenmp line_ingredients.c -o line_ingredients.o $(INCLUDES) 
 wnw_split.o: wnw_split.c ../Include/wnw_split.h
 	mpicc -g -c  -fopenmp wnw_split.c -o wnw_split.o $(INCLUDES)
-IR_res.o: IR_res.c ../Include/IR_res.h
-	mpicc -g -c  -fopenmp IR_res.c -o IR_res.o $(INCLUDES)
+ir_res.o: ir_res.c ../Include/ir_res.h
+	mpicc -g -c  -fopenmp ir_res.c -o ir_res.o $(INCLUDES)
 ps_halo_1loop.o: ps_halo_1loop.c ../Include/ps_halo_1loop.h
 	mpicc -g -c  -fopenmp ps_halo_1loop.c -o ps_halo_1loop.o $(INCLUDES)
 ps_line_pt.o: ps_line_pt.c ../Include/ps_line_pt.h
