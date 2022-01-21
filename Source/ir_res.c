@@ -1,5 +1,5 @@
 
-/** @file IR_res.c Documented IR_res module 
+/** @file ir_res.c Documented IR_res module 
  * 
  * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
