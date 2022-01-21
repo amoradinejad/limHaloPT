@@ -1,4 +1,0 @@
-<map id="PS" name="PS">
-<area shape="rect" id="node1" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="5,5,45,32"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="93,5,172,32"/>
-</map>

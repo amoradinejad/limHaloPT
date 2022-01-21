@@ -1,8 +1,0 @@
-<map id="cleanup" name="cleanup">
-<area shape="rect" id="node1" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="5,81,72,108"/>
-<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="129,56,247,83"/>
-<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d" title="Free the memory allocated to the interpolators of star formation rate by Behroozi et al 2013." alt="" coords="120,107,256,133"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a9648c21ce0e6371a11de7a0f0ffec493" title="Free the memory allocated to CLASS cosmology structure." alt="" coords="304,5,445,32"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#a255599f7e846dd569f4ce4c946157dec" title="Free the line structure." alt="" coords="337,56,412,83"/>
-<area shape="rect" id="node5" href="$d6/d32/cosmology_8c.html#a9f048ed16d14d0f8d8970524b2e6e57c" title="frees the interpolation elements for P_m spline" alt="" coords="317,107,432,133"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="Tbar_line" name="Tbar_line">
-<area shape="rect" id="node1" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="5,81,80,108"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a01a848b612006614576adc49385076cf" title="Compute the line mean intensity in unit of erg Mpc^&#45;2 Sr^&#45;1." alt="" coords="128,56,224,83"/>
-<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="133,107,219,133"/>
-<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#a888cc1795beb4c48fe8eb3d196e9c54a" title="Compute the the hubble rate (exactly the quantity defined by CLASS as index_bg_H in the background mo..." alt="" coords="314,5,377,32"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#a0b51100183117f08ce0cfa9428fa72e4" title="Allocate the memory and initialize the the line structure." alt="" coords="294,56,397,83"/>
-<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="272,107,419,133"/>
-</map>
