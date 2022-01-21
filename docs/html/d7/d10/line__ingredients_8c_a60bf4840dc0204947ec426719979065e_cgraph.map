@@ -1,5 +1,0 @@
-<map id="mass_func_sims" name="mass_func_sims">
-<area shape="rect" id="node1" title="Read in the measured mass function of Hidden&#45;valey sims and build an interpolator for HMF(M) for a fi..." alt="" coords="5,31,127,57"/>
-<area shape="rect" id="node2" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="175,5,304,32"/>
-<area shape="rect" id="node3" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="186,56,293,83"/>
-</map>

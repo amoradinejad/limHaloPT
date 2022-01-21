@@ -1,8 +1,0 @@
-<map id="Compute_G_loops" name="Compute_G_loops">
-<area shape="rect" id="node1" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="392,68,523,95"/>
-<area shape="rect" id="node2" href="$dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="249,43,344,69"/>
-<area shape="rect" id="node3" href="$d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,5,192,32"/>
-<area shape="rect" id="node4" href="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,68,201,95"/>
-<area shape="rect" id="node5" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,131,200,157"/>
-<area shape="rect" id="node6" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,131,56,157"/>
-</map>

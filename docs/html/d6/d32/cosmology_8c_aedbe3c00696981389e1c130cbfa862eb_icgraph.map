@@ -1,6 +1,0 @@
-<map id="comoving_radial_distance" name="comoving_radial_distance">
-<area shape="rect" id="node1" title="Compute the comoving radial distance" alt="" coords="299,31,471,57"/>
-<area shape="rect" id="node2" href="$d8/d43/ps__line__pt_8c.html#a5977cca9f8e0c388f2d9e6db7945b3dc" title="Compute the 3D power spectrum of interloper line power spectrum in unit of micro K^2 Mpc^3." alt="" coords="128,5,251,32"/>
-<area shape="rect" id="node3" href="$dd/d24/survey__specs_8c.html#a91c4e0c62bcd3e179536fea62e8d53b5" title="Compute the comoving volume of a survey covering redshift up to z." alt="" coords="140,56,239,83"/>
-<area shape="rect" id="node4" href="$dd/d24/survey__specs_8c.html#a324eb852d8e2bb534361c033279c957c" title="Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin ..." alt="" coords="5,56,80,83"/>
-</map>
