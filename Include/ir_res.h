@@ -1,6 +1,6 @@
 
-#ifndef IR_RES_H
-#define IR_RES_H
+#ifndef ir_RES_H
+#define ir_RES_H
 
 double pm_nowiggle_dst(struct Cosmology *Cx, double k,double z, int mode);
 double pm_nowiggle_gfilter(struct Cosmology *Cx, double k, double z, int mode);
