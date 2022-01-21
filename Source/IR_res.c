@@ -197,7 +197,7 @@ double pm_nowiggle_bspline(struct Cosmology *Cx, double k, double z, int cleanup
   static int first = 1;
   if(first == 1){
     char pksplit_filename[FILENAME_MAX];
-    sprintf(pksplit_filename,"Input/wnw_split/pk_Bspline.txt");
+    sprintf(pksplit_filename,"./Input/wnw_split/pk_Bspline.txt");
 
     int nlines = 0;
     nlines     = count_lines_in_file(pksplit_filename);
