@@ -1,0 +1,532 @@
+\hypertarget{header_8h}{}\doxysubsection{header.\+h File Reference}
+\label{header_8h}\index{header.h@{header.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+{\ttfamily \#include $<$mpi.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+errno.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+spline.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+interp2d.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+spline2d.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+sf\+\_\+bessel.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+sf\+\_\+legendre.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+integration.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+matrix.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+linalg.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+blas.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+monte.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+monte\+\_\+vegas.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+odeiv2.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+roots.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+sf\+\_\+expint.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cuba.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cubature.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Global\+\_\+\+Structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cosmology.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}survey\+\_\+specs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}line\+\_\+ingredients.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wnw\+\_\+split.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}IR\+\_\+res.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ps\+\_\+halo\+\_\+1loop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+pt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+hm.\+h\char`\"{}}\newline
+Include dependency graph for header.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d0a/header_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d19/header_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structintegrand__parameters}{integrand\+\_\+parameters}}
+\begin{DoxyCompactList}\small\item\em A structure passed to the integrators to hold the parameters fixed in the integration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2}}
+\begin{DoxyCompactList}\small\item\em Another structure passed to the integrators to hold the parameters fixed in the integration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{header_8h_a369266c24eacffb87046522897a570d5}{\+\_\+\+GNU\+\_\+\+SOURCE}}
+\item 
+\#define \mbox{\hyperlink{header_8h_a46eb462e05a3197e84ff95d874d67f34}{PSC}}~101L
+\item 
+\#define \mbox{\hyperlink{header_8h_ab52cdc475a6866d1be7b5807fb623f50}{ST}}~102L
+\item 
+\#define \mbox{\hyperlink{header_8h_ad72e589e37189fb1e49961335cf6d0de}{TK}}~103L
+\item 
+\#define \mbox{\hyperlink{header_8h_ae08a1f7f63e9261daa3e5c9794653714}{GROWTH}}~104L
+\item 
+\#define \mbox{\hyperlink{header_8h_a9d6e99df3b4737b89960ef588e218b74}{DERGROWTH}}~105L
+\item 
+\#define \mbox{\hyperlink{header_8h_acea19b359d1c1aeb7b609e0a0458225b}{NONLINEAR}}~106L
+\item 
+\#define \mbox{\hyperlink{header_8h_ac645eb9a88619ee6f5e14c557ab8ef62}{LINEAR}}~107L
+\item 
+\#define \mbox{\hyperlink{header_8h_ad751f1b6909c0124a4ca151036b28a0e}{GAUSSIAN}}~114L
+\item 
+\#define \mbox{\hyperlink{header_8h_a41ce89044b22a1a0e5f00a9a93daa4fd}{NONGAUSSIAN}}~115L
+\item 
+\#define \mbox{\hyperlink{header_8h_ab5889105dcd019008c9448dff61323f6}{INIT}}~116L
+\item 
+\#define \mbox{\hyperlink{header_8h_a3758dd5d300a594312c95bc393378df0}{LOCAL}}~117L
+\item 
+\#define \mbox{\hyperlink{header_8h_adf6613c4d03eb50e030e2f43ec0df1e5}{EQUILATERAL}}~118L
+\item 
+\#define \mbox{\hyperlink{header_8h_ace3363397a7c244c60c3564bedd14920}{ORTHOGONAL}}~119L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8b2854ef326960560b3ff55c94a32ea1}{QSF}}~120L
+\item 
+\#define \mbox{\hyperlink{header_8h_a75ada8dfcff5e2984c05762948c72792}{HS}}~121L
+\item 
+\#define \mbox{\hyperlink{header_8h_aa1eb9d43eea0d3a9a63ab6c0dfbc2d61}{NGLOOP}}~122L
+\item 
+\#define \mbox{\hyperlink{header_8h_ac8f19ce7f171a4f50a3257367ceb285a}{der\+NGLOOP}}~123L
+\item 
+\#define \mbox{\hyperlink{header_8h_a054549cb0229d255e4b415c9d356ab3f}{QUADRATIC}}~124L
+\item 
+\#define \mbox{\hyperlink{header_8h_ae32f9ba6963238f5e38cb7ae25446479}{TIDE}}~125L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8659b9de3e544ff142b153b076f30fd5}{GAMMA}}~126L
+\item 
+\#define \mbox{\hyperlink{header_8h_a2704d1fa52e347b0e2e8ebbe4c0262ea}{LPOWER}}~127L
+\item 
+\#define \mbox{\hyperlink{header_8h_aebfb75963c6839c4104e78787375c442}{NLPOWER}}~128L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}{CDM}}~90L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}{BA}}~91L
+\item 
+\#define \mbox{\hyperlink{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}{TOT}}~92L
+\item 
+\#define \mbox{\hyperlink{header_8h_a45a98a7c684bcfbc146b6233427095f7}{CO10}}~131L
+\item 
+\#define \mbox{\hyperlink{header_8h_a9f7929279cbd7ba300195869d74af02e}{CO21}}~132L
+\item 
+\#define \mbox{\hyperlink{header_8h_a54661073f70776c6c46dd2d11f29dfb4}{CO32}}~133L
+\item 
+\#define \mbox{\hyperlink{header_8h_af6baa7ad6769ea8268e7de62c49f2d48}{CO43}}~134L
+\item 
+\#define \mbox{\hyperlink{header_8h_afbaa1f5c187627bba4d5d8e09fcefb07}{CO54}}~135L
+\item 
+\#define \mbox{\hyperlink{header_8h_a523a0a1a60673fca4846bd3f04acd15a}{CO65}}~136L
+\item 
+\#define \mbox{\hyperlink{header_8h_a251e0b44ee10891c062205226a57a162}{CII}}~137L
+\item 
+\#define \mbox{\hyperlink{header_8h_a516c7837da53b4b8b8253becce013f54}{MATTER}}~138L
+\item 
+\#define \mbox{\hyperlink{header_8h_a6d03bba620ae800aa7fe737a34af4af5}{LINEMATTER}}~139L
+\item 
+\#define \mbox{\hyperlink{header_8h_af94cfb03461685fead1fe045d5c96f01}{LINE}}~140L
+\item 
+\#define \mbox{\hyperlink{header_8h_a6fc0b23b4c9782e24b280ad09c68b7a3}{DST}}~141L
+\item 
+\#define \mbox{\hyperlink{header_8h_a6575a9cf8ba65ecb77952078b4282ead}{GFILTER}}~142L
+\item 
+\#define \mbox{\hyperlink{header_8h_a2b25214984cd9cb93e2b2b2eef79a011}{BSPLINE}}~143L
+\item 
+\#define \mbox{\hyperlink{header_8h_abf5b8fbbeb8255336e401a15a80214a8}{TREE}}~144L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8e8f11caf539de9555d07b4e7ef5b1da}{LOOP}}~145L
+\item 
+\#define \mbox{\hyperlink{header_8h_af245db63314744f2a2ff29d538fc37d5}{WIR}}~146L
+\item 
+\#define \mbox{\hyperlink{header_8h_a8a711bd77f878f23e61dfd98fc505a1c}{NOIR}}~147L
+\item 
+\#define \mbox{\hyperlink{header_8h_a506e3be0281e3c100aef41dd51e107af}{HALO}}~148L
+\item 
+\#define \mbox{\hyperlink{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}{PS\+\_\+\+KMIN}}~1.e-\/5
+\item 
+\#define \mbox{\hyperlink{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}{PS\+\_\+\+KMAX}}~100.\+1
+\item 
+\#define \mbox{\hyperlink{header_8h_a791f4d963d21043a3d7cef12c9587d4e}{PS\+\_\+\+ZMAX}}~14.
+\item 
+\#define \mbox{\hyperlink{header_8h_a922674bf1f621eb8d7cfc67d2fc870b3}{CLEANUP}}~1
+\item 
+\#define \mbox{\hyperlink{header_8h_a359c81ef959b9a9a5f58b473f4913bb0}{DO\+\_\+\+NOT\+\_\+\+EVALUATE}}~-\/1.\+0
+\item 
+\#define \mbox{\hyperlink{header_8h_a4a80e098a43386a893ebc656b14e636c}{NPARS}}~6
+\item 
+\#define \mbox{\hyperlink{header_8h_ac4041a19ac1fddefc2239437baecd8f5}{MAXL}}~2000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em List of lim\+Halo\+PT header files. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{header_8h_a369266c24eacffb87046522897a570d5}\label{header_8h_a369266c24eacffb87046522897a570d5}} 
+\index{header.h@{header.h}!\_GNU\_SOURCE@{\_GNU\_SOURCE}}
+\index{\_GNU\_SOURCE@{\_GNU\_SOURCE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{\_GNU\_SOURCE}{\_GNU\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+GNU\+\_\+\+SOURCE}
+
+\mbox{\Hypertarget{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}\label{header_8h_a8f08bd5a2a38d47a4c676bfb7c81daa9}} 
+\index{header.h@{header.h}!BA@{BA}}
+\index{BA@{BA}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{BA}{BA}}
+{\footnotesize\ttfamily \#define BA~91L}
+
+\mbox{\Hypertarget{header_8h_a2b25214984cd9cb93e2b2b2eef79a011}\label{header_8h_a2b25214984cd9cb93e2b2b2eef79a011}} 
+\index{header.h@{header.h}!BSPLINE@{BSPLINE}}
+\index{BSPLINE@{BSPLINE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{BSPLINE}{BSPLINE}}
+{\footnotesize\ttfamily \#define BSPLINE~143L}
+
+\mbox{\Hypertarget{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}\label{header_8h_a8a8f3e053d5aeebc48b044e2117474d0}} 
+\index{header.h@{header.h}!CDM@{CDM}}
+\index{CDM@{CDM}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CDM}{CDM}}
+{\footnotesize\ttfamily \#define CDM~90L}
+
+\mbox{\Hypertarget{header_8h_a251e0b44ee10891c062205226a57a162}\label{header_8h_a251e0b44ee10891c062205226a57a162}} 
+\index{header.h@{header.h}!CII@{CII}}
+\index{CII@{CII}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CII}{CII}}
+{\footnotesize\ttfamily \#define CII~137L}
+
+\mbox{\Hypertarget{header_8h_a922674bf1f621eb8d7cfc67d2fc870b3}\label{header_8h_a922674bf1f621eb8d7cfc67d2fc870b3}} 
+\index{header.h@{header.h}!CLEANUP@{CLEANUP}}
+\index{CLEANUP@{CLEANUP}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CLEANUP}{CLEANUP}}
+{\footnotesize\ttfamily \#define CLEANUP~1}
+
+\mbox{\Hypertarget{header_8h_a45a98a7c684bcfbc146b6233427095f7}\label{header_8h_a45a98a7c684bcfbc146b6233427095f7}} 
+\index{header.h@{header.h}!CO10@{CO10}}
+\index{CO10@{CO10}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO10}{CO10}}
+{\footnotesize\ttfamily \#define CO10~131L}
+
+\mbox{\Hypertarget{header_8h_a9f7929279cbd7ba300195869d74af02e}\label{header_8h_a9f7929279cbd7ba300195869d74af02e}} 
+\index{header.h@{header.h}!CO21@{CO21}}
+\index{CO21@{CO21}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO21}{CO21}}
+{\footnotesize\ttfamily \#define CO21~132L}
+
+\mbox{\Hypertarget{header_8h_a54661073f70776c6c46dd2d11f29dfb4}\label{header_8h_a54661073f70776c6c46dd2d11f29dfb4}} 
+\index{header.h@{header.h}!CO32@{CO32}}
+\index{CO32@{CO32}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO32}{CO32}}
+{\footnotesize\ttfamily \#define CO32~133L}
+
+\mbox{\Hypertarget{header_8h_af6baa7ad6769ea8268e7de62c49f2d48}\label{header_8h_af6baa7ad6769ea8268e7de62c49f2d48}} 
+\index{header.h@{header.h}!CO43@{CO43}}
+\index{CO43@{CO43}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO43}{CO43}}
+{\footnotesize\ttfamily \#define CO43~134L}
+
+\mbox{\Hypertarget{header_8h_afbaa1f5c187627bba4d5d8e09fcefb07}\label{header_8h_afbaa1f5c187627bba4d5d8e09fcefb07}} 
+\index{header.h@{header.h}!CO54@{CO54}}
+\index{CO54@{CO54}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO54}{CO54}}
+{\footnotesize\ttfamily \#define CO54~135L}
+
+\mbox{\Hypertarget{header_8h_a523a0a1a60673fca4846bd3f04acd15a}\label{header_8h_a523a0a1a60673fca4846bd3f04acd15a}} 
+\index{header.h@{header.h}!CO65@{CO65}}
+\index{CO65@{CO65}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{CO65}{CO65}}
+{\footnotesize\ttfamily \#define CO65~136L}
+
+\mbox{\Hypertarget{header_8h_a9d6e99df3b4737b89960ef588e218b74}\label{header_8h_a9d6e99df3b4737b89960ef588e218b74}} 
+\index{header.h@{header.h}!DERGROWTH@{DERGROWTH}}
+\index{DERGROWTH@{DERGROWTH}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{DERGROWTH}{DERGROWTH}}
+{\footnotesize\ttfamily \#define DERGROWTH~105L}
+
+\mbox{\Hypertarget{header_8h_ac8f19ce7f171a4f50a3257367ceb285a}\label{header_8h_ac8f19ce7f171a4f50a3257367ceb285a}} 
+\index{header.h@{header.h}!derNGLOOP@{derNGLOOP}}
+\index{derNGLOOP@{derNGLOOP}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{derNGLOOP}{derNGLOOP}}
+{\footnotesize\ttfamily \#define der\+NGLOOP~123L}
+
+\mbox{\Hypertarget{header_8h_a359c81ef959b9a9a5f58b473f4913bb0}\label{header_8h_a359c81ef959b9a9a5f58b473f4913bb0}} 
+\index{header.h@{header.h}!DO\_NOT\_EVALUATE@{DO\_NOT\_EVALUATE}}
+\index{DO\_NOT\_EVALUATE@{DO\_NOT\_EVALUATE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{DO\_NOT\_EVALUATE}{DO\_NOT\_EVALUATE}}
+{\footnotesize\ttfamily \#define DO\+\_\+\+NOT\+\_\+\+EVALUATE~-\/1.\+0}
+
+\mbox{\Hypertarget{header_8h_a6fc0b23b4c9782e24b280ad09c68b7a3}\label{header_8h_a6fc0b23b4c9782e24b280ad09c68b7a3}} 
+\index{header.h@{header.h}!DST@{DST}}
+\index{DST@{DST}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{DST}{DST}}
+{\footnotesize\ttfamily \#define DST~141L}
+
+\mbox{\Hypertarget{header_8h_adf6613c4d03eb50e030e2f43ec0df1e5}\label{header_8h_adf6613c4d03eb50e030e2f43ec0df1e5}} 
+\index{header.h@{header.h}!EQUILATERAL@{EQUILATERAL}}
+\index{EQUILATERAL@{EQUILATERAL}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{EQUILATERAL}{EQUILATERAL}}
+{\footnotesize\ttfamily \#define EQUILATERAL~118L}
+
+\mbox{\Hypertarget{header_8h_a8659b9de3e544ff142b153b076f30fd5}\label{header_8h_a8659b9de3e544ff142b153b076f30fd5}} 
+\index{header.h@{header.h}!GAMMA@{GAMMA}}
+\index{GAMMA@{GAMMA}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{GAMMA}{GAMMA}}
+{\footnotesize\ttfamily \#define GAMMA~126L}
+
+\mbox{\Hypertarget{header_8h_ad751f1b6909c0124a4ca151036b28a0e}\label{header_8h_ad751f1b6909c0124a4ca151036b28a0e}} 
+\index{header.h@{header.h}!GAUSSIAN@{GAUSSIAN}}
+\index{GAUSSIAN@{GAUSSIAN}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{GAUSSIAN}{GAUSSIAN}}
+{\footnotesize\ttfamily \#define GAUSSIAN~114L}
+
+\mbox{\Hypertarget{header_8h_a6575a9cf8ba65ecb77952078b4282ead}\label{header_8h_a6575a9cf8ba65ecb77952078b4282ead}} 
+\index{header.h@{header.h}!GFILTER@{GFILTER}}
+\index{GFILTER@{GFILTER}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{GFILTER}{GFILTER}}
+{\footnotesize\ttfamily \#define GFILTER~142L}
+
+\mbox{\Hypertarget{header_8h_ae08a1f7f63e9261daa3e5c9794653714}\label{header_8h_ae08a1f7f63e9261daa3e5c9794653714}} 
+\index{header.h@{header.h}!GROWTH@{GROWTH}}
+\index{GROWTH@{GROWTH}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{GROWTH}{GROWTH}}
+{\footnotesize\ttfamily \#define GROWTH~104L}
+
+\mbox{\Hypertarget{header_8h_a506e3be0281e3c100aef41dd51e107af}\label{header_8h_a506e3be0281e3c100aef41dd51e107af}} 
+\index{header.h@{header.h}!HALO@{HALO}}
+\index{HALO@{HALO}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{HALO}{HALO}}
+{\footnotesize\ttfamily \#define HALO~148L}
+
+\mbox{\Hypertarget{header_8h_a75ada8dfcff5e2984c05762948c72792}\label{header_8h_a75ada8dfcff5e2984c05762948c72792}} 
+\index{header.h@{header.h}!HS@{HS}}
+\index{HS@{HS}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{HS}{HS}}
+{\footnotesize\ttfamily \#define HS~121L}
+
+\mbox{\Hypertarget{header_8h_ab5889105dcd019008c9448dff61323f6}\label{header_8h_ab5889105dcd019008c9448dff61323f6}} 
+\index{header.h@{header.h}!INIT@{INIT}}
+\index{INIT@{INIT}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{INIT}{INIT}}
+{\footnotesize\ttfamily \#define INIT~116L}
+
+\mbox{\Hypertarget{header_8h_af94cfb03461685fead1fe045d5c96f01}\label{header_8h_af94cfb03461685fead1fe045d5c96f01}} 
+\index{header.h@{header.h}!LINE@{LINE}}
+\index{LINE@{LINE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LINE}{LINE}}
+{\footnotesize\ttfamily \#define LINE~140L}
+
+\mbox{\Hypertarget{header_8h_ac645eb9a88619ee6f5e14c557ab8ef62}\label{header_8h_ac645eb9a88619ee6f5e14c557ab8ef62}} 
+\index{header.h@{header.h}!LINEAR@{LINEAR}}
+\index{LINEAR@{LINEAR}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LINEAR}{LINEAR}}
+{\footnotesize\ttfamily \#define LINEAR~107L}
+
+\mbox{\Hypertarget{header_8h_a6d03bba620ae800aa7fe737a34af4af5}\label{header_8h_a6d03bba620ae800aa7fe737a34af4af5}} 
+\index{header.h@{header.h}!LINEMATTER@{LINEMATTER}}
+\index{LINEMATTER@{LINEMATTER}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LINEMATTER}{LINEMATTER}}
+{\footnotesize\ttfamily \#define LINEMATTER~139L}
+
+\mbox{\Hypertarget{header_8h_a3758dd5d300a594312c95bc393378df0}\label{header_8h_a3758dd5d300a594312c95bc393378df0}} 
+\index{header.h@{header.h}!LOCAL@{LOCAL}}
+\index{LOCAL@{LOCAL}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LOCAL}{LOCAL}}
+{\footnotesize\ttfamily \#define LOCAL~117L}
+
+\mbox{\Hypertarget{header_8h_a8e8f11caf539de9555d07b4e7ef5b1da}\label{header_8h_a8e8f11caf539de9555d07b4e7ef5b1da}} 
+\index{header.h@{header.h}!LOOP@{LOOP}}
+\index{LOOP@{LOOP}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LOOP}{LOOP}}
+{\footnotesize\ttfamily \#define LOOP~145L}
+
+\mbox{\Hypertarget{header_8h_a2704d1fa52e347b0e2e8ebbe4c0262ea}\label{header_8h_a2704d1fa52e347b0e2e8ebbe4c0262ea}} 
+\index{header.h@{header.h}!LPOWER@{LPOWER}}
+\index{LPOWER@{LPOWER}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{LPOWER}{LPOWER}}
+{\footnotesize\ttfamily \#define LPOWER~127L}
+
+\mbox{\Hypertarget{header_8h_a516c7837da53b4b8b8253becce013f54}\label{header_8h_a516c7837da53b4b8b8253becce013f54}} 
+\index{header.h@{header.h}!MATTER@{MATTER}}
+\index{MATTER@{MATTER}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{MATTER}{MATTER}}
+{\footnotesize\ttfamily \#define MATTER~138L}
+
+\mbox{\Hypertarget{header_8h_ac4041a19ac1fddefc2239437baecd8f5}\label{header_8h_ac4041a19ac1fddefc2239437baecd8f5}} 
+\index{header.h@{header.h}!MAXL@{MAXL}}
+\index{MAXL@{MAXL}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{MAXL}{MAXL}}
+{\footnotesize\ttfamily \#define MAXL~2000}
+
+\mbox{\Hypertarget{header_8h_aa1eb9d43eea0d3a9a63ab6c0dfbc2d61}\label{header_8h_aa1eb9d43eea0d3a9a63ab6c0dfbc2d61}} 
+\index{header.h@{header.h}!NGLOOP@{NGLOOP}}
+\index{NGLOOP@{NGLOOP}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NGLOOP}{NGLOOP}}
+{\footnotesize\ttfamily \#define NGLOOP~122L}
+
+\mbox{\Hypertarget{header_8h_aebfb75963c6839c4104e78787375c442}\label{header_8h_aebfb75963c6839c4104e78787375c442}} 
+\index{header.h@{header.h}!NLPOWER@{NLPOWER}}
+\index{NLPOWER@{NLPOWER}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NLPOWER}{NLPOWER}}
+{\footnotesize\ttfamily \#define NLPOWER~128L}
+
+\mbox{\Hypertarget{header_8h_a8a711bd77f878f23e61dfd98fc505a1c}\label{header_8h_a8a711bd77f878f23e61dfd98fc505a1c}} 
+\index{header.h@{header.h}!NOIR@{NOIR}}
+\index{NOIR@{NOIR}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NOIR}{NOIR}}
+{\footnotesize\ttfamily \#define NOIR~147L}
+
+\mbox{\Hypertarget{header_8h_a41ce89044b22a1a0e5f00a9a93daa4fd}\label{header_8h_a41ce89044b22a1a0e5f00a9a93daa4fd}} 
+\index{header.h@{header.h}!NONGAUSSIAN@{NONGAUSSIAN}}
+\index{NONGAUSSIAN@{NONGAUSSIAN}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NONGAUSSIAN}{NONGAUSSIAN}}
+{\footnotesize\ttfamily \#define NONGAUSSIAN~115L}
+
+\mbox{\Hypertarget{header_8h_acea19b359d1c1aeb7b609e0a0458225b}\label{header_8h_acea19b359d1c1aeb7b609e0a0458225b}} 
+\index{header.h@{header.h}!NONLINEAR@{NONLINEAR}}
+\index{NONLINEAR@{NONLINEAR}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NONLINEAR}{NONLINEAR}}
+{\footnotesize\ttfamily \#define NONLINEAR~106L}
+
+\mbox{\Hypertarget{header_8h_a4a80e098a43386a893ebc656b14e636c}\label{header_8h_a4a80e098a43386a893ebc656b14e636c}} 
+\index{header.h@{header.h}!NPARS@{NPARS}}
+\index{NPARS@{NPARS}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{NPARS}{NPARS}}
+{\footnotesize\ttfamily \#define NPARS~6}
+
+\mbox{\Hypertarget{header_8h_ace3363397a7c244c60c3564bedd14920}\label{header_8h_ace3363397a7c244c60c3564bedd14920}} 
+\index{header.h@{header.h}!ORTHOGONAL@{ORTHOGONAL}}
+\index{ORTHOGONAL@{ORTHOGONAL}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{ORTHOGONAL}{ORTHOGONAL}}
+{\footnotesize\ttfamily \#define ORTHOGONAL~119L}
+
+\mbox{\Hypertarget{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}\label{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}} 
+\index{header.h@{header.h}!PS\_KMAX@{PS\_KMAX}}
+\index{PS\_KMAX@{PS\_KMAX}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{PS\_KMAX}{PS\_KMAX}}
+{\footnotesize\ttfamily \#define PS\+\_\+\+KMAX~100.\+1}
+
+\mbox{\Hypertarget{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}\label{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}} 
+\index{header.h@{header.h}!PS\_KMIN@{PS\_KMIN}}
+\index{PS\_KMIN@{PS\_KMIN}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{PS\_KMIN}{PS\_KMIN}}
+{\footnotesize\ttfamily \#define PS\+\_\+\+KMIN~1.e-\/5}
+
+\mbox{\Hypertarget{header_8h_a791f4d963d21043a3d7cef12c9587d4e}\label{header_8h_a791f4d963d21043a3d7cef12c9587d4e}} 
+\index{header.h@{header.h}!PS\_ZMAX@{PS\_ZMAX}}
+\index{PS\_ZMAX@{PS\_ZMAX}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{PS\_ZMAX}{PS\_ZMAX}}
+{\footnotesize\ttfamily \#define PS\+\_\+\+ZMAX~14.}
+
+\mbox{\Hypertarget{header_8h_a46eb462e05a3197e84ff95d874d67f34}\label{header_8h_a46eb462e05a3197e84ff95d874d67f34}} 
+\index{header.h@{header.h}!PSC@{PSC}}
+\index{PSC@{PSC}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{PSC}{PSC}}
+{\footnotesize\ttfamily \#define PSC~101L}
+
+\mbox{\Hypertarget{header_8h_a8b2854ef326960560b3ff55c94a32ea1}\label{header_8h_a8b2854ef326960560b3ff55c94a32ea1}} 
+\index{header.h@{header.h}!QSF@{QSF}}
+\index{QSF@{QSF}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{QSF}{QSF}}
+{\footnotesize\ttfamily \#define QSF~120L}
+
+\mbox{\Hypertarget{header_8h_a054549cb0229d255e4b415c9d356ab3f}\label{header_8h_a054549cb0229d255e4b415c9d356ab3f}} 
+\index{header.h@{header.h}!QUADRATIC@{QUADRATIC}}
+\index{QUADRATIC@{QUADRATIC}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{QUADRATIC}{QUADRATIC}}
+{\footnotesize\ttfamily \#define QUADRATIC~124L}
+
+\mbox{\Hypertarget{header_8h_ab52cdc475a6866d1be7b5807fb623f50}\label{header_8h_ab52cdc475a6866d1be7b5807fb623f50}} 
+\index{header.h@{header.h}!ST@{ST}}
+\index{ST@{ST}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{ST}{ST}}
+{\footnotesize\ttfamily \#define ST~102L}
+
+\mbox{\Hypertarget{header_8h_ae32f9ba6963238f5e38cb7ae25446479}\label{header_8h_ae32f9ba6963238f5e38cb7ae25446479}} 
+\index{header.h@{header.h}!TIDE@{TIDE}}
+\index{TIDE@{TIDE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TIDE}{TIDE}}
+{\footnotesize\ttfamily \#define TIDE~125L}
+
+\mbox{\Hypertarget{header_8h_ad72e589e37189fb1e49961335cf6d0de}\label{header_8h_ad72e589e37189fb1e49961335cf6d0de}} 
+\index{header.h@{header.h}!TK@{TK}}
+\index{TK@{TK}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TK}{TK}}
+{\footnotesize\ttfamily \#define TK~103L}
+
+\mbox{\Hypertarget{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}\label{header_8h_ab74ea0985ed254421a2ec2a9348eaf91}} 
+\index{header.h@{header.h}!TOT@{TOT}}
+\index{TOT@{TOT}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TOT}{TOT}}
+{\footnotesize\ttfamily \#define TOT~92L}
+
+\mbox{\Hypertarget{header_8h_abf5b8fbbeb8255336e401a15a80214a8}\label{header_8h_abf5b8fbbeb8255336e401a15a80214a8}} 
+\index{header.h@{header.h}!TREE@{TREE}}
+\index{TREE@{TREE}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{TREE}{TREE}}
+{\footnotesize\ttfamily \#define TREE~144L}
+
+\mbox{\Hypertarget{header_8h_af245db63314744f2a2ff29d538fc37d5}\label{header_8h_af245db63314744f2a2ff29d538fc37d5}} 
+\index{header.h@{header.h}!WIR@{WIR}}
+\index{WIR@{WIR}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{WIR}{WIR}}
+{\footnotesize\ttfamily \#define WIR~146L}
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}\label{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}} 
+\index{header.h@{header.h}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{header_8h_a25a40b6614565f755233080a384c35f1}\label{header_8h_a25a40b6614565f755233080a384c35f1}} 
+\index{header.h@{header.h}!initialize@{initialize}}
+\index{initialize@{initialize}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+List of lim\+Halo\+PT header files. 
+
+Function declarations of \mbox{\hyperlink{main_8c}{main.\+c}} module
+
+List of lim\+Halo\+PT header files.
+
+~\newline
+
+
+The global structure \char`\"{}gb\char`\"{} have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Change the path to the parent directory
+
+In units of km/s
+
+omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
+
+3.\+0665Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/header_8h_a25a40b6614565f755233080a384c35f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{df/dcb/header_8h_a25a40b6614565f755233080a384c35f1_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="growth_f" name="growth_f">
+<area shape="rect" id="node1" title="Compute the growth factor D(k,z) by taking the ratio of the transfer function at redshift z and zero." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="125,5,165,32"/>
+<area shape="rect" id="node3" href="$d6/d32/cosmology_8c.html#ac3ace3d3e1b1fdce002a8676d28e73e1" title="Call CLASS&#45;V3.1 functions to compute the cdm+b pk (in Mpc**3) for a given k (in 1/Mpc) and z In LIM_F..." alt="" coords="213,5,292,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="p_sig_shot" name="p_sig_shot">
+<area shape="rect" id="node1" title="Compute the scatter in shot noise due to scatter in luminosity&#45;halo mass relation,..." alt="" coords="5,5,91,32"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#ac62e7dccfe1892b60f1709957e93d48c" title="The integrand function passed to qags integrator to compute the scatter in shot ala Keating 2016." alt="" coords="139,5,284,32"/>
+</map>
