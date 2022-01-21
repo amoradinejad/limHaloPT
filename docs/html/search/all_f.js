@@ -32,7 +32,7 @@ var searchData=
   ['pm_29',['pm',['../d2/dd8/struct_class___cosmology___struct.html#aa10c840f6c876dd3a2688ba63092e5f0',1,'Class_Cosmology_Struct']]],
   ['pm_5fir_5flo_30',['pm_IR_LO',['../dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467',1,'IR_res.c']]],
   ['pm_5fir_5fnlo_31',['pm_IR_NLO',['../dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348',1,'IR_res.c']]],
-  ['pm_5fnowiggle_32',['pm_nowiggle',['../dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561',1,'IR_res.c']]],
+  ['pm_5fnowiggle_32',['pm_nowiggle',['../dc/d8e/_i_r__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050',1,'IR_res.c']]],
   ['pm_5fnowiggle_5fbspline_33',['pm_nowiggle_bspline',['../dc/d8e/_i_r__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f',1,'IR_res.c']]],
   ['pm_5fnowiggle_5fdst_34',['pm_nowiggle_dst',['../dc/d8e/_i_r__res_8c.html#addffe543a63e7b319b57d29f6c0b4957',1,'IR_res.c']]],
   ['pm_5fnowiggle_5fgfilter_35',['pm_nowiggle_gfilter',['../dc/d8e/_i_r__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878',1,'IR_res.c']]],

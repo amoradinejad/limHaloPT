@@ -1,6 +1,6 @@
 <map id="pm_nowiggle_gfilter" name="pm_nowiggle_gfilter">
 <area shape="rect" id="node1" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1432,68,1569,95"/>
-<area shape="rect" id="node2" href="$dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1285,68,1384,95"/>
+<area shape="rect" id="node2" href="$dc/d8e/_i_r__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1285,68,1384,95"/>
 <area shape="rect" id="node3" href="$dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1091,68,1237,95"/>
 <area shape="rect" id="node5" href="$dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="823,195,908,221"/>
 <area shape="rect" id="node10" href="$dc/d8e/_i_r__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="277,144,371,171"/>

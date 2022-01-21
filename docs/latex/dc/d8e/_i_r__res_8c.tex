@@ -24,7 +24,7 @@ double \mbox{\hyperlink{_i_r__res_8c_a96ac18bc55ca39bce830a35aac4f1dee}{IR\+\_\+
 \begin{DoxyCompactList}\small\item\em Integrand to compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}{IR\+\_\+\+Sigma2}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double k0, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{_i_r__res_8c_a6636c173929d53798037db6d86a74561}{pm\+\_\+nowiggle}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double kf0, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}, long SPLIT)
+double \mbox{\hyperlink{_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}{pm\+\_\+nowiggle}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double k0, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}{pm\+\_\+nowiggle\+\_\+bspline}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}})
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum, reading in and interpolating the output of apython code which computed the broadband by fitting families of Bsplines (see Vlah et al 2015) \end{DoxyCompactList}\item 
@@ -51,7 +51,7 @@ In summary, the following functions can be called from other modules\+:
 \item \mbox{\hyperlink{_i_r__res_8c_ac9b48827f9977633775bbff6971ec467}{pm\+\_\+\+IR\+\_\+\+LO()}}
 \item \mbox{\hyperlink{_i_r__res_8c_a081df8016b0ce1b7160a3b49547e0348}{pm\+\_\+\+IR\+\_\+\+NLO()}}
 \item \mbox{\hyperlink{_i_r__res_8c_ad57601a52710911744c3ab9ee4192075}{IR\+\_\+\+Sigma2()}}
-\item \mbox{\hyperlink{_i_r__res_8c_a6636c173929d53798037db6d86a74561}{pm\+\_\+nowiggle()}}
+\item \mbox{\hyperlink{_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}{pm\+\_\+nowiggle()}}
 \item \mbox{\hyperlink{_i_r__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878}{pm\+\_\+nowiggle\+\_\+gfilter()}}
 \item \mbox{\hyperlink{_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}{pm\+\_\+nowiggle\+\_\+bspline()}}
 \item \mbox{\hyperlink{_i_r__res_8c_addffe543a63e7b319b57d29f6c0b4957}{pm\+\_\+nowiggle\+\_\+dst()}} 
@@ -118,7 +118,7 @@ Integrand to compute the suppression factor IR\+\_\+sigma2.
 integrand to be used in IR\+\_\+sigma2() function ~\newline
  
 \end{DoxyReturn}
-BAO\+\_\+scale = 110. Mpc/h.Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,11 +210,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=334pt]{dc/d8e/_i_r__res_8c_a081df8016b0ce1b7160a3b49547e0348_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{_i_r__res_8c_a6636c173929d53798037db6d86a74561}\label{_i_r__res_8c_a6636c173929d53798037db6d86a74561}} 
+\mbox{\Hypertarget{_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}\label{_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}} 
 \index{IR\_res.c@{IR\_res.c}!pm\_nowiggle@{pm\_nowiggle}}
 \index{pm\_nowiggle@{pm\_nowiggle}!IR\_res.c@{IR\_res.c}}
 \doxyparagraph{\texorpdfstring{pm\_nowiggle()}{pm\_nowiggle()}}
-{\footnotesize\ttfamily double pm\+\_\+nowiggle (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{kf0,  }\item[{int}]{cleanup,  }\item[{long}]{SPLIT }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double pm\+\_\+nowiggle (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{k0,  }\item[{int}]{cleanup,  }\item[{long}]{SPLIT }\end{DoxyParamCaption})}
 
 
 
@@ -228,7 +228,7 @@ Compute the no-\/wiggle componenet of the matter power spectrum.
 \hline
 {\em z} & Input\+: redshift \\
 \hline
-{\em kf0} & Input\+: first element of the k-\/array, used in normalization of EH no-\/wiggle spectrum \\
+{\em k0} & Input\+: first element of the k-\/array, used in normalization of EH no-\/wiggle spectrum \\
 \hline
 {\em cleanup} & Input\+: switch to set whether to free the memory allocated to no-\/wiggle interpolators \\
 \hline
@@ -243,14 +243,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_a6636c173929d53798037db6d86a74561_cgraph}
+\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_a6636c173929d53798037db6d86a74561_icgraph}
+\includegraphics[width=350pt]{dc/d8e/_i_r__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}\label{_i_r__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}} 

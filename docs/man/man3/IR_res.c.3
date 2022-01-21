@@ -30,7 +30,7 @@ IR_res.c \- Documented IR_res module\&.
 .br
 .RI "Compute the suppression factor IR_sigma2\&. "
 .ti -1c
-.RI "double \fBpm_nowiggle\fP (struct \fBCosmology\fP *Cx, double k, double z, double kf0, int \fBcleanup\fP, long SPLIT)"
+.RI "double \fBpm_nowiggle\fP (struct \fBCosmology\fP *Cx, double k, double z, double k0, int \fBcleanup\fP, long SPLIT)"
 .br
 .RI "Compute the no-wiggle componenet of the matter power spectrum\&. "
 .ti -1c
@@ -123,7 +123,7 @@ integrand to be used in IR_sigma2() function
  
 .RE
 .PP
-BAO_scale = 110\&. Mpc/h\&.
+
 .SS "double pm_IR_LO (struct \fBCosmology\fP * Cx, double k, double z, long SPLIT)"
 
 .PP
@@ -172,7 +172,7 @@ value of NL IR-ressumed power spectrum
 .RE
 .PP
 
-.SS "double pm_nowiggle (struct \fBCosmology\fP * Cx, double k, double z, double kf0, int cleanup, long SPLIT)"
+.SS "double pm_nowiggle (struct \fBCosmology\fP * Cx, double k, double z, double k0, int cleanup, long SPLIT)"
 
 .PP
 Compute the no-wiggle componenet of the matter power spectrum\&. 
@@ -185,7 +185,7 @@ Compute the no-wiggle componenet of the matter power spectrum\&.
 .br
 \fIz\fP Input: redshift 
 .br
-\fIkf0\fP Input: first element of the k-array, used in normalization of EH no-wiggle spectrum 
+\fIk0\fP Input: first element of the k-array, used in normalization of EH no-wiggle spectrum 
 .br
 \fIcleanup\fP Input: switch to set whether to free the memory allocated to no-wiggle interpolators 
 .br

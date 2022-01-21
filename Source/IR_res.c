@@ -102,7 +102,7 @@ double IR_Sigma2_integrand(double x, void *par)
     double k0           = pij.p6; 
     long   SPLIT         = pij.p13;
 
-    double k_osc = 1./bao_scale;  /// BAO_scale = 110. Mpc/h.
+    double k_osc = 1./bao_scale;  //// BAO_scale = 110. Mpc/h.
 
     result = 1./(6.*M_PI*M_PI)*pm_nowiggle(Cx, x, z, k0, 0, SPLIT)* (1. - gsl_sf_bessel_j0(x/k_osc) + 2. * gsl_sf_bessel_j2(x/k_osc));;
 
@@ -155,12 +155,12 @@ double IR_Sigma2(struct Cosmology *Cx, double z, double k0, long SPLIT)
  * @param Cx           Input: pointer to cosmology structure 
  * @param k            Input: wavenumber in unit of h/Mpc. 
  * @param z            Input: redshift
- * @param kf0          Input: first element of the k-array, used in normalization of EH no-wiggle spectrum
+ * @param k0          Input: first element of the k-array, used in normalization of EH no-wiggle spectrum
  * @param cleanup      Input: switch to set whether to free the memory allocated to no-wiggle interpolators
  * @param SPLIT        Input: switch to set the method of wiggle-nowiggle split
  * @return value of no-wiggle power spectrum         
  */
-double pm_nowiggle(struct Cosmology *Cx, double k, double z, double kf0, int cleanup, long SPLIT)
+double pm_nowiggle(struct Cosmology *Cx, double k, double z, double k0, int cleanup, long SPLIT)
 {
   double pm_nw = 0.;
 

@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="5,563,100,589"/>
 <area shape="rect" id="node2" href="$d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="148,360,279,387"/>
 <area shape="rect" id="node14" href="$dc/d8e/_i_r__res_8c.html#ad57601a52710911744c3ab9ee4192075" title="Compute the suppression factor IR_sigma2." alt="" coords="639,487,725,513"/>
-<area shape="rect" id="node16" href="$dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="968,487,1067,513"/>
+<area shape="rect" id="node16" href="$dc/d8e/_i_r__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="968,487,1067,513"/>
 <area shape="rect" id="node20" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="1721,183,1761,209"/>
 <area shape="rect" id="node22" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1501,360,1608,387"/>
 <area shape="rect" id="node3" href="$d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="327,360,457,387"/>

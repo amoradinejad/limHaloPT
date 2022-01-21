@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="The integrand function passed passed to Cuhre integration routine to compute large&#45;scale limit of b22..." alt="" coords="5,360,125,387"/>
 <area shape="rect" id="node2" href="$dc/d8e/_i_r__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="173,360,259,387"/>
 <area shape="rect" id="node3" href="$dc/d8e/_i_r__res_8c.html#ad57601a52710911744c3ab9ee4192075" title="Compute the suppression factor IR_sigma2." alt="" coords="307,309,393,336"/>
-<area shape="rect" id="node5" href="$dc/d8e/_i_r__res_8c.html#a6636c173929d53798037db6d86a74561" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="636,309,735,336"/>
+<area shape="rect" id="node5" href="$dc/d8e/_i_r__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="636,309,735,336"/>
 <area shape="rect" id="node15" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="1389,164,1429,191"/>
 <area shape="rect" id="node4" href="$dc/d8e/_i_r__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="441,309,588,336"/>
 <area shape="rect" id="node6" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1009,360,1075,387"/>
