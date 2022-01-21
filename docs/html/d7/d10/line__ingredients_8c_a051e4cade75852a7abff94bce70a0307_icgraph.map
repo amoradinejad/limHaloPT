@@ -1,0 +1,13 @@
+<map id="p_sig_Tbar_integrand" name="p_sig_Tbar_integrand">
+<area shape="rect" id="node1" title="The integrand function passed to qags integrator to compute the scatter in Tbar ala Keating 2016." alt="" coords="813,68,960,95"/>
+<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c" title="Compute the scatter in Tbar due to scatter in luminosity&#45;halo mass relation, assume log&#45;normal scatte..." alt="" coords="679,68,765,95"/>
+<area shape="rect" id="node3" href="$d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="531,5,631,32"/>
+<area shape="rect" id="node5" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="543,93,618,120"/>
+<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="222,17,273,44"/>
+<area shape="rect" id="node6" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="374,68,469,95"/>
+<area shape="rect" id="node7" href="$d8/d43/ps__line__pt_8c.html#a3c16139f4646a5084475aa3515d336a6" title="Compute the real&#45;space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3." alt="" coords="374,119,469,145"/>
+<area shape="rect" id="node8" href="$d8/d43/ps__line__pt_8c.html#a2a5a8e5016f2d8728844564d93000751" title="Compute the redshift&#45;space 3D power spectrum of emission lines in unit of micro K^2 Mpc^3 as a functi..." alt="" coords="370,169,473,196"/>
+<area shape="rect" id="node11" href="$d8/d43/ps__line__pt_8c.html#a5977cca9f8e0c388f2d9e6db7945b3dc" title="Compute the 3D power spectrum of interloper line power spectrum in unit of micro K^2 Mpc^3." alt="" coords="360,220,483,247"/>
+<area shape="rect" id="node9" href="$d8/d43/ps__line__pt_8c.html#ae4ce1e29b505dae588eb2b8c8ae632e2" title="The integrand function passed to hcubature integrator to compute the line power spectrum multipoles." alt="" coords="183,162,312,203"/>
+<area shape="rect" id="node10" href="$d8/d43/ps__line__pt_8c.html#a62cf452e70a5c44e79485391ad59cf63" title="Compute the multipole moments of redshift&#45;space power spectrum of emission lines in unit of micro K^2..." alt="" coords="5,169,135,196"/>
+</map>

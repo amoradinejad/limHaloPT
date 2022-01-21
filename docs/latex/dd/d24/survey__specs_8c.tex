@@ -1,0 +1,187 @@
+\hypertarget{survey__specs_8c}{}\doxysubsection{survey\+\_\+specs.\+c File Reference}
+\label{survey__specs_8c}\index{survey\_specs.c@{survey\_specs.c}}
+
+
+Documented computation of some survey-\/related functions.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for survey\+\_\+specs.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d56/survey__specs_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}{shell\+\_\+volume}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double fsky)
+\begin{DoxyCompactList}\small\item\em Compute the comoving volume of a survey covering redshift up to z. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}{kmin\+\_\+val}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double zmin, double zmax, double fsky)
+\begin{DoxyCompactList}\small\item\em Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin \mbox{[}zmin,zmax\mbox{]}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}{kmax\+\_\+\+Brent}} (double kmax, void $\ast$params)
+\begin{DoxyCompactList}\small\item\em The function to be passed to Brent solver to compute kmax. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}{kmax\+\_\+\+Brent\+\_\+solver}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z)
+\begin{DoxyCompactList}\small\item\em Compute the maximum k-\/value used in Fisher forecast at each redshift bin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Documented computation of some survey-\/related functions. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021
+
+In summary, the following functions can be called from other modules\+:
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}{shell\+\_\+volume()}} computes the comoving volume of a survey covering redshift up to z
+\item \mbox{\hyperlink{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}{kmin\+\_\+val()}} computes the fundumental k-\/mode of a given redshift shell
+\item \mbox{\hyperlink{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}{kmax\+\_\+\+Brent\+\_\+solver()}} computes the kmax value such that kmax(z=0) = 0.\+15 h/\+Mpc 
+\end{DoxyEnumerate}
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}\label{survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78}} 
+\index{survey\_specs.c@{survey\_specs.c}!kmax\_Brent@{kmax\_Brent}}
+\index{kmax\_Brent@{kmax\_Brent}!survey\_specs.c@{survey\_specs.c}}
+\doxyparagraph{\texorpdfstring{kmax\_Brent()}{kmax\_Brent()}}
+{\footnotesize\ttfamily double kmax\+\_\+\+Brent (\begin{DoxyParamCaption}\item[{double}]{kmax,  }\item[{void $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+
+The function to be passed to Brent solver to compute kmax. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmax} & Inpute\+: maximum wavenumber in unit of 1/\+Mpc \\
+\hline
+{\em params} & Input\+: parameters to be passed to the solver \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{dd/d24/survey__specs_8c_a1eb59c068328f2b2a2cad533600c0d78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}\label{survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d}} 
+\index{survey\_specs.c@{survey\_specs.c}!kmax\_Brent\_solver@{kmax\_Brent\_solver}}
+\index{kmax\_Brent\_solver@{kmax\_Brent\_solver}!survey\_specs.c@{survey\_specs.c}}
+\doxyparagraph{\texorpdfstring{kmax\_Brent\_solver()}{kmax\_Brent\_solver()}}
+{\footnotesize\ttfamily double kmax\+\_\+\+Brent\+\_\+solver (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Compute the maximum k-\/value used in Fisher forecast at each redshift bin. 
+
+We follow Giannantonio et al. to for determining kmax, and use gsl Brent solver to solve for kmax in each redshift bin. The goal is to compute the kmax such that at z=0, the variance of the matter fluctations has a fixed value, for instance 0,36. This can be achieved by solving Eq. 40 of Giannantonio\+: sigma$^\wedge$2(z) = int\+\_\+kmin$^\wedge$kmax(z) dk k$^\wedge$2/(2pi$^\wedge$2) P\+\_\+m(k,z) = 0.\+36. Instead of fixing sigma$^\wedge$2 to 0.\+36, I chose the variance such that kmax(z=0) = 0.\+15 h/\+Mpc. This corresponds to the variance of $\sim$0.33 at z=0 . In the forecast, I additionally always impose kmax\texorpdfstring{$<$}{<}0.\+3 h/\+Mpc cut.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift of interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kmax 
+\end{DoxyReturn}
+in short paper we used, 3.\+631872e-\/01 ; ~\newline
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d24/survey__specs_8c_ab0f5b6af6991512fd864af10e6c2d54d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}\label{survey__specs_8c_a324eb852d8e2bb534361c033279c957c}} 
+\index{survey\_specs.c@{survey\_specs.c}!kmin\_val@{kmin\_val}}
+\index{kmin\_val@{kmin\_val}!survey\_specs.c@{survey\_specs.c}}
+\doxyparagraph{\texorpdfstring{kmin\_val()}{kmin\_val()}}
+{\footnotesize\ttfamily double kmin\+\_\+val (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{zmin,  }\item[{double}]{zmax,  }\item[{double}]{fsky }\end{DoxyParamCaption})}
+
+
+
+Compute the size of fundumental mode corresponding to the comoving volume enclosed in a redshift bin \mbox{[}zmin,zmax\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em zmin} & Input\+: minimum redshift \\
+\hline
+{\em zmax} & Input\+: maximum redshift \\
+\hline
+{\em fsky} & Input\+: sky-\/coverage of teh survey \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d24/survey__specs_8c_a324eb852d8e2bb534361c033279c957c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}\label{survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5}} 
+\index{survey\_specs.c@{survey\_specs.c}!shell\_volume@{shell\_volume}}
+\index{shell\_volume@{shell\_volume}!survey\_specs.c@{survey\_specs.c}}
+\doxyparagraph{\texorpdfstring{shell\_volume()}{shell\_volume()}}
+{\footnotesize\ttfamily double shell\+\_\+volume (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{z,  }\item[{double}]{fsky }\end{DoxyParamCaption})}
+
+
+
+Compute the comoving volume of a survey covering redshift up to z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cx} & Input\+: \mbox{\hyperlink{struct_cosmology}{Cosmology}} structure \\
+\hline
+{\em z} & Input\+: redshift \\
+\hline
+{\em fsky} & Input\+: sky-\/coverage of teh survey \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the comoving z-\/shell volume 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{dd/d24/survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{dd/d24/survey__specs_8c_a91c4e0c62bcd3e179536fea62e8d53b5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}\label{survey__specs_8c_a61c6674f2b410e126a682325ce5360c0}} 
+\index{survey\_specs.c@{survey\_specs.c}!gb@{gb}}
+\index{gb@{gb}!survey\_specs.c@{survey\_specs.c}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
+
