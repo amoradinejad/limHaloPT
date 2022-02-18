@@ -18,9 +18,6 @@ The source code of this package is publically avaialbel on GitHub at [limHaloPT]
 
 ### Dependencies
 The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Furthermore, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
-
-The code was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler.
-
 <br>
 &nbsp;
 
@@ -30,6 +27,8 @@ The code was developed, compiled, and tested on Mac OS X, using gcc version 7.5.
 - To run, type: ./limHaloPT 
 
 If you modified the code, you need to first do "make clean" before doing "make". Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. 
+
+Note that the code was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler.
 <br>
 &nbsp;
 
