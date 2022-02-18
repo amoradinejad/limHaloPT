@@ -17,6 +17,8 @@ The full documentation of the code can be found on [Documentation](https://amora
 
 ## Dependencies
 The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" file in the " CLASS/lib/" folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Furthermore, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+
+The code was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
 <br>
 
 ## Compilation and Usage
