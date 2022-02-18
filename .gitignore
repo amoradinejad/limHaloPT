@@ -8,7 +8,7 @@
 # Ignore Logs and compiled code
 *.o 
 *.limHaloPT
-
+CLASS/lib/libclass.a
 
 #Ignore max files
 .DS_Store
