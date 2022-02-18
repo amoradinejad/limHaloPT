@@ -48,9 +48,6 @@
 
 
 #include "header.h"
-struct globals gb;
-
-
 
 /**
  * Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure and line strucrure 
@@ -775,8 +772,6 @@ double growth_f(struct Cosmology *Cx, double k, double z)
  */ 
 double scale_indep_growth_D(struct Cosmology *Cx, double z)
 { 
-  extern struct globals gb;
-
   double tau;
   int last_index; ///junk
   double * pvecback;
@@ -805,8 +800,6 @@ double scale_indep_growth_D(struct Cosmology *Cx, double z)
  */
 double scale_indep_growth_f(struct Cosmology *Cx, double z)
 { 
-  extern struct globals gb;
-
   double tau;
   int last_index; ///junk
   double * pvecback;
@@ -969,7 +962,6 @@ double sig_sq_integrand(double x, void *par)
  */
 double sig_sq(struct Cosmology *Cx, double z, double R)
 {
-  extern struct globals gb;
 
   double result=0., error=0.;
   gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
@@ -1053,8 +1045,6 @@ double sigma0_sq_integrand(double x, void *par)
  */
 double sigma0_sq(struct Cosmology *Cx, double z, double kmax)  
 {
-  extern struct globals gb;
-
   double result, error;
   gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
 
@@ -1125,7 +1115,6 @@ double R_scale(struct Cosmology *Cx, double h_mass)
 double R_scale_wrong(struct Cosmology *Cx, double z, double h_mass)  
 {
   double f ;
-  extern struct globals gb;
   double rho_m0 = (Cx->cosmo_pars[3]+Cx->cosmo_pars[4])*rhoc(Cx,z);
 
   f = pow(3.*h_mass/(4.*M_PI*rho_m0),1./3.);

@@ -431,7 +431,6 @@ void halo_bias(struct Cosmology *Cx, double M, double z, long mode_mf, double *b
  */
 void logSFR_Behroozi_read(double *z_arr, double *logM_arr, double *log10SFR)
 {
-  extern struct globals gb;
   double  result = 0.0;
   long  i, j, l, m;
   FILE  *ifp;
@@ -511,7 +510,6 @@ void logSFR_Behroozi_read(double *z_arr, double *logM_arr, double *log10SFR)
  */
 int logSFR_alloc_init()
 {
-  extern struct globals gb;
   
   size_t numlines = count_lines_in_file(gb.SFR_filename); 
   size_t num_z    = 137 ;
@@ -955,8 +953,6 @@ double p_sig_shot_integrand(double x, void *par)
  */
 double p_sig_shot(double scatter)
 {
-  extern struct globals gb;
-
   double result=0., error=0.;
   gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
 
@@ -1012,8 +1008,6 @@ double p_sig_Tbar_integrand(double x, void *par)
  */
 double p_sig_Tbar(double scatter)
 {
-  extern struct globals gb;
-
   double result=0., error=0.;
   gsl_integration_workspace *w = gsl_integration_workspace_alloc(1000000);
 

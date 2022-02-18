@@ -16,7 +16,6 @@
 #include <float.h>
 #include <string.h>
 #include <omp.h>
-#include <mpi.h>
 #include <gsl/gsl_errno.h>
 #include <gsl/gsl_spline.h>
 #include <gsl/gsl_interp2d.h>
@@ -94,7 +93,7 @@
 
 
 #define PS_KMIN   	1.e-5
-#define PS_KMAX   	100.1 
+#define PS_KMAX   	300.1 
 #define PS_ZMAX   	14.
 
 #define CLEANUP        1 
@@ -102,6 +101,7 @@
 #define NPARS     6
 #define MAXL 2000
 
+extern struct globals gb;
 
 /** 
  * List of limHaloPT header files
@@ -109,17 +109,17 @@
 /// \cond DO_NOT_DOCUMENT
 #include "../Class/include/class.h"
 /// \endcond
-#include "cubature.h"
 #include "global_structs.h"
+#include "cubature.h"
 #include "utilities.h"
 #include "cosmology.h"
-#include "survey_specs.h"
-#include "line_ingredients.h"	
-#include "wnw_split.h"
 #include "ir_res.h"
+#include "line_ingredients.h"
 #include "ps_halo_1loop.h"
-#include "ps_line_pt.h"
 #include "ps_line_hm.h"
+#include "ps_line_pt.h"
+#include "survey_specs.h"
+#include "wnw_split.h"
 
 
 /** 

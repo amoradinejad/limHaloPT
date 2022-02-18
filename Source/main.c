@@ -175,7 +175,8 @@ void initialize()
 
 	gb.PS_kmin = 1.e-4;
 	gb.PS_kmax = 200.;
-	gb.kmax_CLASS = PS_KMAX * (1.-0.1);
+	// gb.kmax_CLASS = PS_KMAX * (1.-0.1);
+	gb.kmax_CLASS = PS_KMAX;
 	gb.Npars = NPARS;
 
 	return;

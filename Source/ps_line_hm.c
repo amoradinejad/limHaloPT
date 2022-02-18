@@ -317,7 +317,6 @@ static int mhmc_integ(const int *ndim,
  */
 void mhmc(struct Cosmology *Cx, double z, long mode_mf, double *result)
 {
-      extern struct globals gb;
       struct integrand_parameters2 par;
 
       double AbsErr = 0.0;        // Required absolute error (0.0 for none)
