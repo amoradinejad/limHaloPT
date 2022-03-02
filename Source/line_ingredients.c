@@ -285,10 +285,12 @@ double mass_func(struct Cosmology *Cx, double M, double z, long mode_mf ) ///in 
 
 double mass_func_sims(struct Cosmology *Cx, double M, double z, long mode_mf) ///M in unit of M_sun and HMF in unit of #-of-halos/Mpc^3/M_sun
 {
-    ////NOTE: not to be used at z other than 2. This function is for testing purposes only. We test the theoretical predictions at z=2 if ST MF or measured MF are used. 
 
+    ///not to be used at z other than 2. This function is for testing purposes only. We test the theoretical predictions at z=2 if ST MF or measured MF are used. 
+    ///
     char HMF_filename[FILENAME_MAX];
-    sprintf(HMF_filename,"/Volumes/Data/Documents/Git/LIM_PS_HM/Output/HMF/hmf-z2.00.dat");
+    sprintf(HMF_filename,"%s/MithraLIMSims_HMF/hmf-z%s.00.dat.txt", gb.output_dir, (int)z);
+
     int nlines = 0;
     nlines     = count_lines_in_file(HMF_filename);
 
@@ -732,7 +734,7 @@ double mass_moment1(struct Cosmology *Cx, double z, double M_min, long mode_mf, 
       double   xmin[1], xmax[1];                      // Integration limits: these are arrays of dimension dim
       unsigned maxEval = 0;                           // Maximum number of integrand evaluations (0 for none)
       double   AbsErr  = 0.0;                         // Required absolute error (0.0 for none)
-      double   RelErr  = 1.0e-3;                      // Required relative error (1.0e-3)
+      double   RelErr  = 1.0e-2;                      // Required relative error (1.0e-3)
       double   result  = 0.;                          // Final result
       double   error   = 0.;                          // Error estimate on the result
       error_norm norm = ERROR_INDIVIDUAL;
@@ -810,7 +812,7 @@ double mass_moment2(struct Cosmology *Cx, double z, double M_min, long mode_mf, 
       double  xmin[1], xmax[1];                       // Integration limits: these are arrays of dimension dim
       unsigned maxEval = 0;                           // Maximum number of integrand evaluations (0 for none)
       double   AbsErr  =0.0;                          // Required absolute error (0.0 for none)
-      double   RelErr  =1.0e-3;                       // Required relative error (1.0e-3)
+      double   RelErr  =1.0e-2;                       // Required relative error (1.0e-3)
       double   result  =0.;                           // Final result
       double   error   =0.;                           // Error estimate on the result
       error_norm norm = ERROR_INDIVIDUAL;
@@ -899,7 +901,7 @@ void bias_lum_weighted(struct Cosmology *Cx, double z, double M_min, long mode_m
       double   xmin[1], xmax[1];                        // Integration limits: these are arrays of dimension dim
       unsigned maxEval = 0;                           // Maximum number of integrand evaluations (0 for none)
       double   AbsErr  = 0.0;                         // Required absolute error (0.0 for none)
-      double   RelErr  = 1.0e-3;                      // Required relative error (1.0e-3)
+      double   RelErr  = 1.0e-2;                      // Required relative error (1.0e-3)
       double   error[2];                          // Error estimate on the result
       error_norm norm = ERROR_INDIVIDUAL;
 

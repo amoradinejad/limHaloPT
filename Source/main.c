@@ -29,12 +29,33 @@ int main(int argc,char *argv[])
 
 	/**
 	 * Define which lines to compute, and how many points to have for z-interpolation
+	 * 
+	 * Note: The main line properties used in the calculation of the line power spectrum, which includes
+	 * first and second moments of line luminosity (weighted by halo mass function) and 
+	 * luminosity-weighted linear and quadratic line biases are computed in function Line_alloc_init().
+	 * In that function, these quantities are calculate over an array of redshift values and then an interpolator 
+	 * for these quantities is initialized. The parameter "ninterp" below, sets the number of interpolation points  
+	 * for this interpolator. If you set it too low, the redshift-dependance of line properties would not 
+	 * be accurate. In the tests done during code developement, ninterp = 150 give results at the precision 
+	 * needed. However large values of ninterp results in longer run time.
+	 * 
+	 * For testing installation and running of the code, you can set lower value of ninterp, to make the code 
+	 * run faster. But remember in your actuall runs, set ninterp to larger numbers. 
+	 * 
+	 * If you do not need to compute the line properties for all the 7 lines below, 
+	 * you can set nlines to the number of lines you are interested, change the arrays of line[nlines] and JJ[nlines]
+	 * to correspond to the lines you need to calculate. 
 	 */
 	int nlines     = 7;
       int lines[7]   = {CO10, CO21, CO32, CO43, CO54, CO65, CII};
       int JJ[7]      = {1,2,3,4,5,6,0};
       size_t ninterp = 150;
 
+
+      /* 
+      * Set values of cosmological parameter and finger-of-god paramater (peculiar velocity of line emitters) 
+      * and initialize cosmo_pars array in the cosmology structure Cx_ref
+      */
 	double gb_pars[] = {gb.logAs,gb.ns,gb.h,gb.Omega_b,gb.Omega_cdm,gb.sigFOG0};
 
 	struct Cosmology Cx_ref;
@@ -60,15 +81,18 @@ int main(int argc,char *argv[])
 
 	/** 
 	 * Set the k and z arrays
+	 * 
+	 * For testing the code, you can reduce the range of k, and z and also the number of points for each, nk, and nz.
 	 */
-      int nk = 200;
-  	int nz = 50;
-	double *k  = loginit_1Darray(nk, 1.e-3, 8.);
- 	double *z = init_1Darray(nz,0.0,11.);
-	
+ 	int nk     = 200;
+ 	int nz     = 50;
+	double *k  = loginit_1Darray(nk, 1.e-3, 2.);
+ 	double *z  = init_1Darray(nz,0.0,11.);
+
 	/** 
 	 * Compute the line clustering signal using halo model 
 	 */
+ 	printf("Calculating halo-model line power spectrum\n");
  	int line_id = 0;
  	for(i=0;i<nlines;i++){
  		line_id = i;
@@ -92,9 +116,16 @@ int main(int argc,char *argv[])
 
 	FILE *fp1;
   	char filename1[FILENAME_MAX];
+
+ 	int nd     = 2;  //This is the number of digits to show in th evalue of z for sprintf()
+
+
+  	printf("Calculating line mean bright temprature and halo-model shot nosie\n");
  	for(i=0;i<nlines;i++){
  		for(j=0;j<nz;j++){
- 			sprintf(filename1,"%s/line/Tbar_J%d_z%d.txt", gb.output_dir, JJ[i],(int)z[j]);
+ 			//Set the path for the output of Tbar of the lines. By default the files are saved
+ 			//in "Output" directory. You can add subdirectories to Output directory by changing the path below if needed. 
+ 			sprintf(filename1,"%s/Tbar_J%d_z%.*f.txt", gb.output_dir, JJ[i], nd, z[j]);
 	 		fp1    = fopen(filename1, "ab");
 
 	 		Tbar = Tbar_line(&Cx_ref, i, z[j]);
@@ -110,13 +141,13 @@ int main(int argc,char *argv[])
 			input[4] = rhom_bar; 
 
 			//If accounting for the nfw profile, the shot noise will be scale-dependent. So loop over k-values
-			// for(l=0;l<nk;l++){
-			// 	PS_shot_HM(&Cx_ref, k[l], z[j], M_min, input, mode_mf, lines[i]);
-			// }
+			for(l=0;l<nk;l++){
+				PS_shot_HM(&Cx_ref, k[l], z[j], M_min, input, mode_mf, lines[i]);
+			}
 
 			// When neglecting the nfw profile for comparison with sims, the shot noise is scale-independent. 
 			// So uncomment the following line and comment out the above for loop to just compute it for a single k
-			PS_shot_HM(&Cx_ref, k[0], z[j], M_min, input, mode_mf, lines[i]);
+			// PS_shot_HM(&Cx_ref, k[0], z[j], M_min, input, mode_mf, lines[i]);
 			
 		}	
 	}	

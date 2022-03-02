@@ -126,10 +126,15 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
 
 
       //Save the output to files. Note that I am multiplying the power spectrum componenet by h^3, since I want to plot the P(k) in unit of (Mpc/h)^3
+      // Note that sprintf() functions below, set the path for the output files. By default, the output is saved in "Output" directory. 
+      // You can add subdirectories to Output directory by changing the path below if needed. 
       FILE *fp1, *fp2;
       char filename1[FILENAME_MAX], filename2[FILENAME_MAX];
-      sprintf(filename1,"%s/line/ps/no_nfw/pk_hm_J%d_z%d.txt", gb.output_dir,J,(int)z);
-      sprintf(filename2,"%s/line/ps/no_nfw/pk_2h_comps_J%d_z%d.txt", gb.output_dir,J,(int)z);
+     
+
+      int nd = 2; //This is the number of digits to show in th evalue of z for sprintf()
+      sprintf(filename1,"%s/pk_hm_J%d_z%.*f..txt", gb.output_dir,J,nd,z);
+      sprintf(filename2,"%s/pk_2h_comps_J%d_z%.*f..txt", gb.output_dir,J,nd,z);
       fp1 = fopen(filename1, "ab");
       fp2 = fopen(filename2, "ab");
       fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e\n",k/gb.h, pk_1h*pow(gb.h,3.), pk_2h*pow(gb.h,3.), total*pow(gb.h,3.));
@@ -238,14 +243,18 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
       //Finally, put them all together to compute the stochastic power spectrum.
       double pk_stoch = line_shot + pklm_1h + pkm_1h + pb22_ls;
 
-      printf("%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e \n",z, k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
+      //IF you dont want to save  the values of the shot noise to a file, but just want for e.g. just print it 
+      //out on the terminal, you can uncomment lines 247-252 and uncomment the printf statment on line 254. 
+      FILE *fp1;
+      char filename1[FILENAME_MAX];
 
-      // FILE *fp1;
-      // char filename1[FILENAME_MAX];
-      // sprintf(filename1,"%s/line/stoch/no_nfw/pk_stoch_hm_J%d_z%d.txt", gb.output_dir, J, (int)z);
-      // fp1 = fopen(filename1, "ab");
-      // fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
-      // fclose(fp1);
+      int nd = 2; //This is the number of digits to show in th evalue of z for sprintf()
+      sprintf(filename1,"%s/pk_stoch_hm_J%d_z%.*f.txt", gb.output_dir, J, nd, z);
+      fp1 = fopen(filename1, "ab");
+      fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
+      fclose(fp1);
+
+      // printf("%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e \n",z, k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
 
       return pk_stoch;    
 }
