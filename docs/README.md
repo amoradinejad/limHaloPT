@@ -23,8 +23,8 @@ The limHaloPT package calls various functions from [CLASS](https://github.com/le
 
 
 ### Compilation and Usage
-- To compile, type: make <br>
-- To run, type: ./limHaloPT 
+- To compile, change to Source directory and type: make
+- To run, from within Source directory type: ./limHaloPT
 
 If you modified the code, you need to first do "make clean" before doing "make". Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. 
 
