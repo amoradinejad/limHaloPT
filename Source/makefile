@@ -1,3 +1,6 @@
+# NOTE: Depending on your installation paths for gsl and cuba libraries, you should add the links 
+# for the INCLUDES and LIBS below, replacing -I/opt/local/include and  -L/opt/local/lib which are the 
+# paths on my machine. 
 INCLUDES =  -I../Include/ -I/opt/local/include  -I../Class/include  
 LIBS =  -L/opt/local/lib  -L../Class/lib
 CFLAGS = -g -fopenmp -Wall
