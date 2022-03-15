@@ -8,7 +8,6 @@
 {\ttfamily \#include $<$float.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$omp.\+h$>$}\newline
-{\ttfamily \#include $<$mpi.\+h$>$}\newline
 {\ttfamily \#include $<$gsl/gsl\+\_\+errno.\+h$>$}\newline
 {\ttfamily \#include $<$gsl/gsl\+\_\+spline.\+h$>$}\newline
 {\ttfamily \#include $<$gsl/gsl\+\_\+interp2d.\+h$>$}\newline
@@ -26,18 +25,19 @@
 {\ttfamily \#include $<$gsl/gsl\+\_\+sf\+\_\+expint.\+h$>$}\newline
 {\ttfamily \#include $<$ctype.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}cuba.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}cubature.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}global\+\_\+structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cubature.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cosmology.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}survey\+\_\+specs.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}line\+\_\+ingredients.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}wnw\+\_\+split.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ir\+\_\+res.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}line\+\_\+ingredients.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ps\+\_\+halo\+\_\+1loop.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+pt.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+hm.\+h\char`\"{}}\newline
-Include dependency graph for header.\+h\+:\nopagebreak
+{\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+pt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}survey\+\_\+specs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wnw\+\_\+split.\+h\char`\"{}}\newline
+Include dependency graph for header.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,7 +151,7 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 \item 
 \#define \mbox{\hyperlink{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}{PS\+\_\+\+KMIN}}~1.e-\/5
 \item 
-\#define \mbox{\hyperlink{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}{PS\+\_\+\+KMAX}}~100.\+1
+\#define \mbox{\hyperlink{header_8h_a8c70bb98d2cd8d06c8fb0e24d18e0cd1}{PS\+\_\+\+KMAX}}~300.\+1
 \item 
 \#define \mbox{\hyperlink{header_8h_a791f4d963d21043a3d7cef12c9587d4e}{PS\+\_\+\+ZMAX}}~14.
 \item 
@@ -169,6 +169,11 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 void \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}} ()
 \begin{DoxyCompactList}\small\item\em List of lim\+Halo\+PT header files. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{header_8h_a61c6674f2b410e126a682325ce5360c0}{gb}}
 \end{DoxyCompactItemize}
 
 
@@ -411,7 +416,7 @@ void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \index{header.h@{header.h}!PS\_KMAX@{PS\_KMAX}}
 \index{PS\_KMAX@{PS\_KMAX}!header.h@{header.h}}
 \doxyparagraph{\texorpdfstring{PS\_KMAX}{PS\_KMAX}}
-{\footnotesize\ttfamily \#define PS\+\_\+\+KMAX~100.\+1}
+{\footnotesize\ttfamily \#define PS\+\_\+\+KMAX~300.\+1}
 
 \mbox{\Hypertarget{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}\label{header_8h_a31a7caf555a95c74a9c60fc6fd20e05c}} 
 \index{header.h@{header.h}!PS\_KMIN@{PS\_KMIN}}
@@ -530,3 +535,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=206pt]{df/dcb/header_8h_a25a40b6614565f755233080a384c35f1_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{header_8h_a61c6674f2b410e126a682325ce5360c0}\label{header_8h_a61c6674f2b410e126a682325ce5360c0}} 
+\index{header.h@{header.h}!gb@{gb}}
+\index{gb@{gb}!header.h@{header.h}}
+\doxyparagraph{\texorpdfstring{gb}{gb}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb\hspace{0.3cm}{\ttfamily [extern]}}
+

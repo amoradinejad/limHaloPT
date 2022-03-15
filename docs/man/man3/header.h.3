@@ -1,4 +1,4 @@
-.TH "header.h" 3 "Fri Jan 21 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "header.h" 3 "Wed Mar 16 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,8 +21,6 @@ header.h
 \fC#include <string\&.h>\fP
 .br
 \fC#include <omp\&.h>\fP
-.br
-\fC#include <mpi\&.h>\fP
 .br
 \fC#include <gsl/gsl_errno\&.h>\fP
 .br
@@ -58,27 +56,27 @@ header.h
 .br
 \fC#include 'cuba\&.h'\fP
 .br
-\fC#include 'cubature\&.h'\fP
-.br
 \fC#include 'global_structs\&.h'\fP
+.br
+\fC#include 'cubature\&.h'\fP
 .br
 \fC#include 'utilities\&.h'\fP
 .br
 \fC#include 'cosmology\&.h'\fP
 .br
-\fC#include 'survey_specs\&.h'\fP
+\fC#include 'ir_res\&.h'\fP
 .br
 \fC#include 'line_ingredients\&.h'\fP
 .br
-\fC#include 'wnw_split\&.h'\fP
-.br
-\fC#include 'ir_res\&.h'\fP
-.br
 \fC#include 'ps_halo_1loop\&.h'\fP
+.br
+\fC#include 'ps_line_hm\&.h'\fP
 .br
 \fC#include 'ps_line_pt\&.h'\fP
 .br
-\fC#include 'ps_line_hm\&.h'\fP
+\fC#include 'survey_specs\&.h'\fP
+.br
+\fC#include 'wnw_split\&.h'\fP
 .br
 
 .SS "Data Structures"
@@ -232,7 +230,7 @@ header.h
 .RI "#define \fBPS_KMIN\fP   1\&.e\-5"
 .br
 .ti -1c
-.RI "#define \fBPS_KMAX\fP   100\&.1"
+.RI "#define \fBPS_KMAX\fP   300\&.1"
 .br
 .ti -1c
 .RI "#define \fBPS_ZMAX\fP   14\&."
@@ -259,6 +257,13 @@ header.h
 .RI "List of limHaloPT header files\&. "
 .ti -1c
 .RI "void \fBcleanup\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "struct \fBglobals\fP \fBgb\fP"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -341,7 +346,7 @@ header.h
 
 .SS "#define ORTHOGONAL   119L"
 
-.SS "#define PS_KMAX   100\&.1"
+.SS "#define PS_KMAX   300\&.1"
 
 .SS "#define PS_KMIN   1\&.e\-5"
 
@@ -393,6 +398,10 @@ In units of km/s
 omega_b = Omega_b h^2;
 .PP
 3\&.0665
+.SH "Variable Documentation"
+.PP 
+.SS "struct \fBglobals\fP gb\fC [extern]\fP"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for limHaloPT from the source code\&.

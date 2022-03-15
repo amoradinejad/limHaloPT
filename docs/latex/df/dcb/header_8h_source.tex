@@ -16,105 +16,105 @@
 \DoxyCodeLine{16 \textcolor{preprocessor}{\#include <float.h>}}
 \DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string.h>}}
 \DoxyCodeLine{18 \textcolor{preprocessor}{\#include <omp.h>}}
-\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <mpi.h>}}
-\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <gsl/gsl\_errno.h>}}
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <gsl/gsl\_spline.h>}}
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <gsl/gsl\_interp2d.h>}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <gsl/gsl\_spline2d.h>}}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_bessel.h>}}
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_legendre.h>}}
-\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <gsl/gsl\_integration.h>}}
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <gsl/gsl\_matrix.h>}}
-\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <gsl/gsl\_linalg.h>}}
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <gsl/gsl\_blas.h>}}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <gsl/gsl\_monte.h>}}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <gsl/gsl\_monte\_vegas.h>}}
-\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <gsl/gsl\_odeiv2.h>}    }
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <gsl/gsl\_roots.h>}   }
-\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_expint.h>}}
-\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <ctype.h>}}
-\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}cuba.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <gsl/gsl\_errno.h>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <gsl/gsl\_spline.h>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <gsl/gsl\_interp2d.h>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <gsl/gsl\_spline2d.h>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_bessel.h>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_legendre.h>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <gsl/gsl\_integration.h>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <gsl/gsl\_matrix.h>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <gsl/gsl\_linalg.h>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <gsl/gsl\_blas.h>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <gsl/gsl\_monte.h>}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <gsl/gsl\_monte\_vegas.h>}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <gsl/gsl\_odeiv2.h>}    }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <gsl/gsl\_roots.h>}   }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <gsl/gsl\_sf\_expint.h>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <ctype.h>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include "{}cuba.h"{}}}
+\DoxyCodeLine{36 }
 \DoxyCodeLine{37 }
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39 \textcolor{preprocessor}{\#define PSC         101L}}
-\DoxyCodeLine{40 \textcolor{preprocessor}{\#define ST              102L}}
-\DoxyCodeLine{41 \textcolor{preprocessor}{\#define TK              103L}}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43 \textcolor{preprocessor}{\#define GROWTH      104L}}
-\DoxyCodeLine{44 \textcolor{preprocessor}{\#define DERGROWTH       105L}}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#define NONLINEAR       106L}}
-\DoxyCodeLine{47 \textcolor{preprocessor}{\#define LINEAR      107L}}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49 \textcolor{preprocessor}{\#define GAUSSIAN        114L}}
-\DoxyCodeLine{50 \textcolor{preprocessor}{\#define NONGAUSSIAN 115L}}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52 \textcolor{preprocessor}{\#define INIT        116L}}
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#define LOCAL       117L}}
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#define EQUILATERAL 118L}}
-\DoxyCodeLine{55 \textcolor{preprocessor}{\#define ORTHOGONAL  119L}}
-\DoxyCodeLine{56 \textcolor{preprocessor}{\#define QSF         120L}}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#define HS          121L}}
-\DoxyCodeLine{58 \textcolor{preprocessor}{\#define NGLOOP      122L}}
-\DoxyCodeLine{59 \textcolor{preprocessor}{\#define derNGLOOP       123L}}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61 \textcolor{preprocessor}{\#define QUADRATIC       124L}}
-\DoxyCodeLine{62 \textcolor{preprocessor}{\#define TIDE        125L}}
-\DoxyCodeLine{63 \textcolor{preprocessor}{\#define GAMMA       126L}}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LPOWER      127L}}
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#define NLPOWER     128L}}
-\DoxyCodeLine{67 \textcolor{preprocessor}{\#define CDM         90L}}
-\DoxyCodeLine{68 \textcolor{preprocessor}{\#define BA          91L}}
-\DoxyCodeLine{69 \textcolor{preprocessor}{\#define TOT         92L}}
-\DoxyCodeLine{70 }
-\DoxyCodeLine{71 \textcolor{preprocessor}{\#define CO10        131L}}
-\DoxyCodeLine{72 \textcolor{preprocessor}{\#define CO21        132L}}
-\DoxyCodeLine{73 \textcolor{preprocessor}{\#define CO32        133L}}
-\DoxyCodeLine{74 \textcolor{preprocessor}{\#define CO43        134L}}
-\DoxyCodeLine{75 \textcolor{preprocessor}{\#define CO54        135L}}
-\DoxyCodeLine{76 \textcolor{preprocessor}{\#define CO65        136L}}
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#define CII         137L}}
-\DoxyCodeLine{78 }
-\DoxyCodeLine{79 \textcolor{preprocessor}{\#define MATTER      138L}}
-\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LINEMATTER  139L}}
-\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LINE        140L}}
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83 \textcolor{preprocessor}{\#define DST         141L    }}
-\DoxyCodeLine{84 \textcolor{preprocessor}{\#define GFILTER     142L}}
-\DoxyCodeLine{85 \textcolor{preprocessor}{\#define BSPLINE     143L}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define PSC         101L}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define ST              102L}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define TK              103L}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define GROWTH      104L}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define DERGROWTH       105L}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define NONLINEAR       106L}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define LINEAR      107L}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define GAUSSIAN        114L}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define NONGAUSSIAN 115L}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define INIT        116L}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define LOCAL       117L}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define EQUILATERAL 118L}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define ORTHOGONAL  119L}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define QSF         120L}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define HS          121L}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define NGLOOP      122L}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define derNGLOOP       123L}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define QUADRATIC       124L}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define TIDE        125L}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define GAMMA       126L}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define LPOWER      127L}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define NLPOWER     128L}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define CDM         90L}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define BA          91L}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define TOT         92L}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define CO10        131L}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define CO21        132L}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define CO32        133L}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define CO43        134L}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define CO54        135L}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define CO65        136L}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define CII         137L}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define MATTER      138L}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define LINEMATTER  139L}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LINE        140L}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define DST         141L    }}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define GFILTER     142L}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define BSPLINE     143L}}
+\DoxyCodeLine{85 }
 \DoxyCodeLine{86 }
-\DoxyCodeLine{87 }
-\DoxyCodeLine{88 \textcolor{preprocessor}{\#define TREE        144L    }}
-\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LOOP        145L}}
-\DoxyCodeLine{90 \textcolor{preprocessor}{\#define WIR         146L}}
-\DoxyCodeLine{91 \textcolor{preprocessor}{\#define NOIR        147L}}
-\DoxyCodeLine{92 }
-\DoxyCodeLine{93 \textcolor{preprocessor}{\#define HALO        148L}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define TREE        144L    }}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LOOP        145L}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define WIR         146L}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define NOIR        147L}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define HALO        148L}}
+\DoxyCodeLine{93 }
 \DoxyCodeLine{94 }
-\DoxyCodeLine{95 }
-\DoxyCodeLine{96 \textcolor{preprocessor}{\#define PS\_KMIN     1.e-\/5}}
-\DoxyCodeLine{97 \textcolor{preprocessor}{\#define PS\_KMAX     100.1 }}
-\DoxyCodeLine{98 \textcolor{preprocessor}{\#define PS\_ZMAX     14.}}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100 \textcolor{preprocessor}{\#define CLEANUP        1 }}
-\DoxyCodeLine{101 \textcolor{preprocessor}{\#define DO\_NOT\_EVALUATE -\/1.0}}
-\DoxyCodeLine{102 \textcolor{preprocessor}{\#define NPARS     6}}
-\DoxyCodeLine{103 \textcolor{preprocessor}{\#define MAXL 2000}}
-\DoxyCodeLine{104 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define PS\_KMIN     1.e-\/5}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define PS\_KMAX     300.1 }}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define PS\_ZMAX     14.}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define CLEANUP        1 }}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define DO\_NOT\_EVALUATE -\/1.0}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define NPARS     6}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define MAXL 2000}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{header_8h_a61c6674f2b410e126a682325ce5360c0}{gb}};}
 \DoxyCodeLine{105 }
 \DoxyCodeLine{110 \textcolor{preprocessor}{\#include "{}../Class/include/class.h"{}}}
-\DoxyCodeLine{112 \textcolor{preprocessor}{\#include "{}cubature.h"{}}}
-\DoxyCodeLine{113 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_global___structs_8h}{global\_structs.h}}"{}}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_global___structs_8h}{global\_structs.h}}"{}}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#include "{}cubature.h"{}}}
 \DoxyCodeLine{114 \textcolor{preprocessor}{\#include "{}utilities.h"{}}}
 \DoxyCodeLine{115 \textcolor{preprocessor}{\#include "{}cosmology.h"{}}}
-\DoxyCodeLine{116 \textcolor{preprocessor}{\#include "{}survey\_specs.h"{}}}
-\DoxyCodeLine{117 \textcolor{preprocessor}{\#include "{}line\_ingredients.h"{}}   }
-\DoxyCodeLine{118 \textcolor{preprocessor}{\#include "{}wnw\_split.h"{}}}
-\DoxyCodeLine{119 \textcolor{preprocessor}{\#include "{}ir\_res.h"{}}}
-\DoxyCodeLine{120 \textcolor{preprocessor}{\#include "{}ps\_halo\_1loop.h"{}}}
-\DoxyCodeLine{121 \textcolor{preprocessor}{\#include "{}ps\_line\_pt.h"{}}}
-\DoxyCodeLine{122 \textcolor{preprocessor}{\#include "{}ps\_line\_hm.h"{}}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#include "{}ir\_res.h"{}}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#include "{}line\_ingredients.h"{}}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#include "{}ps\_halo\_1loop.h"{}}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#include "{}ps\_line\_hm.h"{}}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#include "{}ps\_line\_pt.h"{}}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#include "{}survey\_specs.h"{}}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#include "{}wnw\_split.h"{}}}
 \DoxyCodeLine{123 }
 \DoxyCodeLine{124 }
 \DoxyCodeLine{128 \textcolor{keywordtype}{void}  \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}}();}

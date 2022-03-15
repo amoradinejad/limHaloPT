@@ -13,16 +13,17 @@ This package is released together with the following publication, \href{https://
 
 The source code of this package is publically avaialbel on Git\+Hub at \href{https://github.com/amoradinejad/limHaloPT}{\texttt{ lim\+Halo\+PT}}. ~\newline
  ~\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Dependencies}\label{index_autotoc_md5}
-The lim\+Halo\+PT package calls various functions from \href{https://github.com/lesgourg/class_public}{\texttt{ CLASS}} Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the \char`\"{}libclass.\+a\char`\"{} file in the \char`\"{} CLASS/lib/\char`\"{} folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of \href{http://www.feynarts.de/cuba/}{\texttt{ CUBA}} library. Furthermore, the code heavily uses functions of \href{https://www.gnu.org/software/gsl/doc/html/}{\texttt{ GSL}} scientific library. Therfore, make sure that the two libraries are correctly linked to lim\+Halo\+PT by making necassary modifcations to the makefile (placed in Source directory) of lim\+Halo\+PT package. ~\newline
+The lim\+Halo\+PT package calls various functions from \href{https://github.com/lesgourg/class_public}{\texttt{ CLASS}} Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a \char`\"{} CLASS/lib/\char`\"{} folder and place the \char`\"{}libclass.\+a\char`\"{} in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of \href{http://www.feynarts.de/cuba/}{\texttt{ CUBA}} library. Furthermore, the code heavily uses functions of \href{https://www.gnu.org/software/gsl/doc/html/}{\texttt{ GSL}} scientific library. Therfore, make sure that the two libraries are correctly linked to lim\+Halo\+PT by making necassary modifcations to the makefile (placed in Source directory) of lim\+Halo\+PT package. ~\newline
  ~\hypertarget{index_autotoc_md6}{}\doxysubsubsection{Compilation and Usage}\label{index_autotoc_md6}
 
 \begin{DoxyItemize}
-\item To compile, type\+: make ~\newline
-
-\item To run, type\+: ./lim\+Halo\+PT
+\item To compile, change to Source directory and type\+: make
+\item To run, from within Source directory type\+: ./lim\+Halo\+PT
 \end{DoxyItemize}
 
-If you modified the code, you need to first do \char`\"{}make clean\char`\"{} before doing \char`\"{}make\char`\"{}. Depending on what quantities you want to calculate, you can modify the \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function in \mbox{\hyperlink{main_8c}{main.\+c}} module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions. ~\newline
+If you modified the code, you need to first do \char`\"{}make clean\char`\"{} before doing \char`\"{}make\char`\"{}. Depending on what quantities you want to calculate, you can modify the \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function in \mbox{\hyperlink{main_8c}{main.\+c}} module (as marked in the code). As examples, I have included the calls to two functions to compute the clustering and shot noise contributions.
+
+Note that the code was developed, compiled, and tested on Mac OS X, using gcc version 7.\+5.\+0 compiler. ~\newline
  ~\hypertarget{index_autotoc_md7}{}\doxysubsubsection{Attribution}\label{index_autotoc_md7}
 You can use this package freely, provided that in your publication you cite the following paper\+: Moradinezhad, Nikakhtar, Keating, Castorina\+: \href{https://arxiv.org/abs/2111.03717}{\texttt{ ar\+Xiv\+:2111.\+03717}}. Furthermore, since lim\+Halo\+PT relies on CLASS Boltzman code, you should also cite at least this paper \href{https://arxiv.org/abs/1104.2933}{\texttt{ arxiv\+:1104.\+2933}} as required by CLASS developers. ~\newline
  ~\hypertarget{index_autotoc_md8}{}\doxysubsubsection{License}\label{index_autotoc_md8}

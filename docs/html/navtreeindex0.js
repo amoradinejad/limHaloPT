@@ -111,7 +111,6 @@ var NAVTREEINDEX0 =
 "d6/d32/cosmology_8c.html#a4dc96bb7695696838c30e0929302c99c":[2,0,1,0,21],
 "d6/d32/cosmology_8c.html#a5afed9a2f6957d7c60701367655fd45f":[2,0,1,0,9],
 "d6/d32/cosmology_8c.html#a5b3f1db18f8f65fb7721acae37bc7b61":[2,0,1,0,10],
-"d6/d32/cosmology_8c.html#a61c6674f2b410e126a682325ce5360c0":[2,0,1,0,33],
 "d6/d32/cosmology_8c.html#a6cb2155e541823871af839a39ccec1e7":[2,0,1,0,2],
 "d6/d32/cosmology_8c.html#a6e1d08b8f9ecf5108abd47c9b34902c4":[2,0,1,0,20],
 "d6/d32/cosmology_8c.html#a72661633b8701d902d6887c4402ed394":[2,0,1,0,26],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "dd/d24/survey__specs_8c.html#a91c4e0c62bcd3e179536fea62e8d53b5":[2,0,1,7,3],
 "dd/d24/survey__specs_8c.html#ab0f5b6af6991512fd864af10e6c2d54d":[2,0,1,7,1],
 "df/dcb/header_8h.html":[2,0,0,1],
-"df/dcb/header_8h.html#a054549cb0229d255e4b415c9d356ab3f":[2,0,0,1,46]
+"df/dcb/header_8h.html#a054549cb0229d255e4b415c9d356ab3f":[2,0,0,1,46],
+"df/dcb/header_8h.html#a251e0b44ee10891c062205226a57a162":[2,0,0,1,6]
 };

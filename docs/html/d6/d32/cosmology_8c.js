@@ -32,6 +32,5 @@ var cosmology_8c =
     [ "transfer", "d6/d32/cosmology_8c.html#a85b5b6ef6c4622e37405251a565dd8cd", null ],
     [ "window_g", "d6/d32/cosmology_8c.html#ae40d777e0dc4f51704521899d5292254", null ],
     [ "window_kth", "d6/d32/cosmology_8c.html#afe6c6f803c739fbf11f31abd57f89dd6", null ],
-    [ "window_rth", "d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328", null ],
-    [ "gb", "d6/d32/cosmology_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
+    [ "window_rth", "d6/d32/cosmology_8c.html#ad9b46b8d4596d248565d721af85fa328", null ]
 ];
