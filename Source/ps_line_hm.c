@@ -18,7 +18,6 @@
  */
 
 #include "header.h"
-struct globals gb;
 
 
 /**

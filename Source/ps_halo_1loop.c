@@ -22,7 +22,6 @@
  */
 
 #include "header.h"
-struct globals gb;
 
 /**
  * Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions
