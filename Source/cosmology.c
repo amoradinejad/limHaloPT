@@ -546,7 +546,6 @@ double PS_class(struct Cosmology *Cx, double k, double z, long mode)
   } 
   else if (k>= PS_KMIN && k<= PS_KMAX){ /* make sure that the requested k-value is within the range set for CLASS*/
     if (mode == LINEAR){
-      // harmonic_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.hr, k, z, &pk, pk_ic, &pk_cb, pk_cb_ic); 
       fourier_pk_at_k_and_z(&Cx -> ccs.ba, &Cx -> ccs.pm, &Cx -> ccs.fo, pk_linear, k, z, Cx -> ccs.fo.index_pk_cb, &pk_cb, NULL);
     }
     else if (mode == NONLINEAR){
