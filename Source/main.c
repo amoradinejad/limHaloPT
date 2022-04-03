@@ -24,11 +24,11 @@ int main(int argc,char *argv[])
 	 * -----------------------------
 	 */
 
- 	/*
- 	* Initialize various ingredients for the rest of the code. More specifically, set the relavent directory paths, values of cosmological parameters and in general any parameter
- 	* that has to be passed to CLASS Boltzmann code. Furthermore initialize some of the interpolators needed
- 	* for the package.
- 	*/
+ 	/**
+ 	 * Initialize various ingredients for the rest of the code. More specifically, set the relavent directory paths, values of cosmological parameters and in general any parameter
+ 	 * that has to be passed to CLASS Boltzmann code. Furthermore initialize some of the interpolators needed
+ 	 * for the package.
+ 	 */
  	initialize();
 
 
@@ -38,11 +38,12 @@ int main(int argc,char *argv[])
 	 * Change if you want to assume a different mass function or minimum halo mass
 	 * -----------------------------
 	 */
- 	/*
- 	* Set the parameters for computing quantities related to spectral lines. 
- 	* More specifically, the mimum mass for halos that can host line-emitting galaxies M_min
- 	* and the the theoretical mass function to be used, ST: Sheth-Tormen, PSC: Press-Schecter, TK:: Tinker
- 	*/
+ 	
+ 	/**
+ 	 * Set the parameters for computing quantities related to spectral lines. 
+ 	 * More specifically, the mimum mass for halos that can host line-emitting galaxies M_min
+ 	 * and the the theoretical mass function to be used, ST: Sheth-Tormen, PSC: Press-Schecter, TK:: Tinker
+ 	 */
 	double M_min   = 1.e9;
 	long mode_mf   = ST;
 
@@ -85,10 +86,11 @@ int main(int argc,char *argv[])
 	 * In general, you should not need to change this portion of the code. 
 	 * -----------------------------
 	 */
-      /* 
-      * Set values of cosmological parameter and finger-of-god paramater (peculiar velocity of line emitters) 
-      * and initialize cosmo_pars array in the cosmology structure Cx_ref
-      */
+      
+      /** 
+       * Set values of cosmological parameter and finger-of-god paramater (peculiar velocity of line emitters) 
+       * and initialize cosmo_pars array in the cosmology structure Cx_ref
+       */
 	double gb_pars[] = {gb.logAs,gb.ns,gb.h,gb.Omega_b,gb.Omega_cdm,gb.sigFOG0};
 
 	struct Cosmology Cx_ref;
@@ -222,7 +224,9 @@ void initialize()
 
 	logSFR_alloc_init();
 
-	///// cosmological parameters corresponding to initial conditions of HV simulations
+	/**
+	 * Cosmological parameters corresponding to initial conditions of HiddenValley (HV) simulations
+	 */
 	gb.c 		 = 2.99792458e5;  /// In units of km/s
 	gb.h 		 = 0.677;
 	gb.Omega_cdm = 0.11923/pow(gb.h,2.);  ////omega_cdm = Omega_cdm h^2 ;

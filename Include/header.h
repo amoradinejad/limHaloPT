@@ -110,7 +110,7 @@ extern struct globals gb;
 #include "../Class/include/class.h"
 /// \endcond
 #include "global_structs.h"
-#include "cubature.h"
+#include "hcubature.h"
 #include "utilities.h"
 #include "cosmology.h"
 #include "ir_res.h"
