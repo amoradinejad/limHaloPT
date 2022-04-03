@@ -22,7 +22,7 @@ The limHaloPT package calls various functions from [CLASS](https://github.com/le
 &nbsp;
 
 
-## Compilation 
+### Compilation 
 - To compile, type: make 
 <br>
 &nbsp;
@@ -32,7 +32,7 @@ If you modified the code, you need to first do "make clean" before doing "make".
 &nbsp;
 
 
-## Basic usage
+### Basic usage
 In the current version of limHaloPT, to use the package, you need to modify the main.c module. After each modification, the package needs to be re-compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used. 
 
 Depending on what quantities you want to calculate, you should modify the main() function in main.c module (as marked in the code). Before calling any function within main.c, you may want to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions that compute the clustering and shot noise contributions aree included in main.c module. We descibe one of them here. 
@@ -54,7 +54,7 @@ limHaloPT is free software made available under the MIT License. For details see
 &nbsp;
 
 
-## Contributing
+### Contributing
 To contribute, create a fork on github, make changes and commits, and submit a pull request on github. If you found any issues with the code, please get in touch by posting an issue on this github repository.
 <br>
 &nbsp;

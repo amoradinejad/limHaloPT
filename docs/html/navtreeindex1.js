@@ -57,13 +57,7 @@ var NAVTREEINDEX1 =
 "globals_defs.html":[2,1,3],
 "globals_func.html":[2,1,1],
 "globals_vars.html":[2,1,2],
-"index.html":[],
 "index.html":[0],
-"index.html#autotoc_md13":[0],
-"index.html#autotoc_md14":[0,0],
-"index.html#autotoc_md15":[0,1],
-"index.html#autotoc_md16":[0,1,1],
-"index.html#autotoc_md17":[0,1,2],
-"index.html#autotoc_md18":[0,2],
+"index.html":[],
 "pages.html":[]
 };
