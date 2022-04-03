@@ -16,52 +16,33 @@ The full documentation of the code can be found on [Documentation](https://amora
 
 
 ## Dependencies
-
 The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Furthermore, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
 
-Note that in order to compute the luminosity of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory.  
-<br>
+Note that in order to compute the luminosity of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. <br>
+
 
 ## Structure of the package
-
 limHaloPT consists of 10 main modules, which include the following categories of functions
 - main.c : This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. After adding the function calls in this modele, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.
 
 - ps_line_hm.c : This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation. 
-
 - ps_line_pt.c : This module includes various functions to compute the Poisson shot-noise and linear clustering components of line power spectrum, contributions of line interloper to the power spectrum signal. Both real and redshift-space linear power spectra are available.
-
 - line_ingredients.c :  This module includes all the necassary functions to compute the line power spectrum by the above two modules. Many of the functions in this module can be used to develope the extensions of limHaloPT to other line statistics beyond the power spectrum.
-
 - ps_halo_1loop.c : This module includes the ingredients to compute the real-space 1loop contributions of the halo/galaxy power spectrum. Both loops due to gravitational evolution and primordial non-Gaussianity can be calculated. The computations of the loop integrals is performed with direct numerical integration routines from CUBA library.
-
-
 - ir_res.c: This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order. 
-
-
 - wnw_split.c: This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
-
-
 - survey_specs.c: This module includes functions to calculate quantities related to the choices of maximum and minnimum scale probable by a given survey.
-
-
 - cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
-
-
-- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. 
-<br>
+- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. <br>
 
 
 ## Compilation 
-
 - To compile, change to Source directory and type: make <br>
 
-If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
-<br>
+If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 
 
 ## Basic usage
-
 In the current version of limHaloPT, to use the package, you need to modify the main.c module. After each modification, the package needs to be re-compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used. 
 
 Depending on what quantities you want to calculate, you should modify the main() function in main.c module (as marked in the code). Before calling any function within main.c, you may need to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. We descibe one of them here. 
@@ -107,8 +88,7 @@ Once you made your modifications to main.c module, you should be in Source subdi
 
 ## Attribution
 You can use this package freely, provided that in your publication you cite the following paper
-Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers. 
-<br>
+Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers.<br>
 
 
 ## License
