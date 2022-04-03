@@ -25,7 +25,6 @@ The limHaloPT package calls various functions from [CLASS](https://github.com/le
 ### Compilation 
 - To compile, type: make 
 <br>
-&nbsp;
 
 If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
 <br>
