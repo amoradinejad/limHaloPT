@@ -67,11 +67,12 @@ So here is how you would call the PS_line_HM() function:
        */
       printf("Calculating halo-model line power spectrum\n");
       int line_id = 0;
+      double ps_shot_hm = 0.;
       for(int i=0;i<nlines;i++){
             line_id = i;
             for(int j=0;j<nz;j++){
                   for(int l=0;l<nk;l++){
-                        PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
+                        ps_shot_hm =PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
                   }
             }     
       }
