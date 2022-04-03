@@ -126,7 +126,9 @@ int main(int argc,char *argv[])
  	int nz     = 50;
 	double *k  = loginit_1Darray(nk, 1.e-3, 2.);
  	double *z  = init_1Darray(nz,0.0,11.);
-
+ 	
+ 	double ps_clust_hm = 0.;
+ 	double ps_shot_hm  = 0.;
 	/** 
 	 * Compute the line clustering signal using halo model 
 	 */
@@ -136,7 +138,8 @@ int main(int argc,char *argv[])
  		line_id = i;
  		for(int j=0;j<nz;j++){
 			for(int l=0;l<nk;l++){
-				PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
+				ps_clust_hm = PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
+				printf("%d %12.6e %12.6e %12.6e \n", i, z[j], k[l], ps_clust_hm);
 			}
 		}	
 	}
@@ -180,7 +183,9 @@ int main(int argc,char *argv[])
 
 			//If accounting for the nfw profile, the shot noise will be scale-dependent. So loop over k-values
 			for(int l=0;l<nk;l++){
-				PS_shot_HM(&Cx_ref, k[l], z[j], M_min, input, mode_mf, lines[i]);
+				ps_shot_hm = PS_shot_HM(&Cx_ref, k[l], z[j], M_min, input, mode_mf, lines[i]);
+				printf("%d %12.6e %12.6e %12.6e \n", i, z[j], k[l], ps_shot_hm);
+
 			}
 
 			// When neglecting the nfw profile for comparison with sims, the shot noise is scale-independent. 

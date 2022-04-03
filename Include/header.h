@@ -112,6 +112,7 @@ extern struct globals gb;
 #include "global_structs.h"
 #include "hcubature.h"
 #include "utilities.h"
+#include "setup_teardown.h"
 #include "cosmology.h"
 #include "ir_res.h"
 #include "line_ingredients.h"
@@ -121,12 +122,6 @@ extern struct globals gb;
 #include "survey_specs.h"
 #include "wnw_split.h"
 
-
-/** 
- * Function declarations of main.c module
- */
-void  initialize();
-void 	cleanup();
 
 
 /**

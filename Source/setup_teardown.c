@@ -19,7 +19,7 @@
  */
 void initialize()
 {
-      getcwd(gb.project_home , sizeof(gb.project_home));  //This gives the path to the source directory
+      getcwd(gb.project_home , sizeof(gb.project_home));  //This gives the path to the source directory      
       sprintf(gb.output_dir,"%s/Output", gb.project_home);
       sprintf(gb.data_dir,"%s/Input", gb.project_home);
       sprintf(gb.SFR_filename,"%s/release-sfh_z0_z8_052913/sfr/sfr_release.dat",gb.data_dir);  

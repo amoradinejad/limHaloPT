@@ -36,7 +36,7 @@ limHaloPT consists of 10 main modules, which include the following categories of
 
 
 ## Compilation 
-- To compile, change to Source directory and type: make <br>
+- To compile, type: make <br>
 
 If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 
@@ -77,7 +77,7 @@ So here is how you would call the PS_line_HM() function:
       }
 ```
 
-Once you made your modifications to main.c module, you should be in Source subdirectory and take the following steps:
+Once you made your modifications to main.c module, you should do the following:
 - Clean the previous make by "make clean"
 - Re-compile the code with  "make" 
 - Run the code by  "./limHaloPT" <br>
