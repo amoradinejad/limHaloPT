@@ -56,7 +56,8 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
 
 
-- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. <br>
+- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. 
+<br>
 
 
 
@@ -101,7 +102,8 @@ You would refer to each line in the example code below by its index inside the l
 
 Once you made your modifications to main.c module, you should be in Source subdirectory and take the following steps:
 - Recompile the code with "make" 
-- Run the code by typing "./limHaloPT" <br>
+- Run the code by typing "./limHaloPT" 
+<br>
 
 
 ## Attribution
