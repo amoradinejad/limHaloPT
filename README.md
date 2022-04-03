@@ -10,9 +10,8 @@ Welcom to limHaloPT, a numerical package for computing the clustering and shot-n
 The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term. The deviations from Poisson shot noise on large scales are also computed within the halo model.
 
 This package is released together with the following publication, [arXiv:2111.03717](https://arxiv.org/abs/2111.03717), where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims will be publically avilable on [MithraLIMSims](http://cyril.astro.berkeley.edu/MithraLIMSims). The code to analyse the simulated maps is an extension of the toolskit used in analysin Hidden-Valley simulations, and is publically avilable on [LIM Analysis](https://github.com/farnikn/MithraLIMSims). As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. 
-<br>
 
-The full documentation of the code can be found on [Documentation](https://amoradinejad.github.io/limHaloPT/html/index.html).
+The full documentation of the code can be found on [Documentation](https://amoradinejad.github.io/limHaloPT/html/index.html). <br>
 
 
 ## Dependencies
@@ -22,12 +21,14 @@ The limHaloPT package calls various functions from [CLASS](https://github.com/le
 Note that in order to compute the luminosity of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory.  
 <br>
 
+
 ## Compilation 
 
 - To compile, change to Source directory and type: make <br>
 
 If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
 <br>
+
 
 ## Structure of the package
 
@@ -55,7 +56,8 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
 
 
-- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package.
+- utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. <br>
+
 
 
 ## Basic usage
@@ -99,13 +101,14 @@ You would refer to each line in the example code below by its index inside the l
 
 Once you made your modifications to main.c module, you should be in Source subdirectory and take the following steps:
 - Recompile the code with "make" 
-- Run the code by typing "./limHaloPT"
+- Run the code by typing "./limHaloPT" <br>
 
 
 ## Attribution
 You can use this package freely, provided that in your publication you cite the following paper
 Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers. 
 <br>
+
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
