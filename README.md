@@ -80,8 +80,7 @@ So here is how you would call the PS_line_HM() function:
 Once you made your modifications to main.c module, you should be in Source subdirectory and take the following steps:
 - Clean the previous make by "make clean"
 - Re-compile the code with  "make" 
-- Run the code by  "./limHaloPT" 
-<br>
+- Run the code by  "./limHaloPT" <br>
 
 
 ## Attribution
