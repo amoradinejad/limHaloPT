@@ -62,7 +62,8 @@ var searchData=
   ['ps_5fxtrapol_59',['PS_xtrapol',['../d2/dbd/struct_cosmology.html#a5dee8f06ef55f61fcf2ad920f4f80e65',1,'Cosmology']]],
   ['ps_5fxtrapol_5ffree_60',['PS_xtrapol_free',['../d6/d32/cosmology_8c.html#a9f048ed16d14d0f8d8970524b2e6e57c',1,'cosmology.c']]],
   ['ps_5fxtrapol_5finit_61',['PS_xtrapol_init',['../d6/d32/cosmology_8c.html#a9e22a5bbc8d0f80cafea3523b2432c82',1,'cosmology.c']]],
-  ['ps_5fzmax_62',['PS_ZMAX',['../df/dcb/header_8h.html#a791f4d963d21043a3d7cef12c9587d4e',1,'header.h']]],
-  ['psc_63',['PSC',['../df/dcb/header_8h.html#a46eb462e05a3197e84ff95d874d67f34',1,'header.h']]],
-  ['pt_64',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
+  ['ps_5fzmax_62',['PS_zmax',['../d8/d11/structglobals.html#a2f074bcf2429219731fae83c125b6217',1,'globals']]],
+  ['ps_5fzmax_63',['PS_ZMAX',['../df/dcb/header_8h.html#a791f4d963d21043a3d7cef12c9587d4e',1,'header.h']]],
+  ['psc_64',['PSC',['../df/dcb/header_8h.html#a46eb462e05a3197e84ff95d874d67f34',1,'header.h']]],
+  ['pt_65',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
 ];

@@ -1,4 +1,4 @@
-.TH "globals" 3 "Wed Mar 16 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "globals" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -112,6 +112,12 @@ globals \- A global structure including the values of cosmological parmaeters, 2
 .RI "double \fBkmax_CLASS\fP"
 .br
 .ti -1c
+.RI "double \fBPS_zmax\fP"
+.br
+.ti -1c
+.RI "double \fBline_zmax\fP"
+.br
+.ti -1c
 .RI "char \fBSFR_filename\fP [FILENAME_MAX]"
 .br
 .ti -1c
@@ -154,6 +160,8 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 
 .SS "double kp"
 
+.SS "double line_zmax"
+
 .SS "double logAs"
 
 .SS "gsl_interp_accel* logM_accel_ptr"
@@ -193,6 +201,8 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 .SS "double PS_kmax"
 
 .SS "double PS_kmin"
+
+.SS "double PS_zmax"
 
 .SS "double rho"
 

@@ -1,7 +1,7 @@
 <map id="IR_Sigma2_integrand" name="IR_Sigma2_integrand">
 <area shape="rect" id="node1" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="5,183,152,209"/>
 <area shape="rect" id="node2" href="$d1/d48/ir__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="200,183,299,209"/>
-<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="573,81,639,108"/>
+<area shape="rect" id="node3" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="573,81,639,108"/>
 <area shape="rect" id="node9" href="$d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="347,157,493,184"/>
 <area shape="rect" id="node15" href="$d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="359,208,481,235"/>
 <area shape="rect" id="node16" href="$d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="351,284,489,311"/>

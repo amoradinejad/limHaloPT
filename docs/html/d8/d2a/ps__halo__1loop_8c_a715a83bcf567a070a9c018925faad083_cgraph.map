@@ -1,6 +1,6 @@
 <map id="PNG_loop_integrands" name="PNG_loop_integrands">
 <area shape="rect" id="node1" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="5,588,155,615"/>
-<area shape="rect" id="node2" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1038,81,1105,108"/>
+<area shape="rect" id="node2" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1038,81,1105,108"/>
 <area shape="rect" id="node8" href="$d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="226,588,265,615"/>
 <area shape="rect" id="node9" href="$d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="220,639,271,665"/>
 <area shape="rect" id="node10" href="$d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="203,436,288,463"/>

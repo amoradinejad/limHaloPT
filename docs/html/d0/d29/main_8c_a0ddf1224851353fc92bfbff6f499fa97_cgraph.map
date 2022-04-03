@@ -1,11 +1,11 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,980,56,1007"/>
 <area shape="rect" id="node2" href="$d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee" title="Compute the large&#45;scale limit of P_b2b2 loop." alt="" coords="130,296,190,323"/>
-<area shape="rect" id="node7" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1159,119,1226,145"/>
+<area shape="rect" id="node7" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1159,119,1226,145"/>
 <area shape="rect" id="node15" href="$d6/d32/cosmology_8c.html#a4b4377cdc8e3bc9374e420bf65b5ce90" title="Allocate memory and initialize the cosmology structure, which includes the CLASS cosmology structure ..." alt="" coords="104,967,216,993"/>
 <area shape="rect" id="node19" href="$d7/db6/utilities_8c.html#aacaa803e04084752f13eb25e236f46aa" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on linear scale" alt="" coords="503,904,595,931"/>
 <area shape="rect" id="node25" href="$d7/db6/utilities_8c.html#aed3fb59a75f0f19ee1e7b860c0d5a8f8" title="initialize a 1d array, with values in the range of [xmin,xmax] and evenely&#45;space on natural&#45;log scale" alt="" coords="494,701,603,728"/>
-<area shape="rect" id="node27" href="$d0/d29/main_8c.html#a25a40b6614565f755233080a384c35f1" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="125,1524,195,1551"/>
+<area shape="rect" id="node27" href="$d2/db8/setup__teardown_8c.html#a25a40b6614565f755233080a384c35f1" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="125,1524,195,1551"/>
 <area shape="rect" id="node31" href="$d7/d10/line__ingredients_8c.html#a3a13aa566fb639abeb29eae43e5fcfa8" title="Compute the linear and quadratic line biases, accounting ffor the normalization w...." alt="" coords="123,1727,197,1753"/>
 <area shape="rect" id="node33" href="$d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="113,600,207,627"/>
 <area shape="rect" id="node42" href="$d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08" title="Compute the mean brightness temprature of CO in unit of microK, compared with Pullen et al and Lidz e..." alt="" coords="306,1056,381,1083"/>

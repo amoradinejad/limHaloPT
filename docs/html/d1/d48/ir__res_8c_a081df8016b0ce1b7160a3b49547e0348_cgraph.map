@@ -7,7 +7,7 @@
 <area shape="rect" id="node22" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="1501,360,1608,387"/>
 <area shape="rect" id="node3" href="$d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="327,360,457,387"/>
 <area shape="rect" id="node13" href="$d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="505,259,591,285"/>
-<area shape="rect" id="node4" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1341,613,1407,640"/>
+<area shape="rect" id="node4" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1341,613,1407,640"/>
 <area shape="rect" id="node10" href="$d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="529,461,567,488"/>
 <area shape="rect" id="node11" href="$d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="523,309,573,336"/>
 <area shape="rect" id="node12" href="$d8/d2a/ps__halo__1loop_8c.html#ab0757b47fa87b32dbd14c3430f7d8185" title=" " alt="" coords="523,360,573,387"/>

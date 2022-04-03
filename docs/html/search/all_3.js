@@ -8,7 +8,7 @@ var searchData=
   ['cl_5fcosmology_5finitilize_5',['CL_Cosmology_initilize',['../d6/d32/cosmology_8c.html#a6cb2155e541823871af839a39ccec1e7',1,'cosmology.c']]],
   ['class_5fcosmology_5fstruct_6',['Class_Cosmology_Struct',['../d2/dd8/struct_class___cosmology___struct.html',1,'']]],
   ['cleanup_7',['CLEANUP',['../df/dcb/header_8h.html#a922674bf1f621eb8d7cfc67d2fc870b3',1,'header.h']]],
-  ['cleanup_8',['cleanup',['../d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0',1,'cleanup(struct Cosmology *Cx):&#160;main.c'],['../df/dcb/header_8h.html#a4b66d5e31b5dc18b314c8a68163263bd',1,'cleanup():&#160;header.h']]],
+  ['cleanup_8',['cleanup',['../d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0',1,'setup_teardown.c']]],
   ['co10_9',['CO10',['../df/dcb/header_8h.html#a45a98a7c684bcfbc146b6233427095f7',1,'header.h']]],
   ['co21_10',['CO21',['../df/dcb/header_8h.html#a9f7929279cbd7ba300195869d74af02e',1,'header.h']]],
   ['co32_11',['CO32',['../df/dcb/header_8h.html#a54661073f70776c6c46dd2d11f29dfb4',1,'header.h']]],

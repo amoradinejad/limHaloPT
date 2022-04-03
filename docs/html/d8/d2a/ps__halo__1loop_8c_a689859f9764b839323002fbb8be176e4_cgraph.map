@@ -1,6 +1,6 @@
 <map id="PS_hh_G" name="PS_hh_G">
 <area shape="rect" id="node1" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="5,512,84,539"/>
-<area shape="rect" id="node2" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1470,208,1537,235"/>
+<area shape="rect" id="node2" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1470,208,1537,235"/>
 <area shape="rect" id="node8" href="$d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="275,360,405,387"/>
 <area shape="rect" id="node13" href="$d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="633,411,719,437"/>
 <area shape="rect" id="node20" href="$d6/d32/cosmology_8c.html#a07975efc9403515a6ec317175f4feb7b" title="Evaluate the extrapolation for matter power spectrum beyond what is calculated by CLASS,..." alt="" coords="1851,689,1891,716"/>

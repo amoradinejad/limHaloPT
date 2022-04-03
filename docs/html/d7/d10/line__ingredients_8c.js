@@ -24,6 +24,5 @@ var line__ingredients_8c =
     [ "p_sig_Tbar", "d7/d10/line__ingredients_8c.html#a2bfb013c5be4f1c6d1ea0b91146b5f1c", null ],
     [ "p_sig_Tbar_integrand", "d7/d10/line__ingredients_8c.html#a051e4cade75852a7abff94bce70a0307", null ],
     [ "SFR_Behroozi_free", "d7/d10/line__ingredients_8c.html#a6d006053a4f4af3c50b5c9a0b6365a8d", null ],
-    [ "Tbar_line", "d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08", null ],
-    [ "gb", "d7/d10/line__ingredients_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
+    [ "Tbar_line", "d7/d10/line__ingredients_8c.html#a8badf96f7e0696daa78b2f6aeeda8a08", null ]
 ];

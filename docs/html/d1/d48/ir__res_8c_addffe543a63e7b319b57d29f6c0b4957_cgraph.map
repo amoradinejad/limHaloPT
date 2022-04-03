@@ -1,6 +1,6 @@
 <map id="pm_nowiggle_dst" name="pm_nowiggle_dst">
 <area shape="rect" id="node1" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="5,157,128,184"/>
-<area shape="rect" id="node2" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="207,81,274,108"/>
+<area shape="rect" id="node2" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="207,81,274,108"/>
 <area shape="rect" id="node8" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="176,132,305,159"/>
 <area shape="rect" id="node9" href="$d6/d32/cosmology_8c.html#a5b3f1db18f8f65fb7721acae37bc7b61" title="Compute the growth factor D(k,z) for a general case where it can be scale&#45;dependant The scale&#45;dep gro..." alt="" coords="201,183,280,209"/>
 <area shape="rect" id="node12" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="187,233,294,260"/>

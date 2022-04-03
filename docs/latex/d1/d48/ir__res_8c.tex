@@ -6,8 +6,7 @@ Documented IR\+\_\+res module.
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for ir\+\_\+res.\+c\+:
-\nopagebreak
+Include dependency graph for ir\+\_\+res.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,19 +24,14 @@ double \mbox{\hyperlink{ir__res_8c_a96ac18bc55ca39bce830a35aac4f1dee}{IR\+\_\+\+
 \begin{DoxyCompactList}\small\item\em Integrand to compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{ir__res_8c_ad57601a52710911744c3ab9ee4192075}{IR\+\_\+\+Sigma2}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double z, double k0, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the suppression factor IR\+\_\+sigma2. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ir__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}{pm\+\_\+nowiggle}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double k0, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}}, long SPLIT)
+double \mbox{\hyperlink{ir__res_8c_ae8fbd2dc63a91bc7aa61d44c2f726050}{pm\+\_\+nowiggle}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double k0, int \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}}, long SPLIT)
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ir__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}{pm\+\_\+nowiggle\+\_\+bspline}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}})
+double \mbox{\hyperlink{ir__res_8c_acaaad0d343ab0665ec92102ca3b9fa8f}{pm\+\_\+nowiggle\+\_\+bspline}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}})
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum, reading in and interpolating the output of apython code which computed the broadband by fitting families of Bsplines (see Vlah et al 2015) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ir__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878}{pm\+\_\+nowiggle\+\_\+gfilter}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}})
+double \mbox{\hyperlink{ir__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878}{pm\+\_\+nowiggle\+\_\+gfilter}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}})
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al 2015) \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ir__res_8c_addffe543a63e7b319b57d29f6c0b4957}{pm\+\_\+nowiggle\+\_\+dst}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}})
+double \mbox{\hyperlink{ir__res_8c_addffe543a63e7b319b57d29f6c0b4957}{pm\+\_\+nowiggle\+\_\+dst}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, int \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}})
 \begin{DoxyCompactList}\small\item\em Compute the no-\/wiggle componenet of the matter power spectrum, reading in and interpolating the output of apython code which computed the broadband by discrete sin-\/transform, See Hamann et al 2010. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{ir__res_8c_a61c6674f2b410e126a682325ce5360c0}{gb}}
-\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
@@ -371,12 +365,3 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/d48/ir__res_8c_a2dd3097ca9961b75008d5f6cbb3e1878_icgraph}
 \end{center}
 \end{figure}
-
-
-\doxysubsubsection{Variable Documentation}
-\mbox{\Hypertarget{ir__res_8c_a61c6674f2b410e126a682325ce5360c0}\label{ir__res_8c_a61c6674f2b410e126a682325ce5360c0}} 
-\index{ir\_res.c@{ir\_res.c}!gb@{gb}}
-\index{gb@{gb}!ir\_res.c@{ir\_res.c}}
-\doxyparagraph{\texorpdfstring{gb}{gb}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structglobals}{globals}} gb}
-

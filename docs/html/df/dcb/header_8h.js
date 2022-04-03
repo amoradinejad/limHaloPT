@@ -53,7 +53,5 @@ var header_8h =
     [ "TOT", "df/dcb/header_8h.html#ab74ea0985ed254421a2ec2a9348eaf91", null ],
     [ "TREE", "df/dcb/header_8h.html#abf5b8fbbeb8255336e401a15a80214a8", null ],
     [ "WIR", "df/dcb/header_8h.html#af245db63314744f2a2ff29d538fc37d5", null ],
-    [ "cleanup", "df/dcb/header_8h.html#a4b66d5e31b5dc18b314c8a68163263bd", null ],
-    [ "initialize", "df/dcb/header_8h.html#a25a40b6614565f755233080a384c35f1", null ],
     [ "gb", "df/dcb/header_8h.html#a61c6674f2b410e126a682325ce5360c0", null ]
 ];

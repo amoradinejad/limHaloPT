@@ -25,7 +25,15 @@
 var NAVTREE =
 [
   [ "limHaloPT", "index.html", [
-    [ "Summary", "index.html", null ],
+    [ "Summary", "index.html", [
+      [ "Compilation", "index.html#autotoc_md14", null ],
+      [ "Basic usage", "index.html#autotoc_md15", [
+        [ "Dependencies", "index.html#autotoc_md13", null ],
+        [ "Attribution", "index.html#autotoc_md16", null ],
+        [ "License", "index.html#autotoc_md17", null ]
+      ] ],
+      [ "Contributing", "index.html#autotoc_md18", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
@@ -48,7 +56,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/dcb/header_8h.html#a25a40b6614565f755233080a384c35f1"
+"df/dcb/header_8h.html#a359c81ef959b9a9a5f58b473f4913bb0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

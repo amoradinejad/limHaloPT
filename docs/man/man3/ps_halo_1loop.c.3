@@ -1,8 +1,8 @@
-.TH "ps_halo_1loop.c" 3 "Wed Mar 16 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "ps_halo_1loop.c" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-ps_halo_1loop.c \- Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&.  
+ps_halo_1loop.c \- Documented real-space, direct numerical integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&.  
 
 .SH SYNOPSIS
 .br
@@ -53,16 +53,9 @@ ps_halo_1loop.c \- Documented real-space, direct integration computation of 1loo
 .RI "double \fBF2\fP (double k1, double k2, double mu)"
 .br
 .in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "struct \fBglobals\fP \fBgb\fP"
-.br
-.in -1c
 .SH "Detailed Description"
 .PP 
-Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&. 
+Documented real-space, direct numerical integration computation of 1loop contributions of the halo/galaxy power spectrum See arXiv:2010\&.14523 for explicit expressions\&. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
 .PP
@@ -256,10 +249,6 @@ PNG loop contributions of P_h
 .SS "double S2 (double mu)"
 
 .SS "double S2_s (double k1, double k2, double mu)"
-
-.SH "Variable Documentation"
-.PP 
-.SS "struct \fBglobals\fP gb"
 
 .SH "Author"
 .PP 

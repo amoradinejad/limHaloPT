@@ -7,6 +7,5 @@ var ir__res_8c =
     [ "pm_nowiggle", "d1/d48/ir__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050", null ],
     [ "pm_nowiggle_bspline", "d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f", null ],
     [ "pm_nowiggle_dst", "d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957", null ],
-    [ "pm_nowiggle_gfilter", "d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878", null ],
-    [ "gb", "d1/d48/ir__res_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
+    [ "pm_nowiggle_gfilter", "d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878", null ]
 ];

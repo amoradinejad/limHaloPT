@@ -6,7 +6,7 @@
 <area shape="rect" id="node7" href="$d6/d32/cosmology_8c.html#a2284eaf0b1e8fffa17cb5035c6b95088" title="Read in the linear power spectrum, used to set the initial conditions of Hidden&#45;Valley sims." alt="" coords="1483,397,1587,424"/>
 <area shape="rect" id="node8" href="$d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1462,245,1609,272"/>
 <area shape="rect" id="node23" href="$d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1474,296,1597,323"/>
-<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a25a40b6614565f755233080a384c35f1" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="965,499,1034,525"/>
+<area shape="rect" id="node3" href="$d2/db8/setup__teardown_8c.html#a25a40b6614565f755233080a384c35f1" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="965,499,1034,525"/>
 <area shape="rect" id="node4" href="$d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,448,56,475"/>
 <area shape="rect" id="node9" href="$d1/d48/ir__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1298,245,1397,272"/>
 <area shape="rect" id="node10" href="$d1/d48/ir__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1091,220,1237,247"/>

@@ -1,0 +1,95 @@
+\hypertarget{setup__teardown_8c}{}\doxysubsection{setup\+\_\+teardown.\+c File Reference}
+\label{setup__teardown_8c}\index{setup\_teardown.c@{setup\_teardown.c}}
+
+
+Documented setup\+\_\+teardown module, including the initialize and clean functions that are called first and last thing in lim\+Halo\+PT package.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for setup\+\_\+teardown.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d4f/setup__teardown_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated to cosmology structure and SFR interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Documented setup\+\_\+teardown module, including the initialize and clean functions that are called first and last thing in lim\+Halo\+PT package. 
+
+Azadeh Moradinezhad Dizgah, November 4th 2021 
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}\label{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}} 
+\index{setup\_teardown.c@{setup\_teardown.c}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!setup\_teardown.c@{setup\_teardown.c}}
+\doxyparagraph{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void cleanup (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated to cosmology structure and SFR interpolator. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}\label{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}} 
+\index{setup\_teardown.c@{setup\_teardown.c}!initialize@{initialize}}
+\index{initialize@{initialize}!setup\_teardown.c@{setup\_teardown.c}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. 
+
+~\newline
+
+
+The global structure \char`\"{}gb\char`\"{} have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Cosmological parameters corresponding to initial conditions of Hidden\+Valley (HV) simulations
+
+In units of km/s
+
+omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
+
+3.\+0665Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph}
+\end{center}
+\end{figure}

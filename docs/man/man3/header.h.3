@@ -1,4 +1,4 @@
-.TH "header.h" 3 "Wed Mar 16 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "header.h" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -58,9 +58,11 @@ header.h
 .br
 \fC#include 'global_structs\&.h'\fP
 .br
-\fC#include 'cubature\&.h'\fP
+\fC#include 'hcubature\&.h'\fP
 .br
 \fC#include 'utilities\&.h'\fP
+.br
+\fC#include 'setup_teardown\&.h'\fP
 .br
 \fC#include 'cosmology\&.h'\fP
 .br
@@ -85,7 +87,7 @@ header.h
 .ti -1c
 .RI "struct \fBintegrand_parameters\fP"
 .br
-.RI "A structure passed to the integrators to hold the parameters fixed in the integration\&. "
+.RI "List of limHaloPT header files\&. "
 .ti -1c
 .RI "struct \fBintegrand_parameters2\fP"
 .br
@@ -248,17 +250,6 @@ header.h
 .RI "#define \fBMAXL\fP   2000"
 .br
 .in -1c
-.SS "Functions"
-
-.in +1c
-.ti -1c
-.RI "void \fBinitialize\fP ()"
-.br
-.RI "List of limHaloPT header files\&. "
-.ti -1c
-.RI "void \fBcleanup\fP ()"
-.br
-.in -1c
 .SS "Variables"
 
 .in +1c
@@ -370,34 +361,6 @@ header.h
 
 .SS "#define WIR   146L"
 
-.SH "Function Documentation"
-.PP 
-.SS "void cleanup ()"
-
-.SS "void initialize ()"
-
-.PP
-List of limHaloPT header files\&. Function declarations of \fBmain\&.c\fP module
-.PP
-List of limHaloPT header files\&.
-.PP
-
-.br
-.PP
-The global structure 'gb' have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters\&.
-.PP
-\fBReturns\fP
-.RS 4
-void 
-.RE
-.PP
-Change the path to the parent directory
-.PP
-In units of km/s
-.PP
-omega_b = Omega_b h^2;
-.PP
-3\&.0665
 .SH "Variable Documentation"
 .PP 
 .SS "struct \fBglobals\fP gb\fC [extern]\fP"

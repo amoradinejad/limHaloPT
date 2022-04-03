@@ -28,5 +28,6 @@ var searchData=
   ['ps_5fkmax_25',['PS_kmax',['../d8/d11/structglobals.html#a96f47b9da4387802e3b04d64c122bafc',1,'globals']]],
   ['ps_5fkmin_26',['PS_kmin',['../d8/d11/structglobals.html#a311d0aaeec59357eb38219f6aad22473',1,'globals']]],
   ['ps_5fxtrapol_27',['PS_xtrapol',['../d2/dbd/struct_cosmology.html#a5dee8f06ef55f61fcf2ad920f4f80e65',1,'Cosmology']]],
-  ['pt_28',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
+  ['ps_5fzmax_28',['PS_zmax',['../d8/d11/structglobals.html#a2f074bcf2429219731fae83c125b6217',1,'globals']]],
+  ['pt_29',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
 ];

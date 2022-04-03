@@ -1,7 +1,7 @@
 <map id="Line_free" name="Line_free">
 <area shape="rect" id="node1" title="Free the line structure." alt="" coords="1907,360,1981,387"/>
 <area shape="rect" id="node2" href="$d6/d32/cosmology_8c.html#a8ddfed4a843beb762df124badc47011e" title="Free the memory allocated to cosmology structure." alt="" coords="1741,360,1859,387"/>
-<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1627,360,1693,387"/>
+<area shape="rect" id="node3" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1627,360,1693,387"/>
 <area shape="rect" id="node4" href="$d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="635,195,765,221"/>
 <area shape="rect" id="node7" href="$d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,271,192,297"/>
 <area shape="rect" id="node8" href="$d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,448,201,475"/>

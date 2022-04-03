@@ -1,6 +1,6 @@
 <map id="survey_specs.c" name="survey_specs.c">
-<area shape="rect" id="node1" title="Documented computation of some survey&#45;related functions." alt="" coords="2088,5,2203,32"/>
-<area shape="rect" id="node2" href="$df/dcb/header_8h.html" title=" " alt="" coords="2110,80,2181,107"/>
+<area shape="rect" id="node1" title="Documented computation of some survey&#45;related functions." alt="" coords="2155,5,2269,32"/>
+<area shape="rect" id="node2" href="$df/dcb/header_8h.html" title=" " alt="" coords="2177,80,2247,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,64,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="89,155,157,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="181,155,245,181"/>
@@ -27,14 +27,15 @@
 <area shape="rect" id="node26" title=" " alt="" coords="2901,155,2966,181"/>
 <area shape="rect" id="node27" title=" " alt="" coords="2991,155,3052,181"/>
 <area shape="rect" id="node28" href="$d6/da5/_global___structs_8h.html" title=" " alt="" coords="3076,155,3191,181"/>
-<area shape="rect" id="node29" title=" " alt="" coords="3215,155,3297,181"/>
-<area shape="rect" id="node30" title=" " alt="" coords="3321,155,3396,181"/>
-<area shape="rect" id="node31" title=" " alt="" coords="3421,155,3515,181"/>
-<area shape="rect" id="node32" title=" " alt="" coords="3539,155,3605,181"/>
-<area shape="rect" id="node33" title=" " alt="" coords="3629,155,3752,181"/>
-<area shape="rect" id="node34" title=" " alt="" coords="3777,155,3893,181"/>
-<area shape="rect" id="node35" title=" " alt="" coords="3917,155,4016,181"/>
-<area shape="rect" id="node36" title=" " alt="" coords="4041,155,4133,181"/>
-<area shape="rect" id="node37" title=" " alt="" coords="4157,155,4272,181"/>
-<area shape="rect" id="node38" title=" " alt="" coords="4296,155,4387,181"/>
+<area shape="rect" id="node29" title=" " alt="" coords="3215,155,3305,181"/>
+<area shape="rect" id="node30" title=" " alt="" coords="3329,155,3404,181"/>
+<area shape="rect" id="node31" title=" " alt="" coords="3428,155,3553,181"/>
+<area shape="rect" id="node32" title=" " alt="" coords="3578,155,3673,181"/>
+<area shape="rect" id="node33" title=" " alt="" coords="3697,155,3762,181"/>
+<area shape="rect" id="node34" title=" " alt="" coords="3787,155,3909,181"/>
+<area shape="rect" id="node35" title=" " alt="" coords="3934,155,4050,181"/>
+<area shape="rect" id="node36" title=" " alt="" coords="4075,155,4173,181"/>
+<area shape="rect" id="node37" title=" " alt="" coords="4198,155,4290,181"/>
+<area shape="rect" id="node38" title=" " alt="" coords="4315,155,4429,181"/>
+<area shape="rect" id="node39" title=" " alt="" coords="4453,155,4544,181"/>
 </map>

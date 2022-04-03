@@ -26,8 +26,9 @@
 {\ttfamily \#include $<$ctype.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}cuba.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}global\+\_\+structs.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}cubature.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hcubature.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}setup\+\_\+teardown.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}cosmology.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}ir\+\_\+res.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}line\+\_\+ingredients.\+h\char`\"{}}\newline
@@ -36,8 +37,7 @@
 {\ttfamily \#include \char`\"{}ps\+\_\+line\+\_\+pt.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}survey\+\_\+specs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}wnw\+\_\+split.\+h\char`\"{}}\newline
-Include dependency graph for header.\+h\+:
-\nopagebreak
+Include dependency graph for header.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -55,7 +55,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structintegrand__parameters}{integrand\+\_\+parameters}}
-\begin{DoxyCompactList}\small\item\em A structure passed to the integrators to hold the parameters fixed in the integration. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em List of lim\+Halo\+PT header files. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2}}
 \begin{DoxyCompactList}\small\item\em Another structure passed to the integrators to hold the parameters fixed in the integration. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
@@ -162,13 +162,6 @@ struct \mbox{\hyperlink{structintegrand__parameters2}{integrand\+\_\+parameters2
 \#define \mbox{\hyperlink{header_8h_a4a80e098a43386a893ebc656b14e636c}{NPARS}}~6
 \item 
 \#define \mbox{\hyperlink{header_8h_ac4041a19ac1fddefc2239437baecd8f5}{MAXL}}~2000
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{header_8h_a25a40b6614565f755233080a384c35f1}{initialize}} ()
-\begin{DoxyCompactList}\small\item\em List of lim\+Halo\+PT header files. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}{cleanup}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -484,57 +477,6 @@ struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{header_8h_a61c
 \doxyparagraph{\texorpdfstring{WIR}{WIR}}
 {\footnotesize\ttfamily \#define WIR~146L}
 
-
-
-\doxysubsubsection{Function Documentation}
-\mbox{\Hypertarget{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}\label{header_8h_a4b66d5e31b5dc18b314c8a68163263bd}} 
-\index{header.h@{header.h}!cleanup@{cleanup}}
-\index{cleanup@{cleanup}!header.h@{header.h}}
-\doxyparagraph{\texorpdfstring{cleanup()}{cleanup()}}
-{\footnotesize\ttfamily void cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{header_8h_a25a40b6614565f755233080a384c35f1}\label{header_8h_a25a40b6614565f755233080a384c35f1}} 
-\index{header.h@{header.h}!initialize@{initialize}}
-\index{initialize@{initialize}!header.h@{header.h}}
-\doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-List of lim\+Halo\+PT header files. 
-
-Function declarations of \mbox{\hyperlink{main_8c}{main.\+c}} module
-
-List of lim\+Halo\+PT header files.
-
-~\newline
-
-
-The global structure \char`\"{}gb\char`\"{} have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.
-
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-Change the path to the parent directory
-
-In units of km/s
-
-omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
-
-3.\+0665Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{df/dcb/header_8h_a25a40b6614565f755233080a384c35f1_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=206pt]{df/dcb/header_8h_a25a40b6614565f755233080a384c35f1_icgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsubsection{Variable Documentation}

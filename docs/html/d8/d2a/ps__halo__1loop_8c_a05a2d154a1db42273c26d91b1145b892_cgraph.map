@@ -1,7 +1,7 @@
 <map id="Compute_PNG_loops" name="Compute_PNG_loops">
 <area shape="rect" id="node1" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="5,588,155,615"/>
 <area shape="rect" id="node2" href="$d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="203,588,352,615"/>
-<area shape="rect" id="node3" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1235,81,1302,108"/>
+<area shape="rect" id="node3" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1235,81,1302,108"/>
 <area shape="rect" id="node9" href="$d8/d2a/ps__halo__1loop_8c.html#af95342f8b89705476a09b2473195a749" title=" " alt="" coords="423,588,462,615"/>
 <area shape="rect" id="node10" href="$d8/d2a/ps__halo__1loop_8c.html#afb089b4dc4bcc6d07f9c88f87ba75eb1" title=" " alt="" coords="417,639,468,665"/>
 <area shape="rect" id="node11" href="$d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="400,436,485,463"/>

@@ -1,6 +1,6 @@
 <map id="pm_nowiggle" name="pm_nowiggle">
 <area shape="rect" id="node1" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="5,183,104,209"/>
-<area shape="rect" id="node2" href="$d0/d29/main_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="378,81,445,108"/>
+<area shape="rect" id="node2" href="$d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="378,81,445,108"/>
 <area shape="rect" id="node8" href="$d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="152,157,299,184"/>
 <area shape="rect" id="node14" href="$d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="164,208,287,235"/>
 <area shape="rect" id="node15" href="$d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="157,284,294,311"/>

@@ -10,6 +10,5 @@ var ps__halo__1loop_8c =
     [ "PS_hh_G", "d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4", null ],
     [ "PS_hh_PNG", "d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce", null ],
     [ "S2", "d8/d2a/ps__halo__1loop_8c.html#a9d93693fa856776edc02f835b1d7ddf8", null ],
-    [ "S2_s", "d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26", null ],
-    [ "gb", "d8/d2a/ps__halo__1loop_8c.html#a61c6674f2b410e126a682325ce5360c0", null ]
+    [ "S2_s", "d8/d2a/ps__halo__1loop_8c.html#ad334e40e3de75b00cfa12ed6da717c26", null ]
 ];
