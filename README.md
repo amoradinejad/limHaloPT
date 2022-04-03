@@ -21,15 +21,6 @@ The limHaloPT package calls various functions from [CLASS](https://github.com/le
 Note that in order to compute the luminosity of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory.  
 <br>
 
-
-## Compilation 
-
-- To compile, change to Source directory and type: make <br>
-
-If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
-<br>
-
-
 ## Structure of the package
 
 limHaloPT consists of 10 main modules, which include the following categories of functions
@@ -59,6 +50,13 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - utilities.c: This module contains some utility functions such as a function to build a dynamically allocated 1-dimensional array, which can be used by the rest of the modules of the package. 
 <br>
 
+
+## Compilation 
+
+- To compile, change to Source directory and type: make <br>
+
+If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
+<br>
 
 
 ## Basic usage
