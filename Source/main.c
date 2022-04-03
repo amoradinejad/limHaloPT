@@ -16,17 +16,43 @@ struct globals gb;
 int main(int argc,char *argv[])
 {	
  	
+ 	/**
+	 * -----------------------------
+	 * If you want to change the values of cosmological parmaeters compared to the 
+	 * default values of the code, you should do so inside th initialize() function.
+	 * For instance change the value of gb.h to set the value of hubble parmaeter in your cosmology.
+	 * -----------------------------
+	 */
+
+ 	/*
+ 	* Initialize various ingredients for the rest of the code. More specifically, set the relavent directory paths, values of cosmological parameters and in general any parameter
+ 	* that has to be passed to CLASS Boltzmann code. Furthermore initialize some of the interpolators needed
+ 	* for the package.
+ 	*/
  	initialize();
 
-	long fish_dim;
-	long int i,j,l, q, s,t;
 
-	double pk_zmax = 14.;
-	double pk_kmax = 200.;
-	double inc     = 0.01;
+
+ 	/**
+	 * -----------------------------
+	 * Change if you want to assume a different mass function or minimum halo mass
+	 * -----------------------------
+	 */
+ 	/*
+ 	* Set the parameters for computing quantities related to spectral lines. 
+ 	* More specifically, the mimum mass for halos that can host line-emitting galaxies M_min
+ 	* and the the theoretical mass function to be used, ST: Sheth-Tormen, PSC: Press-Schecter, TK:: Tinker
+ 	*/
 	double M_min   = 1.e9;
 	long mode_mf   = ST;
 
+
+
+ 	/**
+	 * -----------------------------
+	 * Change if you want to limit the lines to include in your computation.
+	 * -----------------------------
+	 */
 	/**
 	 * Define which lines to compute, and how many points to have for z-interpolation
 	 * 
@@ -46,12 +72,19 @@ int main(int argc,char *argv[])
 	 * you can set nlines to the number of lines you are interested, change the arrays of line[nlines] and JJ[nlines]
 	 * to correspond to the lines you need to calculate. 
 	 */
+	size_t ninterp = 150;
 	int nlines     = 7;
       int lines[7]   = {CO10, CO21, CO32, CO43, CO54, CO65, CII};
       int JJ[7]      = {1,2,3,4,5,6,0};
-      size_t ninterp = 150;
 
 
+
+
+	/**
+	 * -----------------------------
+	 * In general, you should not need to change this portion of the code. 
+	 * -----------------------------
+	 */
       /* 
       * Set values of cosmological parameter and finger-of-god paramater (peculiar velocity of line emitters) 
       * and initialize cosmo_pars array in the cosmology structure Cx_ref
@@ -59,7 +92,7 @@ int main(int argc,char *argv[])
 	double gb_pars[] = {gb.logAs,gb.ns,gb.h,gb.Omega_b,gb.Omega_cdm,gb.sigFOG0};
 
 	struct Cosmology Cx_ref;
-	for(i=0;i<gb.Npars;i++){
+	for(int i=0;i<gb.Npars;i++){
 		Cx_ref.cosmo_pars[i] = gb_pars[i];
 	}
 
@@ -67,12 +100,14 @@ int main(int argc,char *argv[])
 	 * Initialize the cosmology structure, which includes CLASS cosmology and Line structures
 	 */
 	clock_t tic_r = clock();
-	Cosmology_init(&Cx_ref, pk_kmax, pk_zmax, nlines, lines, ninterp, M_min, mode_mf);
+	Cosmology_init(&Cx_ref, gb.PS_kmax, gb.PS_zmax, nlines, lines, ninterp, M_min, mode_mf);
 	printf("Reference Cosmology initialized\n");
 	clock_t toc_r = clock();
 	printf("Elapsed: %f seconds for ref cosmology\n", (double)(toc_r - tic_r)/CLOCKS_PER_SEC);
 
-	
+
+
+
 	/**
 	 * -----------------------------
 	 * Depending on what quantities ou want to compute, you need to modify this part of the main() function.
@@ -94,10 +129,10 @@ int main(int argc,char *argv[])
 	 */
  	printf("Calculating halo-model line power spectrum\n");
  	int line_id = 0;
- 	for(i=0;i<nlines;i++){
+ 	for(int i=0;i<nlines;i++){
  		line_id = i;
- 		for(j=0;j<nz;j++){
-			for(l=0;l<nk;l++){
+ 		for(int j=0;j<nz;j++){
+			for(int l=0;l<nk;l++){
 				PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
 			}
 		}	
@@ -117,12 +152,12 @@ int main(int argc,char *argv[])
 	FILE *fp1;
   	char filename1[FILENAME_MAX];
 
- 	int nd     = 2;  //This is the number of digits to show in th evalue of z for sprintf()
+ 	int nd = 2;  //This is the number of digits to show in th evalue of z for sprintf()
 
 
   	printf("Calculating line mean bright temprature and halo-model shot nosie\n");
- 	for(i=0;i<nlines;i++){
- 		for(j=0;j<nz;j++){
+ 	for(int i=0;i<nlines;i++){
+ 		for(int j=0;j<nz;j++){
  			//Set the path for the output of Tbar of the lines. By default the files are saved
  			//in "Output" directory. You can add subdirectories to Output directory by changing the path below if needed. 
  			sprintf(filename1,"%s/Tbar_J%d_z%.*f.txt", gb.output_dir, JJ[i], nd, z[j]);
@@ -141,7 +176,7 @@ int main(int argc,char *argv[])
 			input[4] = rhom_bar; 
 
 			//If accounting for the nfw profile, the shot noise will be scale-dependent. So loop over k-values
-			for(l=0;l<nk;l++){
+			for(int l=0;l<nk;l++){
 				PS_shot_HM(&Cx_ref, k[l], z[j], M_min, input, mode_mf, lines[i]);
 			}
 
@@ -183,8 +218,6 @@ void initialize()
 
 	sprintf(gb.output_dir,"%s/Output", gb.project_home);
 	sprintf(gb.data_dir,"%s/Input", gb.project_home);
-	sprintf(gb.data_priors,"%s/Priors", gb.data_dir);
-
 	sprintf(gb.SFR_filename,"%s/release-sfh_z0_z8_052913/sfr/sfr_release.dat",gb.data_dir);  
 
 	logSFR_alloc_init();
@@ -209,6 +242,9 @@ void initialize()
 	// gb.kmax_CLASS = PS_KMAX * (1.-0.1);
 	gb.kmax_CLASS = PS_KMAX;
 	gb.Npars = NPARS;
+
+	gb.PS_zmax   = 14.;
+	gb.line_zmax = 14.;
 
 	return;
 }

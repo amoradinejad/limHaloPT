@@ -1,6 +1,6 @@
 
 
-/** @file ps_halo_1loop.c Documented real-space, direct integration computation of 1loop contributions of the halo/galaxy power spectrum
+/** @file ps_halo_1loop.c Documented real-space, direct numerical integration computation of 1loop contributions of the halo/galaxy power spectrum
  * See arXiv:2010.14523 for explicit expressions 
  * 
  * Azadeh Moradinezhad Dizgah, November 4th 2021

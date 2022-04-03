@@ -585,7 +585,7 @@ double Pk_dlnPk_HV(struct Cosmology *Cx, double k, double z, int mode)
   static int first = 1;
   if(first == 1){
     char pk_filename[FILENAME_MAX];
-    sprintf(pk_filename,"/Volumes/Data/Documents/Git/LIM_PS_HM/Output/matter_L/pklin_1.0000_HVsims.txt");
+    sprintf(pk_filename,"%s/MithraLIMSims/pklin_1.0000_HVsims.txt", gb.output_dir);
 
     int nlines = 0;
     nlines     = count_lines_in_file(pk_filename);

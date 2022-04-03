@@ -92,7 +92,7 @@ struct Line * Line_alloc_init(struct Cosmology *Cx, long line_type, size_t npoin
 
   // Initialization of the interpolating objects
   double *zz, *mom1, *mom2, *b1_LW, *b2_LW;
-  double zmin =0.0, zmax = 13.;
+  double zmin =0.0, zmax = gb.line_zmax;
   // Allocate temporary arrays 
   mom1    = make_1Darray(npoints_interp);
   mom2    = make_1Darray(npoints_interp);

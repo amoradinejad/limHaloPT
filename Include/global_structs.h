@@ -129,6 +129,9 @@ struct globals
 	double  PS_kmax;
 	double  kmax_CLASS;
 
+	double PS_zmax;
+	double line_zmax;
+
 	// File names
 	char			SFR_filename[FILENAME_MAX];
 	char 			Planck_Fisher_filename[FILENAME_MAX];
