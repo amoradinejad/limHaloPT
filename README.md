@@ -42,9 +42,10 @@ If you modified the code, you need to first do "make clean" before doing "make".
 
 
 ## Basic usage
-In the current version of limHaloPT, to use the package, you need to modify the main.c module. After each modification, the package needs to be re-compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used. 
 
-Depending on what quantities you want to calculate, you should modify the main() function in main.c module (as marked in the code). Before calling any function within main.c, you may want to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions that compute the clustering and shot noise contributions aree included in main.c module. We descibe one of them here. 
+- To run the code, type  "./limHaloPT LCDM.ini"  
+
+Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 6 emission spectral lines, depending on the switch that you set in the ini file. This computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT apart from those called by defacult, you neeed to add the function call to main.c. 
 
 Example: Lets say you want to compute the power spectrum of mean brightness temprature fluctuations for one or multiple emission lines, within halo-model, as a function of wavenumber, and at several redshifts. The relavent function that needs to be called is PS_line_HM(). First you should create two arrays for values of redshifts and wavenumbers for which you want to calculate the power spectrum. If you only want to calculate the power spectrum for a single wavenumber and redshift, you would pass just two numbers to PS_line_HM(). You should also define for which emission lines do you want to compute the power spectrum. The choice of the lines is done in the first part of the main.c module, where the number of the lines, their name and their corresponding index is set. For example to compute the power spectrum for CO(1-0) and [CII] you would set 
 ```
@@ -79,12 +80,7 @@ So here is how you would call the PS_line_HM() function:
             }     
       }
 ```
-
-Once you made your modifications to main.c module, you should do the following:
-- Clean the previous make by "make clean"
-- Re-compile the code with  "make" 
-- Run the code by  "./limHaloPT" <br>
-
+<br>
 
 ## Attribution
 You can use this package freely, provided that in your publication you cite the following paper
