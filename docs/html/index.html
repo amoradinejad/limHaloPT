@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p ><a class="anchor" id="md_README"></a> Author: Azadeh Moradinezhad Dizgah <br  />
 </p>
-<p >with contributions from Farnik Nikakhtar</p>
+<p >with contributions from Alberto Vallinotto and Farnik Nikakhtar</p>
 <p >Welcom to limHaloPT, a numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release.</p>
 <p >The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term. The deviations from Poisson shot noise on large scales are also computed within the halo model.</p>
 <p >This package is released together with the following publication, <a href="https://arxiv.org/abs/2111.03717">arXiv:2111.03717</a>, where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims will be publically avilable on <a href="http://cyril.astro.berkeley.edu/MithraLIMSims">MithraLIMSims</a>. The code to analyse the simulated maps is an extension of the toolskit used in analysin Hidden-Valley simulations, and is publically avialble on <a href="https://github.com/farnikn/MithraLIMSims">LIM Analysis</a>. As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII].</p>
@@ -102,20 +102,51 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
  &#160;</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Dependencies</h2>
-<p >The limHaloPT package calls various functions from <a href="https://github.com/lesgourg/class_public">CLASS</a> Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of <a href="http://www.feynarts.de/cuba/">CUBA</a> library. Furthermore, the code heavily uses functions of <a href="https://www.gnu.org/software/gsl/doc/html/">GSL</a> scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. <br  />
+<p >The limHaloPT package calls various functions from <a href="https://github.com/lesgourg/class_public">CLASS</a> Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of <a href="http://www.feynarts.de/cuba/">CUBA</a> library. Lastly, the code heavily uses functions of <a href="https://www.gnu.org/software/gsl/doc/html/">GSL</a> scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package.</p>
+<p >Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from <a href="https://arxiv.org/abs/1207.6105">Behroozi et al. (2013)</a>. The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. <br  />
  &#160;</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Compilation</h2>
 <ul>
-<li>To compile, type: make <br  />
-</li>
+<li>To compile, within the main directory of limHaloPT, type: "make" <br  />
+ This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make".</li>
 </ul>
-<p >If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br  />
+<p >The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br  />
  &#160;</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Basic usage</h2>
-<p >In the current version of limHaloPT, to use the package, you need to modify the <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> module. After each modification, the package needs to be re-compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used.</p>
-<p >Depending on what quantities you want to calculate, you should modify the <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> function in <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> module (as marked in the code). Before calling any function within <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a>, you may want to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions that compute the clustering and shot noise contributions aree included in <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> module. We descibe one of them here. <br  />
+<ul>
+<li>To run the code, in the main directory of limHaloPT, type "./limHaloPT LCDM.ini" <br  />
+</li>
+</ul>
+<p >Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 7 emission spectral lines, depending on the switch that you set in the ini file. The computation of these functions are performed within <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT, apart from those called by defacult, you neeed to add the function call to <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a>, recompile the code by first cleaning the previous build using "make clean" and building the package again with "make".</p>
+<p >Example: Lets say you want to compute the mean brightness temprature, linear and quadratic biases for one or multiple emission lines, as a function of wavenumber at several redshifts. In the .ini file, you should set the switch "switch_Tbar" to be equal to "Tbar", and the switches of shot and power spectra blank, i.e. "switch_HMshot = " and "switch_HMshot = ". The relavent functions that are called within <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and exam...">main.c</a> are <a class="el" href="d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo-model.">PS_line_HM()</a> and <a class="el" href="d7/d10/line__ingredients_8c.html#a3a13aa566fb639abeb29eae43e5fcfa8" title="Compute the linear and quadratic line biases, accounting ffor the normalization w....">line_bias()</a>. For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. the computed values for the three quantities is saved by default in an output file saved in "Output" directory. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file, while the name of the line is passed with line1, line2, ... variables. T The first argument of PS_line_HM, is the cosmology structure needed for performing any calculation in the code. See <a class="el" href="d6/d32/cosmology_8c.html" title="Documented cosmology module.">cosmology.c</a> module for more details. The LCDM.ini file contains description of parmaeters that should be set in the .ini file.</p>
+<p >So here is how ythe <a class="el" href="d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo-model.">PS_line_HM()</a> function is called within <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>: </p><div class="fragment"><div class="line">int nz_mean     = gb.mean_nz;</div>
+<div class="line">double *z_mean  = init_1Darray(nz_mean,0.0,gb.mean_zmax);</div>
+<div class="line"> </div>
+<div class="line">double lbias_arr[2];</div>
+<div class="line">double b1   = 0.;</div>
+<div class="line">double b2   = 0.;</div>
+<div class="line">double Tbar = 0.;</div>
+<div class="line"> </div>
+<div class="line">FILE *fp1;</div>
+<div class="line">char filename1[FILENAME_MAX];</div>
+<div class="line"> </div>
+<div class="line">for(int i=0;i&lt;nlines;i++){</div>
+<div class="line">      sprintf(filename1,&quot;%s/Tbar_J%d.txt&quot;, gb.output_dir, JJ[i]);</div>
+<div class="line">      fp1    = fopen(filename1, &quot;ab&quot;);</div>
+<div class="line">      fprintf(fp1,&quot;%s %s %s %s %s \n&quot;,&quot;#&quot;, &quot;z&quot;, &quot;b1&quot;, &quot;b2&quot;, &quot;Tbar&quot;);</div>
+<div class="line">      for(int j=0;j&lt;nz_mean;j++){</div>
+<div class="line">            Tbar = Tbar_line(&amp;Cx_ref, i, z_mean[j]);</div>
+<div class="line">            line_bias(Cx_ref.Lines[i],z_mean[j],lbias_arr);</div>
+<div class="line">            b1   = lbias_arr[0];</div>
+<div class="line">            b2   = lbias_arr[1];</div>
+<div class="line">            fprintf(fp1,&quot;%12.6e %12.6e %12.6e %12.6e \n&quot;,z_mean[j], b1, b2, Tbar); </div>
+<div class="line">      }</div>
+<div class="line">      fclose(fp1);</div>
+<div class="line">}</div>
+<div class="line">free(z_mean);</div>
+</div><!-- fragment --><p >By default, in additionn to having th eoutput in <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. <br  />
  &#160;</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 Attribution</h2>

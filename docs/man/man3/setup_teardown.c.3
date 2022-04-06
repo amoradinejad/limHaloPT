@@ -1,8 +1,8 @@
-.TH "setup_teardown.c" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "setup_teardown.c" 3 "Wed Apr 6 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-setup_teardown.c \- Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package\&.  
+setup_teardown.c \- Documented read_input module\&.  
 
 .SH SYNOPSIS
 .br
@@ -26,9 +26,15 @@ setup_teardown.c \- Documented setup_teardown module, including the initialize a
 .in -1c
 .SH "Detailed Description"
 .PP 
-Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package\&. 
+Documented read_input module\&. 
 
-Azadeh Moradinezhad Dizgah, November 4th 2021 
+Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package\&.
+.PP
+This module provides utilityy functions to read the \&.ini file
+.PP
+Alberto Vallinotto, April 4th 2022
+.PP
+Azadeh Moradinezhad Dizgah & Alberto Vallinotto, April 4th 2022 
 .SH "Function Documentation"
 .PP 
 .SS "void cleanup (struct \fBCosmology\fP * Cx)"
@@ -55,6 +61,8 @@ The global structure 'gb' have several elements to hold the paths to project sou
 .RS 4
 void 
 .RE
+.PP
+Commment out to see the names, values and numerical values of the parameters read from \&.ini file\&.
 .PP
 Save the values of input parmaeters to global structure or init_struct\&. The latter is returned as the output of the \fBinitialize()\fP function\&.
 .PP

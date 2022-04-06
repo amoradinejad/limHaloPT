@@ -2,7 +2,7 @@
 \label{setup__teardown_8c}\index{setup\_teardown.c@{setup\_teardown.c}}
 
 
-Documented setup\+\_\+teardown module, including the initialize and clean functions that are called first and last thing in lim\+Halo\+PT package.  
+Documented read\+\_\+input module.  
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
@@ -25,9 +25,15 @@ void \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{clea
 
 
 \doxysubsubsection{Detailed Description}
-Documented setup\+\_\+teardown module, including the initialize and clean functions that are called first and last thing in lim\+Halo\+PT package. 
+Documented read\+\_\+input module. 
 
-Azadeh Moradinezhad Dizgah, November 4th 2021 
+Documented setup\+\_\+teardown module, including the initialize and clean functions that are called first and last thing in lim\+Halo\+PT package.
+
+This module provides utilityy functions to read the .ini file
+
+Alberto Vallinotto, April 4th 2022
+
+Azadeh Moradinezhad Dizgah \& Alberto Vallinotto, April 4th 2022 
 
 \doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}\label{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}} 
@@ -43,7 +49,8 @@ Free the memory allocated to cosmology structure and SFR interpolator.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -76,6 +83,8 @@ The global structure \char`\"{}gb\char`\"{} have several elements to hold the pa
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+Commment out to see the names, values and numerical values of the parameters read from .ini file.
+
 Save the values of input parmaeters to global structure or init\+\_\+struct. The latter is returned as the output of the \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize()}} function.
 
 Cosmological parameters corresponding to initial conditions of Hidden\+Valley (HV) simulations

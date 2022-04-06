@@ -3,7 +3,7 @@
 Author: Azadeh Moradinezhad Dizgah
 <br>
 
-with contributions from Farnik Nikakhtar
+with contributions from Alberto Vallinotto and Farnik Nikakhtar
 
 Welcom to limHaloPT, a numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release. 
 
@@ -17,27 +17,60 @@ The source code of this package is publically avaialbel on GitHub at [limHaloPT]
 
 
 ### Dependencies
-The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Furthermore, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Lastly, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+
+Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. 
 <br>
 &nbsp;
+
 
 
 ### Compilation 
-- To compile, type: make 
-<br>
+- To compile, within the main directory of limHaloPT, type: "make" <br>
+This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". 
 
-If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
-<br>
+The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 &nbsp;
-
 
 ### Basic usage
-In the current version of limHaloPT, to use the package, you need to modify the main.c module. After each modification, the package needs to be re-compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used. 
+- To run the code, in the main directory of limHaloPT, type  "./limHaloPT LCDM.ini"  
 
-Depending on what quantities you want to calculate, you should modify the main() function in main.c module (as marked in the code). Before calling any function within main.c, you may want to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions that compute the clustering and shot noise contributions aree included in main.c module. We descibe one of them here. 
+Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 7 emission spectral lines, depending on the switch that you set in the ini file. The computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT, apart from those called by defacult, you neeed to add the function call to main.c, recompile the code by first cleaning the previous build using "make clean" and building the package again with "make". 
+
+Example: Lets say you want to compute the mean brightness temprature, linear and quadratic biases for one or multiple emission lines, as a function of wavenumber at several redshifts. In the .ini file, you should set the switch "switch_Tbar" to be equal to "Tbar", and the switches of shot and power spectra blank, i.e. "switch_HMshot = " and "switch_HMshot = ". The relavent functions that are called within main.c are PS_line_HM() and line_bias(). For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. the computed values for the three quantities is saved by default in an output file saved in "Output" directory. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file, while the name of the line is passed with line1, line2, ... variables. T The first argument of PS_line_HM, is the cosmology structure needed for performing any calculation in the code. See cosmology.c module for more details. The LCDM.ini file contains description of parmaeters that should be set in the .ini file.
+
+So here is how ythe PS_line_HM() function is called within main():
+```
+      int nz_mean     = gb.mean_nz;
+      double *z_mean  = init_1Darray(nz_mean,0.0,gb.mean_zmax);
+
+      double lbias_arr[2];
+      double b1   = 0.;
+      double b2   = 0.;
+      double Tbar = 0.;
+
+      FILE *fp1;
+      char filename1[FILENAME_MAX];
+
+      for(int i=0;i<nlines;i++){
+            sprintf(filename1,"%s/Tbar_J%d.txt", gb.output_dir, JJ[i]);
+            fp1    = fopen(filename1, "ab");
+            fprintf(fp1,"%s %s %s %s %s \n","#", "z", "b1", "b2", "Tbar");
+            for(int j=0;j<nz_mean;j++){
+                  Tbar = Tbar_line(&Cx_ref, i, z_mean[j]);
+                  line_bias(Cx_ref.Lines[i],z_mean[j],lbias_arr);
+                  b1   = lbias_arr[0];
+                  b2   = lbias_arr[1];
+                  fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e \n",z_mean[j], b1, b2, Tbar); 
+            }
+            fclose(fp1);
+      }
+      free(z_mean);
+```
+
+By default, in additionn to having th eoutput in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory.
 <br>
 &nbsp;
-
 
 ### Attribution
 You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers. 

@@ -1,9 +1,0 @@
-<map id="initialize" name="initialize">
-<area shape="rect" id="node1" title="List of limHaloPT header files." alt="" coords="5,68,75,95"/>
-<area shape="rect" id="node2" href="$d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02" title="Allocate memory and initialize the 2d interpolator for the star formation rate of Behroozi et al 2013..." alt="" coords="123,68,247,95"/>
-<area shape="rect" id="node3" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="499,5,628,32"/>
-<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="295,43,451,69"/>
-<area shape="rect" id="node5" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="510,68,617,95"/>
-<area shape="rect" id="node6" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="544,131,583,157"/>
-<area shape="rect" id="node7" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="676,131,717,157"/>
-</map>

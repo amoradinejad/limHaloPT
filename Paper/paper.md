@@ -8,6 +8,7 @@ authors:
   - name: Azadeh Moradinezhad Dizgah
     orcid: 0000-0001-8841-9989
     affiliation: 1
+  - name: Alberto Vallinotto  
   - name: Farnik Nikakhtar
     orcid: 0000-0002-3641-4366
     affiliation: 2
@@ -44,7 +45,9 @@ Recently, there has been a shift in the cosmology community in publicly releasin
 
 # Dependencies
 
-The `limHaloPT' package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor, etc. Furthermore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) and [Cubature](https://github.com/stevengj/cubature) libraries for C. The code also uses several functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. 
+The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Lastly, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+
+Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. 
 
 
 # Future Extensions 

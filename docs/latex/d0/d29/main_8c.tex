@@ -6,7 +6,8 @@ Documented main module, including functions to initilize and cleanup the cosmolo
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for main.\+c\+:\nopagebreak
+Include dependency graph for main.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -52,7 +53,9 @@ Note about ninterp\+: The main line properties used in the calculation of the li
 
 Note about nlines\+: If you do not need to compute the line properties for all the 7 lines implemented in the code, you can set nlines in the .ini file to the number of lines you are interested. Note that at the moment you can only call the lines in the order below.
 
-Given the number of lines you chose with nline, the line\mbox{[}\mbox{]} array and JJ\mbox{[}\mbox{]} arrays will be initialized here. Note that at the moment you can only call the lines in the order below.
+Given the number of lines you chose with nline, the line\+\_\+type\mbox{[}\mbox{]} array and JJ\mbox{[}\mbox{]} arrays will be initialized here.
+
+set the value of J for the lines. Note that value of J is onlyy important for determining the frequency of CO rotational lines and for CII, J=0 has no physical implication. Here we set the values of J just for labeling of the output files
 
 Set values of cosmological parameter and finger-\/of-\/god paramater (peculiar velocity of line emitters) and initialize cosmo\+\_\+pars array in the cosmology structure Cx\+\_\+ref
 

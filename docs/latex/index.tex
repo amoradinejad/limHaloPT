@@ -3,7 +3,7 @@
  Author\+: Azadeh Moradinezhad Dizgah ~\newline
 
 
-with contributions from Farnik Nikakhtar
+with contributions from Alberto Vallinotto and Farnik Nikakhtar
 
 Welcom to lim\+Halo\+PT, a numerical package for computing the clustering and shot-\/noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-\/model framework. The current version of the code, is limited to real-\/space, and redshift-\/space distortions will be included in the next release.
 
@@ -13,19 +13,60 @@ This package is released together with the following publication, \href{https://
 
 The source code of this package is publically avaialbel on Git\+Hub at \href{https://github.com/amoradinejad/limHaloPT}{\texttt{ lim\+Halo\+PT}}. ~\newline
  ~\hypertarget{index_autotoc_md3}{}\doxysubsubsection{Dependencies}\label{index_autotoc_md3}
-The lim\+Halo\+PT package calls various functions from \href{https://github.com/lesgourg/class_public}{\texttt{ CLASS}} Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a \char`\"{} CLASS/lib/\char`\"{} folder and place the \char`\"{}libclass.\+a\char`\"{} in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of \href{http://www.feynarts.de/cuba/}{\texttt{ CUBA}} library. Furthermore, the code heavily uses functions of \href{https://www.gnu.org/software/gsl/doc/html/}{\texttt{ GSL}} scientific library. Therfore, make sure that the two libraries are correctly linked to lim\+Halo\+PT by making necassary modifcations to the makefile (placed in Source directory) of lim\+Halo\+PT package. ~\newline
+The lim\+Halo\+PT package calls various functions from \href{https://github.com/lesgourg/class_public}{\texttt{ CLASS}} Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a \char`\"{} CLASS/lib/\char`\"{} folder and place the \char`\"{}libclass.\+a\char`\"{} in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of \href{http://www.feynarts.de/cuba/}{\texttt{ CUBA}} library. Lastly, the code heavily uses functions of \href{https://www.gnu.org/software/gsl/doc/html/}{\texttt{ GSL}} scientific library. Therfore, make sure that the two libraries are correctly linked to lim\+Halo\+PT by making necassary modifcations to the makefile (placed in Source directory) of lim\+Halo\+PT package.
+
+Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(\+M\+\_\+h,z), should be assumed. Currently, the implemented model uses SFR(\+M\+\_\+h,z) from \href{https://arxiv.org/abs/1207.6105}{\texttt{ Behroozi et al. (2013)}}. The necassary input file, \char`\"{}sfr\+\_\+release.\+dat\char`\"{}, is included in \char`\"{}\+Input/release-\/sfh\+\_\+z0\+\_\+z8\+\_\+052913/sfr/\char`\"{} subdirectory. ~\newline
  ~\hypertarget{index_autotoc_md4}{}\doxysubsubsection{Compilation}\label{index_autotoc_md4}
 
 \begin{DoxyItemize}
-\item To compile, type\+: make ~\newline
+\item To compile, within the main directory of lim\+Halo\+PT, type\+: \char`\"{}make\char`\"{} ~\newline
+ This would create an executable called \char`\"{}lim\+Halo\+PT\char`\"{} in the same directory, which you will use to run the code. If you modified the code, you need to first do \char`\"{}make clean\char`\"{} before doing \char`\"{}make\char`\"{}.
+\end{DoxyItemize}
+
+The entire lim\+Halo\+PT package was developed, compiled, and tested on Mac OS X, using gcc version 7.\+5.\+0 compiler. ~\newline
+ ~\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Basic usage}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item To run the code, in the main directory of lim\+Halo\+PT, type \char`\"{}./lim\+Halo\+PT LCDM.\+ini\char`\"{} ~\newline
 
 \end{DoxyItemize}
 
-If you modified the code, you need to first do \char`\"{}make clean\char`\"{} before doing \char`\"{}make\char`\"{}. The entire lim\+Halo\+PT package was developed, compiled, and tested on Mac OS X, using gcc version 7.\+5.\+0 compiler. ~\newline
- ~\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Basic usage}\label{index_autotoc_md5}
-In the current version of lim\+Halo\+PT, to use the package, you need to modify the \mbox{\hyperlink{main_8c}{main.\+c}} module. After each modification, the package needs to be re-\/compiled before it can be run. In the future versions, you should be able to just set an .ini file to set which quantities to be computed and the values of the parmaeters to be used.
+Currently, the main output of lim\+Halo\+PT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 7 emission spectral lines, depending on the switch that you set in the ini file. The computation of these functions are performed within \mbox{\hyperlink{main_8c}{main.\+c}} module. An example of the ini file is provided (LCDM.\+ini). If you want to call any of the functions of lim\+Halo\+PT, apart from those called by defacult, you neeed to add the function call to \mbox{\hyperlink{main_8c}{main.\+c}}, recompile the code by first cleaning the previous build using \char`\"{}make clean\char`\"{} and building the package again with \char`\"{}make\char`\"{}.
 
-Depending on what quantities you want to calculate, you should modify the \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function in \mbox{\hyperlink{main_8c}{main.\+c}} module (as marked in the code). Before calling any function within \mbox{\hyperlink{main_8c}{main.\+c}}, you may want to also change default values for some other initialization steps. This is also marked in the code. Two example calls to functions that compute the clustering and shot noise contributions aree included in \mbox{\hyperlink{main_8c}{main.\+c}} module. We descibe one of them here. ~\newline
+Example\+: Lets say you want to compute the mean brightness temprature, linear and quadratic biases for one or multiple emission lines, as a function of wavenumber at several redshifts. In the .ini file, you should set the switch \char`\"{}switch\+\_\+\+Tbar\char`\"{} to be equal to \char`\"{}\+Tbar\char`\"{}, and the switches of shot and power spectra blank, i.\+e. \char`\"{}switch\+\_\+\+HMshot = \char`\"{} and \char`\"{}switch\+\_\+\+HMshot = \char`\"{}. The relavent functions that are called within \mbox{\hyperlink{main_8c}{main.\+c}} are \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}} and \mbox{\hyperlink{line__ingredients_8c_a3a13aa566fb639abeb29eae43e5fcfa8}{line\+\_\+bias()}}. For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. the computed values for the three quantities is saved by default in an output file saved in \char`\"{}\+Output\char`\"{} directory. The number of emission lines to be included in the computation is set with \char`\"{}nlines\char`\"{} variable in the LCDM.\+ini file, while the name of the line is passed with line1, line2, ... variables. T The first argument of PS\+\_\+line\+\_\+\+HM, is the cosmology structure needed for performing any calculation in the code. See \mbox{\hyperlink{cosmology_8c}{cosmology.\+c}} module for more details. The LCDM.\+ini file contains description of parmaeters that should be set in the .ini file.
+
+So here is how ythe \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}} function is called within \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int nz\_mean     = gb.mean\_nz;}
+\DoxyCodeLine{double *z\_mean  = init\_1Darray(nz\_mean,0.0,gb.mean\_zmax);}
+\DoxyCodeLine{}
+\DoxyCodeLine{double lbias\_arr[2];}
+\DoxyCodeLine{double b1   = 0.;}
+\DoxyCodeLine{double b2   = 0.;}
+\DoxyCodeLine{double Tbar = 0.;}
+\DoxyCodeLine{}
+\DoxyCodeLine{FILE *fp1;}
+\DoxyCodeLine{char filename1[FILENAME\_MAX];}
+\DoxyCodeLine{}
+\DoxyCodeLine{for(int i=0;i<nlines;i++)\{}
+\DoxyCodeLine{      sprintf(filename1,"{}\%s/Tbar\_J\%d.txt"{}, gb.output\_dir, JJ[i]);}
+\DoxyCodeLine{      fp1    = fopen(filename1, "{}ab"{});}
+\DoxyCodeLine{      fprintf(fp1,"{}\%s \%s \%s \%s \%s \(\backslash\)n"{},"{}\#"{}, "{}z"{}, "{}b1"{}, "{}b2"{}, "{}Tbar"{});}
+\DoxyCodeLine{      for(int j=0;j<nz\_mean;j++)\{}
+\DoxyCodeLine{            Tbar = Tbar\_line(\&Cx\_ref, i, z\_mean[j]);}
+\DoxyCodeLine{            line\_bias(Cx\_ref.Lines[i],z\_mean[j],lbias\_arr);}
+\DoxyCodeLine{            b1   = lbias\_arr[0];}
+\DoxyCodeLine{            b2   = lbias\_arr[1];}
+\DoxyCodeLine{            fprintf(fp1,"{}\%12.6e \%12.6e \%12.6e \%12.6e \(\backslash\)n"{},z\_mean[j], b1, b2, Tbar); }
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      fclose(fp1);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{free(z\_mean);}
+
+\end{DoxyCode}
+
+
+By default, in additionn to having th eoutput in \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}} function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-\/\+Possion contribution to the shot (in the latter), are also saved to output files which are stored in \char`\"{}\+Output\char`\"{} directory. ~\newline
  ~\hypertarget{index_autotoc_md6}{}\doxysubsubsection{Attribution}\label{index_autotoc_md6}
 You can use this package freely, provided that in your publication you cite the following paper\+: Moradinezhad, Nikakhtar, Keating, Castorina\+: \href{https://arxiv.org/abs/2111.03717}{\texttt{ ar\+Xiv\+:2111.\+03717}}. Furthermore, since lim\+Halo\+PT relies on CLASS Boltzman code, you should also cite at least this paper \href{https://arxiv.org/abs/1104.2933}{\texttt{ arxiv\+:1104.\+2933}} as required by CLASS developers. ~\newline
  ~\hypertarget{index_autotoc_md7}{}\doxysubsubsection{License}\label{index_autotoc_md7}

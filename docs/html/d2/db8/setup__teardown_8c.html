@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('d2/db8/setup__teardown_8c.html','../..
 </div><!--header-->
 <div class="contents">
 
-<p>Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package.  
+<p>Documented read_input module.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../df/dcb/header_8h_source.html">header.h</a>&quot;</code><br />
 <code>#include &quot;read_input.h&quot;</code><br />
@@ -104,7 +104,7 @@ Include dependency graph for setup_teardown.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d4f/setup__teardown_8c__incl.png" border="0" usemap="#asetup__teardown_8c" alt=""/></div>
 <map name="asetup__teardown_8c" id="asetup__teardown_8c">
-<area shape="rect" title="Documented setup_teardown module, including the initialize and clean functions that are called first ..." alt="" coords="2203,5,2328,32"/>
+<area shape="rect" title="Documented read_input module." alt="" coords="2203,5,2328,32"/>
 <area shape="rect" href="../../df/dcb/header_8h.html" title=" " alt="" coords="2177,80,2247,107"/>
 <area shape="rect" title=" " alt="" coords="2272,80,2365,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,64,181"/>
@@ -157,8 +157,11 @@ Functions</h2></td></tr>
 <tr class="separator:a798f0df7ac8f26aae66b7364d7f4e6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package. </p>
-<p >Azadeh Moradinezhad Dizgah, November 4th 2021 </p>
+<div class="textblock"><p >Documented read_input module. </p>
+<p >Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package.</p>
+<p >This module provides utilityy functions to read the .ini file</p>
+<p >Alberto Vallinotto, April 4th 2022</p>
+<p >Azadeh Moradinezhad Dizgah &amp; Alberto Vallinotto, April 4th 2022 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a798f0df7ac8f26aae66b7364d7f4e6f0" name="a798f0df7ac8f26aae66b7364d7f4e6f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a798f0df7ac8f26aae66b7364d7f4e6f0">&#9670;&nbsp;</a></span>cleanup()</h2>
@@ -252,6 +255,7 @@ Here is the caller graph for this function:</div>
  Read in the .ini file and set the values of parameters.</p>
 <p >The global structure "gb" have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p >Commment out to see the names, values and numerical values of the parameters read from .ini file.</p>
 <p >Save the values of input parmaeters to global structure or init_struct. The latter is returned as the output of the <a class="el" href="../../d2/db8/setup__teardown_8c.html#a688d06a821dead1a3c04bc3a3493acf1" title="Initialize the path to the required directories,and the interpolator of the SFR(M,...">initialize()</a> function.</p>
 <p >Cosmological parameters corresponding to initial conditions of HiddenValley (HV) simulations</p>
 <p >3.0665</p>
