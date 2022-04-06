@@ -85,6 +85,11 @@ By default, in additionn to having th eoutput in main() function for mean bright
 
 <br>
 
+## Testing
+"Test" directory inclides an automated test for the three main functions of limHaloPT, which are called within main.c module. The test can be run using test_LCDM.ini file. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis. The output of this test are saved in the Test/Output directory.
+
+
+
 ## Attribution
 You can use this package freely, provided that in your publication you cite the following paper
 Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers.<br>

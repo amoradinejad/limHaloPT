@@ -30,9 +30,9 @@ int main(int argc,char *argv[] )
       size_t ninterp = init_struct->ninterp;
       int nlines     = init_struct->nlines;
 
-      // /**
-      //  * Given the number of lines you chose with nline, set line_type[]
-      //  */
+      /**
+       * Given the number of lines you chose with nline, set line_type[]
+       */
 
       int line_type[nlines];
       for(int i=0;i<nlines;i++){
@@ -69,13 +69,13 @@ int main(int argc,char *argv[] )
       double b1   = lbias_arr[0];
       double b2   = lbias_arr[1];
       double Tbar = Tbar_line(&Cx_ref, line_id, z);
-      printf("b1 = %12.6e b2 = %12.6e Tbar = %12.6e \n", b1, b2, Tbar); 
+      printf("SUCESS Tbar and biases: b1 = %12.6e b2 = %12.6e Tbar = %12.6e \n", b1, b2, Tbar); 
 
       /**
        * Compute the clustering contribution of line power spectrum within halo model
        */
       double ps_clust_hm = PS_line_HM(&Cx_ref, k, z, M_min, mode_mf, line_type[0], 0);
-      printf("ps_clust_hm = %12.6e \n", ps_clust_hm);
+      printf("SUCESS Power_clust:  ps_clust_hm = %12.6e \n", ps_clust_hm);
 
 
       /**
@@ -90,7 +90,7 @@ int main(int argc,char *argv[] )
       input[2] = PS_shot(&Cx_ref, z, line_id);
      
       double ps_shot_hm = PS_shot_HM(&Cx_ref, k, z, M_min, input, mode_mf, line_type[0], 0);
-      printf("ps_shot_Poisson= %12.6e ps_shot_hm = %12.6e \n", input[2], ps_shot_hm);
+      printf("SUCESS POwer_shot: ps_shot_Poisson= %12.6e ps_shot_hm = %12.6e \n", input[2], ps_shot_hm);
 
       /**
        *  Free the cosmology structure
