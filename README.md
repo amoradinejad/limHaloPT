@@ -93,6 +93,10 @@ You can use this package freely, provided that in your publication you cite the 
 Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers.<br>
 
 
+## Contributing
+To contribute, create a fork on github, make changes and commits, and submit a pull request on github. If you found any issues with the code, please get in touch by posting an issue on this github repository.<br>
+
+
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -100,5 +104,3 @@ Copyright 2021 Azadeh Moradinezhad Dizgah.<br>
 limHaloPT is free software made available under the MIT License. For details see the [LICENSE](https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE) file.
 
 
-## Contributing
-To contribute, create a fork on github, make changes and commits, and submit a pull request on github. If you found any issues with the code, please get in touch by posting an issue on this github repository.
