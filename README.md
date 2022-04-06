@@ -32,54 +32,57 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - wnw_split.c: This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
 - survey_specs.c: This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.
 - cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
+- read_input.c: This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
+- setup_teardown.c: This module contains utilityy functions to read in an .ini file.
 - utilities.c: This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. <br>
 
 
 ## Compilation 
-- To compile, within the main directory of limHaloPT, type: make <br>
+- To compile, within the main directory of limHaloPT, type: "make" <br>
 This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". 
 
 The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 
 
 ## Basic usage
-- To run the code, type  "./limHaloPT LCDM.ini"  
+- To run the code, in the main directory of limHaloPT, type  "./limHaloPT LCDM.ini"  
 
-Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 6 emission spectral lines, depending on the switch that you set in the ini file. This computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT apart from those called by defacult, you neeed to add the function call to main.c, recompile the code by first cleaning the previous build using "make clean" and building teh package again with "make". 
+Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 7 emission spectral lines, depending on the switch that you set in the ini file. The computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT, apart from those called by defacult, you neeed to add the function call to main.c, recompile the code by first cleaning the previous build using "make clean" and building the package again with "make". 
 
-Example: Lets say you want to compute the power spectrum of mean brightness temprature fluctuations for one or multiple emission lines, within halo-model, as a function of wavenumber, and at several redshifts. The relavent function that is called within main.c is PS_line_HM(). For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file. Currently you can only include lines according to the order they appear You should also define for which emission lines do you want to compute the power spectrum. The choice of the lines is done in the first part of the main.c module, where the number of the lines, their name and their corresponding index is set. For example to compute the power spectrum for CO(1-0) and [CII] you would set 
+Example: Lets say you want to compute the mean brightness temprature, linear and quadratic biases for one or multiple emission lines, as a function of wavenumber at several redshifts. In the .ini file, you should set the switch "switch_Tbar" to be equal to "Tbar", and the switches of shot and power spectra blank, i.e. "switch_HMshot = " and "switch_HMshot = ". The relavent functions that are called within main.c are PS_line_HM() and line_bias(). For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. the computed values for the three quantities is saved by default in an output file saved in "Output" directory. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file, while the name of the line is passed with line1, line2, ... variables. T The first argument of PS_line_HM, is the cosmology structure needed for performing any calculation in the code. See cosmology.c module for more details. The LCDM.ini file contains description of parmaeters that should be set in the .ini file.
+
+So here is how ythe PS_line_HM() function is called within main():
 ```
-int nlines     = 2;
-int lines[2]   = {CO10,CII};
-int JJ[2]      = {1,0};
-``` 
+      int nz_mean     = gb.mean_nz;
+      double *z_mean  = init_1Darray(nz_mean,0.0,gb.mean_zmax);
 
-You would refer to each line in the example code below by its index inside the loop over i which extends to i=nlines. The name of the lines and their id is passed to PS_line_HM() function as the last two arguments. The first argument of PS_line_HM, is the cosmology structure needed for performing any calculation in the code. See cosmology.c module for more details. 
+      double lbias_arr[2];
+      double b1   = 0.;
+      double b2   = 0.;
+      double Tbar = 0.;
 
-So here is how you would call the PS_line_HM() function:
-```
-      int nk     = 200;
-      int nz     = 50;
-      double *k  = loginit_1Darray(nk, 1.e-3, 2.);
-      double *z  = init_1Darray(nz,0.0,11.);
+      FILE *fp1;
+      char filename1[FILENAME_MAX];
 
-      /** 
-       * Compute the line clustering signal using halo model 
-       */
-      printf("Calculating halo-model line power spectrum\n");
-      int line_id = 0;
-      double ps_clust_hm = 0.;
       for(int i=0;i<nlines;i++){
-            line_id = i;
-            for(int j=0;j<nz;j++){
-                  for(int l=0;l<nk;l++){
-                        ps_clust_hm =PS_line_HM(&Cx_ref, k[l], z[j], M_min, mode_mf, lines[i], line_id);
-                        printf("%d %12.6e %12.6e %12.6e \n", i, z[j], k[l], ps_clust_hm);
-
-                  }
-            }     
+            sprintf(filename1,"%s/Tbar_J%d.txt", gb.output_dir, JJ[i]);
+            fp1    = fopen(filename1, "ab");
+            fprintf(fp1,"%s %s %s %s %s \n","#", "z", "b1", "b2", "Tbar");
+            for(int j=0;j<nz_mean;j++){
+                  Tbar = Tbar_line(&Cx_ref, i, z_mean[j]);
+                  line_bias(Cx_ref.Lines[i],z_mean[j],lbias_arr);
+                  b1   = lbias_arr[0];
+                  b2   = lbias_arr[1];
+                  fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e \n",z_mean[j], b1, b2, Tbar); 
+            }
+            fclose(fp1);
       }
+      free(z_mean);
 ```
+
+By default, in additionn to having th eoutput in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory.
+
+
 <br>
 
 ## Attribution
