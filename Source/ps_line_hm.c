@@ -134,10 +134,19 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
       sprintf(filename2,"%s/pk_2h_comps_J%d_z%.*f.txt", gb.output_dir,J,nd,z);
       fp1 = fopen(filename1, "ab");
       fp2 = fopen(filename2, "ab");
-      // fprintf(fp1,"%s %s %s %s %s %s \n", "#", "halo-model-contributions-of-line-power-spectrum-in-unit-of-[(Mpc/h)^3]:", "k-in-unit-of-[h/Mpc]", "p_1h", "p_2h", "p_tot");
-      fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e\n",k/gb.h, pk_1h*pow(gb.h,3.), pk_2h*pow(gb.h,3.), total*pow(gb.h,3.));
-      // fprintf(fp2,"%s %s %s %s %s %s %s %s %s %s %s %s %s %s \n","#", "line-1loop-terms:", "k-in-unit-of-[h/Mpc]", "p_lin", "pe_22", "p_13", "p_1loop_IR", "p_ct", "pb1b2", "pb1bg2","pb22", "pbg22", "pb2bg2", "pb1b3nl");
-      fprintf(fp2,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h, plin*pow(gb.h,3.), p22*pow(gb.h,3.), p13*pow(gb.h,3.), pow(Tbar,2.)* pow(b1_line, 2.) * pm_1loop_IR*pow(gb.h,3.), pow(Tbar,2.)*pow(b1_line, 2.)*pm_ct*pow(gb.h,3.), pb1b2*pow(gb.h,3.), pb1bg2*pow(gb.h,3.), pb22*pow(gb.h,3.), pbg22*pow(gb.h,3.), pb2bg2*pow(gb.h,3.), pb1b3nl*pow(gb.h,3.)) ;
+
+      static int first = 1;
+      if(first == 1){
+          fprintf(fp1,"%s %s %s %s %s %s \n", "#", "p_HM[(Mpc/h)^3]:", "k[h/Mpc]", "p_1h", "p_2h", "p_tot");
+          fprintf(fp2,"%s %s %s %s %s %s %s %s %s %s %s %s %s %s \n","#", "line-1loop-terms:", "k[h/Mpc]", "p_lin", "p_22", "p_13", "p_1loop_IR", "p_ct", "pb1b2", "pb1bg2","pb22", "pbg22", "pb2bg2", "pb1b3nl");
+          fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e\n",k/gb.h, pk_1h*pow(gb.h,3.), pk_2h*pow(gb.h,3.), total*pow(gb.h,3.));
+          fprintf(fp2,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h, plin*pow(gb.h,3.), p22*pow(gb.h,3.), p13*pow(gb.h,3.), pow(Tbar,2.)* pow(b1_line, 2.) * pm_1loop_IR*pow(gb.h,3.), pow(Tbar,2.)*pow(b1_line, 2.)*pm_ct*pow(gb.h,3.), pb1b2*pow(gb.h,3.), pb1bg2*pow(gb.h,3.), pb22*pow(gb.h,3.), pbg22*pow(gb.h,3.), pb2bg2*pow(gb.h,3.), pb1b3nl*pow(gb.h,3.)) ;
+          first = 0;
+      }
+      else{
+          fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e\n",k/gb.h, pk_1h*pow(gb.h,3.), pk_2h*pow(gb.h,3.), total*pow(gb.h,3.));
+          fprintf(fp2,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h, plin*pow(gb.h,3.), p22*pow(gb.h,3.), p13*pow(gb.h,3.), pow(Tbar,2.)* pow(b1_line, 2.) * pm_1loop_IR*pow(gb.h,3.), pow(Tbar,2.)*pow(b1_line, 2.)*pm_ct*pow(gb.h,3.), pb1b2*pow(gb.h,3.), pb1bg2*pow(gb.h,3.), pb22*pow(gb.h,3.), pbg22*pow(gb.h,3.), pb2bg2*pow(gb.h,3.), pb1b3nl*pow(gb.h,3.)) ;
+      }
 
       //Close the output files
       fclose(fp1);
@@ -251,7 +260,17 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
       int nd = 2; //This is the number of digits to show in th evalue of z for sprintf()
       sprintf(filename1,"%s/pk_stoch_hm_J%d_z%.*f.txt", gb.output_dir, J, nd, z);
       fp1 = fopen(filename1, "ab");
-      fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
+
+      static int first = 1;
+      if(first == 1){
+          fprintf(fp1,"%s %s %s %s %s %s %s\n","k[h/Mpc]", "1hclust[(Mpc/h)^3]", "PoissonShot[(Mpc/h)^3]", "pklm_1h[(Mpc/h)^3]", "pkm_1h[(Mpc/h)^3]","Pb22[(Mpc/h)^3]", "full_stoch[(Mpc/h)^3]");
+          fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
+          first =  0;
+      }
+      else 
+          fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));
+
+
       fclose(fp1);
 
       // printf("%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e \n",z, k/gb.h,  pk_1h * pow(gb.h,3.), line_shot * pow(gb.h,3.), pklm_1h * pow(gb.h,3.), pkm_1h* pow(gb.h,3.), pb22_ls* pow(gb.h,3.), pk_stoch* pow(gb.h,3.));

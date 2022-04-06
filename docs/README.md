@@ -27,10 +27,12 @@ Note that in order to compute the luminosities of spectral lines, a model of sta
 
 ### Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
-This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". 
+This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". When the code is compiled, a static library "liblimHaloPT.a" is created and placed in "lib" directory of limHaloPT. If you would like to use any of the functions of limHaloPT, you can link to this ".a" file as an external library. 
 
-The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
+The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. 
+<br>
 &nbsp;
+
 
 ### Basic usage
 - To run the code, in the main directory of limHaloPT, type  "./limHaloPT LCDM.ini"  
@@ -68,9 +70,20 @@ So here is how ythe PS_line_HM() function is called within main():
       free(z_mean);
 ```
 
-By default, in additionn to having th eoutput in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory.
+By default, in addition to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory.
+
+In addition to using limHaloPT through "main.c" module which calls three specific functions, limHalpPT can be exported as an external library to any other C code. For example if you would like to call the function that computes the halo mass function for a given theoretical model, once the liblimHaloPT.a library is linked to, the relevent function can be accessed from an external C code.
 <br>
 &nbsp;
+
+
+## Testing
+"Test" directory includes an automated test for the three main functions of limHaloPT, which are called within main.c module. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis. 
+
+Having compiled limHaloPT package, and created the "liblimHaloPT.a" library, to run the test, switch to "Test" subdirectory. You have to first do "make", and then you can run the code by typying "./test test_LCDM.ini. Upon completion, the output files are stored in "Test/Output" directory. 
+
+Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. <br>
+
 
 ### Attribution
 You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers. 

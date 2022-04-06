@@ -23,23 +23,23 @@ Note that in order to compute the luminosities of spectral lines, a model of sta
 
 ## Structure of the package
 limHaloPT consists of 10 main modules, which include the following categories of functions:
-- main.c: This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. After adding the function calls in this module, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.
-- ps_line_hm.c: This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation. 
-- ps_line_pt.c: This module includes various functions to compute the Poisson shot-noise and linear clustering components of line power spectrum, contributions of line interloper to the power spectrum signal. Both real and redshift-space linear power spectra are available.
-- line_ingredients.c: This module includes all the necassary functions to compute the line power spectrum by the above two modules. Many of the functions in this module can be used to develope the extensions of limHaloPT to other line statistics beyond the power spectrum.
-- ps_halo_1loop.c: This module includes the ingredients to compute the real-space 1loop contributions of the halo/galaxy power spectrum. Both loops due to gravitational evolution and primordial non-Gaussianity can be calculated. The computations of the loop integrals is performed with direct numerical integration routines from CUBA library.
-- ir_res.c: This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order. 
-- wnw_split.c: This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
-- survey_specs.c: This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.
+- **main.c:** This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. After adding the function calls in this module, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.
+- **ps_line_hm.c:** This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation. 
+- **ps_line_pt.c:** This module includes various functions to compute the Poisson shot-noise and linear clustering components of line power spectrum, contributions of line interloper to the power spectrum signal. Both real and redshift-space linear power spectra are available.
+- **line_ingredients.c:** This module includes all the necassary functions to compute the line power spectrum by the above two modules. Many of the functions in this module can be used to develope the extensions of limHaloPT to other line statistics beyond the power spectrum.
+- **ps_halo_1loop.c:** This module includes the ingredients to compute the real-space 1loop contributions of the halo/galaxy power spectrum. Both loops due to gravitational evolution and primordial non-Gaussianity can be calculated. The computations of the loop integrals is performed with direct numerical integration routines from CUBA library.
+- **ir_res.c:** This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order. 
+- **wnw_split.c:** This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
+- **survey_specs.c:** This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.
 - cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
-- read_input.c: This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
-- setup_teardown.c: This module contains utilityy functions to read in an .ini file.
-- utilities.c: This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. <br>
+- **read_input.c:** This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
+- **setup_teardown.c:** This module contains utilityy functions to read in an .ini file.
+- **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. <br>
 
 
 ## Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
-This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". 
+This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". When the code is compiled, a static library "liblimHaloPT.a" is created and placed in "lib" directory of limHaloPT. If you would like to use any of the functions of limHaloPT, you can link to this ".a" file as an external library. 
 
 The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 
@@ -80,17 +80,21 @@ So here is how PS_line_HM() function is called within main():
       free(z_mean);
 ```
 
-By default, in additionn to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. <br>
+By default, in additionn to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. 
+
+In addition to using limHaloPT through "main.c" module which calls three specific functions, limHalpPT can be exported as an external library to any other C code. For example if you would like to call the function that computes the halo mass function for a given theoretical model, once the liblimHaloPT.a library is linked to, the relevent function can be accessed from an external C code. <br>
 
 
 ## Testing
-"Test" directory inclides an automated test for the three main functions of limHaloPT, which are called within main.c module. The test can be run using test_LCDM.ini file. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis. The output of this test are saved in the Test/Output directory.
+"Test" directory includes an automated test for the three main functions of limHaloPT, which are called within main.c module. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis. 
 
+Having compiled limHaloPT package, and created the "liblimHaloPT.a" library, to run the test, switch to "Test" subdirectory. You have to first do "make", and then you can run the code by typying "./test test_LCDM.ini. Upon completion, the output files are stored in "Test/Output" directory. 
+
+Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. <br>
 
 
 ## Attribution
-You can use this package freely, provided that in your publication you cite the following paper
-Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers.<br>
+You can use this package freely, provided that in your publication you cite the following paper; Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required byy CLASS developers.<br>
 
 
 ## Contributing

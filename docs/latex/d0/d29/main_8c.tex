@@ -2,11 +2,12 @@
 \label{main_8c}\index{main.c@{main.c}}
 
 
-Documented main module, including functions to initilize and cleanup the cosmology structure and examples of calls to functions in other modules to compute the line clustering and shot power spectrum.  
+Documented main module, including functions to initilize and cleanup the cosmology structure and calls to fthree main functions to compute the line mean brightness temprature, linear and quadratic biases and clustering and shot contributions to line power spectrum.  
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for main.\+c\+:\nopagebreak
+Include dependency graph for main.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +27,7 @@ struct \mbox{\hyperlink{structglobals}{globals}} \mbox{\hyperlink{main_8c_a61c66
 
 
 \doxysubsubsection{Detailed Description}
-Documented main module, including functions to initilize and cleanup the cosmology structure and examples of calls to functions in other modules to compute the line clustering and shot power spectrum. 
+Documented main module, including functions to initilize and cleanup the cosmology structure and calls to fthree main functions to compute the line mean brightness temprature, linear and quadratic biases and clustering and shot contributions to line power spectrum. 
 
 Azadeh Moradinezhad Dizgah, November 4th 2021
 
@@ -62,7 +63,8 @@ Initialize the cosmology structure, which includes CLASS cosmology and \mbox{\hy
 
 \DoxyHorRuler{0}
  At the moment, lim\+Halo\+PT has three possible outputs; the mean brightness temprature, the clustering power or the shot power. The latter two are computed within halo model. The clustering power is real-\/space (RSD not included).\hypertarget{main.c_autotoc_md1}{}\doxyparagraph{If you want to call any other function of lim\+Halo\+PT, you should add them to to this section of the code}\label{main.c_autotoc_md1}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,7 +1,8 @@
 
 
 /** @file main.c Documented main module, including functions to initilize and cleanup the cosmology structure
- *  and examples of calls to functions in other modules to compute the line clustering and shot power spectrum. 
+ *  and calls to fthree main functions to compute the line mean brightness temprature, linear and quadratic biases 
+ * and clustering and shot contributions to line power spectrum. 
  *  
  * Azadeh Moradinezhad Dizgah, November 4th 2021
  *
@@ -166,8 +167,6 @@ int main(int argc,char *argv[])
 	 	
 		 	FILE *fp2, *fp3, *fp4;
 	  		char filename2[FILENAME_MAX];
-	  		char filename3[FILENAME_MAX];
-	  		char filename4[FILENAME_MAX];
 	 		int nk_power     = gb.power_nk;
 			double *k_power  = loginit_1Darray(nk_power, gb.power_kmin, gb.power_kmax);
 
@@ -177,23 +176,14 @@ int main(int argc,char *argv[])
 		 	for(int i=0;i<nlines;i++){
 		 		for(int j=0;j<nz_power;j++){
 		 			sprintf(filename2,"%s/clust_J%d_z%.*f.txt", gb.output_dir, JJ[i], nd, z_power[j]);
-		 			sprintf(filename3,"%s/pk_hm_J%d_z%.*f..txt", gb.output_dir,JJ[i],nd,z_power[j]);
-      				sprintf(filename4,"%s/pk_2h_comps_J%d_z%.*f..txt", gb.output_dir,JJ[i],nd,z_power[j]);
-					fp2    = fopen(filename2, "ab");
-					fp3    = fopen(filename3, "ab");
-					fp4    = fopen(filename4, "ab");
-
+		 			fp2    = fopen(filename2, "ab");
 					fprintf(fp2,"%s %s %s %s %s \n","#", "line_id", "z", "k", "ps_clust-[Mpc^3]");
-					fprintf(fp3,"%s %s %s %s %s %s \n", "#", "halo-model-contributions-of-line-power-spectrum-in-unit-of-[(Mpc/h)^3]:", "k-in-unit-of-[h/Mpc]", "p_1h", "p_2h", "p_tot");
-      				fprintf(fp4,"%s %s %s %s %s %s %s %s %s %s %s %s %s %s \n","#", "line-1loop-terms:", "k-in-unit-of-[h/Mpc]", "p_lin", "pe_22", "p_13", "p_1loop_IR", "p_ct", "pb1b2", "pb1bg2","pb22", "pbg22", "pb2bg2", "pb1b3nl");
-
+					
 					for(int l=0;l<nk_power;l++){
 						ps_clust_hm = PS_line_HM(&Cx_ref, k_power[l], z_power[j], M_min, mode_mf, line_type[i], i);
 						fprintf(fp2,"%d %12.6e %12.6e %12.6e \n", i, z_power[j], k_power[l], ps_clust_hm);
 					}
 					fclose(fp2);
-					fclose(fp3);
-					fclose(fp4);
 				}	
 			}
 			free(k_power);
@@ -203,7 +193,6 @@ int main(int argc,char *argv[])
 
 			FILE *fp5, *fp6;
 	  		char filename5[FILENAME_MAX];
-		  	char filename6[FILENAME_MAX];
 
 			double Omegam   	= (Cx_ref.cosmo_pars[3] + Cx_ref.cosmo_pars[4]);
 			double rhom_bar 	= Omegam * rhoc(&Cx_ref,0.); 
@@ -219,16 +208,11 @@ int main(int argc,char *argv[])
 				fprintf(fp5,"%s %s %s %s %s %s \n","#", "line_id", "z", "ps_shot [Mpc^3]");
 
 		 		for(int j=0;j<nz_power;j++){
-		 			/* fp6 contains the values of individual contributions to 1loop */
-					sprintf(filename6,"%s/pk_stoch_hm_J%d_z%.*f.txt", gb.output_dir, JJ[i], nd, z_power[j]);
-					fp6    = fopen(filename6, "ab");
-      				fprintf(fp6,"%s %s %s %s %s %s %s\n","k-in-unit-of-[h/Mpc]", "clust-1h-in-unit-of-[(Mpc/h)^3]", "Poisson-in-unit-of-[(Mpc/h)^3]", "pklm_1h-in-unit-of-[(Mpc/h)^3]", "pkm_1h-in-unit-of-[(Mpc/h)^3]","Pb22_ls-in-unit-of-[(Mpc/h)^3]", "full_stoch-in-unit-of-[(Mpc/h)^3]");
-
 					input[0]   = Tbar_line(&Cx_ref, i, z_power[j]); 
 					input[1]   = rhom_bar; 
 					input[2]   = PS_shot(&Cx_ref, z_power[j], i);
 					ps_shot_hm = PS_shot_HM(&Cx_ref, k_shot, z_power[j], M_min, input, mode_mf, line_type[i], i);
-					fprintf(fp6,"%d %12.6e %12.6e \n", i, z_power[j], ps_shot_hm);
+					fprintf(fp5,"%d %12.6e %12.6e \n", i, z_power[j], ps_shot_hm);
 				}
 				fclose(fp5);
 				fclose(fp6);
