@@ -1,4 +1,4 @@
-.TH "main.c" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "main.c" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,51 +34,29 @@ In order to call any function from the package, the function calls should be pla
 .SH "Function Documentation"
 .PP 
 .SS "int main (int argc, char * argv[])"
-
+Initialize various ingredients for the rest of the code\&.
 .PP
- If you want to change the values of cosmological parmaeters compared to the default values of the code, you should do so inside the \fBinitialize()\fP function\&. 
-.SS "For instance change the value of gb\&.h to set the value of hubble parmaeter in your cosmology\&."
-Initialize various ingredients for the rest of the code\&. More specifically, set the relavent directory paths, values of cosmological parameters and in general any parameter that has to be passed to CLASS Boltzmann code\&. Furthermore initialize some of the interpolators needed for the package\&.
+More specifically, initilize the filename and interpolator of SFR\&. Read in the values of the parameters from \&.ini file and set the values of the elements of the glocal structure Furthermore, the \fBinitialize()\fP function returns a structure containing parameters such as as mimumum halo mass that are read from the \&.ini file\&.
 .PP
+Extract from the return struct of \fBinitialize()\fP function, values of the parameters for computing quantities related to spectral lines\&. Note that these values were read from the \&.ini file within the \fBinitialize()\fP function\&.
 .PP
- 
-.SS "Change if you want to assume a different mass function or minimum halo mass"
-Set the parameters for computing quantities related to spectral lines\&. More specifically, the mimum mass for halos that can host line-emitting galaxies M_min and the the theoretical mass function to be used, ST: Sheth-Tormen, PSC: Press-Schecter, TK:: Tinker
+M_min : mimum mass for halos that can host line-emitting galaxies in unit of M_sun mode_mf: switch to set the theoretical mass function to be used, ST: Sheth-Tormen, PSC: Press-Schecter, TK:: Tinker ninterp: how many points to have for z-interpolation of line bias and first and second luminosity moments nlines: the number of emission lines you want to include in the analysis
 .PP
-.PP
- 
-.SS "Change if you want to limit the lines to include in your computation\&."
-Define which lines to compute, and how many points to have for z-interpolation
-.PP
-Note: The main line properties used in the calculation of the line power spectrum, which includes first and second moments of line luminosity (weighted by halo mass function) and luminosity-weighted linear and quadratic line biases are computed in function \fBLine_alloc_init()\fP\&. In that function, these quantities are calculate over an array of redshift values and then an interpolator for these quantities is initialized\&. The parameter 'ninterp' below, sets the number of interpolation points 
+Note about ninterp: The main line properties used in the calculation of the line power spectrum, which includes first and second moments of line luminosity (weighted by halo mass function) and luminosity-weighted linear and quadratic line biases are computed in function \fBLine_alloc_init()\fP\&. In that function, these quantities are calculate over an array of redshift values ranging from 0 to line_zmax (a paramter of \&.ini file)\&. Subsequently, an interpolator for these quantities is initialized\&. The parameter 'ninterp' below, sets the number of interpolation points 
 .br
- for this interpolator\&. If you set it too low, the redshift-dependance of line properties would not be accurate\&. In the tests done during code developement, ninterp = 150 give results at the precision needed\&. However large values of ninterp results in longer run time\&.
+ for this interpolator\&. If you set ninterp too low and the redshift range is wide, the redshift-dependance of line properties would not be accurate\&. In the tests done during code developement, ninterp = 150 give results at the precision needed when comparing with MithraLIMSims\&. However large values of ninterp results in longer run time\&. For testing installation and running the code using test\&.c module, lower value of ninterp is used, to have the code run fast\&. But remember in your actuall runs, set ninterp to larger numbers\&.
 .PP
-For testing installation and running of the code, you can set lower value of ninterp, to make the code run faster\&. But remember in your actuall runs, set ninterp to larger numbers\&.
+Note about nlines: If you do not need to compute the line properties for all the 7 lines implemented in the code, you can set nlines in the \&.ini file to the number of lines you are interested\&. Note that at the moment you can only call the lines in the order below\&.
 .PP
-If you do not need to compute the line properties for all the 7 lines below, you can set nlines to the number of lines you are interested, change the arrays of line[nlines] and JJ[nlines] to correspond to the lines you need to calculate\&.
+Given the number of lines you chose with nline, the line[] array and JJ[] arrays will be initialized here\&. Note that at the moment you can only call the lines in the order below\&.
 .PP
-.PP
- In general, you should not need to change this portion of the code\&. But in order to call most functions of 
-.SS "limHaloPT, you furst need to initilize the Cosmology structure as done below\&."
 Set values of cosmological parameter and finger-of-god paramater (peculiar velocity of line emitters) and initialize cosmo_pars array in the cosmology structure Cx_ref
 .PP
 Initialize the cosmology structure, which includes CLASS cosmology and \fBLine\fP structures
 .PP
 .PP
- 
-.SS "Depending on what quantities ou want to compute, you need to modify this part of the main() function\&."
-Set the k and z arrays
-.PP
-For testing the code, you can reduce the range of k, and z and also the number of points for each, nk, and nz\&.
-.PP
-Compute the line clustering signal using halo model
-.PP
-Compute the shot noise (beyond the Poisson limit), using halo model
-.PP
-.PP
- 
-.SS "Modify up to here"
+ At the moment, limHaloPT has three possible outputs; the mean brightness temprature, the clustering power or the shot power\&. The latter two are computed within halo model\&. The clustering power is real-space (RSD not included)\&.
+.SS "If you want to call any other function of limHaloPT, you should add them to to this section of the code"
 
 .SH "Variable Documentation"
 .PP 

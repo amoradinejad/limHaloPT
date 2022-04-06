@@ -50,20 +50,27 @@ extern struct globals gb;
 #include "global_structs.h"
 #include "cosmology.h"
 
-void  initialize();
+typedef struct initialize_struct{
+      double Mh_min;
+      long   mode_mf;
+      size_t ninterp;
+      int    nlines;
+      int    lines[7];
+}initialize_struct;
+
+void initialize(char *argv[], struct initialize_struct *init_struct);
 void  cleanup();
 
 int Cosmology_init(struct Cosmology *Cx, double pk_kmax, double pk_zmax, 
             int nlines, int * line_types, size_t npoints_interp, double M_min, long mode_mf);
 
 double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long mode_mf,  long line_type, int line_id);
-double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type);
+double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type, int line_id);
 double b22_ls(struct Cosmology *Cx, double z);
-
 
 double PS_shot(struct Cosmology *Cx, double z, size_t line_id);
 double Tbar_line(struct Cosmology *Cx, size_t line_id, double z);
-void line_bias(struct Line *Lx, double z, double *result);
+void   line_bias(struct Line *Lx, double z, double *result);
 
 double rhoc(struct Cosmology *Cx, double z);
 

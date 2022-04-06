@@ -1,0 +1,121 @@
+\hypertarget{read__input_8c}{}\doxysubsection{read\+\_\+input.\+c File Reference}
+\label{read__input_8c}\index{read\_input.c@{read\_input.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}read\+\_\+input.\+h\char`\"{}}\newline
+Include dependency graph for read\+\_\+input.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8c/read__input_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{read__input_8c_a390fd04002f80c3e73c3718ca430ab64}{test\+\_\+float}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em See \href{https://stackoverflow.com/questions/45554639/is-there-a-way-to-check-if-a-string-can-be-a-float-in-c}{\texttt{ https\+://stackoverflow.\+com/questions/45554639/is-\/there-\/a-\/way-\/to-\/check-\/if-\/a-\/string-\/can-\/be-\/a-\/float-\/in-\/c}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{read__input_8c_aab9a5a4ff2ce843184f31b9fe68c8b88}{check\+\_\+for\+\_\+one\+\_\+equal\+\_\+sign}} (char $\ast$line\+\_\+in)
+\item 
+char $\ast$ \mbox{\hyperlink{read__input_8c_ae3fad30c3da209279be99d97808fc5a2}{trim}} (char $\ast$in)
+\item 
+void \mbox{\hyperlink{read__input_8c_ac094f7d7b39c9fd5be2d1ceb4da91605}{parse\+\_\+line}} (char $\ast$line\+\_\+in, char $\ast$$\ast$pname, char $\ast$$\ast$pvalue)
+\item 
+unsigned int \mbox{\hyperlink{read__input_8c_ae78b2669fbc5b4f8ba08f94fb83c6805}{lines\+\_\+with\+\_\+parameters}} (FILE $\ast$fp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{read__input_8c_aab9a5a4ff2ce843184f31b9fe68c8b88}\label{read__input_8c_aab9a5a4ff2ce843184f31b9fe68c8b88}} 
+\index{read\_input.c@{read\_input.c}!check\_for\_one\_equal\_sign@{check\_for\_one\_equal\_sign}}
+\index{check\_for\_one\_equal\_sign@{check\_for\_one\_equal\_sign}!read\_input.c@{read\_input.c}}
+\doxyparagraph{\texorpdfstring{check\_for\_one\_equal\_sign()}{check\_for\_one\_equal\_sign()}}
+{\footnotesize\ttfamily int check\+\_\+for\+\_\+one\+\_\+equal\+\_\+sign (\begin{DoxyParamCaption}\item[{char $\ast$}]{line\+\_\+in }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d9a/read__input_8c_aab9a5a4ff2ce843184f31b9fe68c8b88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__input_8c_ae78b2669fbc5b4f8ba08f94fb83c6805}\label{read__input_8c_ae78b2669fbc5b4f8ba08f94fb83c6805}} 
+\index{read\_input.c@{read\_input.c}!lines\_with\_parameters@{lines\_with\_parameters}}
+\index{lines\_with\_parameters@{lines\_with\_parameters}!read\_input.c@{read\_input.c}}
+\doxyparagraph{\texorpdfstring{lines\_with\_parameters()}{lines\_with\_parameters()}}
+{\footnotesize\ttfamily unsigned int lines\+\_\+with\+\_\+parameters (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d9a/read__input_8c_ae78b2669fbc5b4f8ba08f94fb83c6805_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d9a/read__input_8c_ae78b2669fbc5b4f8ba08f94fb83c6805_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__input_8c_ac094f7d7b39c9fd5be2d1ceb4da91605}\label{read__input_8c_ac094f7d7b39c9fd5be2d1ceb4da91605}} 
+\index{read\_input.c@{read\_input.c}!parse\_line@{parse\_line}}
+\index{parse\_line@{parse\_line}!read\_input.c@{read\_input.c}}
+\doxyparagraph{\texorpdfstring{parse\_line()}{parse\_line()}}
+{\footnotesize\ttfamily void parse\+\_\+line (\begin{DoxyParamCaption}\item[{char $\ast$}]{line\+\_\+in,  }\item[{char $\ast$$\ast$}]{pname,  }\item[{char $\ast$$\ast$}]{pvalue }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d7/d9a/read__input_8c_ac094f7d7b39c9fd5be2d1ceb4da91605_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{d7/d9a/read__input_8c_ac094f7d7b39c9fd5be2d1ceb4da91605_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__input_8c_a390fd04002f80c3e73c3718ca430ab64}\label{read__input_8c_a390fd04002f80c3e73c3718ca430ab64}} 
+\index{read\_input.c@{read\_input.c}!test\_float@{test\_float}}
+\index{test\_float@{test\_float}!read\_input.c@{read\_input.c}}
+\doxyparagraph{\texorpdfstring{test\_float()}{test\_float()}}
+{\footnotesize\ttfamily unsigned int test\+\_\+float (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+See \href{https://stackoverflow.com/questions/45554639/is-there-a-way-to-check-if-a-string-can-be-a-float-in-c}{\texttt{ https\+://stackoverflow.\+com/questions/45554639/is-\/there-\/a-\/way-\/to-\/check-\/if-\/a-\/string-\/can-\/be-\/a-\/float-\/in-\/c}}. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{d7/d9a/read__input_8c_a390fd04002f80c3e73c3718ca430ab64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__input_8c_ae3fad30c3da209279be99d97808fc5a2}\label{read__input_8c_ae3fad30c3da209279be99d97808fc5a2}} 
+\index{read\_input.c@{read\_input.c}!trim@{trim}}
+\index{trim@{trim}!read\_input.c@{read\_input.c}}
+\doxyparagraph{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily char $\ast$ trim (\begin{DoxyParamCaption}\item[{char $\ast$}]{in }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d9a/read__input_8c_ae3fad30c3da209279be99d97808fc5a2_icgraph}
+\end{center}
+\end{figure}

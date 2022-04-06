@@ -48,7 +48,7 @@ double PS_tot_interloper(struct Cosmology *Cx, double k, double mu, double z_s, 
   double mu_inter    = k_par/k_inter;
 
   double sigz        = 0.001 * (1.+z_inter);   ////What is sigz for CO surveys? 
-  double sig_FOG     = Cx->cosmo_pars[NPARS-1L] * sqrt(1.+z_inter);
+  double sig_FOG     = Cx->cosmo_pars[gb.Npars-1L] * sqrt(1.+z_inter);
   double sigv        = (1.+z_inter)*sqrt(pow(sig_FOG,2.)/2. + pow(gb.c *sigz,2.));
   double sup_fac     = exp(-pow(k_inter*mu_inter*sigv,2.)/pow(Hubble(Cx,z_inter),2.));
   double inter_vol   = pow(A_perp,2.) * A_par;
@@ -120,7 +120,7 @@ double PS_line_RSD(struct Cosmology *Cx, struct Cosmology *Cx_ref, double k, dou
       double growth_rate = growth_f(Cx, k, z);
         
       double sigz    = 0.001 * (1.+z);   ////What is sigz for CO surveys? 
-      double sig_FOG = Cx->cosmo_pars[NPARS-1L] * sqrt(1.+z);
+      double sig_FOG = Cx->cosmo_pars[gb.Npars-1L] * sqrt(1.+z);
       double sigv    = (1.+z)*sqrt(pow(sig_FOG,2.)/2. + pow(gb.c *sigz,2.));
       double sup_fac = exp(-pow(k_true*mu_true*sigv,2.)/pow(Hubble(Cx_ref,z),2.));
       double AP_fac  = pow(angular_distance(Cx_ref,z)/angular_distance(Cx,z),2.) * Hubble(Cx,z)/Hubble(Cx_ref,z);

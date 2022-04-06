@@ -104,48 +104,60 @@
 \DoxyCodeLine{118 }
 \DoxyCodeLine{119     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_abca16ad30bddc5b0b828579c1b60bee3}{Npars}}; }
 \DoxyCodeLine{120     }
-\DoxyCodeLine{121     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}{project\_home}}[FILENAME\_MAX];}
-\DoxyCodeLine{122     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a8774308bba8156b6e600c20a45a7e31d}{output\_dir}}[FILENAME\_MAX];}
-\DoxyCodeLine{123     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a925704d35c2014b94afb097cd1a44973}{data\_dir}}[FILENAME\_MAX];}
-\DoxyCodeLine{124     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a2deb0a587ae3137929299a81d7c833cd}{data\_priors}}[FILENAME\_MAX];}
-\DoxyCodeLine{125 }
-\DoxyCodeLine{126 }
-\DoxyCodeLine{127     \textcolor{comment}{// Min and max values}}
-\DoxyCodeLine{128     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a311d0aaeec59357eb38219f6aad22473}{PS\_kmin}};}
-\DoxyCodeLine{129     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a96f47b9da4387802e3b04d64c122bafc}{PS\_kmax}};}
-\DoxyCodeLine{130     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_afa4388248b42652e506b1cf1965bf03c}{kmax\_CLASS}};}
-\DoxyCodeLine{131 }
-\DoxyCodeLine{132     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2f074bcf2429219731fae83c125b6217}{PS\_zmax}};}
-\DoxyCodeLine{133     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ab729ef7f3ba93e93000aadd84e444315}{line\_zmax}};}
-\DoxyCodeLine{134 }
-\DoxyCodeLine{135     \textcolor{comment}{// File names}}
-\DoxyCodeLine{136     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_a34cc8c01b32f3a1be57b1be90f35977a}{SFR\_filename}}[FILENAME\_MAX];}
-\DoxyCodeLine{137     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_aef1bb9a8012225179948bbcaa4c01923}{Planck\_Fisher\_filename}}[FILENAME\_MAX];}
+\DoxyCodeLine{121     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_ac0b157ce0eb12133a380f281b6640b91}{switch\_Tbar}};}
+\DoxyCodeLine{122     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_ae4cce5d0163d5f2f9deab45d2cbad82a}{switch\_HMshot}};}
+\DoxyCodeLine{123     \textcolor{keywordtype}{long} \mbox{\hyperlink{structglobals_a1fb448d92a2952f778c744f8df8e72be}{switch\_HMclust}};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}{project\_home}}[FILENAME\_MAX];}
+\DoxyCodeLine{126     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a8774308bba8156b6e600c20a45a7e31d}{output\_dir}}[FILENAME\_MAX];}
+\DoxyCodeLine{127     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a925704d35c2014b94afb097cd1a44973}{data\_dir}}[FILENAME\_MAX];}
+\DoxyCodeLine{128     \textcolor{keywordtype}{char} \mbox{\hyperlink{structglobals_a2deb0a587ae3137929299a81d7c833cd}{data\_priors}}[FILENAME\_MAX];}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     \textcolor{comment}{// Min and max values}}
+\DoxyCodeLine{132     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a311d0aaeec59357eb38219f6aad22473}{PS\_kmin}};}
+\DoxyCodeLine{133     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_a96f47b9da4387802e3b04d64c122bafc}{PS\_kmax}};}
+\DoxyCodeLine{134     \textcolor{keywordtype}{double}  \mbox{\hyperlink{structglobals_afa4388248b42652e506b1cf1965bf03c}{kmax\_CLASS}};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a2f074bcf2429219731fae83c125b6217}{PS\_zmax}};}
+\DoxyCodeLine{137     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ab729ef7f3ba93e93000aadd84e444315}{line\_zmax}};}
 \DoxyCodeLine{138 }
-\DoxyCodeLine{139     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a3fb3c034ed42d7151ea3c969238697d0}{logM\_accel\_ptr}};}
-\DoxyCodeLine{140     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a4af709deff27cf7611878521be752190}{z\_accel\_ptr}};}
-\DoxyCodeLine{141     gsl\_spline2d        *\mbox{\hyperlink{structglobals_a5e7d44b815c83588da9ae2ab8c5d3fab}{logSFR\_spline2d\_ptr}};    }
-\DoxyCodeLine{142 \};}
-\DoxyCodeLine{143 }
-\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{145  }
+\DoxyCodeLine{139     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_ac0052e82b6f14dcd6681b967d35cfd24}{mean\_zmax}};}
+\DoxyCodeLine{140     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a80ac0633d1b9d2969a6efb6c0d5532a6}{power\_zmax}};}
+\DoxyCodeLine{141     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a7246d082d63f6a7facbb73975d321c27}{power\_kmax}};}
+\DoxyCodeLine{142     \textcolor{keywordtype}{double} \mbox{\hyperlink{structglobals_a0907ae7d2574e1e18a24d4f66326849b}{power\_kmin}};}
+\DoxyCodeLine{143     \textcolor{keywordtype}{int} \mbox{\hyperlink{structglobals_aafe3106e91cf177567ba5b4cccb97287}{mean\_nz}};}
+\DoxyCodeLine{144     \textcolor{keywordtype}{int} \mbox{\hyperlink{structglobals_ae53da270e1940407361a91b2549fd7da}{power\_nz}};}
+\DoxyCodeLine{145     \textcolor{keywordtype}{int} \mbox{\hyperlink{structglobals_ac45ac548ec5813db70b2fc394f06328b}{power\_nk}};}
 \DoxyCodeLine{146 }
-\DoxyCodeLine{147 }
-\DoxyCodeLine{148 }
-\DoxyCodeLine{149 }
+\DoxyCodeLine{147     \textcolor{comment}{// File names}}
+\DoxyCodeLine{148     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_a34cc8c01b32f3a1be57b1be90f35977a}{SFR\_filename}}[FILENAME\_MAX];}
+\DoxyCodeLine{149     \textcolor{keywordtype}{char}            \mbox{\hyperlink{structglobals_aef1bb9a8012225179948bbcaa4c01923}{Planck\_Fisher\_filename}}[FILENAME\_MAX];}
 \DoxyCodeLine{150 }
-\DoxyCodeLine{151 }
-\DoxyCodeLine{152 }
-\DoxyCodeLine{153 }
-\DoxyCodeLine{154 }
+\DoxyCodeLine{151     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a3fb3c034ed42d7151ea3c969238697d0}{logM\_accel\_ptr}};}
+\DoxyCodeLine{152     gsl\_interp\_accel    *\mbox{\hyperlink{structglobals_a4af709deff27cf7611878521be752190}{z\_accel\_ptr}};}
+\DoxyCodeLine{153     gsl\_spline2d        *\mbox{\hyperlink{structglobals_a5e7d44b815c83588da9ae2ab8c5d3fab}{logSFR\_spline2d\_ptr}};    }
+\DoxyCodeLine{154 \};}
 \DoxyCodeLine{155 }
-\DoxyCodeLine{156 }
-\DoxyCodeLine{157 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{157  }
 \DoxyCodeLine{158 }
 \DoxyCodeLine{159 }
 \DoxyCodeLine{160 }
 \DoxyCodeLine{161 }
 \DoxyCodeLine{162 }
 \DoxyCodeLine{163 }
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 }
 
 \end{DoxyCode}

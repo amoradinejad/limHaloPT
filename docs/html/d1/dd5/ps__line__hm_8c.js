@@ -7,5 +7,5 @@ var ps__line__hm_8c =
     [ "mhmc", "d1/dd5/ps__line__hm_8c.html#a3a71ccb997cf820c19eb64cedbf69a10", null ],
     [ "mhmc_integ", "d1/dd5/ps__line__hm_8c.html#a122b3706f795f51c64ab8a9dd40379e3", null ],
     [ "PS_line_HM", "d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01", null ],
-    [ "PS_shot_HM", "d1/dd5/ps__line__hm_8c.html#ab3d6db65cacf00838ffc77e39ec93656", null ]
+    [ "PS_shot_HM", "d1/dd5/ps__line__hm_8c.html#a783807d3525deda32e00ecdf21d7c6ce", null ]
 ];

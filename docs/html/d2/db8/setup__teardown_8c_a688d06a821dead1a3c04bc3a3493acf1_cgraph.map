@@ -1,0 +1,14 @@
+<map id="initialize" name="initialize">
+<area shape="rect" id="node1" title="Initialize the path to the required directories,and the interpolator of the SFR(M,..." alt="" coords="5,107,75,133"/>
+<area shape="rect" id="node2" href="$d7/d9a/read__input_8c.html#ae78b2669fbc5b4f8ba08f94fb83c6805" title=" " alt="" coords="123,5,275,32"/>
+<area shape="rect" id="node4" href="$d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02" title="Allocate memory and initialize the 2d interpolator for the star formation rate of Behroozi et al 2013..." alt="" coords="137,132,261,159"/>
+<area shape="rect" id="node10" href="$d7/d9a/read__input_8c.html#ac094f7d7b39c9fd5be2d1ceb4da91605" title=" " alt="" coords="158,56,239,83"/>
+<area shape="rect" id="node12" href="$d7/d9a/read__input_8c.html#a390fd04002f80c3e73c3718ca430ab64" title="See https://stackoverflow.com/questions/45554639/is&#45;there&#45;a&#45;way&#45;to&#45;check&#45;if&#45;a&#45;string&#45;can&#45;be&#45;a&#45;float&#45;i..." alt="" coords="161,183,237,209"/>
+<area shape="rect" id="node3" href="$d7/d9a/read__input_8c.html#aab9a5a4ff2ce843184f31b9fe68c8b88" title=" " alt="" coords="323,5,499,32"/>
+<area shape="rect" id="node5" href="$d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="547,247,676,273"/>
+<area shape="rect" id="node6" href="$d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="333,208,489,235"/>
+<area shape="rect" id="node7" href="$d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="558,113,665,140"/>
+<area shape="rect" id="node8" href="$d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="592,171,631,197"/>
+<area shape="rect" id="node9" href="$d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="724,171,765,197"/>
+<area shape="rect" id="node11" href="$d7/d9a/read__input_8c.html#ae3fad30c3da209279be99d97808fc5a2" title=" " alt="" coords="389,56,433,83"/>
+</map>

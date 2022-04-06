@@ -118,6 +118,10 @@ struct globals
 
 	long Npars; 
 	
+	long switch_Tbar;
+	long switch_HMshot;
+	long switch_HMclust;
+
 	char project_home[FILENAME_MAX];
 	char output_dir[FILENAME_MAX];
 	char data_dir[FILENAME_MAX];
@@ -131,6 +135,14 @@ struct globals
 
 	double PS_zmax;
 	double line_zmax;
+
+	double mean_zmax;
+	double power_zmax;
+	double power_kmax;
+	double power_kmin;
+	int mean_nz;
+	int power_nz;
+	int power_nk;
 
 	// File names
 	char			SFR_filename[FILENAME_MAX];

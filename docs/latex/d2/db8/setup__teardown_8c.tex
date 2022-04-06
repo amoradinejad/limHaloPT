@@ -6,7 +6,9 @@ Documented setup\+\_\+teardown module, including the initialize and clean functi
 
 
 {\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
-Include dependency graph for setup\+\_\+teardown.\+c\+:\nopagebreak
+{\ttfamily \#include \char`\"{}read\+\_\+input.\+h\char`\"{}}\newline
+Include dependency graph for setup\+\_\+teardown.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +18,8 @@ Include dependency graph for setup\+\_\+teardown.\+c\+:\nopagebreak
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}{initialize}} ()
-\begin{DoxyCompactList}\small\item\em Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize}} (char $\ast$argv\mbox{[}$\,$\mbox{]}, struct initialize\+\_\+struct $\ast$init\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Initialize the path to the required directories,and the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0}{cleanup}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx)
 \begin{DoxyCompactList}\small\item\em Free the memory allocated to cosmology structure and SFR interpolator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -48,48 +50,49 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}\label{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}} 
+\mbox{\Hypertarget{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}\label{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}} 
 \index{setup\_teardown.c@{setup\_teardown.c}!initialize@{initialize}}
 \index{initialize@{initialize}!setup\_teardown.c@{setup\_teardown.c}}
 \doxyparagraph{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void initialize (\begin{DoxyParamCaption}\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{struct initialize\+\_\+struct $\ast$}]{init\+\_\+struct }\end{DoxyParamCaption})}
 
 
 
-Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. 
+Initialize the path to the required directories,and the interpolator of the SFR(\+M,z) from tabulated data provided in gb.\+SFR\+\_\+filename. 
 
 ~\newline
-
+ Read in the .ini file and set the values of parameters.
 
 The global structure \char`\"{}gb\char`\"{} have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.
 
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
+Save the values of input parmaeters to global structure or init\+\_\+struct. The latter is returned as the output of the \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize()}} function.
+
 Cosmological parameters corresponding to initial conditions of Hidden\+Valley (HV) simulations
 
-In units of km/s
-
-omega\+\_\+b = Omega\+\_\+b h$^\wedge$2;
-
-3.\+0665Here is the call graph for this function\+:\nopagebreak
+3.\+0665Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph}
+\includegraphics[width=350pt]{d2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=206pt]{d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph}
+\includegraphics[width=206pt]{d2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_icgraph}
 \end{center}
 \end{figure}

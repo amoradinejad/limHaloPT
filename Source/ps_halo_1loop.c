@@ -100,6 +100,7 @@ double PS_hh_G(struct Cosmology *Cx, double k,  double z, double M, long mode_pt
             sprintf(filename1,"%s/ph_IR_z%d_comps.txt", gb.output_dir,(int)z);
 
             fp = fopen(filename1, "ab");
+            // fprintf(fp,"%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s \n", "#", "halo-1loop-terms:", "k", "p_lin", "p_1loop_IR", "p_ct", "pe_22", "p_13", "pb1b2", "pb1bg2","pb22", "pbg22", "pb2bg2", "pb1b3nl", "ph_tot");
             fprintf(fp, "%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e \n"\
                     ,k, pow(b1, 2.) * pm_lin, pow(b1,2.)* pm_1loop_IR, pow(b1,2.) *pm_ct, pow(b1,2.) * pm_22, pow(b1,2.) *pm_13, pb1b2, pb1bg2, pb22, pbg22, pb2bg2, pb1b3nl,ph_tot);
             fclose(fp);

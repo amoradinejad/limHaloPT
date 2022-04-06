@@ -7,6 +7,7 @@ var dir_74389ed8173ad57b461b9d623a1f3867 =
     [ "ps_halo_1loop.c", "d8/d2a/ps__halo__1loop_8c.html", "d8/d2a/ps__halo__1loop_8c" ],
     [ "ps_line_hm.c", "d1/dd5/ps__line__hm_8c.html", "d1/dd5/ps__line__hm_8c" ],
     [ "ps_line_pt.c", "d8/d43/ps__line__pt_8c.html", "d8/d43/ps__line__pt_8c" ],
+    [ "read_input.c", "d7/d9a/read__input_8c.html", "d7/d9a/read__input_8c" ],
     [ "setup_teardown.c", "d2/db8/setup__teardown_8c.html", "d2/db8/setup__teardown_8c" ],
     [ "survey_specs.c", "dd/d24/survey__specs_8c.html", "dd/d24/survey__specs_8c" ],
     [ "utilities.c", "d7/db6/utilities_8c.html", "d7/db6/utilities_8c" ],

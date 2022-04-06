@@ -54,9 +54,8 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
       }
       else
       { 
-        if(line_type == CO10){ 
+        if(line_type == CO10) 
           J = 1;
-        }
         else if(line_type == CO21) 
           J = 2;
         else if(line_type == CO32) 
@@ -129,14 +128,15 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
       // You can add subdirectories to Output directory by changing the path below if needed. 
       FILE *fp1, *fp2;
       char filename1[FILENAME_MAX], filename2[FILENAME_MAX];
-     
 
       int nd = 2; //This is the number of digits to show in th evalue of z for sprintf()
-      sprintf(filename1,"%s/pk_hm_J%d_z%.*f..txt", gb.output_dir,J,nd,z);
-      sprintf(filename2,"%s/pk_2h_comps_J%d_z%.*f..txt", gb.output_dir,J,nd,z);
+      sprintf(filename1,"%s/pk_hm_J%d_z%.*f.txt", gb.output_dir,J,nd,z);
+      sprintf(filename2,"%s/pk_2h_comps_J%d_z%.*f.txt", gb.output_dir,J,nd,z);
       fp1 = fopen(filename1, "ab");
       fp2 = fopen(filename2, "ab");
+      // fprintf(fp1,"%s %s %s %s %s %s \n", "#", "halo-model-contributions-of-line-power-spectrum-in-unit-of-[(Mpc/h)^3]:", "k-in-unit-of-[h/Mpc]", "p_1h", "p_2h", "p_tot");
       fprintf(fp1,"%12.6e %12.6e %12.6e %12.6e\n",k/gb.h, pk_1h*pow(gb.h,3.), pk_2h*pow(gb.h,3.), total*pow(gb.h,3.));
+      // fprintf(fp2,"%s %s %s %s %s %s %s %s %s %s %s %s %s %s \n","#", "line-1loop-terms:", "k-in-unit-of-[h/Mpc]", "p_lin", "pe_22", "p_13", "p_1loop_IR", "p_ct", "pb1b2", "pb1bg2","pb22", "pbg22", "pb2bg2", "pb1b3nl");
       fprintf(fp2,"%12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e %12.6e\n",k/gb.h, plin*pow(gb.h,3.), p22*pow(gb.h,3.), p13*pow(gb.h,3.), pow(Tbar,2.)* pow(b1_line, 2.) * pm_1loop_IR*pow(gb.h,3.), pow(Tbar,2.)*pow(b1_line, 2.)*pm_ct*pow(gb.h,3.), pb1b2*pow(gb.h,3.), pb1bg2*pow(gb.h,3.), pb22*pow(gb.h,3.), pbg22*pow(gb.h,3.), pb2bg2*pow(gb.h,3.), pb1b3nl*pow(gb.h,3.)) ;
 
       //Close the output files
@@ -167,7 +167,7 @@ double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long m
  *                              It can be set to CII, CO10, CO21, CO32, CO43, CO54, CO65 
  * @return P_stoch(k)     
  */
-double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type)
+double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type, int line_id)
 {
       double linematter[1], matter[2], line[3];
 
@@ -207,10 +207,11 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
 
       ///Since the following quantities do not depend on k, I am  computing them once and pass them as input to this function
       double Tave_line = input[0];  ///to plot the power spectrum in units of micro K^2 Mpc^3
-      double b1_line   = input[1];
-      double pb22_ls   = input[2]; 
-      double line_shot = input[3];
-      double rhom_bar  = input[4];
+      double rhom_bar  = input[1];
+      double line_shot = input[2];
+      // double b1_line   = input[2];
+      // double pb22_ls   = input[3]; 
+      // double line_shot = input[4];
    
       //If accounting for nfw in computing the stochastic terms, you should. replace the b1_line and pb22_ls above, with a k-dep one 
       //First, compute the line 1halo term. 
@@ -218,9 +219,9 @@ double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double
       double pk_1h    = scatter_1h * pow(fac,2.) * line[0];
      
       double mom1     = mass_moment1(Cx,z,M_min,mode_mf,line_type);
-      // double b1_line  = line[1]/mom1;  //the line line bias which is a mass integrated luminosity-HMF weighted halo bias
-      // double b2_line  = line[2]/mom1;  //the line line bias which is a mass integrated luminosity-HMF weighted halo bias
-      // double pb22_ls  = 0.25 * pow(b2_line,2.) * pow(Tave_line,2.) * b22_ls(Cx,z);
+      double b1_line  = line[1]/mom1;  //the line line bias which is a mass integrated luminosity-HMF weighted halo bias
+      double b2_line  = line[2]/mom1;  //the line line bias which is a mass integrated luminosity-HMF weighted halo bias
+      double pb22_ls  = 0.25 * pow(b2_line,2.) * pow(Tave_line,2.) * b22_ls(Cx,z);
 
       //Now compute the correction to the mass integrals of pkm_1h when setting lower mass limit
       double Ms   = 1.e6;  //Lower mass limit for the halo model integration

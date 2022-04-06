@@ -3,7 +3,7 @@
 
 // double PS_line_HM_RSD(struct Cosmology *Cx, double k, double mu, double z, size_t line_id, struct Cosmology *Cx_ref);
 double PS_line_HM(struct Cosmology *Cx, double k, double z, double M_min, long mode_mf,  long line_type, int line_id);
-double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type);
+double PS_shot_HM(struct Cosmology *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type, int line_id);
 
 
 // void HM_1h2h_interp(double k, double z, size_t line_id, struct Cosmology *Cx, long mode_hm, double *result);

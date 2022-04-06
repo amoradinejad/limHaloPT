@@ -18,7 +18,7 @@ Include dependency graph for ps\+\_\+line\+\_\+hm.\+c\+:\nopagebreak
 \item 
 double \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, long mode\+\_\+mf, long line\+\_\+type, int line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the clustering contribution to the line power spectrum using halo-\/model. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, double $\ast$input, long mode\+\_\+mf, long line\+\_\+type)
+double \mbox{\hyperlink{ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce}{PS\+\_\+shot\+\_\+\+HM}} (struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$Cx, double k, double z, double M\+\_\+min, double $\ast$input, long mode\+\_\+mf, long line\+\_\+type, int line\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Compute the shot noise contributions, including corrections beyond poisson limit (see 1706.\+08738 for more details) If nfw=1, the dependance of the power spectrum on the halo profile is neglected. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3}{mhmc\+\_\+integ}} (const int $\ast$ndim, const cubareal x\mbox{[}$\,$\mbox{]}, const int $\ast$ncomp, cubareal ff\mbox{[}$\,$\mbox{]}, void $\ast$p)
 \begin{DoxyCompactList}\small\item\em The integrand function passed passed to Cuhre integration routine of CUBA library to compute the corrections to mass integration. \end{DoxyCompactList}\item 
@@ -42,7 +42,7 @@ Azadeh Moradinezhad Dizgah, November 4th 2021
 This module has two main functions\+:
 \begin{DoxyItemize}
 \item \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}} to compute clustering (1-\/ and 2-\/halo terms). The 2-\/halo term, includes nonlinear corrections to halo power spectrum arising from nonlinearities of matter fluctuations and halo biases.
-\item \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM()}} to compute the stochastic contrubutions beyond Poisson shot noise (see ar\+Xiv\+:1706.\+08738)
+\item \mbox{\hyperlink{ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce}{PS\+\_\+shot\+\_\+\+HM()}} to compute the stochastic contrubutions beyond Poisson shot noise (see ar\+Xiv\+:1706.\+08738)
 \end{DoxyItemize}
 
 The other functions in these modules are utilities for computing the above two main functions.
@@ -50,7 +50,7 @@ The other functions in these modules are utilities for computing the above two m
 In summary, the following functions can be called from other modules\+:
 \begin{DoxyEnumerate}
 \item \mbox{\hyperlink{ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01}{PS\+\_\+line\+\_\+\+HM()}} computes the 1loop-\/\+HM line power spectrum
-\item \mbox{\hyperlink{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}{PS\+\_\+shot\+\_\+\+HM()}} computes the full line power spectrum, beyond poisson limit
+\item \mbox{\hyperlink{ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce}{PS\+\_\+shot\+\_\+\+HM()}} computes the full line power spectrum, beyond poisson limit
 \item \mbox{\hyperlink{ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10}{mhmc()}} computes th corrections to mass integration of halo-\/model matter power spectrum
 \item \mbox{\hyperlink{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}{HM\+\_\+1h2h()}} performs the mass integraks for computing 1-\/ and 2-\/halo terms of line-\/line, line-\/matter and matter-\/matter power spectra.
 \item \mbox{\hyperlink{ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee}{b22\+\_\+ls()}} computes the large-\/scale limit of P\+\_\+b2b2 loop which behaves like a constant and so contributes to the shot noise. 
@@ -84,11 +84,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=199pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_icgraph}
+\includegraphics[width=310pt]{d1/dd5/ps__line__hm_8c_aebed249f1a0afb0c6f7bcadcd3f1f4ee_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}\label{ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408}} 
@@ -121,11 +122,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=325pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_icgraph}
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a4e1bbff7f992103c9b1fa8f5abc1f408_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}\label{ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509}} 
@@ -179,7 +181,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a298eb563414c8e40e35481cb64c2f509_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -222,7 +225,8 @@ integrand of 1halo term of line-\/matter cross-\/spectrumHere is the call graph 
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_ad72b2846b2e235de535da531f2ee30da_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -264,7 +268,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a3a71ccb997cf820c19eb64cedbf69a10_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -303,7 +308,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a122b3706f795f51c64ab8a9dd40379e3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -365,11 +371,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=225pt]{d1/dd5/ps__line__hm_8c_ab3acf266df779fd7b847b2ca641efa01_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}\label{ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656}} 
+\mbox{\Hypertarget{ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce}\label{ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce}} 
 \index{ps\_line\_hm.c@{ps\_line\_hm.c}!PS\_shot\_HM@{PS\_shot\_HM}}
 \index{PS\_shot\_HM@{PS\_shot\_HM}!ps\_line\_hm.c@{ps\_line\_hm.c}}
 \doxyparagraph{\texorpdfstring{PS\_shot\_HM()}{PS\_shot\_HM()}}
-{\footnotesize\ttfamily double PS\+\_\+shot\+\_\+\+HM (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{double $\ast$}]{input,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{line\+\_\+type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double PS\+\_\+shot\+\_\+\+HM (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_cosmology}{Cosmology}} $\ast$}]{Cx,  }\item[{double}]{k,  }\item[{double}]{z,  }\item[{double}]{M\+\_\+min,  }\item[{double $\ast$}]{input,  }\item[{long}]{mode\+\_\+mf,  }\item[{long}]{line\+\_\+type,  }\item[{int}]{line\+\_\+id }\end{DoxyParamCaption})}
 
 
 
@@ -412,17 +418,19 @@ in unit of M\+\_\+sun/\+Mpc$^\wedge$3
 
 in unit of M\+\_\+sun/\+Mpc$^\wedge$3
 
-in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:\nopagebreak
+in unit of M\+\_\+sun/\+Mpc$^\wedge$3Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656_cgraph}
+\includegraphics[width=350pt]{d1/dd5/ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=229pt]{d1/dd5/ps__line__hm_8c_ab3d6db65cacf00838ffc77e39ec93656_icgraph}
+\includegraphics[width=229pt]{d1/dd5/ps__line__hm_8c_a783807d3525deda32e00ecdf21d7c6ce_icgraph}
 \end{center}
 \end{figure}

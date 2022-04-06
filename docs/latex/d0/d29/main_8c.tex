@@ -39,44 +39,29 @@ In order to call any function from the package, the function calls should be pla
 \doxyparagraph{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-\DoxyHorRuler{0}
- If you want to change the values of cosmological parmaeters compared to the default values of the code, you should do so inside the \mbox{\hyperlink{setup__teardown_8c_a25a40b6614565f755233080a384c35f1}{initialize()}} function. \hypertarget{main.c_autotoc_md1}{}\doxyparagraph{For instance change the value of gb.\+h to set the value of hubble parmaeter in your cosmology.}\label{main.c_autotoc_md1}
-Initialize various ingredients for the rest of the code. More specifically, set the relavent directory paths, values of cosmological parameters and in general any parameter that has to be passed to CLASS Boltzmann code. Furthermore initialize some of the interpolators needed for the package.
+Initialize various ingredients for the rest of the code.
 
-\DoxyHorRuler{0}
- \hypertarget{main.c_autotoc_md3}{}\doxyparagraph{Change if you want to assume a different mass function or minimum halo mass}\label{main.c_autotoc_md3}
-Set the parameters for computing quantities related to spectral lines. More specifically, the mimum mass for halos that can host line-\/emitting galaxies M\+\_\+min and the the theoretical mass function to be used, ST\+: Sheth-\/\+Tormen, PSC\+: Press-\/\+Schecter, TK\+:\+: Tinker
+More specifically, initilize the filename and interpolator of SFR. Read in the values of the parameters from .ini file and set the values of the elements of the glocal structure Furthermore, the \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize()}} function returns a structure containing parameters such as as mimumum halo mass that are read from the .ini file.
 
-\DoxyHorRuler{0}
- \hypertarget{main.c_autotoc_md5}{}\doxyparagraph{Change if you want to limit the lines to include in your computation.}\label{main.c_autotoc_md5}
-Define which lines to compute, and how many points to have for z-\/interpolation
+Extract from the return struct of \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize()}} function, values of the parameters for computing quantities related to spectral lines. Note that these values were read from the .ini file within the \mbox{\hyperlink{setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1}{initialize()}} function.
 
-Note\+: The main line properties used in the calculation of the line power spectrum, which includes first and second moments of line luminosity (weighted by halo mass function) and luminosity-\/weighted linear and quadratic line biases are computed in function \mbox{\hyperlink{line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe}{Line\+\_\+alloc\+\_\+init()}}. In that function, these quantities are calculate over an array of redshift values and then an interpolator for these quantities is initialized. The parameter \char`\"{}ninterp\char`\"{} below, sets the number of interpolation points ~\newline
- for this interpolator. If you set it too low, the redshift-\/dependance of line properties would not be accurate. In the tests done during code developement, ninterp = 150 give results at the precision needed. However large values of ninterp results in longer run time.
+M\+\_\+min \+: mimum mass for halos that can host line-\/emitting galaxies in unit of M\+\_\+sun mode\+\_\+mf\+: switch to set the theoretical mass function to be used, ST\+: Sheth-\/\+Tormen, PSC\+: Press-\/\+Schecter, TK\+:\+: Tinker ninterp\+: how many points to have for z-\/interpolation of line bias and first and second luminosity moments nlines\+: the number of emission lines you want to include in the analysis
 
-For testing installation and running of the code, you can set lower value of ninterp, to make the code run faster. But remember in your actuall runs, set ninterp to larger numbers.
+Note about ninterp\+: The main line properties used in the calculation of the line power spectrum, which includes first and second moments of line luminosity (weighted by halo mass function) and luminosity-\/weighted linear and quadratic line biases are computed in function \mbox{\hyperlink{line__ingredients_8c_aa4696edc9829e9a3c2c1012a3e9d9dbe}{Line\+\_\+alloc\+\_\+init()}}. In that function, these quantities are calculate over an array of redshift values ranging from 0 to line\+\_\+zmax (a paramter of .ini file). Subsequently, an interpolator for these quantities is initialized. The parameter \char`\"{}ninterp\char`\"{} below, sets the number of interpolation points ~\newline
+ for this interpolator. If you set ninterp too low and the redshift range is wide, the redshift-\/dependance of line properties would not be accurate. In the tests done during code developement, ninterp = 150 give results at the precision needed when comparing with Mithra\+LIMSims. However large values of ninterp results in longer run time. For testing installation and running the code using test.\+c module, lower value of ninterp is used, to have the code run fast. But remember in your actuall runs, set ninterp to larger numbers.
 
-If you do not need to compute the line properties for all the 7 lines below, you can set nlines to the number of lines you are interested, change the arrays of line\mbox{[}nlines\mbox{]} and JJ\mbox{[}nlines\mbox{]} to correspond to the lines you need to calculate.
+Note about nlines\+: If you do not need to compute the line properties for all the 7 lines implemented in the code, you can set nlines in the .ini file to the number of lines you are interested. Note that at the moment you can only call the lines in the order below.
 
-\DoxyHorRuler{0}
- In general, you should not need to change this portion of the code. But in order to call most functions of \hypertarget{main.c_autotoc_md7}{}\doxyparagraph{lim\+Halo\+PT, you furst need to initilize the Cosmology structure as done below.}\label{main.c_autotoc_md7}
+Given the number of lines you chose with nline, the line\mbox{[}\mbox{]} array and JJ\mbox{[}\mbox{]} arrays will be initialized here. Note that at the moment you can only call the lines in the order below.
+
 Set values of cosmological parameter and finger-\/of-\/god paramater (peculiar velocity of line emitters) and initialize cosmo\+\_\+pars array in the cosmology structure Cx\+\_\+ref
 
 Initialize the cosmology structure, which includes CLASS cosmology and \mbox{\hyperlink{struct_line}{Line}} structures
 
 \DoxyHorRuler{0}
- \hypertarget{main.c_autotoc_md9}{}\doxyparagraph{Depending on what quantities ou want to compute, you need to modify this part of the main() function.}\label{main.c_autotoc_md9}
-Set the k and z arrays
-
-For testing the code, you can reduce the range of k, and z and also the number of points for each, nk, and nz.
-
-Compute the line clustering signal using halo model
-
-Compute the shot noise (beyond the Poisson limit), using halo model
-
-\DoxyHorRuler{0}
- \hypertarget{main.c_autotoc_md11}{}\doxyparagraph{Modify up to here}\label{main.c_autotoc_md11}
-Here is the call graph for this function\+:\nopagebreak
+ At the moment, lim\+Halo\+PT has three possible outputs; the mean brightness temprature, the clustering power or the shot power. The latter two are computed within halo model. The clustering power is real-\/space (RSD not included).\hypertarget{main.c_autotoc_md1}{}\doxyparagraph{If you want to call any other function of lim\+Halo\+PT, you should add them to to this section of the code}\label{main.c_autotoc_md1}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

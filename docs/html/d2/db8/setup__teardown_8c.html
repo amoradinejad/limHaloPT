@@ -98,13 +98,15 @@ $(document).ready(function(){initNavTree('d2/db8/setup__teardown_8c.html','../..
 <p>Documented setup_teardown module, including the initialize and clean functions that are called first and last thing in limHaloPT package.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../df/dcb/header_8h_source.html">header.h</a>&quot;</code><br />
+<code>#include &quot;read_input.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for setup_teardown.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d4f/setup__teardown_8c__incl.png" border="0" usemap="#asetup__teardown_8c" alt=""/></div>
 <map name="asetup__teardown_8c" id="asetup__teardown_8c">
-<area shape="rect" title="Documented setup_teardown module, including the initialize and clean functions that are called first ..." alt="" coords="2149,5,2275,32"/>
+<area shape="rect" title="Documented setup_teardown module, including the initialize and clean functions that are called first ..." alt="" coords="2203,5,2328,32"/>
 <area shape="rect" href="../../df/dcb/header_8h.html" title=" " alt="" coords="2177,80,2247,107"/>
+<area shape="rect" title=" " alt="" coords="2272,80,2365,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,64,181"/>
 <area shape="rect" title=" " alt="" coords="89,155,157,181"/>
 <area shape="rect" title=" " alt="" coords="181,155,245,181"/>
@@ -147,9 +149,9 @@ Include dependency graph for setup_teardown.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a25a40b6614565f755233080a384c35f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db8/setup__teardown_8c.html#a25a40b6614565f755233080a384c35f1">initialize</a> ()</td></tr>
-<tr class="memdesc:a25a40b6614565f755233080a384c35f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(M,z) from tabulated data provided in gb.SFR_filename.  <a href="../../d2/db8/setup__teardown_8c.html#a25a40b6614565f755233080a384c35f1">More...</a><br /></td></tr>
-<tr class="separator:a25a40b6614565f755233080a384c35f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d06a821dead1a3c04bc3a3493acf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db8/setup__teardown_8c.html#a688d06a821dead1a3c04bc3a3493acf1">initialize</a> (char *argv[], struct initialize_struct *init_struct)</td></tr>
+<tr class="memdesc:a688d06a821dead1a3c04bc3a3493acf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the path to the required directories,and the interpolator of the SFR(M,z) from tabulated data provided in gb.SFR_filename.  <a href="../../d2/db8/setup__teardown_8c.html#a688d06a821dead1a3c04bc3a3493acf1">More...</a><br /></td></tr>
+<tr class="separator:a688d06a821dead1a3c04bc3a3493acf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798f0df7ac8f26aae66b7364d7f4e6f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0">cleanup</a> (struct <a class="el" href="../../d2/dbd/struct_cosmology.html">Cosmology</a> *Cx)</td></tr>
 <tr class="memdesc:a798f0df7ac8f26aae66b7364d7f4e6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the memory allocated to cosmology structure and SFR interpolator.  <a href="../../d2/db8/setup__teardown_8c.html#a798f0df7ac8f26aae66b7364d7f4e6f0">More...</a><br /></td></tr>
 <tr class="separator:a798f0df7ac8f26aae66b7364d7f4e6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,32 +196,33 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph.png" border="0" usemap="#ad2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph" alt=""/></div>
 <map name="ad2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph" id="ad2/db8/setup__teardown_8c_a798f0df7ac8f26aae66b7364d7f4e6f0_icgraph">
-<area shape="rect" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1627,360,1693,387"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="635,195,765,221"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,271,192,297"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,448,201,475"/>
-<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,169,200,196"/>
-<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,169,56,196"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1285,379,1384,405"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="625,499,775,525"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1432,436,1579,463"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1444,284,1567,311"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1437,335,1574,361"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="447,245,577,272"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="277,397,371,424"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1091,379,1237,405"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="823,296,908,323"/>
-<area shape="rect" href="../../d1/d48/ir__res_8c.html#ad57601a52710911744c3ab9ee4192075" title="Compute the suppression factor IR_sigma2." alt="" coords="956,379,1043,405"/>
-<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a4e1bbff7f992103c9b1fa8f5abc1f408" title="The integrand function passed passed to Cuhre integration routine to compute large&#45;scale limit of b22..." alt="" coords="640,43,760,69"/>
-<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee" title="Compute the large&#45;scale limit of P_b2b2 loop." alt="" coords="482,43,542,69"/>
-<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="249,499,399,525"/>
+<area shape="rect" title="Free the memory allocated to cosmology structure and SFR interpolator." alt="" coords="1627,383,1693,409"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a9d475dd2ab5b0120a8c78ba15080494b" title="The integrand function passed passed to Cuhre integration routine to compute Gaussian 1loop terms." alt="" coords="635,205,765,232"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a689859f9764b839323002fbb8be176e4" title="Compute the contributions up to 1loop to halo power spectrum for Gaussian initial conditions." alt="" coords="113,281,192,308"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#ad87e930ddfa85973919af4ca6b3d99ce" title="Compute contributions up to 1loop to halo power spectrum arising from non&#45;Gaussian initial conditions..." alt="" coords="104,459,201,485"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#ab3acf266df779fd7b847b2ca641efa01" title="Compute the clustering contribution to the line power spectrum using halo&#45;model." alt="" coords="105,180,200,207"/>
+<area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,180,56,207"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#ae8fbd2dc63a91bc7aa61d44c2f726050" title="Compute the no&#45;wiggle componenet of the matter power spectrum." alt="" coords="1285,408,1384,435"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a715a83bcf567a070a9c018925faad083" title="The integrand function passed passed to Cuhre integration routine to compute PNG 1loop terms." alt="" coords="625,509,775,536"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#acaaad0d343ab0665ec92102ca3b9fa8f" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1432,459,1579,485"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#addffe543a63e7b319b57d29f6c0b4957" title="Compute the no&#45;wiggle componenet of the matter power spectrum, reading in and interpolating the outpu..." alt="" coords="1444,307,1567,333"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#a2dd3097ca9961b75008d5f6cbb3e1878" title="Compute the no&#45;wiggle componenet of the matter power spectrum, using Gaussian filter (see Vlah et al ..." alt="" coords="1437,357,1574,384"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a06812b0e40a5e228647283536b82fa5a" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="447,256,577,283"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#a081df8016b0ce1b7160a3b49547e0348" title="Compute the next&#45;to&#45;leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="277,408,371,435"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#a96ac18bc55ca39bce830a35aac4f1dee" title="Integrand to compute the suppression factor IR_sigma2." alt="" coords="1091,408,1237,435"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#ac9b48827f9977633775bbff6971ec467" title="Compute the leading&#45;order IR&#45;resummed matter power spectrum, ala Ivanovic et al." alt="" coords="823,307,908,333"/>
+<area shape="rect" href="../../d1/d48/ir__res_8c.html#ad57601a52710911744c3ab9ee4192075" title="Compute the suppression factor IR_sigma2." alt="" coords="956,408,1043,435"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a4e1bbff7f992103c9b1fa8f5abc1f408" title="The integrand function passed passed to Cuhre integration routine to compute large&#45;scale limit of b22..." alt="" coords="640,53,760,80"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#aebed249f1a0afb0c6f7bcadcd3f1f4ee" title="Compute the large&#45;scale limit of P_b2b2 loop." alt="" coords="482,53,542,80"/>
+<area shape="rect" href="../../d1/dd5/ps__line__hm_8c.html#a783807d3525deda32e00ecdf21d7c6ce" title="Compute the shot noise contributions, including corrections beyond poisson limit (see 1706...." alt="" coords="274,53,374,80"/>
+<area shape="rect" href="../../d8/d2a/ps__halo__1loop_8c.html#a05a2d154a1db42273c26d91b1145b892" title="Compute the loop contributions dure to nonlinear evolution of matter fluctuations and nonlinear halo ..." alt="" coords="249,509,399,536"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a25a40b6614565f755233080a384c35f1" name="a25a40b6614565f755233080a384c35f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25a40b6614565f755233080a384c35f1">&#9670;&nbsp;</a></span>initialize()</h2>
+<a id="a688d06a821dead1a3c04bc3a3493acf1" name="a688d06a821dead1a3c04bc3a3493acf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d06a821dead1a3c04bc3a3493acf1">&#9670;&nbsp;</a></span>initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,41 +230,56 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void initialize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">struct initialize_struct *&#160;</td>
+          <td class="paramname"><em>init_struct</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(M,z) from tabulated data provided in gb.SFR_filename. </p>
+<p>Initialize the path to the required directories,and the interpolator of the SFR(M,z) from tabulated data provided in gb.SFR_filename. </p>
 <p ><br  />
-</p>
+ Read in the .ini file and set the values of parameters.</p>
 <p >The global structure "gb" have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<p >Save the values of input parmaeters to global structure or init_struct. The latter is returned as the output of the <a class="el" href="../../d2/db8/setup__teardown_8c.html#a688d06a821dead1a3c04bc3a3493acf1" title="Initialize the path to the required directories,and the interpolator of the SFR(M,...">initialize()</a> function.</p>
 <p >Cosmological parameters corresponding to initial conditions of HiddenValley (HV) simulations</p>
-<p >In units of km/s</p>
-<p >omega_b = Omega_b h^2;</p>
 <p >3.0665</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph.png" border="0" usemap="#ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph" alt=""/></div>
-<map name="ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph" id="ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_cgraph">
-<area shape="rect" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="5,68,75,95"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02" title="Allocate memory and initialize the 2d interpolator for the star formation rate of Behroozi et al 2013..." alt="" coords="123,68,247,95"/>
-<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="499,5,628,32"/>
-<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="295,43,451,69"/>
-<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="510,68,617,95"/>
-<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="544,131,583,157"/>
-<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="676,131,717,157"/>
+<div class="center"><img src="../../d2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_cgraph.png" border="0" usemap="#ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_cgraph" alt=""/></div>
+<map name="ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_cgraph" id="ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_cgraph">
+<area shape="rect" title="Initialize the path to the required directories,and the interpolator of the SFR(M,..." alt="" coords="5,107,75,133"/>
+<area shape="rect" href="../../d7/d9a/read__input_8c.html#ae78b2669fbc5b4f8ba08f94fb83c6805" title=" " alt="" coords="123,5,275,32"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#aebdf0211b161d65ccf44536629df2b02" title="Allocate memory and initialize the 2d interpolator for the star formation rate of Behroozi et al 2013..." alt="" coords="137,132,261,159"/>
+<area shape="rect" href="../../d7/d9a/read__input_8c.html#ac094f7d7b39c9fd5be2d1ceb4da91605" title=" " alt="" coords="158,56,239,83"/>
+<area shape="rect" href="../../d7/d9a/read__input_8c.html#a390fd04002f80c3e73c3718ca430ab64" title="See https://stackoverflow.com/questions/45554639/is&#45;there&#45;a&#45;way&#45;to&#45;check&#45;if&#45;a&#45;string&#45;can&#45;be&#45;a&#45;float&#45;i..." alt="" coords="161,183,237,209"/>
+<area shape="rect" href="../../d7/d9a/read__input_8c.html#aab9a5a4ff2ce843184f31b9fe68c8b88" title=" " alt="" coords="323,5,499,32"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#a5dcab02654b4d74caf32c73188f698db" title="Count the number of lines of a file." alt="" coords="547,247,676,273"/>
+<area shape="rect" href="../../d7/d10/line__ingredients_8c.html#a5cbbc00460ea99c79cf2f2f7efd0af5a" title="Read in the file for the star formation rate byy Behroozi et al 2013." alt="" coords="333,208,489,235"/>
+<area shape="rect" href="../../d7/db6/utilities_8c.html#abbef0cde3da2c741890e66bf8f307995" title="Allocate memory to a 1d array of type double and length size." alt="" coords="558,113,665,140"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#ae73af41bcbfa0911ec17d4ac2d91baa3" title="Compute the total baryon+CDM transfer function." alt="" coords="592,171,631,197"/>
+<area shape="rect" href="../../d7/d78/wnw__split_8c.html#a3afdf7244c6d4a89df91aa101ee1a477" title="Compute the function defined in Eq." alt="" coords="724,171,765,197"/>
+<area shape="rect" href="../../d7/d9a/read__input_8c.html#ae3fad30c3da209279be99d97808fc5a2" title=" " alt="" coords="389,56,433,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph.png" border="0" usemap="#ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph" alt=""/></div>
-<map name="ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph" id="ad2/db8/setup__teardown_8c_a25a40b6614565f755233080a384c35f1_icgraph">
-<area shape="rect" title="Initizlize the path to the required directories, set the values of cosmological parmaeters,..." alt="" coords="104,5,173,32"/>
+<div class="center"><img src="../../d2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_icgraph.png" border="0" usemap="#ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_icgraph" alt=""/></div>
+<map name="ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_icgraph" id="ad2/db8/setup__teardown_8c_a688d06a821dead1a3c04bc3a3493acf1_icgraph">
+<area shape="rect" title="Initialize the path to the required directories,and the interpolator of the SFR(M,..." alt="" coords="104,5,173,32"/>
 <area shape="rect" href="../../d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>

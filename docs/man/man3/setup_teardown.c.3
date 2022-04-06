@@ -1,4 +1,4 @@
-.TH "setup_teardown.c" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "setup_teardown.c" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,14 +9,16 @@ setup_teardown.c \- Documented setup_teardown module, including the initialize a
 .PP
 \fC#include 'header\&.h'\fP
 .br
+\fC#include 'read_input\&.h'\fP
+.br
 
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "void \fBinitialize\fP ()"
+.RI "void \fBinitialize\fP (char *argv[], struct initialize_struct *init_struct)"
 .br
-.RI "Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(M,z) from tabulated data provided in gb\&.SFR_filename\&. "
+.RI "Initialize the path to the required directories,and the interpolator of the SFR(M,z) from tabulated data provided in gb\&.SFR_filename\&. "
 .ti -1c
 .RI "void \fBcleanup\fP (struct \fBCosmology\fP *Cx)"
 .br
@@ -40,11 +42,12 @@ void
 .RE
 .PP
 
-.SS "void initialize ()"
+.SS "void initialize (char * argv[], struct initialize_struct * init_struct)"
 
 .PP
-Initizlize the path to the required directories, set the values of cosmological parmaeters, and initialize the interpolator of the SFR(M,z) from tabulated data provided in gb\&.SFR_filename\&. 
+Initialize the path to the required directories,and the interpolator of the SFR(M,z) from tabulated data provided in gb\&.SFR_filename\&. 
 .br
+ Read in the \&.ini file and set the values of parameters\&.
 .PP
 The global structure 'gb' have several elements to hold the paths to project source directory, input, and output folders, and values of cosmological parmaeters\&.
 .PP
@@ -53,11 +56,9 @@ The global structure 'gb' have several elements to hold the paths to project sou
 void 
 .RE
 .PP
+Save the values of input parmaeters to global structure or init_struct\&. The latter is returned as the output of the \fBinitialize()\fP function\&.
+.PP
 Cosmological parameters corresponding to initial conditions of HiddenValley (HV) simulations
-.PP
-In units of km/s
-.PP
-omega_b = Omega_b h^2;
 .PP
 3\&.0665
 .SH "Author"

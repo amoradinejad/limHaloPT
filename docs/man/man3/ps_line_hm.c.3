@@ -1,4 +1,4 @@
-.TH "ps_line_hm.c" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "ps_line_hm.c" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,7 +18,7 @@ ps_line_hm.c \- Documented halo-model computation of line power spectrum, includ
 .br
 .RI "Compute the clustering contribution to the line power spectrum using halo-model\&. "
 .ti -1c
-.RI "double \fBPS_shot_HM\fP (struct \fBCosmology\fP *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type)"
+.RI "double \fBPS_shot_HM\fP (struct \fBCosmology\fP *Cx, double k, double z, double M_min, double *input, long mode_mf, long line_type, int line_id)"
 .br
 .RI "Compute the shot noise contributions, including corrections beyond poisson limit (see 1706\&.08738 for more details) If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. "
 .ti -1c
@@ -266,7 +266,7 @@ CII
 to plot the power spectrum in units of micro K^2 Mpc^3
 .PP
 in unit of M_sun/Mpc^3
-.SS "double PS_shot_HM (struct \fBCosmology\fP * Cx, double k, double z, double M_min, double * input, long mode_mf, long line_type)"
+.SS "double PS_shot_HM (struct \fBCosmology\fP * Cx, double k, double z, double M_min, double * input, long mode_mf, long line_type, int line_id)"
 
 .PP
 Compute the shot noise contributions, including corrections beyond poisson limit (see 1706\&.08738 for more details) If nfw=1, the dependance of the power spectrum on the halo profile is neglected\&. Otherwise, NFW halo profile is assumed

@@ -91,6 +91,9 @@
 
 #define HALO 		148L
 
+#define MEAN            149L
+#define HMshot          150L
+#define HMclust		151L
 
 #define PS_KMIN   	1.e-5
 #define PS_KMAX   	300.1 

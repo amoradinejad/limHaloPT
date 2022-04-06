@@ -1,0 +1,56 @@
+.TH "read_input.c" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+read_input.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include 'read_input\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBtest_float\fP (const char *str)"
+.br
+.RI "See https://stackoverflow.com/questions/45554639/is-there-a-way-to-check-if-a-string-can-be-a-float-in-c\&. "
+.ti -1c
+.RI "int \fBcheck_for_one_equal_sign\fP (char *line_in)"
+.br
+.ti -1c
+.RI "char * \fBtrim\fP (char *in)"
+.br
+.ti -1c
+.RI "void \fBparse_line\fP (char *line_in, char **pname, char **pvalue)"
+.br
+.ti -1c
+.RI "unsigned int \fBlines_with_parameters\fP (FILE *fp)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int check_for_one_equal_sign (char * line_in)"
+
+.SS "unsigned int lines_with_parameters (FILE * fp)"
+
+.SS "void parse_line (char * line_in, char ** pname, char ** pvalue)"
+
+.SS "unsigned int test_float (const char * str)"
+
+.PP
+See https://stackoverflow.com/questions/45554639/is-there-a-way-to-check-if-a-string-can-be-a-float-in-c\&. 
+.SS "char * trim (char * in)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for limHaloPT from the source code\&.

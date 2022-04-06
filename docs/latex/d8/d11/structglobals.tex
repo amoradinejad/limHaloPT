@@ -64,6 +64,12 @@ double \mbox{\hyperlink{structglobals_aae08b26c6d39a504657878d42ddafef8}{z\+\_\+
 \item 
 long \mbox{\hyperlink{structglobals_abca16ad30bddc5b0b828579c1b60bee3}{Npars}}
 \item 
+long \mbox{\hyperlink{structglobals_ac0b157ce0eb12133a380f281b6640b91}{switch\+\_\+\+Tbar}}
+\item 
+long \mbox{\hyperlink{structglobals_ae4cce5d0163d5f2f9deab45d2cbad82a}{switch\+\_\+\+HMshot}}
+\item 
+long \mbox{\hyperlink{structglobals_a1fb448d92a2952f778c744f8df8e72be}{switch\+\_\+\+HMclust}}
+\item 
 char \mbox{\hyperlink{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}{project\+\_\+home}} \mbox{[}FILENAME\+\_\+\+MAX\mbox{]}
 \item 
 char \mbox{\hyperlink{structglobals_a8774308bba8156b6e600c20a45a7e31d}{output\+\_\+dir}} \mbox{[}FILENAME\+\_\+\+MAX\mbox{]}
@@ -81,6 +87,20 @@ double \mbox{\hyperlink{structglobals_afa4388248b42652e506b1cf1965bf03c}{kmax\+\
 double \mbox{\hyperlink{structglobals_a2f074bcf2429219731fae83c125b6217}{PS\+\_\+zmax}}
 \item 
 double \mbox{\hyperlink{structglobals_ab729ef7f3ba93e93000aadd84e444315}{line\+\_\+zmax}}
+\item 
+double \mbox{\hyperlink{structglobals_ac0052e82b6f14dcd6681b967d35cfd24}{mean\+\_\+zmax}}
+\item 
+double \mbox{\hyperlink{structglobals_a80ac0633d1b9d2969a6efb6c0d5532a6}{power\+\_\+zmax}}
+\item 
+double \mbox{\hyperlink{structglobals_a7246d082d63f6a7facbb73975d321c27}{power\+\_\+kmax}}
+\item 
+double \mbox{\hyperlink{structglobals_a0907ae7d2574e1e18a24d4f66326849b}{power\+\_\+kmin}}
+\item 
+int \mbox{\hyperlink{structglobals_aafe3106e91cf177567ba5b4cccb97287}{mean\+\_\+nz}}
+\item 
+int \mbox{\hyperlink{structglobals_ae53da270e1940407361a91b2549fd7da}{power\+\_\+nz}}
+\item 
+int \mbox{\hyperlink{structglobals_ac45ac548ec5813db70b2fc394f06328b}{power\+\_\+nk}}
 \item 
 char \mbox{\hyperlink{structglobals_a34cc8c01b32f3a1be57b1be90f35977a}{SFR\+\_\+filename}} \mbox{[}FILENAME\+\_\+\+MAX\mbox{]}
 \item 
@@ -206,6 +226,18 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 \doxyparagraph{\texorpdfstring{mass}{mass}}
 {\footnotesize\ttfamily double mass}
 
+\mbox{\Hypertarget{structglobals_aafe3106e91cf177567ba5b4cccb97287}\label{structglobals_aafe3106e91cf177567ba5b4cccb97287}} 
+\index{globals@{globals}!mean\_nz@{mean\_nz}}
+\index{mean\_nz@{mean\_nz}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{mean\_nz}{mean\_nz}}
+{\footnotesize\ttfamily int mean\+\_\+nz}
+
+\mbox{\Hypertarget{structglobals_ac0052e82b6f14dcd6681b967d35cfd24}\label{structglobals_ac0052e82b6f14dcd6681b967d35cfd24}} 
+\index{globals@{globals}!mean\_zmax@{mean\_zmax}}
+\index{mean\_zmax@{mean\_zmax}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{mean\_zmax}{mean\_zmax}}
+{\footnotesize\ttfamily double mean\+\_\+zmax}
+
 \mbox{\Hypertarget{structglobals_adb9952b5a42d31a5a108e1e36dc4b051}\label{structglobals_adb9952b5a42d31a5a108e1e36dc4b051}} 
 \index{globals@{globals}!ng@{ng}}
 \index{ng@{ng}!globals@{globals}}
@@ -272,6 +304,36 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 \doxyparagraph{\texorpdfstring{Planck\_Fisher\_filename}{Planck\_Fisher\_filename}}
 {\footnotesize\ttfamily char Planck\+\_\+\+Fisher\+\_\+filename\mbox{[}FILENAME\+\_\+\+MAX\mbox{]}}
 
+\mbox{\Hypertarget{structglobals_a7246d082d63f6a7facbb73975d321c27}\label{structglobals_a7246d082d63f6a7facbb73975d321c27}} 
+\index{globals@{globals}!power\_kmax@{power\_kmax}}
+\index{power\_kmax@{power\_kmax}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{power\_kmax}{power\_kmax}}
+{\footnotesize\ttfamily double power\+\_\+kmax}
+
+\mbox{\Hypertarget{structglobals_a0907ae7d2574e1e18a24d4f66326849b}\label{structglobals_a0907ae7d2574e1e18a24d4f66326849b}} 
+\index{globals@{globals}!power\_kmin@{power\_kmin}}
+\index{power\_kmin@{power\_kmin}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{power\_kmin}{power\_kmin}}
+{\footnotesize\ttfamily double power\+\_\+kmin}
+
+\mbox{\Hypertarget{structglobals_ac45ac548ec5813db70b2fc394f06328b}\label{structglobals_ac45ac548ec5813db70b2fc394f06328b}} 
+\index{globals@{globals}!power\_nk@{power\_nk}}
+\index{power\_nk@{power\_nk}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{power\_nk}{power\_nk}}
+{\footnotesize\ttfamily int power\+\_\+nk}
+
+\mbox{\Hypertarget{structglobals_ae53da270e1940407361a91b2549fd7da}\label{structglobals_ae53da270e1940407361a91b2549fd7da}} 
+\index{globals@{globals}!power\_nz@{power\_nz}}
+\index{power\_nz@{power\_nz}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{power\_nz}{power\_nz}}
+{\footnotesize\ttfamily int power\+\_\+nz}
+
+\mbox{\Hypertarget{structglobals_a80ac0633d1b9d2969a6efb6c0d5532a6}\label{structglobals_a80ac0633d1b9d2969a6efb6c0d5532a6}} 
+\index{globals@{globals}!power\_zmax@{power\_zmax}}
+\index{power\_zmax@{power\_zmax}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{power\_zmax}{power\_zmax}}
+{\footnotesize\ttfamily double power\+\_\+zmax}
+
 \mbox{\Hypertarget{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}\label{structglobals_aea36df7224a16f318b2d1c111ae4d7c7}} 
 \index{globals@{globals}!project\_home@{project\_home}}
 \index{project\_home@{project\_home}!globals@{globals}}
@@ -313,6 +375,24 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 \index{sigFOG0@{sigFOG0}!globals@{globals}}
 \doxyparagraph{\texorpdfstring{sigFOG0}{sigFOG0}}
 {\footnotesize\ttfamily double sig\+FOG0}
+
+\mbox{\Hypertarget{structglobals_a1fb448d92a2952f778c744f8df8e72be}\label{structglobals_a1fb448d92a2952f778c744f8df8e72be}} 
+\index{globals@{globals}!switch\_HMclust@{switch\_HMclust}}
+\index{switch\_HMclust@{switch\_HMclust}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{switch\_HMclust}{switch\_HMclust}}
+{\footnotesize\ttfamily long switch\+\_\+\+HMclust}
+
+\mbox{\Hypertarget{structglobals_ae4cce5d0163d5f2f9deab45d2cbad82a}\label{structglobals_ae4cce5d0163d5f2f9deab45d2cbad82a}} 
+\index{globals@{globals}!switch\_HMshot@{switch\_HMshot}}
+\index{switch\_HMshot@{switch\_HMshot}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{switch\_HMshot}{switch\_HMshot}}
+{\footnotesize\ttfamily long switch\+\_\+\+HMshot}
+
+\mbox{\Hypertarget{structglobals_ac0b157ce0eb12133a380f281b6640b91}\label{structglobals_ac0b157ce0eb12133a380f281b6640b91}} 
+\index{globals@{globals}!switch\_Tbar@{switch\_Tbar}}
+\index{switch\_Tbar@{switch\_Tbar}!globals@{globals}}
+\doxyparagraph{\texorpdfstring{switch\_Tbar}{switch\_Tbar}}
+{\footnotesize\ttfamily long switch\+\_\+\+Tbar}
 
 \mbox{\Hypertarget{structglobals_a8eb3ef4958b442309868039dbab6f0bf}\label{structglobals_a8eb3ef4958b442309868039dbab6f0bf}} 
 \index{globals@{globals}!volume@{volume}}

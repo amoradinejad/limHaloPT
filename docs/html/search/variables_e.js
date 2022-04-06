@@ -23,11 +23,16 @@ var searchData=
   ['p9_20',['p9',['../d5/dd6/structintegrand__parameters.html#ac44dc3d39104cb8d37b26bffe78304e5',1,'integrand_parameters::p9()'],['../d0/d4a/structintegrand__parameters2.html#ac44dc3d39104cb8d37b26bffe78304e5',1,'integrand_parameters2::p9()']]],
   ['planck_5ffisher_5ffilename_21',['Planck_Fisher_filename',['../d8/d11/structglobals.html#aef1bb9a8012225179948bbcaa4c01923',1,'globals']]],
   ['pm_22',['pm',['../d2/dd8/struct_class___cosmology___struct.html#aa10c840f6c876dd3a2688ba63092e5f0',1,'Class_Cosmology_Struct']]],
-  ['pr_23',['pr',['../d2/dd8/struct_class___cosmology___struct.html#a5508a36b02eeccdde8890d3adba39c06',1,'Class_Cosmology_Struct']]],
-  ['project_5fhome_24',['project_home',['../d8/d11/structglobals.html#aea36df7224a16f318b2d1c111ae4d7c7',1,'globals']]],
-  ['ps_5fkmax_25',['PS_kmax',['../d8/d11/structglobals.html#a96f47b9da4387802e3b04d64c122bafc',1,'globals']]],
-  ['ps_5fkmin_26',['PS_kmin',['../d8/d11/structglobals.html#a311d0aaeec59357eb38219f6aad22473',1,'globals']]],
-  ['ps_5fxtrapol_27',['PS_xtrapol',['../d2/dbd/struct_cosmology.html#a5dee8f06ef55f61fcf2ad920f4f80e65',1,'Cosmology']]],
-  ['ps_5fzmax_28',['PS_zmax',['../d8/d11/structglobals.html#a2f074bcf2429219731fae83c125b6217',1,'globals']]],
-  ['pt_29',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
+  ['power_5fkmax_23',['power_kmax',['../d8/d11/structglobals.html#a7246d082d63f6a7facbb73975d321c27',1,'globals']]],
+  ['power_5fkmin_24',['power_kmin',['../d8/d11/structglobals.html#a0907ae7d2574e1e18a24d4f66326849b',1,'globals']]],
+  ['power_5fnk_25',['power_nk',['../d8/d11/structglobals.html#ac45ac548ec5813db70b2fc394f06328b',1,'globals']]],
+  ['power_5fnz_26',['power_nz',['../d8/d11/structglobals.html#ae53da270e1940407361a91b2549fd7da',1,'globals']]],
+  ['power_5fzmax_27',['power_zmax',['../d8/d11/structglobals.html#a80ac0633d1b9d2969a6efb6c0d5532a6',1,'globals']]],
+  ['pr_28',['pr',['../d2/dd8/struct_class___cosmology___struct.html#a5508a36b02eeccdde8890d3adba39c06',1,'Class_Cosmology_Struct']]],
+  ['project_5fhome_29',['project_home',['../d8/d11/structglobals.html#aea36df7224a16f318b2d1c111ae4d7c7',1,'globals']]],
+  ['ps_5fkmax_30',['PS_kmax',['../d8/d11/structglobals.html#a96f47b9da4387802e3b04d64c122bafc',1,'globals']]],
+  ['ps_5fkmin_31',['PS_kmin',['../d8/d11/structglobals.html#a311d0aaeec59357eb38219f6aad22473',1,'globals']]],
+  ['ps_5fxtrapol_32',['PS_xtrapol',['../d2/dbd/struct_cosmology.html#a5dee8f06ef55f61fcf2ad920f4f80e65',1,'Cosmology']]],
+  ['ps_5fzmax_33',['PS_zmax',['../d8/d11/structglobals.html#a2f074bcf2429219731fae83c125b6217',1,'globals']]],
+  ['pt_34',['pt',['../d2/dd8/struct_class___cosmology___struct.html#a36eb944f0fdcbe69c0a59fa2a9f07f8d',1,'Class_Cosmology_Struct']]]
 ];

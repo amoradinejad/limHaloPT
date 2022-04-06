@@ -1,4 +1,4 @@
-.TH "globals" 3 "Mon Apr 4 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
+.TH "globals" 3 "Tue Apr 5 2022" "Version 1.0.0" "limHaloPT" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -91,6 +91,15 @@ globals \- A global structure including the values of cosmological parmaeters, 2
 .RI "long \fBNpars\fP"
 .br
 .ti -1c
+.RI "long \fBswitch_Tbar\fP"
+.br
+.ti -1c
+.RI "long \fBswitch_HMshot\fP"
+.br
+.ti -1c
+.RI "long \fBswitch_HMclust\fP"
+.br
+.ti -1c
 .RI "char \fBproject_home\fP [FILENAME_MAX]"
 .br
 .ti -1c
@@ -116,6 +125,27 @@ globals \- A global structure including the values of cosmological parmaeters, 2
 .br
 .ti -1c
 .RI "double \fBline_zmax\fP"
+.br
+.ti -1c
+.RI "double \fBmean_zmax\fP"
+.br
+.ti -1c
+.RI "double \fBpower_zmax\fP"
+.br
+.ti -1c
+.RI "double \fBpower_kmax\fP"
+.br
+.ti -1c
+.RI "double \fBpower_kmin\fP"
+.br
+.ti -1c
+.RI "int \fBmean_nz\fP"
+.br
+.ti -1c
+.RI "int \fBpower_nz\fP"
+.br
+.ti -1c
+.RI "int \fBpower_nk\fP"
 .br
 .ti -1c
 .RI "char \fBSFR_filename\fP [FILENAME_MAX]"
@@ -174,6 +204,10 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 
 .SS "double mass"
 
+.SS "int mean_nz"
+
+.SS "double mean_zmax"
+
 .SS "double ng"
 
 .SS "long Npars"
@@ -196,6 +230,16 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 
 .SS "char Planck_Fisher_filename[FILENAME_MAX]"
 
+.SS "double power_kmax"
+
+.SS "double power_kmin"
+
+.SS "int power_nk"
+
+.SS "int power_nz"
+
+.SS "double power_zmax"
+
 .SS "char project_home[FILENAME_MAX]"
 
 .SS "double PS_kmax"
@@ -209,6 +253,12 @@ A global structure including the values of cosmological parmaeters, 2d interpola
 .SS "char SFR_filename[FILENAME_MAX]"
 
 .SS "double sigFOG0"
+
+.SS "long switch_HMclust"
+
+.SS "long switch_HMshot"
+
+.SS "long switch_Tbar"
 
 .SS "double volume"
 

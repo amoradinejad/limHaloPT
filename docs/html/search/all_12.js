@@ -16,5 +16,8 @@ var searchData=
   ['sigma0_5fsq_5fintegrand_13',['sigma0_sq_integrand',['../d6/d32/cosmology_8c.html#ac236684e538f158f0651141f7034fe8d',1,'cosmology.c']]],
   ['st_14',['ST',['../df/dcb/header_8h.html#ab52cdc475a6866d1be7b5807fb623f50',1,'header.h']]],
   ['summary_15',['Summary',['../index.html',1,'']]],
-  ['survey_5fspecs_2ec_16',['survey_specs.c',['../dd/d24/survey__specs_8c.html',1,'']]]
+  ['survey_5fspecs_2ec_16',['survey_specs.c',['../dd/d24/survey__specs_8c.html',1,'']]],
+  ['switch_5fhmclust_17',['switch_HMclust',['../d8/d11/structglobals.html#a1fb448d92a2952f778c744f8df8e72be',1,'globals']]],
+  ['switch_5fhmshot_18',['switch_HMshot',['../d8/d11/structglobals.html#ae4cce5d0163d5f2f9deab45d2cbad82a',1,'globals']]],
+  ['switch_5ftbar_19',['switch_Tbar',['../d8/d11/structglobals.html#ac0b157ce0eb12133a380f281b6640b91',1,'globals']]]
 ];
