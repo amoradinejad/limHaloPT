@@ -31,9 +31,9 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - **ir_res.c:** This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order. 
 - **wnw_split.c:** This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
 - **survey_specs.c:** This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.
-- cosmology.c: This module includes function to compute the cosmological quantities at the level of background and perturbations. 
+- **cosmology.c:** This module includes function to compute the cosmological quantities at the level of background and perturbations. 
 - **read_input.c:** This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
-- **setup_teardown.c:** This module contains utilityy functions to read in an .ini file.
+- **setup_teardown.c:** This module contains utility functions to read in an .ini file.
 - **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. <br>
 
 

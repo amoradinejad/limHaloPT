@@ -24,6 +24,23 @@ Note that in order to compute the luminosities of spectral lines, a model of sta
 &nbsp;
 
 
+### Structure of the package
+limHaloPT consists of 10 main modules, which include the following categories of functions:
+- **main.c:** This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. After adding the function calls in this module, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.
+- **ps_line_hm.c:** This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation. 
+- **ps_line_pt.c:** This module includes various functions to compute the Poisson shot-noise and linear clustering components of line power spectrum, contributions of line interloper to the power spectrum signal. Both real and redshift-space linear power spectra are available.
+- **line_ingredients.c:** This module includes all the necassary functions to compute the line power spectrum by the above two modules. Many of the functions in this module can be used to develope the extensions of limHaloPT to other line statistics beyond the power spectrum.
+- **ps_halo_1loop.c:** This module includes the ingredients to compute the real-space 1loop contributions of the halo/galaxy power spectrum. Both loops due to gravitational evolution and primordial non-Gaussianity can be calculated. The computations of the loop integrals is performed with direct numerical integration routines from CUBA library.
+- **ir_res.c:** This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order. 
+- **wnw_split.c:** This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions. 
+- **survey_specs.c:** This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.
+- **cosmology.c:** This module includes function to compute the cosmological quantities at the level of background and perturbations. 
+- **read_input.c:** This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
+- **setup_teardown.c:** This module contains utility functions to read in an .ini file.
+- **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. 
+<br>
+&nbsp;
+
 
 ### Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>

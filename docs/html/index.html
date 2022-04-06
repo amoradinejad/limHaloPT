@@ -106,6 +106,23 @@ Dependencies</h2>
 <p >Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from <a href="https://arxiv.org/abs/1207.6105">Behroozi et al. (2013)</a>. The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. <br  />
  &#160;</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
+Structure of the package</h2>
+<p >limHaloPT consists of 10 main modules, which include the following categories of functions:</p><ul>
+<li><b><a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and call...">main.c</a>:</b> This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> function in <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and call...">main.c</a> module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and call...">main.c</a> module. After adding the function calls in this module, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.</li>
+<li><b><a class="el" href="d1/dd5/ps__line__hm_8c.html" title="Documented halo-model computation of line power spectrum, including clustering and stochastic contrib...">ps_line_hm.c</a>:</b> This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation.</li>
+<li><b><a class="el" href="d8/d43/ps__line__pt_8c.html" title="Documented computation of Poisson shot noise and tree-level line power spectrum in real and redshift-...">ps_line_pt.c</a>:</b> This module includes various functions to compute the Poisson shot-noise and linear clustering components of line power spectrum, contributions of line interloper to the power spectrum signal. Both real and redshift-space linear power spectra are available.</li>
+<li><b><a class="el" href="d7/d10/line__ingredients_8c.html" title="Documented line_ingredients module.">line_ingredients.c</a>:</b> This module includes all the necassary functions to compute the line power spectrum by the above two modules. Many of the functions in this module can be used to develope the extensions of limHaloPT to other line statistics beyond the power spectrum.</li>
+<li><b><a class="el" href="d8/d2a/ps__halo__1loop_8c.html" title="Documented real-space, direct numerical integration computation of 1loop contributions of the halo/ga...">ps_halo_1loop.c</a>:</b> This module includes the ingredients to compute the real-space 1loop contributions of the halo/galaxy power spectrum. Both loops due to gravitational evolution and primordial non-Gaussianity can be calculated. The computations of the loop integrals is performed with direct numerical integration routines from CUBA library.</li>
+<li><b><a class="el" href="d1/d48/ir__res_8c.html" title="Documented IR_res module.">ir_res.c</a>:</b> This module includes functions to compute IR-resummed matter power spectrum at leading and next-to-leading order.</li>
+<li><b><a class="el" href="d7/d78/wnw__split_8c.html" title="Documented wiggle-nowiggle split based on 3d Gaussian filter in linear k, and using the Eisentein-Hu ...">wnw_split.c</a>:</b> This module includes function to perform the splitting of matter power spectrum into its broadband and wiggle (BAO) contributions.</li>
+<li><b><a class="el" href="dd/d24/survey__specs_8c.html" title="Documented computation of some survey-related functions.">survey_specs.c</a>:</b> This module includes functions to calculate quantities related to the choices of maximum and minnimum scales that can be probed by a given survey.</li>
+<li><b><a class="el" href="d6/d32/cosmology_8c.html" title="Documented cosmology module.">cosmology.c</a>:</b> This module includes function to compute the cosmological quantities at the level of background and perturbations.</li>
+<li><b><a class="el" href="d7/d9a/read__input_8c.html">read_input.c</a>:</b> This module contains two functions <a class="el" href="d2/db8/setup__teardown_8c.html#a688d06a821dead1a3c04bc3a3493acf1" title="Initialize the path to the required directories,and the interpolator of the SFR(M,...">initialize()</a> and clean() which are the first and last functions called by the <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> function. Initialize() reads in the input values from an .ini files.</li>
+<li><b><a class="el" href="d2/db8/setup__teardown_8c.html" title="Documented read_input module.">setup_teardown.c</a>:</b> This module contains utilityy functions to read in an .ini file.</li>
+<li><b><a class="el" href="d7/db6/utilities_8c.html" title="Documented basic utility functions used by other modules of the code.">utilities.c</a>:</b> This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. <br  />
+ &#160;</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Compilation</h2>
 <ul>
 <li>To compile, within the main directory of limHaloPT, type: "make" <br  />
@@ -113,7 +130,7 @@ Compilation</h2>
 </ul>
 <p >The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br  />
  &#160;</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Basic usage</h2>
 <ul>
 <li>To run the code, in the main directory of limHaloPT, type "./limHaloPT LCDM.ini" <br  />
@@ -149,7 +166,7 @@ Basic usage</h2>
 </div><!-- fragment --><p >By default, in addition to having the output in <a class="el" href="d0/d29/main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory.</p>
 <p >In addition to using limHaloPT through "main.c" module which calls three specific functions, limHalpPT can be exported as an external library to any other C code. For example if you would like to call the function that computes the halo mass function for a given theoretical model, once the liblimHaloPT.a library is linked to, the relevent function can be accessed from an external C code. <br  />
  &#160;</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Testing</h1>
 <p >"Test" directory includes an automated test for the three main functions of limHaloPT, which are called within <a class="el" href="d0/d29/main_8c.html" title="Documented main module, including functions to initilize and cleanup the cosmology structure and call...">main.c</a> module. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis.</p>
 <p >Having compiled limHaloPT package, and created the "liblimHaloPT.a" library, to run the test, switch to "Test" subdirectory. You have to first do "make", and then you can run the code by typying "./test test_LCDM.ini. Upon completion, the output files are stored in "Test/Output" directory. 
@@ -157,18 +174,18 @@ Testing</h1>
 Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. &lt;br&gt;
 
 
-@subsection autotoc_md7 Attribution
+@subsection autotoc_md8 Attribution
 You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: &lt;a href="<a href="https://arxiv.org/abs/2111.03717">https://arxiv.org/abs/2111.03717</a>" &gt;arXiv:2111.03717&lt;/a&gt;. Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper &lt;a href="<a href="https://arxiv.org/abs/1104.2933">https://arxiv.org/abs/1104.2933</a>" &gt;arxiv:1104.2933&lt;/a&gt; as required by CLASS developers. 
 &lt;br&gt;
 &amp;nbsp;
 
 
-@subsection autotoc_md8 License
+@subsection autotoc_md9 License
 &lt;a href="<a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>" &gt;&lt;img src="<a href="https://img.shields.io/badge/License-MIT-blue.svg">https://img.shields.io/badge/License-MIT-blue.svg</a>" alt="License: MIT"/&gt;&lt;/a&gt;  &lt;br&gt;
 Copyright 2021 Azadeh Moradinezhad Dizgah.&lt;br&gt;
 limHaloPT is free software made available under the MIT License. For details see the &lt;a href="<a href="https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE">https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE</a>" &gt;LICENSE file. <br  />
  &#160;</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Contributing</h2>
 <p >To contribute, create a fork on github, make changes and commits, and submit a pull request on github. If you found any issues with the code, please get in touch by posting an issue on this github repository. <br  />
  &#160; </p>
