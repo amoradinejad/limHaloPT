@@ -36,18 +36,18 @@ limHaloPT consists of 10 main modules, which include the following categories of
 
 
 ## Compilation 
-- To compile, type: make <br>
+- To compile, within the main directory of limHaloPT, type: make <br>
+This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". 
 
-If you modified the code, you need to first do "make clean" before doing "make". The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
+The entire limHaloPT package was developed, compiled, and tested on Mac OS X, using gcc version 7.5.0 compiler. <br>
 
 
 ## Basic usage
-
 - To run the code, type  "./limHaloPT LCDM.ini"  
 
-Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 6 emission spectral lines, depending on the switch that you set in the ini file. This computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT apart from those called by defacult, you neeed to add the function call to main.c. 
+Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 6 emission spectral lines, depending on the switch that you set in the ini file. This computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT apart from those called by defacult, you neeed to add the function call to main.c, recompile the code by first cleaning the previous build using "make clean" and building teh package again with "make". 
 
-Example: Lets say you want to compute the power spectrum of mean brightness temprature fluctuations for one or multiple emission lines, within halo-model, as a function of wavenumber, and at several redshifts. The relavent function that needs to be called is PS_line_HM(). First you should create two arrays for values of redshifts and wavenumbers for which you want to calculate the power spectrum. If you only want to calculate the power spectrum for a single wavenumber and redshift, you would pass just two numbers to PS_line_HM(). You should also define for which emission lines do you want to compute the power spectrum. The choice of the lines is done in the first part of the main.c module, where the number of the lines, their name and their corresponding index is set. For example to compute the power spectrum for CO(1-0) and [CII] you would set 
+Example: Lets say you want to compute the power spectrum of mean brightness temprature fluctuations for one or multiple emission lines, within halo-model, as a function of wavenumber, and at several redshifts. The relavent function that is called within main.c is PS_line_HM(). For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file. Currently you can only include lines according to the order they appear You should also define for which emission lines do you want to compute the power spectrum. The choice of the lines is done in the first part of the main.c module, where the number of the lines, their name and their corresponding index is set. For example to compute the power spectrum for CO(1-0) and [CII] you would set 
 ```
 int nlines     = 2;
 int lines[2]   = {CO10,CII};
