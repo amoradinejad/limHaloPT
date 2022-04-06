@@ -80,10 +80,8 @@ So here is how PS_line_HM() function is called within main():
       free(z_mean);
 ```
 
-By default, in additionn to having th eoutput in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. <br>
+By default, in additionn to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. <br>
 
-
-<br>
 
 ## Testing
 "Test" directory inclides an automated test for the three main functions of limHaloPT, which are called within main.c module. The test can be run using test_LCDM.ini file. These tests are designed to test functionality of the code. Therefore, by default the parameters of the .ini file are set to values that allow to run the code fast. Note that these values should not be used when running the analysis, since the output would not have the precisioon needed for cosmological analysis. The output of this test are saved in the Test/Output directory.
