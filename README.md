@@ -51,7 +51,7 @@ Currently, the main output of limHaloPT are the mean brightness temprature, line
 
 Example: Lets say you want to compute the mean brightness temprature, linear and quadratic biases for one or multiple emission lines, as a function of wavenumber at several redshifts. In the .ini file, you should set the switch "switch_Tbar" to be equal to "Tbar", and the switches of shot and power spectra blank, i.e. "switch_HMshot = " and "switch_HMshot = ". The relavent functions that are called within main.c are PS_line_HM() and line_bias(). For this function call, first two arrays for values of redshifts and wavenumbers for which the power spectrum is computed are created. the computed values for the three quantities is saved by default in an output file saved in "Output" directory. The number of emission lines to be included in the computation is set with "nlines" variable in the LCDM.ini file, while the name of the line is passed with line1, line2, ... variables. T The first argument of PS_line_HM, is the cosmology structure needed for performing any calculation in the code. See cosmology.c module for more details. The LCDM.ini file contains description of parmaeters that should be set in the .ini file.
 
-So here is how ythe PS_line_HM() function is called within main():
+So here is how PS_line_HM() function is called within main():
 ```
       int nz_mean     = gb.mean_nz;
       double *z_mean  = init_1Darray(nz_mean,0.0,gb.mean_zmax);
