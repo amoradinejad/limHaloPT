@@ -18,12 +18,12 @@ CFLAGS    =  -Wall
 CFLAGS   += -fopenmp 
 CFLAGS   += -g 
 
-LIBFLAGS += -llimHaloPT
-LIBFLAGS += -lcuba  
-LIBFLAGS += -lclass 
 LIBFLAGS  = -lgsl 
 LIBFLAGS += -lgslcblas 
+LIBFLAGS += -lcuba  
+LIBFLAGS += -lclass 
 LIBFLAGS += -lm
+LIBFLAGS += -llimHaloPT
 
 SOURCE_DIR = ./Source
 BUILD_DIR  = ./Build
