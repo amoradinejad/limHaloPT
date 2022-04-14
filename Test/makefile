@@ -17,13 +17,12 @@ CFLAGS    =  -Wall
 CFLAGS   += -fopenmp 
 CFLAGS   += -g 
 
-LIBFLAGS  = -lgsl 
-LIBFLAGS += -lgslcblas 
+LIBFLAGS += -llimHaloPT
 LIBFLAGS += -lcuba  
 LIBFLAGS += -lclass 
+LIBFLAGS += -lgsl 
+LIBFLAGS += -lgslcblas 
 LIBFLAGS += -lm
-LIBFLAGS += -llimHaloPT
-
 
 test: test.o
 	$(CLINK) test.o $(INCLUDES) $(LIBS) $(CFLAGS) $(LIBFLAGS) -o test 
