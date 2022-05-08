@@ -80,7 +80,7 @@ So here is how PS_line_HM() function is called within main():
       free(z_mean);
 ```
 
-By default, in additionn to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyon-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. 
+By default, in additionn to having the output in main() function for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyond-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. 
 
 In addition to using limHaloPT through "main.c" module which calls three specific functions, limHalpPT can be exported as an external library to any other C code. For example if you would like to call the function that computes the halo mass function for a given theoretical model, once the liblimHaloPT.a library is linked to, the relevent function can be accessed from an external C code. <br>
 
