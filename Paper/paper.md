@@ -48,9 +48,17 @@ Recently, there has been a shift in the cosmology community in publicly releasin
 
 # Dependencies
 
-The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, create a " CLASS/lib/" folder and place the "libclass.a" in that folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Lastly, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
+The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" in Class/lib folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Lastly, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in the main directory) of limHaloPT package. 
 
 Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. 
+
+
+# Usage
+
+Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of seven emission spectral lines. The lines to compute are set using a switch in the ini file, an example of the ini file is provided in the package(LCDM.ini). More detailed description of the main outputs is given in the code documentation on github reporistory. By default, in addition to saving the output for mean brightness temprature, biases, shot and clustering components of power spectrum, when computing the clustering and shot powers, individual loop contributions (in the former) and individual beyond-Possion contribution to the shot (in the latter), are also saved to output files which are stored in "Output" directory. 
+
+In addition to using limHaloPT through "main.c" module which calls three specific functions, limHalpPT can be exported as an external library to any other C code. For example to compute the halo mass function assuming one of the three implmented models (Press-Schecter, Sheth-Tormen, Tinker), once the liblimHaloPT.a library is linked to, the relevent function can be accessed from an external C code. Example of how to link an external code to limHaloPT static library can be found in "Test" directory.
+
 
 
 # Future Extensions 
