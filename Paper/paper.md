@@ -9,14 +9,17 @@ authors:
     orcid: 0000-0001-8841-9989
     affiliation: 1
   - name: Alberto Vallinotto  
+    affiliation:: 2
   - name: Farnik Nikakhtar
     orcid: 0000-0002-3641-4366
-    affiliation: 2
+    affiliation: 3
 affiliations:
  - name: Departement of Theoretical Physics, University of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
    index: 1
+ - name: Independent Researcher, Italy
+   index: 2  
  - name: Department of Physics and Astronomy, University of Pennsylvania, 209 S. 33rd St., Philadelphia, PA 19104, USA
-   index: 2   
+   index: 3   
 date: 10 November 2021
 bibliography: paper.bib
 ---
