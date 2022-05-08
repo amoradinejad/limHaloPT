@@ -9,7 +9,7 @@ authors:
     orcid: 0000-0001-8841-9989
     affiliation: 1
   - name: Alberto Vallinotto  
-    affiliation:: 2
+    affiliation: 2
   - name: Farnik Nikakhtar
     orcid: 0000-0002-3641-4366
     affiliation: 3
