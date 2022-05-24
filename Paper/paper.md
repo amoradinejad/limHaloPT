@@ -16,7 +16,7 @@ authors:
     orcid: 0000-0002-3641-4366
     affiliation: 3
 affiliations:
- - name: Departement of Theoretical Physics, University of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
+ - name: Department of Theoretical Physics, University of Geneva, 24 quai Ernest Ansermet, 1211 Geneva 4, Switzerland
    index: 1
  - name: Independent Researcher, Italy
    index: 2  
