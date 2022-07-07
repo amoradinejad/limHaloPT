@@ -70,7 +70,7 @@ Future releases will provide additional modules, for example, to include observa
 
 # Acknowledgements
 
-The research of A.M.D. is supported by the SNSF project "The  Non-Gaussian  Universe and  Cosmological Symmetries", project number:200020-178787. A.M.D., further acknowledges partial funding from the Tomalla Foundation for Research in Gravity.
+The research of A.M.D. is supported by the SNSF project "The  Non-Gaussian  Universe and  Cosmological Symmetries", project number:200020-178787. A.M.D. further acknowledges partial funding from the Tomalla Foundation for Research in Gravity.
 
 
 # References
