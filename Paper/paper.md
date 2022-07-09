@@ -5,10 +5,9 @@ tags:
   - cosmology
   - intensity mapping
 authors:
-  - name:
-        given names: Azadeh 
-        surname: Moradinezhad Dizgah
-        orcid: 0000-0001-8841-9989
+  - given-names: Azadeh 
+    surname: Moradinezhad Dizgah
+    orcid: 0000-0001-8841-9989
     affiliation: 1
   - name: Alberto Vallinotto  
     affiliation: 2
@@ -25,12 +24,6 @@ affiliations:
 date: 10 November 2021
 bibliography: paper.bib
 ---
-
-&nbsp;
-&nbsp;
-&nbsp;
-
-
 
 # Summary
 
