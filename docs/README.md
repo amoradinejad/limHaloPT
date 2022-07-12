@@ -1,4 +1,4 @@
-### Summary 
+## Summary 
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.04173/status.svg)](https://doi.org/10.21105/joss.04173)  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6762607.svg)](https://doi.org/10.5281/zenodo.6762607) 
 
 Author: Azadeh Moradinezhad Dizgah
@@ -27,7 +27,7 @@ Note that in order to compute the luminosities of spectral lines, a model of sta
 &nbsp;
 
 
-### Structure of the package
+## Structure of the package
 limHaloPT consists of 10 main modules, which include the following categories of functions:
 - **main.c:** This is the most external module, from which any function that you need is called. Depending on what quantities you want to calculate, you can modify the main() function in main.c module (as marked in the code). Two example calls to functions which compute the clustering and shot noise contributions is included in main.c module. After adding the function calls in this module, you need to re-compile the code and then run it. Further details of the modules and descriptions of the functions can be found in documentation of the code.
 - **ps_line_hm.c:** This module includes various functions that are needed for computation of halo-model line power spectrum, including clustering and stochastic contributions beyond Poisson limit. At the moment, the redshift-space distrotions is not included in the halo model implementation. 
@@ -42,7 +42,6 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - **setup_teardown.c:** This module contains utility functions to read in an .ini file.
 - **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. 
 <br>
-&nbsp;
 
 ### Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
@@ -53,7 +52,7 @@ The entire limHaloPT package was developed, compiled, and tested on Mac OS X, us
 &nbsp;
 
 
-### Basic usage
+## Basic usage
 - To run the code, in the main directory of limHaloPT, type  "./limHaloPT LCDM.ini"  
 
 Currently, the main output of limHaloPT are the mean brightness temprature, linear and quadratic biases, clustering and shot noise contributions of 7 emission spectral lines, depending on the switch that you set in the ini file. The computation of these functions are performed within main.c module. An example of the ini file is provided (LCDM.ini). If you want to call any of the functions of limHaloPT, apart from those called by defacult, you neeed to add the function call to main.c, recompile the code by first cleaning the previous build using "make clean" and building the package again with "make". 
@@ -104,13 +103,13 @@ Having compiled limHaloPT package, and created the "liblimHaloPT.a" library, to 
 Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. <br>
 
 
-### Attribution
+## Attribution
 You can use this package freely, provided that in your publication you cite the following paper: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arxiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers. 
 <br>
 &nbsp;
 
 
-### License
+## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  <br>
 Copyright 2021 Azadeh Moradinezhad Dizgah.<br>
 limHaloPT is free software made available under the MIT License. For details see the [LICENSE](https://github.com/amoradinejad/limHaloPT/blob/d40a4a75188ae70f56ed76236d1fd9ee1aae312d/LICENSE) file.
@@ -118,7 +117,7 @@ limHaloPT is free software made available under the MIT License. For details see
 &nbsp;
 
 
-### Contributing
+## Contributing
 To contribute, create a fork on github, make changes and commits, and submit a pull request on github. If you found any issues with the code, please get in touch by posting an issue on this github repository.
 <br>
 &nbsp;
