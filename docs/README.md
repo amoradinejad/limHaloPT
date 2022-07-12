@@ -39,7 +39,7 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - **read_input.c:** This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
 - **setup_teardown.c:** This module contains utility functions to read in an .ini file.
 - **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. 
-
+<br>
 
 ## Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
@@ -98,7 +98,9 @@ In addition to using limHaloPT through "main.c" module which calls three specifi
 
 Having compiled limHaloPT package, and created the "liblimHaloPT.a" library, to run the test, switch to "Test" subdirectory. You have to first do "make", and then you can run the code by typying "./test test_LCDM.ini. Upon completion, the output files are stored in "Test/Output" directory. 
 
-Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. <br>
+Note that the test.c also can surve as an example of how you can link your code to liblimHaloPT.a library. 
+<br>
+&nbsp;
 
 
 ## Attribution
