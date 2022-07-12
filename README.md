@@ -99,7 +99,7 @@ You can use this package freely, provided that in your publication you cite the 
 - Scientific Publication: Moradinezhad, Nikakhtar, Keating, Castorina, [JCAP02(2022)026](https://iopscience.iop.org/article/10.1088/1475-7516/2022/02/026)
 - Software Publication: Moradinezhad, Vallinotto, Nikakhtar, [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173#)
 
-Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arXiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers.<br>
+Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [JCAP07(2011)034](https://iopscience.iop.org/article/10.1088/1475-7516/2011/07/034) as required by CLASS developers.<br>
 
 
 ## Contributing
