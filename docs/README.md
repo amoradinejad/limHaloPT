@@ -6,8 +6,6 @@ Author: Azadeh Moradinezhad Dizgah
 
 with contributions from Alberto Vallinotto and Farnik Nikakhtar
 
-with contributions from Alberto Vallinotto and Farnik Nikakhtar 
-
 Welcom to limHaloPT, a peer-reviewed open source numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temperature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release. 
 
 The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term. The deviations from Poisson shot noise on large scales are also computed within the halo model.
@@ -19,7 +17,7 @@ The source code of this package is publically avaialbel on GitHub at [limHaloPT]
 &nbsp;
 
 
-### Dependencies
+## Dependencies
 The limHaloPT package calls various functions from [CLASS](https://github.com/lesgourg/class_public) Boltzman solver, including the matter power spectrum and transfer functions, growth factor etc. Therefore, you need to first download and compile CLASS code, and place the "libclass.a" in Class/lib folder. Furtehrmore, the loop calculations are performed with direct numerical integration, using routines of [CUBA](http://www.feynarts.de/cuba/) library. Lastly, the code heavily uses functions of [GSL](https://www.gnu.org/software/gsl/doc/html/) scientific library. Therfore, make sure that the two libraries are correctly linked to limHaloPT by making necassary modifcations to the makefile (placed in Source directory) of limHaloPT package. 
 
 Note that in order to compute the luminosities of spectral lines, a model of star formation rate as a function of halo mass and redshift, SFR(M_h,z), should be assumed. Currently, the implemented model uses SFR(M_h,z) from [Behroozi et al. (2013)](https://arxiv.org/abs/1207.6105). The necassary input file, "sfr_release.dat", is included in "Input/release-sfh_z0_z8_052913/sfr/" subdirectory. 
@@ -41,9 +39,9 @@ limHaloPT consists of 10 main modules, which include the following categories of
 - **read_input.c:** This module contains two functions initialize() and clean() which are the first and last functions called by the main() function. Initialize() reads in the input values from an .ini files.
 - **setup_teardown.c:** This module contains utility functions to read in an .ini file.
 - **utilities.c:** This module contains some utility functions, for example to build a dynamically allocated 1-dimensional array. These utility functions are used by the rest of the modules. 
-<br>
 
-### Compilation 
+
+## Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
 This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". When the code is compiled, a static library "liblimHaloPT.a" is created and placed in "lib" directory of limHaloPT. If you would like to use any of the functions of limHaloPT, you can link to this ".a" file as an external library. 
 
