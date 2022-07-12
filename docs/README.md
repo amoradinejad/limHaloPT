@@ -1,17 +1,19 @@
-# Summary
+# Summary # [![DOI](https://joss.theoj.org/papers/10.21105/joss.04173/status.svg)](https://doi.org/10.21105/joss.04173)  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6762607.svg)](https://doi.org/10.5281/zenodo.6762607) 
 
 Author: Azadeh Moradinezhad Dizgah
 <br>
 
 with contributions from Alberto Vallinotto and Farnik Nikakhtar
 
-Welcom to limHaloPT, a numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temprature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release. 
+with contributions from Alberto Vallinotto and Farnik Nikakhtar 
+
+Welcom to limHaloPT, a peer-reviewed open source numerical package for computing the clustering and shot-noise contributions to the power spectrum of line intensity/temperature fluctuations within halo-model framework. The current version of the code, is limited to real-space, and redshift-space distortions will be included in the next release. 
 
 The extended halo model of line intensity power spectrum implemented in limHaloPT, combines the predictions of EFTofLSS for halo power spectrum with the standard halo model to account for the nonlinear evolution of matter fluctuations and the nonlinear biasing relation between line intensity fluctuations and the underlying dark matter distribution in 2-halo term. Furthermore, the model includes the effect of large bulk velocities (Infrared Resummation) in the 2-halo term. The deviations from Poisson shot noise on large scales are also computed within the halo model.
 
-This package is released together with the following publication, [arXiv:2111.03717](https://arxiv.org/abs/2111.03717), where the prediction of the model are tested against new suite of simulated intensity (brightness temprature) maps of CO and [CII] lines. The mesheded fileds from MithraLIMSims will be publically avilable on [MithraLIMSims](http://cyril.astro.berkeley.edu/MithraLIMSims). The code to analyse the simulated maps is an extension of the toolskit used in analysin Hidden-Valley simulations, and is publically avialble on [LIM Analysis](https://github.com/farnikn/MithraLIMSims). As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. 
+This package is released together with the following publication, [JCAP02(2022)026](https://iopscience.iop.org/article/10.1088/1475-7516/2022/02/026), where the predictions of the model are tested against a new suite of simulated intensity (brightness temperature) maps of CO and [CII] lines. The mesheded fields from MithraLIMSims will be publically avilable on [MithraLIMSims](http://cyril.astro.berkeley.edu/MithraLIMSims). The code to analyse the simulated maps is an extension of the toolkit used in analysing Hidden-Valley simulations, and is publically avilable on [LIM Analysis](https://github.com/farnikn/MithraLIMSims). As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. 
 
-The source code of this package is publically avaialbel on GitHub at [limHaloPT](https://github.com/amoradinejad/limHaloPT).
+The source code of this package is publically avaialbel on GitHub at [limHaloPT](https://github.com/amoradinejad/limHaloPT). The peer-reviewed JOSS software publication can be accessed at [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173).
 <br>
 &nbsp;
 
