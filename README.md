@@ -94,7 +94,11 @@ Note that the test.c also can surve as an example of how you can link your code 
 
 
 ## Attribution
-You can use this package freely, provided that in your publication you cite the following two papers; Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717), Moradinezhad, Vallinotto, Nikakhtar [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173#). Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arXiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers.<br>
+You can use this package freely, provided that in your publication you cite the following two papers; 
+- Scientific Publication: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717), 
+- Code Publication: Moradinezhad, Vallinotto, Nikakhtar [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173#). 
+
+Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arXiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers.<br>
 
 
 ## Contributing
