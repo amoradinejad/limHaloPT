@@ -44,7 +44,6 @@ limHaloPT consists of 10 main modules, which include the following categories of
 <br>
 &nbsp;
 
-
 ### Compilation 
 - To compile, within the main directory of limHaloPT, type: "make" <br>
 This would create an executable called "limHaloPT" in the same directory, which you will use to run the code. If you modified the code, you need to first do "make clean" before doing "make". When the code is compiled, a static library "liblimHaloPT.a" is created and placed in "lib" directory of limHaloPT. If you would like to use any of the functions of limHaloPT, you can link to this ".a" file as an external library. 
