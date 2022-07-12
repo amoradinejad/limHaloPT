@@ -12,7 +12,7 @@ The extended halo model of line intensity power spectrum implemented in limHaloP
 This package is released together with the following publication, [JCAP02(2022)026](https://iopscience.iop.org/article/10.1088/1475-7516/2022/02/026), where the predictions of the model are tested against a new suite of simulated intensity (brightness temperature) maps of CO and [CII] lines. The mesheded fields from MithraLIMSims will be publically avilable on [MithraLIMSims](http://cyril.astro.berkeley.edu/MithraLIMSims). The code to analyse the simulated maps is an extension of the toolkit used in analysing Hidden-Valley simulations, and is publically avilable on [LIM Analysis](https://github.com/farnikn/MithraLIMSims). As discussed in the manuscript above, the packages to compute the theory predictions and creating the simulated intensity maps can be straightforwardly extended to compute the power spectrum signal of other emission lines (emitted from star-froming galaxies), beside CO and [CII]. 
 
 
-The full documentation of the code can be found on [Documentation](https://amoradinejad.github.io/limHaloPT/html/index.html). The peer-reviewd JOSS software publication can be accessed at [JOSS_limHalooPT](https://joss.theoj.org/papers/10.21105/joss.04173).
+The full documentation of the code can be found on [Documentation](https://amoradinejad.github.io/limHaloPT/html/index.html). The peer-reviewed JOSS software publication can be accessed at [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173).
 <br>
 
 
@@ -96,7 +96,7 @@ Note that the test.c also can surve as an example of how you can link your code 
 
 ## Attribution
 You can use this package freely, provided that in your publication you cite the following two papers; 
-- Scientific Publication: Moradinezhad, Nikakhtar, Keating, Castorina: [arXiv:2111.03717](https://arxiv.org/abs/2111.03717), [![DOI](
+- Scientific Publication: Moradinezhad, Nikakhtar, Keating, Castorina:  [JCAP02(2022)026](https://iopscience.iop.org/article/10.1088/1475-7516/2022/02/026)
 - Software Publication: Moradinezhad, Vallinotto, Nikakhtar [JOSS_limHaloPT](https://joss.theoj.org/papers/10.21105/joss.04173#), [![DOI](https://joss.theoj.org/papers/10.21105/joss.04173/status.svg)](https://doi.org/10.21105/joss.04173) 
 
 Furthermore, since limHaloPT relies on CLASS Boltzman code, you should also cite at least this paper [arXiv:1104.2933](https://arxiv.org/abs/1104.2933) as required by CLASS developers.<br>
